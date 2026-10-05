@@ -23,6 +23,12 @@ Source syntax (one command per line, '#' comments):
     colosseum                                  # event cmd $9A (EventCmd_9a, C0:B0B2)
     status_clear <char $hex> <mask $hex16>     # event cmd $88 (EventCmd_88: $1614,y &= mask)
     status_set <char $hex> <mask $hex16>       # event cmd $89 (EventCmd_89: $1614,y |= mask)
+  TECH v0.7.3 (vanilla party commands, same encoding as the vanilla recruit scripts, e.g. Locke joins at CC:A621):
+    char_prop <char $00-$0F> <actor props $00-$3F>  # event cmd $40 (EventCmd_40: stats/equipment/level/actor)
+    obj_gfx <obj $00-$0F> <gfx $hex>           # event cmd $37 (EventCmd_37: object + character graphics $1601)
+    char_name <char $00-$0F> <name $hex>       # event cmd $7F (EventCmd_7f: character name)
+    create_obj <obj $00-$0F> / delete_obj <obj $00-$0F>   # event cmd $3D / $3E
+    char_party <char $00-$0F> <party 0-7>      # event cmd $3F (EventCmd_3f: 0 = remove from party)
   TECH v0.7.1 extended-item API (only when the target carries the item engine, ext_items=True):
     give_ext_item <id $100-$13F>               # event cmd $66 lo hi   (XC0_Ev66 -> XGiveExt)
     take_ext_item <id $100-$13F>               # event cmd $67 lo hi   (XC0_Ev67 -> XTakeExt)
@@ -176,6 +182,17 @@ class EventProgram:
             if not (0 <= c <= 0x0F and 0 <= m <= 0xFFFF):
                 raise EventAsmError(f"{op}: character $00-$0F, 16-bit mask")
             self._emit(line, [0x88 if op == "status_clear" else 0x89, c, m & 0xFF, m >> 8])
+        elif op in ("char_prop", "obj_gfx", "char_name", "char_party"):
+            c, v = (_num(t) for t in args.split())
+            lim = {"char_prop": 0x3F, "obj_gfx": 0xFF, "char_name": 0x3F, "char_party": 7}[op]
+            if not (0 <= c <= 0x0F and 0 <= v <= lim):
+                raise EventAsmError(f"{op}: character/object $00-$0F, operand <= ${lim:02X}")
+            self._emit(line, [{"char_prop": 0x40, "obj_gfx": 0x37, "char_name": 0x7F, "char_party": 0x3F}[op], c, v])
+        elif op in ("create_obj", "delete_obj"):
+            c = _num(args)
+            if not 0 <= c <= 0x0F:
+                raise EventAsmError(f"{op}: character object $00-$0F only")
+            self._emit(line, [0x3D if op == "create_obj" else 0x3E, c])
         elif op in ("give_ext_item", "take_ext_item", "has_ext_item"):
             if not self.ext_items:
                 raise EventAsmError(f"{op} needs the TECH v0.7.1 item engine (event opcodes $66-$68)")

@@ -53,8 +53,41 @@ return
 @QaColo7
 dlg qa7_colo
 choice QaColoFight7, QaColoKit7, QaCancel6
+# TECH v0.7.3: normalized QA party for the Colosseum. The opening party is not a valid Colosseum state (vanilla
+# Rev 1 shows the same artifacts): the Colosseum battle looks the fighter up by actor id = record number, which
+# fails for the temporary records 14/15 (Wedge actor $20, Vicks actor $21 -> invisible fighter), and Terra's
+# Magitek status (status 1 bit $08) turns on battle Magitek mode (extra armor sprite). Like the vanilla recruit
+# script (Locke joins at CC:A621): Terra leaves Magitek, Wedge/Vicks leave the party, Locke/Celes/Edgar join;
+# everything is restored after the Colosseum.
 @QaColoFight7
+status_clear $00 $FFF7
+char_party $0E 0
+char_party $0F 0
+char_prop $01 $01
+char_name $01 $01
+create_obj $01
+obj_gfx $01 $01
+char_party $01 1
+char_prop $06 $06
+char_name $06 $06
+create_obj $06
+obj_gfx $06 $06
+char_party $06 1
+char_prop $04 $04
+char_name $04 $04
+create_obj $04
+obj_gfx $04 $04
+char_party $04 1
 call VanillaColosseum
+char_party $01 0
+delete_obj $01
+char_party $06 0
+delete_obj $06
+char_party $04 0
+delete_obj $04
+char_party $0E 1
+char_party $0F 1
+status_set $00 $0008
 party_step RIGHT 1
 return
 @QaColoKit7

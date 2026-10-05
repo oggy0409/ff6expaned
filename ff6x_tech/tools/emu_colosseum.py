@@ -2,7 +2,8 @@
 """TECH v0.7.2 emulator check: Colosseum battle entry / win / reward / return (stable-retro / snes9x).
 
 Every combination runs twice with identical inputs from the same New Game state:
-  * QA ROM (v0.7.2): through the QA harness branch `QaColo7` -> "Fight" `QaColoFight7` (= call vanilla CB:78D9)
+  * QA ROM: through the vanilla receptionist branch CB:78D9 with the opening party (v0.7.2: the QA menu "Fight"
+    called exactly this; v0.7.3: the QA menu first normalizes the party - tested by tools/emu_colosseum_visual.py)
   * clean Rev 1:     through the vanilla receptionist sequence CB:78D9 itself
 and the results are compared (battle id, opponent, fighter, rendered frames, inventory after the battle, return).
 
@@ -88,6 +89,12 @@ def run_combo(h, start, item, fighter, win, out, tag, q):
             frames[hashlib.sha1(screen(h).tobytes()).hexdigest()] = t
         if t == 100:
             q.shot(h, f"{tag}_battle")
+            # v0.7.3: battle graphics state of the fighter (slot 1): actor chosen in the menu ($0208), record pointer
+            # ($3010, $FFFF = no character record found), sprite id / name (wCharGfxDataBuf $2EAE), Magitek mode ($64BA)
+            r["slot1"] = {"actor_0208": f"{h.r8(0x208):02X}", "record_ptr_3010": f"{h.r16(0x3010):04X}",
+                          "gfx_id": f"{h.r8(0x2EAE):02X}", "name": bytes(h.r8(0x2EAF + i) for i in range(6)).hex(),
+                          "magitek_mode": h.r8(0x64BA)}
+    q.shot(h, f"{tag}_battle_b")              # v0.7.3: later frames (real-map fade-in, Magitek armor sprite)
     r["battle_frames"] = frames
     r["battle_brightness"] = bright(h)
     hp0 = [MT.mon_hp(h, k) for k in range(6)]
@@ -100,11 +107,16 @@ def run_combo(h, start, item, fighter, win, out, tag, q):
     r["monster_hp_before_poke"] = hp0
     shot_done = False
     r["hp_trace"] = []
-    for t in range(9000):
-        if t % 40 == 0:
+    faded = False                            # battle over (screen black): stop pressing A, so the returning
+    for t in range(9000):                    # party does not talk to the receptionist again (map $19D)
+        if not faded and t % 40 == 0:
             h.press("A", 4, 4)
         else:
             h.step(1)
+        if t > 100 and bright(h) < 1:
+            faded = True
+        if t == 120 and not faded:
+            q.shot(h, f"{tag}_battle_c")
         if MT.in_battle(h) and t % 200 == 0:
             if win:
                 for k in range(6):
@@ -239,7 +251,7 @@ def main(qa, manifest, clean, out, v071=None, v071_manifest=None):
     recep["v072qa"] = run_reception(h, out, "v072qa", q)
     h.close()
 
-    # ---------------- v0.7.2 QA ROM: QA harness "Get wager kit" + "Fight"
+    # ---------------- QA ROM: QA harness "Get wager kit" + vanilla branch CB:78D9
     h = T(qa); h.ext_aware = True; boot_new_game(h)
     h.call_event(L["QaColoKit7"], frames=1)
     for _ in range(600):
@@ -251,14 +263,14 @@ def main(qa, manifest, clean, out, v071=None, v071_manifest=None):
         if h.idle():
             break
     kit_inv = [(sl, f"{h.r8(0x1869 + sl):02X}", h.r8(0x1969 + sl)) for sl in range(256) if h.r8(0x1869 + sl) != 0xFF]
-    kit_qa = run_kit(h, lambda hh: hh.call_event(L["QaColoFight7"], frames=1), out, "qa_kit", q)
+    kit_qa = run_kit(h, lambda hh: hh.call_event(VANILLA_COLO, frames=1), out, "qa_kit", q)
     h.close()
 
     # ---------------- v0.7.2 QA ROM through the QA harness
     res = {}
     h = setup(qa)
     for slot, fighter, win, tag in combos[:3]:
-        res[tag] = run_combo(h, lambda hh: hh.call_event(L["QaColoFight7"], frames=1), slot, fighter, win, out, "qa_" + tag, q)
+        res[tag] = run_combo(h, lambda hh: hh.call_event(VANILLA_COLO, frames=1), slot, fighter, win, out, "qa_" + tag, q)
     # C4: Terra wears the three extended QA items (given through the QA menu event API, equipped through the menus)
     # Terra lost C1 to Chupon (vanilla outcome, same in Rev 1) and is Wounded: revive with event commands
     # $88 (clear status: Wounded) and $8B (HP := max) so she can be equipped
@@ -282,11 +294,11 @@ def main(qa, manifest, clean, out, v071=None, v071_manifest=None):
     nv.back_to_main(); nv.close(); h.step(60)
     eq_before = h.eq(0)
     slot, fighter, win, tag = combos[3]
-    res[tag] = run_combo(h, lambda hh: hh.call_event(L["QaColoFight7"], frames=1), slot, fighter, win, out, "qa_" + tag, q)
+    res[tag] = run_combo(h, lambda hh: hh.call_event(VANILLA_COLO, frames=1), slot, fighter, win, out, "qa_" + tag, q)
     res[tag]["eq_before"] = [f"{x:03X}" for x in eq_before]
     res[tag]["eq_after"] = [f"{x:03X}" for x in h.eq(0)]
     res[tag]["ext_inventory"] = [(s, f"{i:03X}", n) for s, i, n in h.ext_inv()]
-    cancel["v072qa_harness"] = run_cancel(h, lambda hh: hh.call_event(L["QaColoFight7"], frames=1))
+    cancel["qa_harness_fight"] = run_cancel(h, lambda hh: hh.call_event(L["QaColoFight7"], frames=1))
     h.close()
 
     # ---------------- checks
@@ -359,7 +371,7 @@ def main(qa, manifest, clean, out, v071=None, v071_manifest=None):
         mon, prize = prize_of(rom_qa, item)
         same_frames = set(r.get("battle_frames", {})) & set(rr.get("battle_frames", {}))
         won = any(int(i, 16) == prize for s_, i, n in r.get("inventory", [])) and prize not in (0xEE,)
-        q.check(f"{tag} (QA kit, harness 'Fight', natural outcome - no POKE; wager {item:02X} -> opponent {mon:02X}, "
+        q.check(f"{tag} (QA kit, CB:78D9, natural outcome - no POKE; wager {item:02X} -> opponent {mon:02X}, "
                 f"prize {prize:02X}, {FIGHTERS[fighter]}): battle entered and rendered, same frames / result / return as "
                 "Rev 1", r.get("battle_entered") and r.get("opponent") == rr.get("opponent")
                 and int(r["opponent"][0], 16) & 0xFF == mon and r.get("battle_brightness", 0) > 20

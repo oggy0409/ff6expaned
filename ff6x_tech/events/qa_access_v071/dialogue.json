@@ -3,7 +3,7 @@
  "messages": [
   {
    "label": "qa7_prompt",
-   "text": "TECH v0.7.2 QA ACCESS{n}{choice} Item bank tests (v0.7.1){n}{choice} Monster/map tests (v0.6.1){n}{choice} No (Save Point)"
+   "text": "TECH v0.7.3 QA ACCESS{n}{choice} Item bank tests (v0.7.1){n}{choice} Monster/map tests (v0.6.1){n}{choice} No (Save Point)"
   },
   {
    "label": "qa7_items",
@@ -31,7 +31,7 @@
   },
   {
    "label": "qa7_colo",
-   "text": "Colosseum (vanilla script){n}{choice} Fight (wager list){n}{choice} Get wager kit{n}{choice} Cancel"
+   "text": "Colosseum (normal party){n}{choice} Fight: Terra/Locke/Celes/Edgar{n}{choice} Get wager kit{n}{choice} Cancel"
   },
   {
    "label": "qa7_colo_kit",
