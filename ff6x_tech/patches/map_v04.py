@@ -27,9 +27,15 @@ DIRS = {"UP": 0, "RIGHT": 1, "DOWN": 2, "LEFT": 3}
 REACT = {"FACE_PLAYER": 0, "NONE": 4}
 MAP_INIT_EVENTS = 0xD1FA00
 EVENT_RETURN_PTR = bytes.fromhex("B3 5E 00")
-VANILLA_EXTERNALS = {"EventReturn": 0xCA5EB3, "VanillaPostBattleCheck": 0xCA5EA9, "VanillaSavePoint": 0xCC9AEB}
+VANILLA_EXTERNALS = {"EventReturn": 0xCA5EB3, "VanillaPostBattleCheck": 0xCA5EA9, "VanillaSavePoint": 0xCC9AEB,
+                     "VanillaColosseum": 0xCB78D9}
 VANILLA_ASSERTS = [(0xCA5EA9, bytes.fromhex("B7 40 B2 5E 00 B2 66 E5 02 FE")),   # post-battle check
-                   (0xCC9AEB, bytes.fromhex("C0 B5 81 B3 5E 00"))]                 # SavePoint head
+                   (0xCC9AEB, bytes.fromhex("C0 B5 81 B3 5E 00")),                 # SavePoint head
+                   # TECH v0.7.2: vanilla Colosseum sequence (receptionist "With pleasure." branch _cb78d9):
+                   # fade_out 8 / wait_fade / colosseum_menu ($9A) / if $1EE=0 -> CB:7972 / if $1EF=0 -> CB:796C
+                   (0xCB78D9, bytes.fromhex("5A 08 5C 9A C0 EE 01 72 79 01 C0 EF 01 6C 79 01")),
+                   (0xCB796C, bytes.fromhex("AF B2 72 79 01 FE")),               # colosseum_battle ($AF) / call fade-in
+                   (0xCB7972, bytes.fromhex("59 04 5C FE"))]                     # fade_in 4 / wait_fade / return
 
 
 def load_pkg(name):

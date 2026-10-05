@@ -3,7 +3,7 @@
  "messages": [
   {
    "label": "qa7_prompt",
-   "text": "TECH v0.7.1 QA ACCESS{n}{choice} Item bank tests (v0.7.1){n}{choice} Monster/map tests (v0.6.1){n}{choice} No (Save Point)"
+   "text": "TECH v0.7.2 QA ACCESS{n}{choice} Item bank tests (v0.7.1){n}{choice} Monster/map tests (v0.6.1){n}{choice} No (Save Point)"
   },
   {
    "label": "qa7_items",
@@ -27,7 +27,15 @@
   },
   {
    "label": "qa7_more",
-   "text": "v0.7.1 exclusion / battle tests{n}{choice} Shop 48 (brushes){n}{choice} Colosseum (wager list){n}{choice} Battle: Terra w/o Magitek"
+   "text": "v0.7.1 exclusion / battle tests{n}{choice} Shop 48 (brushes){n}{choice} Colosseum (full battle){n}{choice} Battle: Terra w/o Magitek"
+  },
+  {
+   "label": "qa7_colo",
+   "text": "Colosseum (vanilla script){n}{choice} Fight (wager list){n}{choice} Get wager kit{n}{choice} Cancel"
+  },
+  {
+   "label": "qa7_colo_kit",
+   "text": "Got Elixir x3, Fenix Down x3,{n}ThiefKnife, ValiantKnife{n}(vanilla wagers)."
   },
   {
    "label": "qa6_battle_intro",

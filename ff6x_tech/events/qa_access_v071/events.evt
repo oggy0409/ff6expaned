@@ -1,4 +1,4 @@
-# TECH v0.7.1 QA HARNESS ONLY (target item-tech). Trigger: map $013 (Narshe opening streets) tile (34,43).
+# TECH v0.7.2 QA HARNESS ONLY (target item-tech; v0.7.1 item tests + v0.7.2 Colosseum hotfix). Trigger: map $013 (Narshe opening streets) tile (34,43).
 # Top level: v0.7.1 item-bank tests; the accepted v0.6.1 tests are kept unchanged one level down.
 @QaAccess6
 if_switch VANILLA_TILE_EVENT_LATCH=1 -> QaRet6
@@ -45,8 +45,28 @@ choice QaShop7, QaColo7, QaBtl7
 shop $48
 party_step RIGHT 1
 return
+# TECH v0.7.2 hotfix: run the vanilla Colosseum sequence CB:78D9 exactly as the receptionist does (fade out,
+# menu $9A, then - only for a valid wager - colosseum battle $AF, then fade in). v0.7.1 called $9A alone: $9A sets
+# map-startup flags $C0 (no fade-in) and reloads the map, and without $AF / fade-in the screen stayed black.
+# QaColo7 sub-menu: fight, or get a vanilla wager kit (New Game has no items): Elixir / Fenix Down face Cactrot
+# (prizes Rename Card / Magicite, winnable by the opening party), ThiefKnife / ValiantKnife face stronger opponents.
 @QaColo7
-colosseum
+dlg qa7_colo
+choice QaColoFight7, QaColoKit7, QaCancel6
+@QaColoFight7
+call VanillaColosseum
+party_step RIGHT 1
+return
+@QaColoKit7
+give_item $EE
+give_item $EE
+give_item $EE
+give_item $F0
+give_item $F0
+give_item $F0
+give_item $04
+give_item $09
+dlg qa7_colo_kit
 party_step RIGHT 1
 return
 # F/G: Terra fights without Magitek (status 1 bit $08 cleared for the test battle, restored after it)

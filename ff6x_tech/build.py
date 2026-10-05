@@ -17,16 +17,16 @@ from ff6x.hirom import pc_to_snes, fmt_snes
 from ff6x.patchfmt import make_ips, apply_ips, make_bps, apply_bps
 from ff6x.romimage import RomImage, load_clean_rom, sha1, crc32, md5, BuildError
 
-BUILD_VERSION = "0.7.1"
+BUILD_VERSION = "0.7.2"
 
 TARGETS = {
-    # ---- TECH v0.7.1 (current): v0.6.1 foundation + SIGNATURE EQUIPMENT BANK (extended item ids) -------
+    # ---- TECH v0.7.2 (current): v0.7.1 signature equipment bank + Colosseum QA-harness hotfix ----------
     "production":  {"file": f"FF6X_Rev1_TECH_v{BUILD_VERSION}_PRODUCTION", "version": BUILD_VERSION, "kind": "v07",
                     "packages": [], "monsters": [], "formations": [], "ext_item_sources": [],
-                    "status": "PRODUCTION BRANCH v0.7.1 - accepted v0.6.1 foundation + extended item engine (ids $100-$13F, no item content)"},
+                    "status": "PRODUCTION BRANCH v0.7.2 - accepted v0.6.1 foundation + extended item engine (ids $100-$13F, no item content)"},
     "celes-tech":  {"file": f"FF6X_Rev1_TECH_v{BUILD_VERSION}_CELES_TECH", "version": BUILD_VERSION, "kind": "v07",
                     "packages": ["celes_annex_tech"], "monsters": [], "formations": [], "ext_item_sources": [],
-                    "status": "production v0.7.1 + accepted Celes Annex slice"},
+                    "status": "production v0.7.2 + accepted Celes Annex slice"},
     "item-tech":   {"file": f"FF6X_Rev1_TECH_v{BUILD_VERSION}_ITEM_BANK_QA", "version": BUILD_VERSION, "kind": "v07",
                     "packages": ["celes_annex_tech", "map_tech_v04", "qa_access_v071"],
                     "monsters": ["tech6_0180", "tech6_0181", "tech6_0182", "tech6_0183"],
@@ -35,7 +35,7 @@ TARGETS = {
                     "ext_item_sources": ["items/qa_v071/qa_items.json"],
                     "formation_safety": "report",
                     "formation_safety_reason": "v0.6.1 QA formations carried unchanged for regression ($242 slot 0 known non-blocking)",
-                    "status": "TECH v0.7.1 QA BUILD (signature equipment bank proof: QA items $13D/$13E/$13F) - USER RUNTIME QA PENDING"},
+                    "status": "TECH v0.7.2 QA BUILD (v0.7.1 signature equipment bank proof + Colosseum QA-harness hotfix) - USER RUNTIME QA PENDING"},
     # ---- TECH v0.6.x frozen (accepted baselines, must reproduce exactly) ----------------------------
     "production-v0.6.0": {"file": "FF6X_Rev1_TECH_v0.6.0_PRODUCTION", "version": "0.6.0", "kind": "v06", "meta_target": "production",
                     "packages": [], "monsters": [], "formations": [],
