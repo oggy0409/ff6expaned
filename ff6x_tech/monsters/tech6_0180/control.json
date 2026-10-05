@@ -1,0 +1,9 @@
+{
+ "attacks": [
+  "BATTLE",
+  "$1B",
+  "NONE",
+  "NONE"
+ ],
+ "_comment": "Control / muddled attacks (4). NONE = $FF"
+}

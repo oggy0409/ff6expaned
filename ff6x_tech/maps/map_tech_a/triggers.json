@@ -1,0 +1,11 @@
+{
+ "triggers": [
+  {
+   "map": "1A0",
+   "x": 10,
+   "y": 25,
+   "event": "EvATrigger",
+   "purpose": "alcove trigger: message from the relocated trigger table, then pushed back RIGHT"
+  }
+ ]
+}

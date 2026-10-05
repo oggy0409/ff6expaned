@@ -1,0 +1,61 @@
+{
+ "_comment": "QA HARNESS ONLY (target item-tech, TECH v0.7.1). Strings in QA_HARNESS (FF:0800+).",
+ "messages": [
+  {
+   "label": "qa7_prompt",
+   "text": "TECH v0.7.1 QA ACCESS{n}{choice} Item bank tests (v0.7.1){n}{choice} Monster/map tests (v0.6.1){n}{choice} No (Save Point)"
+  },
+  {
+   "label": "qa7_items",
+   "text": "v0.7.1 extended item tests{n}{choice} Get QA items 13D/13E/13F{n}{choice} Check / remove QA Blade13D{n}{choice} Shop / Colosseum / Battle"
+  },
+  {
+   "label": "qa7_given",
+   "text": "Got QA Blade13D, QA Mail 13E,{n}QA Charm13F (extended) and{n}vanilla items 3D/3E/3F."
+  },
+  {
+   "label": "qa7_has_no",
+   "text": "HAS EXT ITEM 13D: NO{n}(no QA Blade13D in the{n}inventory)"
+  },
+  {
+   "label": "qa7_has_yes",
+   "text": "HAS EXT ITEM 13D: YES{n}{choice} Remove one (TAKE EXT ITEM){n}{choice} Keep it"
+  },
+  {
+   "label": "qa7_taken",
+   "text": "TAKE EXT ITEM 13D: one{n}QA Blade13D was removed."
+  },
+  {
+   "label": "qa7_more",
+   "text": "v0.7.1 exclusion / battle tests{n}{choice} Shop 48 (brushes){n}{choice} Colosseum (wager list){n}{choice} Battle: Terra w/o Magitek"
+  },
+  {
+   "label": "qa6_battle_intro",
+   "text": "v0.6.1: TESTCUBE + TESTEYE{n}Custom graphics from bank FB.{n}Formation 240 (0 MP)."
+  },
+  {
+   "label": "qa6_battle_done",
+   "text": "TECH v0.6.1: battle returned{n}to the field correctly."
+  },
+  {
+   "label": "qa6_more",
+   "text": "TECH v0.6.1 QA: more tests{n}{choice} Dark Wind isolation{n}{choice} Magic Point test{n}{choice} Map/Annex tests"
+  },
+  {
+   "label": "qa6_iso",
+   "text": "Dark Wind test (left=vanilla):{n}{choice} Vanilla, clone, Vulture pal{n}{choice} Reference: 3x vanilla{n}{choice} Cancel"
+  },
+  {
+   "label": "qa6_mp",
+   "text": "QA: Ramuh added. Equip it first.{n}{choice} Fight 3-MP battle (241){n}{choice} Fight 0-MP battle (240){n}{choice} Not yet (go equip)"
+  },
+  {
+   "label": "qa6_other",
+   "text": "TECH v0.6.1 QA: other tests{n}{choice} Map test A (1A0){n}{choice} Celes Annex{n}{choice} Cancel"
+  },
+  {
+   "label": "qa6_prompt",
+   "text": "TECH v0.6.1 QA tests{n}{choice} Custom monster battle{n}{choice} More tests{n}{choice} Cancel"
+  }
+ ]
+}

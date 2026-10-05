@@ -1,0 +1,7 @@
+# TESTMOB A: each turn picks Battle, Battle or Mute ($1B) at random (Mute ~1/3).
+# (Fire was tried first: a monster Fire spread over the party dealt ~30 HP to each opening
+#  Magitek party member - too dangerous for the QA party, so a harmless status spell is used.)
+random BATTLE BATTLE $1B
+end
+# counter section: none
+end

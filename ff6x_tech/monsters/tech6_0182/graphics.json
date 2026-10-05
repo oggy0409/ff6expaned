@@ -1,0 +1,5 @@
+{
+ "_comment": "vanilla graphics resource (alias) - isolation test only",
+ "graphics_from_vanilla_monster": "0x028",
+ "overlap_from_vanilla_monster": "0x028"
+}

@@ -1,0 +1,21 @@
+{
+ "id": "0x3F5",
+ "_comment": "EXAMPLE: layout_exception on a normal-size sprite -> refused (ERROR).",
+ "template_vanilla_formation": "0x002",
+ "no_veldt": true,
+ "magic_points": 0,
+ "magitek_possible": false,
+ "layout_exception": {
+  "slots": [
+   0
+  ],
+  "reason": "not allowed for small sprites"
+ },
+ "slots": [
+  {
+   "slot": 0,
+   "monster": "0x028",
+   "pos": "0x13"
+  }
+ ]
+}

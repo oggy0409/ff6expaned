@@ -1,0 +1,498 @@
+{
+ "_comment": "DEV-ONLY (TECH v0.7.1): evidence for SAVED_RAM_AUDIT_v0.7.1.md from the exact Rev 1 instruction index",
+ "ranges": {
+  "EXT_BITS_AND_SIGNATURE": {
+   "start": "1CF8",
+   "end": "1D27",
+   "direct": [
+    {
+     "snes": "C0:1E43",
+     "bytes": "20 24 1D",
+     "insn": "JSR abs 1D24",
+     "src": "src/field/map.asm:370 jsr     TfrBG1BtmTiles"
+    },
+    {
+     "snes": "C0:BDE8",
+     "bytes": "9D F8 1C",
+     "insn": "STA absx 1CF8",
+     "src": "src/field/init.asm:132 sta     $1cf8,x"
+    },
+    {
+     "snes": "C2:1C29",
+     "bytes": "4C 26 1D",
+     "insn": "JMP abs 1D26",
+     "src": "src/battle/ai_cmd.asm:426 jmp     InvertCarry"
+    },
+    {
+     "snes": "C2:1C9F",
+     "bytes": "4C 26 1D",
+     "insn": "JMP abs 1D26",
+     "src": "src/battle/ai_cmd.asm:547 jmp     InvertCarry"
+    },
+    {
+     "snes": "C2:1CB7",
+     "bytes": "4C 26 1D",
+     "insn": "JMP abs 1D26",
+     "src": "src/battle/ai_cmd.asm:570 jmp     InvertCarry"
+    },
+    {
+     "snes": "C2:1CC9",
+     "bytes": "4C 26 1D",
+     "insn": "JMP abs 1D26",
+     "src": "src/battle/ai_cmd.asm:590 jmp     InvertCarry"
+    },
+    {
+     "snes": "EE:03AA",
+     "bytes": "20 0E 1D",
+     "insn": "JSR abs 1D0E",
+     "src": "src/world/world_start.asm:408 jsr     MovePlayer"
+    }
+   ],
+   "indexed_below": [
+    {
+     "snes": "C0:BDD9",
+     "bytes": "9E F6 1C",
+     "insn": "STZ absx 1CF6",
+     "src": "src/field/init.asm:124 :       stz     $1cf6,x"
+    },
+    {
+     "snes": "E5:FA47",
+     "bytes": "99 04 1C",
+     "insn": "STA absy 1C04",
+     "src": "src/cutscene/the_end.asm:749 sta     $1c04,y"
+    },
+    {
+     "snes": "E5:FA53",
+     "bytes": "99 04 1C",
+     "insn": "STA absy 1C04",
+     "src": "src/cutscene/the_end.asm:755 sta     $1c04,y"
+    }
+   ]
+  },
+  "AUDITED_FREE": {
+   "start": "1E1D",
+   "end": "1E3F",
+   "direct": [
+    {
+     "snes": "C0:01AD",
+     "bytes": "20 37 1E",
+     "insn": "JSR abs 1E37",
+     "src": "src/field/reset.asm:208 jsr     TfrMapTiles"
+    },
+    {
+     "snes": "C0:C085",
+     "bytes": "20 37 1E",
+     "insn": "JSR abs 1E37",
+     "src": "src/field/init.asm:502 jsr     TfrMapTiles"
+    },
+    {
+     "snes": "C1:1C97",
+     "bytes": "20 2F 1E",
+     "insn": "JSR abs 1E2F",
+     "src": "src/btlgfx/battle_bg.asm:118 jsr     _c11e2f"
+    },
+    {
+     "snes": "C1:1D57",
+     "bytes": "20 2F 1E",
+     "insn": "JSR abs 1E2F",
+     "src": "src/btlgfx/battle_bg.asm:215 jsr     _c11e2f"
+    },
+    {
+     "snes": "C1:1E73",
+     "bytes": "20 3C 1E",
+     "insn": "JSR abs 1E3C",
+     "src": "src/btlgfx/monster_gfx.asm:74 jsr     CheckBG1Monsters"
+    },
+    {
+     "snes": "C2:1E17",
+     "bytes": "4C 38 1E",
+     "insn": "JMP abs 1E38",
+     "src": "src/battle/ai_cmd.asm:841 jmp     _1e38"
+    },
+    {
+     "snes": "C3:1E29",
+     "bytes": "4C 2D 1E",
+     "insn": "JMP abs 1E2D",
+     "src": "src/menu/field_menu.asm:650 jmp     _c31e2d"
+    },
+    {
+     "snes": "EE:1D73",
+     "bytes": "4C 1F 1E",
+     "insn": "JMP abs 1E1F",
+     "src": "./src/common/longbranch.inc:5 jmp     addr"
+    },
+    {
+     "snes": "EE:1D82",
+     "bytes": "4C 1F 1E",
+     "insn": "JMP abs 1E1F",
+     "src": "./src/common/longbranch.inc:10 jmp     addr"
+    },
+    {
+     "snes": "EE:1D8D",
+     "bytes": "4C 1F 1E",
+     "insn": "JMP abs 1E1F",
+     "src": "./src/common/longbranch.inc:10 jmp     addr"
+    },
+    {
+     "snes": "EE:1D98",
+     "bytes": "4C 1F 1E",
+     "insn": "JMP abs 1E1F",
+     "src": "./src/common/longbranch.inc:10 jmp     addr"
+    }
+   ],
+   "indexed_below": [
+    {
+     "snes": "C0:3613",
+     "bytes": "B9 57 1D",
+     "insn": "LDA absy 1D57",
+     "src": "src/field/window.asm:535 :       lda     $1d57,y                 ; copy wallpaper palette to ra"
+    },
+    {
+     "snes": "C0:B29E",
+     "bytes": "B9 C9 1D",
+     "insn": "LDA absy 1DC9",
+     "src": "src/field/event.asm:3935 lda     $1dc9,y"
+    },
+    {
+     "snes": "C0:B6B0",
+     "bytes": "B9 C9 1D",
+     "insn": "LDA absy 1DC9",
+     "src": "src/field/event.asm:4635 lda     $1dc9,y"
+    },
+    {
+     "snes": "C0:B6B7",
+     "bytes": "99 C9 1D",
+     "insn": "STA absy 1DC9",
+     "src": "src/field/event.asm:4637 sta     $1dc9,y"
+    },
+    {
+     "snes": "C0:B6C4",
+     "bytes": "B9 C9 1D",
+     "insn": "LDA absy 1DC9",
+     "src": "src/field/event.asm:4650 lda     $1dc9,y"
+    },
+    {
+     "snes": "C0:B6CB",
+     "bytes": "99 C9 1D",
+     "insn": "STA absy 1DC9",
+     "src": "src/field/event.asm:4652 sta     $1dc9,y"
+    },
+    {
+     "snes": "C0:BDFF",
+     "bytes": "9E C9 1D",
+     "insn": "STZ absx 1DC9",
+     "src": "src/field/init.asm:149 :       stz     $1dc9,x"
+    },
+    {
+     "snes": "C0:BE0E",
+     "bytes": "9D 2C 1D",
+     "insn": "STA absx 1D2C",
+     "src": "src/field/init.asm:157 sta     $1d2c,x"
+    },
+    {
+     "snes": "C0:BE3B",
+     "bytes": "9D 57 1D",
+     "insn": "STA absx 1D57",
+     "src": "src/field/init.asm:176 sta     $1d57,x"
+    },
+    {
+     "snes": "C0:C2E8",
+     "bytes": "BD DD 1D",
+     "insn": "LDA absx 1DDD",
+     "src": "src/field/battle.asm:283 Loop1:  lda     $1ddd,x"
+    },
+    {
+     "snes": "C2:2437",
+     "bytes": "BD C9 1D",
+     "insn": "LDA absx 1DC9",
+     "src": "src/battle/init.asm:43 @2437:  lda     $1dc9,x"
+    },
+    {
+     "snes": "C2:36FD",
+     "bytes": "3C 29 1D",
+     "insn": "BIT absx 1D29",
+     "src": "src/battle/attack.asm:844 bit     $1d29,x"
+    },
+    {
+     "snes": "C2:49DA",
+     "bytes": "9D C9 1D",
+     "insn": "STA absx 1DC9",
+     "src": "src/battle/battle_end.asm:292 sta     $1dc9,x"
+    },
+    {
+     "snes": "C2:49FA",
+     "bytes": "1D DD 1D",
+     "insn": "ORA absx 1DDD",
+     "src": "src/battle/battle_end.asm:306 ora     $1ddd,x     ; add to available veldt battles"
+    },
+    {
+     "snes": "C2:49FD",
+     "bytes": "9D DD 1D",
+     "insn": "STA absx 1DDD",
+     "src": "src/battle/battle_end.asm:307 sta     $1ddd,x"
+    },
+    {
+     "snes": "C2:4A16",
+     "bytes": "1D 2C 1D",
+     "insn": "ORA absx 1D2C",
+     "src": "src/battle/battle_end.asm:325 ora     $1d2c,x     ; add to known rages"
+    },
+    {
+     "snes": "C2:4A19",
+     "bytes": "9D 2C 1D",
+     "insn": "STA absx 1D2C",
+     "src": "src/battle/battle_end.asm:326 sta     $1d2c,x"
+    },
+    {
+     "snes": "C2:556F",
+     "bytes": "3C 29 1D",
+     "insn": "BIT absx 1D29",
+     "src": "src/battle/party.asm:580 @556f:  bit     $1d29,x"
+    },
+    {
+     "snes": "C2:584C",
+     "bytes": "BD 2C 1D",
+     "insn": "LDA absx 1D2C",
+     "src": "src/battle/init_skills.asm:34 lda     $1d2c,x     ; known rages"
+    },
+    {
+     "snes": "C2:5ED0",
+     "bytes": "1D 29 1D",
+     "insn": "ORA absx 1D29",
+     "src": "src/battle/win.asm:175 ora     $1d29,x     ; add to known lores"
+    },
+    {
+     "snes": "C2:5ED3",
+     "bytes": "9D 29 1D",
+     "insn": "STA absx 1D29",
+     "src": "src/battle/win.asm:176 sta     $1d29,x"
+    },
+    {
+     "snes": "C3:23DF",
+     "bytes": "99 57 1D",
+     "insn": "STA absy 1D57",
+     "src": "src/menu/field_menu.asm:1738 sta     $1d57,y"
+    },
+    {
+     "snes": "C3:3FB1",
+     "bytes": "B9 57 1D",
+     "insn": "LDA absy 1D57",
+     "src": "src/menu/config.asm:1267 @3fb1:  lda     $1d57,y"
+    },
+    {
+     "snes": "C3:3FE2",
+     "bytes": "9D 55 1D",
+     "insn": "STA absx 1D55",
+     "src": "src/menu/config.asm:1297 sta     $1d55,x                 ; set the new color value in SRAM"
+    },
+    {
+     "snes": "C3:3FE7",
+     "bytes": "9D 56 1D",
+     "insn": "STA absx 1D56",
+     "src": "src/menu/config.asm:1299 sta     $1d55+1,x"
+    },
+    {
+     "snes": "C3:41E2",
+     "bytes": "BC 55 1D",
+     "insn": "LDY absx 1D55",
+     "src": "src/menu/config.asm:1618 ldy     $1d55,x"
+    },
+    {
+     "snes": "C3:521C",
+     "bytes": "BD 29 1D",
+     "insn": "LDA absx 1D29",
+     "src": "src/menu/skills.asm:1230 lda     $1d29,x     ; known lores"
+    },
+    {
+     "snes": "C3:53CE",
+     "bytes": "BD 2C 1D",
+     "insn": "LDA absx 1D2C",
+     "src": "src/menu/skills.asm:1535 lda     $1d2c,x                 ; known rages"
+    },
+    {
+     "snes": "C3:6BD0",
+     "bytes": "99 57 1D",
+     "insn": "STA absy 1D57",
+     "src": "src/menu/menu_gfx.asm:198 sta     $1d57,y"
+    }
+   ]
+  }
+ },
+ "block_moves": [
+  {
+   "snes": "C1:1263",
+   "bytes": "54 7E 7E",
+   "src": "src/btlgfx/init.asm:670 mvn     w7e9a1f,w7e9f1f"
+  },
+  {
+   "snes": "C1:3064",
+   "bytes": "54 7F 7F",
+   "src": "src/btlgfx/sprite.asm:1465 mvn     #$7f,#$7f"
+  },
+  {
+   "snes": "C1:375F",
+   "bytes": "54 7F 7F",
+   "src": "src/btlgfx/sprite.asm:2425 mvn     #$7f,#$7f"
+  },
+  {
+   "snes": "C1:376C",
+   "bytes": "54 7F 7F",
+   "src": "src/btlgfx/sprite.asm:2431 mvn     #$7f,#$7f"
+  },
+  {
+   "snes": "C1:3779",
+   "bytes": "54 7F 7F",
+   "src": "src/btlgfx/sprite.asm:2437 mvn     #$7f,#$7f"
+  },
+  {
+   "snes": "C1:378F",
+   "bytes": "54 7F 7F",
+   "src": "src/btlgfx/sprite.asm:2446 mvn     #$7f,#$7f"
+  },
+  {
+   "snes": "C1:37B8",
+   "bytes": "54 7F 7F",
+   "src": "src/btlgfx/sprite.asm:2472 mvn     #$7f,#$7f"
+  },
+  {
+   "snes": "C1:37C5",
+   "bytes": "54 7F 7F",
+   "src": "src/btlgfx/sprite.asm:2478 mvn     #$7f,#$7f"
+  },
+  {
+   "snes": "C1:37D2",
+   "bytes": "54 7F 7F",
+   "src": "src/btlgfx/sprite.asm:2484 mvn     #$7f,#$7f"
+  },
+  {
+   "snes": "C1:3805",
+   "bytes": "54 7F 7F",
+   "src": "src/btlgfx/sprite.asm:2515 mvn     #$7f,#$7f"
+  },
+  {
+   "snes": "C1:3812",
+   "bytes": "54 7F 7F",
+   "src": "src/btlgfx/sprite.asm:2521 mvn     #$7f,#$7f"
+  },
+  {
+   "snes": "C1:3829",
+   "bytes": "54 7F 7F",
+   "src": "src/btlgfx/sprite.asm:2532 mvn     #$7f,#$7f"
+  },
+  {
+   "snes": "C1:3852",
+   "bytes": "54 7F 7F",
+   "src": "src/btlgfx/sprite.asm:2558 mvn     #$7f,#$7f"
+  },
+  {
+   "snes": "C1:3869",
+   "bytes": "54 7F 7F",
+   "src": "src/btlgfx/sprite.asm:2569 mvn     #$7f,#$7f"
+  },
+  {
+   "snes": "C1:3876",
+   "bytes": "54 7F 7F",
+   "src": "src/btlgfx/sprite.asm:2575 mvn     #$7f,#$7f"
+  },
+  {
+   "snes": "C1:38AD",
+   "bytes": "54 7F 7F",
+   "src": "src/btlgfx/sprite.asm:2609 mvn     #$7f,#$7f"
+  },
+  {
+   "snes": "C1:38BA",
+   "bytes": "54 7F 7F",
+   "src": "src/btlgfx/sprite.asm:2615 mvn     #$7f,#$7f"
+  },
+  {
+   "snes": "C1:38C7",
+   "bytes": "54 7F 7F",
+   "src": "src/btlgfx/sprite.asm:2621 mvn     #$7f,#$7f"
+  },
+  {
+   "snes": "C1:48FB",
+   "bytes": "54 7E 7E",
+   "src": "src/btlgfx/menu.asm:1748 mvn     w7e5855,(w7e8d13 + 64)"
+  },
+  {
+   "snes": "C1:5A7B",
+   "bytes": "54 7E 7E",
+   "src": "src/btlgfx/menu.asm:4816 mvn     #$7e,#$7e"
+  },
+  {
+   "snes": "C1:5A99",
+   "bytes": "54 7E 7E",
+   "src": "src/btlgfx/menu.asm:4829 mvn     #$7e,#$7e"
+  },
+  {
+   "snes": "C1:5AA5",
+   "bytes": "54 7E 7E",
+   "src": "src/btlgfx/menu.asm:4833 mvn     #$7e,#$7e"
+  },
+  {
+   "snes": "C1:5AC4",
+   "bytes": "54 7E 7E",
+   "src": "src/btlgfx/menu.asm:4844 mvn     #$7e,#$7e"
+  },
+  {
+   "snes": "C2:2425",
+   "bytes": "54 7E C2",
+   "src": "src/battle/init.asm:32 mvn     TargetMaskTbl,wTargetMask"
+  },
+  {
+   "snes": "C2:297A",
+   "bytes": "54 7E C4",
+   "src": "src/battle/init_attacker.asm:273 mvn     MagicProp,$7e11a0"
+  },
+  {
+   "snes": "C2:54D7",
+   "bytes": "44 7E 7E",
+   "src": "src/battle/party.asm:475 mvp     wItemList,wItemPropBuf"
+  },
+  {
+   "snes": "C2:63D6",
+   "bytes": "54 7E 7E",
+   "src": "src/battle/main_3.asm:193 mvn     wTargetProp1,w7e2bce     ; copy damage variables to graphics b"
+  },
+  {
+   "snes": "C2:63F1",
+   "bytes": "54 7E 7E",
+   "src": "src/battle/main_3.asm:214 mvn     #$7e,#$7e"
+  },
+  {
+   "snes": "EE:2616",
+   "bytes": "54 7F EE",
+   "src": "src/world/train_script.asm:371 mvn     #^_ee2692,#$7f"
+  },
+  {
+   "snes": "EE:262A",
+   "bytes": "54 7F EE",
+   "src": "src/world/train_script.asm:381 mvn     #^_ee2832,#$7f"
+  },
+  {
+   "snes": "EE:2649",
+   "bytes": "54 7F EE",
+   "src": "src/world/train_script.asm:395 mvn     #^_ee2a32,#$7f"
+  },
+  {
+   "snes": "EE:2668",
+   "bytes": "54 7F EE",
+   "src": "src/world/train_script.asm:409 mvn     #^_ee2a92,#$7f"
+  },
+  {
+   "snes": "EE:2683",
+   "bytes": "54 7F EE",
+   "src": "src/world/train_script.asm:420 mvn     #^_ee2a12,#$7f"
+  },
+  {
+   "snes": "EE:9099",
+   "bytes": "54 7E 00",
+   "src": "src/world/init.asm:1420 mvn     #$00,#$7e"
+  },
+  {
+   "snes": "EE:90AC",
+   "bytes": "54 00 7E",
+   "src": "src/world/init.asm:1436 mvn     #$7e,#$00"
+  }
+ ]
+}

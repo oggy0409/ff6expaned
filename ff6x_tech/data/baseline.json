@@ -1,0 +1,15 @@
+{
+  "name": "Final Fantasy III (USA) (Rev 1) / FFVI US v1.1",
+  "size": 3145728,
+  "sha1": "057ada1c641e3e0b3ca34e6e4f4eb1b05a87143a",
+  "crc32": "C0FA0464",
+  "md5": "544311e104805e926083acf29ec664da",
+  "header": {
+    "title_snes": "C0:FFC0",
+    "title": "FINAL FANTASY 3      ",
+    "map_mode_snes": "C0:FFD5", "map_mode": "0x31",
+    "rom_size_snes": "C0:FFD7", "rom_size": "0x0C",
+    "revision_snes": "C0:FFDB", "revision": "0x01",
+    "checksum": "0x8A60", "complement": "0x759F"
+  }
+}

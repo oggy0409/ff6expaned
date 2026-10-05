@@ -1,0 +1,15 @@
+{
+ "_comment": "QA HARNESS ONLY (target monster-tech).",
+ "event_battle_groups": [
+  {
+   "group": "0xFE",
+   "formation_1": "0x240",
+   "formation_2": "0x240",
+   "expect": "00 00 00 00",
+   "patch_id": "Q501_QA_EVENT_BATTLE_GROUP",
+   "claim": "QA_EVENT_BATTLE_GROUP_FE",
+   "consumer": "event cmd $4D (EventBattle C0:A5A7) group $FE",
+   "reason": "QA: group $FE -> formation $240 (TESTMOB A + B)"
+  }
+ ]
+}

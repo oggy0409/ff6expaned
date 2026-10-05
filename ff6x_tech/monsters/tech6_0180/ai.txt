@@ -1,0 +1,5 @@
+# TESTCUBE A: Battle, Battle or Mute ($1B)
+random BATTLE BATTLE $1B
+end
+# counter section: none
+end

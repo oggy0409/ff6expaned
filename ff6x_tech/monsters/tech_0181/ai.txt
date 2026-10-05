@@ -1,0 +1,5 @@
+# TESTMOB B: each turn picks Battle, Battle or Slow ($19) at random (Slow ~1/3)
+random BATTLE BATTLE $19
+end
+# counter section: none
+end

@@ -1,0 +1,13 @@
+{
+ "_comment": "Palette resource (RGB888, converted to SNES BGR555 by the builder). Index 0 = transparent.",
+ "colors": [
+  "#000000",
+  "#200808",
+  "#C03010",
+  "#F07818",
+  "#F8D848",
+  "#FFFFFF",
+  "#30A830",
+  "#081008"
+ ]
+}

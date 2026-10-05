@@ -1,0 +1,23 @@
+{
+ "id": "0x3F0",
+ "_comment": "EXAMPLE (not in any target): v0.6.1 $242 layout - slot 0 Dark Wind at pos $13 (x=8) touches the visible left edge -> ERROR in enforce mode.",
+ "template_vanilla_formation": "0x002",
+ "no_veldt": true,
+ "magic_points": 0,
+ "magitek_possible": true,
+ "slots": [
+  {
+   "slot": 0,
+   "monster": "0x028",
+   "pos": "0x13"
+  },
+  {
+   "slot": 2,
+   "monster": "0x028"
+  },
+  {
+   "slot": 3,
+   "monster": "0x028"
+  }
+ ]
+}

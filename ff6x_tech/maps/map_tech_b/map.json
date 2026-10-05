@@ -1,0 +1,107 @@
+{
+ "map_id": "1A1",
+ "name": "MAP TECH B — TECH v0.4 map-foundation proof map (placeholder: vanilla Narshe house room art)",
+ "status": "TECH v0.4 proof map. New map ID $1A1. Layout composed from a vanilla room (layouts $06F/$070, used by map $01E) with the v0.4 compose pipeline. NOT production content.",
+ "size_tiles": [
+  32,
+  32
+ ],
+ "bg1": {
+  "layout_index": "0x161",
+  "compose": {
+   "fill": "01",
+   "blits": [
+    {
+     "layout": "0x06F",
+     "layout_size": [
+      128,
+      64
+     ],
+     "src": [
+      22,
+      3,
+      12,
+      12
+     ],
+     "dst": [
+      10,
+      8
+     ]
+    }
+   ],
+   "overrides": []
+  }
+ },
+ "bg2": {
+  "layout_index": "0x162",
+  "compose": {
+   "fill": "24",
+   "blits": [
+    {
+     "layout": "0x070",
+     "layout_size": [
+      128,
+      64
+     ],
+     "src": [
+      22,
+      3,
+      12,
+      12
+     ],
+     "dst": [
+      10,
+      8
+     ]
+    }
+   ],
+   "overrides": []
+  }
+ },
+ "bg3": {
+  "layout_index": "0x000"
+ },
+ "tile_property_set": "0x07 (vanilla set used by map $01E; read from the clean ROM at build time)",
+ "properties": {
+  "_comment": "Derived from vanilla map $01E row with overrides: title 1B->00, BG1/2 size EE->55 (32x32), BG3 size E7->57, scroll limits 00 00 -> 1F 1F, layouts replaced.",
+  "bytes": {
+   "00_title": "00",
+   "01_flags": "00",
+   "02_bg3prio_battlebg": "00",
+   "03": "00",
+   "04_tile_prop_set": "07",
+   "05_random_battles": "00",
+   "06_window_mask": "00",
+   "07_12_gfx_sets": "99 C8 46 03 40 22",
+   "13_16_layouts": "computed: BG1=$161, BG2=$162, BG3=$000",
+   "17_sprite_overlay": "03",
+   "18_21_bg23_shift": "00 00 00 00",
+   "22_parallax": "00",
+   "23_bg12_size": "55",
+   "24_bg3_size": "57",
+   "25_palette": "25",
+   "26_pal_anim": "00",
+   "27_bg_anim": "0B",
+   "28_song": "00",
+   "29": "00",
+   "30_map_w": "1F",
+   "31_map_h": "1F",
+   "32_color_math": "00"
+  }
+ },
+ "entry": {
+  "from": "map $1A0 north door -> (13,18) UP",
+  "arrive": [
+   13,
+   18
+  ],
+  "facing": "UP",
+  "z": "lower"
+ },
+ "rooms": {
+  "room": "composed room, floor x11-20 y12-18",
+  "npc": "TECH_B1 (11,16)",
+  "door": "short entrance (13,19) -> map $1A0 (16,12)",
+  "stairs": "long entrance (19,18) length 0 -> map $1A0 (13,26)"
+ }
+}

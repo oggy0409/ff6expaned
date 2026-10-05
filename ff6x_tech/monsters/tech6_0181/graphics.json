@@ -1,0 +1,3 @@
+{"_comment": "Custom graphics resource (TECH v0.6). 3bpp sprite (8 colours) to exercise the 3bpp path.",
+ "custom": {"image": "sprite.png", "bpp": 3, "stencil": "small"},
+ "overlap": 0}

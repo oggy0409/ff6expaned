@@ -1,0 +1,1626 @@
+[
+ {
+  "scenario": {
+   "rom": "/home/claude/work/rom/clean_rev1_reconstructed.sfc",
+   "formation": "008",
+   "party": "magitek",
+   "tag": "S1_vanilla_008_magitek"
+  },
+  "rom_sha1": "057ada1c641e3e0b3ca34e6e4f4eb1b05a87143a",
+  "table_layout": "vanilla",
+  "formation_record": "10 3C FF FF 17 17 28 28 00 00 AB 4C 44 A3 03",
+  "vram_map": 1,
+  "slots": [
+   {
+    "monster": "017",
+    "gfx_prop_slot": "017",
+    "gfx_prop_record": "86 0B 00 27 13",
+    "graphics_index": "0B86",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "E9CC30",
+    "tile_source_pc": "29CC30",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "013",
+    "stencil_bytes": "60 F0 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "027",
+    "palette_bytes": "00 00 63 04 F9 56 9F 31 8D 29 32 3E E8 15 C6 14 FF 7F 9A 53 34 33 6A 1E 0A 1D 65 11 03 0D C2 08",
+    "slot": 2,
+    "formation_position_byte": "AB",
+    "vram_map": 1,
+    "vram_box_origin": [
+     0,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "0027",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "5cc826676e1401d9733a6d469f4ade53fced7cfb",
+    "screen": {
+     "samples": 91,
+     "exact": 85,
+     "first_exact": 60,
+     "last_exact": 900,
+     "final": {
+      "x": 80,
+      "y": 88,
+      "opaque_px": 726,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "017",
+    "gfx_prop_slot": "017",
+    "gfx_prop_record": "86 0B 00 27 13",
+    "graphics_index": "0B86",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "E9CC30",
+    "tile_source_pc": "29CC30",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "013",
+    "stencil_bytes": "60 F0 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "027",
+    "palette_bytes": "00 00 63 04 F9 56 9F 31 8D 29 32 3E E8 15 C6 14 FF 7F 9A 53 34 33 6A 1E 0A 1D 65 11 03 0D C2 08",
+    "slot": 3,
+    "formation_position_byte": "4C",
+    "vram_map": 1,
+    "vram_box_origin": [
+     4,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "0027",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "5cc826676e1401d9733a6d469f4ade53fced7cfb",
+    "screen": {
+     "samples": 91,
+     "exact": 84,
+     "first_exact": 70,
+     "last_exact": 900,
+     "final": {
+      "x": 32,
+      "y": 96,
+      "opaque_px": 726,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "028",
+    "gfx_prop_slot": "028",
+    "gfx_prop_record": "1B 17 00 46 1F",
+    "graphics_index": "171B",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "EA28D8",
+    "tile_source_pc": "2A28D8",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "01F",
+    "stencil_bytes": "E0 70 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "046",
+    "palette_bytes": "00 00 22 00 B7 46 F1 35 6D 29 0A 21 C7 14 85 0C D6 5A E7 7E BE 73 DC 0E B2 0D EA 04 91 20 4B 18",
+    "slot": 4,
+    "formation_position_byte": "44",
+    "vram_map": 1,
+    "vram_box_origin": [
+     8,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "0046",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "e9dd90a413b9da1d93775adc73aa72d60c84840c",
+    "screen": {
+     "samples": 91,
+     "exact": 83,
+     "first_exact": 70,
+     "last_exact": 900,
+     "final": {
+      "x": 32,
+      "y": 32,
+      "opaque_px": 563,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "028",
+    "gfx_prop_slot": "028",
+    "gfx_prop_record": "1B 17 00 46 1F",
+    "graphics_index": "171B",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "EA28D8",
+    "tile_source_pc": "2A28D8",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "01F",
+    "stencil_bytes": "E0 70 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "046",
+    "palette_bytes": "00 00 22 00 B7 46 F1 35 6D 29 0A 21 C7 14 85 0C D6 5A E7 7E BE 73 DC 0E B2 0D EA 04 91 20 4B 18",
+    "slot": 5,
+    "formation_position_byte": "A3",
+    "vram_map": 1,
+    "vram_box_origin": [
+     12,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "0046",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "e9dd90a413b9da1d93775adc73aa72d60c84840c",
+    "screen": {
+     "samples": 91,
+     "exact": 0,
+     "first_exact": null,
+     "last_exact": null,
+     "final": {
+      "x": 80,
+      "y": 24,
+      "opaque_px": 563,
+      "mismatched_px": 502
+     }
+    },
+    "screen_pixel_exact_final": false
+   }
+  ]
+ },
+ {
+  "scenario": {
+   "rom": "/home/claude/work/rom/clean_rev1_reconstructed.sfc",
+   "formation": "008",
+   "party": "no_magitek",
+   "tag": "S2_vanilla_008_no_magitek"
+  },
+  "rom_sha1": "057ada1c641e3e0b3ca34e6e4f4eb1b05a87143a",
+  "table_layout": "vanilla",
+  "formation_record": "10 3C FF FF 17 17 28 28 00 00 AB 4C 44 A3 03",
+  "vram_map": 1,
+  "slots": [
+   {
+    "monster": "017",
+    "gfx_prop_slot": "017",
+    "gfx_prop_record": "86 0B 00 27 13",
+    "graphics_index": "0B86",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "E9CC30",
+    "tile_source_pc": "29CC30",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "013",
+    "stencil_bytes": "60 F0 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "027",
+    "palette_bytes": "00 00 63 04 F9 56 9F 31 8D 29 32 3E E8 15 C6 14 FF 7F 9A 53 34 33 6A 1E 0A 1D 65 11 03 0D C2 08",
+    "slot": 2,
+    "formation_position_byte": "AB",
+    "vram_map": 1,
+    "vram_box_origin": [
+     0,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "0027",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "5cc826676e1401d9733a6d469f4ade53fced7cfb",
+    "screen": {
+     "samples": 91,
+     "exact": 81,
+     "first_exact": 80,
+     "last_exact": 900,
+     "final": {
+      "x": 80,
+      "y": 88,
+      "opaque_px": 726,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "017",
+    "gfx_prop_slot": "017",
+    "gfx_prop_record": "86 0B 00 27 13",
+    "graphics_index": "0B86",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "E9CC30",
+    "tile_source_pc": "29CC30",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "013",
+    "stencil_bytes": "60 F0 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "027",
+    "palette_bytes": "00 00 63 04 F9 56 9F 31 8D 29 32 3E E8 15 C6 14 FF 7F 9A 53 34 33 6A 1E 0A 1D 65 11 03 0D C2 08",
+    "slot": 3,
+    "formation_position_byte": "4C",
+    "vram_map": 1,
+    "vram_box_origin": [
+     4,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "0027",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "5cc826676e1401d9733a6d469f4ade53fced7cfb",
+    "screen": {
+     "samples": 91,
+     "exact": 82,
+     "first_exact": 90,
+     "last_exact": 900,
+     "final": {
+      "x": 32,
+      "y": 96,
+      "opaque_px": 726,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "028",
+    "gfx_prop_slot": "028",
+    "gfx_prop_record": "1B 17 00 46 1F",
+    "graphics_index": "171B",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "EA28D8",
+    "tile_source_pc": "2A28D8",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "01F",
+    "stencil_bytes": "E0 70 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "046",
+    "palette_bytes": "00 00 22 00 B7 46 F1 35 6D 29 0A 21 C7 14 85 0C D6 5A E7 7E BE 73 DC 0E B2 0D EA 04 91 20 4B 18",
+    "slot": 4,
+    "formation_position_byte": "44",
+    "vram_map": 1,
+    "vram_box_origin": [
+     8,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "0046",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "e9dd90a413b9da1d93775adc73aa72d60c84840c",
+    "screen": {
+     "samples": 91,
+     "exact": 82,
+     "first_exact": 90,
+     "last_exact": 900,
+     "final": {
+      "x": 32,
+      "y": 32,
+      "opaque_px": 563,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "028",
+    "gfx_prop_slot": "028",
+    "gfx_prop_record": "1B 17 00 46 1F",
+    "graphics_index": "171B",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "EA28D8",
+    "tile_source_pc": "2A28D8",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "01F",
+    "stencil_bytes": "E0 70 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "046",
+    "palette_bytes": "00 00 22 00 B7 46 F1 35 6D 29 0A 21 C7 14 85 0C D6 5A E7 7E BE 73 DC 0E B2 0D EA 04 91 20 4B 18",
+    "slot": 5,
+    "formation_position_byte": "A3",
+    "vram_map": 1,
+    "vram_box_origin": [
+     12,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "0046",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "e9dd90a413b9da1d93775adc73aa72d60c84840c",
+    "screen": {
+     "samples": 91,
+     "exact": 81,
+     "first_exact": 90,
+     "last_exact": 900,
+     "final": {
+      "x": 80,
+      "y": 24,
+      "opaque_px": 563,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   }
+  ]
+ },
+ {
+  "scenario": {
+   "rom": "out/FF6X_Rev1_TECH_v0.6.0_ENEMY_ASSET_QA.sfc",
+   "formation": "242",
+   "party": "magitek",
+   "tag": "S3_v060qa_242_magitek"
+  },
+  "rom_sha1": "14d179cfa61e720aa81ea9c4be518df1e13212fa",
+  "table_layout": "v0.5+/v0.6 relocated",
+  "formation_record": "10 3C FF FF 17 17 28 82 00 00 AB 4C 44 A3 23",
+  "vram_map": 1,
+  "slots": [
+   {
+    "monster": "017",
+    "gfx_prop_slot": "017",
+    "gfx_prop_record": "86 0B 00 27 13",
+    "graphics_index": "0B86",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "E9CC30",
+    "tile_source_pc": "29CC30",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "013",
+    "stencil_bytes": "60 F0 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "027",
+    "palette_bytes": "00 00 63 04 F9 56 9F 31 8D 29 32 3E E8 15 C6 14 FF 7F 9A 53 34 33 6A 1E 0A 1D 65 11 03 0D C2 08",
+    "slot": 2,
+    "formation_position_byte": "AB",
+    "vram_map": 1,
+    "vram_box_origin": [
+     0,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "0027",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "5cc826676e1401d9733a6d469f4ade53fced7cfb",
+    "screen": {
+     "samples": 91,
+     "exact": 85,
+     "first_exact": 60,
+     "last_exact": 900,
+     "final": {
+      "x": 80,
+      "y": 88,
+      "opaque_px": 726,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "017",
+    "gfx_prop_slot": "017",
+    "gfx_prop_record": "86 0B 00 27 13",
+    "graphics_index": "0B86",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "E9CC30",
+    "tile_source_pc": "29CC30",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "013",
+    "stencil_bytes": "60 F0 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "027",
+    "palette_bytes": "00 00 63 04 F9 56 9F 31 8D 29 32 3E E8 15 C6 14 FF 7F 9A 53 34 33 6A 1E 0A 1D 65 11 03 0D C2 08",
+    "slot": 3,
+    "formation_position_byte": "4C",
+    "vram_map": 1,
+    "vram_box_origin": [
+     4,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "0027",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "5cc826676e1401d9733a6d469f4ade53fced7cfb",
+    "screen": {
+     "samples": 91,
+     "exact": 84,
+     "first_exact": 70,
+     "last_exact": 900,
+     "final": {
+      "x": 32,
+      "y": 96,
+      "opaque_px": 726,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "028",
+    "gfx_prop_slot": "028",
+    "gfx_prop_record": "1B 17 00 46 1F",
+    "graphics_index": "171B",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "EA28D8",
+    "tile_source_pc": "2A28D8",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "01F",
+    "stencil_bytes": "E0 70 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "046",
+    "palette_bytes": "00 00 22 00 B7 46 F1 35 6D 29 0A 21 C7 14 85 0C D6 5A E7 7E BE 73 DC 0E B2 0D EA 04 91 20 4B 18",
+    "slot": 4,
+    "formation_position_byte": "44",
+    "vram_map": 1,
+    "vram_box_origin": [
+     8,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "0046",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "e9dd90a413b9da1d93775adc73aa72d60c84840c",
+    "screen": {
+     "samples": 91,
+     "exact": 83,
+     "first_exact": 70,
+     "last_exact": 900,
+     "final": {
+      "x": 32,
+      "y": 32,
+      "opaque_px": 563,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "182",
+    "gfx_prop_slot": "1A2",
+    "gfx_prop_record": "1B 17 00 46 1F",
+    "graphics_index": "171B",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "EA28D8",
+    "tile_source_pc": "2A28D8",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "01F",
+    "stencil_bytes": "E0 70 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "046",
+    "palette_bytes": "00 00 22 00 B7 46 F1 35 6D 29 0A 21 C7 14 85 0C D6 5A E7 7E BE 73 DC 0E B2 0D EA 04 91 20 4B 18",
+    "slot": 5,
+    "formation_position_byte": "A3",
+    "vram_map": 1,
+    "vram_box_origin": [
+     12,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "0046",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "e9dd90a413b9da1d93775adc73aa72d60c84840c",
+    "screen": {
+     "samples": 91,
+     "exact": 0,
+     "first_exact": null,
+     "last_exact": null,
+     "final": {
+      "x": 80,
+      "y": 24,
+      "opaque_px": 563,
+      "mismatched_px": 502
+     }
+    },
+    "screen_pixel_exact_final": false
+   }
+  ]
+ },
+ {
+  "scenario": {
+   "rom": "out/FF6X_Rev1_TECH_v0.6.0_ENEMY_ASSET_QA.sfc",
+   "formation": "242",
+   "party": "no_magitek",
+   "tag": "S4_v060qa_242_no_magitek"
+  },
+  "rom_sha1": "14d179cfa61e720aa81ea9c4be518df1e13212fa",
+  "table_layout": "v0.5+/v0.6 relocated",
+  "formation_record": "10 3C FF FF 17 17 28 82 00 00 AB 4C 44 A3 23",
+  "vram_map": 1,
+  "slots": [
+   {
+    "monster": "017",
+    "gfx_prop_slot": "017",
+    "gfx_prop_record": "86 0B 00 27 13",
+    "graphics_index": "0B86",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "E9CC30",
+    "tile_source_pc": "29CC30",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "013",
+    "stencil_bytes": "60 F0 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "027",
+    "palette_bytes": "00 00 63 04 F9 56 9F 31 8D 29 32 3E E8 15 C6 14 FF 7F 9A 53 34 33 6A 1E 0A 1D 65 11 03 0D C2 08",
+    "slot": 2,
+    "formation_position_byte": "AB",
+    "vram_map": 1,
+    "vram_box_origin": [
+     0,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "0027",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "5cc826676e1401d9733a6d469f4ade53fced7cfb",
+    "screen": {
+     "samples": 91,
+     "exact": 81,
+     "first_exact": 80,
+     "last_exact": 900,
+     "final": {
+      "x": 80,
+      "y": 88,
+      "opaque_px": 726,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "017",
+    "gfx_prop_slot": "017",
+    "gfx_prop_record": "86 0B 00 27 13",
+    "graphics_index": "0B86",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "E9CC30",
+    "tile_source_pc": "29CC30",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "013",
+    "stencil_bytes": "60 F0 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "027",
+    "palette_bytes": "00 00 63 04 F9 56 9F 31 8D 29 32 3E E8 15 C6 14 FF 7F 9A 53 34 33 6A 1E 0A 1D 65 11 03 0D C2 08",
+    "slot": 3,
+    "formation_position_byte": "4C",
+    "vram_map": 1,
+    "vram_box_origin": [
+     4,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "0027",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "5cc826676e1401d9733a6d469f4ade53fced7cfb",
+    "screen": {
+     "samples": 91,
+     "exact": 82,
+     "first_exact": 90,
+     "last_exact": 900,
+     "final": {
+      "x": 32,
+      "y": 96,
+      "opaque_px": 726,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "028",
+    "gfx_prop_slot": "028",
+    "gfx_prop_record": "1B 17 00 46 1F",
+    "graphics_index": "171B",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "EA28D8",
+    "tile_source_pc": "2A28D8",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "01F",
+    "stencil_bytes": "E0 70 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "046",
+    "palette_bytes": "00 00 22 00 B7 46 F1 35 6D 29 0A 21 C7 14 85 0C D6 5A E7 7E BE 73 DC 0E B2 0D EA 04 91 20 4B 18",
+    "slot": 4,
+    "formation_position_byte": "44",
+    "vram_map": 1,
+    "vram_box_origin": [
+     8,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "0046",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "e9dd90a413b9da1d93775adc73aa72d60c84840c",
+    "screen": {
+     "samples": 91,
+     "exact": 82,
+     "first_exact": 90,
+     "last_exact": 900,
+     "final": {
+      "x": 32,
+      "y": 32,
+      "opaque_px": 563,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "182",
+    "gfx_prop_slot": "1A2",
+    "gfx_prop_record": "1B 17 00 46 1F",
+    "graphics_index": "171B",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "EA28D8",
+    "tile_source_pc": "2A28D8",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "01F",
+    "stencil_bytes": "E0 70 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "046",
+    "palette_bytes": "00 00 22 00 B7 46 F1 35 6D 29 0A 21 C7 14 85 0C D6 5A E7 7E BE 73 DC 0E B2 0D EA 04 91 20 4B 18",
+    "slot": 5,
+    "formation_position_byte": "A3",
+    "vram_map": 1,
+    "vram_box_origin": [
+     12,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "0046",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "e9dd90a413b9da1d93775adc73aa72d60c84840c",
+    "screen": {
+     "samples": 91,
+     "exact": 81,
+     "first_exact": 90,
+     "last_exact": 900,
+     "final": {
+      "x": 80,
+      "y": 24,
+      "opaque_px": 563,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   }
+  ]
+ },
+ {
+  "scenario": {
+   "rom": "out/FF6X_Rev1_TECH_v0.6.0_ENEMY_ASSET_QA.sfc",
+   "formation": "243",
+   "party": "no_magitek",
+   "tag": "S5_v060qa_243_no_magitek"
+  },
+  "rom_sha1": "14d179cfa61e720aa81ea9c4be518df1e13212fa",
+  "table_layout": "v0.5+/v0.6 relocated",
+  "formation_record": "10 3C FF FF 17 17 28 83 00 00 AB 4C 44 A3 23",
+  "vram_map": 1,
+  "slots": [
+   {
+    "monster": "017",
+    "gfx_prop_slot": "017",
+    "gfx_prop_record": "86 0B 00 27 13",
+    "graphics_index": "0B86",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "E9CC30",
+    "tile_source_pc": "29CC30",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "013",
+    "stencil_bytes": "60 F0 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "027",
+    "palette_bytes": "00 00 63 04 F9 56 9F 31 8D 29 32 3E E8 15 C6 14 FF 7F 9A 53 34 33 6A 1E 0A 1D 65 11 03 0D C2 08",
+    "slot": 2,
+    "formation_position_byte": "AB",
+    "vram_map": 1,
+    "vram_box_origin": [
+     0,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "0027",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "5cc826676e1401d9733a6d469f4ade53fced7cfb",
+    "screen": {
+     "samples": 91,
+     "exact": 81,
+     "first_exact": 80,
+     "last_exact": 900,
+     "final": {
+      "x": 80,
+      "y": 88,
+      "opaque_px": 726,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "017",
+    "gfx_prop_slot": "017",
+    "gfx_prop_record": "86 0B 00 27 13",
+    "graphics_index": "0B86",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "E9CC30",
+    "tile_source_pc": "29CC30",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "013",
+    "stencil_bytes": "60 F0 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "027",
+    "palette_bytes": "00 00 63 04 F9 56 9F 31 8D 29 32 3E E8 15 C6 14 FF 7F 9A 53 34 33 6A 1E 0A 1D 65 11 03 0D C2 08",
+    "slot": 3,
+    "formation_position_byte": "4C",
+    "vram_map": 1,
+    "vram_box_origin": [
+     4,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "0027",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "5cc826676e1401d9733a6d469f4ade53fced7cfb",
+    "screen": {
+     "samples": 91,
+     "exact": 82,
+     "first_exact": 90,
+     "last_exact": 900,
+     "final": {
+      "x": 32,
+      "y": 96,
+      "opaque_px": 726,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "028",
+    "gfx_prop_slot": "028",
+    "gfx_prop_record": "1B 17 00 46 1F",
+    "graphics_index": "171B",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "EA28D8",
+    "tile_source_pc": "2A28D8",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "01F",
+    "stencil_bytes": "E0 70 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "046",
+    "palette_bytes": "00 00 22 00 B7 46 F1 35 6D 29 0A 21 C7 14 85 0C D6 5A E7 7E BE 73 DC 0E B2 0D EA 04 91 20 4B 18",
+    "slot": 4,
+    "formation_position_byte": "44",
+    "vram_map": 1,
+    "vram_box_origin": [
+     8,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "0046",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "e9dd90a413b9da1d93775adc73aa72d60c84840c",
+    "screen": {
+     "samples": 91,
+     "exact": 82,
+     "first_exact": 90,
+     "last_exact": 900,
+     "final": {
+      "x": 32,
+      "y": 32,
+      "opaque_px": 563,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "183",
+    "gfx_prop_slot": "1A3",
+    "gfx_prop_record": "1B 17 00 4A 1F",
+    "graphics_index": "171B",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "EA28D8",
+    "tile_source_pc": "2A28D8",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "01F",
+    "stencil_bytes": "E0 70 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "04A",
+    "palette_bytes": "29 25 84 0C BD 73 3A 53 76 3E D0 35 BC 3E 8E 29 2B 21 C7 14 FA 21 11 19 4A 10 15 7A 4E 65 CA 44",
+    "slot": 5,
+    "formation_position_byte": "A3",
+    "vram_map": 1,
+    "vram_box_origin": [
+     12,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     4
+    ],
+    "ram_palette_8117": "004A",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "e9dd90a413b9da1d93775adc73aa72d60c84840c",
+    "screen": {
+     "samples": 91,
+     "exact": 81,
+     "first_exact": 90,
+     "last_exact": 900,
+     "final": {
+      "x": 80,
+      "y": 24,
+      "opaque_px": 563,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   }
+  ]
+ },
+ {
+  "scenario": {
+   "rom": "out/FF6X_Rev1_TECH_v0.6.1_ENEMY_ASSET_QA.sfc",
+   "formation": "242",
+   "party": "magitek",
+   "tag": "S6_v061qa_242_magitek"
+  },
+  "rom_sha1": "8a55707ff2b4cd1364fdabf75e91422ba90ff8bb",
+  "table_layout": "v0.5+/v0.6 relocated",
+  "formation_record": "80 0D 28 FF 82 83 FF FF 13 00 4B 87 00 00 3E",
+  "vram_map": 8,
+  "slots": [
+   {
+    "monster": "028",
+    "gfx_prop_slot": "028",
+    "gfx_prop_record": "1B 17 00 46 1F",
+    "graphics_index": "171B",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "EA28D8",
+    "tile_source_pc": "2A28D8",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "01F",
+    "stencil_bytes": "E0 70 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "046",
+    "palette_bytes": "00 00 22 00 B7 46 F1 35 6D 29 0A 21 C7 14 85 0C D6 5A E7 7E BE 73 DC 0E B2 0D EA 04 91 20 4B 18",
+    "slot": 0,
+    "formation_position_byte": "13",
+    "vram_map": 8,
+    "vram_box_origin": [
+     0,
+     0
+    ],
+    "vram_box_cols_rows": [
+     8,
+     8
+    ],
+    "ram_palette_8117": "0046",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "e9dd90a413b9da1d93775adc73aa72d60c84840c",
+    "screen": {
+     "samples": 91,
+     "exact": 83,
+     "first_exact": 60,
+     "last_exact": 900,
+     "final": {
+      "x": 8,
+      "y": 24,
+      "opaque_px": 563,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "182",
+    "gfx_prop_slot": "1A2",
+    "gfx_prop_record": "1B 17 00 46 1F",
+    "graphics_index": "171B",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "EA28D8",
+    "tile_source_pc": "2A28D8",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "01F",
+    "stencil_bytes": "E0 70 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "046",
+    "palette_bytes": "00 00 22 00 B7 46 F1 35 6D 29 0A 21 C7 14 85 0C D6 5A E7 7E BE 73 DC 0E B2 0D EA 04 91 20 4B 18",
+    "slot": 2,
+    "formation_position_byte": "4B",
+    "vram_map": 8,
+    "vram_box_origin": [
+     8,
+     0
+    ],
+    "vram_box_cols_rows": [
+     4,
+     8
+    ],
+    "ram_palette_8117": "0046",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "e9dd90a413b9da1d93775adc73aa72d60c84840c",
+    "screen": {
+     "samples": 91,
+     "exact": 83,
+     "first_exact": 70,
+     "last_exact": 900,
+     "final": {
+      "x": 32,
+      "y": 88,
+      "opaque_px": 563,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "183",
+    "gfx_prop_slot": "1A3",
+    "gfx_prop_record": "1B 17 00 4A 1F",
+    "graphics_index": "171B",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "EA28D8",
+    "tile_source_pc": "2A28D8",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "01F",
+    "stencil_bytes": "E0 70 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "04A",
+    "palette_bytes": "29 25 84 0C BD 73 3A 53 76 3E D0 35 BC 3E 8E 29 2B 21 C7 14 FA 21 11 19 4A 10 15 7A 4E 65 CA 44",
+    "slot": 3,
+    "formation_position_byte": "87",
+    "vram_map": 8,
+    "vram_box_origin": [
+     8,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     8
+    ],
+    "ram_palette_8117": "004A",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "e9dd90a413b9da1d93775adc73aa72d60c84840c",
+    "screen": {
+     "samples": 91,
+     "exact": 83,
+     "first_exact": 70,
+     "last_exact": 900,
+     "final": {
+      "x": 64,
+      "y": 56,
+      "opaque_px": 563,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   }
+  ]
+ },
+ {
+  "scenario": {
+   "rom": "out/FF6X_Rev1_TECH_v0.6.1_ENEMY_ASSET_QA.sfc",
+   "formation": "243",
+   "party": "magitek",
+   "tag": "S7_v061qa_243_magitek"
+  },
+  "rom_sha1": "8a55707ff2b4cd1364fdabf75e91422ba90ff8bb",
+  "table_layout": "v0.5+/v0.6 relocated",
+  "formation_record": "80 0D 28 FF 28 28 FF FF 13 00 4B 87 00 00 32",
+  "vram_map": 8,
+  "slots": [
+   {
+    "monster": "028",
+    "gfx_prop_slot": "028",
+    "gfx_prop_record": "1B 17 00 46 1F",
+    "graphics_index": "171B",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "EA28D8",
+    "tile_source_pc": "2A28D8",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "01F",
+    "stencil_bytes": "E0 70 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "046",
+    "palette_bytes": "00 00 22 00 B7 46 F1 35 6D 29 0A 21 C7 14 85 0C D6 5A E7 7E BE 73 DC 0E B2 0D EA 04 91 20 4B 18",
+    "slot": 0,
+    "formation_position_byte": "13",
+    "vram_map": 8,
+    "vram_box_origin": [
+     0,
+     0
+    ],
+    "vram_box_cols_rows": [
+     8,
+     8
+    ],
+    "ram_palette_8117": "0046",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "e9dd90a413b9da1d93775adc73aa72d60c84840c",
+    "screen": {
+     "samples": 91,
+     "exact": 83,
+     "first_exact": 60,
+     "last_exact": 900,
+     "final": {
+      "x": 8,
+      "y": 24,
+      "opaque_px": 563,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "028",
+    "gfx_prop_slot": "028",
+    "gfx_prop_record": "1B 17 00 46 1F",
+    "graphics_index": "171B",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "EA28D8",
+    "tile_source_pc": "2A28D8",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "01F",
+    "stencil_bytes": "E0 70 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "046",
+    "palette_bytes": "00 00 22 00 B7 46 F1 35 6D 29 0A 21 C7 14 85 0C D6 5A E7 7E BE 73 DC 0E B2 0D EA 04 91 20 4B 18",
+    "slot": 2,
+    "formation_position_byte": "4B",
+    "vram_map": 8,
+    "vram_box_origin": [
+     8,
+     0
+    ],
+    "vram_box_cols_rows": [
+     4,
+     8
+    ],
+    "ram_palette_8117": "0046",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "e9dd90a413b9da1d93775adc73aa72d60c84840c",
+    "screen": {
+     "samples": 91,
+     "exact": 83,
+     "first_exact": 70,
+     "last_exact": 900,
+     "final": {
+      "x": 32,
+      "y": 88,
+      "opaque_px": 563,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "028",
+    "gfx_prop_slot": "028",
+    "gfx_prop_record": "1B 17 00 46 1F",
+    "graphics_index": "171B",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "EA28D8",
+    "tile_source_pc": "2A28D8",
+    "tile_count": 14,
+    "tile_bytes": 448,
+    "stencil_index": "01F",
+    "stencil_bytes": "E0 70 F0 F0 00 00 00 00",
+    "stencil_cols_rows": [
+     4,
+     4
+    ],
+    "palette_index": "046",
+    "palette_bytes": "00 00 22 00 B7 46 F1 35 6D 29 0A 21 C7 14 85 0C D6 5A E7 7E BE 73 DC 0E B2 0D EA 04 91 20 4B 18",
+    "slot": 3,
+    "formation_position_byte": "87",
+    "vram_map": 8,
+    "vram_box_origin": [
+     8,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     8
+    ],
+    "ram_palette_8117": "0046",
+    "ram_size_812F_cols_rows": [
+     4,
+     4
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "e9dd90a413b9da1d93775adc73aa72d60c84840c",
+    "screen": {
+     "samples": 91,
+     "exact": 84,
+     "first_exact": 70,
+     "last_exact": 900,
+     "final": {
+      "x": 64,
+      "y": 56,
+      "opaque_px": 563,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   }
+  ]
+ },
+ {
+  "scenario": {
+   "rom": "/home/claude/work/rom/clean_rev1_reconstructed.sfc",
+   "formation": "002",
+   "party": "magitek",
+   "tag": "S8_vanilla_002_magitek_reference_layout"
+  },
+  "rom_sha1": "057ada1c641e3e0b3ca34e6e4f4eb1b05a87143a",
+  "table_layout": "vanilla",
+  "formation_record": "80 0C FF FF 00 00 FF FF 00 00 4B 87 00 00 33",
+  "vram_map": 8,
+  "slots": [
+   {
+    "monster": "000",
+    "gfx_prop_slot": "000",
+    "gfx_prop_record": "00 00 00 00 00",
+    "graphics_index": "0000",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "E97000",
+    "tile_source_pc": "297000",
+    "tile_count": 21,
+    "tile_bytes": 672,
+    "stencil_index": "000",
+    "stencil_bytes": "E0 F0 F0 F0 70 E0 00 00",
+    "stencil_cols_rows": [
+     4,
+     6
+    ],
+    "palette_index": "000",
+    "palette_bytes": "08 21 63 0C 9D 6F DB 1E 12 3E 8D 2D 09 29 50 29 E8 18 8E 41 C5 1C 4B 25 30 52 A6 0C 38 0E FA 52",
+    "slot": 2,
+    "formation_position_byte": "4B",
+    "vram_map": 8,
+    "vram_box_origin": [
+     8,
+     0
+    ],
+    "vram_box_cols_rows": [
+     4,
+     8
+    ],
+    "ram_palette_8117": "0000",
+    "ram_size_812F_cols_rows": [
+     4,
+     6
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "c3802a333b1dbbe7c926b552f22ef49325e2c9f5",
+    "screen": {
+     "samples": 91,
+     "exact": 85,
+     "first_exact": 60,
+     "last_exact": 900,
+     "final": {
+      "x": 32,
+      "y": 88,
+      "opaque_px": 857,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   },
+   {
+    "monster": "000",
+    "gfx_prop_slot": "000",
+    "gfx_prop_record": "00 00 00 00 00",
+    "graphics_index": "0000",
+    "bpp": 4,
+    "large_stencil": false,
+    "expansion_flag": false,
+    "graphics_base": "E97000",
+    "tile_source_snes": "E97000",
+    "tile_source_pc": "297000",
+    "tile_count": 21,
+    "tile_bytes": 672,
+    "stencil_index": "000",
+    "stencil_bytes": "E0 F0 F0 F0 70 E0 00 00",
+    "stencil_cols_rows": [
+     4,
+     6
+    ],
+    "palette_index": "000",
+    "palette_bytes": "08 21 63 0C 9D 6F DB 1E 12 3E 8D 2D 09 29 50 29 E8 18 8E 41 C5 1C 4B 25 30 52 A6 0C 38 0E FA 52",
+    "slot": 3,
+    "formation_position_byte": "87",
+    "vram_map": 8,
+    "vram_box_origin": [
+     8,
+     8
+    ],
+    "vram_box_cols_rows": [
+     4,
+     8
+    ],
+    "ram_palette_8117": "0000",
+    "ram_size_812F_cols_rows": [
+     4,
+     6
+    ],
+    "buffer_tiles_equal_rom_source": true,
+    "buffer_tile_mismatches": [],
+    "buffer_box_sha1": "c3802a333b1dbbe7c926b552f22ef49325e2c9f5",
+    "screen": {
+     "samples": 91,
+     "exact": 84,
+     "first_exact": 70,
+     "last_exact": 900,
+     "final": {
+      "x": 64,
+      "y": 56,
+      "opaque_px": 857,
+      "mismatched_px": 0
+     }
+    },
+    "screen_pixel_exact_final": true
+   }
+  ]
+ }
+]

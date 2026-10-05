@@ -1,0 +1,13 @@
+{
+  "_comment": "NPC order = object number: index 0 -> obj $10, index 1 -> obj $11. Event pointers must be in CA:0000-CD:FFFF, so each NPC gets a 5-byte bridge in NPC_EVENT_BRIDGES (CC:E5EE+).",
+  "npcs": [
+    {"name": "VALE_PLACEHOLDER", "role": "future Dr. Edrin Vale (placeholder sprite)",
+     "x": 12, "y": 16, "gfx": "18 (MAN)", "pal": 1, "direction": "DOWN", "speed": 1,
+     "movement": "NONE", "react": "FACE_PLAYER", "switch": "NPC_ANNEX_VALE_VISIBLE",
+     "event": "EvVale", "bridge_slot": 0},
+    {"name": "REWARD_CHEST", "role": "reward point (placeholder chest object)",
+     "x": 16, "y": 6, "gfx": "54 (TREASURE_CHEST)", "pal": 7, "speed": 0,
+     "anim": {"type": 0, "frame": "20 (NONE)", "speed": 0}, "react": "NONE",
+     "switch": "NPC_ANNEX_CHEST_VISIBLE", "event": "EvChest", "bridge_slot": 1}
+  ]
+}

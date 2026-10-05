@@ -1,0 +1,16 @@
+# TECH v0.4 QA HARNESS ONLY. Trigger: map $013 (Narshe opening streets) tile (34,43).
+# VANILLA_TILE_EVENT_LATCH ($1B5) is read-only (vanilla SavePoint latch).
+@QaAccess4
+if_switch VANILLA_TILE_EVENT_LATCH=1 -> QaRet4
+dlg qa4_prompt
+choice QaMapA, QaAnnex, QaNo4
+@QaMapA
+load_map $1A0 16 27 UP
+return
+@QaAnnex
+call EvAnnexEnter_Yes
+return
+@QaNo4
+call VanillaSavePoint
+@QaRet4
+return

@@ -1,0 +1,157 @@
+{
+ "tables": {
+  "MONSTER_PAL": [
+   {
+    "snes": "C1233D",
+    "bytes": "BF 20 78 D2",
+    "kind": "long",
+    "disp": 0,
+    "src": "src/btlgfx/monster_gfx.asm:766",
+    "text": "@2349:  lda     f:MonsterPal,x"
+   },
+   {
+    "snes": "C1D679",
+    "bytes": "BF 20 78 D2",
+    "kind": "long",
+    "disp": 0,
+    "src": "src/btlgfx/anim_cmd.asm:5172",
+    "text": "@d67c:  lda     f:MonsterPal,x"
+   },
+   {
+    "snes": "C2BBD4",
+    "bytes": "BF 40 78 D2",
+    "kind": "long",
+    "disp": 32,
+    "src": "src/btlgfx/anim_init_2.asm:44",
+    "text": "@bbd4:  lda     f:MonsterPal+$20,x"
+   },
+   {
+    "snes": "C2FA7C",
+    "bytes": "BF 20 78 D2",
+    "kind": "long",
+    "disp": 0,
+    "src": "src/btlgfx/anim_init.asm:2745",
+    "text": "@fa75:  lda     f:MonsterPal,x"
+   },
+   {
+    "snes": "C2FA93",
+    "bytes": "BF 20 78 D2",
+    "kind": "long",
+    "disp": 0,
+    "src": "src/btlgfx/anim_init.asm:2761",
+    "text": "@fa8c:  lda     f:MonsterPal,x"
+   },
+   {
+    "snes": "C3B171",
+    "bytes": "BF 20 78 D2",
+    "kind": "long",
+    "disp": 0,
+    "src": "src/menu/colosseum.asm:703",
+    "text": "@b171:  lda     f:MonsterPal,x"
+   }
+  ],
+  "MONSTER_STENCIL": [
+   {
+    "snes": "C1216E",
+    "bytes": "6F 20 A8 D2",
+    "kind": "long",
+    "disp": 0,
+    "src": "src/btlgfx/monster_gfx.asm:534",
+    "text": "adc     f:MonsterStencil     ; pointer to small maps"
+   },
+   {
+    "snes": "C12178",
+    "bytes": "BF 00 00 D2",
+    "kind": "long_bank",
+    "disp": 0,
+    "src": "src/btlgfx/monster_gfx.asm:538",
+    "text": "@2184:  lda     f:bank_start MonsterStencil,x"
+   },
+   {
+    "snes": "C12194",
+    "bytes": "6F 22 A8 D2",
+    "kind": "long",
+    "disp": 2,
+    "src": "src/btlgfx/monster_gfx.asm:551",
+    "text": "adc     f:MonsterStencil+2     ; pointer to large maps"
+   },
+   {
+    "snes": "C1219E",
+    "bytes": "BF 00 00 D2",
+    "kind": "long_bank",
+    "disp": 0,
+    "src": "src/btlgfx/monster_gfx.asm:555",
+    "text": "@21aa:  lda     f:bank_start MonsterStencil,x"
+   },
+   {
+    "snes": "C3AFBF",
+    "bytes": "A0 20 A8",
+    "kind": "imm_near",
+    "disp": 0,
+    "src": "src/menu/colosseum.asm:428",
+    "text": "ldy     #near MonsterStencil"
+   },
+   {
+    "snes": "C3AFC8",
+    "bytes": "A0 22 A8",
+    "kind": "imm_near",
+    "disp": 2,
+    "src": "src/menu/colosseum.asm:432",
+    "text": "@afc8:  ldy     #near MonsterStencil+2"
+   },
+   {
+    "snes": "C3AFD3",
+    "bytes": "A9 D2",
+    "kind": "imm_bank",
+    "disp": 0,
+    "src": "src/menu/colosseum.asm:437",
+    "text": "lda     #^MonsterStencil"
+   },
+   {
+    "snes": "C3AFFD",
+    "bytes": "A9 D2",
+    "kind": "imm_bank",
+    "disp": 0,
+    "manual": "src/menu/colosseum.asm:456 'lda #$d2' (stencil data bank literal)",
+    "src": "src/menu/colosseum.asm:456 'lda #$d2' (stencil data bank literal)",
+    "text": "lda #$d2"
+   }
+  ],
+  "BATTLE_MAGIC_POINTS": [
+   {
+    "snes": "C25D9C",
+    "bytes": "BF 00 B4 DF",
+    "kind": "long",
+    "disp": 0,
+    "src": "src/battle/win.asm:44",
+    "text": "lda     f:BattleMagicPoints,x   ; $fb = number of magic points gained from battle"
+   }
+  ],
+  "MONSTER_GFX_BASE_IMMEDIATES": [
+   {
+    "snes": "C12102",
+    "bytes": "69 00",
+    "src": "src/btlgfx/monster_gfx.asm:471",
+    "text": "adc     #<MonsterGfx"
+   },
+   {
+    "snes": "C12108",
+    "bytes": "69 70",
+    "src": "src/btlgfx/monster_gfx.asm:474",
+    "text": "adc     #>MonsterGfx"
+   },
+   {
+    "snes": "C1210E",
+    "bytes": "69 E9",
+    "src": "src/btlgfx/monster_gfx.asm:477",
+    "text": "adc     #^MonsterGfx"
+   }
+  ]
+ },
+ "counts": {
+  "MONSTER_PAL": 6,
+  "MONSTER_STENCIL": 8,
+  "BATTLE_MAGIC_POINTS": 1,
+  "MONSTER_GFX_BASE_IMMEDIATES": 3
+ }
+}

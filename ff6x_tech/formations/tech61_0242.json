@@ -1,0 +1,23 @@
+{
+ "id": "0x242",
+ "_comment": "QA v0.6.1 isolation (all three at once): VRAM map 8 (same boxes as the opening Guard battle, Magitek-safe). slot 0 = vanilla Dark Wind (pal 046), slot 2 = exact clone $182 (pal 046), slot 3 = Dark Wind graphics + Vulture palette $183 (pal 04A).",
+ "template_vanilla_formation": "0x002",
+ "no_veldt": true,
+ "magic_points": 0,
+ "magitek_possible": true,
+ "slots": [
+  {
+   "slot": 0,
+   "monster": "0x028",
+   "pos": "0x13"
+  },
+  {
+   "slot": 2,
+   "monster": "0x182"
+  },
+  {
+   "slot": 3,
+   "monster": "0x183"
+  }
+ ]
+}

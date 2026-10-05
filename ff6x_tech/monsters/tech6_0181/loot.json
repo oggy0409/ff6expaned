@@ -1,0 +1,7 @@
+{
+ "steal_rare": "F0",
+ "steal_common": "F2",
+ "drop_rare": "E9",
+ "drop_common": "E8",
+ "_comment": "steal Fenix Down/Antidote, drop Potion(rare)/Tonic(common)"
+}

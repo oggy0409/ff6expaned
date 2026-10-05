@@ -1,0 +1,23 @@
+{
+ "id": "0x243",
+ "_comment": "QA v0.6.1 reference: the same layout with three VANILLA Dark Winds (what $242 must look like, except slot 3's colours).",
+ "template_vanilla_formation": "0x002",
+ "no_veldt": true,
+ "magic_points": 0,
+ "magitek_possible": true,
+ "slots": [
+  {
+   "slot": 0,
+   "monster": "0x028",
+   "pos": "0x13"
+  },
+  {
+   "slot": 2,
+   "monster": "0x028"
+  },
+  {
+   "slot": 3,
+   "monster": "0x028"
+  }
+ ]
+}

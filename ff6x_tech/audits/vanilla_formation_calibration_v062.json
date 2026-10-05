@@ -1,0 +1,3944 @@
+{
+ "_comment": "information only - vanilla formations are not validated or changed by the builder; Magitek conflicts are counted as if a Magitek party could meet every formation",
+ "formations": 576,
+ "slots": 1322,
+ "issue_counts_all": {
+  "clipped_by_vram_box": 27,
+  "edge_bottom_preferred": 204,
+  "edge_bottom_window": 64,
+  "edge_left": 1,
+  "edge_left_preferred": 8,
+  "edge_top": 47,
+  "edge_top_preferred": 63,
+  "empty_sprite": 8,
+  "magitek_vram_conflict": 253
+ },
+ "issue_counts_normal_size_sprites": {
+  "clipped_by_vram_box": 5,
+  "edge_bottom_preferred": 192,
+  "edge_bottom_window": 46,
+  "edge_left_preferred": 3,
+  "edge_top": 41,
+  "edge_top_preferred": 54,
+  "magitek_vram_conflict": 235
+ },
+ "per_formation": {
+  "000": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "001": {
+   "status": "WARNING",
+   "vram_map": 8,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "002": {
+   "status": "OK",
+   "vram_map": 8,
+   "issues": []
+  },
+  "003": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "004": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "005": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_top_preferred",
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "006": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "007": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "008": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "009": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_window"
+   ]
+  },
+  "00A": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "00B": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "00C": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "00D": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "00E": {
+   "status": "WARNING",
+   "vram_map": 10,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "00F": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "010": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "011": {
+   "status": "WARNING",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "012": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "013": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "014": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "015": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "016": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_bottom_preferred"
+   ]
+  },
+  "017": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "018": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "019": {
+   "status": "WARNING",
+   "vram_map": 11,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "01A": {
+   "status": "OK",
+   "vram_map": 10,
+   "issues": []
+  },
+  "01B": {
+   "status": "OK",
+   "vram_map": 11,
+   "issues": []
+  },
+  "01C": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict",
+    "edge_left_preferred"
+   ]
+  },
+  "01D": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_top_preferred"
+   ]
+  },
+  "01E": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_window",
+    "magitek_vram_conflict"
+   ]
+  },
+  "01F": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_top_preferred",
+    "edge_top_preferred"
+   ]
+  },
+  "020": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "021": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict",
+    "edge_top_preferred"
+   ]
+  },
+  "022": {
+   "status": "WARNING",
+   "vram_map": 8,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "023": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "024": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "025": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_top_preferred"
+   ]
+  },
+  "026": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "027": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top_preferred",
+    "magitek_vram_conflict",
+    "magitek_vram_conflict"
+   ]
+  },
+  "028": {
+   "status": "OK",
+   "vram_map": 12,
+   "issues": []
+  },
+  "029": {
+   "status": "WARNING",
+   "vram_map": 8,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "02A": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "02B": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "02C": {
+   "status": "OK",
+   "vram_map": 11,
+   "issues": []
+  },
+  "02D": {
+   "status": "OK",
+   "vram_map": 10,
+   "issues": []
+  },
+  "02E": {
+   "status": "WARNING",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "02F": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "030": {
+   "status": "WARNING",
+   "vram_map": 8,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "031": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "032": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_top_preferred",
+    "edge_top",
+    "magitek_vram_conflict"
+   ]
+  },
+  "033": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top",
+    "magitek_vram_conflict"
+   ]
+  },
+  "034": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "035": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "036": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "037": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "038": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "039": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top",
+    "magitek_vram_conflict"
+   ]
+  },
+  "03A": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "03B": {
+   "status": "WARNING",
+   "vram_map": 12,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "03C": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "03D": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "edge_top"
+   ]
+  },
+  "03E": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_window",
+    "magitek_vram_conflict"
+   ]
+  },
+  "03F": {
+   "status": "OK",
+   "vram_map": 12,
+   "issues": []
+  },
+  "040": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "041": {
+   "status": "OK",
+   "vram_map": 12,
+   "issues": []
+  },
+  "042": {
+   "status": "WARNING",
+   "vram_map": 12,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "043": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_window",
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "044": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "045": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_top",
+    "magitek_vram_conflict"
+   ]
+  },
+  "046": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "047": {
+   "status": "OK",
+   "vram_map": 10,
+   "issues": []
+  },
+  "048": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "049": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "04A": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict",
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "04B": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "04C": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "04D": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "04E": {
+   "status": "WARNING",
+   "vram_map": 12,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "04F": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "050": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_bottom_preferred"
+   ]
+  },
+  "051": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "052": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "053": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "054": {
+   "status": "WARNING",
+   "vram_map": 8,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_bottom_preferred"
+   ]
+  },
+  "055": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "056": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_window"
+   ]
+  },
+  "057": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "058": {
+   "status": "WARNING",
+   "vram_map": 12,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "059": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "05A": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "05B": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "05C": {
+   "status": "OK",
+   "vram_map": 12,
+   "issues": []
+  },
+  "05D": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "05E": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "05F": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top",
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "060": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_top"
+   ]
+  },
+  "061": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top",
+    "magitek_vram_conflict"
+   ]
+  },
+  "062": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict",
+    "edge_top",
+    "edge_top"
+   ]
+  },
+  "063": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "064": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top"
+   ]
+  },
+  "065": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_top_preferred",
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "066": {
+   "status": "OK",
+   "vram_map": 3,
+   "issues": []
+  },
+  "067": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "068": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "069": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "06A": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "06B": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "06C": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "06D": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "06E": {
+   "status": "ERROR",
+   "vram_map": 5,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "06F": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "070": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "071": {
+   "status": "ERROR",
+   "vram_map": 7,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "072": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "073": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict",
+    "edge_bottom_window"
+   ]
+  },
+  "074": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "075": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "076": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "edge_top",
+    "edge_top",
+    "edge_top"
+   ]
+  },
+  "077": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "078": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "079": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "07A": {
+   "status": "OK",
+   "vram_map": 12,
+   "issues": []
+  },
+  "07B": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "07C": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "07D": {
+   "status": "OK",
+   "vram_map": 11,
+   "issues": []
+  },
+  "07E": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "07F": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "080": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "081": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "082": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "083": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "084": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "085": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_window",
+    "magitek_vram_conflict"
+   ]
+  },
+  "086": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "087": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "088": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "089": {
+   "status": "OK",
+   "vram_map": 2,
+   "issues": []
+  },
+  "08A": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "08B": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "08C": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_top"
+   ]
+  },
+  "08D": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "08E": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "08F": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "090": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_top_preferred"
+   ]
+  },
+  "091": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_top",
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "092": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top",
+    "magitek_vram_conflict"
+   ]
+  },
+  "093": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "094": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "095": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "096": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "097": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict",
+    "edge_top_preferred"
+   ]
+  },
+  "098": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "099": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "09A": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "09B": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "09C": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "09D": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "09E": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "09F": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_top_preferred",
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0A0": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "0A1": {
+   "status": "OK",
+   "vram_map": 4,
+   "issues": []
+  },
+  "0A2": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0A3": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_window"
+   ]
+  },
+  "0A4": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "0A5": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "0A6": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_bottom_preferred"
+   ]
+  },
+  "0A7": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_window",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0A8": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0A9": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "0AA": {
+   "status": "OK",
+   "vram_map": 3,
+   "issues": []
+  },
+  "0AB": {
+   "status": "OK",
+   "vram_map": 12,
+   "issues": []
+  },
+  "0AC": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "edge_bottom_window"
+   ]
+  },
+  "0AD": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_window"
+   ]
+  },
+  "0AE": {
+   "status": "ERROR",
+   "vram_map": 3,
+   "issues": [
+    "edge_top_preferred",
+    "edge_bottom_window",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0AF": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0B0": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0B1": {
+   "status": "OK",
+   "vram_map": 3,
+   "issues": []
+  },
+  "0B2": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_top",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0B3": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "0B4": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "0B5": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0B6": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_left_preferred",
+    "edge_bottom_window",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0B7": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top_preferred",
+    "magitek_vram_conflict",
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0B8": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "0B9": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "0BA": {
+   "status": "ERROR",
+   "vram_map": 5,
+   "issues": [
+    "edge_top_preferred",
+    "magitek_vram_conflict",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0BB": {
+   "status": "ERROR",
+   "vram_map": 3,
+   "issues": [
+    "edge_left_preferred",
+    "edge_bottom_preferred",
+    "edge_top",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0BC": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict",
+    "edge_top"
+   ]
+  },
+  "0BD": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "0BE": {
+   "status": "ERROR",
+   "vram_map": 4,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0BF": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0C0": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "0C1": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "0C2": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "0C3": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "0C4": {
+   "status": "WARNING",
+   "vram_map": 4,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_top_preferred"
+   ]
+  },
+  "0C5": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "0C6": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0C7": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "0C8": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0C9": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "0CA": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_top_preferred"
+   ]
+  },
+  "0CB": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "0CC": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_top",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0CD": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_top_preferred"
+   ]
+  },
+  "0CE": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_top"
+   ]
+  },
+  "0CF": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "0D0": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "0D1": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "0D2": {
+   "status": "OK",
+   "vram_map": 3,
+   "issues": []
+  },
+  "0D3": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top_preferred",
+    "magitek_vram_conflict",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0D4": {
+   "status": "ERROR",
+   "vram_map": 2,
+   "issues": [
+    "edge_bottom_window"
+   ]
+  },
+  "0D5": {
+   "status": "OK",
+   "vram_map": 4,
+   "issues": []
+  },
+  "0D6": {
+   "status": "ERROR",
+   "vram_map": 7,
+   "issues": [
+    "edge_bottom_window"
+   ]
+  },
+  "0D7": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "0D8": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "0D9": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0DA": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0DB": {
+   "status": "OK",
+   "vram_map": 4,
+   "issues": []
+  },
+  "0DC": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "0DD": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "0DE": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0DF": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "0E0": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "0E1": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_window",
+    "edge_bottom_preferred"
+   ]
+  },
+  "0E2": {
+   "status": "ERROR",
+   "vram_map": 3,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0E3": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "0E4": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "0E5": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "0E6": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0E7": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "0E8": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "0E9": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "0EA": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "edge_top",
+    "edge_top",
+    "edge_top"
+   ]
+  },
+  "0EB": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "0EC": {
+   "status": "OK",
+   "vram_map": 2,
+   "issues": []
+  },
+  "0ED": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "0EE": {
+   "status": "ERROR",
+   "vram_map": 4,
+   "issues": [
+    "edge_top"
+   ]
+  },
+  "0EF": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "0F0": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0F1": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0F2": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "0F3": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "0F4": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0F5": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_window"
+   ]
+  },
+  "0F6": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "0F7": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "0F8": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0F9": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0FA": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "0FB": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "0FC": {
+   "status": "WARNING",
+   "vram_map": 6,
+   "issues": [
+    "edge_top_preferred"
+   ]
+  },
+  "0FD": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "0FE": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "0FF": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "100": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "101": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_window"
+   ]
+  },
+  "102": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "103": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "104": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "105": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "106": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_window",
+    "magitek_vram_conflict"
+   ]
+  },
+  "107": {
+   "status": "OK",
+   "vram_map": 3,
+   "issues": []
+  },
+  "108": {
+   "status": "ERROR",
+   "vram_map": 5,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_window",
+    "magitek_vram_conflict"
+   ]
+  },
+  "109": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "10A": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "10B": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "10C": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "10D": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "10E": {
+   "status": "OK",
+   "vram_map": 2,
+   "issues": []
+  },
+  "10F": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "110": {
+   "status": "WARNING",
+   "vram_map": 4,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "111": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_window"
+   ]
+  },
+  "112": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "113": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "114": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "115": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_top",
+    "magitek_vram_conflict"
+   ]
+  },
+  "116": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict",
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "117": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_top",
+    "edge_top",
+    "magitek_vram_conflict"
+   ]
+  },
+  "118": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "119": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "11A": {
+   "status": "ERROR",
+   "vram_map": 2,
+   "issues": [
+    "edge_bottom_window"
+   ]
+  },
+  "11B": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_top_preferred"
+   ]
+  },
+  "11C": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_window",
+    "edge_bottom_preferred"
+   ]
+  },
+  "11D": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "11E": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_top_preferred"
+   ]
+  },
+  "11F": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "120": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "121": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "122": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "123": {
+   "status": "WARNING",
+   "vram_map": 2,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "124": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "125": {
+   "status": "WARNING",
+   "vram_map": 4,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "126": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_window"
+   ]
+  },
+  "127": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_window"
+   ]
+  },
+  "128": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "129": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "12A": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "12B": {
+   "status": "WARNING",
+   "vram_map": 7,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_bottom_preferred"
+   ]
+  },
+  "12C": {
+   "status": "OK",
+   "vram_map": 3,
+   "issues": []
+  },
+  "12D": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "12E": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "12F": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "130": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "131": {
+   "status": "OK",
+   "vram_map": 2,
+   "issues": []
+  },
+  "132": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "133": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "134": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_top_preferred",
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "135": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "136": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "137": {
+   "status": "ERROR",
+   "vram_map": 8,
+   "issues": [
+    "edge_bottom_window"
+   ]
+  },
+  "138": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "139": {
+   "status": "ERROR",
+   "vram_map": 8,
+   "issues": [
+    "edge_bottom_window"
+   ]
+  },
+  "13A": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_top"
+   ]
+  },
+  "13B": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_top"
+   ]
+  },
+  "13C": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "13D": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "13E": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_top",
+    "magitek_vram_conflict"
+   ]
+  },
+  "13F": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "140": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "141": {
+   "status": "OK",
+   "vram_map": 4,
+   "issues": []
+  },
+  "142": {
+   "status": "OK",
+   "vram_map": 4,
+   "issues": []
+  },
+  "143": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "144": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_left_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "145": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "146": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "147": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "148": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "149": {
+   "status": "ERROR",
+   "vram_map": 5,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "14A": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_window"
+   ]
+  },
+  "14B": {
+   "status": "OK",
+   "vram_map": 2,
+   "issues": []
+  },
+  "14C": {
+   "status": "ERROR",
+   "vram_map": 4,
+   "issues": [
+    "edge_top"
+   ]
+  },
+  "14D": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "14E": {
+   "status": "WARNING",
+   "vram_map": 11,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "14F": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "150": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "151": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "152": {
+   "status": "WARNING",
+   "vram_map": 8,
+   "issues": [
+    "edge_top_preferred"
+   ]
+  },
+  "153": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "154": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "155": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "156": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "157": {
+   "status": "ERROR",
+   "vram_map": 4,
+   "issues": [
+    "edge_top",
+    "edge_bottom_window",
+    "magitek_vram_conflict"
+   ]
+  },
+  "158": {
+   "status": "OK",
+   "vram_map": 2,
+   "issues": []
+  },
+  "159": {
+   "status": "WARNING",
+   "vram_map": 12,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "15A": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "15B": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_window",
+    "magitek_vram_conflict"
+   ]
+  },
+  "15C": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "15D": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_top_preferred"
+   ]
+  },
+  "15E": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_window"
+   ]
+  },
+  "15F": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "160": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_window",
+    "magitek_vram_conflict",
+    "edge_top",
+    "magitek_vram_conflict"
+   ]
+  },
+  "161": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "162": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "163": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "164": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "165": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "166": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_top_preferred",
+    "edge_bottom_preferred"
+   ]
+  },
+  "167": {
+   "status": "ERROR",
+   "vram_map": 4,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_top"
+   ]
+  },
+  "168": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "169": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top",
+    "magitek_vram_conflict"
+   ]
+  },
+  "16A": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "16B": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "16C": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "edge_bottom_window"
+   ]
+  },
+  "16D": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict",
+    "edge_top_preferred"
+   ]
+  },
+  "16E": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "16F": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "170": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "171": {
+   "status": "OK",
+   "vram_map": 4,
+   "issues": []
+  },
+  "172": {
+   "status": "OK",
+   "vram_map": 3,
+   "issues": []
+  },
+  "173": {
+   "status": "OK",
+   "vram_map": 5,
+   "issues": []
+  },
+  "174": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "175": {
+   "status": "WARNING",
+   "vram_map": 8,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "176": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "177": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "178": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "179": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "17A": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "17B": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "17C": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "edge_top_preferred",
+    "edge_top"
+   ]
+  },
+  "17D": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "17E": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "17F": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "180": {
+   "status": "WARNING",
+   "vram_map": 0,
+   "issues": [
+    "empty_sprite"
+   ]
+  },
+  "181": {
+   "status": "WARNING",
+   "vram_map": 0,
+   "issues": [
+    "empty_sprite"
+   ]
+  },
+  "182": {
+   "status": "WARNING",
+   "vram_map": 0,
+   "issues": [
+    "empty_sprite"
+   ]
+  },
+  "183": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "184": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "185": {
+   "status": "WARNING",
+   "vram_map": 0,
+   "issues": [
+    "empty_sprite"
+   ]
+  },
+  "186": {
+   "status": "WARNING",
+   "vram_map": 0,
+   "issues": [
+    "empty_sprite"
+   ]
+  },
+  "187": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "188": {
+   "status": "OK",
+   "vram_map": 4,
+   "issues": []
+  },
+  "189": {
+   "status": "WARNING",
+   "vram_map": 6,
+   "issues": [
+    "empty_sprite"
+   ]
+  },
+  "18A": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "18B": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top_preferred",
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "18C": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "18D": {
+   "status": "OK",
+   "vram_map": 4,
+   "issues": []
+  },
+  "18E": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict",
+    "edge_top"
+   ]
+  },
+  "18F": {
+   "status": "OK",
+   "vram_map": 2,
+   "issues": []
+  },
+  "190": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "191": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "edge_top",
+    "edge_top",
+    "edge_top"
+   ]
+  },
+  "192": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "193": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "194": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "195": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "196": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "197": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "198": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "199": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "19A": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "19B": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "19C": {
+   "status": "OK",
+   "vram_map": 12,
+   "issues": []
+  },
+  "19D": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_top_preferred",
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "19E": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "19F": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "1A0": {
+   "status": "ERROR",
+   "vram_map": 12,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "1A1": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "1A2": {
+   "status": "OK",
+   "vram_map": 12,
+   "issues": []
+  },
+  "1A3": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1A4": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "1A5": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "1A6": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "1A7": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "1A8": {
+   "status": "ERROR",
+   "vram_map": 3,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "1A9": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "1AA": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_window"
+   ]
+  },
+  "1AB": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "1AC": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_window",
+    "magitek_vram_conflict",
+    "magitek_vram_conflict"
+   ]
+  },
+  "1AD": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "1AE": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "1AF": {
+   "status": "ERROR",
+   "vram_map": 2,
+   "issues": [
+    "edge_bottom_window"
+   ]
+  },
+  "1B0": {
+   "status": "OK",
+   "vram_map": 8,
+   "issues": []
+  },
+  "1B1": {
+   "status": "OK",
+   "vram_map": 8,
+   "issues": []
+  },
+  "1B2": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "1B3": {
+   "status": "ERROR",
+   "vram_map": 5,
+   "issues": [
+    "edge_left_preferred",
+    "magitek_vram_conflict",
+    "edge_bottom_window",
+    "magitek_vram_conflict"
+   ]
+  },
+  "1B4": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "1B5": {
+   "status": "WARNING",
+   "vram_map": 6,
+   "issues": [
+    "empty_sprite"
+   ]
+  },
+  "1B6": {
+   "status": "OK",
+   "vram_map": 4,
+   "issues": []
+  },
+  "1B7": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1B8": {
+   "status": "ERROR",
+   "vram_map": 3,
+   "issues": [
+    "edge_left_preferred",
+    "edge_bottom_window",
+    "edge_bottom_window",
+    "magitek_vram_conflict"
+   ]
+  },
+  "1B9": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "1BA": {
+   "status": "OK",
+   "vram_map": 10,
+   "issues": []
+  },
+  "1BB": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1BC": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1BD": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "1BE": {
+   "status": "OK",
+   "vram_map": 4,
+   "issues": []
+  },
+  "1BF": {
+   "status": "OK",
+   "vram_map": 9,
+   "issues": []
+  },
+  "1C0": {
+   "status": "OK",
+   "vram_map": 9,
+   "issues": []
+  },
+  "1C1": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "1C2": {
+   "status": "ERROR",
+   "vram_map": 6,
+   "issues": [
+    "edge_top_preferred",
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "1C3": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1C4": {
+   "status": "OK",
+   "vram_map": 3,
+   "issues": []
+  },
+  "1C5": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "1C6": {
+   "status": "ERROR",
+   "vram_map": 11,
+   "issues": [
+    "edge_bottom_window",
+    "edge_bottom_preferred"
+   ]
+  },
+  "1C7": {
+   "status": "OK",
+   "vram_map": 4,
+   "issues": []
+  },
+  "1C8": {
+   "status": "WARNING",
+   "vram_map": 3,
+   "issues": [
+    "edge_top_preferred"
+   ]
+  },
+  "1C9": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "1CA": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "clipped_by_vram_box"
+   ]
+  },
+  "1CB": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "1CC": {
+   "status": "WARNING",
+   "vram_map": 0,
+   "issues": [
+    "edge_top_preferred"
+   ]
+  },
+  "1CD": {
+   "status": "OK",
+   "vram_map": 3,
+   "issues": []
+  },
+  "1CE": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "1CF": {
+   "status": "OK",
+   "vram_map": 4,
+   "issues": []
+  },
+  "1D0": {
+   "status": "WARNING",
+   "vram_map": 7,
+   "issues": [
+    "edge_top_preferred",
+    "edge_bottom_preferred",
+    "edge_bottom_preferred"
+   ]
+  },
+  "1D1": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1D2": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_window"
+   ]
+  },
+  "1D3": {
+   "status": "WARNING",
+   "vram_map": 5,
+   "issues": [
+    "edge_top_preferred"
+   ]
+  },
+  "1D4": {
+   "status": "ERROR",
+   "vram_map": 6,
+   "issues": [
+    "edge_bottom_window",
+    "magitek_vram_conflict"
+   ]
+  },
+  "1D5": {
+   "status": "ERROR",
+   "vram_map": 6,
+   "issues": [
+    "edge_bottom_window",
+    "magitek_vram_conflict"
+   ]
+  },
+  "1D6": {
+   "status": "ERROR",
+   "vram_map": 6,
+   "issues": [
+    "edge_left",
+    "edge_top",
+    "magitek_vram_conflict"
+   ]
+  },
+  "1D7": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "clipped_by_vram_box",
+    "clipped_by_vram_box",
+    "clipped_by_vram_box"
+   ]
+  },
+  "1D8": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "1D9": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1DA": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1DB": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1DC": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1DD": {
+   "status": "ERROR",
+   "vram_map": 5,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "1DE": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_top_preferred",
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "1DF": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1E0": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "1E1": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "1E2": {
+   "status": "ERROR",
+   "vram_map": 6,
+   "issues": [
+    "edge_top_preferred",
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "1E3": {
+   "status": "OK",
+   "vram_map": 1,
+   "issues": []
+  },
+  "1E4": {
+   "status": "OK",
+   "vram_map": 10,
+   "issues": []
+  },
+  "1E5": {
+   "status": "OK",
+   "vram_map": 12,
+   "issues": []
+  },
+  "1E6": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1E7": {
+   "status": "OK",
+   "vram_map": 9,
+   "issues": []
+  },
+  "1E8": {
+   "status": "OK",
+   "vram_map": 9,
+   "issues": []
+  },
+  "1E9": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_window",
+    "magitek_vram_conflict"
+   ]
+  },
+  "1EA": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1EB": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1EC": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1ED": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1EE": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1EF": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1F0": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1F1": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1F2": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1F3": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1F4": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1F5": {
+   "status": "WARNING",
+   "vram_map": 0,
+   "issues": [
+    "clipped_by_vram_box"
+   ]
+  },
+  "1F6": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1F7": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1F8": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1F9": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1FA": {
+   "status": "OK",
+   "vram_map": 9,
+   "issues": []
+  },
+  "1FB": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1FC": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1FD": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "1FE": {
+   "status": "WARNING",
+   "vram_map": 0,
+   "issues": [
+    "empty_sprite"
+   ]
+  },
+  "1FF": {
+   "status": "WARNING",
+   "vram_map": 0,
+   "issues": [
+    "clipped_by_vram_box"
+   ]
+  },
+  "200": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "clipped_by_vram_box",
+    "edge_bottom_preferred",
+    "clipped_by_vram_box",
+    "magitek_vram_conflict",
+    "clipped_by_vram_box",
+    "clipped_by_vram_box"
+   ]
+  },
+  "201": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "clipped_by_vram_box",
+    "clipped_by_vram_box"
+   ]
+  },
+  "202": {
+   "status": "ERROR",
+   "vram_map": 6,
+   "issues": [
+    "edge_left_preferred",
+    "edge_top_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "203": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "204": {
+   "status": "WARNING",
+   "vram_map": 0,
+   "issues": [
+    "edge_top_preferred",
+    "edge_top_preferred"
+   ]
+  },
+  "205": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_top_preferred"
+   ]
+  },
+  "206": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "207": {
+   "status": "OK",
+   "vram_map": 2,
+   "issues": []
+  },
+  "208": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "209": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "20A": {
+   "status": "WARNING",
+   "vram_map": 7,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "20B": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "20C": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "20D": {
+   "status": "OK",
+   "vram_map": 4,
+   "issues": []
+  },
+  "20E": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "clipped_by_vram_box",
+    "clipped_by_vram_box",
+    "magitek_vram_conflict",
+    "edge_bottom_window",
+    "clipped_by_vram_box",
+    "edge_bottom_window",
+    "clipped_by_vram_box",
+    "magitek_vram_conflict"
+   ]
+  },
+  "20F": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "clipped_by_vram_box",
+    "edge_bottom_window",
+    "clipped_by_vram_box",
+    "magitek_vram_conflict"
+   ]
+  },
+  "210": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "211": {
+   "status": "ERROR",
+   "vram_map": 8,
+   "issues": [
+    "edge_bottom_window",
+    "clipped_by_vram_box",
+    "edge_top",
+    "edge_top"
+   ]
+  },
+  "212": {
+   "status": "ERROR",
+   "vram_map": 4,
+   "issues": [
+    "edge_bottom_window"
+   ]
+  },
+  "213": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict",
+    "edge_bottom_window"
+   ]
+  },
+  "214": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_window"
+   ]
+  },
+  "215": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_window",
+    "magitek_vram_conflict"
+   ]
+  },
+  "216": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_window",
+    "magitek_vram_conflict"
+   ]
+  },
+  "217": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "218": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "edge_bottom_window",
+    "magitek_vram_conflict",
+    "edge_bottom_window",
+    "magitek_vram_conflict"
+   ]
+  },
+  "219": {
+   "status": "WARNING",
+   "vram_map": 1,
+   "issues": [
+    "edge_top_preferred"
+   ]
+  },
+  "21A": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "21B": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "21C": {
+   "status": "ERROR",
+   "vram_map": 8,
+   "issues": [
+    "clipped_by_vram_box",
+    "edge_bottom_window",
+    "clipped_by_vram_box",
+    "clipped_by_vram_box",
+    "edge_bottom_preferred",
+    "clipped_by_vram_box"
+   ]
+  },
+  "21D": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "clipped_by_vram_box",
+    "edge_bottom_window",
+    "clipped_by_vram_box",
+    "magitek_vram_conflict",
+    "edge_bottom_preferred"
+   ]
+  },
+  "21E": {
+   "status": "ERROR",
+   "vram_map": 8,
+   "issues": [
+    "edge_bottom_window",
+    "clipped_by_vram_box",
+    "edge_bottom_preferred",
+    "clipped_by_vram_box"
+   ]
+  },
+  "21F": {
+   "status": "ERROR",
+   "vram_map": 2,
+   "issues": [
+    "edge_bottom_window"
+   ]
+  },
+  "220": {
+   "status": "ERROR",
+   "vram_map": 3,
+   "issues": [
+    "edge_left_preferred",
+    "edge_top",
+    "magitek_vram_conflict"
+   ]
+  },
+  "221": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "222": {
+   "status": "ERROR",
+   "vram_map": 2,
+   "issues": [
+    "edge_bottom_window"
+   ]
+  },
+  "223": {
+   "status": "WARNING",
+   "vram_map": 7,
+   "issues": [
+    "edge_bottom_preferred"
+   ]
+  },
+  "224": {
+   "status": "OK",
+   "vram_map": 3,
+   "issues": []
+  },
+  "225": {
+   "status": "ERROR",
+   "vram_map": 5,
+   "issues": [
+    "magitek_vram_conflict"
+   ]
+  },
+  "226": {
+   "status": "ERROR",
+   "vram_map": 0,
+   "issues": [
+    "magitek_vram_conflict",
+    "edge_bottom_window",
+    "edge_bottom_window",
+    "magitek_vram_conflict"
+   ]
+  },
+  "227": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "228": {
+   "status": "ERROR",
+   "vram_map": 4,
+   "issues": [
+    "edge_bottom_window"
+   ]
+  },
+  "229": {
+   "status": "ERROR",
+   "vram_map": 1,
+   "issues": [
+    "edge_bottom_preferred",
+    "edge_bottom_preferred",
+    "magitek_vram_conflict"
+   ]
+  },
+  "22A": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "22B": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "22C": {
+   "status": "OK",
+   "vram_map": 2,
+   "issues": []
+  },
+  "22D": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "22E": {
+   "status": "OK",
+   "vram_map": 3,
+   "issues": []
+  },
+  "22F": {
+   "status": "ERROR",
+   "vram_map": 7,
+   "issues": [
+    "edge_bottom_window"
+   ]
+  },
+  "230": {
+   "status": "OK",
+   "vram_map": 3,
+   "issues": []
+  },
+  "231": {
+   "status": "OK",
+   "vram_map": 3,
+   "issues": []
+  },
+  "232": {
+   "status": "OK",
+   "vram_map": 7,
+   "issues": []
+  },
+  "233": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "234": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "235": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "236": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "237": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "238": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "239": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "23A": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "23B": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "23C": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "23D": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "23E": {
+   "status": "OK",
+   "vram_map": 0,
+   "issues": []
+  },
+  "23F": {
+   "status": "WARNING",
+   "vram_map": 6,
+   "issues": [
+    "edge_top_preferred"
+   ]
+  }
+ }
+}

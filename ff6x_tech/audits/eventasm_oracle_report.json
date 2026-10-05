@@ -1,0 +1,173 @@
+{
+ "all_match": true,
+ "cases": [
+  {
+   "project": "dlg $0C0B",
+   "macro": "dlg DLG_3083",
+   "ca65": "4B 0B 0C",
+   "eventasm": "4B 0B 0C",
+   "match": true
+  },
+  {
+   "project": "dlg $0001 bottom",
+   "macro": "dlg DLG_1, BOTTOM",
+   "ca65": "4B 01 80",
+   "eventasm": "4B 01 80",
+   "match": true
+  },
+  {
+   "project": "if_switch B14A=1 -> R",
+   "macro": "if_switch $014A=1, EventReturn",
+   "ca65": "C0 4A 81 B3 5E 00",
+   "eventasm": "C0 4A 81 B3 5E 00",
+   "match": true
+  },
+  {
+   "project": "if_switch B14A=0 -> R",
+   "macro": "if_switch $014A=0, EventReturn",
+   "ca65": "C0 4A 01 B3 5E 00",
+   "eventasm": "C0 4A 01 B3 5E 00",
+   "match": true
+  },
+  {
+   "project": "set_switch B14A",
+   "macro": "set_switch $014A",
+   "ca65": "D2 4A",
+   "eventasm": "D2 4A",
+   "match": true
+  },
+  {
+   "project": "clr_switch B14A",
+   "macro": "clr_switch $014A",
+   "ca65": "D3 4A",
+   "eventasm": "D3 4A",
+   "match": true
+  },
+  {
+   "project": "set_switch N6F8",
+   "macro": "set_switch $06F8",
+   "ca65": "DC F8",
+   "eventasm": "DC F8",
+   "match": true
+  },
+  {
+   "project": "clr_switch N6F9",
+   "macro": "clr_switch $06F9",
+   "ca65": "DD F9",
+   "eventasm": "DD F9",
+   "match": true
+  },
+  {
+   "project": "call $CA5EA9",
+   "macro": "call $ca5ea9",
+   "ca65": "B2 A9 5E 00",
+   "eventasm": "B2 A9 5E 00",
+   "match": true
+  },
+  {
+   "project": "choice R, R",
+   "macro": "choice EventReturn, EventReturn",
+   "ca65": "B6 B3 5E 00 B3 5E 00",
+   "eventasm": "B6 B3 5E 00 B3 5E 00",
+   "match": true
+  },
+  {
+   "project": "battle 40",
+   "macro": "battle 40",
+   "ca65": "4D 28 3F",
+   "eventasm": "4D 28 3F",
+   "match": true
+  },
+  {
+   "project": "give_item $E9",
+   "macro": "give_item POTION",
+   "ca65": "80 E9",
+   "eventasm": "80 E9",
+   "match": true
+  },
+  {
+   "project": "hide_obj $11",
+   "macro": "hide_obj NPC_2",
+   "ca65": "42 11",
+   "eventasm": "42 11",
+   "match": true
+  },
+  {
+   "project": "show_obj $10",
+   "macro": "show_obj NPC_1",
+   "ca65": "41 10",
+   "eventasm": "41 10",
+   "match": true
+  },
+  {
+   "project": "load_map $0C7 16 27 UP",
+   "macro": "load_map $0c7, {16, 27}, UP",
+   "ca65": "6A C7 00 10 1B 00",
+   "eventasm": "6A C7 00 10 1B 00",
+   "match": true
+  },
+  {
+   "project": "load_map $00C 15 47 DOWN Z_UPPER",
+   "macro": "load_map $00c, {15, 47}, DOWN, {Z_UPPER}",
+   "ca65": "6A 0C 24 0F 2F 00",
+   "eventasm": "6A 0C 24 0F 2F 00",
+   "match": true
+  },
+  {
+   "project": "load_map $0C7 16 28 UP Z_UPPER NO_FADE_IN",
+   "macro": "load_map $c7, {16, 28}, UP, {Z_UPPER, NO_FADE_IN}",
+   "ca65": "6A C7 04 10 1C 40",
+   "eventasm": "6A C7 04 10 1C 40",
+   "match": true
+  },
+  {
+   "project": "party_step DOWN 1",
+   "macro": "obj_script SLOT_1\n move DOWN, 1\n end",
+   "ca65": "31 82 82 FF",
+   "eventasm": "31 82 82 FF",
+   "match": true
+  },
+  {
+   "project": "party_step UP 1",
+   "macro": "obj_script SLOT_1\n move UP, 1\n end",
+   "ca65": "31 82 80 FF",
+   "eventasm": "31 82 80 FF",
+   "match": true
+  },
+  {
+   "project": "fade_in",
+   "macro": "fade_in",
+   "ca65": "96",
+   "eventasm": "96",
+   "match": true
+  },
+  {
+   "project": "fade_out",
+   "macro": "fade_out",
+   "ca65": "97",
+   "eventasm": "97",
+   "match": true
+  },
+  {
+   "project": "wait_fade",
+   "macro": "wait_fade",
+   "ca65": "5C",
+   "eventasm": "5C",
+   "match": true
+  },
+  {
+   "project": "wait_15f",
+   "macro": "wait_15f",
+   "ca65": "91",
+   "eventasm": "91",
+   "match": true
+  },
+  {
+   "project": "return",
+   "macro": "return",
+   "ca65": "FE",
+   "eventasm": "FE",
+   "match": true
+  }
+ ]
+}

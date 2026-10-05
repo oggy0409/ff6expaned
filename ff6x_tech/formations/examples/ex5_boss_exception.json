@@ -1,0 +1,21 @@
+{
+ "id": "0x3F4",
+ "_comment": "EXAMPLE: large sprite (vanilla $11C, 16x16 stencil, VRAM map 6) deliberately at pos $00 -> edge ERRORs downgraded by layout_exception.",
+ "template_vanilla_formation": "0x0FC",
+ "no_veldt": true,
+ "magic_points": 0,
+ "magitek_possible": false,
+ "layout_exception": {
+  "slots": [
+   0
+  ],
+  "reason": "EXAMPLE large-boss composition filling the field"
+ },
+ "slots": [
+  {
+   "slot": 0,
+   "monster": "0x11C",
+   "pos": "0x00"
+  }
+ ]
+}

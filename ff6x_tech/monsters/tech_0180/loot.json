@@ -1,0 +1,7 @@
+{
+ "steal_rare": "E9",
+ "steal_common": "E8",
+ "drop_rare": "F3",
+ "drop_common": "F2",
+ "_comment": "item IDs: [steal rare, steal common, drop rare (1/8), drop common (7/8)]; steal Potion/Tonic, drop Eyedrop(rare)/Antidote(common)"
+}

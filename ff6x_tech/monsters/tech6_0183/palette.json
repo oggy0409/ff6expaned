@@ -1,0 +1,5 @@
+{
+ "_comment": "palette index into vanilla MonsterPal units; Dark Wind graphics with the Vulture palette $04A (= v0.5 TESTMOB B configuration) \u2014 Phase A2 isolation",
+ "palette_index": "0x04A",
+ "expect_bpp": "4bpp"
+}

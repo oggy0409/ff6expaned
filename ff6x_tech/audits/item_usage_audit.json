@@ -1,0 +1,2526 @@
+{
+ "sources": [
+  "shop C4:7AC0",
+  "chest ED:82F4/ED:8634",
+  "steal/drop CF:3000",
+  "metamorph C4:7F40",
+  "colosseum prize DF:B600 (every item ID is also a wager index)",
+  "start equip ED:7CA0+15..20",
+  "event $80/$81 give/take"
+ ],
+ "not_table_driven_yet": [
+  "hard-coded ID compares in battle/menu ASM (Tools $A3-$AA, Throw, specials)",
+  "Colosseum wager index (all 256)",
+  "item data D8:5000 special-effect fields"
+ ],
+ "rows": [
+  {
+   "id": "00",
+   "name": "Dirk",
+   "refs": {
+    "shop": 4,
+    "steal_common": 2,
+    "metamorph": 24,
+    "colosseum_prize": 2,
+    "start_equip": 145
+   },
+   "total_refs": 177
+  },
+  {
+   "id": "01",
+   "name": "MithrilKnife",
+   "refs": {
+    "shop": 2,
+    "steal_common": 2,
+    "drop_rare": 1,
+    "start_equip": 2
+   },
+   "total_refs": 7
+  },
+  {
+   "id": "02",
+   "name": "Guardian",
+   "refs": {
+    "chest": 2,
+    "steal_rare": 2
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "03",
+   "name": "Air Lancet",
+   "refs": {
+    "shop": 3,
+    "chest": 1,
+    "drop_rare": 1,
+    "steal_common": 1
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "04",
+   "name": "ThiefKnife",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 1,
+    "drop_rare": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "05",
+   "name": "Assassin",
+   "refs": {
+    "chest": 1,
+    "metamorph": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "06",
+   "name": "Man Eater",
+   "refs": {
+    "shop": 2,
+    "chest": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "07",
+   "name": "SwordBreaker",
+   "refs": {
+    "shop": 1,
+    "steal_rare": 2,
+    "colosseum_prize": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "08",
+   "name": "Graedus",
+   "refs": {
+    "drop_rare": 1,
+    "drop_common": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "09",
+   "name": "ValiantKnife",
+   "refs": {
+    "event_give_item": 1
+   },
+   "total_refs": 1
+  },
+  {
+   "id": "0A",
+   "name": "MithrilBlade",
+   "refs": {
+    "shop": 2,
+    "steal_rare": 1,
+    "steal_common": 1,
+    "metamorph": 1,
+    "start_equip": 5
+   },
+   "total_refs": 10
+  },
+  {
+   "id": "0B",
+   "name": "RegalCutlass",
+   "refs": {
+    "shop": 2,
+    "chest": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "0C",
+   "name": "Rune Edge",
+   "refs": {
+    "shop": 1,
+    "chest": 1,
+    "steal_common": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "0D",
+   "name": "Flame Sabre",
+   "refs": {
+    "shop": 3,
+    "chest": 2,
+    "drop_rare": 1,
+    "steal_common": 1
+   },
+   "total_refs": 7
+  },
+  {
+   "id": "0E",
+   "name": "Blizzard",
+   "refs": {
+    "shop": 3,
+    "chest": 1,
+    "drop_common": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "0F",
+   "name": "ThunderBlade",
+   "refs": {
+    "shop": 3,
+    "chest": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "10",
+   "name": "Epee",
+   "refs": {
+    "shop": 4
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "11",
+   "name": "Break Blade",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "12",
+   "name": "Drainer",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 2,
+    "steal_common": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "13",
+   "name": "Enhancer",
+   "refs": {
+    "shop": 3,
+    "colosseum_prize": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "14",
+   "name": "Crystal",
+   "refs": {
+    "shop": 1,
+    "steal_rare": 1,
+    "metamorph": 1,
+    "start_equip": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "15",
+   "name": "Falchion",
+   "refs": {
+    "shop": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "16",
+   "name": "Soul Sabre",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "17",
+   "name": "Ogre Nix",
+   "refs": {
+    "metamorph": 1,
+    "colosseum_prize": 4
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "18",
+   "name": "Excalibur",
+   "refs": {
+    "drop_rare": 1,
+    "drop_common": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "19",
+   "name": "Scimitar",
+   "refs": {
+    "drop_rare": 1,
+    "drop_common": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "1A",
+   "name": "Illumina",
+   "refs": {
+    "colosseum_prize": 1,
+    "event_give_item": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "1B",
+   "name": "Ragnarok",
+   "refs": {
+    "steal_common": 1,
+    "event_give_item": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "1C",
+   "name": "Atma Weapon",
+   "refs": {
+    "chest": 1,
+    "steal_common": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "1D",
+   "name": "Mithril Pike",
+   "refs": {
+    "shop": 3,
+    "start_equip": 3
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "1E",
+   "name": "Trident",
+   "refs": {
+    "shop": 3
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "1F",
+   "name": "Stout Spear",
+   "refs": {
+    "shop": 2,
+    "drop_rare": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "20",
+   "name": "Partisan",
+   "refs": {
+    "shop": 1,
+    "steal_rare": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "21",
+   "name": "Pearl Lance",
+   "refs": {
+    "steal_rare": 1,
+    "colosseum_prize": 1,
+    "event_give_item": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "22",
+   "name": "Gold Lance",
+   "refs": {
+    "shop": 3,
+    "steal_rare": 1,
+    "metamorph": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "23",
+   "name": "Aura Lance",
+   "refs": {
+    "drop_rare": 1,
+    "drop_common": 1,
+    "colosseum_prize": 1,
+    "event_give_item": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "24",
+   "name": "Imp Halberd",
+   "refs": {
+    "drop_rare": 1,
+    "steal_rare": 1,
+    "metamorph": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "25",
+   "name": "Imperial",
+   "refs": {
+    "steal_common": 1,
+    "start_equip": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "26",
+   "name": "Kodachi",
+   "refs": {
+    "shop": 1
+   },
+   "total_refs": 1
+  },
+  {
+   "id": "27",
+   "name": "Blossom",
+   "refs": {
+    "shop": 3,
+    "start_equip": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "28",
+   "name": "Hardened",
+   "refs": {
+    "drop_rare": 1,
+    "drop_common": 1,
+    "steal_rare": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "29",
+   "name": "Striker",
+   "refs": {
+    "chest": 1,
+    "metamorph": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "2A",
+   "name": "Stunner",
+   "refs": {
+    "chest": 1
+   },
+   "total_refs": 1
+  },
+  {
+   "id": "2B",
+   "name": "Ashura",
+   "refs": {
+    "steal_common": 1,
+    "start_equip": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "2C",
+   "name": "Kotetsu",
+   "refs": {
+    "shop": 3
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "2D",
+   "name": "Forged",
+   "refs": {
+    "shop": 3
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "2E",
+   "name": "Tempest",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "2F",
+   "name": "Murasame",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 2,
+    "steal_common": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "30",
+   "name": "Aura",
+   "refs": {
+    "steal_rare": 1,
+    "colosseum_prize": 1,
+    "event_give_item": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "31",
+   "name": "Strato",
+   "refs": {
+    "steal_rare": 1,
+    "drop_rare": 1,
+    "drop_common": 1,
+    "colosseum_prize": 4
+   },
+   "total_refs": 7
+  },
+  {
+   "id": "32",
+   "name": "Sky Render",
+   "refs": {
+    "drop_rare": 1,
+    "drop_common": 1,
+    "colosseum_prize": 1,
+    "event_give_item": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "33",
+   "name": "Heal Rod",
+   "refs": {
+    "chest": 2
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "34",
+   "name": "Mithril Rod",
+   "refs": {
+    "shop": 1,
+    "drop_rare": 1,
+    "start_equip": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "35",
+   "name": "Fire Rod",
+   "refs": {
+    "shop": 1,
+    "chest": 1,
+    "drop_rare": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "36",
+   "name": "Ice Rod",
+   "refs": {
+    "shop": 1,
+    "chest": 1,
+    "steal_rare": 2
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "37",
+   "name": "Thunder Rod",
+   "refs": {
+    "shop": 1,
+    "chest": 1,
+    "steal_common": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "38",
+   "name": "Poison Rod",
+   "refs": {
+    "shop": 1,
+    "steal_common": 1,
+    "drop_rare": 1,
+    "steal_rare": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "39",
+   "name": "Pearl Rod",
+   "refs": {
+    "shop": 1,
+    "chest": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "3A",
+   "name": "Gravity Rod",
+   "refs": {
+    "shop": 2,
+    "chest": 1,
+    "colosseum_prize": 2
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "3B",
+   "name": "Punisher",
+   "refs": {
+    "chest": 1,
+    "start_equip": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "3C",
+   "name": "Magus Rod",
+   "refs": {
+    "drop_rare": 1,
+    "drop_common": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "3D",
+   "name": "Chocobo Brsh",
+   "refs": {
+    "start_equip": 2
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "3E",
+   "name": "DaVinci Brsh",
+   "refs": {
+    "shop": 1
+   },
+   "total_refs": 1
+  },
+  {
+   "id": "3F",
+   "name": "Magical Brsh",
+   "refs": {
+    "chest": 1
+   },
+   "total_refs": 1
+  },
+  {
+   "id": "40",
+   "name": "Rainbow Brsh",
+   "refs": {
+    "chest": 1
+   },
+   "total_refs": 1
+  },
+  {
+   "id": "41",
+   "name": "Shuriken",
+   "refs": {
+    "shop": 5,
+    "steal_rare": 4,
+    "steal_common": 1
+   },
+   "total_refs": 10
+  },
+  {
+   "id": "42",
+   "name": "Ninja Star",
+   "refs": {
+    "shop": 1,
+    "drop_rare": 1,
+    "steal_rare": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "43",
+   "name": "Tack Star",
+   "refs": {
+    "chest": 3,
+    "steal_rare": 3,
+    "colosseum_prize": 1
+   },
+   "total_refs": 7
+  },
+  {
+   "id": "44",
+   "name": "Flail",
+   "refs": {
+    "shop": 2,
+    "steal_common": 1,
+    "start_equip": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "45",
+   "name": "Full Moon",
+   "refs": {
+    "shop": 4,
+    "steal_rare": 1,
+    "start_equip": 1
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "46",
+   "name": "Morning Star",
+   "refs": {
+    "shop": 2,
+    "start_equip": 6
+   },
+   "total_refs": 8
+  },
+  {
+   "id": "47",
+   "name": "Boomerang",
+   "refs": {
+    "shop": 3,
+    "start_equip": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "48",
+   "name": "Rising Sun",
+   "refs": {
+    "steal_common": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "49",
+   "name": "Hawk Eye",
+   "refs": {
+    "shop": 2
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "4A",
+   "name": "Bone Club",
+   "refs": {
+    "steal_rare": 1,
+    "colosseum_prize": 3,
+    "start_equip": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "4B",
+   "name": "Sniper",
+   "refs": {
+    "shop": 1,
+    "colosseum_prize": 2
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "4C",
+   "name": "Wing Edge",
+   "refs": {
+    "chest": 2,
+    "event_give_item": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "4D",
+   "name": "Cards",
+   "refs": {
+    "start_equip": 1
+   },
+   "total_refs": 1
+  },
+  {
+   "id": "4E",
+   "name": "Darts",
+   "refs": {
+    "shop": 2
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "4F",
+   "name": "Doom Darts",
+   "refs": {
+    "chest": 1
+   },
+   "total_refs": 1
+  },
+  {
+   "id": "50",
+   "name": "Trump",
+   "refs": {
+    "shop": 2,
+    "metamorph": 2,
+    "colosseum_prize": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "51",
+   "name": "Dice",
+   "refs": {
+    "shop": 1
+   },
+   "total_refs": 1
+  },
+  {
+   "id": "52",
+   "name": "Fixed Dice",
+   "refs": {
+    "chest": 1,
+    "event_give_item": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "53",
+   "name": "MetalKnuckle",
+   "refs": {
+    "start_equip": 1
+   },
+   "total_refs": 1
+  },
+  {
+   "id": "54",
+   "name": "Mithril Claw",
+   "refs": {
+    "shop": 3,
+    "steal_rare": 3,
+    "start_equip": 1
+   },
+   "total_refs": 7
+  },
+  {
+   "id": "55",
+   "name": "Kaiser",
+   "refs": {
+    "shop": 2
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "56",
+   "name": "Poison Claw",
+   "refs": {
+    "shop": 4,
+    "steal_rare": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "57",
+   "name": "Fire Knuckle",
+   "refs": {
+    "shop": 1,
+    "chest": 1,
+    "colosseum_prize": 3
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "58",
+   "name": "Dragon Claw",
+   "refs": {
+    "drop_rare": 2,
+    "drop_common": 2
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "59",
+   "name": "Tiger Fangs",
+   "refs": {
+    "drop_rare": 1,
+    "drop_common": 1,
+    "steal_rare": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "5A",
+   "name": "Buckler",
+   "refs": {
+    "shop": 2,
+    "steal_rare": 1,
+    "start_equip": 15
+   },
+   "total_refs": 18
+  },
+  {
+   "id": "5B",
+   "name": "Heavy Shld",
+   "refs": {
+    "shop": 3,
+    "chest": 1,
+    "metamorph": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "5C",
+   "name": "Mithril Shld",
+   "refs": {
+    "shop": 3,
+    "steal_rare": 1,
+    "start_equip": 6
+   },
+   "total_refs": 10
+  },
+  {
+   "id": "5D",
+   "name": "Gold Shld",
+   "refs": {
+    "shop": 4,
+    "chest": 1,
+    "steal_rare": 1,
+    "drop_rare": 1,
+    "metamorph": 1
+   },
+   "total_refs": 8
+  },
+  {
+   "id": "5E",
+   "name": "Aegis Shld",
+   "refs": {
+    "chest": 2,
+    "start_equip": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "5F",
+   "name": "Diamond Shld",
+   "refs": {
+    "shop": 3
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "60",
+   "name": "Flame Shld",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 2,
+    "metamorph": 1,
+    "colosseum_prize": 2,
+    "event_give_item": 1
+   },
+   "total_refs": 7
+  },
+  {
+   "id": "61",
+   "name": "Ice Shld",
+   "refs": {
+    "chest": 2,
+    "steal_rare": 1,
+    "metamorph": 1,
+    "colosseum_prize": 2
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "62",
+   "name": "Thunder Shld",
+   "refs": {
+    "chest": 2,
+    "steal_rare": 1,
+    "metamorph": 1,
+    "colosseum_prize": 3
+   },
+   "total_refs": 7
+  },
+  {
+   "id": "63",
+   "name": "Crystal Shld",
+   "refs": {
+    "shop": 1,
+    "metamorph": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "64",
+   "name": "Genji Shld",
+   "refs": {
+    "chest": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "65",
+   "name": "TortoiseShld",
+   "refs": {
+    "steal_rare": 1,
+    "drop_rare": 1,
+    "metamorph": 1,
+    "colosseum_prize": 2
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "66",
+   "name": "Cursed Shld",
+   "refs": {
+    "event_give_item": 1
+   },
+   "total_refs": 1
+  },
+  {
+   "id": "67",
+   "name": "Paladin Shld",
+   "refs": {
+    "start_equip": 1,
+    "event_give_item": 4
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "68",
+   "name": "Force Shld",
+   "refs": {
+    "chest": 1,
+    "drop_rare": 1,
+    "drop_common": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "69",
+   "name": "Leather Hat",
+   "refs": {
+    "start_equip": 7
+   },
+   "total_refs": 7
+  },
+  {
+   "id": "6A",
+   "name": "Hair Band",
+   "refs": {
+    "shop": 1,
+    "start_equip": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "6B",
+   "name": "Plumed Hat",
+   "refs": {
+    "shop": 4,
+    "steal_common": 1,
+    "start_equip": 3
+   },
+   "total_refs": 8
+  },
+  {
+   "id": "6C",
+   "name": "Beret",
+   "refs": {
+    "shop": 1,
+    "chest": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "6D",
+   "name": "Magus Hat",
+   "refs": {
+    "shop": 4,
+    "start_equip": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "6E",
+   "name": "Bandana",
+   "refs": {
+    "shop": 4,
+    "steal_rare": 1,
+    "drop_rare": 1,
+    "drop_common": 1,
+    "start_equip": 1
+   },
+   "total_refs": 8
+  },
+  {
+   "id": "6F",
+   "name": "Iron Helmet",
+   "refs": {
+    "shop": 4,
+    "steal_rare": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "70",
+   "name": "Coronet",
+   "refs": {
+    "chest": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "71",
+   "name": "Bard's Hat",
+   "refs": {
+    "shop": 9
+   },
+   "total_refs": 9
+  },
+  {
+   "id": "72",
+   "name": "Green Beret",
+   "refs": {
+    "shop": 6,
+    "chest": 2,
+    "drop_rare": 1,
+    "drop_common": 1,
+    "steal_rare": 1
+   },
+   "total_refs": 11
+  },
+  {
+   "id": "73",
+   "name": "Head Band",
+   "refs": {
+    "shop": 4,
+    "steal_rare": 1,
+    "drop_common": 1
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "74",
+   "name": "Mithril Helm",
+   "refs": {
+    "shop": 3,
+    "metamorph": 1,
+    "start_equip": 5
+   },
+   "total_refs": 9
+  },
+  {
+   "id": "75",
+   "name": "Tiara",
+   "refs": {
+    "shop": 2
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "76",
+   "name": "Gold Helmet",
+   "refs": {
+    "shop": 4,
+    "chest": 1,
+    "metamorph": 1,
+    "start_equip": 1
+   },
+   "total_refs": 7
+  },
+  {
+   "id": "77",
+   "name": "Tiger Mask",
+   "refs": {
+    "shop": 2,
+    "steal_rare": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "78",
+   "name": "Red Cap",
+   "refs": {
+    "chest": 2
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "79",
+   "name": "Mystery Veil",
+   "refs": {
+    "shop": 2
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "7A",
+   "name": "Circlet",
+   "refs": {
+    "shop": 2
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "7B",
+   "name": "Regal Crown",
+   "refs": {
+    "chest": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "7C",
+   "name": "Diamond Helm",
+   "refs": {
+    "shop": 3,
+    "steal_rare": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "7D",
+   "name": "Dark Hood",
+   "refs": {
+    "shop": 2,
+    "steal_rare": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "7E",
+   "name": "Crystal Helm",
+   "refs": {
+    "shop": 2,
+    "chest": 1,
+    "metamorph": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "7F",
+   "name": "Oath Veil",
+   "refs": {
+    "shop": 1
+   },
+   "total_refs": 1
+  },
+  {
+   "id": "80",
+   "name": "Cat Hood",
+   "refs": {
+    "colosseum_prize": 2
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "81",
+   "name": "Genji Helmet",
+   "refs": {
+    "chest": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "82",
+   "name": "Thornlet",
+   "refs": {
+    "steal_rare": 1,
+    "metamorph": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "83",
+   "name": "Titanium",
+   "refs": {
+    "steal_rare": 1,
+    "metamorph": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "84",
+   "name": "LeatherArmor",
+   "refs": {
+    "start_equip": 6
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "85",
+   "name": "Cotton Robe",
+   "refs": {
+    "shop": 1,
+    "start_equip": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "86",
+   "name": "Kung Fu Suit",
+   "refs": {
+    "shop": 3,
+    "start_equip": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "87",
+   "name": "Iron Armor",
+   "refs": {
+    "shop": 4,
+    "chest": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "88",
+   "name": "Silk Robe",
+   "refs": {
+    "shop": 3,
+    "start_equip": 2
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "89",
+   "name": "Mithril Vest",
+   "refs": {
+    "shop": 5,
+    "steal_common": 1,
+    "steal_rare": 1,
+    "start_equip": 6
+   },
+   "total_refs": 13
+  },
+  {
+   "id": "8A",
+   "name": "Ninja Gear",
+   "refs": {
+    "shop": 4,
+    "start_equip": 2
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "8B",
+   "name": "White Dress",
+   "refs": {
+    "shop": 4
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "8C",
+   "name": "Mithril Mail",
+   "refs": {
+    "shop": 2,
+    "steal_rare": 1,
+    "metamorph": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "8D",
+   "name": "Gaia Gear",
+   "refs": {
+    "shop": 3,
+    "steal_rare": 1,
+    "steal_common": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "8E",
+   "name": "Mirage Vest",
+   "refs": {
+    "colosseum_prize": 1
+   },
+   "total_refs": 1
+  },
+  {
+   "id": "8F",
+   "name": "Gold Armor",
+   "refs": {
+    "shop": 3,
+    "chest": 1,
+    "drop_rare": 1,
+    "metamorph": 1,
+    "start_equip": 1
+   },
+   "total_refs": 7
+  },
+  {
+   "id": "90",
+   "name": "Power Sash",
+   "refs": {
+    "shop": 4
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "91",
+   "name": "Light Robe",
+   "refs": {
+    "shop": 1
+   },
+   "total_refs": 1
+  },
+  {
+   "id": "92",
+   "name": "Diamond Vest",
+   "refs": {
+    "shop": 4,
+    "steal_rare": 2
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "93",
+   "name": "Red Jacket",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 1,
+    "colosseum_prize": 3
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "94",
+   "name": "Force Armor",
+   "refs": {
+    "chest": 2,
+    "steal_common": 1,
+    "drop_rare": 1,
+    "drop_common": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "95",
+   "name": "DiamondArmor",
+   "refs": {
+    "shop": 2
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "96",
+   "name": "Dark Gear",
+   "refs": {
+    "shop": 2
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "97",
+   "name": "Tao Robe",
+   "refs": {
+    "shop": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "98",
+   "name": "Crystal Mail",
+   "refs": {
+    "shop": 1,
+    "chest": 1,
+    "metamorph": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "99",
+   "name": "Czarina Gown",
+   "refs": {
+    "chest": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "9A",
+   "name": "Genji Armor",
+   "refs": {
+    "chest": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "9B",
+   "name": "Imp's Armor",
+   "refs": {
+    "steal_rare": 1,
+    "drop_rare": 1,
+    "metamorph": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "9C",
+   "name": "Minerva",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 2,
+    "drop_rare": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "9D",
+   "name": "Tabby Suit",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "9E",
+   "name": "Chocobo Suit",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "9F",
+   "name": "Moogle Suit",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 2,
+    "colosseum_prize": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "A0",
+   "name": "Nutkin Suit",
+   "refs": {
+    "chest": 2,
+    "steal_rare": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "A1",
+   "name": "BehemothSuit",
+   "refs": {
+    "drop_rare": 2,
+    "drop_common": 2
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "A2",
+   "name": "Snow Muffler",
+   "refs": {
+    "colosseum_prize": 1,
+    "start_equip": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "A3",
+   "name": "NoiseBlaster",
+   "refs": {
+    "shop": 4,
+    "steal_rare": 2
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "A4",
+   "name": "Bio Blaster",
+   "refs": {
+    "shop": 4,
+    "steal_rare": 3,
+    "drop_rare": 1
+   },
+   "total_refs": 8
+  },
+  {
+   "id": "A5",
+   "name": "Flash",
+   "refs": {
+    "shop": 2,
+    "steal_rare": 2
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "A6",
+   "name": "Chain Saw",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "A7",
+   "name": "Debilitator",
+   "refs": {
+    "shop": 1,
+    "steal_rare": 4
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "A8",
+   "name": "Drill",
+   "refs": {
+    "shop": 2,
+    "steal_rare": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "A9",
+   "name": "Air Anchor",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 1,
+    "colosseum_prize": 2
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "AA",
+   "name": "AutoCrossbow",
+   "refs": {
+    "shop": 3,
+    "steal_rare": 2,
+    "event_give_item": 1
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "AB",
+   "name": "Fire Skean",
+   "refs": {
+    "shop": 5,
+    "steal_rare": 1,
+    "drop_rare": 2
+   },
+   "total_refs": 8
+  },
+  {
+   "id": "AC",
+   "name": "Water Edge",
+   "refs": {
+    "shop": 5,
+    "drop_rare": 2,
+    "event_give_item": 1
+   },
+   "total_refs": 8
+  },
+  {
+   "id": "AD",
+   "name": "Bolt Edge",
+   "refs": {
+    "shop": 5,
+    "steal_common": 4
+   },
+   "total_refs": 9
+  },
+  {
+   "id": "AE",
+   "name": "Inviz Edge",
+   "refs": {
+    "shop": 3,
+    "event_give_item": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "AF",
+   "name": "Shadow Edge",
+   "refs": {
+    "shop": 3
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "B0",
+   "name": "Goggles",
+   "refs": {
+    "shop": 4,
+    "steal_common": 1,
+    "steal_rare": 1
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "B1",
+   "name": "Star Pendant",
+   "refs": {
+    "shop": 3,
+    "chest": 1,
+    "steal_rare": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "B2",
+   "name": "Peace Ring",
+   "refs": {
+    "shop": 4,
+    "drop_rare": 2,
+    "drop_common": 1
+   },
+   "total_refs": 7
+  },
+  {
+   "id": "B3",
+   "name": "Amulet",
+   "refs": {
+    "shop": 5,
+    "steal_rare": 3,
+    "drop_rare": 2
+   },
+   "total_refs": 10
+  },
+  {
+   "id": "B4",
+   "name": "White Cape",
+   "refs": {
+    "shop": 3,
+    "chest": 1,
+    "drop_rare": 2,
+    "steal_common": 1
+   },
+   "total_refs": 7
+  },
+  {
+   "id": "B5",
+   "name": "Jewel Ring",
+   "refs": {
+    "shop": 5,
+    "steal_common": 1
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "B6",
+   "name": "Fairy Ring",
+   "refs": {
+    "shop": 4,
+    "chest": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "B7",
+   "name": "Barrier Ring",
+   "refs": {
+    "shop": 4,
+    "chest": 1,
+    "drop_rare": 1
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "B8",
+   "name": "MithrilGlove",
+   "refs": {
+    "shop": 3,
+    "chest": 1,
+    "steal_rare": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "B9",
+   "name": "Guard Ring",
+   "refs": {
+    "shop": 2
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "BA",
+   "name": "RunningShoes",
+   "refs": {
+    "shop": 4,
+    "chest": 3,
+    "steal_rare": 1
+   },
+   "total_refs": 8
+  },
+  {
+   "id": "BB",
+   "name": "Wall Ring",
+   "refs": {
+    "shop": 6,
+    "chest": 2
+   },
+   "total_refs": 8
+  },
+  {
+   "id": "BC",
+   "name": "Cherub Down",
+   "refs": {
+    "shop": 1,
+    "chest": 1,
+    "steal_rare": 1,
+    "event_give_item": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "BD",
+   "name": "Cure Ring",
+   "refs": {
+    "shop": 3,
+    "chest": 1,
+    "steal_rare": 1,
+    "metamorph": 2,
+    "event_give_item": 1
+   },
+   "total_refs": 8
+  },
+  {
+   "id": "BE",
+   "name": "True Knight",
+   "refs": {
+    "shop": 4,
+    "chest": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "BF",
+   "name": "DragoonBoots",
+   "refs": {
+    "shop": 2,
+    "chest": 1,
+    "steal_rare": 3
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "C0",
+   "name": "Zephyr Cape",
+   "refs": {
+    "shop": 1,
+    "chest": 2,
+    "colosseum_prize": 1,
+    "event_give_item": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "C1",
+   "name": "Czarina Ring",
+   "refs": {
+    "shop": 4,
+    "drop_rare": 1,
+    "drop_common": 1
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "C2",
+   "name": "Cursed Ring",
+   "refs": {
+    "metamorph": 2,
+    "colosseum_prize": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "C3",
+   "name": "Earrings",
+   "refs": {
+    "shop": 6,
+    "chest": 3,
+    "steal_rare": 2
+   },
+   "total_refs": 11
+  },
+  {
+   "id": "C4",
+   "name": "Atlas Armlet",
+   "refs": {
+    "shop": 2,
+    "chest": 1,
+    "steal_rare": 1,
+    "start_equip": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "C5",
+   "name": "Blizzard Orb",
+   "refs": {
+    "chest": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "C6",
+   "name": "Rage Ring",
+   "refs": {
+    "chest": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "C7",
+   "name": "Sneak Ring",
+   "refs": {
+    "shop": 1,
+    "chest": 1,
+    "steal_rare": 2
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "C8",
+   "name": "Pod Bracelet",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 1,
+    "drop_rare": 1,
+    "drop_common": 1,
+    "metamorph": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "C9",
+   "name": "Hero Ring",
+   "refs": {
+    "chest": 4,
+    "colosseum_prize": 1,
+    "event_give_item": 1
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "CA",
+   "name": "Ribbon",
+   "refs": {
+    "chest": 5,
+    "steal_rare": 3,
+    "metamorph": 1,
+    "start_equip": 5
+   },
+   "total_refs": 14
+  },
+  {
+   "id": "CB",
+   "name": "Muscle Belt",
+   "refs": {
+    "steal_rare": 1,
+    "drop_rare": 1,
+    "drop_common": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "CC",
+   "name": "Crystal Orb",
+   "refs": {
+    "drop_rare": 1,
+    "drop_common": 1,
+    "steal_rare": 2,
+    "colosseum_prize": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "CD",
+   "name": "Gold Hairpin",
+   "refs": {
+    "chest": 2,
+    "colosseum_prize": 3,
+    "event_give_item": 1
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "CE",
+   "name": "Economizer",
+   "refs": {
+    "drop_rare": 1,
+    "steal_rare": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "CF",
+   "name": "Thief Glove",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 1,
+    "colosseum_prize": 2
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "D0",
+   "name": "Gauntlet",
+   "refs": {
+    "chest": 3,
+    "metamorph": 1,
+    "event_give_item": 2
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "D1",
+   "name": "Genji Glove",
+   "refs": {
+    "chest": 2,
+    "steal_rare": 2,
+    "metamorph": 1,
+    "event_give_item": 2
+   },
+   "total_refs": 7
+  },
+  {
+   "id": "D2",
+   "name": "Hyper Wrist",
+   "refs": {
+    "shop": 1,
+    "chest": 3,
+    "steal_rare": 1,
+    "drop_rare": 1,
+    "drop_common": 1
+   },
+   "total_refs": 7
+  },
+  {
+   "id": "D3",
+   "name": "Offering",
+   "refs": {
+    "drop_rare": 1,
+    "drop_common": 1,
+    "start_equip": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "D4",
+   "name": "Beads",
+   "refs": {
+    "shop": 1,
+    "chest": 2
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "D5",
+   "name": "Black Belt",
+   "refs": {
+    "shop": 4,
+    "drop_common": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "D6",
+   "name": "Coin Toss",
+   "refs": {
+    "chest": 1
+   },
+   "total_refs": 1
+  },
+  {
+   "id": "D7",
+   "name": "FakeMustache",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "D8",
+   "name": "Gem Box",
+   "refs": {
+    "chest": 1
+   },
+   "total_refs": 1
+  },
+  {
+   "id": "D9",
+   "name": "Dragon Horn",
+   "refs": {
+    "chest": 1,
+    "colosseum_prize": 4
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "DA",
+   "name": "Merit Award",
+   "refs": {
+    "colosseum_prize": 1
+   },
+   "total_refs": 1
+  },
+  {
+   "id": "DB",
+   "name": "Memento Ring",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 1,
+    "colosseum_prize": 1,
+    "start_equip": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "DC",
+   "name": "Safety Bit",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 1,
+    "metamorph": 2
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "DD",
+   "name": "Relic Ring",
+   "refs": {
+    "chest": 1,
+    "metamorph": 1,
+    "start_equip": 2
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "DE",
+   "name": "Moogle Charm",
+   "refs": {
+    "chest": 1
+   },
+   "total_refs": 1
+  },
+  {
+   "id": "DF",
+   "name": "Charm Bangle",
+   "refs": {
+    "colosseum_prize": 3,
+    "event_give_item": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "E0",
+   "name": "Marvel Shoes",
+   "refs": {
+    "metamorph": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "E1",
+   "name": "Back Guard",
+   "refs": {
+    "shop": 1,
+    "chest": 2,
+    "steal_rare": 1
+   },
+   "total_refs": 4
+  },
+  {
+   "id": "E2",
+   "name": "Gale Hairpin",
+   "refs": {
+    "shop": 1,
+    "chest": 1
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "E3",
+   "name": "Sniper Sight",
+   "refs": {
+    "shop": 5,
+    "chest": 1
+   },
+   "total_refs": 6
+  },
+  {
+   "id": "E4",
+   "name": "Exp. Egg",
+   "refs": {
+    "chest": 1,
+    "metamorph": 1,
+    "colosseum_prize": 1
+   },
+   "total_refs": 3
+  },
+  {
+   "id": "E5",
+   "name": "Tintinabar",
+   "refs": {
+    "drop_rare": 1,
+    "metamorph": 1,
+    "colosseum_prize": 3,
+    "event_give_item": 2
+   },
+   "total_refs": 7
+  },
+  {
+   "id": "E6",
+   "name": "Sprint Shoes",
+   "refs": {
+    "shop": 7,
+    "chest": 1,
+    "start_equip": 1
+   },
+   "total_refs": 9
+  },
+  {
+   "id": "E7",
+   "name": "Rename Card",
+   "refs": {
+    "colosseum_prize": 2
+   },
+   "total_refs": 2
+  },
+  {
+   "id": "E8",
+   "name": "Tonic",
+   "refs": {
+    "shop": 9,
+    "chest": 7,
+    "steal_common": 57,
+    "drop_rare": 23,
+    "steal_rare": 27,
+    "metamorph": 45,
+    "event_give_item": 2
+   },
+   "total_refs": 170
+  },
+  {
+   "id": "E9",
+   "name": "Potion",
+   "refs": {
+    "shop": 23,
+    "chest": 4,
+    "steal_rare": 31,
+    "steal_common": 26,
+    "drop_rare": 18,
+    "drop_common": 3
+   },
+   "total_refs": 105
+  },
+  {
+   "id": "EA",
+   "name": "X-Potion",
+   "refs": {
+    "chest": 17,
+    "drop_rare": 2,
+    "steal_common": 3,
+    "steal_rare": 7,
+    "metamorph": 1,
+    "event_give_item": 1
+   },
+   "total_refs": 31
+  },
+  {
+   "id": "EB",
+   "name": "Tincture",
+   "refs": {
+    "shop": 21,
+    "chest": 12,
+    "steal_common": 4,
+    "drop_rare": 12,
+    "drop_common": 1,
+    "steal_rare": 6,
+    "event_give_item": 1
+   },
+   "total_refs": 57
+  },
+  {
+   "id": "EC",
+   "name": "Ether",
+   "refs": {
+    "chest": 12,
+    "steal_rare": 5,
+    "steal_common": 1
+   },
+   "total_refs": 18
+  },
+  {
+   "id": "ED",
+   "name": "X-Ether",
+   "refs": {
+    "chest": 2,
+    "steal_common": 1,
+    "metamorph": 1,
+    "event_give_item": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "EE",
+   "name": "Elixir",
+   "refs": {
+    "chest": 15,
+    "steal_rare": 6,
+    "drop_rare": 2,
+    "drop_common": 2,
+    "steal_common": 11,
+    "metamorph": 1,
+    "colosseum_prize": 151,
+    "event_give_item": 1
+   },
+   "total_refs": 189
+  },
+  {
+   "id": "EF",
+   "name": "Megalixir",
+   "refs": {
+    "chest": 1,
+    "steal_rare": 2,
+    "steal_common": 1,
+    "drop_rare": 1,
+    "drop_common": 1,
+    "metamorph": 1
+   },
+   "total_refs": 7
+  },
+  {
+   "id": "F0",
+   "name": "Fenix Down",
+   "refs": {
+    "shop": 25,
+    "chest": 14,
+    "steal_common": 4,
+    "steal_rare": 13,
+    "drop_rare": 12,
+    "drop_common": 2,
+    "metamorph": 1,
+    "event_give_item": 1
+   },
+   "total_refs": 72
+  },
+  {
+   "id": "F1",
+   "name": "Revivify",
+   "refs": {
+    "shop": 16,
+    "chest": 3,
+    "drop_common": 7,
+    "drop_rare": 3,
+    "steal_common": 3,
+    "metamorph": 1
+   },
+   "total_refs": 33
+  },
+  {
+   "id": "F2",
+   "name": "Antidote",
+   "refs": {
+    "shop": 8,
+    "chest": 3,
+    "steal_common": 9,
+    "steal_rare": 5,
+    "drop_rare": 4,
+    "metamorph": 1
+   },
+   "total_refs": 30
+  },
+  {
+   "id": "F3",
+   "name": "Eyedrop",
+   "refs": {
+    "shop": 8,
+    "chest": 2,
+    "steal_common": 4,
+    "drop_rare": 1,
+    "metamorph": 1
+   },
+   "total_refs": 16
+  },
+  {
+   "id": "F4",
+   "name": "Soft",
+   "refs": {
+    "shop": 6,
+    "chest": 3,
+    "drop_rare": 5,
+    "steal_rare": 1,
+    "steal_common": 2,
+    "metamorph": 1,
+    "event_give_item": 2
+   },
+   "total_refs": 20
+  },
+  {
+   "id": "F5",
+   "name": "Remedy",
+   "refs": {
+    "shop": 12,
+    "chest": 5,
+    "steal_rare": 8,
+    "drop_rare": 6,
+    "drop_common": 2,
+    "steal_common": 1,
+    "metamorph": 4
+   },
+   "total_refs": 38
+  },
+  {
+   "id": "F6",
+   "name": "Sleeping Bag",
+   "refs": {
+    "shop": 16,
+    "chest": 2,
+    "drop_rare": 2,
+    "steal_rare": 1,
+    "event_give_item": 2
+   },
+   "total_refs": 23
+  },
+  {
+   "id": "F7",
+   "name": "Tent",
+   "refs": {
+    "shop": 23,
+    "chest": 9,
+    "steal_common": 1,
+    "drop_rare": 4,
+    "drop_common": 2,
+    "metamorph": 1
+   },
+   "total_refs": 40
+  },
+  {
+   "id": "F8",
+   "name": "Green Cherry",
+   "refs": {
+    "shop": 7,
+    "chest": 3,
+    "drop_common": 5,
+    "steal_common": 3,
+    "drop_rare": 5,
+    "metamorph": 1
+   },
+   "total_refs": 24
+  },
+  {
+   "id": "F9",
+   "name": "Magicite",
+   "refs": {
+    "chest": 5,
+    "steal_rare": 3,
+    "drop_rare": 2,
+    "colosseum_prize": 1
+   },
+   "total_refs": 11
+  },
+  {
+   "id": "FA",
+   "name": "Super Ball",
+   "refs": {
+    "shop": 1,
+    "steal_common": 2,
+    "drop_rare": 1,
+    "event_give_item": 1
+   },
+   "total_refs": 5
+  },
+  {
+   "id": "FB",
+   "name": "Echo Screen",
+   "refs": {
+    "shop": 10,
+    "chest": 1,
+    "steal_rare": 1,
+    "drop_rare": 2,
+    "steal_common": 1
+   },
+   "total_refs": 15
+  },
+  {
+   "id": "FC",
+   "name": "Smoke Bomb",
+   "refs": {
+    "shop": 5,
+    "drop_rare": 2
+   },
+   "total_refs": 7
+  },
+  {
+   "id": "FD",
+   "name": "Warp Stone",
+   "refs": {
+    "shop": 6,
+    "chest": 3,
+    "drop_rare": 9,
+    "steal_rare": 8,
+    "steal_common": 2,
+    "drop_common": 1,
+    "metamorph": 1
+   },
+   "total_refs": 30
+  },
+  {
+   "id": "FE",
+   "name": "Dried Meat",
+   "refs": {
+    "shop": 1,
+    "drop_rare": 1,
+    "steal_rare": 2,
+    "steal_common": 1,
+    "metamorph": 4
+   },
+   "total_refs": 9
+  },
+  {
+   "id": "FF",
+   "name": "Empty",
+   "refs": {
+    "chest": 131
+   },
+   "total_refs": 131
+  }
+ ]
+}

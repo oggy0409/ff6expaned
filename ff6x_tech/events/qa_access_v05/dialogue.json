@@ -1,0 +1,9 @@
+{
+ "_comment": "QA HARNESS ONLY. Strings in QA_HARNESS (FF:0800+).",
+ "messages": [
+  {"label": "qa5_prompt", "text": "TECH v0.5 QA ACCESS{n}{choice} Monster test battle{n}{choice} Map/Annex tests{n}{choice} No (Save Point)"},
+  {"label": "qa5_battle_intro", "text": "TECH v0.5: TESTMOB A + B{n}New monster IDs 180 and 181.{n}Formation 240."},
+  {"label": "qa5_battle_done", "text": "TECH v0.5: battle returned{n}to the field correctly."},
+  {"label": "qa5_other", "text": "TECH v0.5 QA: other tests{n}{choice} Map test A (1A0){n}{choice} Celes Annex{n}{choice} Cancel"}
+ ]
+}

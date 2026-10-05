@@ -1,0 +1,26 @@
+{
+ "id": "0x243",
+ "_comment": "QA Phase A2: vanilla formation $008 with slot 5 = Dark Wind graphics + Vulture palette $183.",
+ "template_vanilla_formation": "0x008",
+ "no_veldt": true,
+ "magic_points": 0,
+ "magitek_possible": true,
+ "slots": [
+  {
+   "slot": 2,
+   "monster": "0x017"
+  },
+  {
+   "slot": 3,
+   "monster": "0x017"
+  },
+  {
+   "slot": 4,
+   "monster": "0x028"
+  },
+  {
+   "slot": 5,
+   "monster": "0x183"
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "_comment": "NPC events are routed through the v0.4 NPC event vector table (no CA-CD bridges).",
+ "npcs": [
+  {
+   "name": "TECH_A1",
+   "x": 9,
+   "y": 14,
+   "gfx": "18 (MAN)",
+   "pal": 1,
+   "direction": "DOWN",
+   "speed": 1,
+   "react": "FACE_PLAYER",
+   "switch": "VANILLA_NPC_ALWAYS_VISIBLE",
+   "event": "EvA1"
+  },
+  {
+   "name": "TECH_A3",
+   "x": 22,
+   "y": 14,
+   "gfx": "19 (NPC)",
+   "pal": 0,
+   "direction": "DOWN",
+   "speed": 1,
+   "react": "FACE_PLAYER",
+   "switch": "VANILLA_NPC_ALWAYS_VISIBLE",
+   "event": "EvA3"
+  },
+  {
+   "name": "TECH_A2",
+   "x": 20,
+   "y": 16,
+   "gfx": "1B (NPC)",
+   "pal": 2,
+   "direction": "LEFT",
+   "speed": 1,
+   "react": "FACE_PLAYER",
+   "switch": "NPC_MAP_TECH_A2_VISIBLE",
+   "event": "EvA2"
+  }
+ ]
+}

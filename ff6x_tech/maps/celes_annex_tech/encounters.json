@@ -1,0 +1,10 @@
+{
+  "random_battles": false,
+  "event_battles": [
+    {"event": "EvBattleDoor", "event_battle_group": 40, "battle_bg": "3F (map default = $1B Magitek lab)",
+     "formation": "0x1A1 both slots: Mega Armor + ProtoArmor (vanilla, read-only reuse; group 40 is also used by vanilla event CB:2599)",
+     "post_battle": "call CA:5EA9 (vanilla: Game Over unless battle switch $40), fade_in, set CELES_ANNEX_TECH_BATTLE_DONE, step party off trigger",
+     "run_away": "Escape is possible (normal monsters). FF6 event scripts cannot distinguish victory from escape (both set battle switch $40), so escape also completes the TECH battle step.",
+     "defeat": "Vanilla Game Over -> reload last save."}
+  ]
+}

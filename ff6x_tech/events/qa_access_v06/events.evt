@@ -1,0 +1,67 @@
+# TECH v0.6 QA HARNESS ONLY. Trigger: map $013 (Narshe opening streets) tile (34,43).
+@QaAccess6
+if_switch VANILLA_TILE_EVENT_LATCH=1 -> QaRet6
+dlg qa6_prompt
+choice QaMon6, QaMore6, QaNo6
+@QaMon6
+dlg qa6_battle_intro
+battle $FE bg $3F
+@QaAfter6
+call VanillaPostBattleCheck
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+@QaMore6
+dlg qa6_more
+choice QaIso6, QaMp6, QaOther6
+@QaIso6
+dlg qa6_iso
+choice QaIsoA6, QaIsoB6, QaCancel6
+@QaIsoA6
+battle $FC bg $3F
+call VanillaPostBattleCheck
+fade_in
+party_step RIGHT 1
+return
+@QaIsoB6
+battle $FB bg $3F
+call VanillaPostBattleCheck
+fade_in
+party_step RIGHT 1
+return
+@QaMp6
+give_esper $36
+dlg qa6_mp
+choice QaMpY6, QaMpZ6, QaCancel6
+@QaMpY6
+battle $FD bg $3F
+call VanillaPostBattleCheck
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+@QaMpZ6
+battle $FE bg $3F
+call VanillaPostBattleCheck
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+@QaOther6
+dlg qa6_other
+choice QaMapA6, QaAnnex6, QaCancel6
+@QaMapA6
+load_map $1A0 16 27 UP
+return
+@QaAnnex6
+call EvAnnexEnter_Yes
+return
+@QaNo6
+call VanillaSavePoint
+@QaRet6
+return
+# cancel paths step off the trigger tile so the prompt does not re-open while standing on it
+@QaCancel6
+party_step RIGHT 1
+return

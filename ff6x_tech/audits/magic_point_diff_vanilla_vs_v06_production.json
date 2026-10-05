@@ -1,0 +1,180 @@
+{
+ "vanilla": {
+  "000": {
+   "started": true,
+   "won": true,
+   "learn_bolt_poison_bolt2": [
+    0,
+    0,
+    0
+   ]
+  },
+  "002": {
+   "started": true,
+   "won": true,
+   "learn_bolt_poison_bolt2": [
+    0,
+    0,
+    0
+   ]
+  },
+  "003": {
+   "started": true,
+   "won": true,
+   "learn_bolt_poison_bolt2": [
+    10,
+    5,
+    2
+   ]
+  },
+  "013": {
+   "started": true,
+   "won": true,
+   "learn_bolt_poison_bolt2": [
+    30,
+    15,
+    6
+   ]
+  },
+  "022": {
+   "started": true,
+   "won": true,
+   "learn_bolt_poison_bolt2": [
+    20,
+    10,
+    4
+   ]
+  },
+  "0FF": {
+   "started": true,
+   "won": true,
+   "learn_bolt_poison_bolt2": [
+    10,
+    5,
+    2
+   ]
+  },
+  "1FF": {
+   "started": true,
+   "won": true,
+   "learn_bolt_poison_bolt2": [
+    0,
+    0,
+    0
+   ]
+  },
+  "200": {
+   "started": true,
+   "won": true,
+   "learn_bolt_poison_bolt2": [
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "v06_production": {
+  "000": {
+   "started": true,
+   "won": true,
+   "learn_bolt_poison_bolt2": [
+    0,
+    0,
+    0
+   ]
+  },
+  "002": {
+   "started": true,
+   "won": true,
+   "learn_bolt_poison_bolt2": [
+    0,
+    0,
+    0
+   ]
+  },
+  "003": {
+   "started": true,
+   "won": true,
+   "learn_bolt_poison_bolt2": [
+    10,
+    5,
+    2
+   ]
+  },
+  "013": {
+   "started": true,
+   "won": true,
+   "learn_bolt_poison_bolt2": [
+    30,
+    15,
+    6
+   ]
+  },
+  "022": {
+   "started": true,
+   "won": true,
+   "learn_bolt_poison_bolt2": [
+    20,
+    10,
+    4
+   ]
+  },
+  "0FF": {
+   "started": true,
+   "won": true,
+   "learn_bolt_poison_bolt2": [
+    10,
+    5,
+    2
+   ]
+  },
+  "1FF": {
+   "started": true,
+   "won": true,
+   "learn_bolt_poison_bolt2": [
+    0,
+    0,
+    0
+   ]
+  },
+  "200": {
+   "started": true,
+   "won": true,
+   "learn_bolt_poison_bolt2": [
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "identical": {
+  "000": true,
+  "002": true,
+  "003": true,
+  "013": true,
+  "022": true,
+  "0FF": true,
+  "1FF": true,
+  "200": true
+ },
+ "v06_qa_new_formations": {
+  "240": {
+   "started": true,
+   "won": true,
+   "learn_bolt_poison_bolt2": [
+    0,
+    0,
+    0
+   ]
+  },
+  "241": {
+   "started": true,
+   "won": true,
+   "learn_bolt_poison_bolt2": [
+    30,
+    15,
+    6
+   ]
+  }
+ }
+}

@@ -1,0 +1,6 @@
+{
+ "_comment": "QA HARNESS ONLY. Strings in QA_HARNESS (FF:0800+).",
+ "messages": [
+  {"label": "qa4_prompt", "text": "TECH v0.4 QA ACCESS{n}{choice} Map test A (1A0){n}{choice} Celes Annex{n}{choice} No (Save Point)"}
+ ]
+}

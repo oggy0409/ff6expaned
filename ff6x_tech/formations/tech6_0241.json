@@ -1,0 +1,18 @@
+{
+ "id": "0x241",
+ "_comment": "QA: same monsters, magic_points 3 = nonzero-MP case.",
+ "template_vanilla_formation": "0x002",
+ "no_veldt": true,
+ "magic_points": 3,
+ "magitek_possible": true,
+ "slots": [
+  {
+   "slot": 2,
+   "monster": "0x180"
+  },
+  {
+   "slot": 3,
+   "monster": "0x181"
+  }
+ ]
+}

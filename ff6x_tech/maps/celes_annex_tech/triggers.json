@@ -1,0 +1,7 @@
+{
+  "_comment": "Event triggers (step-on). Pointers are 24-bit (+$CA0000) so they target F1 directly.",
+  "triggers": [
+    {"map": "0C7", "x": 16, "y": 10, "event": "EvBattleDoor", "purpose": "battle-room doorway: blocks until Vale talked; starts test battle once"},
+    {"map": "00C", "x": 13, "y": 46, "event": "EvAnnexEnter", "purpose": "Falcon interior entry prompt (vanilla WoR map, tile property $09 = walkable upper level, no NPC/entrance on it)"}
+  ]
+}

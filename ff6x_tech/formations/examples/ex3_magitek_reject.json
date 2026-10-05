@@ -1,0 +1,26 @@
+{
+ "id": "0x3F2",
+ "_comment": "EXAMPLE: vanilla $008 layout (VRAM map 1) fought by a Magitek party: slot 5 box is inside the Magitek VRAM area -> ERROR + suggested maps.",
+ "template_vanilla_formation": "0x008",
+ "no_veldt": true,
+ "magic_points": 0,
+ "magitek_possible": true,
+ "slots": [
+  {
+   "slot": 2,
+   "monster": "0x017"
+  },
+  {
+   "slot": 3,
+   "monster": "0x017"
+  },
+  {
+   "slot": 4,
+   "monster": "0x028"
+  },
+  {
+   "slot": 5,
+   "monster": "0x028"
+  }
+ ]
+}

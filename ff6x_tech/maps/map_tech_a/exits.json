@@ -1,0 +1,38 @@
+{
+ "short_entrances": [
+  {
+   "map": "1A0",
+   "src": [
+    16,
+    9
+   ],
+   "dest_map": "1A1",
+   "dest": [
+    13,
+    18
+   ],
+   "facing": "UP",
+   "flags": [],
+   "purpose": "north door -> map B (new map to new map)"
+  }
+ ],
+ "long_entrances": [
+  {
+   "map": "1A0",
+   "src": [
+    15,
+    29
+   ],
+   "length": 1,
+   "vertical": false,
+   "dest_map": "013",
+   "dest": [
+    35,
+    43
+   ],
+   "facing": "LEFT",
+   "flags": [],
+   "purpose": "south exit strip (x15-16) -> Narshe opening streets (35,43), one tile right of the QA tile (Rev 1 long entrances use a fixed destination)"
+  }
+ ]
+}

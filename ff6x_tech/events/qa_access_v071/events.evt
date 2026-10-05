@@ -1,0 +1,123 @@
+# TECH v0.7.1 QA HARNESS ONLY (target item-tech). Trigger: map $013 (Narshe opening streets) tile (34,43).
+# Top level: v0.7.1 item-bank tests; the accepted v0.6.1 tests are kept unchanged one level down.
+@QaAccess6
+if_switch VANILLA_TILE_EVENT_LATCH=1 -> QaRet6
+dlg qa7_prompt
+choice QaItem7, QaOld6, QaNo6
+@QaOld6
+dlg qa6_prompt
+choice QaMon6, QaMore6, QaCancel6
+# ---- TECH v0.7.1 extended item tests -------------------------------------------------------
+@QaItem7
+dlg qa7_items
+choice QaGive7, QaHas7, QaMore7
+# A: grant the three QA items (extended event API) + the vanilla items with the same low byte
+@QaGive7
+give_ext_item $13D
+give_ext_item $13E
+give_ext_item $13F
+give_item $3D
+give_item $3E
+give_item $3F
+dlg qa7_given
+party_step RIGHT 1
+return
+# K: HAS_EXT_ITEM / TAKE_EXT_ITEM
+@QaHas7
+has_ext_item $13D -> QA_V071_HAS_EXT_ITEM
+if_switch QA_V071_HAS_EXT_ITEM=1 -> QaHasY7
+dlg qa7_has_no
+party_step RIGHT 1
+return
+@QaHasY7
+dlg qa7_has_yes
+choice QaTake7, QaCancel6
+@QaTake7
+take_ext_item $13D
+dlg qa7_taken
+party_step RIGHT 1
+return
+# M / F: shop, colosseum, battle
+@QaMore7
+dlg qa7_more
+choice QaShop7, QaColo7, QaBtl7
+@QaShop7
+shop $48
+party_step RIGHT 1
+return
+@QaColo7
+colosseum
+party_step RIGHT 1
+return
+# F/G: Terra fights without Magitek (status 1 bit $08 cleared for the test battle, restored after it)
+@QaBtl7
+status_clear $00 $FFF7
+battle $01 bg $3F
+call VanillaPostBattleCheck
+status_set $00 $0008
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+@QaMon6
+dlg qa6_battle_intro
+battle $FE bg $3F
+@QaAfter6
+call VanillaPostBattleCheck
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+@QaMore6
+dlg qa6_more
+choice QaIso6, QaMp6, QaOther6
+@QaIso6
+dlg qa6_iso
+choice QaIsoA6, QaIsoB6, QaCancel6
+@QaIsoA6
+battle $FC bg $3F
+call VanillaPostBattleCheck
+fade_in
+party_step RIGHT 1
+return
+@QaIsoB6
+battle $FB bg $3F
+call VanillaPostBattleCheck
+fade_in
+party_step RIGHT 1
+return
+@QaMp6
+give_esper $36
+dlg qa6_mp
+choice QaMpY6, QaMpZ6, QaCancel6
+@QaMpY6
+battle $FD bg $3F
+call VanillaPostBattleCheck
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+@QaMpZ6
+battle $FE bg $3F
+call VanillaPostBattleCheck
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+@QaOther6
+dlg qa6_other
+choice QaMapA6, QaAnnex6, QaCancel6
+@QaMapA6
+load_map $1A0 16 27 UP
+return
+@QaAnnex6
+call EvAnnexEnter_Yes
+return
+@QaNo6
+call VanillaSavePoint
+@QaRet6
+return
+# cancel paths step off the trigger tile so the prompt does not re-open while standing on it
+@QaCancel6
+party_step RIGHT 1
+return

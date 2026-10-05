@@ -1,0 +1,154 @@
+{
+ "map_id": "1A0",
+ "name": "MAP TECH A — TECH v0.4 map-foundation proof map (placeholder art)",
+ "status": "TECH v0.4 proof map. New map ID beyond the vanilla range ($19F+). Placeholder vanilla Magitek-lab tiles. NOT production content.",
+ "size_tiles": [
+  32,
+  32
+ ],
+ "bg1": {
+  "source": "layout_bg1.txt",
+  "layout_index": "0x160",
+  "storage": "MAP_LAYOUTS (F5), literal LZSS"
+ },
+ "bg2": {
+  "layout_index": "0x12A",
+  "note": "vanilla all-transparent filler (read-only reuse, as in the accepted Annex)"
+ },
+ "bg3": {
+  "layout_index": "0x000"
+ },
+ "tile_property_set": "0x24 (vanilla 'magitek_lab_1'; read from the clean ROM at build time)",
+ "legend": {
+  ".": {
+   "tile": "02",
+   "role": "void (impassable)"
+  },
+  "f": {
+   "tile": [
+    "52",
+    "62"
+   ],
+   "pattern": "checker (x+y)%2",
+   "role": "floor"
+  },
+  "7": {
+   "tile": "A0",
+   "role": "wall top-left edge"
+  },
+  "^": {
+   "tile": [
+    "A1",
+    "A2"
+   ],
+   "pattern": "x%2",
+   "role": "wall top edge"
+  },
+  "9": {
+   "tile": "A3",
+   "role": "wall top-right edge"
+  },
+  "[": {
+   "tile": "B0",
+   "role": "wall face left"
+  },
+  "m": {
+   "tile": [
+    "56",
+    "57"
+   ],
+   "pattern": "x%2",
+   "role": "wall face (machinery)"
+  },
+  "]": {
+   "tile": "B3",
+   "role": "wall face right"
+  },
+  "{": {
+   "tile": "C0",
+   "role": "wall lower left"
+  },
+  "n": {
+   "tile": [
+    "66",
+    "67"
+   ],
+   "pattern": "x%2",
+   "role": "wall lower"
+  },
+  "}": {
+   "tile": "C3",
+   "role": "wall lower right"
+  },
+  "<": {
+   "tile": "D0",
+   "role": "left wall"
+  },
+  ">": {
+   "tile": "D3",
+   "role": "right wall"
+  },
+  "1": {
+   "tile": "E0",
+   "role": "bottom-left edge"
+  },
+  "v": {
+   "tile": [
+    "E1",
+    "E2"
+   ],
+   "pattern": "x%2",
+   "role": "bottom edge"
+  },
+  "3": {
+   "tile": "E3",
+   "role": "bottom-right edge"
+  }
+ },
+ "walkable_roles": [
+  "floor"
+ ],
+ "properties": {
+  "_comment": "Same property bytes as the accepted Annex map ($0C7) except the layouts.",
+  "bytes": {
+   "00_title": "00",
+   "01_flags": "00",
+   "02_bg3prio_battlebg": "1B",
+   "03": "00",
+   "04_tile_prop_set": "24",
+   "05_random_battles": "00",
+   "06_window_mask": "00",
+   "07_12_gfx_sets": "B6 1B 4E E7 88 86",
+   "13_16_layouts": "computed: BG1=$15F, BG2=$12A, BG3=$000",
+   "17_sprite_overlay": "00",
+   "18_21_bg23_shift": "00 00 00 00",
+   "22_parallax": "00",
+   "23_bg12_size": "55",
+   "24_bg3_size": "57",
+   "25_palette": "18",
+   "26_pal_anim": "00",
+   "27_bg_anim": "0E",
+   "28_song": "21",
+   "29": "00",
+   "30_map_w": "1F",
+   "31_map_h": "1F",
+   "32_color_math": "00"
+  }
+ },
+ "entry": {
+  "from": "QA access (map $013) -> load_map $1A0 (16,27) UP; from map B door -> (16,12) DOWN; from map B stairs -> (13,26) DOWN",
+  "arrive": [
+   16,
+   27
+  ],
+  "facing": "UP",
+  "z": "lower"
+ },
+ "rooms": {
+  "north_room": "x8-23 y12-17: NPC A1 (9,14), A3 (22,14), A2 (20,16, hidden until VISITED_B)",
+  "door": "short entrance (16,9) -> map $1A1 (13,18)",
+  "corridor": "x15-16 y18-24",
+  "hall": "x12-19 y25-27, trigger alcove (10,25)",
+  "south_exit": "long entrance (15,29) length 1 -> map $013 (35,43)"
+ }
+}

@@ -1,0 +1,35 @@
+# TECH v0.4 map-foundation proof events (placeholder text). Assembled into EVENT_EXPANSION at F1:1000.
+# All NPCs below are reached through the v0.4 NPC event vector table (MAPX_NPC_EVENT_VECTORS).
+
+# --- map $1A0 (MAP TECH A) ----------------------------------------------------------------
+@EvA1
+if_switch MAP_TECH_V04_VISITED_B=1 -> EvA1_After
+dlg a1_first
+return
+@EvA1_After
+dlg a1_after
+return
+
+@EvA3
+dlg a3_info
+return
+
+@EvA2
+dlg a2_info
+return
+
+@EvATrigger
+dlg a_trigger
+party_step RIGHT 1
+return
+
+# --- map $1A1 (MAP TECH B) ----------------------------------------------------------------
+@EvB1
+if_switch MAP_TECH_V04_VISITED_B=1 -> EvB1_Again
+set_switch MAP_TECH_V04_VISITED_B
+set_switch NPC_MAP_TECH_A2_VISIBLE
+dlg b1_first
+return
+@EvB1_Again
+dlg b1_again
+return

@@ -1,0 +1,10 @@
+{
+ "name": "qa_access_v04",
+ "qa": true,
+ "_comment": "QA HARNESS ONLY (target map-tech). Opening-Magitek QA tile: UNSUITABLE for field-sprite persistence testing (KNOWN_QA_ISSUE_v0.3.1).",
+ "maps": [],
+ "event_org": "FF0000",
+ "event_region": "QA_HARNESS",
+ "event_patch": "Q400_QA_EVENT",
+ "layout_patch": "Q400_QA_EVENT"
+}
