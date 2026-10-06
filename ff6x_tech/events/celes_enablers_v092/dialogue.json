@@ -1,0 +1,60 @@
+{
+ "messages": [
+  {
+   "label": "cel92_mem_none",
+   "text": "QA E8 MEMORIAL WALL:{n}no memorial yet{n}(Celes arc not complete)."
+  },
+  {
+   "label": "cel92_mem_tags",
+   "text": "QA E8 MEMORIAL WALL:{n}temporary name/tag wall{n}(arc complete, both branches)."
+  },
+  {
+   "label": "cel92_mem_stone",
+   "text": "QA E8 MEMORIAL WALL:{n}permanent stone memorial{n}(Graves Without Names done)."
+  },
+  {
+   "label": "cel92_arc_sealed",
+   "text": "QA E8 ARCHIVE: sealed{n}(no records choice yet)."
+  },
+  {
+   "label": "cel92_arc_kept",
+   "text": "QA E8 ARCHIVE: retained{n}(branch PRESERVE)."
+  },
+  {
+   "label": "cel92_arc_burned",
+   "text": "QA E8 ARCHIVE: procedure{n}archive burned (branch BURN)."
+  },
+  {
+   "label": "cel92_surv_base",
+   "text": "QA E5 SURVIVOR: base line{n}(always shown)."
+  },
+  {
+   "label": "cel92_surv_locke",
+   "text": "QA E5 LOCKE: reaction line{n}(owner: Locke)."
+  },
+  {
+   "label": "cel92_surv_edgar",
+   "text": "QA E5 EDGAR: same reaction{n}line (fallback 1: no Locke)."
+  },
+  {
+   "label": "cel92_surv_sabin",
+   "text": "QA E5 SABIN: same reaction{n}line (fallback 2)."
+  },
+  {
+   "label": "cel92_surv_dropped",
+   "text": "QA E5: no fallback speaker in{n}the party - line dropped (D-11)."
+  },
+  {
+   "label": "cel92_vale",
+   "text": "QA E7 VALE: sprite palette 0x20{n}(new relocated-table entry){n}in sprite slot 7."
+  },
+  {
+   "label": "cel92_praetor_q",
+   "text": "QA PRAETOR CONSOLE (E2-E4){n}{choice} Fight (locked stats){n}{choice} Fight (QA-scaled){n}{choice} Not now"
+  },
+  {
+   "label": "cel92_praetor_done",
+   "text": "QA: Praetor battle finished."
+  }
+ ]
+}

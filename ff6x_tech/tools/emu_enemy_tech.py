@@ -200,6 +200,16 @@ def phase_save(rom, out):
     won, _, d = win_and_return(h, out, "14")
     l2 = learn(h)
     log("14 zero-MP new formation $240: learn progress unchanged", ok and won and l2 == l1, after=l2)
+    # TECH v0.9.2: the custom AI picks Mute / Slow at random (vanilla RNG, input-timing dependent: the extra QA menu level
+    # of the v0.9.2 hub shifts it). The AI bytes are unchanged; fight $240 again (at most 3x) until both were observed.
+    for extra in range(3):
+        if AI_SEEN == {"mute", "slow"}:
+            break
+        walk(h, "LEFT", 1)
+        d, ok = battle_from_menu(h, [1, 1, 1])
+        AI_SEEN.update({k for k, v in M.observe_ai(h, out, frames=3000, tag=f"14x{extra}_ai").items()
+                        if k in ("mute", "slow") and v})
+        win_and_return(h, out, f"14x{extra}")
     log("14b AI behaviour observed across the custom battles: Mute (only A's script) and Slow (only B's script)",
         AI_SEEN == {"mute", "slow"}, seen=sorted(AI_SEEN))
     # --- Phase A isolation via the QA harness (v0.6.1: Magitek-safe VRAM map 8, all three birds at once)

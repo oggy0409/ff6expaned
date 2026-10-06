@@ -18,6 +18,14 @@ Tables (ITEMX_TABLES FA:0000-FA:7FFF), v0.8 layout unchanged + TECH v0.9 tables 
   XShopProp     FA:5400  144 x 9   shop table (0-$7F = byte copy of C4:7AC0, $80-$8F extended)
   XShopPropHi   FA:5940  144 x 9   same layout: 1 = the entry is an extended item ($100 | low byte)
   XRareDescText FA:5E80-           rare descriptions (0-19 = byte copies of the vanilla strings)
+
+TECH v0.9.1 (item data alignment, D-16 .. D-20): the same builder with config "v091" (`CFG`, chosen per target by
+`cfg_of(meta)`; config "v09" reproduces the frozen v0.9 targets byte-exact):
+  sources   items/production_v091/{equipment,consumables,rare_items,ext_shops}.json (shops $80-$84)
+  engine    asm/item_v091 (asm/item_v09 + v091.s), hooks + patches/item_v091_hooks.py (V9101-V9106)
+  tables    XFixAmt FA:7E00 (64 x 2 fixed amount), XHybrid FA:7E80 (64 x 1 hybrid element), XShopCap FA:7EC0
+            (64 x 1 purchase cap), XCtxFlags FA:7F00 (64 x 1 context flags: bit 0 keep Vanish removal);
+            built by patches/consumables_v091.engine_tables()
 """
 import json, os
 from ff6x.asm816 import Program
@@ -39,6 +47,27 @@ N_SHOPS = 0x90
 FLAG_DEF, FLAG_SPEAR, FLAG_CONS, FLAG_SELL = 0x01, 0x02, 0x04, 0x08
 ICON_TBL = 0xC326F5
 
+# TECH v0.9.1 (meta item_cfg = "v091"): same layout + XFixAmt / XHybrid / XShopCap, the v0.9.1 data set
+# (items/production_v091), validator patches/consumables_v091.py, engine asm/item_v091 (+ v091.s) and the extra hooks
+# patches/item_v091_hooks.py. item_cfg "v09" (default) is the accepted v0.9 build, byte-identical.
+T_FIXAMT, T_HYBRID, T_SHOPCAP, T_CTXFL = 0xFA7E00, 0xFA7E80, 0xFA7EC0, 0xFA7F00
+CFG = {
+    "v09": {"asm": ASM_V09, "sources": SOURCES_V09, "cons": CONS_SRC, "rare": RARE_SRC, "shop": SHOP_SRC,
+            "val": consumables_v09, "hooks": None, "label": "TECH v0.9"},
+    "v091": {"asm": os.path.join(HERE, "asm", "item_v091"), "sources": SOURCES_V09 + ["v091.s"],
+             "cons": "items/production_v091/consumables.json", "rare": "items/production_v091/rare_items.json",
+             "shop": "items/production_v091/ext_shops.json", "val": None, "hooks": "patches.item_v091_hooks",
+             "label": "TECH v0.9.1"},
+}
+
+
+def cfg_of(meta):
+    c = dict(CFG[meta.get("item_cfg", "v09")])
+    if c["val"] is None:
+        from patches import consumables_v091
+        c["val"] = consumables_v091
+    return c
+
 
 def load(path):
     return json.load(open(os.path.join(HERE, path)))
@@ -47,21 +76,23 @@ def load(path):
 def build_tables(rom, meta):
     clean = rom.clean
     pc = snes_to_pc
+    cfg = cfg_of(meta)
+    V = cfg["val"]
     # ---- v0.8 tables (equipment + QA equipment) via the accepted composer ---------------------------------
     tables, notes = item_v071.build_tables(clean, item_v071.load_defs(meta))
     tab = {label: (at, bytearray(data)) for label, at, data in tables}
     prop, name, flags = tab["XItemProp"][1], tab["XItemName"][1], tab["XExtFlags"][1]
     dptr, dtxt = tab["XDescPtr"][1], tab["XDescText"][1]
     # ---- consumables ----------------------------------------------------------------------------------------
-    cons = load(CONS_SRC)["items"]
-    consumables_v09.validate(cons, clean, pc)
+    cons = load(cfg["cons"])["items"]
+    V.validate(cons, clean, pc)
     animx = bytearray(64 * 2)
     icons = set(clean[pc(ICON_TBL):pc(ICON_TBL) + 17])
     for it in cons:
         i = int(it["id"], 16); k = i - 0x100
         if flags[k]:
             raise SystemExit(f"{it['id']}: id already defined")
-        rec = consumables_v09.compose(it)
+        rec = V.compose(it)
         prop[30 * i:30 * i + 30] = rec
         nm = menu_encode(it["display_name"], 0xFE)
         if len(nm) > consumables_v09.NAME_MAX:
@@ -76,21 +107,21 @@ def build_tables(rom, meta):
         txt = menu_encode(it["desc"], 0xFF) + b"\x00"
         dptr[2 * k:2 * k + 2] = ((item_v071.T_DTXT + len(dtxt)) & 0xFFFF).to_bytes(2, "little")
         dtxt += txt
-        av = consumables_v09.anim_offset(it, clean, pc)
+        av = V.anim_offset(it, clean, pc)
         animx[2 * (i & 0x3F):2 * (i & 0x3F) + 2] = av.to_bytes(2, "little")
         notes[f"{i:03X}"] = {"name": it["display_name"], "base": None, "type": 6, "prop": rec.hex(" ").upper(),
                              "name_bytes": name[13 * i:13 * i + 13].hex(" ").upper(), "flags": f"{flags[k]:02X}",
-                             "anim": f"{av:04X}", "source": CONS_SRC}
+                             "anim": f"{av:04X}", "source": cfg["cons"]}
     if item_v071.T_DTXT + len(dtxt) > T_ANIMX:
         raise SystemExit("XDescText overlaps the v0.9 tables")
     # ---- rare items -----------------------------------------------------------------------------------------
-    prod_r = load(RARE_SRC)["rare_items"]
+    prod_r = load(cfg["rare"])["rare_items"]
     qa_r = []
     if meta.get("qa_harness"):
         d = load(RARE_QA_SRC)
         assert d.get("qa")
         qa_r = d["rare_items"]
-    consumables_v09.validate_rare(prod_r, qa_r)
+    V.validate_rare(prod_r, qa_r)
     rname = bytearray(clean[pc(VAN_RNAME):pc(VAN_RNAME) + 20 * 13]) + b"\xFF" * (32 * 13)
     rdef = bytearray(4)
     rdtxt = bytearray()
@@ -119,9 +150,12 @@ def build_tables(rom, meta):
     if T_RDTXT + len(rdtxt) > item_v071.T_END + 1:
         raise SystemExit("rare description text overflows ITEMX_TABLES")
     # ---- shops ----------------------------------------------------------------------------------------------
-    shops = load(SHOP_SRC)["shops"]
+    shops = load(cfg["shop"])["shops"]
     sold = {int(it["id"], 16) for it in cons if it["sold_in_shops"]}
-    consumables_v09.validate_shops(shops, sold)
+    if V is consumables_v09:
+        V.validate_shops(shops, sold)
+    else:
+        V.validate_shops(shops, sold, clean, pc, equipment_ids=set(range(0x100, 0x127)))
     shop = bytearray(clean[pc(VAN_SHOP):pc(VAN_SHOP) + 128 * 9]) + b"\xFF" * (16 * 9)
     shophi = bytearray(N_SHOPS * 9)
     for s in shops:
@@ -132,27 +166,39 @@ def build_tables(rom, meta):
             rec[1 + e] = v & 0xFF
             shophi[sid * 9 + 1 + e] = 1 if v >= 0x100 else 0
         shop[sid * 9:sid * 9 + 9] = rec
-    for sid in range(0x82, N_SHOPS):              # unused extended shop ids: type 3, empty
-        shop[sid * 9] = 3
+    defined = {int(s["shop_id"], 16) for s in shops}
+    for sid in range(0x80, N_SHOPS):              # unused extended shop ids: type 3, empty
+        if sid not in defined:
+            shop[sid * 9] = 3
     out = [(l, at, bytes(d)) for l, (at, d) in tab.items()]
     out += [("XItemAnimX", T_ANIMX, bytes(animx)), ("XRareDef", T_RDEF, bytes(rdef)),
             ("XRareDescPtr", T_RDPTR, bytes(rdptr)), ("XRareName", T_RNAME, bytes(rname)),
             ("XShopProp", T_SHOP, bytes(shop)), ("XShopPropHi", T_SHOPHI, bytes(shophi)),
             ("XRareDescText", T_RDTXT, bytes(rdtxt))]
+    if V is not consumables_v09:                  # TECH v0.9.1 engine tables
+        fix, hyb, cap, ctx = V.engine_tables(cons)
+        if T_RDTXT + len(rdtxt) > T_FIXAMT:
+            raise SystemExit("rare description text overlaps the v0.9.1 tables")
+        out += [("XFixAmt", T_FIXAMT, fix), ("XHybrid", T_HYBRID, hyb), ("XShopCap", T_SHOPCAP, cap),
+                ("XCtxFlags", T_CTXFL, ctx)]
+        notes["_v091"] = {"XFixAmt": fix.hex(" ").upper(), "XHybrid": hyb.hex(" ").upper(),
+                          "XShopCap": cap.hex(" ").upper(), "XCtxFlags": ctx.hex(" ").upper()}
     notes["_rare"] = rnotes
     notes["_shops"] = {s["shop_id"]: s["items"] for s in shops}
     return out, notes
 
 
-def table_externs():
+def table_externs(meta=None):
     e = item_v071.table_externs()
+    if meta is not None and meta.get("item_cfg", "v09") != "v09":
+        e.update({"XFixAmt": T_FIXAMT, "XHybrid": T_HYBRID, "XShopCap": T_SHOPCAP, "XCtxFlags": T_CTXFL})
     e.update({"XItemAnimX": T_ANIMX, "XRareDef": T_RDEF, "XRareDescPtr": T_RDPTR, "XRareName": T_RNAME,
               "XShopProp": T_SHOP, "XShopPropHi": T_SHOPHI, "XRareDescText": T_RDTXT,
               "XDescText": item_v071.T_DTXT})
     return e
 
 
-def hooks():
+def hooks(meta=None):
     from patches.item_v071_hooks import HOOKS as H071
     from patches.item_v09_hooks import HOOKS as H09, OVERRIDES
     out = []
@@ -161,28 +207,41 @@ def hooks():
         if h["id"] in OVERRIDES:
             h.update(OVERRIDES[h["id"]])
         out.append(h)
-    return out + list(H09)
+    out += list(H09)
+    if meta is not None and cfg_of(meta)["hooks"]:
+        import importlib
+        extra = importlib.import_module(cfg_of(meta)["hooks"]).HOOKS
+        sites = {}
+        for h in out + list(extra):            # no two hooks may touch the same vanilla bytes
+            a = int(h["snes"], 16)
+            for b in range(a, a + len(bytes.fromhex(h["expect"]))):
+                if b in sites:
+                    raise SystemExit(f"hook {h['id']} overlaps {sites[b]} at {b:06X}")
+                sites[b] = h["id"]
+        out += list(extra)
+    return out
 
 
 def build(rom, target, alloc, meta):
     notes = {"ext_items": {}, "tables": {}, "sections": {}, "hooks": []}
+    cfg = cfg_of(meta)
     tables, notes["ext_items"] = build_tables(rom, meta)
     for label, at, data in tables:
         rom.place("ITEMX_TABLES", data, label, "I101_ITEM_TABLES", at=at,
-                  reason=f"{label}: extended item table (TECH v0.9 layout)",
+                  reason=f"{label}: extended item table ({cfg['label']} layout)",
                   consumer="retargeted ItemProp/ItemName consumers and the extended item engine")
         notes["tables"][label] = {"snes": fmt_snes(at), "length": len(data)}
-    ext = table_externs()
+    ext = table_externs(meta)
     src = []
-    for f in SOURCES_V09:
-        src.append(f"; ==== {f}\n" + open(os.path.join(ASM_V09, f)).read())
+    for f in cfg["sources"]:
+        src.append(f"; ==== {f}\n" + open(os.path.join(cfg["asm"], f)).read())
     prog = Program("\n".join(src), ext, "item_v09")
     secs = prog.assemble()
     for name, (org, code) in secs.items():
         how, reg = item_v071.REGION_OF[name]
         if how == "place":
             rom.place(reg, code, f"{name}", "I102_ITEM_ENGINE_CODE", at=org,
-                      reason="TECH v0.9 extended item engine (65816, asm/item_v09)",
+                      reason=f"{cfg['label']} extended item engine (65816, asm/{os.path.basename(cfg['asm'])})",
                       consumer="JSL from hook sites / bank stubs")
         else:
             rom.patch(org, b"\xFF" * len(code), code, f"I103_{name}_STUBS", claim=reg,
@@ -191,7 +250,7 @@ def build(rom, target, alloc, meta):
         notes["sections"][name] = {"snes": fmt_snes(org), "length": len(code)}
     syms = dict(ext); syms.update(prog.symbols)
     notes["retargeted_operands"] = item_v071.retarget_tables(rom, "I110_RETARGET")
-    for h in hooks():
+    for h in hooks(meta):
         site = int(h["snes"], 16)
         expect = bytes.fromhex(h["expect"])
         mode = h.get("mode", ".a8\n.i16")

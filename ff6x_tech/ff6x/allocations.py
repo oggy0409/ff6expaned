@@ -151,6 +151,19 @@ class Allocations:
                 out[b["name"]] = int(b["bit"], 16)
         return out
 
+    def vanilla_qa_write_bits(self, target):
+        """TECH v0.9.2: name -> bit for vanilla bits a QA HARNESS package may WRITE (to emulate a later story state,
+        e.g. 'the airship is available'); never available to production packages (checked by patches/map_v04.py)."""
+        out = {}
+        for b in self.raw.get("event_bits", {}).get("vanilla_qa_write_refs", []):
+            if target in b["targets"]:
+                if b.get("access") != "qa_write":
+                    raise AllocationError(f"vanilla QA write ref {b['name']} must be access=qa_write")
+                if b["name"] in self.bits:
+                    raise AllocationError(f"vanilla QA write ref {b['name']} collides with an allocated bit name")
+                out[b["name"]] = int(b["bit"], 16)
+        return out
+
     def claim_covers(self, target, name, pc0, pc1):
         for c in self.claims:
             if c["name"] == name and target in c["targets"]:

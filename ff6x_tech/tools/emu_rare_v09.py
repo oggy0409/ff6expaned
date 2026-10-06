@@ -29,7 +29,8 @@ from emu_menu_nav import Nav, ST
 from emu_equip_stress_v08 import save_menu
 from patches import item_v071 as IV, item_v09 as I9
 
-PROD = json.load(open(os.path.join(HERE, "items/production_v09/rare_items.json")))["rare_items"]
+# TECH v0.9.2 regression: FF6X_RARE_SRC selects the data set of the ROM under test (default: the accepted v0.9 data)
+PROD = json.load(open(os.path.join(HERE, os.environ.get("FF6X_RARE_SRC", "items/production_v09/rare_items.json"))))["rare_items"]
 QA = json.load(open(os.path.join(HERE, "items/qa_v09/qa_rare_items.json")))["rare_items"]
 XRARE, XRSIG = 0x1E1D, 0x1E21
 SW = 0x152                                       # QA_V09_HAS_RARE

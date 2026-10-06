@@ -1,0 +1,10 @@
+{
+ "id": "0x184",
+ "name": "Praetor",
+ "special_name": "Barrier",
+ "special_anim_from_vanilla_monster": "0x111",
+ "status": "QA-only TECH v0.9.2 enabler: Magitek Praetor (BOSS-01) with the LOCKED stats of Content_Data v1.2 Bosses / Master Design Bible s4 and the locked AI rules (barrier opening, 70% Suppressor Bits, 40% overload, Grounding Field). Graphics = vanilla Guardian ($111) placeholder (D-14). NOT the CONTENT v1.0 production record.",
+ "rage_policy": "excluded - engine never learns Rages for monster IDs >= $100 (C2:4A09); no Rage entry",
+ "veldt_policy": "excluded - engine skips IDs >= $100 for Veldt registration (C2:49E9); formations force no-Veldt flag",
+ "colosseum_policy": "not eligible (colosseum table monster byte and MonsterAlign are 8-bit/256 entries)"
+}

@@ -162,7 +162,7 @@ def build(rom, target, alloc, meta, gfx_override=None):
         if clean[snes_to_pc(snes):snes_to_pc(snes) + len(exp)] != exp:
             raise SystemExit(f"N: Rage/Veldt guard assert failed at {fmt_snes(snes)}")
     notes = {"monsters": {}, "formations": {}}
-    mons = [MonsterSource(os.path.join(HERE, "monsters", m)) for m in meta.get("monsters", [])]
+    mons = [MonsterSource(os.path.join(HERE, "monsters", m), ext_ai=bool(meta.get("ext_ai"))) for m in meta.get("monsters", [])]
     ids = [m.id for m in mons]
     if len(ids) != len(set(ids)): raise SystemExit("duplicate monster id")
     comp = {m.id: m.compile(clean) for m in mons}

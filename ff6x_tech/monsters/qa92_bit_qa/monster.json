@@ -1,0 +1,10 @@
+{
+ "id": "0x187",
+ "name": "Bit QA",
+ "special_name": "Rflect",
+ "special_anim_from_vanilla_monster": "0x0E3",
+ "status": "QA-only TECH v0.9.2 MANUAL-QA SCALED copy of qa92_suppressor_bit (Suppressor Bit): identical AI script (ai.txt byte-identical, asserted by the selftest), max HP 1/10 and attack / magic / level 1 so an early-game QA party can reach the 70% / 40% / Grounding Field rules by hand. The locked record is qa92_suppressor_bit. NOT production content.",
+ "rage_policy": "excluded - engine never learns Rages for monster IDs >= $100 (C2:4A09); no Rage entry",
+ "veldt_policy": "excluded - engine skips IDs >= $100 for Veldt registration (C2:49E9); formations force no-Veldt flag",
+ "colosseum_policy": "not eligible (colosseum table monster byte and MonsterAlign are 8-bit/256 entries)"
+}

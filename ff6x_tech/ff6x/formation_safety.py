@@ -176,9 +176,10 @@ def check_formation(img, fjson, mode, table=None, path="?"):
     if exc_slots and not str(exc.get("reason", "")).strip():
         issues.append(_issue("ERROR", "layout_exception_without_reason", "layout_exception needs a non-empty reason"))
     for s in range(6):
-        if not rec[1] & (1 << s):
-            continue
         mid = rec[2 + s] | (((rec[14] >> s) & 1) << 8)
+        hidden = not rec[1] & (1 << s)
+        if hidden and mid == 0x1FF:
+            continue                    # empty slot; TECH v0.9.2: hidden-at-start members (shown later by AI) are checked too
         if s >= len(VRAM_MAPS[vmap]):
             issues.append(_issue("ERROR", "slot_not_in_vram_map", f"slot {s}: VRAM map {vmap} has no box for it"))
             continue
@@ -223,7 +224,7 @@ def check_formation(img, fjson, mode, table=None, path="?"):
             si.append(_issue(lvl, "magitek_vram_conflict",
                              f"slot {s} monster {mid:03X}: {len(conflict)} tile cell(s) in the Magitek VRAM area (map {vmap} slot {s})"))
         issues += si
-        slots_out.append({"slot": s, "monster": f"{mid:03X}", "position_byte": f"{pos:02X}", "origin_xy": [px0, py0],
+        slots_out.append({"slot": s, "monster": f"{mid:03X}", "hidden_at_start": hidden, "position_byte": f"{pos:02X}", "origin_xy": [px0, py0],
                           "sprite_px": [sp["cols"] * 8, sp["rows"] * 8], "opaque_bbox": [x0, y0, x1, y1], "margins": m,
                           "large": large, "gfx_prop_record": sp["gfx_prop_record"], "palette": f"{sp['palette']:03X}",
                           "vram_box_origin_col_row": list(VRAM_MAP_POS[vmap][s]), "vram_box_cols_rows": list(VRAM_MAPS[vmap][s]),

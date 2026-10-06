@@ -1,0 +1,2099 @@
+{
+ "_comment": "TECH v0.9.1 production signature equipment $100-$126 (v0.8 data + the approved v0.9.1 alignment: D-03/DA-01 Leo's Blade, D-19 Darill's Coin, D-20 Tempered Edge / Doma Edge / Sandpiercer, X0223 Magister Robe arc). Only source metadata and the Darill's Coin record change.",
+ "version": "TECH v0.9.1",
+ "qa": false,
+ "items": [
+  {
+   "id": "100",
+   "code": "EQ-W01",
+   "symbol": "EQ_TEMPERED_EDGE",
+   "locked_name": "Tempered Edge",
+   "display_name": "TemperedEdge",
+   "category": "weapon",
+   "family": "sword",
+   "template": "15",
+   "template_name": "Falchion",
+   "users": [
+    "Terra",
+    "Locke",
+    "Edgar",
+    "Celes"
+   ],
+   "locked_stats": "Atk 188; Vigor +2; Eva +10",
+   "power": 188,
+   "hit_rate": 150,
+   "vigor": 2,
+   "speed": 0,
+   "stamina": 0,
+   "mag_pwr": 0,
+   "evade": 10,
+   "mblock": 0,
+   "elem_attack": [],
+   "weapon_flags": [
+    "RUNIC",
+    "TWO_HAND",
+    "BUSHIDO"
+   ],
+   "weapon_special": "NONE",
+   "spear": false,
+   "desc": "Tempered Edge, Narshe forge{n}Raises Vigor and evade",
+   "acquisition": {
+    "reward_id": "RW_100",
+    "source_type": "quest_reward",
+    "planned_source": "The Empty Forge (Narshe) - quest reward; never sold",
+    "future_event_symbol": "EV_REWARD_EMPTY_FORGE_TEMPERED_EDGE",
+    "conditions": [
+     "PREREQ_EMPTY_FORGE_DONE"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "hit_rate": "family default (vanilla sword hit 150)",
+    "weapon_flags": "family default (vanilla sword: RUNIC, TWO_HAND, BUSHIDO)",
+    "throw": "not throwable (Throw excluded under Option C)",
+    "animation": "vanilla Falchion ($15) weapon animation, icon, block graphic",
+    "merit_award": "MERIT equip flag off: signature gear keeps its locked users"
+   },
+   "v091_changes": [
+    "D-20: first and only copy = The Empty Forge reward; removed from smith purchase (no GP cost); never sold in the Reopened Narshe Forge shop"
+   ]
+  },
+  {
+   "id": "101",
+   "code": "EQ-W02",
+   "symbol": "EQ_IMPERIAL_SABER",
+   "locked_name": "Imperial Saber",
+   "display_name": "ImperialSabr",
+   "category": "weapon",
+   "family": "sword",
+   "template": "13",
+   "template_name": "Enhancer",
+   "users": [
+    "Celes"
+   ],
+   "locked_stats": "Atk 205; Magic +3; M.Eva +20",
+   "power": 205,
+   "hit_rate": 150,
+   "vigor": 0,
+   "speed": 0,
+   "stamina": 0,
+   "mag_pwr": 3,
+   "evade": 0,
+   "mblock": 20,
+   "elem_attack": [],
+   "weapon_flags": [
+    "RUNIC",
+    "TWO_HAND",
+    "BUSHIDO"
+   ],
+   "weapon_special": "NONE",
+   "spear": false,
+   "desc": "Imperial Saber of Vector{n}Raises Mag pwr and MBlock",
+   "acquisition": {
+    "reward_id": "RW_101",
+    "source_type": "event_chest",
+    "planned_source": "Vector Annex chest",
+    "future_event_symbol": "EV_CHEST_VECTOR_ANNEX_IMPERIAL_SABER",
+    "conditions": [
+     "PREREQ_VECTOR_ANNEX"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "hit_rate": "family default (vanilla sword hit 150)",
+    "weapon_flags": "family default (vanilla sword: RUNIC, TWO_HAND, BUSHIDO)",
+    "throw": "not throwable (Throw excluded under Option C)",
+    "animation": "vanilla Enhancer ($13) weapon animation, icon, block graphic",
+    "merit_award": "MERIT equip flag off: signature gear keeps its locked users"
+   }
+  },
+  {
+   "id": "102",
+   "code": "EQ-W03",
+   "symbol": "EQ_LEOS_BLADE",
+   "locked_name": "Leo's Blade",
+   "display_name": "Leo's Blade",
+   "category": "weapon",
+   "family": "sword",
+   "template": "18",
+   "template_name": "Excalibur",
+   "users": [
+    "Terra",
+    "Locke",
+    "Edgar",
+    "Celes"
+   ],
+   "locked_stats": "Atk 218; Vigor +3; Stamina +3; Holy",
+   "power": 218,
+   "hit_rate": 150,
+   "vigor": 3,
+   "speed": 0,
+   "stamina": 3,
+   "mag_pwr": 0,
+   "evade": 0,
+   "mblock": 0,
+   "elem_attack": [
+    "HOLY"
+   ],
+   "weapon_flags": [
+    "RUNIC",
+    "TWO_HAND",
+    "BUSHIDO"
+   ],
+   "weapon_special": "NONE",
+   "spear": false,
+   "desc": "General Leo's sword{n}Pearl-elemental",
+   "acquisition": {
+    "reward_id": "RW_102",
+    "source_type": "event_chest",
+    "planned_source": "Records Vault concealed officer locker (DA-01: all Leo records read + Names Room done)",
+    "future_event_symbol": "EV_CHEST_RECORDS_VAULT_LEOS_BLADE",
+    "conditions": [
+     "PREREQ_LEO_RECORDS_ALL",
+     "PREREQ_NAMES_ROOM_DONE"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "hit_rate": "family default (vanilla sword hit 150)",
+    "weapon_flags": "family default (vanilla sword: RUNIC, TWO_HAND, BUSHIDO)",
+    "throw": "not throwable (Throw excluded under Option C)",
+    "animation": "vanilla Excalibur ($18) weapon animation, icon, block graphic",
+    "merit_award": "MERIT equip flag off: signature gear keeps its locked users"
+   },
+   "v091_changes": [
+    "D-03 / DA-01: optional exploration reward, independent of Preserve / Burn"
+   ]
+  },
+  {
+   "id": "103",
+   "code": "EQ-W04",
+   "symbol": "EQ_RAIDER_KNIFE",
+   "locked_name": "Raider Knife",
+   "display_name": "Raider Knife",
+   "category": "weapon",
+   "family": "knife",
+   "template": "04",
+   "template_name": "ThiefKnife",
+   "users": [
+    "Locke"
+   ],
+   "locked_stats": "Atk 198; Speed +5; steal-on-hit",
+   "power": 198,
+   "hit_rate": 180,
+   "vigor": 0,
+   "speed": 5,
+   "stamina": 0,
+   "mag_pwr": 0,
+   "evade": 0,
+   "mblock": 0,
+   "elem_attack": [],
+   "weapon_flags": [
+    "RUNIC",
+    "TWO_HAND"
+   ],
+   "weapon_special": "STEAL",
+   "spear": false,
+   "desc": "Steals while attacking{n}Raises Speed",
+   "acquisition": {
+    "reward_id": "RW_103",
+    "source_type": "quest_reward",
+    "planned_source": "Reconstruction chain",
+    "future_event_symbol": "EV_REWARD_RECONSTRUCTION_RAIDER_KNIFE",
+    "conditions": [
+     "PREREQ_RECONSTRUCTION_CHAIN"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "hit_rate": "family default (vanilla knife hit 180)",
+    "weapon_flags": "family default (vanilla knife: RUNIC, TWO_HAND)",
+    "throw": "not throwable (Throw excluded under Option C)",
+    "animation": "vanilla ThiefKnife ($04) weapon animation, icon, block graphic",
+    "merit_award": "MERIT equip flag off: signature gear keeps its locked users"
+   }
+  },
+  {
+   "id": "104",
+   "code": "EQ-W05",
+   "symbol": "EQ_SANDPIERCER",
+   "locked_name": "Sandpiercer",
+   "display_name": "Sandpiercer",
+   "category": "weapon",
+   "family": "spear",
+   "template": "20",
+   "template_name": "Partisan",
+   "users": [
+    "Edgar",
+    "Mog"
+   ],
+   "locked_stats": "Atk 210; Wind; Speed +2",
+   "power": 210,
+   "hit_rate": 150,
+   "vigor": 0,
+   "speed": 2,
+   "stamina": 0,
+   "mag_pwr": 0,
+   "evade": 0,
+   "mblock": 0,
+   "elem_attack": [
+    "WIND"
+   ],
+   "weapon_flags": [
+    "RUNIC",
+    "TWO_HAND"
+   ],
+   "weapon_special": "NONE",
+   "spear": true,
+   "desc": "Wind-elemental spear{n}Raises Speed",
+   "acquisition": {
+    "reward_id": "RW_104",
+    "source_type": "event_chest",
+    "planned_source": "Figaro Foundry - one-time chest / event reward (not a GP purchase)",
+    "future_event_symbol": "EV_CHEST_FIGARO_FOUNDRY_SANDPIERCER",
+    "conditions": [
+     "PREREQ_FIGARO_FOUNDRY"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "hit_rate": "family default (vanilla spear hit 150)",
+    "weapon_flags": "family default (vanilla spear: RUNIC, TWO_HAND)",
+    "throw": "not throwable (Throw excluded under Option C)",
+    "animation": "vanilla Partisan ($20) weapon animation, icon, block graphic",
+    "merit_award": "MERIT equip flag off: signature gear keeps its locked users"
+   },
+   "v091_changes": [
+    "D-20 / X0068-X0069: one-time chest inside the Figaro Foundry; GP cost removed"
+   ]
+  },
+  {
+   "id": "105",
+   "code": "EQ-W06",
+   "symbol": "EQ_DUNCAN_CLAW",
+   "locked_name": "Duncan Claw",
+   "display_name": "Duncan Claw",
+   "category": "weapon",
+   "family": "claw",
+   "template": "59",
+   "template_name": "Tiger Fangs",
+   "users": [
+    "Sabin"
+   ],
+   "locked_stats": "Atk 214; Vigor +5; Stamina +3",
+   "power": 214,
+   "hit_rate": 200,
+   "vigor": 5,
+   "speed": 0,
+   "stamina": 3,
+   "mag_pwr": 0,
+   "evade": 0,
+   "mblock": 0,
+   "elem_attack": [],
+   "weapon_flags": [],
+   "weapon_special": "NONE",
+   "spear": false,
+   "desc": "Master Duncan's claw{n}Raises Vigor and Stamina",
+   "acquisition": {
+    "reward_id": "RW_105",
+    "source_type": "quest_reward",
+    "planned_source": "Master's Echo",
+    "future_event_symbol": "EV_REWARD_MASTERS_ECHO_DUNCAN_CLAW",
+    "conditions": [
+     "PREREQ_MASTERS_ECHO"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "hit_rate": "family default (vanilla claw hit 200)",
+    "weapon_flags": "family default (vanilla claw: none)",
+    "throw": "not throwable (Throw excluded under Option C)",
+    "animation": "vanilla Tiger Fangs ($59) weapon animation, icon, block graphic",
+    "merit_award": "MERIT equip flag off: signature gear keeps its locked users"
+   }
+  },
+  {
+   "id": "106",
+   "code": "EQ-W07",
+   "symbol": "EQ_MOONLESS",
+   "locked_name": "Moonless",
+   "display_name": "Moonless",
+   "category": "weapon",
+   "family": "ninja blade",
+   "template": "28",
+   "template_name": "Hardened",
+   "users": [
+    "Shadow"
+   ],
+   "locked_stats": "Atk 216; Speed +7; Eva +30",
+   "power": 216,
+   "hit_rate": 180,
+   "vigor": 0,
+   "speed": 7,
+   "stamina": 0,
+   "mag_pwr": 0,
+   "evade": 30,
+   "mblock": 0,
+   "elem_attack": [],
+   "weapon_flags": [
+    "RUNIC",
+    "TWO_HAND"
+   ],
+   "weapon_special": "NONE",
+   "spear": false,
+   "desc": "A blade for moonless nights{n}Raises Speed and evade",
+   "acquisition": {
+    "reward_id": "RW_106",
+    "source_type": "event_chest",
+    "planned_source": "Bandit's Hollow",
+    "future_event_symbol": "EV_CHEST_BANDITS_HOLLOW_MOONLESS",
+    "conditions": [
+     "PREREQ_BANDITS_HOLLOW"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "hit_rate": "family default (vanilla ninja blade hit 180)",
+    "weapon_flags": "family default (vanilla ninja blade: RUNIC, TWO_HAND)",
+    "throw": "not throwable (Throw excluded under Option C)",
+    "animation": "vanilla Hardened ($28) weapon animation, icon, block graphic",
+    "merit_award": "MERIT equip flag off: signature gear keeps its locked users"
+   }
+  },
+  {
+   "id": "107",
+   "code": "EQ-W08",
+   "symbol": "EQ_DOMA_EDGE",
+   "locked_name": "Doma Edge",
+   "display_name": "Doma Edge",
+   "category": "weapon",
+   "family": "katana",
+   "template": "32",
+   "template_name": "Sky Render",
+   "users": [
+    "Cyan"
+   ],
+   "locked_stats": "Atk 222; Vigor +5; Stamina +4",
+   "power": 222,
+   "hit_rate": 150,
+   "vigor": 5,
+   "speed": 0,
+   "stamina": 4,
+   "mag_pwr": 0,
+   "evade": 0,
+   "mblock": 0,
+   "elem_attack": [],
+   "weapon_flags": [
+    "RUNIC",
+    "TWO_HAND",
+    "BUSHIDO"
+   ],
+   "weapon_special": "NONE",
+   "spear": false,
+   "desc": "Katana of rebuilt Doma{n}Raises Vigor and Stamina",
+   "acquisition": {
+    "reward_id": "RW_107",
+    "source_type": "quest_reward",
+    "planned_source": "Cyan arc / Doma reconstruction reward (no second copy in v1.x)",
+    "future_event_symbol": "EV_REWARD_DOMA_RECONSTRUCTION_DOMA_EDGE",
+    "conditions": [
+     "PREREQ_DOMA_RECONSTRUCTION"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "hit_rate": "family default (vanilla katana hit 150)",
+    "weapon_flags": "family default (vanilla katana: RUNIC, TWO_HAND, BUSHIDO)",
+    "throw": "not throwable (Throw excluded under Option C)",
+    "animation": "vanilla Sky Render ($32) weapon animation, icon, block graphic",
+    "merit_award": "MERIT equip flag off: signature gear keeps its locked users"
+   },
+   "v091_changes": [
+    "D-20 / X0112: first and only copy = Cyan/Doma reconstruction reward; no smith purchase"
+   ]
+  },
+  {
+   "id": "108",
+   "code": "EQ-W09",
+   "symbol": "EQ_DARILLS_DIRK",
+   "locked_name": "Darill's Dirk",
+   "display_name": "Darill'sDirk",
+   "category": "weapon",
+   "family": "knife",
+   "template": "08",
+   "template_name": "Graedus",
+   "users": [
+    "Locke",
+    "Setzer"
+   ],
+   "locked_stats": "Atk 202; Speed +4; Eva +20",
+   "power": 202,
+   "hit_rate": 180,
+   "vigor": 0,
+   "speed": 4,
+   "stamina": 0,
+   "mag_pwr": 0,
+   "evade": 20,
+   "mblock": 0,
+   "elem_attack": [],
+   "weapon_flags": [
+    "RUNIC",
+    "TWO_HAND"
+   ],
+   "weapon_special": "NONE",
+   "spear": false,
+   "desc": "Darill's Dirk, sky-forged{n}Raises Speed and evade",
+   "acquisition": {
+    "reward_id": "RW_108",
+    "source_type": "event_chest",
+    "planned_source": "Sky Graveyard",
+    "future_event_symbol": "EV_CHEST_SKY_GRAVEYARD_DARILLS_DIRK",
+    "conditions": [
+     "PREREQ_SKY_GRAVEYARD"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "hit_rate": "family default (vanilla knife hit 180)",
+    "weapon_flags": "family default (vanilla knife: RUNIC, TWO_HAND)",
+    "throw": "not throwable (Throw excluded under Option C)",
+    "animation": "vanilla Graedus ($08) weapon animation, icon, block graphic",
+    "merit_award": "MERIT equip flag off: signature gear keeps its locked users"
+   }
+  },
+  {
+   "id": "109",
+   "code": "EQ-W10",
+   "symbol": "EQ_MAGISTER_ROD",
+   "locked_name": "Magister Rod",
+   "display_name": "Magister Rod",
+   "category": "weapon",
+   "family": "rod",
+   "template": "3C",
+   "template_name": "Magus Rod",
+   "users": [
+    "Strago",
+    "Relm"
+   ],
+   "locked_stats": "Atk 190; Magic +7; M.Eva +20",
+   "power": 190,
+   "hit_rate": 135,
+   "vigor": 0,
+   "speed": 0,
+   "stamina": 0,
+   "mag_pwr": 7,
+   "evade": 0,
+   "mblock": 20,
+   "elem_attack": [],
+   "weapon_flags": [
+    "TWO_HAND"
+   ],
+   "weapon_special": "NONE",
+   "spear": false,
+   "desc": "Rod of the First Magi{n}Raises Mag pwr and MBlock",
+   "acquisition": {
+    "reward_id": "RW_109",
+    "source_type": "event_chest",
+    "planned_source": "Forgotten Age",
+    "future_event_symbol": "EV_CHEST_FORGOTTEN_AGE_MAGISTER_ROD",
+    "conditions": [
+     "PREREQ_FORGOTTEN_AGE"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "hit_rate": "family default (vanilla rod hit 135)",
+    "weapon_flags": "family default (vanilla rod: TWO_HAND)",
+    "throw": "not throwable (Throw excluded under Option C)",
+    "animation": "vanilla Magus Rod ($3C) weapon animation, icon, block graphic",
+    "merit_award": "MERIT equip flag off: signature gear keeps its locked users"
+   }
+  },
+  {
+   "id": "10A",
+   "code": "EQ-W11",
+   "symbol": "EQ_CONCORD_BRUSH",
+   "locked_name": "Concord Brush",
+   "display_name": "ConcordBrush",
+   "category": "weapon",
+   "family": "brush",
+   "template": "40",
+   "template_name": "Rainbow Brsh",
+   "users": [
+    "Relm"
+   ],
+   "locked_stats": "Atk 184; Magic +7; Speed +3",
+   "power": 184,
+   "hit_rate": 135,
+   "vigor": 0,
+   "speed": 3,
+   "stamina": 0,
+   "mag_pwr": 7,
+   "evade": 0,
+   "mblock": 0,
+   "elem_attack": [],
+   "weapon_flags": [
+    "TWO_HAND"
+   ],
+   "weapon_special": "NONE",
+   "spear": false,
+   "desc": "Concord Brush{n}Raises Mag pwr and Speed",
+   "acquisition": {
+    "reward_id": "RW_10A",
+    "source_type": "event_chest",
+    "planned_source": "Sanctuary of Concord",
+    "future_event_symbol": "EV_CHEST_SANCTUARY_CONCORD_BRUSH",
+    "conditions": [
+     "PREREQ_SANCTUARY_OF_CONCORD"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "hit_rate": "family default (vanilla brush hit 135)",
+    "weapon_flags": "family default (vanilla brush: TWO_HAND)",
+    "throw": "not throwable (Throw excluded under Option C)",
+    "animation": "vanilla Rainbow Brsh ($40) weapon animation, icon, block graphic",
+    "merit_award": "MERIT equip flag off: signature gear keeps its locked users"
+   }
+  },
+  {
+   "id": "10B",
+   "code": "EQ-W12",
+   "symbol": "EQ_GALE_LANCE",
+   "locked_name": "Gale Lance",
+   "display_name": "Gale Lance",
+   "category": "weapon",
+   "family": "spear",
+   "template": "23",
+   "template_name": "Aura Lance",
+   "users": [
+    "Edgar",
+    "Mog"
+   ],
+   "locked_stats": "Atk 218; Wind; Speed +4",
+   "power": 218,
+   "hit_rate": 150,
+   "vigor": 0,
+   "speed": 4,
+   "stamina": 0,
+   "mag_pwr": 0,
+   "evade": 0,
+   "mblock": 0,
+   "elem_attack": [
+    "WIND"
+   ],
+   "weapon_flags": [
+    "RUNIC",
+    "TWO_HAND"
+   ],
+   "weapon_special": "NONE",
+   "spear": true,
+   "desc": "Wind-elemental lance{n}Raises Speed",
+   "acquisition": {
+    "reward_id": "RW_10B",
+    "source_type": "quest_reward",
+    "planned_source": "Beacon quest",
+    "future_event_symbol": "EV_REWARD_BEACON_GALE_LANCE",
+    "conditions": [
+     "PREREQ_BEACON_QUEST"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "hit_rate": "family default (vanilla spear hit 150)",
+    "weapon_flags": "family default (vanilla spear: RUNIC, TWO_HAND)",
+    "throw": "not throwable (Throw excluded under Option C)",
+    "animation": "vanilla Aura Lance ($23) weapon animation, icon, block graphic",
+    "merit_award": "MERIT equip flag off: signature gear keeps its locked users"
+   }
+  },
+  {
+   "id": "10C",
+   "code": "EQ-W13",
+   "symbol": "EQ_ECHO_DAGGER",
+   "locked_name": "Echo Dagger",
+   "display_name": "Echo Dagger",
+   "category": "weapon",
+   "family": "knife",
+   "template": "06",
+   "template_name": "Man Eater",
+   "users": [
+    "Gogo"
+   ],
+   "locked_stats": "Atk 200; Vigor/Magic/Speed +3",
+   "power": 200,
+   "hit_rate": 180,
+   "vigor": 3,
+   "speed": 3,
+   "stamina": 0,
+   "mag_pwr": 3,
+   "evade": 0,
+   "mblock": 0,
+   "elem_attack": [],
+   "weapon_flags": [
+    "RUNIC",
+    "TWO_HAND"
+   ],
+   "weapon_special": "NONE",
+   "spear": false,
+   "desc": "Dagger that echoes skills{n}Vigor, Mag pwr, Speed up",
+   "acquisition": {
+    "reward_id": "RW_10C",
+    "source_type": "event_chest",
+    "planned_source": "Cradle of Silence",
+    "future_event_symbol": "EV_CHEST_CRADLE_OF_SILENCE_ECHO_DAGGER",
+    "conditions": [
+     "PREREQ_CRADLE_OF_SILENCE"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "hit_rate": "family default (vanilla knife hit 180)",
+    "weapon_flags": "family default (vanilla knife: RUNIC, TWO_HAND)",
+    "throw": "not throwable (Throw excluded under Option C)",
+    "animation": "vanilla Man Eater ($06) weapon animation, icon, block graphic",
+    "merit_award": "MERIT equip flag off: signature gear keeps its locked users"
+   }
+  },
+  {
+   "id": "10D",
+   "code": "EQ-A01",
+   "symbol": "EQ_ROYAL_GEAR",
+   "locked_name": "Royal Gear",
+   "display_name": "Royal Gear",
+   "category": "armor",
+   "family": "body",
+   "template": "9A",
+   "template_name": "Genji Armor",
+   "users": [
+    "Edgar",
+    "Sabin"
+   ],
+   "locked_stats": "Def 84; MDef 60; Vig +4; Spd +2; Sta +3; Fire null",
+   "power": 84,
+   "mdef": 60,
+   "vigor": 4,
+   "speed": 2,
+   "stamina": 3,
+   "mag_pwr": 0,
+   "evade": 0,
+   "mblock": 0,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [
+    "FIRE"
+   ],
+   "elem_weak": [],
+   "immune_status": [],
+   "relic_effects": [],
+   "desc": "Royal armor of Figaro{n}Nulls fire, Vigor up",
+   "acquisition": {
+    "reward_id": "RW_10D",
+    "source_type": "boss_reward",
+    "planned_source": "Brass Colossus (Figaro arc)",
+    "future_event_symbol": "EV_BOSS_BRASS_COLOSSUS_ROYAL_GEAR",
+    "conditions": [
+     "PREREQ_FIGARO_ARC"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "merit_award": "MERIT equip flag off",
+    "icon": "vanilla Genji Armor ($9A) icon / block graphic",
+    "evade_unspecified": "0 unless locked"
+   }
+  },
+  {
+   "id": "10E",
+   "code": "EQ-A02",
+   "symbol": "EQ_IMPERIAL_MANTLE",
+   "locked_name": "Imperial Mantle",
+   "display_name": "ImperialMntl",
+   "category": "armor",
+   "family": "body",
+   "template": "91",
+   "template_name": "Light Robe",
+   "users": [
+    "Terra",
+    "Celes"
+   ],
+   "locked_stats": "Def 78; MDef 72; Mag +4; M.Eva +20",
+   "power": 78,
+   "mdef": 72,
+   "vigor": 0,
+   "speed": 0,
+   "stamina": 0,
+   "mag_pwr": 4,
+   "evade": 0,
+   "mblock": 20,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [],
+   "relic_effects": [],
+   "desc": "Imperial Mantle{n}Raises Mag pwr and MBlock",
+   "acquisition": {
+    "reward_id": "RW_10E",
+    "source_type": "arc_reward_tbd",
+    "planned_source": "arc design (Armor sheet: not specified)",
+    "future_event_symbol": "EV_ARC_REWARD_IMPERIAL_MANTLE",
+    "conditions": [
+     "PREREQ_TBD_ARC_DESIGN"
+    ],
+    "one_time": true,
+    "gp_cost": null,
+    "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "merit_award": "MERIT equip flag off",
+    "icon": "vanilla Light Robe ($91) icon / block graphic",
+    "evade_unspecified": "0 unless locked"
+   }
+  },
+  {
+   "id": "10F",
+   "code": "EQ-A03",
+   "symbol": "EQ_MAGISTER_ROBE",
+   "locked_name": "Magister Robe",
+   "display_name": "MagisterRobe",
+   "category": "armor",
+   "family": "body",
+   "template": "97",
+   "template_name": "Tao Robe",
+   "users": [
+    "Terra",
+    "Celes",
+    "Strago",
+    "Relm",
+    "Gogo"
+   ],
+   "locked_stats": "Def 70; MDef 82; Mag +6; MP-oriented",
+   "power": 70,
+   "mdef": 82,
+   "vigor": 0,
+   "speed": 0,
+   "stamina": 0,
+   "mag_pwr": 6,
+   "evade": 0,
+   "mblock": 0,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [],
+   "relic_effects": [
+    "MP_PLUS_12"
+   ],
+   "desc": "Magister Robe{n}Mag pwr up, MP up by 1/8",
+   "acquisition": {
+    "reward_id": "RW_10F",
+    "source_type": "boss_reward",
+    "planned_source": "Archive Guardian (Forgotten Age)",
+    "future_event_symbol": "EV_BOSS_ARCHIVE_GUARDIAN_MAGISTER_ROBE",
+    "conditions": [
+     "PREREQ_FORGOTTEN_AGE"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "merit_award": "MERIT equip flag off",
+    "icon": "vanilla Tao Robe ($97) icon / block graphic",
+    "evade_unspecified": "0 unless locked",
+    "relic_effects": "'MP-oriented' -> MP +1/8 (vanilla Bard's Hat bit), the smaller of the two options named in the v0.7 audit"
+   },
+   "v091_changes": [
+    "X0223-X0224: arc binding First Magi -> Forgotten Age (Bosses sheet)"
+   ]
+  },
+  {
+   "id": "110",
+   "code": "EQ-A04",
+   "symbol": "EQ_ASHEN_MAIL",
+   "locked_name": "Ashen Mail",
+   "display_name": "Ashen Mail",
+   "category": "armor",
+   "family": "body",
+   "template": "98",
+   "template_name": "Crystal Mail",
+   "users": [
+    "Cyan",
+    "Edgar",
+    "Setzer"
+   ],
+   "locked_stats": "Def 88; MDef 52; Fire absorb; Ice weak",
+   "power": 88,
+   "mdef": 52,
+   "vigor": 0,
+   "speed": 0,
+   "stamina": 0,
+   "mag_pwr": 0,
+   "evade": 0,
+   "mblock": 0,
+   "elem_half": [],
+   "elem_absorb": [
+    "FIRE"
+   ],
+   "elem_null": [],
+   "elem_weak": [
+    "ICE"
+   ],
+   "immune_status": [],
+   "relic_effects": [],
+   "desc": "Mail forged in ash{n}Absorbs fire, weak to ice",
+   "acquisition": {
+    "reward_id": "RW_110",
+    "source_type": "arc_reward_tbd",
+    "planned_source": "arc design (Armor sheet: not specified)",
+    "future_event_symbol": "EV_ARC_REWARD_ASHEN_MAIL",
+    "conditions": [
+     "PREREQ_TBD_ARC_DESIGN"
+    ],
+    "one_time": true,
+    "gp_cost": null,
+    "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "merit_award": "MERIT equip flag off",
+    "icon": "vanilla Crystal Mail ($98) icon / block graphic",
+    "evade_unspecified": "0 unless locked"
+   }
+  },
+  {
+   "id": "111",
+   "code": "EQ-A05",
+   "symbol": "EQ_CONCORD_VEST",
+   "locked_name": "Concord Vest",
+   "display_name": "Concord Vest",
+   "category": "armor",
+   "family": "body",
+   "template": "96",
+   "template_name": "Dark Gear",
+   "users": [
+    "Locke",
+    "Shadow",
+    "Mog",
+    "Gau",
+    "Gogo"
+   ],
+   "locked_stats": "Def 76; MDef 62; Spd +4; Eva +20",
+   "power": 76,
+   "mdef": 62,
+   "vigor": 0,
+   "speed": 4,
+   "stamina": 0,
+   "mag_pwr": 0,
+   "evade": 20,
+   "mblock": 0,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [],
+   "relic_effects": [],
+   "desc": "Light vest of Concord{n}Raises Speed and evade",
+   "acquisition": {
+    "reward_id": "RW_111",
+    "source_type": "arc_reward_tbd",
+    "planned_source": "arc design (Armor sheet: not specified)",
+    "future_event_symbol": "EV_ARC_REWARD_CONCORD_VEST",
+    "conditions": [
+     "PREREQ_TBD_ARC_DESIGN"
+    ],
+    "one_time": true,
+    "gp_cost": null,
+    "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "merit_award": "MERIT equip flag off",
+    "icon": "vanilla Dark Gear ($96) icon / block graphic"
+   }
+  },
+  {
+   "id": "112",
+   "code": "EQ-A06",
+   "symbol": "EQ_DOMA_PLATE",
+   "locked_name": "Doma Plate",
+   "display_name": "Doma Plate",
+   "category": "armor",
+   "family": "body",
+   "template": "95",
+   "template_name": "DiamondArmor",
+   "users": [
+    "Terra",
+    "Cyan",
+    "Edgar",
+    "Celes"
+   ],
+   "locked_stats": "Def 92; MDef 58; Sta +5",
+   "power": 92,
+   "mdef": 58,
+   "vigor": 0,
+   "speed": 0,
+   "stamina": 5,
+   "mag_pwr": 0,
+   "evade": 0,
+   "mblock": 0,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [],
+   "relic_effects": [],
+   "desc": "Heavy plate of Doma{n}Raises Stamina",
+   "acquisition": {
+    "reward_id": "RW_112",
+    "source_type": "arc_reward_tbd",
+    "planned_source": "arc design (Armor sheet: not specified)",
+    "future_event_symbol": "EV_ARC_REWARD_DOMA_PLATE",
+    "conditions": [
+     "PREREQ_TBD_ARC_DESIGN"
+    ],
+    "one_time": true,
+    "gp_cost": null,
+    "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "merit_award": "MERIT equip flag off",
+    "icon": "vanilla DiamondArmor ($95) icon / block graphic",
+    "evade_unspecified": "0 unless locked"
+   }
+  },
+  {
+   "id": "113",
+   "code": "EQ-A07",
+   "symbol": "EQ_FALCON_JACKET",
+   "locked_name": "Falcon Jacket",
+   "display_name": "FalconJacket",
+   "category": "armor",
+   "family": "body",
+   "template": "8E",
+   "template_name": "Mirage Vest",
+   "users": [
+    "Locke",
+    "Shadow",
+    "Setzer"
+   ],
+   "locked_stats": "Def 74; MDef 60; Spd +5; Wind resist",
+   "power": 74,
+   "mdef": 60,
+   "vigor": 0,
+   "speed": 5,
+   "stamina": 0,
+   "mag_pwr": 0,
+   "evade": 0,
+   "mblock": 0,
+   "elem_half": [
+    "WIND"
+   ],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [],
+   "relic_effects": [],
+   "desc": "Falcon Jacket{n}Raises Speed, halves wind",
+   "acquisition": {
+    "reward_id": "RW_113",
+    "source_type": "arc_reward_tbd",
+    "planned_source": "arc design (Armor sheet: not specified)",
+    "future_event_symbol": "EV_ARC_REWARD_FALCON_JACKET",
+    "conditions": [
+     "PREREQ_TBD_ARC_DESIGN"
+    ],
+    "one_time": true,
+    "gp_cost": null,
+    "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "merit_award": "MERIT equip flag off",
+    "icon": "vanilla Mirage Vest ($8E) icon / block graphic",
+    "evade_unspecified": "0 unless locked",
+    "elements": "'resist' -> half damage (armor element byte 15, as Force Armor)"
+   }
+  },
+  {
+   "id": "114",
+   "code": "EQ-A08",
+   "symbol": "EQ_CHILDS_RIBBON",
+   "locked_name": "Child's Ribbon",
+   "display_name": "ChildsRibbon",
+   "category": "helmet",
+   "family": "helmet",
+   "template": "70",
+   "template_name": "Coronet",
+   "users": [
+    "Terra",
+    "Celes",
+    "Relm"
+   ],
+   "locked_stats": "Def 34; MDef 38; Mag +3; Sta +3; status resist subset",
+   "power": 34,
+   "mdef": 38,
+   "vigor": 0,
+   "speed": 0,
+   "stamina": 3,
+   "mag_pwr": 3,
+   "evade": 0,
+   "mblock": 0,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [
+    "BLIND",
+    "POISON",
+    "SILENCE",
+    "SLEEP"
+   ],
+   "relic_effects": [],
+   "desc": "Child's Ribbon{n}Wards Dark/Poison/Mute/Sleep",
+   "acquisition": {
+    "reward_id": "RW_114",
+    "source_type": "arc_reward_tbd",
+    "planned_source": "arc design (Armor sheet: not specified)",
+    "future_event_symbol": "EV_ARC_REWARD_CHILDS_RIBBON",
+    "conditions": [
+     "PREREQ_TBD_ARC_DESIGN"
+    ],
+    "one_time": true,
+    "gp_cost": null,
+    "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "merit_award": "MERIT equip flag off",
+    "icon": "vanilla Coronet ($70) icon / block graphic",
+    "evade_unspecified": "0 unless locked",
+    "immune_status": "'status resist subset' -> 4 of Ribbon's 10 (Blind, Poison, Silence, Sleep): no instant-death / Petrify / Zombie protection"
+   }
+  },
+  {
+   "id": "115",
+   "code": "EQ-A09",
+   "symbol": "EQ_DOMA_KABUTO",
+   "locked_name": "Doma Kabuto",
+   "display_name": "Doma Kabuto",
+   "category": "helmet",
+   "family": "helmet",
+   "template": "7C",
+   "template_name": "Diamond Helm",
+   "users": [
+    "Cyan"
+   ],
+   "locked_stats": "Def 42; MDef 32; Vig +4; Sta +4",
+   "power": 42,
+   "mdef": 32,
+   "vigor": 4,
+   "speed": 0,
+   "stamina": 4,
+   "mag_pwr": 0,
+   "evade": 0,
+   "mblock": 0,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [],
+   "relic_effects": [],
+   "desc": "Helm of Doma's knights{n}Raises Vigor and Stamina",
+   "acquisition": {
+    "reward_id": "RW_115",
+    "source_type": "arc_reward_tbd",
+    "planned_source": "arc design (Armor sheet: not specified)",
+    "future_event_symbol": "EV_ARC_REWARD_DOMA_KABUTO",
+    "conditions": [
+     "PREREQ_TBD_ARC_DESIGN"
+    ],
+    "one_time": true,
+    "gp_cost": null,
+    "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "merit_award": "MERIT equip flag off",
+    "icon": "vanilla Diamond Helm ($7C) icon / block graphic",
+    "evade_unspecified": "0 unless locked"
+   }
+  },
+  {
+   "id": "116",
+   "code": "EQ-A10",
+   "symbol": "EQ_ENGINEER_GOGGLES",
+   "locked_name": "Engineer Goggles",
+   "display_name": "Eng. Goggles",
+   "category": "helmet",
+   "family": "helmet",
+   "template": "7C",
+   "template_name": "Diamond Helm",
+   "users": [
+    "Edgar",
+    "Setzer"
+   ],
+   "locked_stats": "Def 36; MDef 30; Blind immunity; Spd +2",
+   "power": 36,
+   "mdef": 30,
+   "vigor": 0,
+   "speed": 2,
+   "stamina": 0,
+   "mag_pwr": 0,
+   "evade": 0,
+   "mblock": 0,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [
+    "BLIND"
+   ],
+   "relic_effects": [],
+   "desc": "Engineer Goggles{n}Prevents Dark, Speed up",
+   "acquisition": {
+    "reward_id": "RW_116",
+    "source_type": "arc_reward_tbd",
+    "planned_source": "arc design (Armor sheet: not specified)",
+    "future_event_symbol": "EV_ARC_REWARD_ENGINEER_GOGGLES",
+    "conditions": [
+     "PREREQ_TBD_ARC_DESIGN"
+    ],
+    "one_time": true,
+    "gp_cost": null,
+    "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "merit_award": "MERIT equip flag off",
+    "icon": "vanilla Diamond Helm ($7C) icon / block graphic",
+    "evade_unspecified": "0 unless locked"
+   }
+  },
+  {
+   "id": "117",
+   "code": "EQ-A11",
+   "symbol": "EQ_MAGI_CIRCLET",
+   "locked_name": "Magi Circlet",
+   "display_name": "Magi Circlet",
+   "category": "helmet",
+   "family": "helmet",
+   "template": "79",
+   "template_name": "Mystery Veil",
+   "users": [
+    "Terra",
+    "Celes",
+    "Strago",
+    "Relm",
+    "Gogo"
+   ],
+   "locked_stats": "Def 36; MDef 44; Mag +5; M.Eva +10",
+   "power": 36,
+   "mdef": 44,
+   "vigor": 0,
+   "speed": 0,
+   "stamina": 0,
+   "mag_pwr": 5,
+   "evade": 0,
+   "mblock": 10,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [],
+   "relic_effects": [],
+   "desc": "Circlet of the Magi{n}Raises Mag pwr and MBlock",
+   "acquisition": {
+    "reward_id": "RW_117",
+    "source_type": "arc_reward_tbd",
+    "planned_source": "arc design (Armor sheet: not specified)",
+    "future_event_symbol": "EV_ARC_REWARD_MAGI_CIRCLET",
+    "conditions": [
+     "PREREQ_TBD_ARC_DESIGN"
+    ],
+    "one_time": true,
+    "gp_cost": null,
+    "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "merit_award": "MERIT equip flag off",
+    "icon": "vanilla Mystery Veil ($79) icon / block graphic",
+    "evade_unspecified": "0 unless locked",
+    "users": "'magic users' -> the five-character magic set of Legacy of the Magi / Magister Robe"
+   }
+  },
+  {
+   "id": "118",
+   "code": "EQ-A12",
+   "symbol": "EQ_CONCORD_SHIELD",
+   "locked_name": "Concord Shield",
+   "display_name": "Concord Shld",
+   "category": "shield",
+   "family": "shield",
+   "template": "64",
+   "template_name": "Genji Shld",
+   "users": [
+    "Terra",
+    "Locke",
+    "Cyan",
+    "Shadow",
+    "Edgar",
+    "Sabin",
+    "Celes",
+    "Strago",
+    "Relm",
+    "Setzer",
+    "Mog",
+    "Gogo"
+   ],
+   "locked_stats": "Def 54; MDef 48; Eva +20; M.Eva +20; Holy resist",
+   "power": 54,
+   "mdef": 48,
+   "vigor": 0,
+   "speed": 0,
+   "stamina": 0,
+   "mag_pwr": 0,
+   "evade": 20,
+   "mblock": 20,
+   "elem_half": [
+    "HOLY"
+   ],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [],
+   "relic_effects": [],
+   "desc": "Concord Shield{n}Halves Pearl damage",
+   "acquisition": {
+    "reward_id": "RW_118",
+    "source_type": "arc_reward_tbd",
+    "planned_source": "arc design (Armor sheet: not specified)",
+    "future_event_symbol": "EV_ARC_REWARD_CONCORD_SHIELD",
+    "conditions": [
+     "PREREQ_TBD_ARC_DESIGN"
+    ],
+    "one_time": true,
+    "gp_cost": null,
+    "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "merit_award": "MERIT equip flag off",
+    "icon": "vanilla Genji Shld ($64) icon / block graphic",
+    "users": "'broad' -> every character except Gau and Umaro (engine rule R8: no extended shield for Gau/Umaro)",
+    "elements": "'resist' -> half damage (armor element byte 15, as Force Armor)"
+   }
+  },
+  {
+   "id": "119",
+   "code": "EQ-A13",
+   "symbol": "EQ_ASHGUARD",
+   "locked_name": "Ashguard",
+   "display_name": "Ashguard",
+   "category": "shield",
+   "family": "shield",
+   "template": "63",
+   "template_name": "Crystal Shld",
+   "users": [
+    "Terra",
+    "Cyan",
+    "Edgar",
+    "Celes",
+    "Setzer"
+   ],
+   "locked_stats": "Def 58; MDef 42; Fire absorb; Ice weak",
+   "power": 58,
+   "mdef": 42,
+   "vigor": 0,
+   "speed": 0,
+   "stamina": 0,
+   "mag_pwr": 0,
+   "evade": 0,
+   "mblock": 0,
+   "elem_half": [],
+   "elem_absorb": [
+    "FIRE"
+   ],
+   "elem_null": [],
+   "elem_weak": [
+    "ICE"
+   ],
+   "immune_status": [],
+   "relic_effects": [],
+   "desc": "Shield forged in ash{n}Absorbs fire, weak to ice",
+   "acquisition": {
+    "reward_id": "RW_119",
+    "source_type": "arc_reward_tbd",
+    "planned_source": "arc design (Armor sheet: not specified)",
+    "future_event_symbol": "EV_ARC_REWARD_ASHGUARD",
+    "conditions": [
+     "PREREQ_TBD_ARC_DESIGN"
+    ],
+    "one_time": true,
+    "gp_cost": null,
+    "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "merit_award": "MERIT equip flag off",
+    "icon": "vanilla Crystal Shld ($63) icon / block graphic",
+    "evade_unspecified": "0 unless locked",
+    "users": "'heavy users' -> vanilla heavy-shield set (Crystal/Diamond Shld: Terra, Cyan, Edgar, Celes, Setzer)"
+   }
+  },
+  {
+   "id": "11A",
+   "code": "EQ-R01",
+   "symbol": "EQ_RUNIC_CREST",
+   "locked_name": "Runic Crest",
+   "display_name": "Runic Crest",
+   "category": "relic",
+   "family": "relic",
+   "template": "B0",
+   "template_name": "Goggles",
+   "users": [
+    "Celes"
+   ],
+   "locked_stats": "Mag +5; M.Eva +20; enhanced Runic (ASM, optional)",
+   "power": 0,
+   "mdef": 0,
+   "vigor": 0,
+   "speed": 0,
+   "stamina": 0,
+   "mag_pwr": 5,
+   "evade": 0,
+   "mblock": 20,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [],
+   "relic_effects": [],
+   "desc": "Celes' crest of the Runic{n}Raises Mag pwr and MBlock",
+   "acquisition": {
+    "reward_id": "RW_11A",
+    "source_type": "boss_reward",
+    "planned_source": "Celes arc (Magitek Praetor)",
+    "future_event_symbol": "EV_BOSS_MAGITEK_PRAETOR_RUNIC_CREST",
+    "conditions": [
+     "PREREQ_CELES_ARC"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": {
+    "deferred_effect": "enhanced Runic (custom ASM)",
+    "running": "BAL-18 stat fallback: the locked stat line only",
+    "reason": "D5: custom relic ASM is a later module"
+   },
+   "derived": {
+    "icon": "vanilla relic icon ($B0 Goggles template; no Goggles property copied)",
+    "merit_award": "n/a (relic)"
+   }
+  },
+  {
+   "id": "11B",
+   "code": "EQ-R02",
+   "symbol": "EQ_MADUINS_LOCKET",
+   "locked_name": "Maduin's Locket",
+   "display_name": "MaduinLocket",
+   "category": "relic",
+   "family": "relic",
+   "template": "B0",
+   "template_name": "Goggles",
+   "users": [
+    "Terra"
+   ],
+   "locked_stats": "Mag +6; Sta +3; longer Trance (ASM, optional)",
+   "power": 0,
+   "mdef": 0,
+   "vigor": 0,
+   "speed": 0,
+   "stamina": 3,
+   "mag_pwr": 6,
+   "evade": 0,
+   "mblock": 0,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [],
+   "relic_effects": [
+    "MP_PLUS_25"
+   ],
+   "desc": "Maduin's Locket{n}Mag pwr up, MP up by 1/4",
+   "acquisition": {
+    "reward_id": "RW_11B",
+    "source_type": "boss_reward",
+    "planned_source": "Terra arc (Magi-Eater)",
+    "future_event_symbol": "EV_BOSS_MAGI_EATER_MADUINS_LOCKET",
+    "conditions": [
+     "PREREQ_TERRA_ARC"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": {
+    "deferred_effect": "longer Trance (custom ASM)",
+    "running": "BAL-18 stat fallback: the locked stat line only + MP +25% (vanilla bit)",
+    "reason": "D5: custom relic ASM is a later module"
+   },
+   "derived": {
+    "icon": "vanilla relic icon ($B0 Goggles template; no Goggles property copied)",
+    "merit_award": "n/a (relic)",
+    "relic_effects": "BAL-18 fallback named in the v0.7 audit: MP +25% (vanilla Minerva bit)"
+   }
+  },
+  {
+   "id": "11C",
+   "code": "EQ-R03",
+   "symbol": "EQ_DOMA_CREST",
+   "locked_name": "Doma Crest",
+   "display_name": "Doma Crest",
+   "category": "relic",
+   "family": "relic",
+   "template": "B0",
+   "template_name": "Goggles",
+   "users": [
+    "Cyan"
+   ],
+   "locked_stats": "Vig +5; Sta +5; Spd +2; faster Bushido (ASM, optional)",
+   "power": 0,
+   "mdef": 0,
+   "vigor": 5,
+   "speed": 2,
+   "stamina": 5,
+   "mag_pwr": 0,
+   "evade": 0,
+   "mblock": 0,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [],
+   "relic_effects": [],
+   "desc": "Crest of Doma{n}Raises Vigor, Stamina, Speed",
+   "acquisition": {
+    "reward_id": "RW_11C",
+    "source_type": "boss_reward",
+    "planned_source": "Cyan arc (Miasma Regent)",
+    "future_event_symbol": "EV_BOSS_MIASMA_REGENT_DOMA_CREST",
+    "conditions": [
+     "PREREQ_CYAN_ARC"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": {
+    "deferred_effect": "faster Bushido charge (custom ASM)",
+    "running": "BAL-18 stat fallback: the locked stat line only",
+    "reason": "D5: custom relic ASM is a later module"
+   },
+   "derived": {
+    "icon": "vanilla relic icon ($B0 Goggles template; no Goggles property copied)",
+    "merit_award": "n/a (relic)"
+   }
+  },
+  {
+   "id": "11D",
+   "code": "EQ-R04",
+   "symbol": "EQ_KEEPSAKE_RING",
+   "locked_name": "Keepsake Ring",
+   "display_name": "KeepsakeRing",
+   "category": "relic",
+   "family": "relic",
+   "template": "B0",
+   "template_name": "Goggles",
+   "users": [
+    "Shadow",
+    "Relm"
+   ],
+   "locked_stats": "blocks Doom/Zombie/instant death; Mag +3; Spd +3",
+   "power": 0,
+   "mdef": 0,
+   "vigor": 0,
+   "speed": 3,
+   "stamina": 0,
+   "mag_pwr": 3,
+   "evade": 0,
+   "mblock": 0,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [
+    "CONDEMNED",
+    "ZOMBIE",
+    "DEAD"
+   ],
+   "relic_effects": [],
+   "desc": "Keepsake Ring{n}Blocks Doom, Zombie, death",
+   "acquisition": {
+    "reward_id": "RW_11D",
+    "source_type": "boss_reward",
+    "planned_source": "Shadow/Relm arc (Guiltshade)",
+    "future_event_symbol": "EV_BOSS_GUILTSHADE_KEEPSAKE_RING",
+    "conditions": [
+     "PREREQ_SHADOW_RELM_ARC"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "icon": "vanilla relic icon ($B0 Goggles template; no Goggles property copied)",
+    "merit_award": "n/a (relic)",
+    "immune_status": "Doom = Condemned, Zombie, instant death = Dead immunity (Memento Ring mechanism)"
+   }
+  },
+  {
+   "id": "11E",
+   "code": "EQ-R05",
+   "symbol": "EQ_DARILLS_COIN",
+   "locked_name": "Darill's Coin",
+   "display_name": "Darill'sCoin",
+   "category": "relic",
+   "family": "relic",
+   "template": "B0",
+   "template_name": "Goggles",
+   "users": [
+    "Setzer"
+   ],
+   "locked_stats": "Spd +5; M.Eva +20; improved Slots (ASM, optional)",
+   "power": 0,
+   "mdef": 0,
+   "vigor": 0,
+   "speed": 5,
+   "stamina": 0,
+   "mag_pwr": 2,
+   "evade": 0,
+   "mblock": 20,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [],
+   "relic_effects": [],
+   "desc": "Darill's Coin{n}Speed, Mag pwr, MBlock up",
+   "acquisition": {
+    "reward_id": "RW_11E",
+    "source_type": "boss_reward",
+    "planned_source": "Setzer arc (Sky Reaver)",
+    "future_event_symbol": "EV_BOSS_SKY_REAVER_DARILLS_COIN",
+    "conditions": [
+     "PREREQ_SETZER_ARC"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": {
+    "deferred_effect": "improved Slots (custom ASM)",
+    "running": "BAL-18 stat fallback (Master Design Bible v1.0 s9): Speed +5, Magic +2, M.Evade +20%",
+    "reason": "D5: custom relic ASM is a later module"
+   },
+   "derived": {
+    "icon": "vanilla relic icon ($B0 Goggles template; no Goggles property copied)",
+    "merit_award": "n/a (relic)"
+   },
+   "v091_changes": [
+    "D-19 / X0405: fallback = Speed +5, Magic +2, M.Evade +20% (Mag +2 added); description updated"
+   ]
+  },
+  {
+   "id": "11F",
+   "code": "EQ-R06",
+   "symbol": "EQ_MEMORIAL_BAND",
+   "locked_name": "Memorial Band",
+   "display_name": "MemorialBand",
+   "category": "relic",
+   "family": "relic",
+   "template": "B0",
+   "template_name": "Goggles",
+   "users": [
+    "Terra",
+    "Locke",
+    "Cyan",
+    "Shadow",
+    "Edgar",
+    "Sabin",
+    "Celes",
+    "Strago",
+    "Relm",
+    "Setzer",
+    "Mog",
+    "Gau",
+    "Gogo",
+    "Umaro"
+   ],
+   "locked_stats": "Sta +4; prevents Berserk/Confuse",
+   "power": 0,
+   "mdef": 0,
+   "vigor": 0,
+   "speed": 0,
+   "stamina": 4,
+   "mag_pwr": 0,
+   "evade": 0,
+   "mblock": 0,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [
+    "BERSERK",
+    "CONFUSE"
+   ],
+   "relic_effects": [],
+   "desc": "Memorial Band, Stamina up{n}Blocks Berserk and Muddle",
+   "acquisition": {
+    "reward_id": "RW_11F",
+    "source_type": "quest_reward",
+    "planned_source": "Vector memorial",
+    "future_event_symbol": "EV_REWARD_VECTOR_MEMORIAL_BAND",
+    "conditions": [
+     "PREREQ_VECTOR_MEMORIAL"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "icon": "vanilla relic icon ($B0 Goggles template; no Goggles property copied)",
+    "merit_award": "n/a (relic)",
+    "immune_status": "Berserk + Confuse (Peace Ring mechanism)"
+   }
+  },
+  {
+   "id": "120",
+   "code": "EQ-R07",
+   "symbol": "EQ_GALE_PIN",
+   "locked_name": "Gale Pin",
+   "display_name": "Gale Pin",
+   "category": "relic",
+   "family": "relic",
+   "template": "B0",
+   "template_name": "Goggles",
+   "users": [
+    "Terra",
+    "Locke",
+    "Cyan",
+    "Shadow",
+    "Edgar",
+    "Sabin",
+    "Celes",
+    "Strago",
+    "Relm",
+    "Setzer",
+    "Mog",
+    "Gau",
+    "Gogo",
+    "Umaro"
+   ],
+   "locked_stats": "Spd +3; Wind resistance",
+   "power": 0,
+   "mdef": 0,
+   "vigor": 0,
+   "speed": 3,
+   "stamina": 0,
+   "mag_pwr": 0,
+   "evade": 0,
+   "mblock": 0,
+   "elem_half": [
+    "WIND"
+   ],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [],
+   "relic_effects": [],
+   "desc": "Raises Speed{n}Halves wind damage",
+   "acquisition": {
+    "reward_id": "RW_120",
+    "source_type": "quest_reward",
+    "planned_source": "Coast beacon",
+    "future_event_symbol": "EV_REWARD_COAST_BEACON_GALE_PIN",
+    "conditions": [
+     "PREREQ_COAST_BEACON"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "icon": "vanilla relic icon ($B0 Goggles template; no Goggles property copied)",
+    "merit_award": "n/a (relic)",
+    "elements": "'Wind resistance' -> half wind damage"
+   }
+  },
+  {
+   "id": "121",
+   "code": "EQ-R08",
+   "symbol": "EQ_BEASTHEART",
+   "locked_name": "Beastheart",
+   "display_name": "Beastheart",
+   "category": "relic",
+   "family": "relic",
+   "template": "B0",
+   "template_name": "Goggles",
+   "users": [
+    "Gau"
+   ],
+   "locked_stats": "Vig +4; Sta +4; Rage enhancement (ASM, optional)",
+   "power": 0,
+   "mdef": 0,
+   "vigor": 4,
+   "speed": 0,
+   "stamina": 4,
+   "mag_pwr": 0,
+   "evade": 0,
+   "mblock": 0,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [],
+   "relic_effects": [],
+   "desc": "Heart of the Veldt{n}Raises Vigor and Stamina",
+   "acquisition": {
+    "reward_id": "RW_121",
+    "source_type": "quest_reward",
+    "planned_source": "Gau side content",
+    "future_event_symbol": "EV_REWARD_GAU_SIDE_BEASTHEART",
+    "conditions": [
+     "PREREQ_GAU_SIDE_CONTENT"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": {
+    "deferred_effect": "Rage enhancement (custom ASM)",
+    "running": "BAL-18 stat fallback: the locked stat line only",
+    "reason": "D5: custom relic ASM is a later module"
+   },
+   "derived": {
+    "icon": "vanilla relic icon ($B0 Goggles template; no Goggles property copied)",
+    "merit_award": "n/a (relic)"
+   }
+  },
+  {
+   "id": "122",
+   "code": "EQ-R09",
+   "symbol": "EQ_PAINTERS_LENS",
+   "locked_name": "Painter's Lens",
+   "display_name": "PaintersLens",
+   "category": "relic",
+   "family": "relic",
+   "template": "B0",
+   "template_name": "Goggles",
+   "users": [
+    "Relm"
+   ],
+   "locked_stats": "Mag +5; Sketch accuracy increase",
+   "power": 0,
+   "mdef": 0,
+   "vigor": 0,
+   "speed": 0,
+   "stamina": 0,
+   "mag_pwr": 5,
+   "evade": 0,
+   "mblock": 0,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [],
+   "relic_effects": [
+    "INC_SKETCH_RATE"
+   ],
+   "desc": "Painter's Lens, Mag pwr up{n}Raises Sketch success rate",
+   "acquisition": {
+    "reward_id": "RW_122",
+    "source_type": "quest_reward",
+    "planned_source": "Relm extension",
+    "future_event_symbol": "EV_REWARD_RELM_EXTENSION_PAINTERS_LENS",
+    "conditions": [
+     "PREREQ_RELM_EXTENSION"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "icon": "vanilla relic icon ($B0 Goggles template; no Goggles property copied)",
+    "merit_award": "n/a (relic)"
+   }
+  },
+  {
+   "id": "123",
+   "code": "EQ-R10",
+   "symbol": "EQ_ELDERS_SEAL",
+   "locked_name": "Elder's Seal",
+   "display_name": "Elder's Seal",
+   "category": "relic",
+   "family": "relic",
+   "template": "B0",
+   "template_name": "Goggles",
+   "users": [
+    "Strago"
+   ],
+   "locked_stats": "Mag +5; MP +12.5%; Silence immunity",
+   "power": 0,
+   "mdef": 0,
+   "vigor": 0,
+   "speed": 0,
+   "stamina": 0,
+   "mag_pwr": 5,
+   "evade": 0,
+   "mblock": 0,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [
+    "SILENCE"
+   ],
+   "relic_effects": [
+    "MP_PLUS_12"
+   ],
+   "desc": "Mag pwr up, MP up by 1/8{n}Prevents Mute",
+   "acquisition": {
+    "reward_id": "RW_123",
+    "source_type": "quest_reward",
+    "planned_source": "Ancient lore",
+    "future_event_symbol": "EV_REWARD_ANCIENT_LORE_ELDERS_SEAL",
+    "conditions": [
+     "PREREQ_ANCIENT_LORE"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "icon": "vanilla relic icon ($B0 Goggles template; no Goggles property copied)",
+    "merit_award": "n/a (relic)"
+   }
+  },
+  {
+   "id": "124",
+   "code": "EQ-R11",
+   "symbol": "EQ_ENGINEERS_BADGE",
+   "locked_name": "Engineer's Badge",
+   "display_name": "Eng. Badge",
+   "category": "relic",
+   "family": "relic",
+   "template": "B0",
+   "template_name": "Goggles",
+   "users": [
+    "Edgar"
+   ],
+   "locked_stats": "Vig +3; Spd +3; Tools +10% (ASM, optional)",
+   "power": 0,
+   "mdef": 0,
+   "vigor": 3,
+   "speed": 3,
+   "stamina": 0,
+   "mag_pwr": 0,
+   "evade": 0,
+   "mblock": 0,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [],
+   "relic_effects": [],
+   "desc": "Engineer's Badge{n}Raises Vigor and Speed",
+   "acquisition": {
+    "reward_id": "RW_124",
+    "source_type": "quest_reward",
+    "planned_source": "Figaro",
+    "future_event_symbol": "EV_REWARD_FIGARO_ENGINEERS_BADGE",
+    "conditions": [
+     "PREREQ_FIGARO_ENGINEERS"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": {
+    "deferred_effect": "Tools damage +10% (custom ASM)",
+    "running": "BAL-18 stat fallback: the locked stat line only",
+    "reason": "D5: custom relic ASM is a later module"
+   },
+   "derived": {
+    "icon": "vanilla relic icon ($B0 Goggles template; no Goggles property copied)",
+    "merit_award": "n/a (relic)"
+   }
+  },
+  {
+   "id": "125",
+   "code": "EQ-R12",
+   "symbol": "EQ_MASTERS_CORD",
+   "locked_name": "Master's Cord",
+   "display_name": "Master'sCord",
+   "category": "relic",
+   "family": "relic",
+   "template": "B0",
+   "template_name": "Goggles",
+   "users": [
+    "Sabin"
+   ],
+   "locked_stats": "Vig +5; Sta +5; Blitz +10% (ASM, optional)",
+   "power": 0,
+   "mdef": 0,
+   "vigor": 5,
+   "speed": 0,
+   "stamina": 5,
+   "mag_pwr": 0,
+   "evade": 0,
+   "mblock": 0,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [],
+   "relic_effects": [],
+   "desc": "Master's Cord{n}Raises Vigor and Stamina",
+   "acquisition": {
+    "reward_id": "RW_125",
+    "source_type": "quest_reward",
+    "planned_source": "Duncan",
+    "future_event_symbol": "EV_REWARD_DUNCAN_MASTERS_CORD",
+    "conditions": [
+     "PREREQ_DUNCAN"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": {
+    "deferred_effect": "Blitz damage +10% (custom ASM)",
+    "running": "BAL-18 stat fallback: the locked stat line only",
+    "reason": "D5: custom relic ASM is a later module"
+   },
+   "derived": {
+    "icon": "vanilla relic icon ($B0 Goggles template; no Goggles property copied)",
+    "merit_award": "n/a (relic)"
+   }
+  },
+  {
+   "id": "126",
+   "code": "EQ-R13",
+   "symbol": "EQ_LEGACY_OF_THE_MAGI",
+   "locked_name": "Legacy of the Magi",
+   "display_name": "LegacyofMagi",
+   "category": "relic",
+   "family": "relic",
+   "template": "B0",
+   "template_name": "Goggles",
+   "users": [
+    "Terra",
+    "Celes",
+    "Strago",
+    "Relm",
+    "Gogo"
+   ],
+   "locked_stats": "Mag +7; M.Eva +30; MP +25%",
+   "power": 0,
+   "mdef": 0,
+   "vigor": 0,
+   "speed": 0,
+   "stamina": 0,
+   "mag_pwr": 7,
+   "evade": 0,
+   "mblock": 30,
+   "elem_half": [],
+   "elem_absorb": [],
+   "elem_null": [],
+   "elem_weak": [],
+   "immune_status": [],
+   "relic_effects": [
+    "MP_PLUS_25"
+   ],
+   "desc": "Legacy of the Magi{n}Mag pwr, MBlock, MP 1/4 up",
+   "acquisition": {
+    "reward_id": "RW_126",
+    "source_type": "boss_reward",
+    "planned_source": "Vael Unbound (superboss)",
+    "future_event_symbol": "EV_BOSS_VAEL_UNBOUND_LEGACY_OF_THE_MAGI",
+    "conditions": [
+     "PREREQ_VAEL_UNBOUND"
+    ],
+    "one_time": true,
+    "gp_cost": null
+   },
+   "unique": true,
+   "fallback": null,
+   "derived": {
+    "icon": "vanilla relic icon ($B0 Goggles template; no Goggles property copied)",
+    "merit_award": "n/a (relic)"
+   }
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "_comment": "MANUAL-QA SCALED copy of monsters/qa92_praetor/stats.json: hp 1/10, attack 1, magic_power 1, level 1 (all else identical).",
+ "base_vanilla_monster": "0x107",
+ "fields": {
+  "level": 1,
+  "hp": 4780,
+  "mp": 9000,
+  "speed": 45,
+  "attack": 1,
+  "defense": 165,
+  "mdefense": 150,
+  "magic_power": 1,
+  "exp": 0,
+  "gold": 0,
+  "elem_weak": 4,
+  "elem_null": 8,
+  "elem_absorb": 0,
+  "status_block_1": 192,
+  "status_block_2": 32,
+  "status_block_3": 0
+ }
+}

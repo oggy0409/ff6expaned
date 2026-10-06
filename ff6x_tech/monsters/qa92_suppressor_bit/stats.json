@@ -1,0 +1,19 @@
+{
+ "_comment": "Locked MOB-03: Lv 33, HP 2200, MP 1200, BP 20, Def 155, MDef 150, Mag 11, Spd 50, weak Water, null Lightning, EXP 1200, GP 500. Base record = vanilla Spit Fire ($0E3).",
+ "base_vanilla_monster": "0x0E3",
+ "fields": {
+  "level": 33,
+  "hp": 2200,
+  "mp": 1200,
+  "speed": 50,
+  "attack": 20,
+  "defense": 155,
+  "mdefense": 150,
+  "magic_power": 11,
+  "exp": 1200,
+  "gold": 500,
+  "elem_weak": 128,
+  "elem_null": 4,
+  "elem_absorb": 0
+ }
+}

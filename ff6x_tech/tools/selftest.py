@@ -552,8 +552,8 @@ from patches.item_v09_hooks import HOOKS as H09, OVERRIDES as O09
 cons9 = json.load(open(os.path.join(HERE, "items/production_v09/consumables.json")))["items"]
 CONS_IDS = list(range(0x27, 0x2F))
 # 47 v0.9 extended ids: production / celes-tech define equipment $100-$126 + consumables $127-$12E; QA adds $13D-$13F
-r9, out9, _, _ = B.build_target(clean, alloc, "production")
-for t, o_ in (("production", out9), ("celes-tech", B.build_target(clean, alloc, "celes-tech")[1])):
+r9, out9, _, _ = B.build_target(clean, alloc, "production-v0.9")          # TECH v0.9.1: v0.9 is the frozen target
+for t, o_ in (("production-v0.9", out9), ("celes-tech-v0.9", B.build_target(clean, alloc, "celes-tech-v0.9")[1])):
     fl = o_[pc(IV.T_FLAGS):pc(IV.T_FLAGS) + 64]
     assert [k for k in range(64) if fl[k]] == PROD_IDS + CONS_IDS, t
     assert all(fl[k] == (3 if k in SPEARS else 1) for k in PROD_IDS), t
@@ -562,7 +562,7 @@ for t, o_ in (("production", out9), ("celes-tech", B.build_target(clean, alloc, 
     assert o_[pc(IV.T_PROP) + 0x100 * 30:pc(IV.T_PROP) + 0x127 * 30] == out8[pc(IV.T_PROP) + 0x100 * 30:pc(IV.T_PROP) + 0x127 * 30], t
     assert all(o_[pc(IV.T_PROP) + 30 * (0x100 + k):pc(IV.T_PROP) + 30 * (0x101 + k)] == CV9.compose(c)
                for k, c in zip(CONS_IDS, cons9)), t
-r_, o_, _, _ = B.build_target(clean, alloc, "item-tech")
+r_, o_, _, _ = B.build_target(clean, alloc, "item-tech-v0.9")
 fl = o_[pc(IV.T_FLAGS):pc(IV.T_FLAGS) + 64]
 assert [k for k in range(64) if fl[k]] == PROD_IDS + CONS_IDS + [0x3D, 0x3E, 0x3F]
 assert o_[pc(I9.T_RDEF):pc(I9.T_RDEF) + 4] == b"\xFF" * 4 and out9[pc(I9.T_RDEF):pc(I9.T_RDEF) + 4] == b"\x1F\x00\x00\x00"
@@ -640,4 +640,137 @@ for a in sra:
 spans.sort()
 assert all(spans[k][1] < spans[k + 1][0] for k in range(len(spans) - 1)), spans
 print(f"PASS v0.9 saved-RAM allocations ({len(sra)} entries) inside the audited free bytes $1CF8-$1D27 / $1E1D-$1E3F, no overlap"); ok += 1
+# ===================================================================================================== TECH v0.9.1
+from patches import consumables_v091 as CV91
+from patches.item_v091_hooks import HOOKS as H091
+cons91 = json.load(open(os.path.join(HERE, "items/production_v091/consumables.json")))["items"]
+eq91 = json.load(open(os.path.join(HERE, "items/production_v091/equipment.json")))["items"]
+shops91 = json.load(open(os.path.join(HERE, "items/production_v091/ext_shops.json")))["shops"]
+# 52 v0.9.1 production / celes-tech: ids unchanged, consumable records = v0.9.1 sources, equipment = v0.8 records except
+#    Darill's Coin (Mag +2 + description), engine tables, shops $80-$84, no QA bytes
+r91, out91, _, _ = B.build_target(clean, alloc, "production")
+fix_t, hyb_t, cap_t, ctx_t = CV91.engine_tables(cons91)
+for t, o_ in (("production", out91), ("celes-tech", B.build_target(clean, alloc, "celes-tech")[1])):
+    fl = o_[pc(IV.T_FLAGS):pc(IV.T_FLAGS) + 64]
+    assert [k for k in range(64) if fl[k]] == PROD_IDS + CONS_IDS, t
+    assert all(fl[0x27 + n] == (0x0D if c["sellable"] else 0x05) for n, c in enumerate(cons91)), t
+    assert all(o_[pc(IV.T_PROP) + 30 * (0x100 + k):pc(IV.T_PROP) + 30 * (0x101 + k)] == CV91.compose(c)
+               for k, c in zip(CONS_IDS, cons91)), t
+    diff_eq = [k for k in range(0x100, 0x127) if o_[pc(IV.T_PROP) + 30 * k:pc(IV.T_PROP) + 30 * k + 30] !=
+               out9[pc(IV.T_PROP) + 30 * k:pc(IV.T_PROP) + 30 * k + 30]]
+    assert diff_eq == [0x11E], (t, diff_eq)                                 # Darill's Coin only
+    assert o_[pc(0xFA7E00):pc(0xFA7F40)] == fix_t + hyb_t + cap_t + ctx_t, t
+    assert o_[0x3F0000:0x400000] == b"\xFF" * 0x10000, t
+    assert o_[pc(0xC21A91):pc(0xC21A91) + 8] == clean[pc(0xC21A91):pc(0xC21A91) + 8], t      # no AI extension
+    assert o_[pc(0xC0266D):pc(0xC0266D) + 3] == clean[pc(0xC0266D):pc(0xC0266D) + 3], t      # no palette relocation
+coin = [it for it in eq91 if it["id"] == "11E"][0]
+assert coin["mag_pwr"] == 2 and coin["speed"] == 5 and coin["mblock"] == 20
+assert int.from_bytes(fix_t[2 * 0x27:2 * 0x27 + 2], "little") == 1500 and int.from_bytes(fix_t[2 * 0x2B:2 * 0x2B + 2], "little") == 600
+assert hyb_t[0x2E] == 0x04 and cap_t[0x2E] == 3 and ctx_t[0x2A] == 1 and ctx_t[0x2D] == 1 and sum(ctx_t) == 2
+shop_tbl = out91[pc(I9.T_SHOP):pc(I9.T_SHOP) + 0x90 * 9]
+shop_hi = out91[pc(I9.T_SHOPHI):pc(I9.T_SHOPHI) + 0x90 * 9]
+for sdef in shops91:
+    sid = int(sdef["shop_id"], 16)
+    rec = shop_tbl[9 * sid:9 * sid + 9]
+    want = [int(x, 16) for x in sdef["items"]]
+    assert rec[0] == sdef["type"] | sdef["price_mod"] << 3 and list(rec[1:1 + len(want)]) == [w & 0xFF for w in want]
+    assert [shop_hi[9 * sid + 1 + e] for e in range(len(want))] == [1 if w >= 0x100 else 0 for w in want]
+assert shop_tbl[:128 * 9] == clean[pc(0xC47AC0):pc(0xC47AC0) + 128 * 9]
+assert not any(int(x, 16) in range(0x100, 0x127) for sd in shops91 for x in sd["items"])     # no signature gear sold
+assert "12E" in shops91[4]["items"] and "12E" not in shops91[3]["items"]
+print("PASS v0.9.1 production / celes-tech: ids unchanged; 8 consumable records = v0.9.1 sources; equipment records = "
+      "v0.9 except Darill's Coin ($11E, Mag +2); XFixAmt 1500 / 600, XHybrid Lightning + XShopCap 3 (Magitek Cell), "
+      "XCtxFlags (Null Dust, Beacon Flare); shops $80-$84 as authored, vanilla shops byte-identical, no signature gear "
+      "sold; no AI extension / palette relocation / QA bytes in production"); ok += 1
+# 53 v0.9.1 production vs frozen v0.9 production: only FA (tables + engine), metadata, checksum, the stub claims and
+#    the v0.9.1 hook sites
+sites91 = set()
+for h in H091:
+    a0 = pc(int(h["snes"], 16)); sites91 |= set(range(a0, a0 + len(bytes.fromhex(h["expect"]))))
+d91 = [i for i in range(0x400000) if out91[i] != out9[i]]
+other = [hex(i) for i in d91 if not (0x3A0000 <= i < 0x3B0000 or 0x300000 <= i < 0x300040 or 0xFFDC <= i <= 0xFFDF or
+                                      i in claims or i in sites91)]
+assert not other, other[:10]
+assert not sites91 & (sites9 | set(sites71)), "v0.9.1 hook overlaps an earlier hook"
+print(f"PASS v0.9.1 production vs frozen v0.9 production: {len(d91)} bytes = FA tables/engine + metadata + checksum + "
+      f"stub claims + {len(H091)} v0.9.1 hook sites (no overlap with v0.7.1 / v0.9 hooks)"); ok += 1
+# 54 v0.9.1 validators fail closed
+def bad91(mod):
+    j = _copy.deepcopy(cons91); mod(j); CV91.validate(j, clean, snes_to_pc)
+expect_fail("cons91-fixed-on-status-item", lambda: bad91(lambda L: L[3]["effect"].update(fixed_amount=100)), (SystemExit,))
+expect_fail("cons91-fixed-10000", lambda: bad91(lambda L: L[0]["effect"].update(fixed_amount=10000)), (SystemExit,))
+expect_fail("cons91-fixed-power-0", lambda: bad91(lambda L: L[0]["effect"].update(power=0)), (SystemExit,))
+expect_fail("cons91-set-and-remove", lambda: bad91(lambda L: L[0]["effect"].update(removes_status=True, status=["POISON"])), (SystemExit,))
+expect_fail("cons91-set-death", lambda: bad91(lambda L: L[0]["effect"].update(sets_status=["DEAD"])), (SystemExit,))
+expect_fail("cons91-hybrid-elem-mismatch", lambda: bad91(lambda L: L[7]["effect"].update(element=["FIRE"])), (SystemExit,))
+expect_fail("cons91-hybrid-all-enemies", lambda: bad91(lambda L: L[7].update(targeting="ALL_ENEMIES")), (SystemExit,))
+expect_fail("cons91-hybrid-heal", lambda: bad91(lambda L: L[7]["effect"].update(restore_hp=True)), (SystemExit,))
+expect_fail("cons91-cap-unsold", lambda: bad91(lambda L: L[1].update(shop_cap=3)), (SystemExit,))
+expect_fail("cons91-cap-99", lambda: bad91(lambda L: L[7].update(shop_cap=99)), (SystemExit,))
+expect_fail("cons91-unknown-effect-key", lambda: bad91(lambda L: L[0]["effect"].update(multiplier=2)), (SystemExit,))
+expect_fail("shop91-signature-gear", lambda: CV91.validate_shops([{"shop_id": "80", "type": 5, "price_mod": 0, "items": ["100"]}],
+            {0x127}, clean, snes_to_pc, equipment_ids=set(range(0x100, 0x127))), (SystemExit,))
+expect_fail("shop91-unpriced-vanilla", lambda: CV91.validate_shops([{"shop_id": "80", "type": 5, "price_mod": 0, "items": ["1B"]}],
+            set(), clean, snes_to_pc), (SystemExit,))
+expect_fail("shop91-type-6", lambda: CV91.validate_shops([{"shop_id": "80", "type": 6, "price_mod": 0, "items": ["E9"]}],
+            set(), clean, snes_to_pc), (SystemExit,))
+expect_fail("shop91-duplicate-entry", lambda: CV91.validate_shops([{"shop_id": "80", "type": 3, "price_mod": 0, "items": ["E9", "E9"]}],
+            set(), clean, snes_to_pc), (SystemExit,))
+def hook_overlap():
+    import patches.item_v091_hooks as HM
+    saved = list(HM.HOOKS)
+    HM.HOOKS.append(dict(H091[0], id="X_OVERLAP", snes="C213FB", expect="B5 0A"))
+    try:
+        I9.hooks(B.TARGETS["production"])
+    finally:
+        HM.HOOKS[:] = saved
+expect_fail("hook-overlap", hook_overlap, (SystemExit,))
+print("PASS v0.9.1 validators fail closed (fixed amount scope / range / power, set+remove, Death set, hybrid element / "
+      "targeting / heal, shop cap scope / range, unknown effect, shops: signature gear, unpriced vanilla, type, duplicate; "
+      "overlapping hook sites)"); ok += 1
+# ===================================================================================================== TECH v0.9.2
+# 55 AI extension compiler guards, formation flags
+expect_fail("ai-ext-without-extension", lambda: compile_ai("if HP_PCT_LE 70 0\nendif\nend\nend"), (MonsterError,))
+expect_fail("ai-misc-ext-without-extension", lambda: compile_ai("misc OVERLOAD 80\nend\nend"), (MonsterError,))
+expect_fail("ai-switch-var-37", lambda: compile_ai("set_switch 37 0\nend\nend", True), (MonsterError,))
+assert compile_ai("if HP_PCT_LE 70 0\nentry $03 2 $06\nset_switch 2 1\nendif\nmisc GROUNDING_TICK $04\nend\nend", True) == \
+    bytes.fromhex("FC 40 46 00 F5 03 02 06 F9 01 02 01 FE FB 43 04 FF FF")
+_fp = tempfile.mktemp(suffix=".json")
+json.dump({"id": "0x246", "template_vanilla_formation": "0x1B6", "no_veldt": True, "front_only": True,
+           "slots": [{"slot": 0, "monster": "0x107"}, {"slot": 1, "monster": "0x06C", "hidden": True}]}, open(_fp, "w"))
+_rec, _aux = FormationSource(_fp).compile(clean, set())
+assert _rec[1] & 0x3F == 0x01 and _rec[2:4] == b"\x07\x6C" and _aux[0] & 0xF0 == 0xE0
+json.dump({"id": "0x246", "template_vanilla_formation": "0x1B6", "slots": [{"slot": 0, "monster": "0x107", "hidden": True}]}, open(_fp, "w"))
+expect_fail("formation-all-hidden", lambda: FormationSource(_fp).compile(clean, set()), (MonsterError,))
+ai_l = open(os.path.join(HERE, "monsters/qa92_praetor/ai.txt")).read()
+assert ai_l == open(os.path.join(HERE, "monsters/qa92_praetor_qa/ai.txt")).read()
+assert open(os.path.join(HERE, "monsters/qa92_suppressor_bit/ai.txt")).read() == open(os.path.join(HERE, "monsters/qa92_bit_qa/ai.txt")).read()
+st_l = json.load(open(os.path.join(HERE, "monsters/qa92_praetor/stats.json")))["fields"]
+assert (st_l["level"], st_l["hp"], st_l["mp"], st_l["speed"], st_l["attack"], st_l["defense"], st_l["mdefense"],
+        st_l["magic_power"], st_l["elem_weak"], st_l["elem_null"], st_l["elem_absorb"]) == (36, 47800, 9000, 45, 34, 165, 150, 13, 4, 8, 0)
+print("PASS v0.9.2 AI compiler: extension ops refused without the extension, switch var range, exact encodings; formation "
+      "hidden slots / front-only bytes; all-hidden refused; QA-scaled twins share the locked AI scripts; Praetor locked stats"); ok += 1
+# 56 v0.9.2 enablers only in the QA target; vanilla palettes byte-identical in the relocated tables; D-21 bits audited
+r92, out92, _, _ = B.build_target(clean, alloc, "item-tech")
+assert out92[0x37A000:0x37A000 + 48 * 256] == clean[pc(0xEDC480):pc(0xEDC480) + 48 * 256]
+assert out92[0x37E000:0x37E000 + 32 * 32] == clean[pc(0xE68000):pc(0xE68000) + 32 * 32]
+assert out92[pc(0xC0266D):pc(0xC0266D) + 3] == b"\x00\xA0\xF7" and out92[pc(0xC050EE):pc(0xC050EE) + 3] == b"\x00\xE0\xF7"
+assert out92[pc(0xC0AA21):pc(0xC0AA21) + 3] == b"\x00\xE0\xF7"
+for t in ("production", "celes-tech", "production-v0.9", "celes-tech-v0.9", "item-tech-v0.9"):
+    expect_fail(f"enabler-region-not-in-{t}", lambda t=t: alloc.region("MAPX_MAP_PAL", t), (AllocationError,))
+audit92 = json.load(open(os.path.join(HERE, "audits", "eventbit_audit.json")))
+b92 = alloc.event_bits("item-tech", audit92)
+assert {k: b92[k] for k in ("EXP_HOPE_EMPIRE", "EXP_CELES_STARTED", "EXP_CELES_DONE", "EXP_CELES_RECORDS_PRESERVED")} == \
+    {"EXP_HOPE_EMPIRE": 0x0E0, "EXP_CELES_STARTED": 0x0E8, "EXP_CELES_DONE": 0x0E9, "EXP_CELES_RECORDS_PRESERVED": 0x0EA}
+qw = alloc.vanilla_qa_write_bits("item-tech")
+assert qw == {"QA_VANILLA_AIRSHIP_AVAILABLE": 0x1B9} and alloc.vanilla_qa_write_bits("production") == {}
+expect_fail("qa-write-bit-in-production-package", lambda: EventProgram(0xF10000, alloc.event_bits("item-tech", audit92), {},
+            readonly_bits=alloc.vanilla_ref_bits("item-tech")).parse("set_switch QA_VANILLA_AIRSHIP_AVAILABLE"), (EventAsmError,))
+expect_fail("airship-flag-on-town-map", lambda: EventProgram(0xF10000, {}, {}).parse("load_map $1A2 1 1 UP AIRSHIP"), (EventAsmError,))
+expect_fail("load-pal-row-16", lambda: EventProgram(0xF10000, {}, {}).parse("load_pal 16 $20"), (EventAsmError,))
+expect_fail("set-tiles-count", lambda: EventProgram(0xF10000, {}, {}).parse("set_tiles BG1 1 1 2 1 56"), (EventAsmError,))
+print("PASS v0.9.2: palette tables relocated only in the QA target (vanilla 48 map / 32 sprite palettes byte-identical, "
+      "3 consumer operands retargeted), enabler regions refused for production / frozen targets; D-21 bits allocated "
+      "from the audited free pool; vanilla QA write bit only for QA packages; new event commands fail closed"); ok += 1
 print(f"ALL {ok} SELF-TESTS PASS")
+

@@ -50,8 +50,11 @@ def load_pkg(name):
 
 
 def entrance_word(dest_map, facing, flags):
+    unknown = set(flags) - {"Z_UPPER", "SHOW_TITLE", "SET_PARENT"}
+    if unknown:
+        raise SystemExit(f"entrance flags {unknown} not supported")
     return int(dest_map, 16) | (DIRS[facing] << 12) | (0x400 if "Z_UPPER" in flags else 0) \
-        | (0x800 if "SHOW_TITLE" in flags else 0)
+        | (0x800 if "SHOW_TITLE" in flags else 0) | (0x200 if "SET_PARENT" in flags else 0)   # TECH v0.9.2
 
 
 def short_rec(e):
@@ -118,16 +121,19 @@ def build(rom, target, alloc, diag, packages=None, ext_items=False):
     labels = dict(VANILLA_EXTERNALS)
     used = set()
     notes["event_listings"] = {}
+    qw = alloc.vanilla_qa_write_bits(target)          # TECH v0.9.2: QA-only writes of vanilla bits
+    names.update(qw)
     for p in pkgs:
         org = int(p["event_org"], 16)
-        prog = EventProgram(org, bits, ids, dict(labels), readonly_bits=ro, ext_items=ext_items)
+        pbits = dict(bits, **qw) if p.get("qa") else bits
+        prog = EventProgram(org, pbits, ids, dict(labels), readonly_bits=ro, ext_items=ext_items)
         prog.parse(open(os.path.join(p["dir"], "events.evt")).read(), f"{p['name']}/events.evt")
         code = prog.assemble()
         for k in prog.labels:
             if k in labels:
                 raise SystemExit(f"duplicate event label {k}")
         labels.update(prog.labels)
-        used |= prog.bits_used
+        used |= prog.bits_used - set(qw)
         rom.place(p["event_region"], code, f"{p['name']}_events", p["event_patch"], at=org,
                   reason=f"{p['name']} event scripts ({len(code)} bytes) from events/{p['name']}/events.evt",
                   consumer="event interpreter via 24-bit trigger pointers, NPC vectors, call/jump operands")
@@ -148,6 +154,11 @@ def build(rom, target, alloc, diag, packages=None, ext_items=False):
             p_init = snes_to_pc(MAP_INIT_EVENTS) + 3 * m
             if rom.clean[p_init:p_init + 3] != EVENT_RETURN_PTR:
                 raise SystemExit(f"map {m:03X}: startup event is not EventReturn")
+            if mp.map.get("init_event"):             # TECH v0.9.2: map startup event (state presentation, E8)
+                lab = mp.map["init_event"]
+                rom.patch(MAP_INIT_EVENTS + 3 * m, EVENT_RETURN_PTR, event_offset(labels[lab]).to_bytes(3, "little"),
+                          f"M920_MAP_INIT_{m:03X}", consumer="map load startup event (MapInitEvent table D1:FA00)",
+                          reason=f"map {m:03X} startup event -> {lab}", claim="MAP_INIT_EVENTS_NEW")
             lay = {}
             for layer in ("bg1", "bg2"):
                 spec = mp.map.get(layer, {})
@@ -223,6 +234,20 @@ def build(rom, target, alloc, diag, packages=None, ext_items=False):
             for r in vt["SHORT_ENTRANCES"].records[m]:
                 if r[:2] == rec[:2]:
                     raise SystemExit(f"{label}: vanilla entrance on map {m:03X} {rec[0]},{rec[1]}")
+
+    # TECH v0.9.2: a package entrance on a vanilla map (e.g. the World of Ruin landing tile) must not sit on a vanilla
+    # entrance / trigger tile
+    for m, rec, label in content["records"]["SHORT_ENTRANCES"]:
+        if m < 0x19F and "QA override" not in label:
+            for t in ("EVENT_TRIGGERS", "SHORT_ENTRANCES"):
+                for r in vt[t].records[m]:
+                    if r[:2] == rec[:2]:
+                        raise SystemExit(f"{label}: vanilla {t} record already on map {m:03X} {rec[0]},{rec[1]}")
+            for r in vt["LONG_ENTRANCES"].records[m]:
+                ln, vert = r[2] & 0x7F, r[2] & 0x80
+                cells = [(r[0], r[1] + k) if vert else (r[0] + k, r[1]) for k in range(ln + 1)]
+                if (rec[0], rec[1]) in cells:
+                    raise SystemExit(f"{label}: vanilla long entrance covers map {m:03X} {rec[0]},{rec[1]}")
 
     fnotes, bases = map_foundation.build(rom, content)
     notes["map_foundation"] = fnotes

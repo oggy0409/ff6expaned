@@ -1,0 +1,5 @@
+{
+ "_comment": "vanilla graphics placeholder (D-14): Guardian $111 (large Imperial security machine)",
+ "graphics_from_vanilla_monster": "0x111",
+ "overlap_from_vanilla_monster": "0x111"
+}

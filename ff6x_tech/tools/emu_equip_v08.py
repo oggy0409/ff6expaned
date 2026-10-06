@@ -29,7 +29,8 @@ from emu_item_battle import labels, talk
 from emu_menu_nav import Nav, ST
 from patches import item_v071 as IV
 
-ITEMS = json.load(open(os.path.join(HERE, "items/production_v08/equipment.json")))["items"]
+# TECH v0.9.2 regression: FF6X_EQUIP_SRC selects the data set of the ROM under test (default: the accepted v0.8 data)
+ITEMS = json.load(open(os.path.join(HERE, os.environ.get("FF6X_EQUIP_SRC", "items/production_v08/equipment.json"))))["items"]
 BYID = {int(it["id"], 16): it for it in ITEMS}
 PROD = sorted(BYID)
 CHARS = IV.CHARS

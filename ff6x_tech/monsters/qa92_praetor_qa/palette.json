@@ -1,0 +1,5 @@
+{
+ "_comment": "Guardian's own palette (gunmetal); the overload palette is derived at build time (asm/celes_v092 XE_OverloadPal)",
+ "palette_index": "0x1E1",
+ "expect_bpp": "4bpp"
+}

@@ -1,0 +1,31 @@
+{
+ "_comment": "NPC events routed through the v0.4 NPC event vector table.",
+ "npcs": [
+  {
+   "name": "VALE_OUTER",
+   "role": "Vale (records technician, D-05) - QA palette variant (sprite palette $20 in slot 7)",
+   "x": 11,
+   "y": 13,
+   "gfx": "18 (MAN)",
+   "pal": 7,
+   "direction": "DOWN",
+   "speed": 1,
+   "react": "FACE_PLAYER",
+   "switch": "NPC_CELES_VALE_OUTER",
+   "event": "EvValeOuter"
+  },
+  {
+   "name": "SURVIVOR_QA",
+   "role": "survivor - party-conditional reaction + speaker fallback (E5)",
+   "x": 21,
+   "y": 14,
+   "gfx": "19 (NPC)",
+   "pal": 2,
+   "direction": "LEFT",
+   "speed": 1,
+   "react": "FACE_PLAYER",
+   "switch": "VANILLA_NPC_ALWAYS_VISIBLE",
+   "event": "EvSurvivor"
+  }
+ ]
+}

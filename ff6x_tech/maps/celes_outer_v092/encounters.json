@@ -1,0 +1,10 @@
+{
+ "random_battles": false,
+ "event_battles": [
+  {
+   "group": "0xFA",
+   "formation": "0x244",
+   "via": "EvPraetorDoor (QA)"
+  }
+ ]
+}

@@ -15,7 +15,9 @@ the weapon equipped through the Equip menu in the R-hand -> QA test battle (even
   R  Runic (Celes, Imperial Saber) / Bushido (Cyan, Doma Edge): command present and enabled
   I  battle Item list shows no $1xx item (blank), Throw list (Shadow) shows none
   P  battle end: inventory (39 $1xx + vanilla) and equipment unchanged (reconciliation)
-
+  TECH v0.9.2: J / O compare every frame (hashes) with the monsters' ATB held at 0 (POKE, identical in both runs):
+     a monster action overlapping the compared action is otherwise drawn one frame apart whenever the extended-weapon
+     path costs a lag frame (KNOWN_RISKS_v0.9.2 R67; also in the frozen v0.9 ROM - tools/emu_timing_probe_v092.py)
 usage: emu_equip_battle_v08.py <qa.sfc> <qa.manifest.json> <out>
 """
 import json, os, sys, itertools
@@ -102,6 +104,42 @@ def fight(h, frames=420, every=2):
         if t % every == 0:
             shots.append(np.asarray(h.em.get_screen()).copy())
     return seq, shots
+
+
+def monsters(h):
+    return [m for m in range(6) if h.r16(0x3C1C + 8 + 2 * m) not in (0, 0xFFFF)]
+
+
+def hold_step(h, mons, n=1, btn=()):
+    """TECH v0.9.2 POKE (test only, identical in both compared runs): the monsters' ATB timers ($3218 + 2 * index)
+    are held at 0 every frame, so no monster action overlaps the character's action. Without it a monster action that
+    overlaps the compared action is drawn one frame apart in the two runs whenever the extended-weapon path costs a lag
+    frame (KNOWN_RISKS_v0.9.2 R67; present in the frozen v0.9 ROM too - tools/emu_timing_probe_v092.py)."""
+    for _ in range(n):
+        for m in mons:
+            h.w8(0x3218 + 8 + 2 * m, 0); h.w8(0x3219 + 8 + 2 * m, 0)
+        h.step(1, btn)
+
+
+def fight_hashes(h, frames, mons=()):
+    """TECH v0.9.2: Fight (A, A) with the monsters' ATB held; every rendered frame as a hash"""
+    import hashlib
+    hold_step(h, mons, 8, ("A",)); hold_step(h, mons, 30); hold_step(h, mons, 8, ("A",)); hold_step(h, mons, 10)
+    seq, hs = [], []
+    for t in range(frames):
+        hold_step(h, mons)
+        seq.append(h.r8(ANIM_NO))
+        hs.append(hashlib.sha1(np.asarray(h.em.get_screen()).tobytes()).hexdigest()[:16])
+    return seq, hs
+
+
+def dedup(xs):
+    return [k for k, _ in itertools.groupby(xs)]
+
+
+def lag_tolerant(ha, hb):
+    """TECH v0.9.2 (info): the two runs show the same sequence of distinct screens; frames that differ exactly."""
+    return dedup(ha) == dedup(hb), sum(1 for u, v in zip(ha, hb) if u != v)
 
 
 def finish_battle(h):
@@ -210,20 +248,22 @@ def main(qa, manifest, out):
         ok = start_battle(h, si)
         cmd = h.r8(0x202E + 12 * si)
         st_menu = h.em.get_state()
-        _, fa = fight(h, 1600, 4)
+        mons = monsters(h)
+        sa, ha = fight_hashes(h, 1600, mons)
         q.shot(h, f"J_{wid:03X}_jump_end")
         h.em.set_state(st_menu)
         as_template(c, si, int(it["template"], 16))
-        _, fb = fight(h, 1600, 4)
-        diff = [k for k, (u, v) in enumerate(zip(fa, fb)) if (u != v).any()]
-        moving = sum(1 for k in range(1, len(fa)) if (fa[k] != fa[k - 1]).any())
+        sb, hb = fight_hashes(h, 1600, mons)
+        diff = [k for k, (u, v) in enumerate(zip(ha, hb)) if u != v]
+        moving = len(dedup(ha)) - 1
         jdet[f"{wid:03X}"] = {"template": it["template"], "menu": ok, "first_command": f"{cmd:02X}",
-                              "differing_samples": diff[:10], "animated_samples": moving}
+                              "differing_frames": diff[:10], "distinct_screens": moving + 1,
+                              "anim_runs": runs(sa)[:8], "template_anim_runs": runs(sb)[:8]}
         if not ok or cmd != CMD_JUMP or diff or moving < 50:
             jbad.append(f"{wid:03X}")
     res["jump"] = jdet
     q.check("J1 Jump with Sandpiercer / Gale Lance (POKE: command Jump) renders every frame like the same battle with "
-            "the template spear (Partisan / Aura Lance) in hand", not jbad, jdet)
+            "the template spear (Partisan / Aura Lance) in hand - every frame of 1600 (v0.9.2: monster ATB held, POKE)", not jbad, jdet)
 
     # ------------------------------------------------------------------ G: Genji Glove dual wield
     c = CHARS.index("Locke")
@@ -284,15 +324,16 @@ def main(qa, manifest, out):
         h.w8(0x3BF4 + 8 + 2 * k, 0x30); h.w8(0x3BF4 + 9 + 2 * k, 0x75)
     hp = lambda: [h.r16(0x3BF4 + 8 + 2 * k) for k in mons]
     st_menu = h.em.get_state()
+    mons_o = monsters(h)
 
     def offering_run():
-        h.press("A", 8, 30); h.press("A", 8, 10)
+        import hashlib
+        hold_step(h, mons_o, 8, ("A",)); hold_step(h, mons_o, 30); hold_step(h, mons_o, 8, ("A",)); hold_step(h, mons_o, 10)
         seq, shots, drops, last = [], [], 0, hp()
         for t in range(900):
-            h.step(1)
+            hold_step(h, mons_o)
             seq.append(h.r8(ANIM_NO))
-            if t % 4 == 0:
-                shots.append(np.asarray(h.em.get_screen()).copy())
+            shots.append(hashlib.sha1(np.asarray(h.em.get_screen()).tobytes()).hexdigest()[:16])
             now = hp()
             drops += sum(1 for a_, b_ in zip(last, now) if b_ < a_)
             last = now
@@ -301,12 +342,12 @@ def main(qa, manifest, out):
     h.em.set_state(st_menu)
     as_template(c, si, int(BYID[0x106]["template"], 16))               # Hardened, same battle state
     seq_b, fb, drops_b, hp_b = offering_run()
-    diff = [k for k, (u, v) in enumerate(zip(fa, fb)) if (u != v).any()]
+    diff = [k for k, (u, v) in enumerate(zip(fa, fb)) if u != v]
     q.check("O1 Offering + Moonless: the multi-strike Fight (Offering) is identical to the same battle with the template "
-            "Hardened in hand - every sampled frame, the number of enemy HP drops and the enemies' HP afterwards - and uses "
-            "the extended animation number $C6 (template: $29)",
+            "Hardened in hand - every frame (v0.9.2: every frame of 900 with the monster ATB held, POKE), the number of "
+            "enemy HP drops and the enemies' HP afterwards - and uses the extended animation number $C6 (template: $29)",
             not diff and drops == drops_b and hp_a == hp_b and drops >= 2 and 0xC6 in seq and 0x29 in seq_b,
-            {"hp_drops": drops, "template_hp_drops": drops_b, "differing_samples": diff[:10],
+            {"hp_drops": drops, "template_hp_drops": drops_b, "differing_frames": diff[:10],
              "anim_runs": runs(seq)[:12], "template_anim_runs": runs(seq_b)[:12]})
     finish_battle(h)
 

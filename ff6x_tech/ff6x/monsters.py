@@ -20,6 +20,9 @@ STAT_FIELDS = {   # name: (offset, size)   (Rev 1 LoadMonsterProp C2:2C30 / Load
     "speed": (0, 1), "attack": (1, 1), "hit": (2, 1), "evade": (3, 1), "mblock": (4, 1),
     "defense": (5, 1), "mdefense": (6, 1), "magic_power": (7, 1), "hp": (8, 2), "mp": (10, 2),
     "exp": (12, 2), "gold": (14, 2), "level": (16, 1),
+    # TECH v0.9.2 (LoadMonsterProp C2:2D71-2E3x): blocked statuses, element reactions, special attack
+    "status_block_1": (20, 1), "status_block_2": (21, 1), "status_block_3": (22, 1),
+    "elem_absorb": (23, 1), "elem_null": (24, 1), "elem_weak": (25, 1), "special_attack": (31, 1),
 }
 ATTACK_NAMES = {"BATTLE": 0xEE, "SPECIAL": 0xEF, "NONE": 0xFF}
 
@@ -50,10 +53,36 @@ def attack_id(tok):
     raise MonsterError(f"bad attack token {tok!r}")
 
 
-def compile_ai(text):
+AI_COND = {"NEVER": 0x00, "CMD": 0x01, "ATTACK": 0x02, "ITEM": 0x03, "ELEMENT": 0x04, "HIT": 0x05, "HP": 0x06,
+           "MP": 0x07, "STATUS_SET": 0x08, "STATUS_CLR": 0x09, "MONSTER_TIMER": 0x0B, "VAR_LESS": 0x0C,
+           "VAR_GREATER": 0x0D, "ALIVE": 0x11, "DEAD": 0x12, "SWITCH_SET": 0x14, "SWITCH_CLR": 0x15, "ALWAYS": 0x1C,
+           # TECH v0.9.2 AI extension (asm/celes_v092; only in targets that carry it - ext_ai=True)
+           "HP_PCT_LE": 0x40, "LIGHTNING_COUNT": 0x41}
+MISC_AI = {"RESET_MONSTER_TIMER": 0x00, "SET_STATUS": 0x0B, "CLR_STATUS": 0x0C,
+           # TECH v0.9.2 AI extension
+           "OVERLOAD": 0x42, "GROUNDING_TICK": 0x43}
+AI_EXT_MIN = 0x40
+
+
+def _b(tok):
+    tok = tok.strip()
+    v = int(tok[1:], 16) if tok.startswith("$") else int(tok, 0)
+    if not 0 <= v <= 0xFF:
+        raise MonsterError(f"AI operand {tok} out of byte range")
+    return v
+
+
+def compile_ai(text, ext_ai=False):
     """ai.txt: one command per line ('#' comments).
          random A B C   -> F0 A B C      use A -> A (A < $F0)
          wait           -> FD           end   -> FF (end of main / end of counter section)
+       TECH v0.9.2 (vanilla AI commands, encodings of the Rev 1 interpreter C2:1A2F-1F24):
+         if COND p1 p2  -> FC cond p1 p2 (COND = name in AI_COND or $hex; consecutive ifs = AND)
+         endif          -> FE            target T -> F1 T
+         entry ANIM OP MASK -> F5 anim op mask (op 0 restore, 1 kill, 2 show, 3 hide)
+         misc SUB P     -> FB sub p      set_switch V B -> F9 01 V B     clr_switch V B -> F9 02 V B
+         anim A M P     -> FA a m p
+       Extension conditions / misc effects >= $40 need ext_ai (the target carries asm/celes_v092).
        Exactly two 'end' (main + counter), like every vanilla script."""
     out, ends = bytearray(), 0
     for raw in text.splitlines():
@@ -72,6 +101,31 @@ def compile_ai(text):
             out.append(0xFD)
         elif op == "end":
             out.append(0xFF); ends += 1
+        elif op == "if":
+            if len(args) != 3: raise MonsterError("if COND p1 p2")
+            c = AI_COND[args[0]] if args[0] in AI_COND else _b(args[0])
+            if c >= AI_EXT_MIN and not ext_ai: raise MonsterError(f"AI condition ${c:02X} needs the v0.9.2 AI extension")
+            out += bytes([0xFC, c, _b(args[1]), _b(args[2])])
+        elif op == "endif":
+            out.append(0xFE)
+        elif op == "target":
+            out += bytes([0xF1, _b(args[0])])
+        elif op == "entry":
+            if len(args) != 3: raise MonsterError("entry ANIM OP MASK")
+            out += bytes([0xF5] + [_b(a) for a in args])
+        elif op == "misc":
+            if len(args) != 2: raise MonsterError("misc SUB P")
+            sub = MISC_AI[args[0]] if args[0] in MISC_AI else _b(args[0])
+            if sub >= AI_EXT_MIN and not ext_ai: raise MonsterError(f"AI misc effect ${sub:02X} needs the v0.9.2 AI extension")
+            out += bytes([0xFB, sub, _b(args[1])])
+        elif op in ("set_switch", "clr_switch"):
+            if len(args) != 2: raise MonsterError(f"{op} VAR BIT")
+            v, bit = _b(args[0]), _b(args[1])
+            if v > 36 or bit > 7: raise MonsterError(f"{op}: var 0-36, bit 0-7")
+            out += bytes([0xF9, 1 if op == "set_switch" else 2, v, bit])
+        elif op == "anim":
+            if len(args) != 3: raise MonsterError("anim A M P")
+            out += bytes([0xFA] + [_b(a) for a in args])
         else:
             raise MonsterError(f"unsupported AI command {op!r}")
     if ends != 2 or out[-1] != 0xFF:
@@ -80,7 +134,8 @@ def compile_ai(text):
 
 
 class MonsterSource:
-    def __init__(self, folder):
+    def __init__(self, folder, ext_ai=False):
+        self.ext_ai = ext_ai
         j = lambda n: json.load(open(os.path.join(folder, n)))
         self.folder = folder
         self.monster, self.stats, self.gfx = j("monster.json"), j("stats.json"), j("graphics.json")
@@ -132,7 +187,7 @@ class MonsterSource:
         s = [attack_id(a) for a in self.sketch["attacks"]]
         if len(c) != 4 or len(s) != 2: raise MonsterError("control needs 4, sketch needs 2 attacks")
         out["control"], out["sketch"] = bytes(c), bytes(s)
-        out["ai"] = compile_ai(self.ai_text)
+        out["ai"] = compile_ai(self.ai_text, self.ext_ai)
         return out
 
 
@@ -159,12 +214,18 @@ class FormationSource:
             mid = int(s["monster"], 16)
             if mid == NULL_ID or not (mid < 0x180 or mid in assigned_ids):
                 raise MonsterError(f"{self.path}: slot {k} references unassigned/null monster {mid:03X}")
-            present |= 1 << k
+            if not s.get("hidden"):
+                present |= 1 << k            # TECH v0.9.2: a hidden slot is loaded but not shown (vanilla Dadaluma $1B6)
             lows[k] = mid & 0xFF
             if mid & 0x100: msb |= 1 << k
             if "pos" in s: pos[k] = int(s["pos"], 16)
+        used = {s["slot"] for s in self.f["slots"]}
+        if len(used) != len(self.f["slots"]):
+            raise MonsterError(f"{self.path}: slot used twice")
+        if self.f["slots"] and all(s.get("hidden") for s in self.f["slots"]):
+            raise MonsterError(f"{self.path}: at least one slot must be present at the start")
         for k in range(6):
-            if not present & (1 << k):
+            if k not in used:
                 lows[k] = 0xFF; msb |= 1 << k          # empty slot = $1FF (engine null)
         if "vram_map" in self.f:                        # TECH v0.6.2: explicit VRAM map (formation byte 0 bits 4-7)
             vm = self.f["vram_map"]
@@ -180,4 +241,6 @@ class FormationSource:
                 raise MonsterError(f"{self.path}: formations with monster IDs >= $100 must set no_veldt")
         if self.f.get("no_veldt"):
             aux[3] |= 0x02                              # $2F4B bit1: formation can't appear on the Veldt
+        if self.f.get("front_only"):                    # TECH v0.9.2 (D-22): aux byte 0 bits 4-7 = DISABLED battle
+            aux[0] = (aux[0] & 0x0F) | 0xE0             # types (C2:3133 EOR #$F0): side $80, pincer $40, back $20 off
         return bytes(rec), bytes(aux)

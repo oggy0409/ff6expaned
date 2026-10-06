@@ -40,6 +40,12 @@ Source syntax (one command per line, '#' comments):
     give_rare <rare id 0-51>                   # event cmd $69 id      (XC0_Ev69 -> XRareGive)
     take_rare <rare id 0-51>                   # event cmd $6D id      (XC0_Ev6D -> XRareTake)
     has_rare <rare id 0-51> -> <BIT_NAME>      # event cmd $6E id sw   (XC0_Ev6E -> XRareHas: bit := owned)
+  TECH v0.9.2 (vanilla commands, encodings from the Rev 1 interpreter field/event.asm):
+    load_map ... [SET_PARENT] [AIRSHIP]         # $6A: word bit 9 = set parent; flags byte bit 0 = world vehicle airship
+    world_end                                  # $FF: end of the world/vehicle script that follows a world-map load_map
+    party_case                                 # $DE: event bits $1A0+char := character is in the active party
+    load_pal <cgram row 0-15> <palette 0-255>  # $60: MapSpritePal[palette] -> palette row (8-15 = sprite slots 0-7)
+    set_tiles <BG1|BG2> <x> <y> <w> <h> <tile hex> ... # $73: change w*h map tiles (immediate update)
 """
 from .hirom import event_offset
 
@@ -165,12 +171,15 @@ class EventProgram:
             p = args.split()
             m, x, y, d = _num(p[0]), int(p[1]), int(p[2]), DIRS[p[3]]
             flags = set(p[4:])
-            unknown = flags - {"Z_UPPER", "SHOW_TITLE", "SET_PARENT", "STARTUP_EVENT", "NO_FADE_IN"}
+            unknown = flags - {"Z_UPPER", "SHOW_TITLE", "SET_PARENT", "STARTUP_EVENT", "NO_FADE_IN", "AIRSHIP"}
             if unknown:
                 raise EventAsmError(f"unknown load_map flags {unknown}")
             w = m | (d << 12) | (0x400 if "Z_UPPER" in flags else 0) | (0x800 if "SHOW_TITLE" in flags else 0) \
                 | (0x200 if "SET_PARENT" in flags else 0)
-            f2 = (0x80 if "STARTUP_EVENT" in flags else 0) | (0x40 if "NO_FADE_IN" in flags else 0)
+            f2 = (0x80 if "STARTUP_EVENT" in flags else 0) | (0x40 if "NO_FADE_IN" in flags else 0) \
+                | (0x01 if "AIRSHIP" in flags else 0)
+            if "AIRSHIP" in flags and m > 2:
+                raise EventAsmError("AIRSHIP only when loading a world map ($000-$002)")
             self._emit(line, [0x6A, w & 0xFF, w >> 8, x, y, f2])
         elif op == "party_step":
             d, n = args.split()
@@ -182,6 +191,23 @@ class EventProgram:
             self._emit(line, [0x81, _num(args)])
         elif op == "shop":
             self._emit(line, [0x9B, _num(args)])
+        elif op == "world_end":
+            self._emit(line, [0xFF])
+        elif op == "party_case":
+            self._emit(line, [0xDE])
+        elif op == "load_pal":
+            sl, pl = (_num(t) for t in args.split())
+            if not (0 <= sl <= 15 and 0 <= pl <= 0xFF):
+                raise EventAsmError("load_pal: CGRAM palette row 0-15 (8-15 = sprite slots 0-7), palette 0-255")
+            self._emit(line, [0x60, sl, pl])
+        elif op == "set_tiles":
+            p = args.split()
+            layer = {"BG1": 0, "BG2": 0x40}[p[0]]
+            x, y, w, hh = (int(t) for t in p[1:5])
+            tiles = [int(t, 16) for t in p[5:]]
+            if not (0 <= x <= 255 and 0 <= y <= 63 and w >= 1 and hh >= 1 and len(tiles) == w * hh):
+                raise EventAsmError("set_tiles: BG x y(0-63) w h + w*h tile bytes")
+            self._emit(line, [0x73, x, layer | y, w, hh] + tiles)
         elif op == "colosseum":
             self._emit(line, [0x9A])
         elif op in ("status_clear", "status_set"):

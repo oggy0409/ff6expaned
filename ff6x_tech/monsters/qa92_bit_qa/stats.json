@@ -1,0 +1,19 @@
+{
+ "_comment": "MANUAL-QA SCALED copy of monsters/qa92_suppressor_bit/stats.json: hp 1/10, attack 1, magic_power 1, level 1 (all else identical).",
+ "base_vanilla_monster": "0x0E3",
+ "fields": {
+  "level": 1,
+  "hp": 220,
+  "mp": 1200,
+  "speed": 50,
+  "attack": 1,
+  "defense": 155,
+  "mdefense": 150,
+  "magic_power": 1,
+  "exp": 1200,
+  "gold": 500,
+  "elem_weak": 128,
+  "elem_null": 4,
+  "elem_absorb": 0
+ }
+}

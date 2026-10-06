@@ -1,0 +1,990 @@
+# TECH v0.9.2 QA HARNESS ONLY (target item-tech). Trigger: map $013 (Narshe opening streets) tile (34,43) -> QaRoot92.
+# QaAccess6 below = the accepted v0.9 tree (unchanged, reachable as 'Older QA (v0.9 tree)').
+# Top level: v0.9 consumables / rare items / stress; the accepted v0.8 equipment tools, v0.7.x item tests and v0.6.1
+# tests are kept unchanged one level down.
+# Top level: v0.8 production equipment tools; the accepted v0.7.x item tests and v0.6.1 tests are kept unchanged one
+# level down ("Older tests").
+@QaAccess6
+if_switch VANILLA_TILE_EVENT_LATCH=1 -> QaRet6
+dlg qa9_prompt
+choice QaCons9, QaRare9, QaMore9
+@QaMore9
+dlg qa9_more
+choice QaStress9, QaEq8, QaMore9b
+@QaMore9b
+dlg qa9_more2
+choice QaOlder8, QaNo6, QaCancel6
+@QaOlder8
+dlg qa8_older
+choice QaItem7, QaOld6, QaCancel6
+# ---- TECH v0.8 production equipment ($100-$126) -------------------------------------------------
+@QaEq8
+dlg qa8_eq
+choice QaGrantAll8, QaParty8, QaMore8
+@QaGrantAll8
+call QaGiveW8
+call QaGiveA8
+call QaGiveR8
+dlg qa8_given_all
+party_step RIGHT 1
+return
+@QaMore8
+dlg qa8_more
+choice QaType8, QaRemove8, QaMore8b
+@QaMore8b
+dlg qa8_more2
+choice QaTestBtl8, QaBossBtl8, QaSmith8
+# test battles with the current party (ROM scripts: a battle must never run from a script in WRAM)
+@QaTestBtl8
+battle $01 bg $3F
+call VanillaPostBattleCheck
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+@QaBossBtl8
+battle $40 bg $3F
+call VanillaPostBattleCheck
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+@QaType8
+dlg qa8_type
+choice QaGrantW8, QaGrantA8, QaGrantR8
+@QaGrantW8
+call QaGiveW8
+dlg qa8_given_w
+party_step RIGHT 1
+return
+@QaGrantA8
+call QaGiveA8
+dlg qa8_given_a
+party_step RIGHT 1
+return
+@QaGrantR8
+call QaGiveR8
+dlg qa8_given_r
+party_step RIGHT 1
+return
+# remove: up to 10 copies of each production item from the inventory (TAKE_EXT_ITEM; equipped copies stay - R3)
+@QaRemove8
+loop 10
+take_ext_item $100
+take_ext_item $101
+take_ext_item $102
+take_ext_item $103
+take_ext_item $104
+take_ext_item $105
+take_ext_item $106
+take_ext_item $107
+take_ext_item $108
+take_ext_item $109
+take_ext_item $10A
+take_ext_item $10B
+take_ext_item $10C
+take_ext_item $10D
+take_ext_item $10E
+take_ext_item $10F
+take_ext_item $110
+take_ext_item $111
+take_ext_item $112
+take_ext_item $113
+take_ext_item $114
+take_ext_item $115
+take_ext_item $116
+take_ext_item $117
+take_ext_item $118
+take_ext_item $119
+take_ext_item $11A
+take_ext_item $11B
+take_ext_item $11C
+take_ext_item $11D
+take_ext_item $11E
+take_ext_item $11F
+take_ext_item $120
+take_ext_item $121
+take_ext_item $122
+take_ext_item $123
+take_ext_item $124
+take_ext_item $125
+take_ext_item $126
+end_loop
+dlg qa8_removed
+party_step RIGHT 1
+return
+@QaGiveW8
+give_ext_item $100   # Tempered Edge
+give_ext_item $101   # Imperial Saber
+give_ext_item $102   # Leo's Blade
+give_ext_item $103   # Raider Knife
+give_ext_item $104   # Sandpiercer
+give_ext_item $105   # Duncan Claw
+give_ext_item $106   # Moonless
+give_ext_item $107   # Doma Edge
+give_ext_item $108   # Darill's Dirk
+give_ext_item $109   # Magister Rod
+give_ext_item $10A   # Concord Brush
+give_ext_item $10B   # Gale Lance
+give_ext_item $10C   # Echo Dagger
+return
+@QaGiveA8
+give_ext_item $10D   # Royal Gear
+give_ext_item $10E   # Imperial Mantle
+give_ext_item $10F   # Magister Robe
+give_ext_item $110   # Ashen Mail
+give_ext_item $111   # Concord Vest
+give_ext_item $112   # Doma Plate
+give_ext_item $113   # Falcon Jacket
+give_ext_item $114   # Child's Ribbon
+give_ext_item $115   # Doma Kabuto
+give_ext_item $116   # Engineer Goggles
+give_ext_item $117   # Magi Circlet
+give_ext_item $118   # Concord Shield
+give_ext_item $119   # Ashguard
+return
+@QaGiveR8
+give_ext_item $11A   # Runic Crest
+give_ext_item $11B   # Maduin's Locket
+give_ext_item $11C   # Doma Crest
+give_ext_item $11D   # Keepsake Ring
+give_ext_item $11E   # Darill's Coin
+give_ext_item $11F   # Memorial Band
+give_ext_item $120   # Gale Pin
+give_ext_item $121   # Beastheart
+give_ext_item $122   # Painter's Lens
+give_ext_item $123   # Elder's Seal
+give_ext_item $124   # Engineer's Badge
+give_ext_item $125   # Master's Cord
+give_ext_item $126   # Legacy of the Magi
+return
+# ---- party presets: the 13 permanent characters are initialized ONCE (vanilla recruit commands, as Locke at
+# CC:A621); afterwards presets only change the party, so equipment stays on the characters. Terra stays leader;
+# presets clear her Magitek status (opening state is not a valid Colosseum / battle-graphics state, see v0.7.3)
+@QaParty8
+dlg qa8_party
+choice QaP18, QaP28, QaParty8b
+@QaParty8b
+dlg qa8_party2
+choice QaP38, QaP48, QaParty8c
+@QaParty8c
+dlg qa8_party3
+choice QaP58, QaOpening8, QaCancel6
+@QaReady8
+if_switch QA_V08_PARTY_READY=1 -> QaReadyRet8
+char_prop $01 $01
+char_name $01 $01
+create_obj $01
+obj_gfx $01 $01   # Locke
+char_prop $02 $02
+char_name $02 $02
+create_obj $02
+obj_gfx $02 $02   # Cyan
+char_prop $03 $03
+char_name $03 $03
+create_obj $03
+obj_gfx $03 $03   # Shadow
+char_prop $04 $04
+char_name $04 $04
+create_obj $04
+obj_gfx $04 $04   # Edgar
+char_prop $05 $05
+char_name $05 $05
+create_obj $05
+obj_gfx $05 $05   # Sabin
+char_prop $06 $06
+char_name $06 $06
+create_obj $06
+obj_gfx $06 $06   # Celes
+char_prop $07 $07
+char_name $07 $07
+create_obj $07
+obj_gfx $07 $07   # Strago
+char_prop $08 $08
+char_name $08 $08
+create_obj $08
+obj_gfx $08 $08   # Relm
+char_prop $09 $09
+char_name $09 $09
+create_obj $09
+obj_gfx $09 $09   # Setzer
+char_prop $0A $0A
+char_name $0A $0A
+create_obj $0A
+obj_gfx $0A $0A   # Mog
+char_prop $0B $0B
+char_name $0B $0B
+create_obj $0B
+obj_gfx $0B $0B   # Gau
+char_prop $0C $0C
+char_name $0C $0C
+create_obj $0C
+obj_gfx $0C $0C   # Gogo
+char_prop $0D $0D
+char_name $0D $0D
+create_obj $0D
+obj_gfx $0D $0D   # Umaro
+set_switch QA_V08_PARTY_READY
+@QaReadyRet8
+return
+@QaLeave8
+char_party $01 0
+char_party $02 0
+char_party $03 0
+char_party $04 0
+char_party $05 0
+char_party $06 0
+char_party $07 0
+char_party $08 0
+char_party $09 0
+char_party $0A 0
+char_party $0B 0
+char_party $0C 0
+char_party $0D 0
+char_party $0E 0
+char_party $0F 0
+return
+@QaP18
+call QaReady8
+call QaLeave8
+char_party $01 1   # Locke
+char_party $06 1   # Celes
+char_party $04 1   # Edgar
+status_clear $00 $FFF7
+dlg qa8_party_set
+party_step RIGHT 1
+return
+@QaP28
+call QaReady8
+call QaLeave8
+char_party $05 1   # Sabin
+char_party $02 1   # Cyan
+char_party $03 1   # Shadow
+status_clear $00 $FFF7
+dlg qa8_party_set
+party_step RIGHT 1
+return
+@QaP38
+call QaReady8
+call QaLeave8
+char_party $09 1   # Setzer
+char_party $07 1   # Strago
+char_party $08 1   # Relm
+status_clear $00 $FFF7
+dlg qa8_party_set
+party_step RIGHT 1
+return
+@QaP48
+call QaReady8
+call QaLeave8
+char_party $0A 1   # Mog
+char_party $0B 1   # Gau
+char_party $0C 1   # Gogo
+status_clear $00 $FFF7
+dlg qa8_party_set
+party_step RIGHT 1
+return
+@QaP58
+call QaReady8
+call QaLeave8
+char_party $0D 1   # Umaro
+char_party $06 1   # Celes
+char_party $01 1   # Locke
+status_clear $00 $FFF7
+dlg qa8_party_set
+party_step RIGHT 1
+return
+@QaOpening8
+call QaLeave8
+char_party $0E 1
+char_party $0F 1
+status_set $00 $0008
+dlg qa8_party_opening
+party_step RIGHT 1
+return
+# smith purchase model (D4, event-driven; production binding EV_SMITH_NARSHE_TEMPERED_EDGE, 18000 GP)
+@QaSmith8
+dlg qa8_smith
+choice QaSmithBuy8, QaSmithGp8, QaCancel6
+@QaSmithBuy8
+has_ext_item $100 -> QA_V071_HAS_EXT_ITEM
+if_switch QA_V071_HAS_EXT_ITEM=1 -> QaSmithOwned8
+take_gp 18000
+if_switch VANILLA_NOT_ENOUGH_GIL=1 -> QaSmithPoor8
+give_ext_item $100
+has_ext_item $100 -> QA_V071_HAS_EXT_ITEM
+if_switch QA_V071_HAS_EXT_ITEM=0 -> QaSmithFull8
+dlg qa8_smith_bought
+party_step RIGHT 1
+return
+@QaSmithFull8
+give_gp 18000
+dlg qa8_smith_full
+party_step RIGHT 1
+return
+@QaSmithOwned8
+dlg qa8_smith_owned
+party_step RIGHT 1
+return
+@QaSmithPoor8
+dlg qa8_smith_poor
+party_step RIGHT 1
+return
+@QaSmithGp8
+give_gp 20000
+dlg qa8_gp
+party_step RIGHT 1
+return
+@QaOld6
+dlg qa6_prompt
+choice QaMon6, QaMore6, QaCancel6
+# ---- TECH v0.7.1 extended item tests -------------------------------------------------------
+@QaItem7
+dlg qa7_items
+choice QaGive7, QaHas7, QaMore7
+# A: grant the three QA items (extended event API) + the vanilla items with the same low byte
+@QaGive7
+give_ext_item $13D
+give_ext_item $13E
+give_ext_item $13F
+give_item $3D
+give_item $3E
+give_item $3F
+dlg qa7_given
+party_step RIGHT 1
+return
+# K: HAS_EXT_ITEM / TAKE_EXT_ITEM
+@QaHas7
+has_ext_item $13D -> QA_V071_HAS_EXT_ITEM
+if_switch QA_V071_HAS_EXT_ITEM=1 -> QaHasY7
+dlg qa7_has_no
+party_step RIGHT 1
+return
+@QaHasY7
+dlg qa7_has_yes
+choice QaTake7, QaCancel6
+@QaTake7
+take_ext_item $13D
+dlg qa7_taken
+party_step RIGHT 1
+return
+# M / F: shop, colosseum, battle
+@QaMore7
+dlg qa7_more
+choice QaShop7, QaColo7, QaBtl7
+@QaShop7
+shop $48
+party_step RIGHT 1
+return
+# TECH v0.7.2 hotfix: run the vanilla Colosseum sequence CB:78D9 exactly as the receptionist does (fade out,
+# menu $9A, then - only for a valid wager - colosseum battle $AF, then fade in). v0.7.1 called $9A alone: $9A sets
+# map-startup flags $C0 (no fade-in) and reloads the map, and without $AF / fade-in the screen stayed black.
+# QaColo7 sub-menu: fight, or get a vanilla wager kit (New Game has no items): Elixir / Fenix Down face Cactrot
+# (prizes Rename Card / Magicite, winnable by the opening party), ThiefKnife / ValiantKnife face stronger opponents.
+@QaColo7
+dlg qa7_colo
+choice QaColoFight7, QaColoKit7, QaCancel6
+# TECH v0.8: the Colosseum fights with the current QA party preset (Terra / Locke / Celes / Edgar if no preset was
+# chosen yet). The opening party is not a valid Colosseum state (vanilla artifacts, COLOSSEUM_QA_STATE_v0.7.3.md);
+# presets never re-run event $40, so extended equipment on the fighters is kept.
+@QaColoFight7
+if_switch QA_V08_PARTY_READY=1 -> QaColoGo8
+call QaReady8
+call QaLeave8
+char_party $01 1
+char_party $06 1
+char_party $04 1
+status_clear $00 $FFF7
+@QaColoGo8
+call VanillaColosseum
+party_step RIGHT 1
+return
+@QaColoKit7
+give_item $EE
+give_item $EE
+give_item $EE
+give_item $F0
+give_item $F0
+give_item $F0
+give_item $04
+give_item $09
+dlg qa7_colo_kit
+party_step RIGHT 1
+return
+# F/G: Terra fights without Magitek (status 1 bit $08 cleared for the test battle, restored after it)
+@QaBtl7
+status_clear $00 $FFF7
+battle $01 bg $3F
+call VanillaPostBattleCheck
+status_set $00 $0008
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+@QaMon6
+dlg qa6_battle_intro
+battle $FE bg $3F
+@QaAfter6
+call VanillaPostBattleCheck
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+@QaMore6
+dlg qa6_more
+choice QaIso6, QaMp6, QaOther6
+@QaIso6
+dlg qa6_iso
+choice QaIsoA6, QaIsoB6, QaCancel6
+@QaIsoA6
+battle $FC bg $3F
+call VanillaPostBattleCheck
+fade_in
+party_step RIGHT 1
+return
+@QaIsoB6
+battle $FB bg $3F
+call VanillaPostBattleCheck
+fade_in
+party_step RIGHT 1
+return
+@QaMp6
+give_esper $36
+dlg qa6_mp
+choice QaMpY6, QaMpZ6, QaCancel6
+@QaMpY6
+battle $FD bg $3F
+call VanillaPostBattleCheck
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+@QaMpZ6
+battle $FE bg $3F
+call VanillaPostBattleCheck
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+@QaOther6
+dlg qa6_other
+choice QaMapA6, QaAnnex6, QaCancel6
+@QaMapA6
+load_map $1A0 16 27 UP
+return
+@QaAnnex6
+call EvAnnexEnter_Yes
+return
+@QaNo6
+call VanillaSavePoint
+@QaRet6
+return
+# cancel paths step off the trigger tile so the prompt does not re-open while standing on it
+@QaCancel6
+party_step RIGHT 1
+return
+
+# ======================================================================================================
+# TECH v0.9: consumables $127-$12E (extended items, effects = ItemProp data run by the vanilla item code)
+# ======================================================================================================
+@QaCons9
+dlg qa9_cons
+choice QaConsGive9, QaConsShop9, QaCons9b
+@QaCons9b
+dlg qa9_cons2
+choice QaConsBtl9, QaConsSetup9, QaCons9c
+@QaCons9c
+dlg qa9_cons3
+choice QaConsTake9, QaParty8, QaCancel6
+@QaConsGive9
+loop 5
+call QaGiveC9
+end_loop
+dlg qa9_given
+party_step RIGHT 1
+return
+@QaGiveC9
+give_ext_item $127   # Gaia Tonic
+give_ext_item $128   # Aether Flask
+give_ext_item $129   # Phoenix Ash
+give_ext_item $12A   # Null Dust
+give_ext_item $12B   # Iron Ration
+give_ext_item $12C   # Remedy+
+give_ext_item $12D   # Beacon Flare
+give_ext_item $12E   # Magitek Cell
+return
+@QaConsTake9
+loop 10
+take_ext_item $127
+take_ext_item $128
+take_ext_item $129
+take_ext_item $12A
+take_ext_item $12B
+take_ext_item $12C
+take_ext_item $12D
+take_ext_item $12E
+end_loop
+dlg qa9_removed
+party_step RIGHT 1
+return
+@QaConsShop9
+dlg qa9_shop
+choice QaShop80, QaShop81, QaSmithGp8
+@QaShop80
+shop $80
+party_step RIGHT 1
+return
+@QaShop81
+shop $81
+party_step RIGHT 1
+return
+# battle test with the current party (P1 if no preset was chosen; Terra out of Magitek)
+@QaConsBtl9
+if_switch QA_V08_PARTY_READY=1 -> QaConsBtlGo9
+call QaReady8
+call QaLeave8
+char_party $01 1
+char_party $06 1
+char_party $04 1
+status_clear $00 $FFF7
+@QaConsBtlGo9
+battle $01 bg $3F
+call VanillaPostBattleCheck
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+# field-use setup: preset P1, then statuses the consumables can cure (status 1: Blind $01, Poison $04, Imp $20 on
+# Terra; Wound $80 on Locke)
+@QaConsSetup9
+call QaReady8
+call QaLeave8
+char_party $01 1   # Locke
+char_party $06 1   # Celes
+char_party $04 1   # Edgar
+status_clear $00 $FFF7
+status_set $00 $0025
+status_set $01 $0080
+dlg qa9_setup
+party_step RIGHT 1
+return
+# ======================================================================================================
+# TECH v0.9: rare items (logical rare ids 0-19 vanilla, 20-24 the locked key items, 25-51 QA fillers)
+# ======================================================================================================
+@QaRare9
+dlg qa9_rare
+choice QaRareGive9, QaRareTake9, QaRare9b
+@QaRare9b
+dlg qa9_rare2
+choice QaRareTog9, QaRareHas9, QaRare9c
+@QaRare9c
+dlg qa9_rare3
+choice QaRareFill9, QaRareClear9, QaCancel6
+@QaRareGive9
+give_rare 20   # Darill's Token
+give_rare 21   # Concord Sigil
+give_rare 22   # Cinder Sigil
+give_rare 23   # Triune Sigil
+give_rare 24   # Broken Seal
+dlg qa9_rare_given
+party_step RIGHT 1
+return
+@QaRareTake9
+take_rare 20
+take_rare 21
+take_rare 22
+take_rare 23
+take_rare 24
+dlg qa9_rare_removed
+party_step RIGHT 1
+return
+@QaRareHas9
+has_rare 23 -> QA_V09_HAS_RARE
+if_switch QA_V09_HAS_RARE=1 -> QaRareHasY9
+dlg qa9_has_no
+party_step RIGHT 1
+return
+@QaRareHasY9
+dlg qa9_has_yes
+party_step RIGHT 1
+return
+@QaRareTog9
+dlg qa9_tog
+choice QaTog20, QaTog21, QaRareTog9b
+@QaRareTog9b
+dlg qa9_tog2
+choice QaTog22, QaTog23, QaTog24
+@QaTog20
+has_rare 20 -> QA_V09_HAS_RARE
+if_switch QA_V09_HAS_RARE=1 -> QaTogOff20
+give_rare 20
+dlg qa9_rare_on
+party_step RIGHT 1
+return
+@QaTogOff20
+take_rare 20
+dlg qa9_rare_off
+party_step RIGHT 1
+return
+@QaTog21
+has_rare 21 -> QA_V09_HAS_RARE
+if_switch QA_V09_HAS_RARE=1 -> QaTogOff21
+give_rare 21
+dlg qa9_rare_on
+party_step RIGHT 1
+return
+@QaTogOff21
+take_rare 21
+dlg qa9_rare_off
+party_step RIGHT 1
+return
+@QaTog22
+has_rare 22 -> QA_V09_HAS_RARE
+if_switch QA_V09_HAS_RARE=1 -> QaTogOff22
+give_rare 22
+dlg qa9_rare_on
+party_step RIGHT 1
+return
+@QaTogOff22
+take_rare 22
+dlg qa9_rare_off
+party_step RIGHT 1
+return
+@QaTog23
+has_rare 23 -> QA_V09_HAS_RARE
+if_switch QA_V09_HAS_RARE=1 -> QaTogOff23
+give_rare 23
+dlg qa9_rare_on
+party_step RIGHT 1
+return
+@QaTogOff23
+take_rare 23
+dlg qa9_rare_off
+party_step RIGHT 1
+return
+@QaTog24
+has_rare 24 -> QA_V09_HAS_RARE
+if_switch QA_V09_HAS_RARE=1 -> QaTogOff24
+give_rare 24
+dlg qa9_rare_on
+party_step RIGHT 1
+return
+@QaTogOff24
+take_rare 24
+dlg qa9_rare_off
+party_step RIGHT 1
+return
+@QaRareFill9
+give_rare 0
+give_rare 1
+give_rare 2
+give_rare 3
+give_rare 4
+give_rare 5
+give_rare 6
+give_rare 7
+give_rare 8
+give_rare 9
+give_rare 10
+give_rare 11
+give_rare 12
+give_rare 13
+give_rare 14
+give_rare 15
+give_rare 16
+give_rare 17
+give_rare 18
+give_rare 19
+give_rare 20
+give_rare 21
+give_rare 22
+give_rare 23
+give_rare 24
+give_rare 25
+give_rare 26
+give_rare 27
+give_rare 28
+give_rare 29
+give_rare 30
+give_rare 31
+give_rare 32
+give_rare 33
+give_rare 34
+give_rare 35
+give_rare 36
+give_rare 37
+give_rare 38
+give_rare 39
+give_rare 40
+give_rare 41
+give_rare 42
+give_rare 43
+give_rare 44
+give_rare 45
+give_rare 46
+give_rare 47
+give_rare 48
+give_rare 49
+give_rare 50
+give_rare 51
+dlg qa9_fill
+party_step RIGHT 1
+return
+@QaRareClear9
+take_rare 0
+take_rare 1
+take_rare 2
+take_rare 3
+take_rare 4
+take_rare 5
+take_rare 6
+take_rare 7
+take_rare 8
+take_rare 9
+take_rare 10
+take_rare 11
+take_rare 12
+take_rare 13
+take_rare 14
+take_rare 15
+take_rare 16
+take_rare 17
+take_rare 18
+take_rare 19
+take_rare 25
+take_rare 26
+take_rare 27
+take_rare 28
+take_rare 29
+take_rare 30
+take_rare 31
+take_rare 32
+take_rare 33
+take_rare 34
+take_rare 35
+take_rare 36
+take_rare 37
+take_rare 38
+take_rare 39
+take_rare 40
+take_rare 41
+take_rare 42
+take_rare 43
+take_rare 44
+take_rare 45
+take_rare 46
+take_rare 47
+take_rare 48
+take_rare 49
+take_rare 50
+take_rare 51
+dlg qa9_clear
+party_step RIGHT 1
+return
+# ======================================================================================================
+# TECH v0.9: stress / save
+# ======================================================================================================
+@QaStress9
+dlg qa9_stress
+choice QaStressAll9, QaNo6, QaStress9b
+@QaStress9b
+dlg qa9_stress2
+choice QaConsBtl9, QaColoFight7, QaMigr9
+@QaStressAll9
+call QaGiveW8
+call QaGiveA8
+call QaGiveR8
+loop 10
+call QaGiveC9
+end_loop
+give_rare 20
+give_rare 21
+give_rare 22
+give_rare 23
+give_rare 24
+give_gp 20000
+dlg qa9_all
+party_step RIGHT 1
+return
+@QaMigr9
+dlg qa9_migr
+party_step RIGHT 1
+return
+
+# ======================================================================================================
+# TECH v0.9.2 root: v0.9.1 items / v0.9.2 Celes enablers / the v0.9 tree
+# ======================================================================================================
+@QaRoot92
+if_switch VANILLA_TILE_EVENT_LATCH=1 -> QaRet6
+dlg qa92_root
+choice QaItems92, QaCel92, QaOlder92
+@QaOlder92
+dlg qa9_prompt
+choice QaCons9, QaRare9, QaMore9
+# ---- v0.9.1 item alignment ---------------------------------------------------------------------------
+@QaItems92
+dlg qa92_items
+choice QaConsGive9, QaShops92, QaItems92b
+@QaItems92b
+dlg qa92_items2
+choice QaConsBtl9, QaParty8, QaGp92
+@QaGp92
+give_gp 50000
+dlg qa92_gp
+party_step RIGHT 1
+return
+@QaShops92
+dlg qa92_shops
+choice QaShop80, QaShop81, QaShops92b
+@QaShops92b
+dlg qa92_shops2
+choice QaShop82, QaFoundry92, QaTogDone92
+@QaShop82
+shop $82
+party_step RIGHT 1
+return
+# Figaro Foundry: one logical shop, two technical shop ids (D-17 / D-18): $84 once EXP_CELES_DONE is set
+@QaFoundry92
+if_switch EXP_CELES_DONE=1 -> QaShop84
+shop $83
+party_step RIGHT 1
+return
+@QaShop84
+shop $84
+party_step RIGHT 1
+return
+@QaTogDone92
+if_switch EXP_CELES_DONE=1 -> QaTogDoneOff92
+set_switch EXP_CELES_DONE
+set_switch EXP_HOPE_EMPIRE
+dlg qa92_done_on
+party_step RIGHT 1
+return
+@QaTogDoneOff92
+clr_switch EXP_CELES_DONE
+clr_switch EXP_HOPE_EMPIRE
+dlg qa92_done_off
+party_step RIGHT 1
+return
+# ---- v0.9.2 Celes enablers ----------------------------------------------------------------------------
+@QaCel92
+dlg qa92_cel
+choice QaWor92, QaPraetor92, QaCel92b
+@QaCel92b
+dlg qa92_cel2
+choice QaState92, QaPartyCel92, QaCel92c
+@QaCel92c
+dlg qa92_cel3
+choice QaOuter92, QaVale92, QaCancel6
+# E1: World of Ruin aboard the airship at (146,204), two tiles south of the Vector Outer Ward entrance (146,202).
+# QA: one Moogle Charm ($DE, no random battles when equipped) is given each time - WoR monsters vs an early QA party.
+@QaWor92
+call QaReady8
+give_item $DE
+status_clear $00 $FFF7
+set_switch EXP_CELES_STARTED
+set_switch QA_VANILLA_AIRSHIP_AVAILABLE   # QA only: 'airship owned' (vanilla $1B9) so the parked Falcon can be boarded
+load_map $001 146 204 UP Z_UPPER AIRSHIP
+world_end
+# E2-E4: the Praetor battle from the hub (same event battle as the map console)
+@QaPraetor92
+dlg qa92_praetor
+choice QaPraetorL92, QaPraetorS92, QaCancel6
+@QaPraetorL92
+call QaReady8
+status_clear $00 $FFF7
+battle $FA bg $3F
+call VanillaPostBattleCheck
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+# manual-QA scaled twin (formation $245: 1/10 HP, attack / magic 1, identical AI) - reachable by an early party
+@QaPraetorS92
+call QaReady8
+status_clear $00 $FFF7
+battle $F9 bg $3F
+call VanillaPostBattleCheck
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+# E1 shortcut: walk-in directly (no world map), arrival tile of the map
+@QaOuter92
+call QaReady8
+status_clear $00 $FFF7
+load_map $1A2 16 27 UP Z_UPPER STARTUP_EVENT
+return
+@QaVale92
+if_switch NPC_CELES_VALE_OUTER=1 -> QaValeOff92
+set_switch NPC_CELES_VALE_OUTER
+dlg qa92_vale_on
+party_step RIGHT 1
+return
+@QaValeOff92
+clr_switch NPC_CELES_VALE_OUTER
+dlg qa92_vale_off
+party_step RIGHT 1
+return
+# E8: persistent states (event bits; the map startup event draws them at every load of $1A2)
+@QaState92
+dlg qa92_state
+choice QaStBurn92, QaStKeep92, QaState92b
+@QaState92b
+dlg qa92_state2
+choice QaStGraves92, QaStReset92, QaCancel6
+@QaStBurn92
+set_switch EXP_CELES_STARTED
+set_switch EXP_CELES_DONE
+set_switch EXP_HOPE_EMPIRE
+set_switch EXP_CELES_RECORDS_CHOSEN
+clr_switch EXP_CELES_RECORDS_PRESERVED
+dlg qa92_st_burn
+party_step RIGHT 1
+return
+@QaStKeep92
+set_switch EXP_CELES_STARTED
+set_switch EXP_CELES_DONE
+set_switch EXP_HOPE_EMPIRE
+set_switch EXP_CELES_RECORDS_CHOSEN
+set_switch EXP_CELES_RECORDS_PRESERVED
+dlg qa92_st_keep
+party_step RIGHT 1
+return
+@QaStGraves92
+set_switch EXP_GRAVES_DONE
+dlg qa92_st_graves
+party_step RIGHT 1
+return
+@QaStReset92
+clr_switch EXP_CELES_STARTED
+clr_switch EXP_CELES_DONE
+clr_switch EXP_HOPE_EMPIRE
+clr_switch EXP_CELES_RECORDS_CHOSEN
+clr_switch EXP_CELES_RECORDS_PRESERVED
+clr_switch EXP_GRAVES_DONE
+dlg qa92_st_reset
+party_step RIGHT 1
+return
+# E5: party presets for the speaker-fallback chain (Locke -> Edgar -> Sabin -> dropped)
+@QaPartyCel92
+dlg qa92_party
+choice QaP18, QaPEdg92, QaPCel92
+@QaPEdg92
+call QaReady8
+call QaLeave8
+char_party $06 1   # Celes
+char_party $04 1   # Edgar
+char_party $05 1   # Sabin
+status_clear $00 $FFF7
+dlg qa8_party_set
+party_step RIGHT 1
+return
+@QaPCel92
+call QaReady8
+call QaLeave8
+char_party $06 1   # Celes
+status_clear $00 $FFF7
+dlg qa8_party_set
+party_step RIGHT 1
+return
