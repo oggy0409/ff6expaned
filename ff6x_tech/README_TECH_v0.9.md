@@ -1,6 +1,6 @@
 # FF6 Expanded Edition — TECH v0.9: CONSUMABLE + RARE / KEY ITEM EXPANSION
 
-**STATIC PASS · EMULATOR PASS · USER RUNTIME QA PENDING** (one consolidated user pass: `USER_QA_TECH_v0.9_VI.md`).
+**STATIC PASS · EMULATOR PASS · USER RUNTIME PASS** — accepted baseline (TECH v0.9 — ACCEPTED / USER RUNTIME QA PASS, consolidated pass with `USER_QA_TECH_v0.9_VI.md`). The builder pins the three v0.9 SHA-1s.
 Baseline: accepted TECH v0.8 (39 signature equipment, user runtime PASS) — its three ROMs are rebuilt byte-exact by the
 builder as frozen targets (`production-v0.8`, `celes-tech-v0.8`, `item-tech-v0.8`, SHA-1 asserted).
 
@@ -69,7 +69,7 @@ See `HASHES_v0.9.txt` (ROM / BPS / IPS / manifest SHA-1s). QA ROM for the user p
 * STATIC: builder (all targets, frozen hashes asserted) + `tools/selftest.py` (all self-tests PASS, incl. v0.9 47-51).
 * EMULATOR (snes9x): consumables, battle, rare items, stress / migration + every v0.7.1 / v0.8 / v0.6.1 / Celes /
   Colosseum suite rerun on the v0.9 ROMs → `REGRESSION_REPORT_v0.9.md`.
-* USER RUNTIME QA: **pending** (`USER_QA_TECH_v0.9_VI.md`).
+* USER RUNTIME QA: **PASS** (`USER_QA_TECH_v0.9_VI.md`).
 
 ## 5. Build / test
 

@@ -1,4 +1,4 @@
-# TECH v0.9 — regression report (STATIC + Claude-side EMULATOR; user runtime pending)
+# TECH v0.9 — regression report (STATIC + Claude-side EMULATOR; USER RUNTIME PASS)
 
 All results are on the **final** v0.9 build: production `99cd74df…`, celes-tech `e4c07031…`, consumable / rare QA
 `e1136805…` (`HASHES_v0.9.txt`). Emulator = snes9x core via stable-retro, driving the real game through its menus, event
@@ -104,4 +104,4 @@ The QA build regenerates its formation-safety report (`FF6X_Rev1_TECH_v0.9_CONSU
 | Test harness only (no ROM change): field use needs A twice; empty equip lists don't open; the opening's Pendant (rare 19) is owned at New Game; a Rev 1 inventory must be read without the bitmap; shop `$48` first item too expensive (buy the cheapest); Locke's Raider Knife steals a Tonic on hit; the v0.6.1 save step needed `FF6X_QA_SAVE_PICKS`; a WRAM-script shop cannot exit cleanly (the tests call the ROM label) | fixed in the test tools |
 | Colosseum suite first run used the v0.7.3 ROM (already fixed) as the "v0.7.1 harness" reference → its 2 reference checks could not reproduce the original black screen | runner corrected (v0.7.1 QA ROM from the v0.7.1 package); rerun above |
 
-**STATIC PASS · EMULATOR PASS · USER RUNTIME QA PENDING** (`USER_QA_TECH_v0.9_VI.md`).
+**STATIC PASS · EMULATOR PASS · USER RUNTIME PASS** (consolidated user pass with `USER_QA_TECH_v0.9_VI.md`; TECH v0.9 — ACCEPTED).

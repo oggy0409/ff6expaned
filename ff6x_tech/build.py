@@ -23,15 +23,17 @@ PROD_ITEMS = "items/production_v08/equipment.json"
 ENGINE_V08 = "asm/item_v08"     # v0.7.1 engine + v0.8 B-accumulator reset (R32); frozen v0.7.x targets keep asm/item_v071
 
 TARGETS = {
-    # ---- TECH v0.9 (current; USER RUNTIME QA PENDING) ------------------------------------------------
+    # ---- TECH v0.9 (current; USER RUNTIME PASS - pinned, must reproduce exactly) ---------------------
     "production":  {"file": f"FF6X_Rev1_TECH_v{FILE_VER}_PRODUCTION", "version": BUILD_VERSION, "kind": "v07",
                     "packages": [], "monsters": [], "formations": [], "ext_item_sources": [PROD_ITEMS],
                     "item_builder": "v09",
-                    "status": "PRODUCTION BRANCH v0.9 - v0.8 + 8 extended consumables ($127-$12E), extended shops, FF6X rare items"},
+                    "status": "PRODUCTION BRANCH v0.9 - v0.8 + 8 extended consumables ($127-$12E), extended shops, FF6X rare items",
+                    "expect_sha1": "99cd74dfac5b91756120992dd1560534b40c66c3", "expect_crc32": "FF753A76"},
     "celes-tech":  {"file": f"FF6X_Rev1_TECH_v{FILE_VER}_CELES_TECH", "version": BUILD_VERSION, "kind": "v07",
                     "packages": ["celes_annex_tech"], "monsters": [], "formations": [], "ext_item_sources": [PROD_ITEMS],
                     "item_builder": "v09",
-                    "status": "production v0.9 + accepted Celes Annex slice"},
+                    "status": "production v0.9 + accepted Celes Annex slice",
+                    "expect_sha1": "e4c0703189fbde9b2df4ca972bfc801778aa6899", "expect_crc32": "3067CF9B"},
     "item-tech":   {"file": f"FF6X_Rev1_TECH_v{FILE_VER}_CONSUMABLE_RARE_QA", "version": BUILD_VERSION, "kind": "v07",
                     "packages": ["celes_annex_tech", "map_tech_v04", "qa_access_v09"],
                     "monsters": ["tech6_0180", "tech6_0181", "tech6_0182", "tech6_0183"],
@@ -41,7 +43,8 @@ TARGETS = {
                     "item_builder": "v09",
                     "formation_safety": "report",
                     "formation_safety_reason": "v0.6.1 QA formations carried unchanged for regression ($242 slot 0 known non-blocking)",
-                    "status": "TECH v0.9 QA BUILD (consumables + rare items + 39 signature equipment + QA hub) - USER RUNTIME QA PENDING"},
+                    "status": "TECH v0.9 QA BUILD (consumables + rare items + 39 signature equipment + QA hub) - USER RUNTIME QA PENDING",
+                    "expect_sha1": "e1136805cc792e11dbffab15e87df0f327a6a12e", "expect_crc32": "D8183069"},
     # ---- TECH v0.8 frozen (USER RUNTIME PASS, must reproduce exactly) --------------------------------
     "production-v0.8": {"file": "FF6X_Rev1_TECH_v0.8_PRODUCTION", "version": "0.8.0", "kind": "v07", "meta_target": "production",
                     "packages": [], "monsters": [], "formations": [], "ext_item_sources": [PROD_ITEMS],
