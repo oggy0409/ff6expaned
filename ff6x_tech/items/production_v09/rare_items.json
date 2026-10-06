@@ -1,0 +1,128 @@
+{
+ "_comment": "TECH v0.9 production key / rare items (logical rare ids 20-24; 0-19 are the vanilla rare items). Locked: names. Everything else DERIVED (see 'derived').",
+ "rare_items": [
+  {
+   "rare_id": 20,
+   "code": "KI-01",
+   "symbol": "KEY_DARILLS_TOKEN",
+   "locked_name": "Darill's Token",
+   "display_name": "Darill'sToken",
+   "desc": "A token of Darill, kept{n}aboard the Falcon.",
+   "story_arc": "Setzer arc (Darill)",
+   "acquisition": {
+    "planned_source": "Setzer arc: Darill's tomb / Falcon",
+    "future_event_symbol": "EV_RARE_DARILLS_TOKEN",
+    "prerequisite_flags": [
+     "PREREQ_SETZER_ARC"
+    ],
+    "one_time": true
+   },
+   "consumed": "no",
+   "ending_dependency": "none",
+   "combat_stats": null,
+   "derived": [
+    "story arc + source from the name",
+    "display name Darill'sToken (13-char rare-name field)",
+    "description"
+   ]
+  },
+  {
+   "rare_id": 21,
+   "code": "KI-02",
+   "symbol": "KEY_CONCORD_SIGIL",
+   "locked_name": "Concord Sigil",
+   "display_name": "Concord Sigil",
+   "desc": "Sigil of the Sanctuary{n}of Concord.",
+   "story_arc": "Sanctuary of Concord arc",
+   "acquisition": {
+    "planned_source": "Sanctuary of Concord",
+    "future_event_symbol": "EV_RARE_CONCORD_SIGIL",
+    "prerequisite_flags": [
+     "PREREQ_SANCTUARY_OF_CONCORD"
+    ],
+    "one_time": true
+   },
+   "consumed": "no",
+   "ending_dependency": "Triune Sigil prerequisite",
+   "combat_stats": null,
+   "derived": [
+    "source from the name (Sanctuary of Concord is a locked equipment source)",
+    "description"
+   ]
+  },
+  {
+   "rare_id": 22,
+   "code": "KI-03",
+   "symbol": "KEY_CINDER_SIGIL",
+   "locked_name": "Cinder Sigil",
+   "display_name": "Cinder Sigil",
+   "desc": "A sigil warm as{n}smoldering cinders.",
+   "story_arc": "arc TBD (Cinder)",
+   "acquisition": {
+    "planned_source": "arc design (source not recovered)",
+    "future_event_symbol": "EV_RARE_CINDER_SIGIL",
+    "prerequisite_flags": [
+     "PREREQ_TBD_ARC_DESIGN"
+    ],
+    "one_time": true
+   },
+   "consumed": "no",
+   "ending_dependency": "Triune Sigil prerequisite",
+   "combat_stats": null,
+   "derived": [
+    "story arc / source unknown (TBD)",
+    "description"
+   ]
+  },
+  {
+   "rare_id": 23,
+   "code": "KI-04",
+   "symbol": "KEY_TRIUNE_SIGIL",
+   "locked_name": "Triune Sigil",
+   "display_name": "Triune Sigil",
+   "desc": "Three sigils made one.",
+   "story_arc": "reconstruction / finale",
+   "acquisition": {
+    "planned_source": "joins the Concord and Cinder sigils",
+    "future_event_symbol": "EV_RARE_TRIUNE_SIGIL",
+    "prerequisite_flags": [
+     "HAS_RARE KEY_CONCORD_SIGIL",
+     "HAS_RARE KEY_CINDER_SIGIL"
+    ],
+    "one_time": true
+   },
+   "consumed": "no (the two sigils are kept: consumption not locked)",
+   "ending_dependency": "ending / reconstruction dependency",
+   "combat_stats": null,
+   "derived": [
+    "prerequisite = both sigils (read from 'Triune')",
+    "no consumption of the two sigils (not locked)",
+    "description"
+   ]
+  },
+  {
+   "rare_id": 24,
+   "code": "KI-05",
+   "symbol": "KEY_BROKEN_SEAL",
+   "locked_name": "Broken Seal",
+   "display_name": "Broken Seal",
+   "desc": "A broken seal. Its power{n}is spent.",
+   "story_arc": "finale / reconstruction",
+   "acquisition": {
+    "planned_source": "late story (World of Ruin)",
+    "future_event_symbol": "EV_RARE_BROKEN_SEAL",
+    "prerequisite_flags": [
+     "PREREQ_TBD_ARC_DESIGN"
+    ],
+    "one_time": true
+   },
+   "consumed": "no",
+   "ending_dependency": "ending / reconstruction dependency",
+   "combat_stats": null,
+   "derived": [
+    "story placement",
+    "description"
+   ]
+  }
+ ]
+}

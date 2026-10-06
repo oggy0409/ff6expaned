@@ -55,7 +55,15 @@ def gp(h):
 UNARMED_POWER = 10                                          # the fist the menu shows with an empty hand
 
 
+# TECH v0.9: the v0.8 equipment tools sit one level deeper in the v0.9 QA hub. FF6X_QA_V08_ROOT maps the v0.8
+# top-level choice to its v0.9 path, e.g. '{"0": [2, 1], "1": [2, 2, 0]}' (unset: v0.8 menu, unchanged)
+ROOT_MAP = json.loads(os.environ.get("FF6X_QA_V08_ROOT", "{}"))
+
+
 def menu(h, L, picks):
+    picks = list(picks)
+    if picks and str(picks[0]) in ROOT_MAP:
+        picks = list(ROOT_MAP[str(picks[0])]) + picks[1:]
     h.call_event(L["QaAccess6"], frames=1)
     return talk(h, picks)
 

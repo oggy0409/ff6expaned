@@ -1,0 +1,2299 @@
+# TECH v0.9 — exact patch tables (generated from build manifests, `tools/patch_table_v09.py`)
+
+## Delta v0.8 → v0.9 (every changed byte: `out/DELTA_v0.8_to_v0.9.csv`)
+
+### production: FF6X_Rev1_TECH_v0.8_PRODUCTION → FF6X_Rev1_TECH_v0.9_PRODUCTION — **8769 bytes**
+
+| bytes | owner |
+|---|---|
+| 3085 | I102_ITEM_ENGINE_CODE |
+| 1479 | I103_XC3_STUBS |
+| 1296 | FA XShopPropHi |
+| 709 | FA XShopProp |
+| 635 | FA XRareDescText |
+| 301 | I103_XC2_STUBS |
+| 275 | FA XDescText |
+| 231 | FA XRareName |
+| 128 | FA XItemAnimX |
+| 104 | FA XRareDescPtr |
+| 81 | FA XItemName |
+| 56 | FA XItemProp |
+| 54 | I103_XC0_STUBS |
+| 21 | V931_ITEM_DECREMENT |
+| 20 | V935_ITEM_ANIM |
+| 18 | V932_ITEM_ADD |
+| 16 | FA XDescPtr |
+| 15 | V933_FIND_VANILLA |
+| 9 | V930_ITEMROW |
+| 8 | FA XExtFlags |
+| 5 | V934_ATTACKNAME_ITEM |
+| 5 | V914_ITEMCMD_NAMEFLAG |
+| 5 | V915_ITEMCMD_CONSUME |
+| 5 | V913_ITEMTARGET_SPELL |
+| 5 | V955_SHOP_OWNED |
+| 4 | P999_CHECKSUM |
+| 4 | V920_CMD_DISPATCH |
+| 4 | V910_INITTARGET_CMD |
+| 4 | V965_CANEQ_ID |
+| 4 | V956_SHOP_CUR |
+| 4 | V967_CANEQ2_ID |
+| 4 | FA XRareDef |
+| 3 | V918_STEAL_OBTAIN |
+| 3 | V919_METAMORPH_OBTAIN |
+| 3 | V916_FIXATTACK_HOLD |
+| 3 | V940_ITEMCOLOR_ID |
+| 3 | V942_CANUSE |
+| 3 | V970_SELLALL_CLR |
+| 3 | V950_SHOP_TABLE_LIST |
+| 3 | V951_SHOP_TABLE_PRICE |
+| 3 | V952_SHOP_TABLE_TYPE |
+| 2 | V901_EVCMD_69 |
+| 2 | V902_EVCMD_6D |
+| 2 | V903_EVCMD_6E |
+| 2 | V911_ITEMTARGET_PROP |
+| 2 | V912_ITEMEFFECT_PROP |
+| 2 | V917_RETURN_HELD |
+| 2 | V988_RARE_OPEN |
+| 2 | V987_RARE_PAGE |
+| 2 | V941_ITEMCOLOR_PROP |
+| 2 | I303_ITEMDESC_LOAD |
+| 2 | V980_RARE_DESCPTR |
+| 2 | V981_RARE_DESCBASE |
+| 2 | V983_RARE_COUNT |
+| 2 | V986_RARE_LIST |
+| 2 | V984_RARE_NAMEPTR |
+| 2 | V946_USE_DEC |
+| 2 | V943_USE_CTX |
+| 2 | V944_RESTORE_ID |
+| 2 | V945_RESTORE_PROP |
+| 2 | I351_OPT_A_STORE |
+| 2 | I397_RELIC_STORE |
+| 2 | I401_RELICRM_CLR |
+| 2 | I406_RELICDESC_LD |
+| 2 | I408_RELICLDESC_LD |
+| 2 | V957_BUY_DESC |
+| 2 | I420_SELLDESC |
+| 2 | V958_SELL_DESC2 |
+| 2 | V959_BUY |
+| 2 | V962_BUY_TYPE |
+| 2 | V953_SHOP_ROW_NAME |
+| 2 | V960_BUY_NAME |
+| 2 | V961_SELL_NAME |
+| 2 | V963_SHOP_STAT |
+| 2 | V964_SELL_PRICE |
+| 2 | V966_CANEQ_PROP |
+| 2 | V969_SHOP_STATS_X |
+| 2 | I421_SELLITEM |
+| 2 | V968_CANEQ2_PROP |
+| 1 | I531_SPEAR_R |
+| 1 | I532_SPEAR_L |
+| 1 | I530_ANIM_ID |
+| 1 | I533_OGRE_NIX |
+| 1 | I521_BTLEND_WAGER |
+| 1 | I309_ITEM_SWAP_BITS |
+| 1 | I300_ITEMLIST_QTY |
+| 1 | I301_ITEMLIST_NAME |
+| 1 | V982_RARE_DESCBANK |
+| 1 | V985_RARE_NAMEBANK |
+| 1 | I320_PARTYEQ_NAME_ID |
+| 1 | I321_EQNAME |
+| 1 | I330_PREVIEW_SAVE |
+| 1 | I332_PREVIEW_PUT |
+| 1 | I333_PREVIEW_RESTORE |
+| 1 | I322_EQNAME_RH |
+| 1 | I323_EQNAME_LH |
+| 1 | I324_EQNAME_HEAD |
+| 1 | I325_EQNAME_BODY |
+| 1 | I326_EQNAME_RELIC1 |
+| 1 | I327_EQNAME_RELIC2 |
+| 1 | I340_REMOVEALL |
+| 1 | I341_OPT_2H_STORE |
+| 1 | I342_OPT_2H_DEC |
+| 1 | I343_OPT_W_STORE |
+| 1 | I344_OPT_W_DEC |
+| 1 | I345_OPT_S_STORE |
+| 1 | I346_OPT_S_DEC |
+| 1 | I347_OPT_G_STORE |
+| 1 | I348_OPT_G_DEC |
+| 1 | I349_OPT_H_STORE |
+| 1 | I350_OPT_H_DEC |
+| 1 | I352_OPT_A_DEC |
+| 1 | I357_BESTEQUIP |
+| 1 | I358_BEST2HAND |
+| 1 | I359_REMOVE_ID |
+| 1 | I360_REMOVE_INC |
+| 1 | I361_REMOVE_CLR |
+| 1 | I362_EQUIP_OLD |
+| 1 | I363_EQUIP_INC |
+| 1 | I365_EQUIP_STORE |
+| 1 | I366_EQUIP_DEC |
+| 1 | I367_HANDTXT_LH |
+| 1 | I369_HANDTXT_RH |
+| 1 | I371_HANDFX_LH |
+| 1 | I373_HANDFX_RH |
+| 1 | I377_CANEQ_LH |
+| 1 | I379_CANEQ_RH |
+| 1 | I394_RELIC_OLD |
+| 1 | I395_RELIC_INC |
+| 1 | I398_RELIC_DEC |
+| 1 | I399_RELICRM_ID |
+| 1 | I400_RELICRM_INC |
+| 1 | I404_RELICDESC_1 |
+| 1 | I405_RELICDESC_2 |
+| 1 | V954_SHOP_ROW_PRICE |
+| 1 | I430_CMP_ARMOR_ID |
+| 1 | I432_CMP_W_EQ1 |
+| 1 | I433_CMP_W_EQ2 |
+| 1 | I434_CMP_W_R |
+| 1 | I436_CMP_W_L |
+| 1 | I438_CMP_W_L2 |
+| 1 | I439_CMP_W_R2 |
+| 1 | I441_CMP_S_EQ1 |
+| 1 | I442_CMP_S_EQ2 |
+| 1 | I443_CMP_S_L |
+| 1 | I445_CMP_S_R |
+| 1 | I447_CMP_S_R2 |
+| 1 | I448_CMP_S_L2 |
+| 1 | I450_CMP_H_ID |
+| 1 | I425_EQUIPPED_CNT |
+| 1 | P001_BUILD_METADATA |
+
+### celes-tech: FF6X_Rev1_TECH_v0.8_CELES_TECH → FF6X_Rev1_TECH_v0.9_CELES_TECH — **8769 bytes**
+
+| bytes | owner |
+|---|---|
+| 3085 | I102_ITEM_ENGINE_CODE |
+| 1479 | I103_XC3_STUBS |
+| 1296 | FA XShopPropHi |
+| 709 | FA XShopProp |
+| 635 | FA XRareDescText |
+| 301 | I103_XC2_STUBS |
+| 275 | FA XDescText |
+| 231 | FA XRareName |
+| 128 | FA XItemAnimX |
+| 104 | FA XRareDescPtr |
+| 81 | FA XItemName |
+| 56 | FA XItemProp |
+| 54 | I103_XC0_STUBS |
+| 21 | V931_ITEM_DECREMENT |
+| 20 | V935_ITEM_ANIM |
+| 18 | V932_ITEM_ADD |
+| 16 | FA XDescPtr |
+| 15 | V933_FIND_VANILLA |
+| 9 | V930_ITEMROW |
+| 8 | FA XExtFlags |
+| 5 | V934_ATTACKNAME_ITEM |
+| 5 | V914_ITEMCMD_NAMEFLAG |
+| 5 | V915_ITEMCMD_CONSUME |
+| 5 | V913_ITEMTARGET_SPELL |
+| 5 | V955_SHOP_OWNED |
+| 4 | P999_CHECKSUM |
+| 4 | V920_CMD_DISPATCH |
+| 4 | V910_INITTARGET_CMD |
+| 4 | V965_CANEQ_ID |
+| 4 | V956_SHOP_CUR |
+| 4 | V967_CANEQ2_ID |
+| 4 | FA XRareDef |
+| 3 | V918_STEAL_OBTAIN |
+| 3 | V919_METAMORPH_OBTAIN |
+| 3 | V916_FIXATTACK_HOLD |
+| 3 | V940_ITEMCOLOR_ID |
+| 3 | V942_CANUSE |
+| 3 | V970_SELLALL_CLR |
+| 3 | V950_SHOP_TABLE_LIST |
+| 3 | V951_SHOP_TABLE_PRICE |
+| 3 | V952_SHOP_TABLE_TYPE |
+| 2 | V901_EVCMD_69 |
+| 2 | V902_EVCMD_6D |
+| 2 | V903_EVCMD_6E |
+| 2 | V911_ITEMTARGET_PROP |
+| 2 | V912_ITEMEFFECT_PROP |
+| 2 | V917_RETURN_HELD |
+| 2 | V988_RARE_OPEN |
+| 2 | V987_RARE_PAGE |
+| 2 | V941_ITEMCOLOR_PROP |
+| 2 | I303_ITEMDESC_LOAD |
+| 2 | V980_RARE_DESCPTR |
+| 2 | V981_RARE_DESCBASE |
+| 2 | V983_RARE_COUNT |
+| 2 | V986_RARE_LIST |
+| 2 | V984_RARE_NAMEPTR |
+| 2 | V946_USE_DEC |
+| 2 | V943_USE_CTX |
+| 2 | V944_RESTORE_ID |
+| 2 | V945_RESTORE_PROP |
+| 2 | I351_OPT_A_STORE |
+| 2 | I397_RELIC_STORE |
+| 2 | I401_RELICRM_CLR |
+| 2 | I406_RELICDESC_LD |
+| 2 | I408_RELICLDESC_LD |
+| 2 | V957_BUY_DESC |
+| 2 | I420_SELLDESC |
+| 2 | V958_SELL_DESC2 |
+| 2 | V959_BUY |
+| 2 | V962_BUY_TYPE |
+| 2 | V953_SHOP_ROW_NAME |
+| 2 | V960_BUY_NAME |
+| 2 | V961_SELL_NAME |
+| 2 | V963_SHOP_STAT |
+| 2 | V964_SELL_PRICE |
+| 2 | V966_CANEQ_PROP |
+| 2 | V969_SHOP_STATS_X |
+| 2 | I421_SELLITEM |
+| 2 | V968_CANEQ2_PROP |
+| 1 | I531_SPEAR_R |
+| 1 | I532_SPEAR_L |
+| 1 | I530_ANIM_ID |
+| 1 | I533_OGRE_NIX |
+| 1 | I521_BTLEND_WAGER |
+| 1 | I309_ITEM_SWAP_BITS |
+| 1 | I300_ITEMLIST_QTY |
+| 1 | I301_ITEMLIST_NAME |
+| 1 | V982_RARE_DESCBANK |
+| 1 | V985_RARE_NAMEBANK |
+| 1 | I320_PARTYEQ_NAME_ID |
+| 1 | I321_EQNAME |
+| 1 | I330_PREVIEW_SAVE |
+| 1 | I332_PREVIEW_PUT |
+| 1 | I333_PREVIEW_RESTORE |
+| 1 | I322_EQNAME_RH |
+| 1 | I323_EQNAME_LH |
+| 1 | I324_EQNAME_HEAD |
+| 1 | I325_EQNAME_BODY |
+| 1 | I326_EQNAME_RELIC1 |
+| 1 | I327_EQNAME_RELIC2 |
+| 1 | I340_REMOVEALL |
+| 1 | I341_OPT_2H_STORE |
+| 1 | I342_OPT_2H_DEC |
+| 1 | I343_OPT_W_STORE |
+| 1 | I344_OPT_W_DEC |
+| 1 | I345_OPT_S_STORE |
+| 1 | I346_OPT_S_DEC |
+| 1 | I347_OPT_G_STORE |
+| 1 | I348_OPT_G_DEC |
+| 1 | I349_OPT_H_STORE |
+| 1 | I350_OPT_H_DEC |
+| 1 | I352_OPT_A_DEC |
+| 1 | I357_BESTEQUIP |
+| 1 | I358_BEST2HAND |
+| 1 | I359_REMOVE_ID |
+| 1 | I360_REMOVE_INC |
+| 1 | I361_REMOVE_CLR |
+| 1 | I362_EQUIP_OLD |
+| 1 | I363_EQUIP_INC |
+| 1 | I365_EQUIP_STORE |
+| 1 | I366_EQUIP_DEC |
+| 1 | I367_HANDTXT_LH |
+| 1 | I369_HANDTXT_RH |
+| 1 | I371_HANDFX_LH |
+| 1 | I373_HANDFX_RH |
+| 1 | I377_CANEQ_LH |
+| 1 | I379_CANEQ_RH |
+| 1 | I394_RELIC_OLD |
+| 1 | I395_RELIC_INC |
+| 1 | I398_RELIC_DEC |
+| 1 | I399_RELICRM_ID |
+| 1 | I400_RELICRM_INC |
+| 1 | I404_RELICDESC_1 |
+| 1 | I405_RELICDESC_2 |
+| 1 | V954_SHOP_ROW_PRICE |
+| 1 | I430_CMP_ARMOR_ID |
+| 1 | I432_CMP_W_EQ1 |
+| 1 | I433_CMP_W_EQ2 |
+| 1 | I434_CMP_W_R |
+| 1 | I436_CMP_W_L |
+| 1 | I438_CMP_W_L2 |
+| 1 | I439_CMP_W_R2 |
+| 1 | I441_CMP_S_EQ1 |
+| 1 | I442_CMP_S_EQ2 |
+| 1 | I443_CMP_S_L |
+| 1 | I445_CMP_S_R |
+| 1 | I447_CMP_S_R2 |
+| 1 | I448_CMP_S_L2 |
+| 1 | I450_CMP_H_ID |
+| 1 | I425_EQUIPPED_CNT |
+| 1 | P001_BUILD_METADATA |
+
+### item-tech: FF6X_Rev1_TECH_v0.8_EQUIPMENT_QA → FF6X_Rev1_TECH_v0.9_CONSUMABLE_RARE_QA — **18468 bytes**
+
+| bytes | owner |
+|---|---|
+| 4398 | Q712_QA_DLG |
+| 3085 | I102_ITEM_ENGINE_CODE |
+| 2008 | ? |
+| 2000 | Q710_QA_EVENT |
+| 1661 | FA XRareDescText |
+| 1479 | I103_XC3_STUBS |
+| 1296 | FA XShopPropHi |
+| 709 | FA XShopProp |
+| 501 | FA XRareName |
+| 301 | I103_XC2_STUBS |
+| 275 | FA XDescText |
+| 128 | FA XItemAnimX |
+| 104 | FA XRareDescPtr |
+| 81 | FA XItemName |
+| 56 | FA XItemProp |
+| 54 | I103_XC0_STUBS |
+| 21 | V931_ITEM_DECREMENT |
+| 20 | V935_ITEM_ANIM |
+| 18 | V932_ITEM_ADD |
+| 16 | FA XDescPtr |
+| 15 | V933_FIND_VANILLA |
+| 9 | V930_ITEMROW |
+| 8 | FA XExtFlags |
+| 5 | V934_ATTACKNAME_ITEM |
+| 5 | V914_ITEMCMD_NAMEFLAG |
+| 5 | V915_ITEMCMD_CONSUME |
+| 5 | V913_ITEMTARGET_SPELL |
+| 5 | V955_SHOP_OWNED |
+| 4 | P999_CHECKSUM |
+| 4 | V920_CMD_DISPATCH |
+| 4 | V910_INITTARGET_CMD |
+| 4 | V965_CANEQ_ID |
+| 4 | V956_SHOP_CUR |
+| 4 | V967_CANEQ2_ID |
+| 3 | V918_STEAL_OBTAIN |
+| 3 | V919_METAMORPH_OBTAIN |
+| 3 | V916_FIXATTACK_HOLD |
+| 3 | V940_ITEMCOLOR_ID |
+| 3 | V942_CANUSE |
+| 3 | V970_SELLALL_CLR |
+| 3 | V950_SHOP_TABLE_LIST |
+| 3 | V951_SHOP_TABLE_PRICE |
+| 3 | V952_SHOP_TABLE_TYPE |
+| 2 | V901_EVCMD_69 |
+| 2 | V902_EVCMD_6D |
+| 2 | V903_EVCMD_6E |
+| 2 | V911_ITEMTARGET_PROP |
+| 2 | V912_ITEMEFFECT_PROP |
+| 2 | V917_RETURN_HELD |
+| 2 | V988_RARE_OPEN |
+| 2 | V987_RARE_PAGE |
+| 2 | V941_ITEMCOLOR_PROP |
+| 2 | I303_ITEMDESC_LOAD |
+| 2 | V980_RARE_DESCPTR |
+| 2 | V981_RARE_DESCBASE |
+| 2 | V983_RARE_COUNT |
+| 2 | V986_RARE_LIST |
+| 2 | V984_RARE_NAMEPTR |
+| 2 | V946_USE_DEC |
+| 2 | V943_USE_CTX |
+| 2 | V944_RESTORE_ID |
+| 2 | V945_RESTORE_PROP |
+| 2 | I351_OPT_A_STORE |
+| 2 | I397_RELIC_STORE |
+| 2 | I401_RELICRM_CLR |
+| 2 | I406_RELICDESC_LD |
+| 2 | I408_RELICLDESC_LD |
+| 2 | V957_BUY_DESC |
+| 2 | I420_SELLDESC |
+| 2 | V958_SELL_DESC2 |
+| 2 | V959_BUY |
+| 2 | V962_BUY_TYPE |
+| 2 | V953_SHOP_ROW_NAME |
+| 2 | V960_BUY_NAME |
+| 2 | V961_SELL_NAME |
+| 2 | V963_SHOP_STAT |
+| 2 | V964_SELL_PRICE |
+| 2 | V966_CANEQ_PROP |
+| 2 | V969_SHOP_STATS_X |
+| 2 | I421_SELLITEM |
+| 2 | V968_CANEQ2_PROP |
+| 1 | I531_SPEAR_R |
+| 1 | I532_SPEAR_L |
+| 1 | I530_ANIM_ID |
+| 1 | I533_OGRE_NIX |
+| 1 | I521_BTLEND_WAGER |
+| 1 | I309_ITEM_SWAP_BITS |
+| 1 | I300_ITEMLIST_QTY |
+| 1 | I301_ITEMLIST_NAME |
+| 1 | V982_RARE_DESCBANK |
+| 1 | V985_RARE_NAMEBANK |
+| 1 | I320_PARTYEQ_NAME_ID |
+| 1 | I321_EQNAME |
+| 1 | I330_PREVIEW_SAVE |
+| 1 | I332_PREVIEW_PUT |
+| 1 | I333_PREVIEW_RESTORE |
+| 1 | I322_EQNAME_RH |
+| 1 | I323_EQNAME_LH |
+| 1 | I324_EQNAME_HEAD |
+| 1 | I325_EQNAME_BODY |
+| 1 | I326_EQNAME_RELIC1 |
+| 1 | I327_EQNAME_RELIC2 |
+| 1 | I340_REMOVEALL |
+| 1 | I341_OPT_2H_STORE |
+| 1 | I342_OPT_2H_DEC |
+| 1 | I343_OPT_W_STORE |
+| 1 | I344_OPT_W_DEC |
+| 1 | I345_OPT_S_STORE |
+| 1 | I346_OPT_S_DEC |
+| 1 | I347_OPT_G_STORE |
+| 1 | I348_OPT_G_DEC |
+| 1 | I349_OPT_H_STORE |
+| 1 | I350_OPT_H_DEC |
+| 1 | I352_OPT_A_DEC |
+| 1 | I357_BESTEQUIP |
+| 1 | I358_BEST2HAND |
+| 1 | I359_REMOVE_ID |
+| 1 | I360_REMOVE_INC |
+| 1 | I361_REMOVE_CLR |
+| 1 | I362_EQUIP_OLD |
+| 1 | I363_EQUIP_INC |
+| 1 | I365_EQUIP_STORE |
+| 1 | I366_EQUIP_DEC |
+| 1 | I367_HANDTXT_LH |
+| 1 | I369_HANDTXT_RH |
+| 1 | I371_HANDFX_LH |
+| 1 | I373_HANDFX_RH |
+| 1 | I377_CANEQ_LH |
+| 1 | I379_CANEQ_RH |
+| 1 | I394_RELIC_OLD |
+| 1 | I395_RELIC_INC |
+| 1 | I398_RELIC_DEC |
+| 1 | I399_RELICRM_ID |
+| 1 | I400_RELICRM_INC |
+| 1 | I404_RELICDESC_1 |
+| 1 | I405_RELICDESC_2 |
+| 1 | V954_SHOP_ROW_PRICE |
+| 1 | I430_CMP_ARMOR_ID |
+| 1 | I432_CMP_W_EQ1 |
+| 1 | I433_CMP_W_EQ2 |
+| 1 | I434_CMP_W_R |
+| 1 | I436_CMP_W_L |
+| 1 | I438_CMP_W_L2 |
+| 1 | I439_CMP_W_R2 |
+| 1 | I441_CMP_S_EQ1 |
+| 1 | I442_CMP_S_EQ2 |
+| 1 | I443_CMP_S_L |
+| 1 | I445_CMP_S_R |
+| 1 | I447_CMP_S_R2 |
+| 1 | I448_CMP_S_L2 |
+| 1 | I450_CMP_H_ID |
+| 1 | I425_EQUIPPED_CNT |
+| 1 | P001_BUILD_METADATA |
+| 1 | P100_DLG_HOOK |
+
+Owners: `I1xx` = v0.7.1 item engine records (tables, engine code, stub claims, retargets, hooks whose JSR/JMP operand moved with the re-assembled stubs), `V9xx` = TECH v0.9 hook sites (patches/item_v09_hooks.py), `Q7xx` = QA harness. Nothing outside the declared item regions, the v0.9 hook sites, the metadata and the checksum changes (selftest 48).
+
+## Full patch tables of the three v0.9 ROMs
+
+Long rows (>512 bytes) show length + SHA-1 of the new bytes; byte-exact data is in the `.manifest.json` / `.diff.csv` next to each ROM.
+
+## production — `FF6X_Rev1_TECH_v0.9_PRODUCTION.sfc`
+
+SHA-1 `99cd74dfac5b91756120992dd1560534b40c66c3` · CRC32 `FF753A76` · SNES checksum `DB25` · status: PRODUCTION BRANCH v0.9 - v0.8 + 8 extended consumables ($127-$12E), extended shops, FF6X rare items
+
+| ID | PC | SNES | Len | Original | New | Consumer / reason |
+|---|---|---|---|---|---|---|
+| P000_EXPAND_4MIB | 300000–3FFFFF | F0:0000–FF:FFFF | 1048576 | `` | `1048576 B sha1 3de8699aadf9` | All F0-FF expansion allocations. — Expand 3 MiB -> 4 MiB HiROM. Header ROM-size byte C0:FFD7 is already 0x0C (4 MiB class) in Rev 1; unchanged. |
+| P001_BUILD_METADATA | 300000–30003F | F0:0000–F0:003F | 64 | `FF fill (expansion)` | `46 46 36 58 2D 45 45 00 01 00 09 00 00 02 00 00 70 72 6F  …` | tools/verify (offline). No runtime consumer. — Machine-readable build identity for QA tooling. |
+| P101_EXP_DLG_TABLE | 334000–33402A | F3:4000–F3:402A | 43 | `FF fill (expansion)` | `24 37 2F 20 2D 32 28 2E 2D 7F 23 28 20 2B 2E 26 34 24 7F  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1000: 'EXPANSION DIALOGUE ERROR:{n}ID OUT OF RANGE.' |
+| P101_EXP_DLG_TABLE | 330000–330003 | F3:0000–F3:0003 | 4 | `FF fill (expansion)` | `00 40 F3 00` | P100 hook (LDA.l table,X) — 1 x 4-byte pointers for dialogue IDs $1000-$1000 |
+| P100_DLG_HOOK | 301000–301032 | F0:1000–F0:1032 | 51 | `FF fill (expansion)` | `C2 20 A5 D0 C9 00 10 B0 0A E2 20 A9 CD 85 CB 5C C3 7F C0  …` | JML from C0:7FBF (GetDlgPtr) — Dialogue-pointer hook: vanilla IDs unchanged, IDs $1000+ from expansion table |
+| P100_DLG_HOOK | 007FBF–007FC2 | C0:7FBF–C0:7FC2 | 4 | `A9 CD 85 CB` | `5C 00 10 F0` | GetDlgPtr C0:7FBF; callers C0:A49A ($48), C0:A4E1 ($4B), C0:D493 (debug) — Replace LDA #$CD / STA $CB with JML $F01000 (displaced code re-executed in hook) |
+| M101_MAPX_EVENT_TRIGGERS | 360000–361ABD | F6:0000–F6:1ABD | 6846 | `6846 B` | `6846 B sha1 b3146a0ecfee` | 12 retargeted consumers — EVENT_TRIGGERS: 1164 vanilla records (maps $000-$19F) + 0 content records; 513 pointers |
+| M102_MAPX_NPC_PROPS | 364000–36911A | F6:4000–F6:911A | 20763 | `20763 B` | `20763 B sha1 6474df187793` | 21 retargeted consumers — NPC_PROPS: 2193 vanilla records (maps $000-$19F) + 0 content records; 513 pointers |
+| M103_MAPX_SHORT_ENTRANCES | 36C000–36DE77 | F6:C000–F6:DE77 | 7800 | `7800 B` | `7800 B sha1 021a69e7857f` | 19 retargeted consumers — SHORT_ENTRANCES: 1129 vanilla records (maps $000-$1FF) + 0 content records; 513 pointers |
+| M104_MAPX_LONG_ENTRANCES | 370000–370829 | F7:0000–F7:0829 | 2090 | `2090 B` | `2090 B sha1 0a4acc91a094` | 19 retargeted consumers — LONG_ENTRANCES: 152 vanilla records (maps $000-$1FF) + 0 content records; 513 pointers |
+| M105_MAPX_TREASURE | 372000–372997 | F7:2000–F7:2997 | 2456 | `2456 B` | `2456 B sha1 5067daac4c8a` | 12 retargeted consumers — TREASURE: 286 vanilla records (maps $000-$19E) + 0 content records; 513 pointers |
+| M106_MAPX_MAP_PROPS | 374000–3781FF | F7:4000–F7:81FF | 16896 | `16896 B` | `16896 B sha1 020634b27316` | LoadMapProp C0:1CAD (LDA.l MapProp,X; X = map*33) — 512 x 33-byte rows: vanilla $000-$19E copied; content rows [] |
+| M107_MAPX_SUBTILEMAP_PTRS | 378400–378FFF | F7:8400–F7:8FFF | 3072 | `3072 B` | `3072 B sha1 ce87a8a1f7a9` | LoadMapTiles C0:2883 (BG1/BG2/BG3, 10-bit index * 3) — 1024 layout pointers: vanilla $000-$15E copied, unassigned = entry $000 value; content [] |
+| M200_RETARGET_EVENT_TRIGGERS | 00BCAF–00BCB1 | C0:BCAF–C0:BCB1 | 3 | `02 00 C4` | `02 00 F6` | C0:BCAE opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0002 -> F6:0002 (ptr base + 2) |
+| M200_RETARGET_EVENT_TRIGGERS | 00BCB5–00BCB7 | C0:BCB5–C0:BCB7 | 3 | `00 00 C4` | `00 00 F6` | C0:BCB4 opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0000 -> F6:0000 (ptr base + 0) |
+| M200_RETARGET_EVENT_TRIGGERS | 00BCBE–00BCC0 | C0:BCBE–C0:BCC0 | 3 | `00 00 C4` | `00 00 F6` | C0:BCBD opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0000 -> F6:0000 (ptr base + 0) |
+| M200_RETARGET_EVENT_TRIGGERS | 00BCD4–00BCD6 | C0:BCD4–C0:BCD6 | 3 | `02 00 C4` | `02 00 F6` | C0:BCD3 opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0002 -> F6:0002 (ptr base + 2) |
+| M200_RETARGET_EVENT_TRIGGERS | 00BCEE–00BCF0 | C0:BCEE–C0:BCF0 | 3 | `04 00 C4` | `04 00 F6` | C0:BCED opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0004 -> F6:0004 (ptr base + 4) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E2177–2E2179 | EE:2177–EE:2179 | 3 | `00 00 C4` | `00 00 F6` | EE:2176 opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0000 -> F6:0000 (ptr base + 0) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E217D–2E217F | EE:217D–EE:217F | 3 | `02 00 C4` | `02 00 F6` | EE:217C opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0002 -> F6:0002 (ptr base + 2) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E218C–2E218E | EE:218C–EE:218E | 3 | `00 00 C4` | `00 00 F6` | EE:218B opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0000 -> F6:0000 (ptr base + 0) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E2194–2E2196 | EE:2194–EE:2196 | 3 | `01 00 C4` | `01 00 F6` | EE:2193 opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0001 -> F6:0001 (ptr base + 1) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E219C–2E219E | EE:219C–EE:219E | 3 | `02 00 C4` | `02 00 F6` | EE:219B opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0002 -> F6:0002 (ptr base + 2) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E21A5–2E21A7 | EE:21A5–EE:21A7 | 3 | `03 00 C4` | `03 00 F6` | EE:21A4 opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0003 -> F6:0003 (ptr base + 3) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E21AD–2E21AF | EE:21AD–EE:21AF | 3 | `04 00 C4` | `04 00 F6` | EE:21AC opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0004 -> F6:0004 (ptr base + 4) |
+| M200_RETARGET_NPC_PROPS | 0052BD–0052BF | C0:52BD–C0:52BF | 3 | `12 1A C4` | `02 40 F6` | C0:52BC opcode BF (long,X) reads NPC_PROPS — operand C4:1A12 -> F6:4002 (ptr base + 2) |
+| M200_RETARGET_NPC_PROPS | 0052C3–0052C5 | C0:52C3–C0:52C5 | 3 | `10 1A C4` | `00 40 F6` | C0:52C2 opcode BF (long,X) reads NPC_PROPS — operand C4:1A10 -> F6:4000 (ptr base + 0) |
+| M200_RETARGET_NPC_PROPS | 0052D5–0052D7 | C0:52D5–C0:52D7 | 3 | `10 1A C4` | `00 40 F6` | C0:52D4 opcode BF (long,X) reads NPC_PROPS — operand C4:1A10 -> F6:4000 (ptr base + 0) |
+| M200_RETARGET_NPC_PROPS | 0052DC–0052DE | C0:52DC–C0:52DE | 3 | `11 1A C4` | `01 40 F6` | C0:52DB opcode BF (long,X) reads NPC_PROPS — operand C4:1A11 -> F6:4001 (ptr base + 1) |
+| M200_RETARGET_NPC_PROPS | 0052E3–0052E5 | C0:52E3–C0:52E5 | 3 | `12 1A C4` | `02 40 F6` | C0:52E2 opcode BF (long,X) reads NPC_PROPS — operand C4:1A12 -> F6:4002 (ptr base + 2) |
+| M200_RETARGET_NPC_PROPS | 0052EC–0052EE | C0:52EC–C0:52EE | 3 | `12 1A C4` | `02 40 F6` | C0:52EB opcode BF (long,X) reads NPC_PROPS — operand C4:1A12 -> F6:4002 (ptr base + 2) |
+| M200_RETARGET_NPC_PROPS | 0052F9–0052FB | C0:52F9–C0:52FB | 3 | `12 1A C4` | `02 40 F6` | C0:52F8 opcode BF (long,X) reads NPC_PROPS — operand C4:1A12 -> F6:4002 (ptr base + 2) |
+| M200_RETARGET_NPC_PROPS | 005306–005308 | C0:5306–C0:5308 | 3 | `12 1A C4` | `02 40 F6` | C0:5305 opcode BF (long,X) reads NPC_PROPS — operand C4:1A12 -> F6:4002 (ptr base + 2) |
+| M200_RETARGET_NPC_PROPS | 005322–005324 | C0:5322–C0:5324 | 3 | `14 1A C4` | `04 40 F6` | C0:5321 opcode BF (long,X) reads NPC_PROPS — operand C4:1A14 -> F6:4004 (ptr base + 4) |
+| M200_RETARGET_NPC_PROPS | 00532D–00532F | C0:532D–C0:532F | 3 | `14 1A C4` | `04 40 F6` | C0:532C opcode BF (long,X) reads NPC_PROPS — operand C4:1A14 -> F6:4004 (ptr base + 4) |
+| M200_RETARGET_NPC_PROPS | 00533B–00533D | C0:533B–C0:533D | 3 | `15 1A C4` | `05 40 F6` | C0:533A opcode BF (long,X) reads NPC_PROPS — operand C4:1A15 -> F6:4005 (ptr base + 5) |
+| M200_RETARGET_NPC_PROPS | 00535B–00535D | C0:535B–C0:535D | 3 | `15 1A C4` | `05 40 F6` | C0:535A opcode BF (long,X) reads NPC_PROPS — operand C4:1A15 -> F6:4005 (ptr base + 5) |
+| M200_RETARGET_NPC_PROPS | 00536A–00536C | C0:536A–C0:536C | 3 | `16 1A C4` | `06 40 F6` | C0:5369 opcode BF (long,X) reads NPC_PROPS — operand C4:1A16 -> F6:4006 (ptr base + 6) |
+| M200_RETARGET_NPC_PROPS | 005374–005376 | C0:5374–C0:5376 | 3 | `17 1A C4` | `07 40 F6` | C0:5373 opcode BF (long,X) reads NPC_PROPS — operand C4:1A17 -> F6:4007 (ptr base + 7) |
+| M200_RETARGET_NPC_PROPS | 005380–005382 | C0:5380–C0:5382 | 3 | `17 1A C4` | `07 40 F6` | C0:537F opcode BF (long,X) reads NPC_PROPS — operand C4:1A17 -> F6:4007 (ptr base + 7) |
+| M200_RETARGET_NPC_PROPS | 00538B–00538D | C0:538B–C0:538D | 3 | `17 1A C4` | `07 40 F6` | C0:538A opcode BF (long,X) reads NPC_PROPS — operand C4:1A17 -> F6:4007 (ptr base + 7) |
+| M200_RETARGET_NPC_PROPS | 005398–00539A | C0:5398–C0:539A | 3 | `18 1A C4` | `08 40 F6` | C0:5397 opcode BF (long,X) reads NPC_PROPS — operand C4:1A18 -> F6:4008 (ptr base + 8) |
+| M200_RETARGET_NPC_PROPS | 0053AE–0053B0 | C0:53AE–C0:53B0 | 3 | `18 1A C4` | `08 40 F6` | C0:53AD opcode BF (long,X) reads NPC_PROPS — operand C4:1A18 -> F6:4008 (ptr base + 8) |
+| M200_RETARGET_NPC_PROPS | 0053BD–0053BF | C0:53BD–C0:53BF | 3 | `18 1A C4` | `08 40 F6` | C0:53BC opcode BF (long,X) reads NPC_PROPS — operand C4:1A18 -> F6:4008 (ptr base + 8) |
+| M200_RETARGET_NPC_PROPS | 0053D1–0053D3 | C0:53D1–C0:53D3 | 3 | `18 1A C4` | `08 40 F6` | C0:53D0 opcode BF (long,X) reads NPC_PROPS — operand C4:1A18 -> F6:4008 (ptr base + 8) |
+| M200_RETARGET_NPC_PROPS | 0053E4–0053E6 | C0:53E4–C0:53E6 | 3 | `18 1A C4` | `08 40 F6` | C0:53E3 opcode BF (long,X) reads NPC_PROPS — operand C4:1A18 -> F6:4008 (ptr base + 8) |
+| M200_RETARGET_SHORT_ENTRANCES | 001A7E–001A80 | C0:1A7E–C0:1A80 | 3 | `02 BB DF` | `02 C0 F6` | C0:1A7D opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 001A84–001A86 | C0:1A84–C0:1A86 | 3 | `00 BB DF` | `00 C0 F6` | C0:1A83 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB00 -> F6:C000 (ptr base + 0) |
+| M200_RETARGET_SHORT_ENTRANCES | 001A90–001A92 | C0:1A90–C0:1A92 | 3 | `00 BB DF` | `00 C0 F6` | C0:1A8F opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB00 -> F6:C000 (ptr base + 0) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AAB–001AAD | C0:1AAB–C0:1AAD | 3 | `02 BB DF` | `02 C0 F6` | C0:1AAA opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AB7–001AB9 | C0:1AB7–C0:1AB9 | 3 | `02 BB DF` | `02 C0 F6` | C0:1AB6 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AC3–001AC5 | C0:1AC3–C0:1AC5 | 3 | `02 BB DF` | `02 C0 F6` | C0:1AC2 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AD2–001AD4 | C0:1AD2–C0:1AD4 | 3 | `04 BB DF` | `04 C0 F6` | C0:1AD1 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB04 -> F6:C004 (ptr base + 4) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AE7–001AE9 | C0:1AE7–C0:1AE9 | 3 | `04 BB DF` | `04 C0 F6` | C0:1AE6 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB04 -> F6:C004 (ptr base + 4) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AF1–001AF3 | C0:1AF1–C0:1AF3 | 3 | `03 BB DF` | `03 C0 F6` | C0:1AF0 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB03 -> F6:C003 (ptr base + 3) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AFE–001B00 | C0:1AFE–C0:1B00 | 3 | `03 BB DF` | `03 C0 F6` | C0:1AFD opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB03 -> F6:C003 (ptr base + 3) |
+| M200_RETARGET_SHORT_ENTRANCES | 001B0C–001B0E | C0:1B0C–C0:1B0E | 3 | `03 BB DF` | `03 C0 F6` | C0:1B0B opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB03 -> F6:C003 (ptr base + 3) |
+| M200_RETARGET_SHORT_ENTRANCES | 001B2D–001B2F | C0:1B2D–C0:1B2F | 3 | `02 BB DF` | `02 C0 F6` | C0:1B2C opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 001B5F–001B61 | C0:1B5F–C0:1B61 | 3 | `03 BB DF` | `03 C0 F6` | C0:1B5E opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB03 -> F6:C003 (ptr base + 3) |
+| M200_RETARGET_SHORT_ENTRANCES | 2E20EA–2E20EC | EE:20EA–EE:20EC | 3 | `00 BB DF` | `00 C0 F6` | EE:20E9 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB00 -> F6:C000 (ptr base + 0) |
+| M200_RETARGET_SHORT_ENTRANCES | 2E20F0–2E20F2 | EE:20F0–EE:20F2 | 3 | `02 BB DF` | `02 C0 F6` | EE:20EF opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 2E20FF–2E2101 | EE:20FF–EE:2101 | 3 | `00 BB DF` | `00 C0 F6` | EE:20FE opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB00 -> F6:C000 (ptr base + 0) |
+| M200_RETARGET_SHORT_ENTRANCES | 2E2107–2E2109 | EE:2107–EE:2109 | 3 | `01 BB DF` | `01 C0 F6` | EE:2106 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB01 -> F6:C001 (ptr base + 1) |
+| M200_RETARGET_SHORT_ENTRANCES | 2E2111–2E2113 | EE:2111–EE:2113 | 3 | `02 BB DF` | `02 C0 F6` | EE:2110 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 2E213D–2E213F | EE:213D–EE:213F | 3 | `04 BB DF` | `04 C0 F6` | EE:213C opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB04 -> F6:C004 (ptr base + 4) |
+| M200_RETARGET_LONG_ENTRANCES | 0018EB–0018ED | C0:18EB–C0:18ED | 3 | `82 F4 ED` | `02 00 F7` | C0:18EA opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F482 -> F7:0002 (ptr base + 2) |
+| M200_RETARGET_LONG_ENTRANCES | 0018F1–0018F3 | C0:18F1–C0:18F3 | 3 | `80 F4 ED` | `00 00 F7` | C0:18F0 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F480 -> F7:0000 (ptr base + 0) |
+| M200_RETARGET_LONG_ENTRANCES | 001904–001906 | C0:1904–C0:1906 | 3 | `82 F4 ED` | `02 00 F7` | C0:1903 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F482 -> F7:0002 (ptr base + 2) |
+| M200_RETARGET_LONG_ENTRANCES | 00190C–00190E | C0:190C–C0:190E | 3 | `81 F4 ED` | `01 00 F7` | C0:190B opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F481 -> F7:0001 (ptr base + 1) |
+| M200_RETARGET_LONG_ENTRANCES | 001917–001919 | C0:1917–C0:1919 | 3 | `80 F4 ED` | `00 00 F7` | C0:1916 opcode FF (long,X) reads LONG_ENTRANCES — operand ED:F480 -> F7:0000 (ptr base + 0) |
+| M200_RETARGET_LONG_ENTRANCES | 00191F–001921 | C0:191F–C0:1921 | 3 | `80 F4 ED` | `00 00 F7` | C0:191E opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F480 -> F7:0000 (ptr base + 0) |
+| M200_RETARGET_LONG_ENTRANCES | 001930–001932 | C0:1930–C0:1932 | 3 | `80 F4 ED` | `00 00 F7` | C0:192F opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F480 -> F7:0000 (ptr base + 0) |
+| M200_RETARGET_LONG_ENTRANCES | 00193B–00193D | C0:193B–C0:193D | 3 | `81 F4 ED` | `01 00 F7` | C0:193A opcode FF (long,X) reads LONG_ENTRANCES — operand ED:F481 -> F7:0001 (ptr base + 1) |
+| M200_RETARGET_LONG_ENTRANCES | 001943–001945 | C0:1943–C0:1945 | 3 | `81 F4 ED` | `01 00 F7` | C0:1942 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F481 -> F7:0001 (ptr base + 1) |
+| M200_RETARGET_LONG_ENTRANCES | 001964–001966 | C0:1964–C0:1966 | 3 | `83 F4 ED` | `03 00 F7` | C0:1963 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F483 -> F7:0003 (ptr base + 3) |
+| M200_RETARGET_LONG_ENTRANCES | 001970–001972 | C0:1970–C0:1972 | 3 | `83 F4 ED` | `03 00 F7` | C0:196F opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F483 -> F7:0003 (ptr base + 3) |
+| M200_RETARGET_LONG_ENTRANCES | 00197C–00197E | C0:197C–C0:197E | 3 | `83 F4 ED` | `03 00 F7` | C0:197B opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F483 -> F7:0003 (ptr base + 3) |
+| M200_RETARGET_LONG_ENTRANCES | 00198B–00198D | C0:198B–C0:198D | 3 | `85 F4 ED` | `05 00 F7` | C0:198A opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F485 -> F7:0005 (ptr base + 5) |
+| M200_RETARGET_LONG_ENTRANCES | 0019A0–0019A2 | C0:19A0–C0:19A2 | 3 | `85 F4 ED` | `05 00 F7` | C0:199F opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F485 -> F7:0005 (ptr base + 5) |
+| M200_RETARGET_LONG_ENTRANCES | 0019AA–0019AC | C0:19AA–C0:19AC | 3 | `84 F4 ED` | `04 00 F7` | C0:19A9 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F484 -> F7:0004 (ptr base + 4) |
+| M200_RETARGET_LONG_ENTRANCES | 0019B7–0019B9 | C0:19B7–C0:19B9 | 3 | `84 F4 ED` | `04 00 F7` | C0:19B6 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F484 -> F7:0004 (ptr base + 4) |
+| M200_RETARGET_LONG_ENTRANCES | 0019C5–0019C7 | C0:19C5–C0:19C7 | 3 | `84 F4 ED` | `04 00 F7` | C0:19C4 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F484 -> F7:0004 (ptr base + 4) |
+| M200_RETARGET_LONG_ENTRANCES | 0019E6–0019E8 | C0:19E6–C0:19E8 | 3 | `83 F4 ED` | `03 00 F7` | C0:19E5 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F483 -> F7:0003 (ptr base + 3) |
+| M200_RETARGET_LONG_ENTRANCES | 001A15–001A17 | C0:1A15–C0:1A17 | 3 | `84 F4 ED` | `04 00 F7` | C0:1A14 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F484 -> F7:0004 (ptr base + 4) |
+| M200_RETARGET_TREASURE | 0015DE–0015E0 | C0:15DE–C0:15E0 | 3 | `F6 82 ED` | `02 20 F7` | C0:15DD opcode BF (long,X) reads TREASURE — operand ED:82F6 -> F7:2002 (ptr base + 2) |
+| M200_RETARGET_TREASURE | 0015E4–0015E6 | C0:15E4–C0:15E6 | 3 | `F4 82 ED` | `00 20 F7` | C0:15E3 opcode BF (long,X) reads TREASURE — operand ED:82F4 -> F7:2000 (ptr base + 0) |
+| M200_RETARGET_TREASURE | 0015F2–0015F4 | C0:15F2–C0:15F4 | 3 | `34 86 ED` | `02 24 F7` | C0:15F1 opcode BF (long,X) reads TREASURE — operand ED:8634 -> F7:2402 (data base + 0) |
+| M200_RETARGET_TREASURE | 0015F8–0015FA | C0:15F8–C0:15FA | 3 | `35 86 ED` | `03 24 F7` | C0:15F7 opcode BF (long,X) reads TREASURE — operand ED:8635 -> F7:2403 (data base + 1) |
+| M200_RETARGET_TREASURE | 0015FF–001601 | C0:15FF–C0:1601 | 3 | `36 86 ED` | `04 24 F7` | C0:15FE opcode BF (long,X) reads TREASURE — operand ED:8636 -> F7:2404 (data base + 2) |
+| M200_RETARGET_TREASURE | 00160A–00160C | C0:160A–C0:160C | 3 | `36 86 ED` | `04 24 F7` | C0:1609 opcode BF (long,X) reads TREASURE — operand ED:8636 -> F7:2404 (data base + 2) |
+| M200_RETARGET_TREASURE | 004BDB–004BDD | C0:4BDB–C0:4BDD | 3 | `F6 82 ED` | `02 20 F7` | C0:4BDA opcode BF (long,X) reads TREASURE — operand ED:82F6 -> F7:2002 (ptr base + 2) |
+| M200_RETARGET_TREASURE | 004BE1–004BE3 | C0:4BE1–C0:4BE3 | 3 | `F4 82 ED` | `00 20 F7` | C0:4BE0 opcode BF (long,X) reads TREASURE — operand ED:82F4 -> F7:2000 (ptr base + 0) |
+| M200_RETARGET_TREASURE | 004BED–004BEF | C0:4BED–C0:4BEF | 3 | `34 86 ED` | `02 24 F7` | C0:4BEC opcode BF (long,X) reads TREASURE — operand ED:8634 -> F7:2402 (data base + 0) |
+| M200_RETARGET_TREASURE | 004BF5–004BF7 | C0:4BF5–C0:4BF7 | 3 | `35 86 ED` | `03 24 F7` | C0:4BF4 opcode BF (long,X) reads TREASURE — operand ED:8635 -> F7:2403 (data base + 1) |
+| M200_RETARGET_TREASURE | 004C09–004C0B | C0:4C09–C0:4C0B | 3 | `38 86 ED` | `06 24 F7` | C0:4C08 opcode BF (long,X) reads TREASURE — operand ED:8638 -> F7:2406 (data base + 4) |
+| M200_RETARGET_TREASURE | 004C0F–004C11 | C0:4C0F–C0:4C11 | 3 | `36 86 ED` | `04 24 F7` | C0:4C0E opcode BF (long,X) reads TREASURE — operand ED:8636 -> F7:2404 (data base + 2) |
+| M200_RETARGET_MAP_PROPS | 001CC0–001CC2 | C0:1CC0–C0:1CC2 | 3 | `00 8F ED` | `00 40 F7` | C0:1CBF opcode BF (long,X) reads MAP_PROPS — operand ED:8F00 -> F7:4000 (data base + 0) |
+| M200_RETARGET_SUBTILEMAP_PTRS | 002893–002895 | C0:2893–C0:2895 | 3 | `90 CD D9` | `00 84 F7` | C0:2892 opcode BF (long,X) reads SUBTILEMAP_PTRS — operand D9:CD90 -> F7:8400 (ptr base + 0) |
+| M200_RETARGET_SUBTILEMAP_PTRS | 0028A0–0028A2 | C0:28A0–C0:28A2 | 3 | `92 CD D9` | `02 84 F7` | C0:289F opcode BF (long,X) reads SUBTILEMAP_PTRS — operand D9:CD92 -> F7:8402 (ptr base + 2) |
+| M200_RETARGET_SUBTILEMAP_PTRS | 0028E7–0028E9 | C0:28E7–C0:28E9 | 3 | `90 CD D9` | `00 84 F7` | C0:28E6 opcode BF (long,X) reads SUBTILEMAP_PTRS — operand D9:CD90 -> F7:8400 (ptr base + 0) |
+| M200_RETARGET_SUBTILEMAP_PTRS | 0028F4–0028F6 | C0:28F4–C0:28F6 | 3 | `92 CD D9` | `02 84 F7` | C0:28F3 opcode BF (long,X) reads SUBTILEMAP_PTRS — operand D9:CD92 -> F7:8402 (ptr base + 2) |
+| M200_RETARGET_SUBTILEMAP_PTRS | 00293D–00293F | C0:293D–C0:293F | 3 | `90 CD D9` | `00 84 F7` | C0:293C opcode BF (long,X) reads SUBTILEMAP_PTRS — operand D9:CD90 -> F7:8400 (ptr base + 0) |
+| M200_RETARGET_SUBTILEMAP_PTRS | 00294A–00294C | C0:294A–C0:294C | 3 | `92 CD D9` | `02 84 F7` | C0:2949 opcode BF (long,X) reads SUBTILEMAP_PTRS — operand D9:CD92 -> F7:8402 (ptr base + 2) |
+| M300_NPC_EVENT_ROUTER | 301100–301146 | F0:1100–F0:1146 | 71 | `FF fill (expansion)` | `29 03 C9 03 D0 3D BF 04 40 F6 30 35 C2 20 B9 89 08 C9 00  …` | JSL from C0:52E6 (InitNPCs) — NPC event router: vanilla NPCs unchanged; non-special NPCs with event field $3xxxx -> vector table |
+| M300_NPC_EVENT_ROUTER | 0052E6–0052EA | C0:52E6–C0:52EA | 5 | `29 03 99 8B 08` | `22 00 11 F0 EA` | InitNPCs C0:52E6 (after LDA NPCProp::EventPtr+2,X) — AND #$03 / STA $088B,Y -> JSL F0:1100 / NOP (router re-executes both for vanilla NPCs) |
+| N101_MONSTER_PROP | 380000–383FFF | F8:0000–F8:3FFF | 16384 | `16384 B` | `16384 B sha1 cc10c896791d` | 25 retargeted consumers — MONSTER_PROP relocated (16384 bytes); vanilla entries byte-identical; content: none |
+| N102_MONSTER_NAME | 384000–3853FF | F8:4000–F8:53FF | 5120 | `5120 B` | `5120 B sha1 6d06670b01f0` | 6 retargeted consumers — MONSTER_NAME relocated (5120 bytes); vanilla entries byte-identical; content: none |
+| N103_MONSTER_SPECIAL_NAME | 385400–3867FF | F8:5400–F8:67FF | 5120 | `5120 B` | `5120 B sha1 8809892d9dee` | 2 retargeted consumers — MONSTER_SPECIAL_NAME relocated (5120 bytes); vanilla entries byte-identical; content: none |
+| N104_MONSTER_ITEMS | 386800–386FFF | F8:6800–F8:6FFF | 2048 | `2048 B` | `2048 B sha1 d14741aa8484` | 2 retargeted consumers — MONSTER_ITEMS relocated (2048 bytes); vanilla entries byte-identical; content: none |
+| N105_MONSTER_CONTROL | 387000–3877FF | F8:7000–F8:77FF | 2048 | `2048 B` | `2048 B sha1 20a6905d7e71` | 3 retargeted consumers — MONSTER_CONTROL relocated (2048 bytes); vanilla entries byte-identical; content: none |
+| N106_MONSTER_SKETCH | 387800–387BFF | F8:7800–F8:7BFF | 1024 | `1024 B` | `1024 B sha1 eab5ef375cb0` | 1 retargeted consumers — MONSTER_SKETCH relocated (1024 bytes); vanilla entries byte-identical; content: none |
+| N107_MONSTER_SPECIAL_ANIM | 387C00–387DFF | F8:7C00–F8:7DFF | 512 | `FF fill (expansion)` | `03 03 0D 18 07 0E 1B 21 0C 10 0B 0C 0C 00 1C 0E 12 0B 15  …` | 2 retargeted consumers — MONSTER_SPECIAL_ANIM relocated (512 bytes); vanilla entries byte-identical; content: none |
+| N108_MONSTER_OVERLAP | 387E00–387FFF | F8:7E00–F8:7FFF | 512 | `FF fill (expansion)` | `00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  …` | 1 retargeted consumers — MONSTER_OVERLAP relocated (512 bytes); vanilla entries byte-identical; content: none |
+| N109_MONSTER_GFX_PROP | 388000–388A9A | F8:8000–F8:8A9A | 2715 | `2715 B` | `2715 B sha1 4c0ef7d493c5` | 15 retargeted consumers — MONSTER_GFX_PROP relocated (2715 bytes); vanilla entries byte-identical; content: none |
+| N112_AI_SCRIPT_PTRS | 390000–3903FF | F9:0000–F9:03FF | 1024 | `1024 B` | `1024 B sha1 1df07f0e8683` | 1 retargeted consumers — AI_SCRIPT_PTRS relocated (1024 bytes); vanilla entries byte-identical; content: none |
+| N113_AI_SCRIPT | 390400–393D51 | F9:0400–F9:3D51 | 14674 | `14674 B` | `14674 B sha1 fb3b7bfaf039` | 4 retargeted consumers — AI_SCRIPT relocated (14674 bytes); vanilla entries byte-identical; content: none |
+| N110_FORMATION_PROP | 389000–389FFF | F8:9000–F8:9FFF | 4096 | `4096 B` | `4096 B sha1 92805a0472a3` | 2 retargeted consumers — FORMATION_PROP relocated (4096 bytes); vanilla entries byte-identical; content: none |
+| N111_FORMATION_MONSTERS | 38A000–38DC0F | F8:A000–F8:DC0F | 15376 | `15376 B` | `15376 B sha1 aedd02489421` | 7 retargeted consumers — FORMATION_MONSTERS relocated (15376 bytes); vanilla entries byte-identical; content: none |
+| N200_RETARGET_MONSTER_PROP | 020626–020628 | C2:0626–C2:0628 | 3 | `1A 00 CF` | `1A 00 F8` | C2:0625 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 26 |
+| N200_RETARGET_MONSTER_PROP | 022CA4–022CA6 | C2:2CA4–C2:2CA6 | 3 | `05 00 CF` | `05 00 F8` | C2:2CA3 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 5 |
+| N200_RETARGET_MONSTER_PROP | 022CAB–022CAD | C2:2CAB–C2:2CAD | 3 | `0C 00 CF` | `0C 00 F8` | C2:2CAA opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 12 |
+| N200_RETARGET_MONSTER_PROP | 022CB2–022CB4 | C2:2CB2–C2:2CB4 | 3 | `0E 00 CF` | `0E 00 F8` | C2:2CB1 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 14 |
+| N200_RETARGET_MONSTER_PROP | 022CBE–022CC0 | C2:2CBE–C2:2CC0 | 3 | `0A 00 CF` | `0A 00 F8` | C2:2CBD opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 10 |
+| N200_RETARGET_MONSTER_PROP | 022CC8–022CCA | C2:2CC8–C2:2CCA | 3 | `08 00 CF` | `08 00 F8` | C2:2CC7 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 8 |
+| N200_RETARGET_MONSTER_PROP | 022CF6–022CF8 | C2:2CF6–C2:2CF8 | 3 | `01 00 CF` | `01 00 F8` | C2:2CF5 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 1 |
+| N200_RETARGET_MONSTER_PROP | 022CFD–022CFF | C2:2CFD–C2:2CFF | 3 | `1A 00 CF` | `1A 00 F8` | C2:2CFC opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 26 |
+| N200_RETARGET_MONSTER_PROP | 022D04–022D06 | C2:2D04–C2:2D06 | 3 | `03 00 CF` | `03 00 F8` | C2:2D03 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 3 |
+| N200_RETARGET_MONSTER_PROP | 022D0E–022D10 | C2:2D0E–C2:2D10 | 3 | `04 00 CF` | `04 00 F8` | C2:2D0D opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 4 |
+| N200_RETARGET_MONSTER_PROP | 022D18–022D1A | C2:2D18–C2:2D1A | 3 | `02 00 CF` | `02 00 F8` | C2:2D17 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 2 |
+| N200_RETARGET_MONSTER_PROP | 022D1F–022D21 | C2:2D1F–C2:2D21 | 3 | `10 00 CF` | `10 00 F8` | C2:2D1E opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 16 |
+| N200_RETARGET_MONSTER_PROP | 022D26–022D28 | C2:2D26–C2:2D28 | 3 | `00 00 CF` | `00 00 F8` | C2:2D25 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 0 |
+| N200_RETARGET_MONSTER_PROP | 022D2D–022D2F | C2:2D2D–C2:2D2F | 3 | `07 00 CF` | `07 00 F8` | C2:2D2C opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 7 |
+| N200_RETARGET_MONSTER_PROP | 022D37–022D39 | C2:2D37–C2:2D39 | 3 | `1E 00 CF` | `1E 00 F8` | C2:2D36 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 30 |
+| N200_RETARGET_MONSTER_PROP | 022D43–022D45 | C2:2D43–C2:2D45 | 3 | `13 00 CF` | `13 00 F8` | C2:2D42 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 19 |
+| N200_RETARGET_MONSTER_PROP | 022DC3–022DC5 | C2:2DC3–C2:2DC5 | 3 | `1F 00 CF` | `1F 00 F8` | C2:2DC2 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 31 |
+| N200_RETARGET_MONSTER_PROP | 022DCA–022DCC | C2:2DCA–C2:2DCC | 3 | `19 00 CF` | `19 00 F8` | C2:2DC9 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 25 |
+| N200_RETARGET_MONSTER_PROP | 022DD4–022DD6 | C2:2DD4–C2:2DD6 | 3 | `16 00 CF` | `16 00 F8` | C2:2DD3 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 22 |
+| N200_RETARGET_MONSTER_PROP | 022DEA–022DEC | C2:2DEA–C2:2DEC | 3 | `1B 00 CF` | `1B 00 F8` | C2:2DE9 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 27 |
+| N200_RETARGET_MONSTER_PROP | 022DF1–022DF3 | C2:2DF1–C2:2DF3 | 3 | `1D 00 CF` | `1D 00 F8` | C2:2DF0 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 29 |
+| N200_RETARGET_MONSTER_PROP | 022E11–022E13 | C2:2E11–C2:2E13 | 3 | `1C 00 CF` | `1C 00 F8` | C2:2E10 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 28 |
+| N200_RETARGET_MONSTER_PROP | 022E1B–022E1D | C2:2E1B–C2:2E1D | 3 | `14 00 CF` | `14 00 F8` | C2:2E1A opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 20 |
+| N200_RETARGET_MONSTER_PROP | 022E28–022E2A | C2:2E28–C2:2E2A | 3 | `17 00 CF` | `17 00 F8` | C2:2E27 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 23 |
+| N200_RETARGET_MONSTER_PROP | 022E32–022E34 | C2:2E32–C2:2E34 | 3 | `11 00 CF` | `11 00 F8` | C2:2E31 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 17 |
+| N200_RETARGET_MONSTER_NAME | 016641–016643 | C1:6641–C1:6643 | 3 | `50 C0 CF` | `00 40 F8` | C1:6640 opcode BF (long) reads MONSTER_NAME — long operand -> F8:4000 + 0 |
+| N200_RETARGET_MONSTER_NAME | 0169C7–0169C9 | C1:69C7–C1:69C9 | 3 | `50 C0 CF` | `00 40 F8` | C1:69C6 opcode BF (long) reads MONSTER_NAME — long operand -> F8:4000 + 0 |
+| N200_RETARGET_MONSTER_NAME | 022C57–022C59 | C2:2C57–C2:2C59 | 3 | `50 C0 CF` | `00 40 F8` | C2:2C56 opcode BF (long) reads MONSTER_NAME — long operand -> F8:4000 + 0 |
+| N200_RETARGET_MONSTER_NAME | 022C79–022C7B | C2:2C79–C2:2C7B | 3 | `50 C0 CF` | `00 40 F8` | C2:2C78 opcode DF (long) reads MONSTER_NAME — long operand -> F8:4000 + 0 |
+| N200_RETARGET_MONSTER_NAME | 03540F–035410 | C3:540F–C3:5410 | 2 | `50 C0` | `00 40` | C3:540E opcode A0 (imm_near) reads MONSTER_NAME — imm_near operand -> F8:4000 + 0 |
+| N200_RETARGET_MONSTER_NAME | 035414–035414 | C3:5414–C3:5414 | 1 | `CF` | `F8` | C3:5413 opcode A9 (imm_bank) reads MONSTER_NAME — imm_bank operand -> F8:4000 + 0 |
+| N200_RETARGET_MONSTER_SPECIAL_NAME | 019739–019739 | C1:9739–C1:9739 | 1 | `CF` | `F8` | C1:9738 opcode A9 (imm_bank) reads MONSTER_SPECIAL_NAME — imm_bank operand -> F8:5400 + 0 |
+| N200_RETARGET_MONSTER_SPECIAL_NAME | 01974D–01974E | C1:974D–C1:974E | 2 | `D0 D0` | `00 54` | C1:974C opcode 69 (imm_near) reads MONSTER_SPECIAL_NAME — imm_near operand -> F8:5400 + 0 |
+| N200_RETARGET_MONSTER_ITEMS | 022C42–022C44 | C2:2C42–C2:2C44 | 3 | `00 30 CF` | `00 68 F8` | C2:2C41 opcode BF (long) reads MONSTER_ITEMS — long operand -> F8:6800 + 0 |
+| N200_RETARGET_MONSTER_ITEMS | 025F2E–025F30 | C2:5F2E–C2:5F30 | 3 | `02 30 CF` | `02 68 F8` | C2:5F2D opcode BF (long) reads MONSTER_ITEMS — long operand -> F8:6800 + 2 |
+| N200_RETARGET_MONSTER_CONTROL | 02063E–020640 | C2:063E–C2:0640 | 3 | `00 3D CF` | `00 70 F8` | C2:063D opcode BF (long) reads MONSTER_CONTROL — long operand -> F8:7000 + 0 |
+| N200_RETARGET_MONSTER_CONTROL | 020644–020646 | C2:0644–C2:0646 | 3 | `02 3D CF` | `02 70 F8` | C2:0643 opcode BF (long) reads MONSTER_CONTROL — long operand -> F8:7000 + 2 |
+| N200_RETARGET_MONSTER_CONTROL | 023759–02375B | C2:3759–C2:375B | 3 | `00 3D CF` | `00 70 F8` | C2:3758 opcode BF (long) reads MONSTER_CONTROL — long operand -> F8:7000 + 0 |
+| N200_RETARGET_MONSTER_SKETCH | 023B5B–023B5D | C2:3B5B–C2:3B5D | 3 | `00 43 CF` | `00 78 F8` | C2:3B5A opcode BF (long) reads MONSTER_SKETCH — long operand -> F8:7800 + 0 |
+| N200_RETARGET_MONSTER_SPECIAL_ANIM | 020617–020619 | C2:0617–C2:0619 | 3 | `C0 37 CF` | `00 7C F8` | C2:0616 opcode BF (long) reads MONSTER_SPECIAL_ANIM — long operand -> F8:7C00 + 0 |
+| N200_RETARGET_MONSTER_SPECIAL_ANIM | 022D50–022D52 | C2:2D50–C2:2D52 | 3 | `C0 37 CF` | `00 7C F8` | C2:2D4F opcode BF (long) reads MONSTER_SPECIAL_ANIM — long operand -> F8:7C00 + 0 |
+| N200_RETARGET_MONSTER_OVERLAP | 012145–012147 | C1:2145–C1:2147 | 3 | `00 36 CF` | `00 7E F8` | C1:2144 opcode BF (long) reads MONSTER_OVERLAP — long operand -> F8:7E00 + 0 |
+| N200_RETARGET_MONSTER_GFX_PROP | 012063–012065 | C1:2063–C1:2065 | 3 | `02 70 D2` | `02 80 F8` | C1:2062 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 2 |
+| N200_RETARGET_MONSTER_GFX_PROP | 012081–012083 | C1:2081–C1:2083 | 3 | `00 70 D2` | `00 80 F8` | C1:2080 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 0 |
+| N200_RETARGET_MONSTER_GFX_PROP | 01208E–012090 | C1:208E–C1:2090 | 3 | `01 70 D2` | `01 80 F8` | C1:208D opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 1 |
+| N200_RETARGET_MONSTER_GFX_PROP | 012097–012099 | C1:2097–C1:2099 | 3 | `02 70 D2` | `02 80 F8` | C1:2096 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 2 |
+| N200_RETARGET_MONSTER_GFX_PROP | 0120AC–0120AE | C1:20AC–C1:20AE | 3 | `04 70 D2` | `04 80 F8` | C1:20AB opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 4 |
+| N200_RETARGET_MONSTER_GFX_PROP | 0124FD–0124FF | C1:24FD–C1:24FF | 3 | `02 70 D2` | `02 80 F8` | C1:24FC opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 2 |
+| N200_RETARGET_MONSTER_GFX_PROP | 01250C–01250E | C1:250C–C1:250E | 3 | `00 70 D2` | `00 80 F8` | C1:250B opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 0 |
+| N200_RETARGET_MONSTER_GFX_PROP | 012519–01251B | C1:2519–C1:251B | 3 | `01 70 D2` | `01 80 F8` | C1:2518 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 1 |
+| N200_RETARGET_MONSTER_GFX_PROP | 012522–012524 | C1:2522–C1:2524 | 3 | `02 70 D2` | `02 80 F8` | C1:2521 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 2 |
+| N200_RETARGET_MONSTER_GFX_PROP | 012537–012539 | C1:2537–C1:2539 | 3 | `04 70 D2` | `04 80 F8` | C1:2536 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 4 |
+| N200_RETARGET_MONSTER_GFX_PROP | 03AF60–03AF62 | C3:AF60–C3:AF62 | 3 | `00 70 D2` | `00 80 F8` | C3:AF5F opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 0 |
+| N200_RETARGET_MONSTER_GFX_PROP | 03AF66–03AF68 | C3:AF66–C3:AF68 | 3 | `01 70 D2` | `01 80 F8` | C3:AF65 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 1 |
+| N200_RETARGET_MONSTER_GFX_PROP | 03AF6C–03AF6E | C3:AF6C–C3:AF6E | 3 | `02 70 D2` | `02 80 F8` | C3:AF6B opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 2 |
+| N200_RETARGET_MONSTER_GFX_PROP | 03AF72–03AF74 | C3:AF72–C3:AF74 | 3 | `03 70 D2` | `03 80 F8` | C3:AF71 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 3 |
+| N200_RETARGET_MONSTER_GFX_PROP | 03AF78–03AF7A | C3:AF78–C3:AF7A | 3 | `04 70 D2` | `04 80 F8` | C3:AF77 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 4 |
+| N200_RETARGET_AI_SCRIPT_PTRS | 022D79–022D7B | C2:2D79–C2:2D7B | 3 | `00 84 CF` | `00 00 F9` | C2:2D78 opcode BF (long) reads AI_SCRIPT_PTRS — long operand -> F9:0000 + 0 |
+| N200_RETARGET_AI_SCRIPT | 021A45–021A47 | C2:1A45–C2:1A47 | 3 | `00 87 CF` | `00 04 F9` | C2:1A44 opcode BF (long) reads AI_SCRIPT — long operand -> F9:0400 + 0 |
+| N200_RETARGET_AI_SCRIPT | 021A65–021A67 | C2:1A65–C2:1A67 | 3 | `02 87 CF` | `02 04 F9` | C2:1A64 opcode BF (long) reads AI_SCRIPT — long operand -> F9:0400 + 2 |
+| N200_RETARGET_AI_SCRIPT | 021A6C–021A6E | C2:1A6C–C2:1A6E | 3 | `00 87 CF` | `00 04 F9` | C2:1A6B opcode BF (long) reads AI_SCRIPT — long operand -> F9:0400 + 0 |
+| N200_RETARGET_AI_SCRIPT | 022D89–022D8B | C2:2D89–C2:2D8B | 3 | `00 87 CF` | `00 04 F9` | C2:2D88 opcode BF (long) reads AI_SCRIPT — long operand -> F9:0400 + 0 |
+| N200_RETARGET_FORMATION_PROP | 023137–023139 | C2:3137–C2:3139 | 3 | `02 59 CF` | `02 90 F8` | C2:3136 opcode BF (long) reads FORMATION_PROP — long operand -> F8:9000 + 2 |
+| N200_RETARGET_FORMATION_PROP | 02313E–023140 | C2:313E–C2:3140 | 3 | `00 59 CF` | `00 90 F8` | C2:313D opcode BF (long) reads FORMATION_PROP — long operand -> F8:9000 + 0 |
+| N200_RETARGET_FORMATION_MONSTERS | 010E9A–010E9C | C1:0E9A–C1:0E9C | 3 | `0E 62 CF` | `0E A0 F8` | C1:0E99 opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 14 |
+| N200_RETARGET_FORMATION_MONSTERS | 010EA2–010EA4 | C1:0EA2–C1:0EA4 | 3 | `00 62 CF` | `00 A0 F8` | C1:0EA1 opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 0 |
+| N200_RETARGET_FORMATION_MONSTERS | 010EB5–010EB7 | C1:0EB5–C1:0EB7 | 3 | `00 62 CF` | `00 A0 F8` | C1:0EB4 opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 0 |
+| N200_RETARGET_FORMATION_MONSTERS | 010EC0–010EC2 | C1:0EC0–C1:0EC2 | 3 | `01 62 CF` | `01 A0 F8` | C1:0EBF opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 1 |
+| N200_RETARGET_FORMATION_MONSTERS | 010ED2–010ED4 | C1:0ED2–C1:0ED4 | 3 | `08 62 CF` | `08 A0 F8` | C1:0ED1 opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 8 |
+| N200_RETARGET_FORMATION_MONSTERS | 010EE0–010EE2 | C1:0EE0–C1:0EE2 | 3 | `08 62 CF` | `08 A0 F8` | C1:0EDF opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 8 |
+| N200_RETARGET_FORMATION_MONSTERS | 023156–023158 | C2:3156–C2:3158 | 3 | `00 62 CF` | `00 A0 F8` | C2:3155 opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 0 |
+| N300_GFX_SLOT_ROUTERS | 301200–301230 | F0:1200–F0:1230 | 49 | `FF fill (expansion)` | `BD 01 20 C9 80 01 90 03 69 1F 00 48 0A 0A 18 63 01 FA 6B  …` | JSL from C1:2058 (battle monster loader), C2:F5F1 (Sketch), C2:2F75 (colosseum detection) — graphics-property slot remap (monsters $180-$1FE -> slots $1A0-$21E) + colosseum range check |
+| N301_GFX_SLOT_HOOK_BATTLE | 012058–012060 | C1:2058–C1:2060 | 9 | `BD 01 20 0A 0A 18 7D 01 20` | `22 00 12 F0 EA EA EA EA EA` | LoadMonsterGfxProp (C1:204E) monster id*5 computation — LDA $2001,X/ASL/ASL/CLC/ADC $2001,X -> JSL MonsterGfxSlot5 + 5x NOP |
+| N302_GFX_SLOT_HOOK_SKETCH | 02F5F1–02F5F4 | C2:F5F1–C2:F5F4 | 4 | `BD 01 20 AA` | `22 13 12 F0` | battle animation init $0B (Sketch): monster id -> LoadSketchMonsterGfx — LDA $2001,X/TAX -> JSL MonsterGfxSlotSketch |
+| N303_FORMATION_COLOSSEUM_RANGE | 022F75–022F7A | C2:2F75–C2:2F7A | 6 | `AE D4 3E E0 3E 02` | `22 20 12 F0 EA EA` | InitParty C2:2F75 colosseum detection (battle id >= $23E) — LDX wBattleID/CPX #$023E -> JSL ColosseumRangeCheck + 2x NOP; colosseum iff $23E <= id < $240 so new formations $240-$3FF load normally |
+| E101_MONSTER_PAL | 3B0000–3B3FFF | FB:0000–FB:3FFF | 16384 | `16384 B` | `16384 B sha1 56df53e0c127` | 6 retargeted consumers — MonsterPal relocated: units $000-$2FF vanilla, 0 new units from $300 |
+| E101_MONSTER_PAL | 3BFFF0–3BFFFF | FB:FFF0–FB:FFFF | 16 | `FF fill (expansion)` | `00 00 70 3C 1E 0F 06 04 06 00 0A 00 1A 00 3A 00` | LoadMonsterPal empty-slot read (index $FFFF): keeps battle palette RAM identical to vanilla — 16 vanilla bytes from D3:7810 (what vanilla reads for an empty palette slot at MonsterPal+$FFF0) |
+| E102_MONSTER_STENCIL | 3B4000–3B4E03 | FB:4000–FB:4E03 | 3588 | `3588 B` | `3588 B sha1 6c1b50fc9e92` | 8 retargeted consumers (7 symbolic + colosseum literal C3:AFFD) — MonsterStencil relocated: header -> FB:4004/FB:4804; 128 small (128 vanilla) + 48 large (48 vanilla) maps |
+| E104_BATTLE_MAGIC_POINTS | 38E000–38E3FF | F8:E000–F8:E3FF | 1024 | `1024 B` | `1024 B sha1 f02d520925ce` | C2:5D9C LDA BattleMagicPoints,X (bound C2:5D97 now #$0400) — BattleMagicPoints relocated (1024): $000-$1FF vanilla, $200-$23F = 0, new: none |
+| E105_MAGIC_POINTS_BOUND | 025D98–025D99 | C2:5D98–C2:5D99 | 2 | `00 02` | `00 04` | battle win C2:5D97 CPX #$0200 / BCS (no magic points for battles >= bound) — bound $0200 -> $0400: table covers all 1024 formations; $200-$23F hold 0 = vanilla result |
+| E200_RETARGET_MONSTER_PAL | 01233E–012340 | C1:233E–C1:2340 | 3 | `20 78 D2` | `00 00 FB` | C1:233D opcode BF (long) reads MONSTER_PAL — long operand -> FB:0000 + 0 |
+| E200_RETARGET_MONSTER_PAL | 01D67A–01D67C | C1:D67A–C1:D67C | 3 | `20 78 D2` | `00 00 FB` | C1:D679 opcode BF (long) reads MONSTER_PAL — long operand -> FB:0000 + 0 |
+| E200_RETARGET_MONSTER_PAL | 02BBD5–02BBD7 | C2:BBD5–C2:BBD7 | 3 | `40 78 D2` | `20 00 FB` | C2:BBD4 opcode BF (long) reads MONSTER_PAL — long operand -> FB:0000 + 32 |
+| E200_RETARGET_MONSTER_PAL | 02FA7D–02FA7F | C2:FA7D–C2:FA7F | 3 | `20 78 D2` | `00 00 FB` | C2:FA7C opcode BF (long) reads MONSTER_PAL — long operand -> FB:0000 + 0 |
+| E200_RETARGET_MONSTER_PAL | 02FA94–02FA96 | C2:FA94–C2:FA96 | 3 | `20 78 D2` | `00 00 FB` | C2:FA93 opcode BF (long) reads MONSTER_PAL — long operand -> FB:0000 + 0 |
+| E200_RETARGET_MONSTER_PAL | 03B172–03B174 | C3:B172–C3:B174 | 3 | `20 78 D2` | `00 00 FB` | C3:B171 opcode BF (long) reads MONSTER_PAL — long operand -> FB:0000 + 0 |
+| E200_RETARGET_MONSTER_STENCIL | 01216F–012171 | C1:216F–C1:2171 | 3 | `20 A8 D2` | `00 40 FB` | C1:216E opcode 6F (long) reads MONSTER_STENCIL — long operand -> FB:4000 + 0 |
+| E200_RETARGET_MONSTER_STENCIL | 012179–01217B | C1:2179–C1:217B | 3 | `00 00 D2` | `00 00 FB` | C1:2178 opcode BF (long_bank) reads MONSTER_STENCIL — long_bank operand -> FB:4000 + 0 |
+| E200_RETARGET_MONSTER_STENCIL | 012195–012197 | C1:2195–C1:2197 | 3 | `22 A8 D2` | `02 40 FB` | C1:2194 opcode 6F (long) reads MONSTER_STENCIL — long operand -> FB:4000 + 2 |
+| E200_RETARGET_MONSTER_STENCIL | 01219F–0121A1 | C1:219F–C1:21A1 | 3 | `00 00 D2` | `00 00 FB` | C1:219E opcode BF (long_bank) reads MONSTER_STENCIL — long_bank operand -> FB:4000 + 0 |
+| E200_RETARGET_MONSTER_STENCIL | 03AFC0–03AFC1 | C3:AFC0–C3:AFC1 | 2 | `20 A8` | `00 40` | C3:AFBF opcode A0 (imm_near) reads MONSTER_STENCIL — imm_near operand -> FB:4000 + 0 |
+| E200_RETARGET_MONSTER_STENCIL | 03AFC9–03AFCA | C3:AFC9–C3:AFCA | 2 | `22 A8` | `02 40` | C3:AFC8 opcode A0 (imm_near) reads MONSTER_STENCIL — imm_near operand -> FB:4000 + 2 |
+| E200_RETARGET_MONSTER_STENCIL | 03AFD4–03AFD4 | C3:AFD4–C3:AFD4 | 1 | `D2` | `FB` | C3:AFD3 opcode A9 (imm_bank) reads MONSTER_STENCIL — imm_bank operand -> FB:4000 + 0 |
+| E200_RETARGET_MONSTER_STENCIL | 03AFFE–03AFFE | C3:AFFE–C3:AFFE | 1 | `D2` | `FB` | C3:AFFD opcode A9 (imm_bank) reads MONSTER_STENCIL [src/menu/colosseum.asm:456 'lda #$d2' (stencil data bank literal)] — imm_bank operand -> FB:4000 + 0 |
+| E200_RETARGET_BATTLE_MAGIC_POINTS | 025D9D–025D9F | C2:5D9D–C2:5D9F | 3 | `00 B4 DF` | `00 E0 F8` | C2:5D9C opcode BF (long) reads BATTLE_MAGIC_POINTS — long operand -> F8:E000 + 0 |
+| E300_ENEMY_GFX_BASE_ROUTER | 301240–301262 | F0:1240–F0:1262 | 35 | `FF fill (expansion)` | `AD AC 81 29 10 D0 14 A5 64 18 69 00 85 64 A5 65 69 70 85  …` | JSL from AddMonsterGfxOffset C1:20FF (battle loader fallthrough + summon/Sketch JMP) — graphics data base select: E9:7000 (vanilla) or FB:0000 (MonsterGfxProp byte2 bit5) |
+| E301_ENEMY_GFX_OFFSET_HOOK | 0120FF–012103 | C1:20FF–C1:2103 | 5 | `A5 64 18 69 00` | `22 40 12 F0 60` | AddMonsterGfxOffset (C1:20FF) — LDA $64/CLC/ADC #$00 -> JSL EnemyGfxBase / RTS (rest of the vanilla routine becomes unreachable, unchanged) |
+| I101_ITEM_TABLES | 3A0000–3A257F | FA:0000–FA:257F | 9600 | `9600 B` | `9600 B sha1 d4a7788753fe` | retargeted ItemProp/ItemName consumers and the extended item engine — XItemProp: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A2580–3A35BF | FA:2580–FA:35BF | 4160 | `4160 B` | `4160 B sha1 81511ab7814f` | retargeted ItemProp/ItemName consumers and the extended item engine — XItemName: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A35C0–3A35FF | FA:35C0–FA:35FF | 64 | `FF fill (expansion)` | `01 01 01 01 03 01 01 01 01 01 01 03 01 01 01 01 01 01 01  …` | retargeted ItemProp/ItemName consumers and the extended item engine — XExtFlags: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A3600–3A367F | FA:3600–FA:367F | 128 | `FF fill (expansion)` | `00 40 33 40 66 40 8A 40 AE 40 D0 40 FE 40 31 41 61 41 92  …` | retargeted ItemProp/ItemName consumers and the extended item engine — XDescPtr: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A3800–3A3FFF | FA:3800–FA:3FFF | 2048 | `2048 B` | `2048 B sha1 a22a2931a528` | retargeted ItemProp/ItemName consumers and the extended item engine — XWeaponAnimFull: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A3700–3A37FF | FA:3700–FA:37FF | 256 | `FF fill (expansion)` | `00 21 21 21 21 21 21 21 10 10 21 10 10 21 10 10 10 10 10  …` | retargeted ItemProp/ItemName consumers and the extended item engine — XJumpAnim: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A4000–3A47C9 | FA:4000–FA:47C9 | 1994 | `1994 B` | `1994 B sha1 b87841263434` | retargeted ItemProp/ItemName consumers and the extended item engine — XDescText: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5000–3A507F | FA:5000–FA:507F | 128 | `FF fill (expansion)` | `00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  …` | retargeted ItemProp/ItemName consumers and the extended item engine — XItemAnimX: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5080–3A5083 | FA:5080–FA:5083 | 4 | `FF fill (expansion)` | `1F 00 00 00` | retargeted ItemProp/ItemName consumers and the extended item engine — XRareDef: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5090–3A50F7 | FA:5090–FA:50F7 | 104 | `FF fill (expansion)` | `80 5E 9E 5E C4 5E D1 5E DD 5E EB 5E F0 5E 1A 5F 4F 5F 83  …` | retargeted ItemProp/ItemName consumers and the extended item engine — XRareDescPtr: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5100–3A53A3 | FA:5100–FA:53A3 | 676 | `676 B` | `676 B sha1 60a9396e6188` | retargeted ItemProp/ItemName consumers and the extended item engine — XRareName: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5400–3A590F | FA:5400–FA:590F | 1296 | `1296 B` | `1296 B sha1 8b35670e033d` | retargeted ItemProp/ItemName consumers and the extended item engine — XShopProp: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5940–3A5E4F | FA:5940–FA:5E4F | 1296 | `1296 B` | `1296 B sha1 a5a8ec4a0a87` | retargeted ItemProp/ItemName consumers and the extended item engine — XShopPropHi: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5E80–3A615B | FA:5E80–FA:615B | 732 | `732 B` | `732 B sha1 a69ebde26331` | retargeted ItemProp/ItemName consumers and the extended item engine — XRareDescText: extended item table (TECH v0.9 layout) |
+| I102_ITEM_ENGINE_CODE | 3A8000–3A8C6B | FA:8000–FA:8C6B | 3180 | `3180 B` | `3180 B sha1 e53703744306` | JSL from hook sites / bank stubs — TECH v0.9 extended item engine (65816, asm/item_v09) |
+| I103_XC0_STUBS | 00D620–00D70F | C0:D620–C0:D70F | 240 | `FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF  …` | `C2 20 A5 EB 22 18 80 FA E2 20 7B A9 03 4C 5C 9B C2 20 A5  …` | JSR from same-bank hook sites (XC0) — same-bank helper stubs in audited vanilla padding (never referenced, all $FF) |
+| I103_XC3_STUBS | 03F0A0–03F74E | C3:F0A0–C3:F74E | 1711 | `1711 B` | `1711 B sha1 7be43575cd34` | JSR from same-bank hook sites (XC3) — same-bank helper stubs in audited vanilla padding (never referenced, all $FF) |
+| I103_XC2_STUBS | 026470–02670F | C2:6470–C2:670F | 672 | `672 B` | `672 B sha1 c1f22ee6f7be` | JSR from same-bank hook sites (XC2) — same-bank helper stubs in audited vanilla padding (never referenced, all $FF) |
+| I110_RETARGET_ITEM_PROP | 020FA4–020FA6 | C2:0FA4–C2:0FA6 | 3 | `05 50 D8` | `05 00 FA` | C2:0FA3 src/battle/equip.asm:209 lda     f:ItemProp+5,x          ; field effects — long operand ITEM_PROP+5 -> FA:0000+5 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 020FAD–020FAF | C2:0FAD–C2:0FAF | 3 | `06 50 D8` | `06 00 FA` | C2:0FAC src/battle/equip.asm:212 lda     f:ItemProp+6,x          ; status 1 & 2 protection — long operand ITEM_PROP+6 -> FA:0000+6 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 020FB4–020FB6 | C2:0FB4–C2:0FB6 | 3 | `08 50 D8` | `08 00 FA` | C2:0FB3 src/battle/equip.asm:214 lda     f:ItemProp+8,x          ; status 3 set and relic eff — long operand ITEM_PROP+8 -> FA:0000+8 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 020FBB–020FBD | C2:0FBB–C2:0FBD | 3 | `0A 50 D8` | `0A 00 FA` | C2:0FBA src/battle/equip.asm:216 lda     f:ItemProp+10,x         ; relic effects — long operand ITEM_PROP+10 -> FA:0000+10 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 020FC2–020FC4 | C2:0FC2–C2:0FC4 | 3 | `0C 50 D8` | `0C 00 FA` | C2:0FC1 src/battle/equip.asm:218 lda     f:ItemProp+12,x — long operand ITEM_PROP+12 -> FA:0000+12 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 020FC9–020FCB | C2:0FC9–C2:0FCB | 3 | `10 50 D8` | `10 00 FA` | C2:0FC8 src/battle/equip.asm:220 lda     f:ItemProp+16,x         ; stat boosts — long operand ITEM_PROP+16 -> FA:0000+16 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 020FED–020FEF | C2:0FED–C2:0FEF | 3 | `1A 50 D8` | `1A 00 FA` | C2:0FEC src/battle/equip.asm:235 lda     f:ItemProp+26,x         ; evade/mblock — long operand ITEM_PROP+26 -> FA:0000+26 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021019–02101B | C2:1019–C2:101B | 3 | `14 50 D8` | `14 00 FA` | C2:1018 src/battle/equip.asm:255 lda     f:ItemProp+20,x         ; battle/defense power — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 02101E–021020 | C2:101E–C2:1020 | 3 | `02 50 D8` | `02 00 FA` | C2:101D src/battle/equip.asm:257 lda     f:ItemProp+2,x          ; imp bit — long operand ITEM_PROP+2 -> FA:0000+2 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021034–021036 | C2:1034–C2:1036 | 3 | `00 50 D8` | `00 00 FA` | C2:1033 src/battle/equip.asm:268 lda     f:ItemProp,x            ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 02103D–02103F | C2:103D–C2:103F | 3 | `19 50 D8` | `19 00 FA` | C2:103C src/battle/equip.asm:274 lda     f:ItemProp+25,x         ; status 2 set — long operand ITEM_PROP+25 -> FA:0000+25 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021044–021046 | C2:1044–C2:1046 | 3 | `0F 50 D8` | `0F 00 FA` | C2:1043 src/battle/equip.asm:276 lda     f:ItemProp+15,x         ; elements halved — long operand ITEM_PROP+15 -> FA:0000+15 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021049–02104B | C2:1049–C2:104B | 3 | `18 50 D8` | `18 00 FA` | C2:1048 src/battle/equip.asm:278 lda     f:ItemProp+24,x         ; element weak point — long operand ITEM_PROP+24 -> FA:0000+24 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021052–021054 | C2:1052–C2:1054 | 3 | `16 50 D8` | `16 00 FA` | C2:1051 src/battle/equip.asm:281 lda     f:ItemProp+22,x         ; absorbed and nullified ele — long operand ITEM_PROP+22 -> FA:0000+22 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021069–02106B | C2:1069–C2:106B | 3 | `15 50 D8` | `15 00 FA` | C2:1068 src/battle/equip.asm:291 lda     f:ItemProp+21,x         ; add item magic defense to  — long operand ITEM_PROP+21 -> FA:0000+21 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021088–02108A | C2:1088–C2:108A | 3 | `1B 50 D8` | `1B 00 FA` | C2:1087 src/battle/equip.asm:306 lda     f:ItemProp+27,x         ; block animation — long operand ITEM_PROP+27 -> FA:0000+27 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0210D4–0210D6 | C2:10D4–C2:10D6 | 3 | `16 50 D8` | `16 00 FA` | C2:10D3 src/battle/equip.asm:360 lda     f:ItemProp+22,x         ; absorb elements (unused) — long operand ITEM_PROP+22 -> FA:0000+22 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0210DB–0210DD | C2:10DB–C2:10DD | 3 | `0F 50 D8` | `0F 00 FA` | C2:10DA src/battle/equip.asm:362 lda     f:ItemProp+15,x         ; elemental properties (left — long operand ITEM_PROP+15 -> FA:0000+15 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0210EE–0210F0 | C2:10EE–C2:10F0 | 3 | `15 50 D8` | `15 00 FA` | C2:10ED src/battle/equip.asm:369 lda     f:ItemProp+21,x         ; hit rate — long operand ITEM_PROP+21 -> FA:0000+21 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0210F5–0210F7 | C2:10F5–C2:10F7 | 3 | `12 50 D8` | `12 00 FA` | C2:10F4 src/battle/equip.asm:371 lda     f:ItemProp+18,x         ; spell cast — long operand ITEM_PROP+18 -> FA:0000+18 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0210FC–0210FE | C2:10FC–C2:10FE | 3 | `13 50 D8` | `13 00 FA` | C2:10FB src/battle/equip.asm:373 lda     f:ItemProp+19,x         ; weapon special effects — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022724–022726 | C2:2724–C2:2726 | 3 | `0E 50 D8` | `0E 00 FA` | C2:2723 src/battle/init_target.asm:91 lda     f:ItemProp+14,x   ; targetting — long operand ITEM_PROP+14 -> FA:0000+14 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 02272A–02272C | C2:272A–C2:272C | 3 | `15 50 D8` | `15 00 FA` | C2:2729 src/battle/init_target.asm:93 lda     f:ItemProp+21,x   ; — long operand ITEM_PROP+21 -> FA:0000+21 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022736–022738 | C2:2736–C2:2738 | 3 | `12 50 D8` | `12 00 FA` | C2:2735 src/battle/init_target.asm:98 @2735:  lda     f:ItemProp+18,x   ; — long operand ITEM_PROP+18 -> FA:0000+18 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022A67–022A69 | C2:2A67–C2:2A69 | 3 | `14 50 D8` | `14 00 FA` | C2:2A66 src/battle/init_attacker.asm:414 lda     f:ItemProp+20,x   ; battle/defense power — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022A6E–022A70 | C2:2A6E–C2:2A70 | 3 | `0F 50 D8` | `0F 00 FA` | C2:2A6D src/battle/init_attacker.asm:416 lda     f:ItemProp+15,x   ; item element — long operand ITEM_PROP+15 -> FA:0000+15 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022A7C–022A7E | C2:2A7C–C2:2A7E | 3 | `1B 50 D8` | `1B 00 FA` | C2:2A7B src/battle/init_attacker.asm:421 lda     f:ItemProp+27,x   ; item special effect — long operand ITEM_PROP+27 -> FA:0000+27 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022A8A–022A8C | C2:2A8A–C2:2A8C | 3 | `15 50 D8` | `15 00 FA` | C2:2A89 src/battle/init_attacker.asm:427 lda     f:ItemProp+21,x   ; status 1 and 2 — long operand ITEM_PROP+21 -> FA:0000+21 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022A91–022A93 | C2:2A91–C2:2A93 | 3 | `17 50 D8` | `17 00 FA` | C2:2A90 src/battle/init_attacker.asm:429 lda     f:ItemProp+23,x   ; status 3 and 4 — long operand ITEM_PROP+23 -> FA:0000+23 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022A9A–022A9C | C2:2A9A–C2:2A9C | 3 | `13 50 D8` | `13 00 FA` | C2:2A99 src/battle/init_attacker.asm:432 lda     f:ItemProp+19,x   ; item properties — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022AF3–022AF5 | C2:2AF3–C2:2AF5 | 3 | `00 50 D8` | `00 00 FA` | C2:2AF2 src/battle/init_attacker.asm:471 @2af2:  lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022B03–022B05 | C2:2B03–C2:2B05 | 3 | `15 50 D8` | `15 00 FA` | C2:2B02 src/battle/init_attacker.asm:477 lda     f:ItemProp+21,x — long operand ITEM_PROP+21 -> FA:0000+21 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0254FD–0254FF | C2:54FD–C2:54FF | 3 | `0E 50 D8` | `0E 00 FA` | C2:54FC src/battle/party.asm:503 lda     f:ItemProp+14,x   ; targetting — long operand ITEM_PROP+14 -> FA:0000+14 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 025504–025506 | C2:5504–C2:5506 | 3 | `00 50 D8` | `00 00 FA` | C2:5503 src/battle/party.asm:505 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 02552D–02552F | C2:552D–C2:552F | 3 | `01 50 D8` | `01 00 FA` | C2:552C src/battle/party.asm:527 lda     f:ItemProp+1,x   ; equippable characters — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 026017–026019 | C2:6017–C2:6019 | 3 | `04 50 D8` | `04 00 FA` | C2:6016 src/battle/win.asm:360 lda     f:ItemProp+4,x   ; spell taught by item — long operand ITEM_PROP+4 -> FA:0000+4 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 02601C–02601E | C2:601C–C2:601E | 3 | `03 50 D8` | `03 00 FA` | C2:601B src/battle/win.asm:362 lda     f:ItemProp+3,x   ; spell learn rate — long operand ITEM_PROP+3 -> FA:0000+3 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038074–038076 | C3:8074–C3:8076 | 3 | `00 50 D8` | `00 00 FA` | C3:8073 src/menu/item.asm:572 lda     f:ItemProp,x   ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03807E–038080 | C3:807E–C3:8080 | 3 | `00 50 D8` | `00 00 FA` | C3:807D src/menu/item.asm:576 lda     f:ItemProp,x   ; branch if not useable on field — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0384AF–0384B1 | C3:84AF–C3:84B1 | 3 | `00 50 D8` | `00 00 FA` | C3:84AE src/menu/item.asm:1302 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0384B9–0384BB | C3:84B9–C3:84BB | 3 | `00 50 D8` | `00 00 FA` | C3:84B8 src/menu/item.asm:1306 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038524–038526 | C3:8524–C3:8526 | 3 | `01 50 D8` | `01 00 FA` | C3:8523 src/menu/item.asm:1365 lda     f:ItemProp+1,x          ; equippable characters — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0386B5–0386B7 | C3:86B5–C3:86B7 | 3 | `10 50 D8` | `10 00 FA` | C3:86B4 src/menu/item.asm:1590 lda     f:ItemProp+16,x         ; vigor/speed — long operand ITEM_PROP+16 -> FA:0000+16 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0386E4–0386E6 | C3:86E4–C3:86E6 | 3 | `11 50 D8` | `11 00 FA` | C3:86E3 src/menu/item.asm:1610 lda     f:ItemProp+17,x         ; stamina/mag.pwr — long operand ITEM_PROP+17 -> FA:0000+17 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038707–038709 | C3:8707–C3:8709 | 3 | `00 50 D8` | `00 00 FA` | C3:8706 src/menu/item.asm:1625 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038711–038713 | C3:8711–C3:8713 | 3 | `14 50 D8` | `14 00 FA` | C3:8710 src/menu/item.asm:1631 lda     f:ItemProp+20,x         ; defense power — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038721–038723 | C3:8721–C3:8723 | 3 | `15 50 D8` | `15 00 FA` | C3:8720 src/menu/item.asm:1636 lda     f:ItemProp+21,x         ; magic defense — long operand ITEM_PROP+21 -> FA:0000+21 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038761–038763 | C3:8761–C3:8763 | 3 | `13 50 D8` | `13 00 FA` | C3:8760 src/menu/item.asm:1661 lda     f:ItemProp+19,x         ; weapon properties — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038772–038774 | C3:8772–C3:8774 | 3 | `13 50 D8` | `13 00 FA` | C3:8771 src/menu/item.asm:1667 lda     f:ItemProp+19,x — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038785–038787 | C3:8785–C3:8787 | 3 | `13 50 D8` | `13 00 FA` | C3:8784 src/menu/item.asm:1674 lda     f:ItemProp+19,x — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0387B4–0387B6 | C3:87B4–C3:87B6 | 3 | `14 50 D8` | `14 00 FA` | C3:87B3 src/menu/item.asm:1708 lda     f:ItemProp+20,x         ; battle power — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0387CF–0387D1 | C3:87CF–C3:87D1 | 3 | `03 50 D8` | `03 00 FA` | C3:87CE src/menu/item.asm:1724 lda     f:ItemProp+3,x   ; spell learn rate — long operand ITEM_PROP+3 -> FA:0000+3 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0387D7–0387D9 | C3:87D7–C3:87D9 | 3 | `04 50 D8` | `04 00 FA` | C3:87D6 src/menu/item.asm:1727 lda     f:ItemProp+4,x   ; spell learned — long operand ITEM_PROP+4 -> FA:0000+4 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0387FB–0387FD | C3:87FB–C3:87FD | 3 | `1A 50 D8` | `1A 00 FA` | C3:87FA src/menu/item.asm:1751 lda     f:ItemProp+26,x         ; evade%/mblock% — long operand ITEM_PROP+26 -> FA:0000+26 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0388A5–0388A7 | C3:88A5–C3:88A7 | 3 | `0F 50 D8` | `0F 00 FA` | C3:88A4 src/menu/item.asm:1837 lda     f:ItemProp+15,x         ; element — long operand ITEM_PROP+15 -> FA:0000+15 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03895E–038960 | C3:895E–C3:8960 | 3 | `16 50 D8` | `16 00 FA` | C3:895D src/menu/item.asm:1955 lda     f:ItemProp+22,x   ; absorbed — long operand ITEM_PROP+22 -> FA:0000+22 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03896C–03896E | C3:896C–C3:896E | 3 | `17 50 D8` | `17 00 FA` | C3:896B src/menu/item.asm:1960 lda     f:ItemProp+23,x   ; no effect — long operand ITEM_PROP+23 -> FA:0000+23 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03897A–03897C | C3:897A–C3:897C | 3 | `18 50 D8` | `18 00 FA` | C3:8979 src/menu/item.asm:1965 lda     f:ItemProp+24,x   ; weak point — long operand ITEM_PROP+24 -> FA:0000+24 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038C44–038C46 | C3:8C44–C3:8C46 | 3 | `13 50 D8` | `13 00 FA` | C3:8C43 src/menu/item.asm:2417 lda     f:ItemProp+19,x         ; item properties — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038C5F–038C61 | C3:8C5F–C3:8C61 | 3 | `13 50 D8` | `13 00 FA` | C3:8C5E src/menu/item.asm:2430 lda     f:ItemProp+19,x — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038C77–038C79 | C3:8C77–C3:8C79 | 3 | `13 50 D8` | `13 00 FA` | C3:8C76 src/menu/item.asm:2442 @8c76:  lda     f:ItemProp+19,x — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038CA3–038CA5 | C3:8CA3–C3:8CA5 | 3 | `13 50 D8` | `13 00 FA` | C3:8CA2 src/menu/item.asm:2459 lda     f:ItemProp+19,x — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038CCE–038CD0 | C3:8CCE–C3:8CD0 | 3 | `14 50 D8` | `14 00 FA` | C3:8CCD src/menu/item.asm:2483 @8ccd:  lda     f:ItemProp+20,x         ; hp/mp restored — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0397AD–0397AF | C3:97AD–C3:97AF | 3 | `00 50 D8` | `00 00 FA` | C3:97AC src/menu/equip.asm:1596 lda     f:ItemProp,x   ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0397B9–0397BB | C3:97B9–C3:97BB | 3 | `01 50 D8` | `01 00 FA` | C3:97B8 src/menu/equip.asm:1601 lda     f:ItemProp+1,x — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0397EF–0397F1 | C3:97EF–C3:97F1 | 3 | `00 50 D8` | `00 00 FA` | C3:97EE src/menu/equip.asm:1631 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0397FB–0397FD | C3:97FB–C3:97FD | 3 | `01 50 D8` | `01 00 FA` | C3:97FA src/menu/equip.asm:1636 lda     f:ItemProp+1,x — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03986E–039870 | C3:986E–C3:9870 | 3 | `13 50 D8` | `13 00 FA` | C3:986D src/menu/equip.asm:1708 lda     f:ItemProp+19,x   ; 2-handed weapon — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0399B6–0399B8 | C3:99B6–C3:99B8 | 3 | `13 50 D8` | `13 00 FA` | C3:99B5 src/menu/equip.asm:1891 lda     f:ItemProp+19,x   ; weapon effects — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0399D4–0399D6 | C3:99D4–C3:99D6 | 3 | `13 50 D8` | `13 00 FA` | C3:99D3 src/menu/equip.asm:1905 lda     f:ItemProp+19,x — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039A1E–039A20 | C3:9A1E–C3:9A20 | 3 | `13 50 D8` | `13 00 FA` | C3:9A1D src/menu/equip.asm:1949 lda     f:ItemProp+19,x   ; weapon properties — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039A35–039A37 | C3:9A35–C3:9A37 | 3 | `13 50 D8` | `13 00 FA` | C3:9A34 src/menu/equip.asm:1959 lda     f:ItemProp+19,x   ; weapon properties — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039A67–039A69 | C3:9A67–C3:9A69 | 3 | `00 50 D8` | `00 00 FA` | C3:9A66 src/menu/equip.asm:2006 lda     f:ItemProp,x            ; $f6 = item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039A87–039A89 | C3:9A87–C3:9A89 | 3 | `00 50 D8` | `00 00 FA` | C3:9A86 src/menu/equip.asm:2022 lda     f:ItemProp,x            ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039A9A–039A9C | C3:9A9A–C3:9A9C | 3 | `00 50 D8` | `00 00 FA` | C3:9A99 src/menu/equip.asm:2031 @9a99:  lda     f:ItemProp,x            ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039AB3–039AB5 | C3:9AB3–C3:9AB5 | 3 | `00 50 D8` | `00 00 FA` | C3:9AB2 src/menu/equip.asm:2044 lda     f:ItemProp,x            ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039AC6–039AC8 | C3:9AC6–C3:9AC8 | 3 | `00 50 D8` | `00 00 FA` | C3:9AC5 src/menu/equip.asm:2053 @9ac5:  lda     f:ItemProp,x            ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039B84–039B86 | C3:9B84–C3:9B86 | 3 | `00 50 D8` | `00 00 FA` | C3:9B83 src/menu/equip.asm:2163 lda     f:ItemProp,x   ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039B94–039B96 | C3:9B94–C3:9B96 | 3 | `01 50 D8` | `01 00 FA` | C3:9B93 src/menu/equip.asm:2170 lda     f:ItemProp+1,x   ; equippable characters — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039BC4–039BC6 | C3:9BC4–C3:9BC6 | 3 | `00 50 D8` | `00 00 FA` | C3:9BC3 src/menu/equip.asm:2194 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039BD0–039BD2 | C3:9BD0–C3:9BD2 | 3 | `01 50 D8` | `01 00 FA` | C3:9BCF src/menu/equip.asm:2199 lda     f:ItemProp+1,x — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039C00–039C02 | C3:9C00–C3:9C02 | 3 | `00 50 D8` | `00 00 FA` | C3:9BFF src/menu/equip.asm:2223 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039C0C–039C0E | C3:9C0C–C3:9C0E | 3 | `01 50 D8` | `01 00 FA` | C3:9C0B src/menu/equip.asm:2228 lda     f:ItemProp+1,x — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03A06D–03A06F | C3:A06D–C3:A06F | 3 | `00 50 D8` | `00 00 FA` | C3:A06C src/menu/equip.asm:2975 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03A079–03A07B | C3:A079–C3:A07B | 3 | `01 50 D8` | `01 00 FA` | C3:A078 src/menu/equip.asm:2980 lda     f:ItemProp+1,x — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03A177–03A179 | C3:A177–C3:A179 | 3 | `14 50 D8` | `14 00 FA` | C3:A176 src/menu/equip.asm:3111 lda     f:ItemProp+20,x   ; attack/defense power — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03B7F0–03B7F2 | C3:B7F0–C3:B7F2 | 3 | `00 50 D8` | `00 00 FA` | C3:B7EF src/menu/shop.asm:546 lda     f:ItemProp,x   ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BA17–03BA19 | C3:BA17–C3:BA19 | 3 | `00 50 D8` | `00 00 FA` | C3:BA16 src/menu/shop.asm:890 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BAFF–03BB01 | C3:BAFF–C3:BB01 | 3 | `00 50 D8` | `00 00 FA` | C3:BAFE src/menu/shop.asm:1093 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BB12–03BB14 | C3:BB12–C3:BB14 | 3 | `14 50 D8` | `14 00 FA` | C3:BB11 src/menu/shop.asm:1103 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BB34–03BB36 | C3:BB34–C3:BB36 | 3 | `14 50 D8` | `14 00 FA` | C3:BB33 src/menu/shop.asm:1116 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BB76–03BB78 | C3:BB76–C3:BB78 | 3 | `00 50 D8` | `00 00 FA` | C3:BB75 src/menu/shop.asm:1157 lda     f:ItemProp,x            ; item price / 2 — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BCEE–03BCF0 | C3:BCEE–C3:BCF0 | 3 | `01 50 D8` | `01 00 FA` | C3:BCED src/menu/shop.asm:1426 lda     f:ItemProp+1,x   ; equippable characters — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BD1A–03BD1C | C3:BD1A–C3:BD1C | 3 | `14 50 D8` | `14 00 FA` | C3:BD19 src/menu/shop.asm:1453 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BD20–03BD22 | C3:BD20–C3:BD22 | 3 | `00 50 D8` | `00 00 FA` | C3:BD1F src/menu/shop.asm:1455 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BD6D–03BD6F | C3:BD6D–C3:BD6F | 3 | `14 50 D8` | `14 00 FA` | C3:BD6C src/menu/shop.asm:1489 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BDD7–03BDD9 | C3:BDD7–C3:BDD9 | 3 | `00 50 D8` | `00 00 FA` | C3:BDD6 src/menu/shop.asm:1539 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BDEF–03BDF1 | C3:BDEF–C3:BDF1 | 3 | `00 50 D8` | `00 00 FA` | C3:BDEE src/menu/shop.asm:1549 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BE0D–03BE0F | C3:BE0D–C3:BE0F | 3 | `14 50 D8` | `14 00 FA` | C3:BE0C src/menu/shop.asm:1562 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BE63–03BE65 | C3:BE63–C3:BE65 | 3 | `00 50 D8` | `00 00 FA` | C3:BE62 src/menu/shop.asm:1600 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BE77–03BE79 | C3:BE77–C3:BE79 | 3 | `00 50 D8` | `00 00 FA` | C3:BE76 src/menu/shop.asm:1608 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BE95–03BE97 | C3:BE95–C3:BE97 | 3 | `14 50 D8` | `14 00 FA` | C3:BE94 src/menu/shop.asm:1621 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BEE5–03BEE7 | C3:BEE5–C3:BEE7 | 3 | `14 50 D8` | `14 00 FA` | C3:BEE4 src/menu/shop.asm:1657 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03C1BD–03C1BF | C3:C1BD–C3:C1BF | 3 | `01 50 D8` | `01 00 FA` | C3:C1BC src/menu/shop.asm:2080 lda     f:ItemProp+1,x — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 008130–008132 | C0:8130–C0:8132 | 3 | `01 B3 D2` | `81 25 FA` | C0:812F src/field/text.asm:302 lda     f:ItemName+1,x          ; item name — long operand ITEM_NAME+1 -> FA:2580+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 0083EF–0083F1 | C0:83EF–C0:83F1 | 3 | `01 B3 D2` | `81 25 FA` | C0:83EE src/field/text.asm:750 _83ee:  lda     f:ItemName+1,x          ; ignore symbol — long operand ITEM_NAME+1 -> FA:2580+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 016067–016069 | C1:6067–C1:6069 | 3 | `01 B3 D2` | `81 25 FA` | C1:6066 src/btlgfx/menu.asm:5734 @6069:  lda     f:ItemName+1,x   ; item name — long operand ITEM_NAME+1 -> FA:2580+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 01652E–016530 | C1:652E–C1:6530 | 3 | `00 B3 D2` | `80 25 FA` | C1:652D src/btlgfx/menu.asm:6513 lda     f:ItemName,x   ; item name — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 016576–016578 | C1:6576–C1:6578 | 3 | `00 B3 D2` | `80 25 FA` | C1:6575 src/btlgfx/menu.asm:6568 @6578:  lda     f:ItemName,x   ; item name — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 016A56–016A58 | C1:6A56–C1:6A58 | 3 | `00 B3 D2` | `80 25 FA` | C1:6A55 src/btlgfx/menu.asm:7573 lda     f:ItemName,x   ; item name (first character) — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 016AA0–016AA2 | C1:6AA0–C1:6AA2 | 3 | `00 B3 D2` | `80 25 FA` | C1:6A9F src/btlgfx/menu.asm:7613 @6aa2:  lda     f:ItemName,x — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 032720–032722 | C3:2720–C3:2722 | 3 | `00 B3 D2` | `80 25 FA` | C3:271F src/menu/field_menu.asm:2256 lda     f:ItemName,x — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 0380E3–0380E5 | C3:80E3–C3:80E5 | 3 | `00 B3 D2` | `80 25 FA` | C3:80E2 src/menu/item.asm:643 @80e2:  lda     f:ItemName,x            ; item name — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 039011–039013 | C3:9011–C3:9013 | 3 | `00 B3 D2` | `80 25 FA` | C3:9010 src/menu/equip.asm:441 @9010:  lda     f:ItemName,x — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 039D41–039D43 | C3:9D41–C3:9D43 | 3 | `00 B3 D2` | `80 25 FA` | C3:9D40 src/menu/equip.asm:2422 @9d40:  lda     f:ItemName,x — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 03C08C–03C08E | C3:C08C–C3:C08E | 3 | `00 B3 D2` | `80 25 FA` | C3:C08B src/menu/shop.asm:1900 @c08b:  lda     f:ItemName,x — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_WEAPON_ANIM | 019DB6–019DB8 | C1:9DB6–C1:9DB8 | 3 | `00 E4 EC` | `00 38 FA` | C1:9DB5 src/btlgfx/gfx_cmd.asm:1879 @9db8:  lda     f:WeaponAnimProp,x — long operand WEAPON_ANIM+0 -> FA:3800+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_JUMP_ANIM | 01BA4D–01BA4F | C1:BA4D–C1:BA4F | 3 | `40 00 D1` | `00 37 FA` | C1:BA4C src/btlgfx/anim_cmd.asm:521 lda     f:ItemJumpThrowAnim,x — long operand JUMP_ANIM+0 -> FA:3700+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I201_EVCMD_66 | 009926–009927 | C0:9926–C0:9927 | 2 | `1A B9` | `20 D6` | EventCmdTbl entry $66 (vanilla EventCmd_66 = RTS lock-up; unused by Rev 1 scripts) — GIVE_EXT_ITEM id16 (3 bytes) |
+| I202_EVCMD_67 | 009928–009929 | C0:9928–C0:9929 | 2 | `1A B9` | `30 D6` | EventCmdTbl entry $67 (vanilla unused) — TAKE_EXT_ITEM id16 (3 bytes) |
+| I203_EVCMD_68 | 00992A–00992B | C0:992A–C0:992B | 2 | `1A B9` | `40 D6` | EventCmdTbl entry $68 (vanilla unused) — HAS_EXT_ITEM id16, switch16 (5 bytes) |
+| I210_GIVEITEM_FIND | 00ACFE–00AD00 | C0:ACFE–C0:AD00 | 3 | `BD 69 18` | `20 65 D6` | GiveItem C0:ACFC (event $80, treasure chests) find-same-item loop — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I211_GIVEITEM_PUT | 00AD19–00AD1B | C0:AD19–C0:AD1B | 3 | `9D 69 18` | `20 71 D6` | GiveItem first-empty-slot store — vanilla id stored -> slot high bit cleared |
+| I212_TAKEITEM_FIND | 00AD2F–00AD31 | C0:AD2F–C0:AD31 | 3 | `BD 69 18` | `20 65 D6` | EventCmd_81 take-item search — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I213_EVCMD8D_SLOT | 009FE7–009FE9 | C0:9FE7–C0:9FE9 | 3 | `BD 1F 16` | `20 83 D6` | EventCmd_8d (remove character equipment) slot read — extended equipment returns to the inventory with its 9-bit id; vanilla path sees $FF and skips it |
+| I214_EVCMD8D_FIND | 009FF7–009FF9 | C0:9FF7–C0:9FF9 | 3 | `BD 69 18` | `20 65 D6` | EventCmd_8d find-same-item loop — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I215_EVCMD8D_PUT | 00A017–00A019 | C0:A017–C0:A019 | 3 | `9D 69 18` | `20 71 D6` | EventCmd_8d empty-slot store — vanilla id stored -> slot high bit cleared |
+| I216_CHARINIT_EQUIP | 00A0D0–00A0D2 | C0:A0D0–C0:A0D2 | 3 | `99 1F 16` | `20 BC D6` | character init from CharProp (6 equipment bytes := vanilla ids) — clear the record's 6 equipment high bits |
+| I220_NEWGAME_EXT | 00BDE2–00BDE7 | C0:BDE2–C0:BDE7 | 6 | `A6 00 BF 40 3C CF` | `22 14 80 FA 80 09` | InitNewGame Bushido-name copy to $1CF8-$1D27 (JP leftover, never read by the EN game) — extended metadata := 0 + signature; the copy loop is bypassed |
+| I221_LOADGAME_SANITIZE | 03150E–031510 | C3:150E–C3:1510 | 3 | `20 95 15` | `20 A0 F0` | LoadSavedGame (game-over restart) after the slot checksum passed — no/legacy signature -> clear extended metadata; valid -> drop stale/undefined bits; then PopTimers |
+| I222_LOADMENU_SANITIZE | 0329EB–0329ED | C3:29EB–C3:29ED | 3 | `20 66 15` | `20 A7 F0` | load menu slot select (title Continue) — same sanitize right after LoadSaveSlot |
+| I300_ITEMLIST_QTY | 037FA8–037FAA | C3:7FA8–C3:7FAA | 3 | `B9 69 19` | `20 F3 F1` | DrawItemListRow quantity — shop / colosseum: extended slot drawn as empty (qty 0) |
+| I301_ITEMLIST_NAME | 0380C7–0380CB | C3:80C7–C3:80CB | 5 | `B9 69 18 C9 FF` | `20 A2 F1 60 EA` | LoadListItemName (item menu, shop sell list, colosseum list) — name via XItemName with the 9-bit id; shop/colosseum: extended slot drawn as empty |
+| I302_ITEMDESC_ID | 0382F8–0382FA | C3:82F8–C3:82FA | 3 | `B9 69 18` | `20 E7 F0` | InitItemDesc item id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I303_ITEMDESC_LOAD | 0382FB–0382FD | C3:82FB–C3:82FD | 3 | `20 38 57` | `20 07 F2` | InitItemDesc LoadItemDesc — extended description from XDescPtr/XDescText (hidden in shop/colosseum) |
+| I304_USEITEM_ID | 03849D–03849F | C3:849D–C3:849F | 3 | `B9 69 18` | `20 E7 F0` | UseItem item id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I305_USEITEM_PROP | 0384A8–0384AA | C3:84A8–C3:84AA | 3 | `20 21 83` | `20 37 F1` | UseItem GetItemPropPtr — type / equippable characters of the extended item (item details screen) |
+| I306_DETAILS_ID | 038696–038698 | C3:8696–C3:8698 | 3 | `B9 69 18` | `20 E7 F0` | DrawItemDetails item id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I307_DETAILS_PROP | 038699–03869B | C3:8699–C3:869B | 3 | `20 21 83` | `20 37 F1` | DrawItemDetails GetItemPropPtr — stats / elements / power of the extended item |
+| I308_DETAILS_POWER | 0387A0–0387A2 | C3:87A0–C3:87A2 | 3 | `B9 69 18` | `20 01 F1` | DrawWeaponPower Atma/Soul Sabre/Dice id test — an extended weapon is never one of the vanilla '???' weapons (low byte alias) |
+| I309_ITEM_SWAP_BITS | 0327DE–0327E0 | C3:27DE–C3:27E0 | 3 | `4C 88 7F` | `4C D9 F4` | item move: swap two inventory slots — swap the two slots' high bits too |
+| I310_ARRANGE | 03267F–032684 | C3:267F–C3:2684 | 6 | `20 B8 26 20 E0 26` | `22 2C 80 FA EA EA` | Arrange (copy + SortItemsByIcon) — same algorithm/buffers, 9-bit ids carried, icon from XItemName |
+| I311_COLOSSEUM_PICK | 03ACFA–03ACFC | C3:ACFA–C3:ACFC | 3 | `BD 69 18` | `20 0D F1` | colosseum item select (wager) — extended items cannot be wagered |
+| I320_PARTYEQ_NAME_ID | 038FC2–038FC4 | C3:8FC2–C3:8FC4 | 3 | `B9 1F 00` | `20 4C F2` | DrawPartyEquipItems equipment id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I321_EQNAME | 038FE1–038FE4 | C3:8FE1–C3:8FE4 | 4 | `48 A2 8B 9E` | `4C 48 F4 EA` | _c38fe1 equipped item name — name via XItemName with the 9-bit id |
+| I322_EQNAME_RH | 039405–039407 | C3:9405–C3:9407 | 3 | `B9 1F 00` | `20 4C F2` | equip menu R-hand name — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I323_EQNAME_LH | 039417–039419 | C3:9417–C3:9419 | 3 | `B9 20 00` | `20 5D F2` | equip menu L-hand name — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I324_EQNAME_HEAD | 03943D–03943F | C3:943D–C3:943F | 3 | `B9 21 00` | `20 6E F2` | equip menu helmet name — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I325_EQNAME_BODY | 03944B–03944D | C3:944B–C3:944D | 3 | `B9 22 00` | `20 7F F2` | equip menu armor name — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I326_EQNAME_RELIC1 | 039459–03945B | C3:9459–C3:945B | 3 | `B9 23 00` | `20 90 F2` | relic menu relic 1 name — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I327_EQNAME_RELIC2 | 039467–039469 | C3:9467–C3:9469 | 3 | `B9 24 00` | `20 A1 F2` | relic menu relic 2 name — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I330_PREVIEW_SAVE | 03925F–039263 | C3:925F–C3:9263 | 5 | `B9 1F 00 85 64` | `20 A0 F4 EA EA` | _c39233 stat preview: save equipped item — save the slot's high bit too (XSCRATCH $1E3F, transient) |
+| I331_PREVIEW_CAND | 039264–039266 | C3:9264–C3:9266 | 3 | `BD 69 18` | `20 F4 F0` | _c39233 candidate id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I332_PREVIEW_PUT | 039267–039269 | C3:9267–C3:9269 | 3 | `99 1F 00` | `20 CE F2` | _c39233 temporary equip of the candidate — equipment high bit := candidate high bit for UpdateEquip |
+| I333_PREVIEW_RESTORE | 03931A–03931E | C3:931A–C3:931E | 5 | `A5 64 99 1F 00` | `20 AC F4 EA EA` | _c39233 restore equipped item — restore the slot's id and high bit |
+| I340_REMOVEALL | 0396A8–0396AA | C3:96A8–C3:96AA | 3 | `20 F2 93` | `4C 7E F3` | EquipRemoveAll (Empty, Optimum) — weapon/shield/helmet/armor return to the inventory with their 9-bit ids; high bits cleared |
+| I341_OPT_2H_STORE | 039712–039714 | C3:9712–C3:9714 | 3 | `99 1F 00` | `20 CE F2` | EquipOptimum 2-handed weapon store — high bit := B |
+| I342_OPT_2H_DEC | 039715–039717 | C3:9715–C3:9717 | 3 | `20 97 9D` | `20 69 F3` | EquipOptimum DecItemQty — 9-bit id removal |
+| I343_OPT_W_STORE | 03972A–03972C | C3:972A–C3:972C | 3 | `99 1F 00` | `20 CE F2` | EquipOptimum weapon store — high bit := B |
+| I344_OPT_W_DEC | 03972D–03972F | C3:972D–C3:972F | 3 | `20 97 9D` | `20 69 F3` | EquipOptimum DecItemQty — 9-bit id removal |
+| I345_OPT_S_STORE | 039749–03974B | C3:9749–C3:974B | 3 | `99 20 00` | `20 E2 F2` | EquipOptimum shield store — high bit := B |
+| I346_OPT_S_DEC | 03974C–03974E | C3:974C–C3:974E | 3 | `20 97 9D` | `20 69 F3` | EquipOptimum DecItemQty — 9-bit id removal |
+| I347_OPT_G_STORE | 039763–039765 | C3:9763–C3:9765 | 3 | `99 20 00` | `20 E2 F2` | EquipOptimum genji off-hand store — high bit := B |
+| I348_OPT_G_DEC | 039766–039768 | C3:9766–C3:9768 | 3 | `20 97 9D` | `20 69 F3` | EquipOptimum DecItemQty — 9-bit id removal |
+| I349_OPT_H_STORE | 03977A–03977C | C3:977A–C3:977C | 3 | `99 21 00` | `20 F6 F2` | EquipOptimum helmet store — high bit := B |
+| I350_OPT_H_DEC | 03977D–03977F | C3:977D–C3:977F | 3 | `20 97 9D` | `20 69 F3` | EquipOptimum DecItemQty — 9-bit id removal |
+| I351_OPT_A_STORE | 03978F–039791 | C3:978F–C3:9791 | 3 | `99 22 00` | `20 0A F3` | EquipOptimum armor store — high bit := B |
+| I352_OPT_A_DEC | 039792–039794 | C3:9792–C3:9794 | 3 | `4C 97 9D` | `4C 69 F3` | EquipOptimum DecItemQty (tail) — 9-bit id removal |
+| I353_VALIDW_ID | 03979F–0397A1 | C3:979F–C3:97A1 | 3 | `B9 69 18` | `20 E7 F0` | GetValidWeapons item id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I354_VALIDW_PROP | 0397A6–0397A8 | C3:97A6–C3:97A8 | 3 | `20 21 83` | `20 37 F1` | GetValidWeapons type/equippable — extended properties |
+| I355_VALIDS_ID | 0397E1–0397E3 | C3:97E1–C3:97E3 | 3 | `B9 69 18` | `20 E7 F0` | GetValidShields item id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I356_VALIDS_PROP | 0397E8–0397EA | C3:97E8–C3:97EA | 3 | `20 21 83` | `20 37 F1` | GetValidShields type/equippable — extended properties |
+| I357_BESTEQUIP | 039819–03981C | C3:9819–C3:981C | 4 | `5A 8B A9 7E` | `4C AB F3 EA` | GetBestEquip (Optimum) — returns the 9-bit id; extended items are never imp items (ImpItem low-byte aliases $12/$16/$1C/$24) |
+| I358_BEST2HAND | 03983F–039842 | C3:983F–C3:9842 | 4 | `AF 89 9D 7E` | `4C E7 F3 EA` | GetBest2Hand (Optimum, gauntlet) — returns the 9-bit id; 2-hand flag from the extended properties |
+| I359_REMOVE_ID | 0398E6–0398E8 | C3:98E6–C3:98E8 | 3 | `B9 1F 00` | `20 4C F2` | equip Remove (one slot) id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I360_REMOVE_INC | 0398E9–0398EB | C3:98E9–C3:98EB | 3 | `20 5E 9D` | `20 54 F3` | equip Remove IncItemQty — 9-bit id back to inventory |
+| I361_REMOVE_CLR | 0398EE–0398F0 | C3:98EE–C3:98F0 | 3 | `99 1F 00` | `20 CE F2` | equip Remove slot := $FF — high bit cleared |
+| I362_EQUIP_OLD | 039923–039925 | C3:9923–C3:9925 | 3 | `B9 1F 00` | `20 4C F2` | equip (item select) currently equipped id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I363_EQUIP_INC | 03992A–03992C | C3:992A–C3:992C | 3 | `20 5E 9D` | `20 54 F3` | equip IncItemQty (old item back) — 9-bit id |
+| I364_EQUIP_NEW | 039936–039938 | C3:9936–C3:9938 | 3 | `BD 69 18` | `20 F4 F0` | equip new item id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I365_EQUIP_STORE | 039939–03993B | C3:9939–C3:993B | 3 | `99 1F 00` | `20 CE F2` | equip store — high bit := B |
+| I366_EQUIP_DEC | 03993C–03993E | C3:993C–C3:993E | 3 | `20 97 9D` | `20 69 F3` | equip DecItemQty (new item out) — 9-bit id |
+| I367_HANDTXT_LH | 0399A6–0399A8 | C3:99A6–C3:99A8 | 3 | `B9 20 00` | `20 5D F2` | R-Hand/L-Hand text (gauntlet) L-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I368_HANDTXT_LH_P | 0399AF–0399B1 | C3:99AF–C3:99B1 | 3 | `20 21 83` | `20 37 F1` | R-Hand/L-Hand text 2-hand flag — extended properties |
+| I369_HANDTXT_RH | 0399CA–0399CC | C3:99CA–C3:99CC | 3 | `B9 1F 00` | `20 4C F2` | R-Hand/L-Hand text R-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I370_HANDTXT_RH_P | 0399CD–0399CF | C3:99CD–C3:99CF | 3 | `20 21 83` | `20 37 F1` | R-Hand/L-Hand text 2-hand flag — extended properties |
+| I371_HANDFX_LH | 039A0E–039A10 | C3:9A0E–C3:9A10 | 3 | `B9 20 00` | `20 5D F2` | CheckHandEffects L-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I372_HANDFX_LH_P | 039A17–039A19 | C3:9A17–C3:9A19 | 3 | `20 21 83` | `20 37 F1` | CheckHandEffects 2-hand flag — extended properties |
+| I373_HANDFX_RH | 039A2B–039A2D | C3:9A2B–C3:9A2D | 3 | `B9 1F 00` | `20 4C F2` | CheckHandEffects R-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I374_HANDFX_RH_P | 039A2E–039A30 | C3:9A2E–C3:9A30 | 3 | `20 21 83` | `20 37 F1` | CheckHandEffects 2-hand flag — extended properties |
+| I375_CANEQ_ID | 039A5D–039A5F | C3:9A5D–C3:9A5F | 3 | `BD 69 18` | `20 F4 F0` | CheckCanEquipItem candidate id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I376_CANEQ_PROP | 039A60–039A62 | C3:9A60–C3:9A62 | 3 | `20 21 83` | `20 37 F1` | CheckCanEquipItem candidate type — extended properties |
+| I377_CANEQ_LH | 039A79–039A7B | C3:9A79–C3:9A7B | 3 | `B9 20 00` | `20 5D F2` | CheckCanEquipItem L-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I378_CANEQ_LH_P | 039A80–039A82 | C3:9A80–C3:9A82 | 3 | `20 21 83` | `20 37 F1` | CheckCanEquipItem L-hand type — extended properties |
+| I379_CANEQ_RH | 039AA5–039AA7 | C3:9AA5–C3:9AA7 | 3 | `B9 1E 00` | `20 3B F2` | CheckCanEquipItem R-hand id ($001E,Y) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I380_CANEQ_RH_P | 039AAC–039AAE | C3:9AAC–C3:9AAE | 3 | `20 21 83` | `20 37 F1` | CheckCanEquipItem R-hand type — extended properties |
+| I381_VALIDE_ID | 039B76–039B78 | C3:9B76–C3:9B78 | 3 | `B9 69 18` | `20 E7 F0` | GetValidEquip weapon/shield id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I382_VALIDE_PROP | 039B7D–039B7F | C3:9B7D–C3:9B7F | 3 | `20 21 83` | `20 37 F1` | GetValidEquip weapon/shield type — extended properties |
+| I383_VALIDH_ID | 039BB6–039BB8 | C3:9BB6–C3:9BB8 | 3 | `B9 69 18` | `20 E7 F0` | GetValidEquip helmet id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I384_VALIDH_PROP | 039BBD–039BBF | C3:9BBD–C3:9BBF | 3 | `20 21 83` | `20 37 F1` | GetValidEquip helmet type — extended properties |
+| I385_VALIDA_ID | 039BF2–039BF4 | C3:9BF2–C3:9BF4 | 3 | `B9 69 18` | `20 E7 F0` | GetValidEquip armor id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I386_VALIDA_PROP | 039BF9–039BFB | C3:9BF9–C3:9BFB | 3 | `20 21 83` | `20 37 F1` | GetValidEquip armor type — extended properties |
+| I387_EQLIST_NAME_ID | 039D25–039D27 | C3:9D25–C3:9D27 | 3 | `B9 69 18` | `20 E7 F0` | LoadEquipListItemName id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I388_EQLIST_NAME_HI | 039D2F–039D31 | C3:9D2F–C3:9D31 | 3 | `9C 1B 21` | `20 53 F1` | LoadEquipListItemName M7A high byte — name index = 9-bit id * 13 (ItemName retargeted to XItemName) |
+| I389_INCQTY_FIND | 039D63–039D65 | C3:9D63–C3:9D65 | 3 | `D9 69 18` | `20 19 F1` | IncItemQty find-same-item — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I390_INCQTY_PUT | 039D85–039D87 | C3:9D85–C3:9D87 | 3 | `99 69 18` | `20 25 F1` | IncItemQty empty-slot store — vanilla id stored -> high bit cleared |
+| I391_DECQTY_FIND | 039D9C–039D9E | C3:9D9C–C3:9D9E | 3 | `D9 69 18` | `20 19 F1` | DecItemQty find item — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I392_VALIDR_ID | 03A05F–03A061 | C3:A05F–C3:A061 | 3 | `B9 69 18` | `20 E7 F0` | relic list builder id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I393_VALIDR_PROP | 03A066–03A068 | C3:A066–C3:A068 | 3 | `20 21 83` | `20 37 F1` | relic list builder type/equippable — extended properties |
+| I394_RELIC_OLD | 03A0BB–03A0BD | C3:A0BB–C3:A0BD | 3 | `B9 23 00` | `20 90 F2` | relic equip currently equipped id ($0023,Y) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I395_RELIC_INC | 03A0C2–03A0C4 | C3:A0C2–C3:A0C4 | 3 | `20 5E 9D` | `20 54 F3` | relic equip IncItemQty — 9-bit id |
+| I396_RELIC_NEW | 03A0CE–03A0D0 | C3:A0CE–C3:A0D0 | 3 | `BD 69 18` | `20 F4 F0` | relic equip new id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I397_RELIC_STORE | 03A0D1–03A0D3 | C3:A0D1–C3:A0D3 | 3 | `99 23 00` | `20 1E F3` | relic equip store — high bit := B |
+| I398_RELIC_DEC | 03A0D4–03A0D6 | C3:A0D4–C3:A0D6 | 3 | `20 97 9D` | `20 69 F3` | relic equip DecItemQty — 9-bit id |
+| I399_RELICRM_ID | 03A124–03A126 | C3:A124–C3:A126 | 3 | `B9 23 00` | `20 90 F2` | relic remove id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I400_RELICRM_INC | 03A127–03A129 | C3:A127–C3:A129 | 3 | `20 5E 9D` | `20 54 F3` | relic remove IncItemQty — 9-bit id |
+| I401_RELICRM_CLR | 03A12C–03A12E | C3:A12C–C3:A12E | 3 | `99 23 00` | `20 1E F3` | relic remove slot := $FF — high bit cleared |
+| I402_SORT_ID | 03A16D–03A16F | C3:A16D–C3:A16F | 3 | `B9 69 18` | `20 E7 F0` | SortValidEquip id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I403_SORT_PROP | 03A170–03A172 | C3:A170–C3:A172 | 3 | `20 21 83` | `20 37 F1` | SortValidEquip attack/defense power — extended properties |
+| I404_RELICDESC_1 | 03A1CD–03A1CF | C3:A1CD–C3:A1CF | 3 | `B9 23 00` | `20 90 F2` | relic slot description (relic 1) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I405_RELICDESC_2 | 03A1D2–03A1D4 | C3:A1D2–C3:A1D4 | 3 | `B9 24 00` | `20 A1 F2` | relic slot description (relic 2) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I406_RELICDESC_LD | 03A1D5–03A1D7 | C3:A1D5–C3:A1D7 | 3 | `4C 38 57` | `4C 07 F2` | relic slot LoadItemDesc — extended description |
+| I407_RELICLDESC_ID | 03A1E4–03A1E6 | C3:A1E4–C3:A1E6 | 3 | `BD 69 18` | `20 F4 F0` | relic list description id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I408_RELICLDESC_LD | 03A1E7–03A1E9 | C3:A1E7–C3:A1E9 | 3 | `4C 38 57` | `4C 07 F2` | relic list LoadItemDesc — extended description |
+| I420_SELLDESC | 03B4FF–03B501 | C3:B4FF–C3:B501 | 3 | `BD 69 18` | `20 DE F5` | shop sell description id — TECH v0.9: sell description: a sellable extended consumable shows its own description; any other extended slot reads as $FF (XSHOPCURHI = current item high bit) |
+| I421_SELLITEM | 03BFCF–03BFD1 | C3:BFCF–C3:BFD1 | 3 | `B9 69 18` | `20 D5 F5` | _c3bfcb shop selected inventory item (sell select/qty/price) — TECH v0.9: Sell item id: a sellable extended consumable can be sold (XSHOPCURHI = 1), any other extended slot reads as $FF (cannot be selected) |
+| I422_BUY_FIND | 03B5BC–03B5BE | C3:B5BC–C3:B5BE | 3 | `D9 69 18` | `20 19 F1` | shop buy: find same item — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I423_BUY_PUT | 03B5DC–03B5DE | C3:B5DC–C3:B5DE | 3 | `99 69 18` | `20 25 F1` | shop buy: new slot store — high bit cleared |
+| I424_OWNED_FIND | 03BC66–03BC68 | C3:BC66–C3:BC68 | 3 | `D9 69 18` | `20 19 F1` | shop owned-quantity search — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I425_EQUIPPED_CNT | 03BF97–03BF9A | C3:BF97–C3:BF9A | 4 | `B7 E7 C5 E0` | `20 B6 F4 EA` | shop equipped-count compare — an extended equipment byte never equals a shop (vanilla) item |
+| I430_CMP_ARMOR_ID | 03BD5B–03BD5D | C3:BD5B–C3:BD5D | 3 | `B9 22 00` | `20 7F F2` | shop party compare: armor id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I431_CMP_ARMOR_P | 03BD66–03BD68 | C3:BD66–C3:BD68 | 3 | `20 21 83` | `20 37 F1` | shop party compare: armor defense — extended power |
+| I432_CMP_W_EQ1 | 03BDBA–03BDBC | C3:BDBA–C3:BDBC | 3 | `B9 1F 00` | `20 B2 F2` | shop party compare: weapon == shop item (R) — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I433_CMP_W_EQ2 | 03BDC1–03BDC3 | C3:BDC1–C3:BDC3 | 3 | `B9 20 00` | `20 C0 F2` | shop party compare: weapon == shop item (L) — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I434_CMP_W_R | 03BDC9–03BDCB | C3:BDC9–C3:BDCB | 3 | `B9 1F 00` | `20 4C F2` | shop party compare: R-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I435_CMP_W_R_P | 03BDD0–03BDD2 | C3:BDD0–C3:BDD2 | 3 | `20 21 83` | `20 37 F1` | shop party compare: R-hand type — extended properties |
+| I436_CMP_W_L | 03BDE1–03BDE3 | C3:BDE1–C3:BDE3 | 3 | `B9 20 00` | `20 5D F2` | shop party compare: L-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I437_CMP_W_L_P | 03BDE8–03BDEA | C3:BDE8–C3:BDEA | 3 | `20 21 83` | `20 37 F1` | shop party compare: L-hand type — extended properties |
+| I438_CMP_W_L2 | 03BDF9–03BDFB | C3:BDF9–C3:BDFB | 3 | `B9 20 00` | `20 5D F2` | shop party compare: L-hand id (power) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I439_CMP_W_R2 | 03BDFF–03BE01 | C3:BDFF–C3:BE01 | 3 | `B9 1F 00` | `20 4C F2` | shop party compare: R-hand id (power) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I440_CMP_W_POW | 03BE06–03BE08 | C3:BE06–C3:BE08 | 3 | `20 21 83` | `20 37 F1` | shop party compare: weapon power — extended power |
+| I441_CMP_S_EQ1 | 03BE4A–03BE4C | C3:BE4A–C3:BE4C | 3 | `B9 1F 00` | `20 B2 F2` | shop party compare: shield == shop item (R) — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I442_CMP_S_EQ2 | 03BE51–03BE53 | C3:BE51–C3:BE53 | 3 | `B9 20 00` | `20 C0 F2` | shop party compare: shield == shop item (L) — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I443_CMP_S_L | 03BE59–03BE5B | C3:BE59–C3:BE5B | 3 | `B9 20 00` | `20 5D F2` | shop party compare: L-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I444_CMP_S_L_P | 03BE5C–03BE5E | C3:BE5C–C3:BE5E | 3 | `20 21 83` | `20 37 F1` | shop party compare: L-hand type — extended properties |
+| I445_CMP_S_R | 03BE6D–03BE6F | C3:BE6D–C3:BE6F | 3 | `B9 1F 00` | `20 4C F2` | shop party compare: R-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I446_CMP_S_R_P | 03BE70–03BE72 | C3:BE70–C3:BE72 | 3 | `20 21 83` | `20 37 F1` | shop party compare: R-hand type — extended properties |
+| I447_CMP_S_R2 | 03BE81–03BE83 | C3:BE81–C3:BE83 | 3 | `B9 1F 00` | `20 4C F2` | shop party compare: R-hand id (power) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I448_CMP_S_L2 | 03BE87–03BE89 | C3:BE87–C3:BE89 | 3 | `B9 20 00` | `20 5D F2` | shop party compare: L-hand id (power) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I449_CMP_S_POW | 03BE8E–03BE90 | C3:BE8E–C3:BE90 | 3 | `20 21 83` | `20 37 F1` | shop party compare: shield power — extended power |
+| I450_CMP_H_ID | 03BED3–03BED5 | C3:BED3–C3:BED5 | 3 | `B9 21 00` | `20 6E F2` | shop party compare: helmet id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I451_CMP_H_P | 03BEDE–03BEE0 | C3:BEDE–C3:BEE0 | 3 | `20 21 83` | `20 37 F1` | shop party compare: helmet power — extended power |
+| I500_UPDEQ_LOAD | 020EE6–020EE8 | C2:0EE6–C2:0EE8 | 3 | `BD FB 15` | `20 70 64` | UpdateEquip 6-slot loop equipment read ($15FB,X) — low byte + equipment high bit (B) for CalcEquipEffect: all stats/elements/effects of extended equipment |
+| I501_CALCEQ_OFS | 020F9C–020FA2 | C2:0F9C–C2:0FA2 | 7 | `EB A9 1E 20 81 47 AA` | `20 8B 64 EA EA EA EA` | CalcEquipEffect id*30 (XBA/LDA #$1E/JSR MultAB/TAX) — 16-bit ItemProp offset of the 9-bit id (ItemProp retargeted to XItemProp) |
+| I502_LEARN_OFS | 02600C–026011 | C2:600C–C2:6011 | 6 | `EB A9 1E 20 81 47` | `20 9E 64 EA EA EA` | LearnItemMagic id*30 (battle end, equipped items) — spell-learning bytes of extended equipment from XItemProp |
+| I510_BINV_HAND_L | 025481–025483 | C2:5481–C2:5483 | 3 | `B9 20 16` | `20 D9 64` | InitInventory L-hand (shield slot) read — 9-bit id of the hand item (also clears the battle name queue) |
+| I511_BINV_HAND_L_CP | 025485–025487 | C2:5485–C2:5487 | 3 | `20 CD 54` | `20 1F 65` | InitInventory L-hand CopyItemProp — extended hand item: properties from XItemProp, never usable/throwable |
+| I512_BINV_HAND_R | 025493–025495 | C2:5493–C2:5495 | 3 | `B9 1F 16` | `20 F5 64` | InitInventory R-hand (weapon slot) read — 9-bit id |
+| I513_BINV_HAND_R_CP | 025497–025499 | C2:5497–C2:5499 | 3 | `20 CD 54` | `20 1F 65` | InitInventory R-hand CopyItemProp — extended hand item: properties from XItemProp, never usable/throwable |
+| I516_BINV_EXT_EMPTY | 0254B0–0254B2 | C2:54B0–C2:54B2 | 3 | `E2 30 7B` | `20 A8 65` | InitInventory: end of the 256-slot copy loop (SEP #$30 / TDC) — every extended slot is re-copied as the vanilla loop copies an empty slot (qty 0, CopyItemProp($FF)): not in Item/Throw/Tools lists, cannot be used or truncated; zero bitmap bytes skipped (battle init timing unchanged) |
+| I520_BTLEND_INV | 024981–024986 | C2:4981–C2:4986 | 6 | `A2 FF 00 A0 FB 04` | `22 30 80 FA 80 17` | battle end: battle inventory -> $1869/$1969 — vanilla slots copied as before; extended slots preserved; vanilla items placed at their positions re-homed |
+| I521_BTLEND_WAGER | 0249AD–0249AF | C2:49AD–C2:49AF | 3 | `DD 69 18` | `20 10 66` | battle end: colosseum wager removal search — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I530_ANIM_ID | 0229FE–022A00 | C2:29FE–C2:2A00 | 3 | `BD A8 3C` | `20 4D 66` | weapon animation number (RHandItem+1 -> $B7) — extended weapon -> animation number $C0+low byte (XWeaponAnimFull) |
+| I531_SPEAR_R | 021814–021819 | C2:1814–C2:1819 | 6 | `BD A8 3C 20 12 15` | `20 68 66 EA EA EA` | Jump: SpearEffect(RHandItem) — extended spear (XExtFlags bit1) doubles Jump damage like vanilla $1D-$24 |
+| I532_SPEAR_L | 02181A–02181F | C2:181A–C2:181F | 6 | `BD A9 3C 20 12 15` | `20 73 66 EA EA EA` | Jump: SpearEffect(LHandItem) — as above, left hand |
+| I533_OGRE_NIX | 023F0B–023F0D | C2:3F0B–C2:3F0D | 3 | `BD 86 2B` | `20 A5 66` | MP-crit weapon break test (Ogre Nix id $17) — an extended weapon never matches (would be broken/lost) |
+| I540_HANDNAMES | 014BDA–014BDF | C1:4BDA–C1:4BDF | 6 | `B9 9A 2B 8D 60 57` | `22 34 80 FA EA EA` | battle Item menu hand header (L-hand id store) — name queue for extended hand items |
+| I541_NAMEIDX | 01656C–01656F | C1:656C–C1:656F | 4 | `A6 30 A5 56` | `22 38 80 FA` | ListTextCmd_0e name index (LDX $30 / LDA $56) — extended hand name from XItemName |
+| I542_SWAPGUARD | 0189D2–0189D6 | C1:89D2–C1:89D6 | 5 | `AD 39 7B C9 FF` | `22 3C 80 FA EA` | check_equip (battle hand <-> inventory exchange, 3 callers) — the replaced hand (identified by the caller) cannot hold an extended item: refused like a vanilla refusal |
+| I545_HANDSWAP_BITS | 018E8F–018E92 | C1:8E8F–C1:8E92 | 4 | `AE 05 7B 7B` | `22 48 80 FA` | SelectEquipItem R-hand <-> L-hand exchange (LDX w7e7b05 / TDC) — the two hand equipment bits are swapped with the hand entries (write-back C2:20AB stores low bytes) |
+| I543_JUMPANIM_L | 01BA41–01BA44 | C1:BA41–C1:BA44 | 4 | `BD 9A 2B 1A` | `22 44 80 FA` | Jump animation: L-hand item id + 1 (ItemJumpThrowAnim index) — extended weapon -> $80 + low byte (XJumpAnim FA:3700; the C1:BA4C operand is retargeted) |
+| I544_JUMPANIM_R | 01BA47–01BA4A | C1:BA47–C1:BA4A | 4 | `BD 86 2B 1A` | `22 40 80 FA` | Jump animation: R-hand item id + 1 (ItemJumpThrowAnim index) — as I543 (right hand) |
+| V901_EVCMD_69 | 00992C–00992D | C0:992C–C0:992D | 2 | `1A B9` | `DA D6` | EventCmdTbl entry $69 (vanilla unused: RTS lock-up; no Rev 1 script uses it) — GIVE_RARE id (2 bytes) |
+| V902_EVCMD_6D | 009934–009935 | C0:9934–C0:9935 | 2 | `1A B9` | `EA D6` | EventCmdTbl entry $6D (vanilla unused) — TAKE_RARE id (2 bytes) |
+| V903_EVCMD_6E | 009936–009937 | C0:9936–C0:9937 | 2 | `1A B9` | `FA D6` | EventCmdTbl entry $6E (vanilla unused) — HAS_RARE id, switch16 (4 bytes) |
+| V910_INITTARGET_CMD | 0226D6–0226D9 | C2:26D6–C2:26D9 | 4 | `64 BA A2 40` | `20 E7 66 EA` | InitTarget C2:26D3 (A = command) — records the command (XCURCMD) for the extended-consumable property lookup |
+| V911_ITEMTARGET_PROP | 02271D–02271F | C2:271D–C2:271F | 3 | `20 63 2B` | `20 F0 66` | InitItemTarget C2:271A GetItemPropPtr — Item command + extended consumable id -> XItemProp record of $100|id (targeting, status) |
+| V912_ITEMEFFECT_PROP | 022A60–022A62 | C2:2A60–C2:2A62 | 3 | `20 63 2B` | `20 F0 66` | CalcItemEffect C2:2A37 GetItemPropPtr (battle Item command and field menu use via CalcMagicEffect) — extended consumable -> its own power / element / flags / status record |
+| V913_ITEMTARGET_SPELL | 02273C–022740 | C2:273C–C2:2740 | 5 | `C9 E6 20 1A 27` | `20 F5 66 EA EA` | Init target, Item command C2:273C — an extended consumable never casts a spell (carry set like the vanilla items $E6-$FF) |
+| V914_ITEMCMD_NAMEFLAG | 02189F–0218A3 | C2:189F–C2:18A3 | 5 | `A9 01 8D 12 34` | `22 94 80 FA EA` | Item / Throw command C2:189E — XATKX := extended name + animation flags for a character's Item command with an extended consumable |
+| V915_ITEMCMD_CONSUME | 0218B0–0218B4 | C2:18B0–C2:18B4 | 5 | `A9 FF 9D F4 32` | `22 98 80 FA EA` | Item command: held item used up — clears the held-extended flag (XHELD) with the held item |
+| V916_FIXATTACK_HOLD | 024DB0–024DB2 | C2:4DB0–C2:4DB2 | 3 | `99 F4 32` | `20 FC 66` | FixPlayerAttack C2:4DAF (Item / Throw queued) — XHELD[character] := the held item is an extended consumable |
+| V917_RETURN_HELD | 0262D8–0262DA | C2:62D8–C2:62DA | 3 | `20 DC 54` | `20 06 67` | return of a held / obtained item C2:62C7 — a held extended consumable goes back to the list with its own properties + marker |
+| V918_STEAL_OBTAIN | 0239EC–0239EE | C2:39EC–C2:39EE | 3 | `9D F4 32` | `20 01 67` | Steal: obtained item C2:39EC — a vanilla item replaces the held item: XHELD cleared |
+| V919_METAMORPH_OBTAIN | 023A7C–023A7E | C2:3A7C–C2:3A7E | 3 | `9D F4 32` | `20 01 67` | Metamorph: obtained item C2:3A7C — a vanilla item replaces the held item: XHELD cleared |
+| V920_CMD_DISPATCH | 021559–02155C | C2:1559–C2:155C | 4 | `85 B5 0A AA` | `22 9C 80 FA` | battle command dispatch C2:1554 — clears XATKX before every command |
+| V930_ITEMROW | 014CA5–014CAD | C1:4CA5–C1:4CAD | 9 | `B9 86 26 8D 5A 57 8D 61 57` | `22 6C 80 FA EA EA EA EA EA` | DrawItemListText C1:4C6B — row name: XBTLNAME := extended-consumable marker of the entry (XItemName + $D00 for the name) |
+| V931_ITEM_DECREMENT | 017164–017178 | C1:7164–C1:7178 | 21 | `7B AA B9 B0 2B DD 86 26 F0 0B E8 E8 E8 E8 E8 E0 00 05 D0  …` | `22 70 80 FA B0 0F 60 EA EA EA EA EA EA EA EA EA EA EA EA  …` | decrement of the used / thrown list item C1:7167 — matches id AND marker (Item command + extended consumable) instead of the id only |
+| V932_ITEM_ADD | 014458–014469 | C1:4458–C1:4469 | 18 | `A2 00 00 DD 86 26 F0 21 E8 E8 E8 E8 E8 E0 00 05 D0 F1` | `22 74 80 FA B0 23 80 0A EA EA EA EA EA EA EA EA EA EA` | obtained / returned item added to the list C1:4445 — matches id AND marker |
+| V933_FIND_VANILLA | 018CBC–018CCA | C1:8CBC–C1:8CCA | 15 | `DD 86 26 F0 0C E8 E8 E8 E8 E8 E0 00 05 D0 F1` | `22 78 80 FA 60 EA EA EA EA EA EA EA EA EA EA` | FindInventoryItem C1:8CB7 (hand item back to the list) — vanilla entries only: a hand katana never merges into an extended consumable |
+| V934_ATTACKNAME_ITEM | 01605B–01605F | C1:605B–C1:605F | 5 | `AF 16 42 00 AA` | `22 68 80 FA EA` | item attack name C1:6050 — extended consumable (XATKX bit0) -> XItemName + $D00 |
+| V935_ITEM_ANIM | 01BC58–01BC6B | C1:BC58–C1:BC6B | 20 | `C9 E0 90 05 38 E9 E0 80 02 A9 E0 C2 20 0A AA BF 00 00 D1 AA` | `22 64 80 FA EA EA EA EA EA EA EA EA EA EA EA EA EA EA EA EA` | item animation C1:BC4E — extended consumable (XATKX bit1) -> XItemAnimX; vanilla ItemAnimPtrs rule otherwise |
+| V940_ITEMCOLOR_ID | 038056–038058 | C3:8056–C3:8058 | 3 | `B9 69 18` | `20 E7 F0` | GetItemNameColor C3:8045 — 9-bit id (A low, B high bit) |
+| V941_ITEMCOLOR_PROP | 03806D–03806F | C3:806D–C3:806F | 3 | `20 21 83` | `20 37 F1` | GetItemNameColor — usable colour from the extended record |
+| V942_CANUSE | 038B3D–038B3F | C3:8B3D–C3:8B3F | 3 | `B9 14 00` | `20 42 F5` | CheckCanUseItem C3:8B3D — extended consumable: validity from its record (vanilla rules) |
+| V943_USE_CTX | 038B25–038B27 | C3:8B25–C3:8B27 | 3 | `20 2B 8C` | `20 20 F5` | _c38b1a (before CalcMagicEffect) — XCURCMD := $FE for an extended slot (C2 reads the extended record) |
+| V944_RESTORE_ID | 038C34–038C36 | C3:8C34–C3:8C36 | 3 | `20 2B 8C` | `20 33 F5` | _c38c33 HP / MP restore — 9-bit id |
+| V945_RESTORE_PROP | 038C37–038C39 | C3:8C37–C3:8C39 | 3 | `20 21 83` | `20 37 F1` | _c38c33 HP / MP restore — extended record |
+| V946_USE_DEC | 038B17–038B19 | C3:8B17–C3:8B19 | 3 | `4C 97 9D` | `4C 39 F5` | _c38b11 (item used) — one unit of the selected 9-bit item is removed (slot cleared at 0) |
+| V950_SHOP_TABLE_LIST | 03B9AF–03B9B2 | C3:B9AF–C3:B9B2 | 4 | `BF C0 7A C4` | `BF 00 54 FA` | shop item list C3:B9AF — ShopProp relocated (XShopProp: 128 vanilla shops byte-exact + extended shops $80+) |
+| V951_SHOP_TABLE_PRICE | 03BA32–03BA35 | C3:BA32–C3:BA35 | 4 | `BF C0 7A C4` | `BF 00 54 FA` | AdjustShopPrice C3:BA2C — ShopProp relocated |
+| V952_SHOP_TABLE_TYPE | 03BFF3–03BFF6 | C3:BFF3–C3:BFF6 | 4 | `BF C0 7A C4` | `BF 00 54 FA` | shop type C3:BFD3 — ShopProp relocated |
+| V953_SHOP_ROW_NAME | 03B9BD–03B9BF | C3:B9BD–C3:B9BF | 3 | `20 68 C0` | `20 11 F6` | shop list row — 9-bit name |
+| V954_SHOP_ROW_PRICE | 03B9C9–03B9CB | C3:B9C9–C3:B9CB | 3 | `20 21 83` | `20 21 F6` | shop list row price — 9-bit record |
+| V955_SHOP_OWNED | 03BC5D–03BC61 | C3:BC5D–C3:BC61 | 5 | `7B AA DA A4 00` | `22 7C 80 FA 60` | _c3bc57 owned counts — owned quantity of exactly the shop item (vanilla / extended) |
+| V956_SHOP_CUR | 03BFC6–03BFC9 | C3:BFC6–C3:BFC9 | 4 | `BF 89 9D 7E` | `4C C9 F5 EA` | _c3bfc2 current buy item — XSHOPCURHI := entry high bit |
+| V957_BUY_DESC | 03B4F5–03B4F7 | C3:B4F5–C3:B4F7 | 3 | `4C 38 57` | `4C 02 F6` | buy description — extended description |
+| V958_SELL_DESC2 | 03B502–03B504 | C3:B502–C3:B504 | 3 | `4C 38 57` | `4C 02 F6` | sell description — extended description |
+| V959_BUY | 03B5B7–03B5B9 | C3:B5B7–C3:B5B9 | 3 | `20 C2 BF` | `20 6C F6` | _c3b5b7 buy — extended entry: extended give |
+| V960_BUY_NAME | 03BAC6–03BAC8 | C3:BAC6–C3:BAC8 | 3 | `20 68 C0` | `20 41 F6` | buy quantity screen name — 9-bit name |
+| V961_SELL_NAME | 03BADF–03BAE1 | C3:BADF–C3:BAE1 | 3 | `20 68 C0` | `20 41 F6` | sell quantity screen name — 9-bit name |
+| V962_BUY_TYPE | 03B7E9–03B7EB | C3:B7E9–C3:B7EB | 3 | `20 21 83` | `20 37 F6` | _c3b7e6 (item type) — 9-bit record |
+| V963_SHOP_STAT | 03BAF8–03BAFA | C3:BAF8–C3:BAFA | 3 | `20 21 83` | `20 37 F6` | DrawShopItemStat — 9-bit record |
+| V964_SELL_PRICE | 03BB68–03BB6A | C3:BB68–C3:BB6A | 3 | `20 21 83` | `20 37 F6` | sell price — 9-bit record (price / 2) |
+| V965_CANEQ_ID | 03BCE1–03BCE4 | C3:BCE1–C3:BCE4 | 4 | `BF 89 9D 7E` | `20 C9 F5 EA` | shop: who can equip (current entry) — XSHOPCURHI := entry high bit |
+| V966_CANEQ_PROP | 03BCE5–03BCE7 | C3:BCE5–C3:BCE7 | 3 | `20 21 83` | `20 37 F6` | shop: who can equip — 9-bit record |
+| V967_CANEQ2_ID | 03C1B0–03C1B3 | C3:C1B0–C3:C1B3 | 4 | `BF 89 9D 7E` | `20 C9 F5 EA` | shop: who can equip (party sprites) — XSHOPCURHI := entry high bit |
+| V968_CANEQ2_PROP | 03C1B4–03C1B6 | C3:C1B4–C3:C1B6 | 3 | `20 21 83` | `20 37 F6` | shop: who can equip (party sprites) — 9-bit record |
+| V969_SHOP_STATS_X | 03BD13–03BD15 | C3:BD13–C3:BD15 | 3 | `20 21 83` | `20 2E F6` | _c3bcfd per-entry stats — 9-bit record |
+| V970_SELLALL_CLR | 03B739–03B73B | C3:B739–C3:B73B | 3 | `99 69 18` | `20 25 F1` | sell all units of a slot — the emptied slot's high bit is cleared |
+| V980_RARE_DESCPTR | 038339–03833B | C3:8339–C3:833B | 3 | `A2 60 FB` | `A2 90 50` | InitRareItemDesc C3:8339 — 52 rare descriptions (XRareDescPtr, absolute pointers in bank FA) |
+| V981_RARE_DESCBASE | 03833E–038340 | C3:833E–C3:8340 | 3 | `A2 B0 FC` | `A2 00 00` | InitRareItemDesc — absolute pointers |
+| V982_RARE_DESCBANK | 038343–038344 | C3:8343–C3:8344 | 2 | `A9 CE` | `A9 FA` | InitRareItemDesc — bank FA |
+| V983_RARE_COUNT | 03834C–03834E | C3:834C–C3:834E | 3 | `20 6B 83` | `20 AF F6` | InitRareItemDesc (count) — number of owned rare items over all pages |
+| V984_RARE_NAMEPTR | 03843B–03843D | C3:843B–C3:843D | 3 | `A0 A0 FB` | `A0 00 51` | GetRareItemNamePtr C3:8436 — 52 rare names (XRareName) |
+| V985_RARE_NAMEBANK | 038440–038441 | C3:8440–C3:8441 | 2 | `A9 CE` | `A9 FA` | GetRareItemNamePtr — bank FA |
+| V986_RARE_LIST | 03838E–038390 | C3:838E–C3:8390 | 3 | `20 94 83` | `20 AA F6` | InitRareItemList C3:838B — list of the current page (vanilla ids 0-19 + FF6X ids 20-51) |
+| V987_RARE_PAGE | 032748–03274A | C3:2748–C3:274A | 3 | `20 4A 7D` | `20 BF F6` | menu state ITEM_RARE C3:2741 — page turning (Down / Up at the edge, R / L) |
+| V988_RARE_OPEN | 0326A0–0326A2 | C3:26A0–C3:26A2 | 3 | `20 8B 83` | `20 B6 F6` | SelectItemOption_02 C3:268E — page 0 |
+| P999_CHECKSUM | 00FFDC–00FFDF | C0:FFDC–C0:FFDF | 4 | `9F 75 60 8A` | `DA 24 25 DB` | SNES header (emulator/flash-cart validation) — Recalculated checksum DB25 / complement 24DA |
+
+## celes-tech — `FF6X_Rev1_TECH_v0.9_CELES_TECH.sfc`
+
+SHA-1 `e4c0703189fbde9b2df4ca972bfc801778aa6899` · CRC32 `3067CF9B` · SNES checksum `EE50` · status: production v0.9 + accepted Celes Annex slice
+
+| ID | PC | SNES | Len | Original | New | Consumer / reason |
+|---|---|---|---|---|---|---|
+| P000_EXPAND_4MIB | 300000–3FFFFF | F0:0000–FF:FFFF | 1048576 | `` | `1048576 B sha1 3de8699aadf9` | All F0-FF expansion allocations. — Expand 3 MiB -> 4 MiB HiROM. Header ROM-size byte C0:FFD7 is already 0x0C (4 MiB class) in Rev 1; unchanged. |
+| P001_BUILD_METADATA | 300000–30003F | F0:0000–F0:003F | 64 | `FF fill (expansion)` | `46 46 36 58 2D 45 45 00 01 00 09 00 00 02 00 00 63 65 6C  …` | tools/verify (offline). No runtime consumer. — Machine-readable build identity for QA tooling. |
+| P101_EXP_DLG_TABLE | 334000–33402A | F3:4000–F3:402A | 43 | `FF fill (expansion)` | `24 37 2F 20 2D 32 28 2E 2D 7F 23 28 20 2B 2E 26 34 24 7F  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1000: 'EXPANSION DIALOGUE ERROR:{n}ID OUT OF RANGE.' |
+| P101_EXP_DLG_TABLE | 33402B–334061 | F3:402B–F3:4061 | 55 | `FF fill (expansion)` | `33 24 22 27 7F 4F 54 65 57 61 7F 20 47 47 3E 51 7F 4D 3E  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1001: 'TECH v0.3: Annex test map.{n}Enter the Annex?{n}{choice} Yes{n}{choice} No' |
+| P101_EXP_DLG_TABLE | 334062–3340D5 | F3:4062–F3:40D5 | 116 | `FF fill (expansion)` | `35 20 2B 24 7F 6B 49 45 3A 3C 3E 41 48 45 3D 3E 4B 6C 61  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1002: 'VALE (placeholder): TECH v0.3.{n}This text is from bank F3.{n}Annex flag STARTED is now ON.{n}The north door is unsealed.' |
+| P101_EXP_DLG_TABLE | 3340D6–33413D | F3:40D6–F3:413D | 104 | `FF fill (expansion)` | `35 20 2B 24 7F 6B 49 45 3A 3C 3E 41 48 45 3D 3E 4B 6C 61  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1003: 'VALE (placeholder):{n}Annex flag STARTED is still ON.{n}Go north through the door{n}to start the test battle.' |
+| P101_EXP_DLG_TABLE | 33413E–3341A6 | F3:413E–F3:41A6 | 105 | `FF fill (expansion)` | `35 20 2B 24 7F 6B 49 45 3A 3C 3E 41 48 45 3D 3E 4B 6C 61  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1004: 'VALE (placeholder):{n}Annex flag BATTLE DONE is ON.{n}Take the test reward from{n}the chest in the north room.' |
+| P101_EXP_DLG_TABLE | 3341A7–33420E | F3:41A7–F3:420E | 104 | `FF fill (expansion)` | `35 20 2B 24 7F 6B 49 45 3A 3C 3E 41 48 45 3D 3E 4B 6C 61  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1005: 'VALE (placeholder):{n}Annex flag COMPLETE is ON.{n}TECH slice finished. Exit{n}south to return to the Falcon.' |
+| P101_EXP_DLG_TABLE | 33420F–334238 | F3:420F–F3:4238 | 42 | `FF fill (expansion)` | `33 41 3E 7F 3D 48 48 4B 7F 42 4C 7F 4C 3E 3A 45 3E 3D 65  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1006: 'The door is sealed.{n}(Talk to VALE first.)' |
+| P101_EXP_DLG_TABLE | 334239–334271 | F3:4239–F3:4271 | 57 | `FF fill (expansion)` | `33 24 22 27 7F 4F 54 65 57 61 7F 20 47 47 3E 51 7F 3D 3E  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1007: 'TECH v0.3: Annex defenses{n}activate! (placeholder battle)' |
+| P101_EXP_DLG_TABLE | 334272–3342A2 | F3:4272–F3:42A2 | 49 | `FF fill (expansion)` | `23 3E 3F 3E 47 4C 3E 4C 7F 3A 4B 3E 7F 3D 48 50 47 65 01  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1008: 'Defenses are down.{n}Annex flag BATTLE DONE is ON.' |
+| P101_EXP_DLG_TABLE | 3342A3–3342EE | F3:42A3–F3:42EE | 76 | `FF fill (expansion)` | `33 24 22 27 7F 4F 54 65 57 7F 49 45 3A 3C 3E 41 48 45 3D  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1009: 'TECH v0.3 placeholder reward:{n}Received 1 Potion.{n}Annex flag COMPLETE is ON.' |
+| P101_EXP_DLG_TABLE | 3342EF–33431A | F3:42EF–F3:431A | 44 | `FF fill (expansion)` | `33 41 3E 7F 3C 41 3E 4C 4D 7F 42 4C 7F 3E 46 49 4D 52 65  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $100A: 'The chest is empty.{n}(Reward already taken.)' |
+| P101_EXP_DLG_TABLE | 330000–33002B | F3:0000–F3:002B | 44 | `FF fill (expansion)` | `00 40 F3 00 2B 40 F3 00 62 40 F3 00 D6 40 F3 00 3E 41 F3  …` | P100 hook (LDA.l table,X) — 11 x 4-byte pointers for dialogue IDs $1000-$100A |
+| P100_DLG_HOOK | 301000–301032 | F0:1000–F0:1032 | 51 | `FF fill (expansion)` | `C2 20 A5 D0 C9 00 10 B0 0A E2 20 A9 CD 85 CB 5C C3 7F C0  …` | JML from C0:7FBF (GetDlgPtr) — Dialogue-pointer hook: vanilla IDs unchanged, IDs $1000+ from expansion table |
+| P100_DLG_HOOK | 007FBF–007FC2 | C0:7FBF–C0:7FC2 | 4 | `A9 CD 85 CB` | `5C 00 10 F0` | GetDlgPtr C0:7FBF; callers C0:A49A ($48), C0:A4E1 ($4B), C0:D493 (debug) — Replace LDA #$CD / STA $CB with JML $F01000 (displaced code re-executed in hook) |
+| T400_ANNEX_EVENTS | 310000–31007E | F1:0000–F1:007E | 127 | `FF fill (expansion)` | `4B 01 10 B6 0A 00 27 1B 00 27 DC F8 C0 4C 81 14 00 27 DC  …` | event interpreter via 24-bit trigger pointers, NPC vectors, call/jump operands — celes_annex_tech event scripts (127 bytes) from events/celes_annex_tech/events.evt |
+| T402_ANNEX_LAYOUT | 350000–350481 | F5:0000–F5:0481 | 1154 | `1154 B` | `1154 B sha1 dc1ba3890db6` | LoadMapTiles via MAPX_SUBTILEMAP_PTRS[$15F] — map 0C7 BG1 layout $15F (32x32, literal LZSS 1154 B) |
+| M101_MAPX_EVENT_TRIGGERS | 360000–361AC7 | F6:0000–F6:1AC7 | 6856 | `6856 B` | `6856 B sha1 0f304d69ef20` | 12 retargeted consumers — EVENT_TRIGGERS: 1164 vanilla records (maps $000-$19F) + 2 content records; 513 pointers |
+| M102_MAPX_NPC_PROPS | 364000–36912C | F6:4000–F6:912C | 20781 | `20781 B` | `20781 B sha1 62d2ab4fb6c3` | 21 retargeted consumers — NPC_PROPS: 2193 vanilla records (maps $000-$19F) + 2 content records; 513 pointers |
+| M103_MAPX_SHORT_ENTRANCES | 36C000–36DE7D | F6:C000–F6:DE7D | 7806 | `7806 B` | `7806 B sha1 aeafbcc0f3ef` | 19 retargeted consumers — SHORT_ENTRANCES: 1129 vanilla records (maps $000-$1FF) + 1 content records; 513 pointers |
+| M104_MAPX_LONG_ENTRANCES | 370000–370829 | F7:0000–F7:0829 | 2090 | `2090 B` | `2090 B sha1 0a4acc91a094` | 19 retargeted consumers — LONG_ENTRANCES: 152 vanilla records (maps $000-$1FF) + 0 content records; 513 pointers |
+| M105_MAPX_TREASURE | 372000–372997 | F7:2000–F7:2997 | 2456 | `2456 B` | `2456 B sha1 5067daac4c8a` | 12 retargeted consumers — TREASURE: 286 vanilla records (maps $000-$19E) + 0 content records; 513 pointers |
+| M106_MAPX_MAP_PROPS | 374000–3781FF | F7:4000–F7:81FF | 16896 | `16896 B` | `16896 B sha1 21006eeb17ac` | LoadMapProp C0:1CAD (LDA.l MapProp,X; X = map*33) — 512 x 33-byte rows: vanilla $000-$19E copied; content rows ['0C7'] |
+| M107_MAPX_SUBTILEMAP_PTRS | 378400–378FFF | F7:8400–F7:8FFF | 3072 | `3072 B` | `3072 B sha1 9252f423b4cf` | LoadMapTiles C0:2883 (BG1/BG2/BG3, 10-bit index * 3) — 1024 layout pointers: vanilla $000-$15E copied, unassigned = entry $000 value; content ['15F'] |
+| M108_NPC_EVENT_VECTORS | 379000–379005 | F7:9000–F7:9005 | 6 | `FF fill (expansion)` | `1C 00 F1 69 00 F1` | M300 router (LDA.l vectors,X) — NPC event vectors: #0=F1:001C (0C7:VALE_PLACEHOLDER->EvVale), #1=F1:0069 (0C7:REWARD_CHEST->EvChest) |
+| M200_RETARGET_EVENT_TRIGGERS | 00BCAF–00BCB1 | C0:BCAF–C0:BCB1 | 3 | `02 00 C4` | `02 00 F6` | C0:BCAE opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0002 -> F6:0002 (ptr base + 2) |
+| M200_RETARGET_EVENT_TRIGGERS | 00BCB5–00BCB7 | C0:BCB5–C0:BCB7 | 3 | `00 00 C4` | `00 00 F6` | C0:BCB4 opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0000 -> F6:0000 (ptr base + 0) |
+| M200_RETARGET_EVENT_TRIGGERS | 00BCBE–00BCC0 | C0:BCBE–C0:BCC0 | 3 | `00 00 C4` | `00 00 F6` | C0:BCBD opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0000 -> F6:0000 (ptr base + 0) |
+| M200_RETARGET_EVENT_TRIGGERS | 00BCD4–00BCD6 | C0:BCD4–C0:BCD6 | 3 | `02 00 C4` | `02 00 F6` | C0:BCD3 opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0002 -> F6:0002 (ptr base + 2) |
+| M200_RETARGET_EVENT_TRIGGERS | 00BCEE–00BCF0 | C0:BCEE–C0:BCF0 | 3 | `04 00 C4` | `04 00 F6` | C0:BCED opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0004 -> F6:0004 (ptr base + 4) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E2177–2E2179 | EE:2177–EE:2179 | 3 | `00 00 C4` | `00 00 F6` | EE:2176 opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0000 -> F6:0000 (ptr base + 0) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E217D–2E217F | EE:217D–EE:217F | 3 | `02 00 C4` | `02 00 F6` | EE:217C opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0002 -> F6:0002 (ptr base + 2) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E218C–2E218E | EE:218C–EE:218E | 3 | `00 00 C4` | `00 00 F6` | EE:218B opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0000 -> F6:0000 (ptr base + 0) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E2194–2E2196 | EE:2194–EE:2196 | 3 | `01 00 C4` | `01 00 F6` | EE:2193 opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0001 -> F6:0001 (ptr base + 1) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E219C–2E219E | EE:219C–EE:219E | 3 | `02 00 C4` | `02 00 F6` | EE:219B opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0002 -> F6:0002 (ptr base + 2) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E21A5–2E21A7 | EE:21A5–EE:21A7 | 3 | `03 00 C4` | `03 00 F6` | EE:21A4 opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0003 -> F6:0003 (ptr base + 3) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E21AD–2E21AF | EE:21AD–EE:21AF | 3 | `04 00 C4` | `04 00 F6` | EE:21AC opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0004 -> F6:0004 (ptr base + 4) |
+| M200_RETARGET_NPC_PROPS | 0052BD–0052BF | C0:52BD–C0:52BF | 3 | `12 1A C4` | `02 40 F6` | C0:52BC opcode BF (long,X) reads NPC_PROPS — operand C4:1A12 -> F6:4002 (ptr base + 2) |
+| M200_RETARGET_NPC_PROPS | 0052C3–0052C5 | C0:52C3–C0:52C5 | 3 | `10 1A C4` | `00 40 F6` | C0:52C2 opcode BF (long,X) reads NPC_PROPS — operand C4:1A10 -> F6:4000 (ptr base + 0) |
+| M200_RETARGET_NPC_PROPS | 0052D5–0052D7 | C0:52D5–C0:52D7 | 3 | `10 1A C4` | `00 40 F6` | C0:52D4 opcode BF (long,X) reads NPC_PROPS — operand C4:1A10 -> F6:4000 (ptr base + 0) |
+| M200_RETARGET_NPC_PROPS | 0052DC–0052DE | C0:52DC–C0:52DE | 3 | `11 1A C4` | `01 40 F6` | C0:52DB opcode BF (long,X) reads NPC_PROPS — operand C4:1A11 -> F6:4001 (ptr base + 1) |
+| M200_RETARGET_NPC_PROPS | 0052E3–0052E5 | C0:52E3–C0:52E5 | 3 | `12 1A C4` | `02 40 F6` | C0:52E2 opcode BF (long,X) reads NPC_PROPS — operand C4:1A12 -> F6:4002 (ptr base + 2) |
+| M200_RETARGET_NPC_PROPS | 0052EC–0052EE | C0:52EC–C0:52EE | 3 | `12 1A C4` | `02 40 F6` | C0:52EB opcode BF (long,X) reads NPC_PROPS — operand C4:1A12 -> F6:4002 (ptr base + 2) |
+| M200_RETARGET_NPC_PROPS | 0052F9–0052FB | C0:52F9–C0:52FB | 3 | `12 1A C4` | `02 40 F6` | C0:52F8 opcode BF (long,X) reads NPC_PROPS — operand C4:1A12 -> F6:4002 (ptr base + 2) |
+| M200_RETARGET_NPC_PROPS | 005306–005308 | C0:5306–C0:5308 | 3 | `12 1A C4` | `02 40 F6` | C0:5305 opcode BF (long,X) reads NPC_PROPS — operand C4:1A12 -> F6:4002 (ptr base + 2) |
+| M200_RETARGET_NPC_PROPS | 005322–005324 | C0:5322–C0:5324 | 3 | `14 1A C4` | `04 40 F6` | C0:5321 opcode BF (long,X) reads NPC_PROPS — operand C4:1A14 -> F6:4004 (ptr base + 4) |
+| M200_RETARGET_NPC_PROPS | 00532D–00532F | C0:532D–C0:532F | 3 | `14 1A C4` | `04 40 F6` | C0:532C opcode BF (long,X) reads NPC_PROPS — operand C4:1A14 -> F6:4004 (ptr base + 4) |
+| M200_RETARGET_NPC_PROPS | 00533B–00533D | C0:533B–C0:533D | 3 | `15 1A C4` | `05 40 F6` | C0:533A opcode BF (long,X) reads NPC_PROPS — operand C4:1A15 -> F6:4005 (ptr base + 5) |
+| M200_RETARGET_NPC_PROPS | 00535B–00535D | C0:535B–C0:535D | 3 | `15 1A C4` | `05 40 F6` | C0:535A opcode BF (long,X) reads NPC_PROPS — operand C4:1A15 -> F6:4005 (ptr base + 5) |
+| M200_RETARGET_NPC_PROPS | 00536A–00536C | C0:536A–C0:536C | 3 | `16 1A C4` | `06 40 F6` | C0:5369 opcode BF (long,X) reads NPC_PROPS — operand C4:1A16 -> F6:4006 (ptr base + 6) |
+| M200_RETARGET_NPC_PROPS | 005374–005376 | C0:5374–C0:5376 | 3 | `17 1A C4` | `07 40 F6` | C0:5373 opcode BF (long,X) reads NPC_PROPS — operand C4:1A17 -> F6:4007 (ptr base + 7) |
+| M200_RETARGET_NPC_PROPS | 005380–005382 | C0:5380–C0:5382 | 3 | `17 1A C4` | `07 40 F6` | C0:537F opcode BF (long,X) reads NPC_PROPS — operand C4:1A17 -> F6:4007 (ptr base + 7) |
+| M200_RETARGET_NPC_PROPS | 00538B–00538D | C0:538B–C0:538D | 3 | `17 1A C4` | `07 40 F6` | C0:538A opcode BF (long,X) reads NPC_PROPS — operand C4:1A17 -> F6:4007 (ptr base + 7) |
+| M200_RETARGET_NPC_PROPS | 005398–00539A | C0:5398–C0:539A | 3 | `18 1A C4` | `08 40 F6` | C0:5397 opcode BF (long,X) reads NPC_PROPS — operand C4:1A18 -> F6:4008 (ptr base + 8) |
+| M200_RETARGET_NPC_PROPS | 0053AE–0053B0 | C0:53AE–C0:53B0 | 3 | `18 1A C4` | `08 40 F6` | C0:53AD opcode BF (long,X) reads NPC_PROPS — operand C4:1A18 -> F6:4008 (ptr base + 8) |
+| M200_RETARGET_NPC_PROPS | 0053BD–0053BF | C0:53BD–C0:53BF | 3 | `18 1A C4` | `08 40 F6` | C0:53BC opcode BF (long,X) reads NPC_PROPS — operand C4:1A18 -> F6:4008 (ptr base + 8) |
+| M200_RETARGET_NPC_PROPS | 0053D1–0053D3 | C0:53D1–C0:53D3 | 3 | `18 1A C4` | `08 40 F6` | C0:53D0 opcode BF (long,X) reads NPC_PROPS — operand C4:1A18 -> F6:4008 (ptr base + 8) |
+| M200_RETARGET_NPC_PROPS | 0053E4–0053E6 | C0:53E4–C0:53E6 | 3 | `18 1A C4` | `08 40 F6` | C0:53E3 opcode BF (long,X) reads NPC_PROPS — operand C4:1A18 -> F6:4008 (ptr base + 8) |
+| M200_RETARGET_SHORT_ENTRANCES | 001A7E–001A80 | C0:1A7E–C0:1A80 | 3 | `02 BB DF` | `02 C0 F6` | C0:1A7D opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 001A84–001A86 | C0:1A84–C0:1A86 | 3 | `00 BB DF` | `00 C0 F6` | C0:1A83 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB00 -> F6:C000 (ptr base + 0) |
+| M200_RETARGET_SHORT_ENTRANCES | 001A90–001A92 | C0:1A90–C0:1A92 | 3 | `00 BB DF` | `00 C0 F6` | C0:1A8F opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB00 -> F6:C000 (ptr base + 0) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AAB–001AAD | C0:1AAB–C0:1AAD | 3 | `02 BB DF` | `02 C0 F6` | C0:1AAA opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AB7–001AB9 | C0:1AB7–C0:1AB9 | 3 | `02 BB DF` | `02 C0 F6` | C0:1AB6 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AC3–001AC5 | C0:1AC3–C0:1AC5 | 3 | `02 BB DF` | `02 C0 F6` | C0:1AC2 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AD2–001AD4 | C0:1AD2–C0:1AD4 | 3 | `04 BB DF` | `04 C0 F6` | C0:1AD1 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB04 -> F6:C004 (ptr base + 4) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AE7–001AE9 | C0:1AE7–C0:1AE9 | 3 | `04 BB DF` | `04 C0 F6` | C0:1AE6 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB04 -> F6:C004 (ptr base + 4) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AF1–001AF3 | C0:1AF1–C0:1AF3 | 3 | `03 BB DF` | `03 C0 F6` | C0:1AF0 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB03 -> F6:C003 (ptr base + 3) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AFE–001B00 | C0:1AFE–C0:1B00 | 3 | `03 BB DF` | `03 C0 F6` | C0:1AFD opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB03 -> F6:C003 (ptr base + 3) |
+| M200_RETARGET_SHORT_ENTRANCES | 001B0C–001B0E | C0:1B0C–C0:1B0E | 3 | `03 BB DF` | `03 C0 F6` | C0:1B0B opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB03 -> F6:C003 (ptr base + 3) |
+| M200_RETARGET_SHORT_ENTRANCES | 001B2D–001B2F | C0:1B2D–C0:1B2F | 3 | `02 BB DF` | `02 C0 F6` | C0:1B2C opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 001B5F–001B61 | C0:1B5F–C0:1B61 | 3 | `03 BB DF` | `03 C0 F6` | C0:1B5E opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB03 -> F6:C003 (ptr base + 3) |
+| M200_RETARGET_SHORT_ENTRANCES | 2E20EA–2E20EC | EE:20EA–EE:20EC | 3 | `00 BB DF` | `00 C0 F6` | EE:20E9 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB00 -> F6:C000 (ptr base + 0) |
+| M200_RETARGET_SHORT_ENTRANCES | 2E20F0–2E20F2 | EE:20F0–EE:20F2 | 3 | `02 BB DF` | `02 C0 F6` | EE:20EF opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 2E20FF–2E2101 | EE:20FF–EE:2101 | 3 | `00 BB DF` | `00 C0 F6` | EE:20FE opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB00 -> F6:C000 (ptr base + 0) |
+| M200_RETARGET_SHORT_ENTRANCES | 2E2107–2E2109 | EE:2107–EE:2109 | 3 | `01 BB DF` | `01 C0 F6` | EE:2106 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB01 -> F6:C001 (ptr base + 1) |
+| M200_RETARGET_SHORT_ENTRANCES | 2E2111–2E2113 | EE:2111–EE:2113 | 3 | `02 BB DF` | `02 C0 F6` | EE:2110 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 2E213D–2E213F | EE:213D–EE:213F | 3 | `04 BB DF` | `04 C0 F6` | EE:213C opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB04 -> F6:C004 (ptr base + 4) |
+| M200_RETARGET_LONG_ENTRANCES | 0018EB–0018ED | C0:18EB–C0:18ED | 3 | `82 F4 ED` | `02 00 F7` | C0:18EA opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F482 -> F7:0002 (ptr base + 2) |
+| M200_RETARGET_LONG_ENTRANCES | 0018F1–0018F3 | C0:18F1–C0:18F3 | 3 | `80 F4 ED` | `00 00 F7` | C0:18F0 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F480 -> F7:0000 (ptr base + 0) |
+| M200_RETARGET_LONG_ENTRANCES | 001904–001906 | C0:1904–C0:1906 | 3 | `82 F4 ED` | `02 00 F7` | C0:1903 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F482 -> F7:0002 (ptr base + 2) |
+| M200_RETARGET_LONG_ENTRANCES | 00190C–00190E | C0:190C–C0:190E | 3 | `81 F4 ED` | `01 00 F7` | C0:190B opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F481 -> F7:0001 (ptr base + 1) |
+| M200_RETARGET_LONG_ENTRANCES | 001917–001919 | C0:1917–C0:1919 | 3 | `80 F4 ED` | `00 00 F7` | C0:1916 opcode FF (long,X) reads LONG_ENTRANCES — operand ED:F480 -> F7:0000 (ptr base + 0) |
+| M200_RETARGET_LONG_ENTRANCES | 00191F–001921 | C0:191F–C0:1921 | 3 | `80 F4 ED` | `00 00 F7` | C0:191E opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F480 -> F7:0000 (ptr base + 0) |
+| M200_RETARGET_LONG_ENTRANCES | 001930–001932 | C0:1930–C0:1932 | 3 | `80 F4 ED` | `00 00 F7` | C0:192F opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F480 -> F7:0000 (ptr base + 0) |
+| M200_RETARGET_LONG_ENTRANCES | 00193B–00193D | C0:193B–C0:193D | 3 | `81 F4 ED` | `01 00 F7` | C0:193A opcode FF (long,X) reads LONG_ENTRANCES — operand ED:F481 -> F7:0001 (ptr base + 1) |
+| M200_RETARGET_LONG_ENTRANCES | 001943–001945 | C0:1943–C0:1945 | 3 | `81 F4 ED` | `01 00 F7` | C0:1942 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F481 -> F7:0001 (ptr base + 1) |
+| M200_RETARGET_LONG_ENTRANCES | 001964–001966 | C0:1964–C0:1966 | 3 | `83 F4 ED` | `03 00 F7` | C0:1963 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F483 -> F7:0003 (ptr base + 3) |
+| M200_RETARGET_LONG_ENTRANCES | 001970–001972 | C0:1970–C0:1972 | 3 | `83 F4 ED` | `03 00 F7` | C0:196F opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F483 -> F7:0003 (ptr base + 3) |
+| M200_RETARGET_LONG_ENTRANCES | 00197C–00197E | C0:197C–C0:197E | 3 | `83 F4 ED` | `03 00 F7` | C0:197B opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F483 -> F7:0003 (ptr base + 3) |
+| M200_RETARGET_LONG_ENTRANCES | 00198B–00198D | C0:198B–C0:198D | 3 | `85 F4 ED` | `05 00 F7` | C0:198A opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F485 -> F7:0005 (ptr base + 5) |
+| M200_RETARGET_LONG_ENTRANCES | 0019A0–0019A2 | C0:19A0–C0:19A2 | 3 | `85 F4 ED` | `05 00 F7` | C0:199F opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F485 -> F7:0005 (ptr base + 5) |
+| M200_RETARGET_LONG_ENTRANCES | 0019AA–0019AC | C0:19AA–C0:19AC | 3 | `84 F4 ED` | `04 00 F7` | C0:19A9 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F484 -> F7:0004 (ptr base + 4) |
+| M200_RETARGET_LONG_ENTRANCES | 0019B7–0019B9 | C0:19B7–C0:19B9 | 3 | `84 F4 ED` | `04 00 F7` | C0:19B6 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F484 -> F7:0004 (ptr base + 4) |
+| M200_RETARGET_LONG_ENTRANCES | 0019C5–0019C7 | C0:19C5–C0:19C7 | 3 | `84 F4 ED` | `04 00 F7` | C0:19C4 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F484 -> F7:0004 (ptr base + 4) |
+| M200_RETARGET_LONG_ENTRANCES | 0019E6–0019E8 | C0:19E6–C0:19E8 | 3 | `83 F4 ED` | `03 00 F7` | C0:19E5 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F483 -> F7:0003 (ptr base + 3) |
+| M200_RETARGET_LONG_ENTRANCES | 001A15–001A17 | C0:1A15–C0:1A17 | 3 | `84 F4 ED` | `04 00 F7` | C0:1A14 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F484 -> F7:0004 (ptr base + 4) |
+| M200_RETARGET_TREASURE | 0015DE–0015E0 | C0:15DE–C0:15E0 | 3 | `F6 82 ED` | `02 20 F7` | C0:15DD opcode BF (long,X) reads TREASURE — operand ED:82F6 -> F7:2002 (ptr base + 2) |
+| M200_RETARGET_TREASURE | 0015E4–0015E6 | C0:15E4–C0:15E6 | 3 | `F4 82 ED` | `00 20 F7` | C0:15E3 opcode BF (long,X) reads TREASURE — operand ED:82F4 -> F7:2000 (ptr base + 0) |
+| M200_RETARGET_TREASURE | 0015F2–0015F4 | C0:15F2–C0:15F4 | 3 | `34 86 ED` | `02 24 F7` | C0:15F1 opcode BF (long,X) reads TREASURE — operand ED:8634 -> F7:2402 (data base + 0) |
+| M200_RETARGET_TREASURE | 0015F8–0015FA | C0:15F8–C0:15FA | 3 | `35 86 ED` | `03 24 F7` | C0:15F7 opcode BF (long,X) reads TREASURE — operand ED:8635 -> F7:2403 (data base + 1) |
+| M200_RETARGET_TREASURE | 0015FF–001601 | C0:15FF–C0:1601 | 3 | `36 86 ED` | `04 24 F7` | C0:15FE opcode BF (long,X) reads TREASURE — operand ED:8636 -> F7:2404 (data base + 2) |
+| M200_RETARGET_TREASURE | 00160A–00160C | C0:160A–C0:160C | 3 | `36 86 ED` | `04 24 F7` | C0:1609 opcode BF (long,X) reads TREASURE — operand ED:8636 -> F7:2404 (data base + 2) |
+| M200_RETARGET_TREASURE | 004BDB–004BDD | C0:4BDB–C0:4BDD | 3 | `F6 82 ED` | `02 20 F7` | C0:4BDA opcode BF (long,X) reads TREASURE — operand ED:82F6 -> F7:2002 (ptr base + 2) |
+| M200_RETARGET_TREASURE | 004BE1–004BE3 | C0:4BE1–C0:4BE3 | 3 | `F4 82 ED` | `00 20 F7` | C0:4BE0 opcode BF (long,X) reads TREASURE — operand ED:82F4 -> F7:2000 (ptr base + 0) |
+| M200_RETARGET_TREASURE | 004BED–004BEF | C0:4BED–C0:4BEF | 3 | `34 86 ED` | `02 24 F7` | C0:4BEC opcode BF (long,X) reads TREASURE — operand ED:8634 -> F7:2402 (data base + 0) |
+| M200_RETARGET_TREASURE | 004BF5–004BF7 | C0:4BF5–C0:4BF7 | 3 | `35 86 ED` | `03 24 F7` | C0:4BF4 opcode BF (long,X) reads TREASURE — operand ED:8635 -> F7:2403 (data base + 1) |
+| M200_RETARGET_TREASURE | 004C09–004C0B | C0:4C09–C0:4C0B | 3 | `38 86 ED` | `06 24 F7` | C0:4C08 opcode BF (long,X) reads TREASURE — operand ED:8638 -> F7:2406 (data base + 4) |
+| M200_RETARGET_TREASURE | 004C0F–004C11 | C0:4C0F–C0:4C11 | 3 | `36 86 ED` | `04 24 F7` | C0:4C0E opcode BF (long,X) reads TREASURE — operand ED:8636 -> F7:2404 (data base + 2) |
+| M200_RETARGET_MAP_PROPS | 001CC0–001CC2 | C0:1CC0–C0:1CC2 | 3 | `00 8F ED` | `00 40 F7` | C0:1CBF opcode BF (long,X) reads MAP_PROPS — operand ED:8F00 -> F7:4000 (data base + 0) |
+| M200_RETARGET_SUBTILEMAP_PTRS | 002893–002895 | C0:2893–C0:2895 | 3 | `90 CD D9` | `00 84 F7` | C0:2892 opcode BF (long,X) reads SUBTILEMAP_PTRS — operand D9:CD90 -> F7:8400 (ptr base + 0) |
+| M200_RETARGET_SUBTILEMAP_PTRS | 0028A0–0028A2 | C0:28A0–C0:28A2 | 3 | `92 CD D9` | `02 84 F7` | C0:289F opcode BF (long,X) reads SUBTILEMAP_PTRS — operand D9:CD92 -> F7:8402 (ptr base + 2) |
+| M200_RETARGET_SUBTILEMAP_PTRS | 0028E7–0028E9 | C0:28E7–C0:28E9 | 3 | `90 CD D9` | `00 84 F7` | C0:28E6 opcode BF (long,X) reads SUBTILEMAP_PTRS — operand D9:CD90 -> F7:8400 (ptr base + 0) |
+| M200_RETARGET_SUBTILEMAP_PTRS | 0028F4–0028F6 | C0:28F4–C0:28F6 | 3 | `92 CD D9` | `02 84 F7` | C0:28F3 opcode BF (long,X) reads SUBTILEMAP_PTRS — operand D9:CD92 -> F7:8402 (ptr base + 2) |
+| M200_RETARGET_SUBTILEMAP_PTRS | 00293D–00293F | C0:293D–C0:293F | 3 | `90 CD D9` | `00 84 F7` | C0:293C opcode BF (long,X) reads SUBTILEMAP_PTRS — operand D9:CD90 -> F7:8400 (ptr base + 0) |
+| M200_RETARGET_SUBTILEMAP_PTRS | 00294A–00294C | C0:294A–C0:294C | 3 | `92 CD D9` | `02 84 F7` | C0:2949 opcode BF (long,X) reads SUBTILEMAP_PTRS — operand D9:CD92 -> F7:8402 (ptr base + 2) |
+| M300_NPC_EVENT_ROUTER | 301100–301146 | F0:1100–F0:1146 | 71 | `FF fill (expansion)` | `29 03 C9 03 D0 3D BF 04 40 F6 30 35 C2 20 B9 89 08 C9 02  …` | JSL from C0:52E6 (InitNPCs) — NPC event router: vanilla NPCs unchanged; non-special NPCs with event field $3xxxx -> vector table |
+| M300_NPC_EVENT_ROUTER | 0052E6–0052EA | C0:52E6–C0:52EA | 5 | `29 03 99 8B 08` | `22 00 11 F0 EA` | InitNPCs C0:52E6 (after LDA NPCProp::EventPtr+2,X) — AND #$03 / STA $088B,Y -> JSL F0:1100 / NOP (router re-executes both for vanilla NPCs) |
+| N101_MONSTER_PROP | 380000–383FFF | F8:0000–F8:3FFF | 16384 | `16384 B` | `16384 B sha1 cc10c896791d` | 25 retargeted consumers — MONSTER_PROP relocated (16384 bytes); vanilla entries byte-identical; content: none |
+| N102_MONSTER_NAME | 384000–3853FF | F8:4000–F8:53FF | 5120 | `5120 B` | `5120 B sha1 6d06670b01f0` | 6 retargeted consumers — MONSTER_NAME relocated (5120 bytes); vanilla entries byte-identical; content: none |
+| N103_MONSTER_SPECIAL_NAME | 385400–3867FF | F8:5400–F8:67FF | 5120 | `5120 B` | `5120 B sha1 8809892d9dee` | 2 retargeted consumers — MONSTER_SPECIAL_NAME relocated (5120 bytes); vanilla entries byte-identical; content: none |
+| N104_MONSTER_ITEMS | 386800–386FFF | F8:6800–F8:6FFF | 2048 | `2048 B` | `2048 B sha1 d14741aa8484` | 2 retargeted consumers — MONSTER_ITEMS relocated (2048 bytes); vanilla entries byte-identical; content: none |
+| N105_MONSTER_CONTROL | 387000–3877FF | F8:7000–F8:77FF | 2048 | `2048 B` | `2048 B sha1 20a6905d7e71` | 3 retargeted consumers — MONSTER_CONTROL relocated (2048 bytes); vanilla entries byte-identical; content: none |
+| N106_MONSTER_SKETCH | 387800–387BFF | F8:7800–F8:7BFF | 1024 | `1024 B` | `1024 B sha1 eab5ef375cb0` | 1 retargeted consumers — MONSTER_SKETCH relocated (1024 bytes); vanilla entries byte-identical; content: none |
+| N107_MONSTER_SPECIAL_ANIM | 387C00–387DFF | F8:7C00–F8:7DFF | 512 | `FF fill (expansion)` | `03 03 0D 18 07 0E 1B 21 0C 10 0B 0C 0C 00 1C 0E 12 0B 15  …` | 2 retargeted consumers — MONSTER_SPECIAL_ANIM relocated (512 bytes); vanilla entries byte-identical; content: none |
+| N108_MONSTER_OVERLAP | 387E00–387FFF | F8:7E00–F8:7FFF | 512 | `FF fill (expansion)` | `00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  …` | 1 retargeted consumers — MONSTER_OVERLAP relocated (512 bytes); vanilla entries byte-identical; content: none |
+| N109_MONSTER_GFX_PROP | 388000–388A9A | F8:8000–F8:8A9A | 2715 | `2715 B` | `2715 B sha1 4c0ef7d493c5` | 15 retargeted consumers — MONSTER_GFX_PROP relocated (2715 bytes); vanilla entries byte-identical; content: none |
+| N112_AI_SCRIPT_PTRS | 390000–3903FF | F9:0000–F9:03FF | 1024 | `1024 B` | `1024 B sha1 1df07f0e8683` | 1 retargeted consumers — AI_SCRIPT_PTRS relocated (1024 bytes); vanilla entries byte-identical; content: none |
+| N113_AI_SCRIPT | 390400–393D51 | F9:0400–F9:3D51 | 14674 | `14674 B` | `14674 B sha1 fb3b7bfaf039` | 4 retargeted consumers — AI_SCRIPT relocated (14674 bytes); vanilla entries byte-identical; content: none |
+| N110_FORMATION_PROP | 389000–389FFF | F8:9000–F8:9FFF | 4096 | `4096 B` | `4096 B sha1 92805a0472a3` | 2 retargeted consumers — FORMATION_PROP relocated (4096 bytes); vanilla entries byte-identical; content: none |
+| N111_FORMATION_MONSTERS | 38A000–38DC0F | F8:A000–F8:DC0F | 15376 | `15376 B` | `15376 B sha1 aedd02489421` | 7 retargeted consumers — FORMATION_MONSTERS relocated (15376 bytes); vanilla entries byte-identical; content: none |
+| N200_RETARGET_MONSTER_PROP | 020626–020628 | C2:0626–C2:0628 | 3 | `1A 00 CF` | `1A 00 F8` | C2:0625 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 26 |
+| N200_RETARGET_MONSTER_PROP | 022CA4–022CA6 | C2:2CA4–C2:2CA6 | 3 | `05 00 CF` | `05 00 F8` | C2:2CA3 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 5 |
+| N200_RETARGET_MONSTER_PROP | 022CAB–022CAD | C2:2CAB–C2:2CAD | 3 | `0C 00 CF` | `0C 00 F8` | C2:2CAA opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 12 |
+| N200_RETARGET_MONSTER_PROP | 022CB2–022CB4 | C2:2CB2–C2:2CB4 | 3 | `0E 00 CF` | `0E 00 F8` | C2:2CB1 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 14 |
+| N200_RETARGET_MONSTER_PROP | 022CBE–022CC0 | C2:2CBE–C2:2CC0 | 3 | `0A 00 CF` | `0A 00 F8` | C2:2CBD opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 10 |
+| N200_RETARGET_MONSTER_PROP | 022CC8–022CCA | C2:2CC8–C2:2CCA | 3 | `08 00 CF` | `08 00 F8` | C2:2CC7 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 8 |
+| N200_RETARGET_MONSTER_PROP | 022CF6–022CF8 | C2:2CF6–C2:2CF8 | 3 | `01 00 CF` | `01 00 F8` | C2:2CF5 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 1 |
+| N200_RETARGET_MONSTER_PROP | 022CFD–022CFF | C2:2CFD–C2:2CFF | 3 | `1A 00 CF` | `1A 00 F8` | C2:2CFC opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 26 |
+| N200_RETARGET_MONSTER_PROP | 022D04–022D06 | C2:2D04–C2:2D06 | 3 | `03 00 CF` | `03 00 F8` | C2:2D03 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 3 |
+| N200_RETARGET_MONSTER_PROP | 022D0E–022D10 | C2:2D0E–C2:2D10 | 3 | `04 00 CF` | `04 00 F8` | C2:2D0D opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 4 |
+| N200_RETARGET_MONSTER_PROP | 022D18–022D1A | C2:2D18–C2:2D1A | 3 | `02 00 CF` | `02 00 F8` | C2:2D17 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 2 |
+| N200_RETARGET_MONSTER_PROP | 022D1F–022D21 | C2:2D1F–C2:2D21 | 3 | `10 00 CF` | `10 00 F8` | C2:2D1E opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 16 |
+| N200_RETARGET_MONSTER_PROP | 022D26–022D28 | C2:2D26–C2:2D28 | 3 | `00 00 CF` | `00 00 F8` | C2:2D25 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 0 |
+| N200_RETARGET_MONSTER_PROP | 022D2D–022D2F | C2:2D2D–C2:2D2F | 3 | `07 00 CF` | `07 00 F8` | C2:2D2C opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 7 |
+| N200_RETARGET_MONSTER_PROP | 022D37–022D39 | C2:2D37–C2:2D39 | 3 | `1E 00 CF` | `1E 00 F8` | C2:2D36 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 30 |
+| N200_RETARGET_MONSTER_PROP | 022D43–022D45 | C2:2D43–C2:2D45 | 3 | `13 00 CF` | `13 00 F8` | C2:2D42 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 19 |
+| N200_RETARGET_MONSTER_PROP | 022DC3–022DC5 | C2:2DC3–C2:2DC5 | 3 | `1F 00 CF` | `1F 00 F8` | C2:2DC2 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 31 |
+| N200_RETARGET_MONSTER_PROP | 022DCA–022DCC | C2:2DCA–C2:2DCC | 3 | `19 00 CF` | `19 00 F8` | C2:2DC9 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 25 |
+| N200_RETARGET_MONSTER_PROP | 022DD4–022DD6 | C2:2DD4–C2:2DD6 | 3 | `16 00 CF` | `16 00 F8` | C2:2DD3 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 22 |
+| N200_RETARGET_MONSTER_PROP | 022DEA–022DEC | C2:2DEA–C2:2DEC | 3 | `1B 00 CF` | `1B 00 F8` | C2:2DE9 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 27 |
+| N200_RETARGET_MONSTER_PROP | 022DF1–022DF3 | C2:2DF1–C2:2DF3 | 3 | `1D 00 CF` | `1D 00 F8` | C2:2DF0 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 29 |
+| N200_RETARGET_MONSTER_PROP | 022E11–022E13 | C2:2E11–C2:2E13 | 3 | `1C 00 CF` | `1C 00 F8` | C2:2E10 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 28 |
+| N200_RETARGET_MONSTER_PROP | 022E1B–022E1D | C2:2E1B–C2:2E1D | 3 | `14 00 CF` | `14 00 F8` | C2:2E1A opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 20 |
+| N200_RETARGET_MONSTER_PROP | 022E28–022E2A | C2:2E28–C2:2E2A | 3 | `17 00 CF` | `17 00 F8` | C2:2E27 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 23 |
+| N200_RETARGET_MONSTER_PROP | 022E32–022E34 | C2:2E32–C2:2E34 | 3 | `11 00 CF` | `11 00 F8` | C2:2E31 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 17 |
+| N200_RETARGET_MONSTER_NAME | 016641–016643 | C1:6641–C1:6643 | 3 | `50 C0 CF` | `00 40 F8` | C1:6640 opcode BF (long) reads MONSTER_NAME — long operand -> F8:4000 + 0 |
+| N200_RETARGET_MONSTER_NAME | 0169C7–0169C9 | C1:69C7–C1:69C9 | 3 | `50 C0 CF` | `00 40 F8` | C1:69C6 opcode BF (long) reads MONSTER_NAME — long operand -> F8:4000 + 0 |
+| N200_RETARGET_MONSTER_NAME | 022C57–022C59 | C2:2C57–C2:2C59 | 3 | `50 C0 CF` | `00 40 F8` | C2:2C56 opcode BF (long) reads MONSTER_NAME — long operand -> F8:4000 + 0 |
+| N200_RETARGET_MONSTER_NAME | 022C79–022C7B | C2:2C79–C2:2C7B | 3 | `50 C0 CF` | `00 40 F8` | C2:2C78 opcode DF (long) reads MONSTER_NAME — long operand -> F8:4000 + 0 |
+| N200_RETARGET_MONSTER_NAME | 03540F–035410 | C3:540F–C3:5410 | 2 | `50 C0` | `00 40` | C3:540E opcode A0 (imm_near) reads MONSTER_NAME — imm_near operand -> F8:4000 + 0 |
+| N200_RETARGET_MONSTER_NAME | 035414–035414 | C3:5414–C3:5414 | 1 | `CF` | `F8` | C3:5413 opcode A9 (imm_bank) reads MONSTER_NAME — imm_bank operand -> F8:4000 + 0 |
+| N200_RETARGET_MONSTER_SPECIAL_NAME | 019739–019739 | C1:9739–C1:9739 | 1 | `CF` | `F8` | C1:9738 opcode A9 (imm_bank) reads MONSTER_SPECIAL_NAME — imm_bank operand -> F8:5400 + 0 |
+| N200_RETARGET_MONSTER_SPECIAL_NAME | 01974D–01974E | C1:974D–C1:974E | 2 | `D0 D0` | `00 54` | C1:974C opcode 69 (imm_near) reads MONSTER_SPECIAL_NAME — imm_near operand -> F8:5400 + 0 |
+| N200_RETARGET_MONSTER_ITEMS | 022C42–022C44 | C2:2C42–C2:2C44 | 3 | `00 30 CF` | `00 68 F8` | C2:2C41 opcode BF (long) reads MONSTER_ITEMS — long operand -> F8:6800 + 0 |
+| N200_RETARGET_MONSTER_ITEMS | 025F2E–025F30 | C2:5F2E–C2:5F30 | 3 | `02 30 CF` | `02 68 F8` | C2:5F2D opcode BF (long) reads MONSTER_ITEMS — long operand -> F8:6800 + 2 |
+| N200_RETARGET_MONSTER_CONTROL | 02063E–020640 | C2:063E–C2:0640 | 3 | `00 3D CF` | `00 70 F8` | C2:063D opcode BF (long) reads MONSTER_CONTROL — long operand -> F8:7000 + 0 |
+| N200_RETARGET_MONSTER_CONTROL | 020644–020646 | C2:0644–C2:0646 | 3 | `02 3D CF` | `02 70 F8` | C2:0643 opcode BF (long) reads MONSTER_CONTROL — long operand -> F8:7000 + 2 |
+| N200_RETARGET_MONSTER_CONTROL | 023759–02375B | C2:3759–C2:375B | 3 | `00 3D CF` | `00 70 F8` | C2:3758 opcode BF (long) reads MONSTER_CONTROL — long operand -> F8:7000 + 0 |
+| N200_RETARGET_MONSTER_SKETCH | 023B5B–023B5D | C2:3B5B–C2:3B5D | 3 | `00 43 CF` | `00 78 F8` | C2:3B5A opcode BF (long) reads MONSTER_SKETCH — long operand -> F8:7800 + 0 |
+| N200_RETARGET_MONSTER_SPECIAL_ANIM | 020617–020619 | C2:0617–C2:0619 | 3 | `C0 37 CF` | `00 7C F8` | C2:0616 opcode BF (long) reads MONSTER_SPECIAL_ANIM — long operand -> F8:7C00 + 0 |
+| N200_RETARGET_MONSTER_SPECIAL_ANIM | 022D50–022D52 | C2:2D50–C2:2D52 | 3 | `C0 37 CF` | `00 7C F8` | C2:2D4F opcode BF (long) reads MONSTER_SPECIAL_ANIM — long operand -> F8:7C00 + 0 |
+| N200_RETARGET_MONSTER_OVERLAP | 012145–012147 | C1:2145–C1:2147 | 3 | `00 36 CF` | `00 7E F8` | C1:2144 opcode BF (long) reads MONSTER_OVERLAP — long operand -> F8:7E00 + 0 |
+| N200_RETARGET_MONSTER_GFX_PROP | 012063–012065 | C1:2063–C1:2065 | 3 | `02 70 D2` | `02 80 F8` | C1:2062 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 2 |
+| N200_RETARGET_MONSTER_GFX_PROP | 012081–012083 | C1:2081–C1:2083 | 3 | `00 70 D2` | `00 80 F8` | C1:2080 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 0 |
+| N200_RETARGET_MONSTER_GFX_PROP | 01208E–012090 | C1:208E–C1:2090 | 3 | `01 70 D2` | `01 80 F8` | C1:208D opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 1 |
+| N200_RETARGET_MONSTER_GFX_PROP | 012097–012099 | C1:2097–C1:2099 | 3 | `02 70 D2` | `02 80 F8` | C1:2096 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 2 |
+| N200_RETARGET_MONSTER_GFX_PROP | 0120AC–0120AE | C1:20AC–C1:20AE | 3 | `04 70 D2` | `04 80 F8` | C1:20AB opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 4 |
+| N200_RETARGET_MONSTER_GFX_PROP | 0124FD–0124FF | C1:24FD–C1:24FF | 3 | `02 70 D2` | `02 80 F8` | C1:24FC opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 2 |
+| N200_RETARGET_MONSTER_GFX_PROP | 01250C–01250E | C1:250C–C1:250E | 3 | `00 70 D2` | `00 80 F8` | C1:250B opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 0 |
+| N200_RETARGET_MONSTER_GFX_PROP | 012519–01251B | C1:2519–C1:251B | 3 | `01 70 D2` | `01 80 F8` | C1:2518 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 1 |
+| N200_RETARGET_MONSTER_GFX_PROP | 012522–012524 | C1:2522–C1:2524 | 3 | `02 70 D2` | `02 80 F8` | C1:2521 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 2 |
+| N200_RETARGET_MONSTER_GFX_PROP | 012537–012539 | C1:2537–C1:2539 | 3 | `04 70 D2` | `04 80 F8` | C1:2536 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 4 |
+| N200_RETARGET_MONSTER_GFX_PROP | 03AF60–03AF62 | C3:AF60–C3:AF62 | 3 | `00 70 D2` | `00 80 F8` | C3:AF5F opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 0 |
+| N200_RETARGET_MONSTER_GFX_PROP | 03AF66–03AF68 | C3:AF66–C3:AF68 | 3 | `01 70 D2` | `01 80 F8` | C3:AF65 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 1 |
+| N200_RETARGET_MONSTER_GFX_PROP | 03AF6C–03AF6E | C3:AF6C–C3:AF6E | 3 | `02 70 D2` | `02 80 F8` | C3:AF6B opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 2 |
+| N200_RETARGET_MONSTER_GFX_PROP | 03AF72–03AF74 | C3:AF72–C3:AF74 | 3 | `03 70 D2` | `03 80 F8` | C3:AF71 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 3 |
+| N200_RETARGET_MONSTER_GFX_PROP | 03AF78–03AF7A | C3:AF78–C3:AF7A | 3 | `04 70 D2` | `04 80 F8` | C3:AF77 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 4 |
+| N200_RETARGET_AI_SCRIPT_PTRS | 022D79–022D7B | C2:2D79–C2:2D7B | 3 | `00 84 CF` | `00 00 F9` | C2:2D78 opcode BF (long) reads AI_SCRIPT_PTRS — long operand -> F9:0000 + 0 |
+| N200_RETARGET_AI_SCRIPT | 021A45–021A47 | C2:1A45–C2:1A47 | 3 | `00 87 CF` | `00 04 F9` | C2:1A44 opcode BF (long) reads AI_SCRIPT — long operand -> F9:0400 + 0 |
+| N200_RETARGET_AI_SCRIPT | 021A65–021A67 | C2:1A65–C2:1A67 | 3 | `02 87 CF` | `02 04 F9` | C2:1A64 opcode BF (long) reads AI_SCRIPT — long operand -> F9:0400 + 2 |
+| N200_RETARGET_AI_SCRIPT | 021A6C–021A6E | C2:1A6C–C2:1A6E | 3 | `00 87 CF` | `00 04 F9` | C2:1A6B opcode BF (long) reads AI_SCRIPT — long operand -> F9:0400 + 0 |
+| N200_RETARGET_AI_SCRIPT | 022D89–022D8B | C2:2D89–C2:2D8B | 3 | `00 87 CF` | `00 04 F9` | C2:2D88 opcode BF (long) reads AI_SCRIPT — long operand -> F9:0400 + 0 |
+| N200_RETARGET_FORMATION_PROP | 023137–023139 | C2:3137–C2:3139 | 3 | `02 59 CF` | `02 90 F8` | C2:3136 opcode BF (long) reads FORMATION_PROP — long operand -> F8:9000 + 2 |
+| N200_RETARGET_FORMATION_PROP | 02313E–023140 | C2:313E–C2:3140 | 3 | `00 59 CF` | `00 90 F8` | C2:313D opcode BF (long) reads FORMATION_PROP — long operand -> F8:9000 + 0 |
+| N200_RETARGET_FORMATION_MONSTERS | 010E9A–010E9C | C1:0E9A–C1:0E9C | 3 | `0E 62 CF` | `0E A0 F8` | C1:0E99 opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 14 |
+| N200_RETARGET_FORMATION_MONSTERS | 010EA2–010EA4 | C1:0EA2–C1:0EA4 | 3 | `00 62 CF` | `00 A0 F8` | C1:0EA1 opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 0 |
+| N200_RETARGET_FORMATION_MONSTERS | 010EB5–010EB7 | C1:0EB5–C1:0EB7 | 3 | `00 62 CF` | `00 A0 F8` | C1:0EB4 opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 0 |
+| N200_RETARGET_FORMATION_MONSTERS | 010EC0–010EC2 | C1:0EC0–C1:0EC2 | 3 | `01 62 CF` | `01 A0 F8` | C1:0EBF opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 1 |
+| N200_RETARGET_FORMATION_MONSTERS | 010ED2–010ED4 | C1:0ED2–C1:0ED4 | 3 | `08 62 CF` | `08 A0 F8` | C1:0ED1 opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 8 |
+| N200_RETARGET_FORMATION_MONSTERS | 010EE0–010EE2 | C1:0EE0–C1:0EE2 | 3 | `08 62 CF` | `08 A0 F8` | C1:0EDF opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 8 |
+| N200_RETARGET_FORMATION_MONSTERS | 023156–023158 | C2:3156–C2:3158 | 3 | `00 62 CF` | `00 A0 F8` | C2:3155 opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 0 |
+| N300_GFX_SLOT_ROUTERS | 301200–301230 | F0:1200–F0:1230 | 49 | `FF fill (expansion)` | `BD 01 20 C9 80 01 90 03 69 1F 00 48 0A 0A 18 63 01 FA 6B  …` | JSL from C1:2058 (battle monster loader), C2:F5F1 (Sketch), C2:2F75 (colosseum detection) — graphics-property slot remap (monsters $180-$1FE -> slots $1A0-$21E) + colosseum range check |
+| N301_GFX_SLOT_HOOK_BATTLE | 012058–012060 | C1:2058–C1:2060 | 9 | `BD 01 20 0A 0A 18 7D 01 20` | `22 00 12 F0 EA EA EA EA EA` | LoadMonsterGfxProp (C1:204E) monster id*5 computation — LDA $2001,X/ASL/ASL/CLC/ADC $2001,X -> JSL MonsterGfxSlot5 + 5x NOP |
+| N302_GFX_SLOT_HOOK_SKETCH | 02F5F1–02F5F4 | C2:F5F1–C2:F5F4 | 4 | `BD 01 20 AA` | `22 13 12 F0` | battle animation init $0B (Sketch): monster id -> LoadSketchMonsterGfx — LDA $2001,X/TAX -> JSL MonsterGfxSlotSketch |
+| N303_FORMATION_COLOSSEUM_RANGE | 022F75–022F7A | C2:2F75–C2:2F7A | 6 | `AE D4 3E E0 3E 02` | `22 20 12 F0 EA EA` | InitParty C2:2F75 colosseum detection (battle id >= $23E) — LDX wBattleID/CPX #$023E -> JSL ColosseumRangeCheck + 2x NOP; colosseum iff $23E <= id < $240 so new formations $240-$3FF load normally |
+| E101_MONSTER_PAL | 3B0000–3B3FFF | FB:0000–FB:3FFF | 16384 | `16384 B` | `16384 B sha1 56df53e0c127` | 6 retargeted consumers — MonsterPal relocated: units $000-$2FF vanilla, 0 new units from $300 |
+| E101_MONSTER_PAL | 3BFFF0–3BFFFF | FB:FFF0–FB:FFFF | 16 | `FF fill (expansion)` | `00 00 70 3C 1E 0F 06 04 06 00 0A 00 1A 00 3A 00` | LoadMonsterPal empty-slot read (index $FFFF): keeps battle palette RAM identical to vanilla — 16 vanilla bytes from D3:7810 (what vanilla reads for an empty palette slot at MonsterPal+$FFF0) |
+| E102_MONSTER_STENCIL | 3B4000–3B4E03 | FB:4000–FB:4E03 | 3588 | `3588 B` | `3588 B sha1 6c1b50fc9e92` | 8 retargeted consumers (7 symbolic + colosseum literal C3:AFFD) — MonsterStencil relocated: header -> FB:4004/FB:4804; 128 small (128 vanilla) + 48 large (48 vanilla) maps |
+| E104_BATTLE_MAGIC_POINTS | 38E000–38E3FF | F8:E000–F8:E3FF | 1024 | `1024 B` | `1024 B sha1 f02d520925ce` | C2:5D9C LDA BattleMagicPoints,X (bound C2:5D97 now #$0400) — BattleMagicPoints relocated (1024): $000-$1FF vanilla, $200-$23F = 0, new: none |
+| E105_MAGIC_POINTS_BOUND | 025D98–025D99 | C2:5D98–C2:5D99 | 2 | `00 02` | `00 04` | battle win C2:5D97 CPX #$0200 / BCS (no magic points for battles >= bound) — bound $0200 -> $0400: table covers all 1024 formations; $200-$23F hold 0 = vanilla result |
+| E200_RETARGET_MONSTER_PAL | 01233E–012340 | C1:233E–C1:2340 | 3 | `20 78 D2` | `00 00 FB` | C1:233D opcode BF (long) reads MONSTER_PAL — long operand -> FB:0000 + 0 |
+| E200_RETARGET_MONSTER_PAL | 01D67A–01D67C | C1:D67A–C1:D67C | 3 | `20 78 D2` | `00 00 FB` | C1:D679 opcode BF (long) reads MONSTER_PAL — long operand -> FB:0000 + 0 |
+| E200_RETARGET_MONSTER_PAL | 02BBD5–02BBD7 | C2:BBD5–C2:BBD7 | 3 | `40 78 D2` | `20 00 FB` | C2:BBD4 opcode BF (long) reads MONSTER_PAL — long operand -> FB:0000 + 32 |
+| E200_RETARGET_MONSTER_PAL | 02FA7D–02FA7F | C2:FA7D–C2:FA7F | 3 | `20 78 D2` | `00 00 FB` | C2:FA7C opcode BF (long) reads MONSTER_PAL — long operand -> FB:0000 + 0 |
+| E200_RETARGET_MONSTER_PAL | 02FA94–02FA96 | C2:FA94–C2:FA96 | 3 | `20 78 D2` | `00 00 FB` | C2:FA93 opcode BF (long) reads MONSTER_PAL — long operand -> FB:0000 + 0 |
+| E200_RETARGET_MONSTER_PAL | 03B172–03B174 | C3:B172–C3:B174 | 3 | `20 78 D2` | `00 00 FB` | C3:B171 opcode BF (long) reads MONSTER_PAL — long operand -> FB:0000 + 0 |
+| E200_RETARGET_MONSTER_STENCIL | 01216F–012171 | C1:216F–C1:2171 | 3 | `20 A8 D2` | `00 40 FB` | C1:216E opcode 6F (long) reads MONSTER_STENCIL — long operand -> FB:4000 + 0 |
+| E200_RETARGET_MONSTER_STENCIL | 012179–01217B | C1:2179–C1:217B | 3 | `00 00 D2` | `00 00 FB` | C1:2178 opcode BF (long_bank) reads MONSTER_STENCIL — long_bank operand -> FB:4000 + 0 |
+| E200_RETARGET_MONSTER_STENCIL | 012195–012197 | C1:2195–C1:2197 | 3 | `22 A8 D2` | `02 40 FB` | C1:2194 opcode 6F (long) reads MONSTER_STENCIL — long operand -> FB:4000 + 2 |
+| E200_RETARGET_MONSTER_STENCIL | 01219F–0121A1 | C1:219F–C1:21A1 | 3 | `00 00 D2` | `00 00 FB` | C1:219E opcode BF (long_bank) reads MONSTER_STENCIL — long_bank operand -> FB:4000 + 0 |
+| E200_RETARGET_MONSTER_STENCIL | 03AFC0–03AFC1 | C3:AFC0–C3:AFC1 | 2 | `20 A8` | `00 40` | C3:AFBF opcode A0 (imm_near) reads MONSTER_STENCIL — imm_near operand -> FB:4000 + 0 |
+| E200_RETARGET_MONSTER_STENCIL | 03AFC9–03AFCA | C3:AFC9–C3:AFCA | 2 | `22 A8` | `02 40` | C3:AFC8 opcode A0 (imm_near) reads MONSTER_STENCIL — imm_near operand -> FB:4000 + 2 |
+| E200_RETARGET_MONSTER_STENCIL | 03AFD4–03AFD4 | C3:AFD4–C3:AFD4 | 1 | `D2` | `FB` | C3:AFD3 opcode A9 (imm_bank) reads MONSTER_STENCIL — imm_bank operand -> FB:4000 + 0 |
+| E200_RETARGET_MONSTER_STENCIL | 03AFFE–03AFFE | C3:AFFE–C3:AFFE | 1 | `D2` | `FB` | C3:AFFD opcode A9 (imm_bank) reads MONSTER_STENCIL [src/menu/colosseum.asm:456 'lda #$d2' (stencil data bank literal)] — imm_bank operand -> FB:4000 + 0 |
+| E200_RETARGET_BATTLE_MAGIC_POINTS | 025D9D–025D9F | C2:5D9D–C2:5D9F | 3 | `00 B4 DF` | `00 E0 F8` | C2:5D9C opcode BF (long) reads BATTLE_MAGIC_POINTS — long operand -> F8:E000 + 0 |
+| E300_ENEMY_GFX_BASE_ROUTER | 301240–301262 | F0:1240–F0:1262 | 35 | `FF fill (expansion)` | `AD AC 81 29 10 D0 14 A5 64 18 69 00 85 64 A5 65 69 70 85  …` | JSL from AddMonsterGfxOffset C1:20FF (battle loader fallthrough + summon/Sketch JMP) — graphics data base select: E9:7000 (vanilla) or FB:0000 (MonsterGfxProp byte2 bit5) |
+| E301_ENEMY_GFX_OFFSET_HOOK | 0120FF–012103 | C1:20FF–C1:2103 | 5 | `A5 64 18 69 00` | `22 40 12 F0 60` | AddMonsterGfxOffset (C1:20FF) — LDA $64/CLC/ADC #$00 -> JSL EnemyGfxBase / RTS (rest of the vanilla routine becomes unreachable, unchanged) |
+| I101_ITEM_TABLES | 3A0000–3A257F | FA:0000–FA:257F | 9600 | `9600 B` | `9600 B sha1 d4a7788753fe` | retargeted ItemProp/ItemName consumers and the extended item engine — XItemProp: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A2580–3A35BF | FA:2580–FA:35BF | 4160 | `4160 B` | `4160 B sha1 81511ab7814f` | retargeted ItemProp/ItemName consumers and the extended item engine — XItemName: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A35C0–3A35FF | FA:35C0–FA:35FF | 64 | `FF fill (expansion)` | `01 01 01 01 03 01 01 01 01 01 01 03 01 01 01 01 01 01 01  …` | retargeted ItemProp/ItemName consumers and the extended item engine — XExtFlags: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A3600–3A367F | FA:3600–FA:367F | 128 | `FF fill (expansion)` | `00 40 33 40 66 40 8A 40 AE 40 D0 40 FE 40 31 41 61 41 92  …` | retargeted ItemProp/ItemName consumers and the extended item engine — XDescPtr: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A3800–3A3FFF | FA:3800–FA:3FFF | 2048 | `2048 B` | `2048 B sha1 a22a2931a528` | retargeted ItemProp/ItemName consumers and the extended item engine — XWeaponAnimFull: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A3700–3A37FF | FA:3700–FA:37FF | 256 | `FF fill (expansion)` | `00 21 21 21 21 21 21 21 10 10 21 10 10 21 10 10 10 10 10  …` | retargeted ItemProp/ItemName consumers and the extended item engine — XJumpAnim: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A4000–3A47C9 | FA:4000–FA:47C9 | 1994 | `1994 B` | `1994 B sha1 b87841263434` | retargeted ItemProp/ItemName consumers and the extended item engine — XDescText: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5000–3A507F | FA:5000–FA:507F | 128 | `FF fill (expansion)` | `00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  …` | retargeted ItemProp/ItemName consumers and the extended item engine — XItemAnimX: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5080–3A5083 | FA:5080–FA:5083 | 4 | `FF fill (expansion)` | `1F 00 00 00` | retargeted ItemProp/ItemName consumers and the extended item engine — XRareDef: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5090–3A50F7 | FA:5090–FA:50F7 | 104 | `FF fill (expansion)` | `80 5E 9E 5E C4 5E D1 5E DD 5E EB 5E F0 5E 1A 5F 4F 5F 83  …` | retargeted ItemProp/ItemName consumers and the extended item engine — XRareDescPtr: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5100–3A53A3 | FA:5100–FA:53A3 | 676 | `676 B` | `676 B sha1 60a9396e6188` | retargeted ItemProp/ItemName consumers and the extended item engine — XRareName: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5400–3A590F | FA:5400–FA:590F | 1296 | `1296 B` | `1296 B sha1 8b35670e033d` | retargeted ItemProp/ItemName consumers and the extended item engine — XShopProp: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5940–3A5E4F | FA:5940–FA:5E4F | 1296 | `1296 B` | `1296 B sha1 a5a8ec4a0a87` | retargeted ItemProp/ItemName consumers and the extended item engine — XShopPropHi: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5E80–3A615B | FA:5E80–FA:615B | 732 | `732 B` | `732 B sha1 a69ebde26331` | retargeted ItemProp/ItemName consumers and the extended item engine — XRareDescText: extended item table (TECH v0.9 layout) |
+| I102_ITEM_ENGINE_CODE | 3A8000–3A8C6B | FA:8000–FA:8C6B | 3180 | `3180 B` | `3180 B sha1 e53703744306` | JSL from hook sites / bank stubs — TECH v0.9 extended item engine (65816, asm/item_v09) |
+| I103_XC0_STUBS | 00D620–00D70F | C0:D620–C0:D70F | 240 | `FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF  …` | `C2 20 A5 EB 22 18 80 FA E2 20 7B A9 03 4C 5C 9B C2 20 A5  …` | JSR from same-bank hook sites (XC0) — same-bank helper stubs in audited vanilla padding (never referenced, all $FF) |
+| I103_XC3_STUBS | 03F0A0–03F74E | C3:F0A0–C3:F74E | 1711 | `1711 B` | `1711 B sha1 7be43575cd34` | JSR from same-bank hook sites (XC3) — same-bank helper stubs in audited vanilla padding (never referenced, all $FF) |
+| I103_XC2_STUBS | 026470–02670F | C2:6470–C2:670F | 672 | `672 B` | `672 B sha1 c1f22ee6f7be` | JSR from same-bank hook sites (XC2) — same-bank helper stubs in audited vanilla padding (never referenced, all $FF) |
+| I110_RETARGET_ITEM_PROP | 020FA4–020FA6 | C2:0FA4–C2:0FA6 | 3 | `05 50 D8` | `05 00 FA` | C2:0FA3 src/battle/equip.asm:209 lda     f:ItemProp+5,x          ; field effects — long operand ITEM_PROP+5 -> FA:0000+5 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 020FAD–020FAF | C2:0FAD–C2:0FAF | 3 | `06 50 D8` | `06 00 FA` | C2:0FAC src/battle/equip.asm:212 lda     f:ItemProp+6,x          ; status 1 & 2 protection — long operand ITEM_PROP+6 -> FA:0000+6 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 020FB4–020FB6 | C2:0FB4–C2:0FB6 | 3 | `08 50 D8` | `08 00 FA` | C2:0FB3 src/battle/equip.asm:214 lda     f:ItemProp+8,x          ; status 3 set and relic eff — long operand ITEM_PROP+8 -> FA:0000+8 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 020FBB–020FBD | C2:0FBB–C2:0FBD | 3 | `0A 50 D8` | `0A 00 FA` | C2:0FBA src/battle/equip.asm:216 lda     f:ItemProp+10,x         ; relic effects — long operand ITEM_PROP+10 -> FA:0000+10 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 020FC2–020FC4 | C2:0FC2–C2:0FC4 | 3 | `0C 50 D8` | `0C 00 FA` | C2:0FC1 src/battle/equip.asm:218 lda     f:ItemProp+12,x — long operand ITEM_PROP+12 -> FA:0000+12 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 020FC9–020FCB | C2:0FC9–C2:0FCB | 3 | `10 50 D8` | `10 00 FA` | C2:0FC8 src/battle/equip.asm:220 lda     f:ItemProp+16,x         ; stat boosts — long operand ITEM_PROP+16 -> FA:0000+16 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 020FED–020FEF | C2:0FED–C2:0FEF | 3 | `1A 50 D8` | `1A 00 FA` | C2:0FEC src/battle/equip.asm:235 lda     f:ItemProp+26,x         ; evade/mblock — long operand ITEM_PROP+26 -> FA:0000+26 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021019–02101B | C2:1019–C2:101B | 3 | `14 50 D8` | `14 00 FA` | C2:1018 src/battle/equip.asm:255 lda     f:ItemProp+20,x         ; battle/defense power — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 02101E–021020 | C2:101E–C2:1020 | 3 | `02 50 D8` | `02 00 FA` | C2:101D src/battle/equip.asm:257 lda     f:ItemProp+2,x          ; imp bit — long operand ITEM_PROP+2 -> FA:0000+2 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021034–021036 | C2:1034–C2:1036 | 3 | `00 50 D8` | `00 00 FA` | C2:1033 src/battle/equip.asm:268 lda     f:ItemProp,x            ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 02103D–02103F | C2:103D–C2:103F | 3 | `19 50 D8` | `19 00 FA` | C2:103C src/battle/equip.asm:274 lda     f:ItemProp+25,x         ; status 2 set — long operand ITEM_PROP+25 -> FA:0000+25 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021044–021046 | C2:1044–C2:1046 | 3 | `0F 50 D8` | `0F 00 FA` | C2:1043 src/battle/equip.asm:276 lda     f:ItemProp+15,x         ; elements halved — long operand ITEM_PROP+15 -> FA:0000+15 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021049–02104B | C2:1049–C2:104B | 3 | `18 50 D8` | `18 00 FA` | C2:1048 src/battle/equip.asm:278 lda     f:ItemProp+24,x         ; element weak point — long operand ITEM_PROP+24 -> FA:0000+24 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021052–021054 | C2:1052–C2:1054 | 3 | `16 50 D8` | `16 00 FA` | C2:1051 src/battle/equip.asm:281 lda     f:ItemProp+22,x         ; absorbed and nullified ele — long operand ITEM_PROP+22 -> FA:0000+22 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021069–02106B | C2:1069–C2:106B | 3 | `15 50 D8` | `15 00 FA` | C2:1068 src/battle/equip.asm:291 lda     f:ItemProp+21,x         ; add item magic defense to  — long operand ITEM_PROP+21 -> FA:0000+21 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021088–02108A | C2:1088–C2:108A | 3 | `1B 50 D8` | `1B 00 FA` | C2:1087 src/battle/equip.asm:306 lda     f:ItemProp+27,x         ; block animation — long operand ITEM_PROP+27 -> FA:0000+27 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0210D4–0210D6 | C2:10D4–C2:10D6 | 3 | `16 50 D8` | `16 00 FA` | C2:10D3 src/battle/equip.asm:360 lda     f:ItemProp+22,x         ; absorb elements (unused) — long operand ITEM_PROP+22 -> FA:0000+22 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0210DB–0210DD | C2:10DB–C2:10DD | 3 | `0F 50 D8` | `0F 00 FA` | C2:10DA src/battle/equip.asm:362 lda     f:ItemProp+15,x         ; elemental properties (left — long operand ITEM_PROP+15 -> FA:0000+15 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0210EE–0210F0 | C2:10EE–C2:10F0 | 3 | `15 50 D8` | `15 00 FA` | C2:10ED src/battle/equip.asm:369 lda     f:ItemProp+21,x         ; hit rate — long operand ITEM_PROP+21 -> FA:0000+21 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0210F5–0210F7 | C2:10F5–C2:10F7 | 3 | `12 50 D8` | `12 00 FA` | C2:10F4 src/battle/equip.asm:371 lda     f:ItemProp+18,x         ; spell cast — long operand ITEM_PROP+18 -> FA:0000+18 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0210FC–0210FE | C2:10FC–C2:10FE | 3 | `13 50 D8` | `13 00 FA` | C2:10FB src/battle/equip.asm:373 lda     f:ItemProp+19,x         ; weapon special effects — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022724–022726 | C2:2724–C2:2726 | 3 | `0E 50 D8` | `0E 00 FA` | C2:2723 src/battle/init_target.asm:91 lda     f:ItemProp+14,x   ; targetting — long operand ITEM_PROP+14 -> FA:0000+14 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 02272A–02272C | C2:272A–C2:272C | 3 | `15 50 D8` | `15 00 FA` | C2:2729 src/battle/init_target.asm:93 lda     f:ItemProp+21,x   ; — long operand ITEM_PROP+21 -> FA:0000+21 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022736–022738 | C2:2736–C2:2738 | 3 | `12 50 D8` | `12 00 FA` | C2:2735 src/battle/init_target.asm:98 @2735:  lda     f:ItemProp+18,x   ; — long operand ITEM_PROP+18 -> FA:0000+18 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022A67–022A69 | C2:2A67–C2:2A69 | 3 | `14 50 D8` | `14 00 FA` | C2:2A66 src/battle/init_attacker.asm:414 lda     f:ItemProp+20,x   ; battle/defense power — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022A6E–022A70 | C2:2A6E–C2:2A70 | 3 | `0F 50 D8` | `0F 00 FA` | C2:2A6D src/battle/init_attacker.asm:416 lda     f:ItemProp+15,x   ; item element — long operand ITEM_PROP+15 -> FA:0000+15 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022A7C–022A7E | C2:2A7C–C2:2A7E | 3 | `1B 50 D8` | `1B 00 FA` | C2:2A7B src/battle/init_attacker.asm:421 lda     f:ItemProp+27,x   ; item special effect — long operand ITEM_PROP+27 -> FA:0000+27 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022A8A–022A8C | C2:2A8A–C2:2A8C | 3 | `15 50 D8` | `15 00 FA` | C2:2A89 src/battle/init_attacker.asm:427 lda     f:ItemProp+21,x   ; status 1 and 2 — long operand ITEM_PROP+21 -> FA:0000+21 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022A91–022A93 | C2:2A91–C2:2A93 | 3 | `17 50 D8` | `17 00 FA` | C2:2A90 src/battle/init_attacker.asm:429 lda     f:ItemProp+23,x   ; status 3 and 4 — long operand ITEM_PROP+23 -> FA:0000+23 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022A9A–022A9C | C2:2A9A–C2:2A9C | 3 | `13 50 D8` | `13 00 FA` | C2:2A99 src/battle/init_attacker.asm:432 lda     f:ItemProp+19,x   ; item properties — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022AF3–022AF5 | C2:2AF3–C2:2AF5 | 3 | `00 50 D8` | `00 00 FA` | C2:2AF2 src/battle/init_attacker.asm:471 @2af2:  lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022B03–022B05 | C2:2B03–C2:2B05 | 3 | `15 50 D8` | `15 00 FA` | C2:2B02 src/battle/init_attacker.asm:477 lda     f:ItemProp+21,x — long operand ITEM_PROP+21 -> FA:0000+21 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0254FD–0254FF | C2:54FD–C2:54FF | 3 | `0E 50 D8` | `0E 00 FA` | C2:54FC src/battle/party.asm:503 lda     f:ItemProp+14,x   ; targetting — long operand ITEM_PROP+14 -> FA:0000+14 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 025504–025506 | C2:5504–C2:5506 | 3 | `00 50 D8` | `00 00 FA` | C2:5503 src/battle/party.asm:505 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 02552D–02552F | C2:552D–C2:552F | 3 | `01 50 D8` | `01 00 FA` | C2:552C src/battle/party.asm:527 lda     f:ItemProp+1,x   ; equippable characters — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 026017–026019 | C2:6017–C2:6019 | 3 | `04 50 D8` | `04 00 FA` | C2:6016 src/battle/win.asm:360 lda     f:ItemProp+4,x   ; spell taught by item — long operand ITEM_PROP+4 -> FA:0000+4 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 02601C–02601E | C2:601C–C2:601E | 3 | `03 50 D8` | `03 00 FA` | C2:601B src/battle/win.asm:362 lda     f:ItemProp+3,x   ; spell learn rate — long operand ITEM_PROP+3 -> FA:0000+3 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038074–038076 | C3:8074–C3:8076 | 3 | `00 50 D8` | `00 00 FA` | C3:8073 src/menu/item.asm:572 lda     f:ItemProp,x   ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03807E–038080 | C3:807E–C3:8080 | 3 | `00 50 D8` | `00 00 FA` | C3:807D src/menu/item.asm:576 lda     f:ItemProp,x   ; branch if not useable on field — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0384AF–0384B1 | C3:84AF–C3:84B1 | 3 | `00 50 D8` | `00 00 FA` | C3:84AE src/menu/item.asm:1302 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0384B9–0384BB | C3:84B9–C3:84BB | 3 | `00 50 D8` | `00 00 FA` | C3:84B8 src/menu/item.asm:1306 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038524–038526 | C3:8524–C3:8526 | 3 | `01 50 D8` | `01 00 FA` | C3:8523 src/menu/item.asm:1365 lda     f:ItemProp+1,x          ; equippable characters — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0386B5–0386B7 | C3:86B5–C3:86B7 | 3 | `10 50 D8` | `10 00 FA` | C3:86B4 src/menu/item.asm:1590 lda     f:ItemProp+16,x         ; vigor/speed — long operand ITEM_PROP+16 -> FA:0000+16 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0386E4–0386E6 | C3:86E4–C3:86E6 | 3 | `11 50 D8` | `11 00 FA` | C3:86E3 src/menu/item.asm:1610 lda     f:ItemProp+17,x         ; stamina/mag.pwr — long operand ITEM_PROP+17 -> FA:0000+17 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038707–038709 | C3:8707–C3:8709 | 3 | `00 50 D8` | `00 00 FA` | C3:8706 src/menu/item.asm:1625 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038711–038713 | C3:8711–C3:8713 | 3 | `14 50 D8` | `14 00 FA` | C3:8710 src/menu/item.asm:1631 lda     f:ItemProp+20,x         ; defense power — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038721–038723 | C3:8721–C3:8723 | 3 | `15 50 D8` | `15 00 FA` | C3:8720 src/menu/item.asm:1636 lda     f:ItemProp+21,x         ; magic defense — long operand ITEM_PROP+21 -> FA:0000+21 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038761–038763 | C3:8761–C3:8763 | 3 | `13 50 D8` | `13 00 FA` | C3:8760 src/menu/item.asm:1661 lda     f:ItemProp+19,x         ; weapon properties — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038772–038774 | C3:8772–C3:8774 | 3 | `13 50 D8` | `13 00 FA` | C3:8771 src/menu/item.asm:1667 lda     f:ItemProp+19,x — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038785–038787 | C3:8785–C3:8787 | 3 | `13 50 D8` | `13 00 FA` | C3:8784 src/menu/item.asm:1674 lda     f:ItemProp+19,x — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0387B4–0387B6 | C3:87B4–C3:87B6 | 3 | `14 50 D8` | `14 00 FA` | C3:87B3 src/menu/item.asm:1708 lda     f:ItemProp+20,x         ; battle power — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0387CF–0387D1 | C3:87CF–C3:87D1 | 3 | `03 50 D8` | `03 00 FA` | C3:87CE src/menu/item.asm:1724 lda     f:ItemProp+3,x   ; spell learn rate — long operand ITEM_PROP+3 -> FA:0000+3 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0387D7–0387D9 | C3:87D7–C3:87D9 | 3 | `04 50 D8` | `04 00 FA` | C3:87D6 src/menu/item.asm:1727 lda     f:ItemProp+4,x   ; spell learned — long operand ITEM_PROP+4 -> FA:0000+4 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0387FB–0387FD | C3:87FB–C3:87FD | 3 | `1A 50 D8` | `1A 00 FA` | C3:87FA src/menu/item.asm:1751 lda     f:ItemProp+26,x         ; evade%/mblock% — long operand ITEM_PROP+26 -> FA:0000+26 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0388A5–0388A7 | C3:88A5–C3:88A7 | 3 | `0F 50 D8` | `0F 00 FA` | C3:88A4 src/menu/item.asm:1837 lda     f:ItemProp+15,x         ; element — long operand ITEM_PROP+15 -> FA:0000+15 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03895E–038960 | C3:895E–C3:8960 | 3 | `16 50 D8` | `16 00 FA` | C3:895D src/menu/item.asm:1955 lda     f:ItemProp+22,x   ; absorbed — long operand ITEM_PROP+22 -> FA:0000+22 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03896C–03896E | C3:896C–C3:896E | 3 | `17 50 D8` | `17 00 FA` | C3:896B src/menu/item.asm:1960 lda     f:ItemProp+23,x   ; no effect — long operand ITEM_PROP+23 -> FA:0000+23 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03897A–03897C | C3:897A–C3:897C | 3 | `18 50 D8` | `18 00 FA` | C3:8979 src/menu/item.asm:1965 lda     f:ItemProp+24,x   ; weak point — long operand ITEM_PROP+24 -> FA:0000+24 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038C44–038C46 | C3:8C44–C3:8C46 | 3 | `13 50 D8` | `13 00 FA` | C3:8C43 src/menu/item.asm:2417 lda     f:ItemProp+19,x         ; item properties — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038C5F–038C61 | C3:8C5F–C3:8C61 | 3 | `13 50 D8` | `13 00 FA` | C3:8C5E src/menu/item.asm:2430 lda     f:ItemProp+19,x — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038C77–038C79 | C3:8C77–C3:8C79 | 3 | `13 50 D8` | `13 00 FA` | C3:8C76 src/menu/item.asm:2442 @8c76:  lda     f:ItemProp+19,x — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038CA3–038CA5 | C3:8CA3–C3:8CA5 | 3 | `13 50 D8` | `13 00 FA` | C3:8CA2 src/menu/item.asm:2459 lda     f:ItemProp+19,x — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038CCE–038CD0 | C3:8CCE–C3:8CD0 | 3 | `14 50 D8` | `14 00 FA` | C3:8CCD src/menu/item.asm:2483 @8ccd:  lda     f:ItemProp+20,x         ; hp/mp restored — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0397AD–0397AF | C3:97AD–C3:97AF | 3 | `00 50 D8` | `00 00 FA` | C3:97AC src/menu/equip.asm:1596 lda     f:ItemProp,x   ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0397B9–0397BB | C3:97B9–C3:97BB | 3 | `01 50 D8` | `01 00 FA` | C3:97B8 src/menu/equip.asm:1601 lda     f:ItemProp+1,x — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0397EF–0397F1 | C3:97EF–C3:97F1 | 3 | `00 50 D8` | `00 00 FA` | C3:97EE src/menu/equip.asm:1631 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0397FB–0397FD | C3:97FB–C3:97FD | 3 | `01 50 D8` | `01 00 FA` | C3:97FA src/menu/equip.asm:1636 lda     f:ItemProp+1,x — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03986E–039870 | C3:986E–C3:9870 | 3 | `13 50 D8` | `13 00 FA` | C3:986D src/menu/equip.asm:1708 lda     f:ItemProp+19,x   ; 2-handed weapon — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0399B6–0399B8 | C3:99B6–C3:99B8 | 3 | `13 50 D8` | `13 00 FA` | C3:99B5 src/menu/equip.asm:1891 lda     f:ItemProp+19,x   ; weapon effects — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0399D4–0399D6 | C3:99D4–C3:99D6 | 3 | `13 50 D8` | `13 00 FA` | C3:99D3 src/menu/equip.asm:1905 lda     f:ItemProp+19,x — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039A1E–039A20 | C3:9A1E–C3:9A20 | 3 | `13 50 D8` | `13 00 FA` | C3:9A1D src/menu/equip.asm:1949 lda     f:ItemProp+19,x   ; weapon properties — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039A35–039A37 | C3:9A35–C3:9A37 | 3 | `13 50 D8` | `13 00 FA` | C3:9A34 src/menu/equip.asm:1959 lda     f:ItemProp+19,x   ; weapon properties — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039A67–039A69 | C3:9A67–C3:9A69 | 3 | `00 50 D8` | `00 00 FA` | C3:9A66 src/menu/equip.asm:2006 lda     f:ItemProp,x            ; $f6 = item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039A87–039A89 | C3:9A87–C3:9A89 | 3 | `00 50 D8` | `00 00 FA` | C3:9A86 src/menu/equip.asm:2022 lda     f:ItemProp,x            ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039A9A–039A9C | C3:9A9A–C3:9A9C | 3 | `00 50 D8` | `00 00 FA` | C3:9A99 src/menu/equip.asm:2031 @9a99:  lda     f:ItemProp,x            ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039AB3–039AB5 | C3:9AB3–C3:9AB5 | 3 | `00 50 D8` | `00 00 FA` | C3:9AB2 src/menu/equip.asm:2044 lda     f:ItemProp,x            ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039AC6–039AC8 | C3:9AC6–C3:9AC8 | 3 | `00 50 D8` | `00 00 FA` | C3:9AC5 src/menu/equip.asm:2053 @9ac5:  lda     f:ItemProp,x            ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039B84–039B86 | C3:9B84–C3:9B86 | 3 | `00 50 D8` | `00 00 FA` | C3:9B83 src/menu/equip.asm:2163 lda     f:ItemProp,x   ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039B94–039B96 | C3:9B94–C3:9B96 | 3 | `01 50 D8` | `01 00 FA` | C3:9B93 src/menu/equip.asm:2170 lda     f:ItemProp+1,x   ; equippable characters — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039BC4–039BC6 | C3:9BC4–C3:9BC6 | 3 | `00 50 D8` | `00 00 FA` | C3:9BC3 src/menu/equip.asm:2194 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039BD0–039BD2 | C3:9BD0–C3:9BD2 | 3 | `01 50 D8` | `01 00 FA` | C3:9BCF src/menu/equip.asm:2199 lda     f:ItemProp+1,x — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039C00–039C02 | C3:9C00–C3:9C02 | 3 | `00 50 D8` | `00 00 FA` | C3:9BFF src/menu/equip.asm:2223 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039C0C–039C0E | C3:9C0C–C3:9C0E | 3 | `01 50 D8` | `01 00 FA` | C3:9C0B src/menu/equip.asm:2228 lda     f:ItemProp+1,x — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03A06D–03A06F | C3:A06D–C3:A06F | 3 | `00 50 D8` | `00 00 FA` | C3:A06C src/menu/equip.asm:2975 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03A079–03A07B | C3:A079–C3:A07B | 3 | `01 50 D8` | `01 00 FA` | C3:A078 src/menu/equip.asm:2980 lda     f:ItemProp+1,x — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03A177–03A179 | C3:A177–C3:A179 | 3 | `14 50 D8` | `14 00 FA` | C3:A176 src/menu/equip.asm:3111 lda     f:ItemProp+20,x   ; attack/defense power — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03B7F0–03B7F2 | C3:B7F0–C3:B7F2 | 3 | `00 50 D8` | `00 00 FA` | C3:B7EF src/menu/shop.asm:546 lda     f:ItemProp,x   ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BA17–03BA19 | C3:BA17–C3:BA19 | 3 | `00 50 D8` | `00 00 FA` | C3:BA16 src/menu/shop.asm:890 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BAFF–03BB01 | C3:BAFF–C3:BB01 | 3 | `00 50 D8` | `00 00 FA` | C3:BAFE src/menu/shop.asm:1093 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BB12–03BB14 | C3:BB12–C3:BB14 | 3 | `14 50 D8` | `14 00 FA` | C3:BB11 src/menu/shop.asm:1103 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BB34–03BB36 | C3:BB34–C3:BB36 | 3 | `14 50 D8` | `14 00 FA` | C3:BB33 src/menu/shop.asm:1116 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BB76–03BB78 | C3:BB76–C3:BB78 | 3 | `00 50 D8` | `00 00 FA` | C3:BB75 src/menu/shop.asm:1157 lda     f:ItemProp,x            ; item price / 2 — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BCEE–03BCF0 | C3:BCEE–C3:BCF0 | 3 | `01 50 D8` | `01 00 FA` | C3:BCED src/menu/shop.asm:1426 lda     f:ItemProp+1,x   ; equippable characters — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BD1A–03BD1C | C3:BD1A–C3:BD1C | 3 | `14 50 D8` | `14 00 FA` | C3:BD19 src/menu/shop.asm:1453 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BD20–03BD22 | C3:BD20–C3:BD22 | 3 | `00 50 D8` | `00 00 FA` | C3:BD1F src/menu/shop.asm:1455 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BD6D–03BD6F | C3:BD6D–C3:BD6F | 3 | `14 50 D8` | `14 00 FA` | C3:BD6C src/menu/shop.asm:1489 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BDD7–03BDD9 | C3:BDD7–C3:BDD9 | 3 | `00 50 D8` | `00 00 FA` | C3:BDD6 src/menu/shop.asm:1539 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BDEF–03BDF1 | C3:BDEF–C3:BDF1 | 3 | `00 50 D8` | `00 00 FA` | C3:BDEE src/menu/shop.asm:1549 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BE0D–03BE0F | C3:BE0D–C3:BE0F | 3 | `14 50 D8` | `14 00 FA` | C3:BE0C src/menu/shop.asm:1562 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BE63–03BE65 | C3:BE63–C3:BE65 | 3 | `00 50 D8` | `00 00 FA` | C3:BE62 src/menu/shop.asm:1600 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BE77–03BE79 | C3:BE77–C3:BE79 | 3 | `00 50 D8` | `00 00 FA` | C3:BE76 src/menu/shop.asm:1608 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BE95–03BE97 | C3:BE95–C3:BE97 | 3 | `14 50 D8` | `14 00 FA` | C3:BE94 src/menu/shop.asm:1621 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BEE5–03BEE7 | C3:BEE5–C3:BEE7 | 3 | `14 50 D8` | `14 00 FA` | C3:BEE4 src/menu/shop.asm:1657 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03C1BD–03C1BF | C3:C1BD–C3:C1BF | 3 | `01 50 D8` | `01 00 FA` | C3:C1BC src/menu/shop.asm:2080 lda     f:ItemProp+1,x — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 008130–008132 | C0:8130–C0:8132 | 3 | `01 B3 D2` | `81 25 FA` | C0:812F src/field/text.asm:302 lda     f:ItemName+1,x          ; item name — long operand ITEM_NAME+1 -> FA:2580+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 0083EF–0083F1 | C0:83EF–C0:83F1 | 3 | `01 B3 D2` | `81 25 FA` | C0:83EE src/field/text.asm:750 _83ee:  lda     f:ItemName+1,x          ; ignore symbol — long operand ITEM_NAME+1 -> FA:2580+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 016067–016069 | C1:6067–C1:6069 | 3 | `01 B3 D2` | `81 25 FA` | C1:6066 src/btlgfx/menu.asm:5734 @6069:  lda     f:ItemName+1,x   ; item name — long operand ITEM_NAME+1 -> FA:2580+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 01652E–016530 | C1:652E–C1:6530 | 3 | `00 B3 D2` | `80 25 FA` | C1:652D src/btlgfx/menu.asm:6513 lda     f:ItemName,x   ; item name — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 016576–016578 | C1:6576–C1:6578 | 3 | `00 B3 D2` | `80 25 FA` | C1:6575 src/btlgfx/menu.asm:6568 @6578:  lda     f:ItemName,x   ; item name — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 016A56–016A58 | C1:6A56–C1:6A58 | 3 | `00 B3 D2` | `80 25 FA` | C1:6A55 src/btlgfx/menu.asm:7573 lda     f:ItemName,x   ; item name (first character) — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 016AA0–016AA2 | C1:6AA0–C1:6AA2 | 3 | `00 B3 D2` | `80 25 FA` | C1:6A9F src/btlgfx/menu.asm:7613 @6aa2:  lda     f:ItemName,x — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 032720–032722 | C3:2720–C3:2722 | 3 | `00 B3 D2` | `80 25 FA` | C3:271F src/menu/field_menu.asm:2256 lda     f:ItemName,x — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 0380E3–0380E5 | C3:80E3–C3:80E5 | 3 | `00 B3 D2` | `80 25 FA` | C3:80E2 src/menu/item.asm:643 @80e2:  lda     f:ItemName,x            ; item name — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 039011–039013 | C3:9011–C3:9013 | 3 | `00 B3 D2` | `80 25 FA` | C3:9010 src/menu/equip.asm:441 @9010:  lda     f:ItemName,x — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 039D41–039D43 | C3:9D41–C3:9D43 | 3 | `00 B3 D2` | `80 25 FA` | C3:9D40 src/menu/equip.asm:2422 @9d40:  lda     f:ItemName,x — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 03C08C–03C08E | C3:C08C–C3:C08E | 3 | `00 B3 D2` | `80 25 FA` | C3:C08B src/menu/shop.asm:1900 @c08b:  lda     f:ItemName,x — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_WEAPON_ANIM | 019DB6–019DB8 | C1:9DB6–C1:9DB8 | 3 | `00 E4 EC` | `00 38 FA` | C1:9DB5 src/btlgfx/gfx_cmd.asm:1879 @9db8:  lda     f:WeaponAnimProp,x — long operand WEAPON_ANIM+0 -> FA:3800+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_JUMP_ANIM | 01BA4D–01BA4F | C1:BA4D–C1:BA4F | 3 | `40 00 D1` | `00 37 FA` | C1:BA4C src/btlgfx/anim_cmd.asm:521 lda     f:ItemJumpThrowAnim,x — long operand JUMP_ANIM+0 -> FA:3700+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I201_EVCMD_66 | 009926–009927 | C0:9926–C0:9927 | 2 | `1A B9` | `20 D6` | EventCmdTbl entry $66 (vanilla EventCmd_66 = RTS lock-up; unused by Rev 1 scripts) — GIVE_EXT_ITEM id16 (3 bytes) |
+| I202_EVCMD_67 | 009928–009929 | C0:9928–C0:9929 | 2 | `1A B9` | `30 D6` | EventCmdTbl entry $67 (vanilla unused) — TAKE_EXT_ITEM id16 (3 bytes) |
+| I203_EVCMD_68 | 00992A–00992B | C0:992A–C0:992B | 2 | `1A B9` | `40 D6` | EventCmdTbl entry $68 (vanilla unused) — HAS_EXT_ITEM id16, switch16 (5 bytes) |
+| I210_GIVEITEM_FIND | 00ACFE–00AD00 | C0:ACFE–C0:AD00 | 3 | `BD 69 18` | `20 65 D6` | GiveItem C0:ACFC (event $80, treasure chests) find-same-item loop — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I211_GIVEITEM_PUT | 00AD19–00AD1B | C0:AD19–C0:AD1B | 3 | `9D 69 18` | `20 71 D6` | GiveItem first-empty-slot store — vanilla id stored -> slot high bit cleared |
+| I212_TAKEITEM_FIND | 00AD2F–00AD31 | C0:AD2F–C0:AD31 | 3 | `BD 69 18` | `20 65 D6` | EventCmd_81 take-item search — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I213_EVCMD8D_SLOT | 009FE7–009FE9 | C0:9FE7–C0:9FE9 | 3 | `BD 1F 16` | `20 83 D6` | EventCmd_8d (remove character equipment) slot read — extended equipment returns to the inventory with its 9-bit id; vanilla path sees $FF and skips it |
+| I214_EVCMD8D_FIND | 009FF7–009FF9 | C0:9FF7–C0:9FF9 | 3 | `BD 69 18` | `20 65 D6` | EventCmd_8d find-same-item loop — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I215_EVCMD8D_PUT | 00A017–00A019 | C0:A017–C0:A019 | 3 | `9D 69 18` | `20 71 D6` | EventCmd_8d empty-slot store — vanilla id stored -> slot high bit cleared |
+| I216_CHARINIT_EQUIP | 00A0D0–00A0D2 | C0:A0D0–C0:A0D2 | 3 | `99 1F 16` | `20 BC D6` | character init from CharProp (6 equipment bytes := vanilla ids) — clear the record's 6 equipment high bits |
+| I220_NEWGAME_EXT | 00BDE2–00BDE7 | C0:BDE2–C0:BDE7 | 6 | `A6 00 BF 40 3C CF` | `22 14 80 FA 80 09` | InitNewGame Bushido-name copy to $1CF8-$1D27 (JP leftover, never read by the EN game) — extended metadata := 0 + signature; the copy loop is bypassed |
+| I221_LOADGAME_SANITIZE | 03150E–031510 | C3:150E–C3:1510 | 3 | `20 95 15` | `20 A0 F0` | LoadSavedGame (game-over restart) after the slot checksum passed — no/legacy signature -> clear extended metadata; valid -> drop stale/undefined bits; then PopTimers |
+| I222_LOADMENU_SANITIZE | 0329EB–0329ED | C3:29EB–C3:29ED | 3 | `20 66 15` | `20 A7 F0` | load menu slot select (title Continue) — same sanitize right after LoadSaveSlot |
+| I300_ITEMLIST_QTY | 037FA8–037FAA | C3:7FA8–C3:7FAA | 3 | `B9 69 19` | `20 F3 F1` | DrawItemListRow quantity — shop / colosseum: extended slot drawn as empty (qty 0) |
+| I301_ITEMLIST_NAME | 0380C7–0380CB | C3:80C7–C3:80CB | 5 | `B9 69 18 C9 FF` | `20 A2 F1 60 EA` | LoadListItemName (item menu, shop sell list, colosseum list) — name via XItemName with the 9-bit id; shop/colosseum: extended slot drawn as empty |
+| I302_ITEMDESC_ID | 0382F8–0382FA | C3:82F8–C3:82FA | 3 | `B9 69 18` | `20 E7 F0` | InitItemDesc item id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I303_ITEMDESC_LOAD | 0382FB–0382FD | C3:82FB–C3:82FD | 3 | `20 38 57` | `20 07 F2` | InitItemDesc LoadItemDesc — extended description from XDescPtr/XDescText (hidden in shop/colosseum) |
+| I304_USEITEM_ID | 03849D–03849F | C3:849D–C3:849F | 3 | `B9 69 18` | `20 E7 F0` | UseItem item id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I305_USEITEM_PROP | 0384A8–0384AA | C3:84A8–C3:84AA | 3 | `20 21 83` | `20 37 F1` | UseItem GetItemPropPtr — type / equippable characters of the extended item (item details screen) |
+| I306_DETAILS_ID | 038696–038698 | C3:8696–C3:8698 | 3 | `B9 69 18` | `20 E7 F0` | DrawItemDetails item id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I307_DETAILS_PROP | 038699–03869B | C3:8699–C3:869B | 3 | `20 21 83` | `20 37 F1` | DrawItemDetails GetItemPropPtr — stats / elements / power of the extended item |
+| I308_DETAILS_POWER | 0387A0–0387A2 | C3:87A0–C3:87A2 | 3 | `B9 69 18` | `20 01 F1` | DrawWeaponPower Atma/Soul Sabre/Dice id test — an extended weapon is never one of the vanilla '???' weapons (low byte alias) |
+| I309_ITEM_SWAP_BITS | 0327DE–0327E0 | C3:27DE–C3:27E0 | 3 | `4C 88 7F` | `4C D9 F4` | item move: swap two inventory slots — swap the two slots' high bits too |
+| I310_ARRANGE | 03267F–032684 | C3:267F–C3:2684 | 6 | `20 B8 26 20 E0 26` | `22 2C 80 FA EA EA` | Arrange (copy + SortItemsByIcon) — same algorithm/buffers, 9-bit ids carried, icon from XItemName |
+| I311_COLOSSEUM_PICK | 03ACFA–03ACFC | C3:ACFA–C3:ACFC | 3 | `BD 69 18` | `20 0D F1` | colosseum item select (wager) — extended items cannot be wagered |
+| I320_PARTYEQ_NAME_ID | 038FC2–038FC4 | C3:8FC2–C3:8FC4 | 3 | `B9 1F 00` | `20 4C F2` | DrawPartyEquipItems equipment id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I321_EQNAME | 038FE1–038FE4 | C3:8FE1–C3:8FE4 | 4 | `48 A2 8B 9E` | `4C 48 F4 EA` | _c38fe1 equipped item name — name via XItemName with the 9-bit id |
+| I322_EQNAME_RH | 039405–039407 | C3:9405–C3:9407 | 3 | `B9 1F 00` | `20 4C F2` | equip menu R-hand name — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I323_EQNAME_LH | 039417–039419 | C3:9417–C3:9419 | 3 | `B9 20 00` | `20 5D F2` | equip menu L-hand name — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I324_EQNAME_HEAD | 03943D–03943F | C3:943D–C3:943F | 3 | `B9 21 00` | `20 6E F2` | equip menu helmet name — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I325_EQNAME_BODY | 03944B–03944D | C3:944B–C3:944D | 3 | `B9 22 00` | `20 7F F2` | equip menu armor name — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I326_EQNAME_RELIC1 | 039459–03945B | C3:9459–C3:945B | 3 | `B9 23 00` | `20 90 F2` | relic menu relic 1 name — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I327_EQNAME_RELIC2 | 039467–039469 | C3:9467–C3:9469 | 3 | `B9 24 00` | `20 A1 F2` | relic menu relic 2 name — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I330_PREVIEW_SAVE | 03925F–039263 | C3:925F–C3:9263 | 5 | `B9 1F 00 85 64` | `20 A0 F4 EA EA` | _c39233 stat preview: save equipped item — save the slot's high bit too (XSCRATCH $1E3F, transient) |
+| I331_PREVIEW_CAND | 039264–039266 | C3:9264–C3:9266 | 3 | `BD 69 18` | `20 F4 F0` | _c39233 candidate id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I332_PREVIEW_PUT | 039267–039269 | C3:9267–C3:9269 | 3 | `99 1F 00` | `20 CE F2` | _c39233 temporary equip of the candidate — equipment high bit := candidate high bit for UpdateEquip |
+| I333_PREVIEW_RESTORE | 03931A–03931E | C3:931A–C3:931E | 5 | `A5 64 99 1F 00` | `20 AC F4 EA EA` | _c39233 restore equipped item — restore the slot's id and high bit |
+| I340_REMOVEALL | 0396A8–0396AA | C3:96A8–C3:96AA | 3 | `20 F2 93` | `4C 7E F3` | EquipRemoveAll (Empty, Optimum) — weapon/shield/helmet/armor return to the inventory with their 9-bit ids; high bits cleared |
+| I341_OPT_2H_STORE | 039712–039714 | C3:9712–C3:9714 | 3 | `99 1F 00` | `20 CE F2` | EquipOptimum 2-handed weapon store — high bit := B |
+| I342_OPT_2H_DEC | 039715–039717 | C3:9715–C3:9717 | 3 | `20 97 9D` | `20 69 F3` | EquipOptimum DecItemQty — 9-bit id removal |
+| I343_OPT_W_STORE | 03972A–03972C | C3:972A–C3:972C | 3 | `99 1F 00` | `20 CE F2` | EquipOptimum weapon store — high bit := B |
+| I344_OPT_W_DEC | 03972D–03972F | C3:972D–C3:972F | 3 | `20 97 9D` | `20 69 F3` | EquipOptimum DecItemQty — 9-bit id removal |
+| I345_OPT_S_STORE | 039749–03974B | C3:9749–C3:974B | 3 | `99 20 00` | `20 E2 F2` | EquipOptimum shield store — high bit := B |
+| I346_OPT_S_DEC | 03974C–03974E | C3:974C–C3:974E | 3 | `20 97 9D` | `20 69 F3` | EquipOptimum DecItemQty — 9-bit id removal |
+| I347_OPT_G_STORE | 039763–039765 | C3:9763–C3:9765 | 3 | `99 20 00` | `20 E2 F2` | EquipOptimum genji off-hand store — high bit := B |
+| I348_OPT_G_DEC | 039766–039768 | C3:9766–C3:9768 | 3 | `20 97 9D` | `20 69 F3` | EquipOptimum DecItemQty — 9-bit id removal |
+| I349_OPT_H_STORE | 03977A–03977C | C3:977A–C3:977C | 3 | `99 21 00` | `20 F6 F2` | EquipOptimum helmet store — high bit := B |
+| I350_OPT_H_DEC | 03977D–03977F | C3:977D–C3:977F | 3 | `20 97 9D` | `20 69 F3` | EquipOptimum DecItemQty — 9-bit id removal |
+| I351_OPT_A_STORE | 03978F–039791 | C3:978F–C3:9791 | 3 | `99 22 00` | `20 0A F3` | EquipOptimum armor store — high bit := B |
+| I352_OPT_A_DEC | 039792–039794 | C3:9792–C3:9794 | 3 | `4C 97 9D` | `4C 69 F3` | EquipOptimum DecItemQty (tail) — 9-bit id removal |
+| I353_VALIDW_ID | 03979F–0397A1 | C3:979F–C3:97A1 | 3 | `B9 69 18` | `20 E7 F0` | GetValidWeapons item id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I354_VALIDW_PROP | 0397A6–0397A8 | C3:97A6–C3:97A8 | 3 | `20 21 83` | `20 37 F1` | GetValidWeapons type/equippable — extended properties |
+| I355_VALIDS_ID | 0397E1–0397E3 | C3:97E1–C3:97E3 | 3 | `B9 69 18` | `20 E7 F0` | GetValidShields item id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I356_VALIDS_PROP | 0397E8–0397EA | C3:97E8–C3:97EA | 3 | `20 21 83` | `20 37 F1` | GetValidShields type/equippable — extended properties |
+| I357_BESTEQUIP | 039819–03981C | C3:9819–C3:981C | 4 | `5A 8B A9 7E` | `4C AB F3 EA` | GetBestEquip (Optimum) — returns the 9-bit id; extended items are never imp items (ImpItem low-byte aliases $12/$16/$1C/$24) |
+| I358_BEST2HAND | 03983F–039842 | C3:983F–C3:9842 | 4 | `AF 89 9D 7E` | `4C E7 F3 EA` | GetBest2Hand (Optimum, gauntlet) — returns the 9-bit id; 2-hand flag from the extended properties |
+| I359_REMOVE_ID | 0398E6–0398E8 | C3:98E6–C3:98E8 | 3 | `B9 1F 00` | `20 4C F2` | equip Remove (one slot) id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I360_REMOVE_INC | 0398E9–0398EB | C3:98E9–C3:98EB | 3 | `20 5E 9D` | `20 54 F3` | equip Remove IncItemQty — 9-bit id back to inventory |
+| I361_REMOVE_CLR | 0398EE–0398F0 | C3:98EE–C3:98F0 | 3 | `99 1F 00` | `20 CE F2` | equip Remove slot := $FF — high bit cleared |
+| I362_EQUIP_OLD | 039923–039925 | C3:9923–C3:9925 | 3 | `B9 1F 00` | `20 4C F2` | equip (item select) currently equipped id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I363_EQUIP_INC | 03992A–03992C | C3:992A–C3:992C | 3 | `20 5E 9D` | `20 54 F3` | equip IncItemQty (old item back) — 9-bit id |
+| I364_EQUIP_NEW | 039936–039938 | C3:9936–C3:9938 | 3 | `BD 69 18` | `20 F4 F0` | equip new item id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I365_EQUIP_STORE | 039939–03993B | C3:9939–C3:993B | 3 | `99 1F 00` | `20 CE F2` | equip store — high bit := B |
+| I366_EQUIP_DEC | 03993C–03993E | C3:993C–C3:993E | 3 | `20 97 9D` | `20 69 F3` | equip DecItemQty (new item out) — 9-bit id |
+| I367_HANDTXT_LH | 0399A6–0399A8 | C3:99A6–C3:99A8 | 3 | `B9 20 00` | `20 5D F2` | R-Hand/L-Hand text (gauntlet) L-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I368_HANDTXT_LH_P | 0399AF–0399B1 | C3:99AF–C3:99B1 | 3 | `20 21 83` | `20 37 F1` | R-Hand/L-Hand text 2-hand flag — extended properties |
+| I369_HANDTXT_RH | 0399CA–0399CC | C3:99CA–C3:99CC | 3 | `B9 1F 00` | `20 4C F2` | R-Hand/L-Hand text R-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I370_HANDTXT_RH_P | 0399CD–0399CF | C3:99CD–C3:99CF | 3 | `20 21 83` | `20 37 F1` | R-Hand/L-Hand text 2-hand flag — extended properties |
+| I371_HANDFX_LH | 039A0E–039A10 | C3:9A0E–C3:9A10 | 3 | `B9 20 00` | `20 5D F2` | CheckHandEffects L-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I372_HANDFX_LH_P | 039A17–039A19 | C3:9A17–C3:9A19 | 3 | `20 21 83` | `20 37 F1` | CheckHandEffects 2-hand flag — extended properties |
+| I373_HANDFX_RH | 039A2B–039A2D | C3:9A2B–C3:9A2D | 3 | `B9 1F 00` | `20 4C F2` | CheckHandEffects R-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I374_HANDFX_RH_P | 039A2E–039A30 | C3:9A2E–C3:9A30 | 3 | `20 21 83` | `20 37 F1` | CheckHandEffects 2-hand flag — extended properties |
+| I375_CANEQ_ID | 039A5D–039A5F | C3:9A5D–C3:9A5F | 3 | `BD 69 18` | `20 F4 F0` | CheckCanEquipItem candidate id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I376_CANEQ_PROP | 039A60–039A62 | C3:9A60–C3:9A62 | 3 | `20 21 83` | `20 37 F1` | CheckCanEquipItem candidate type — extended properties |
+| I377_CANEQ_LH | 039A79–039A7B | C3:9A79–C3:9A7B | 3 | `B9 20 00` | `20 5D F2` | CheckCanEquipItem L-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I378_CANEQ_LH_P | 039A80–039A82 | C3:9A80–C3:9A82 | 3 | `20 21 83` | `20 37 F1` | CheckCanEquipItem L-hand type — extended properties |
+| I379_CANEQ_RH | 039AA5–039AA7 | C3:9AA5–C3:9AA7 | 3 | `B9 1E 00` | `20 3B F2` | CheckCanEquipItem R-hand id ($001E,Y) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I380_CANEQ_RH_P | 039AAC–039AAE | C3:9AAC–C3:9AAE | 3 | `20 21 83` | `20 37 F1` | CheckCanEquipItem R-hand type — extended properties |
+| I381_VALIDE_ID | 039B76–039B78 | C3:9B76–C3:9B78 | 3 | `B9 69 18` | `20 E7 F0` | GetValidEquip weapon/shield id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I382_VALIDE_PROP | 039B7D–039B7F | C3:9B7D–C3:9B7F | 3 | `20 21 83` | `20 37 F1` | GetValidEquip weapon/shield type — extended properties |
+| I383_VALIDH_ID | 039BB6–039BB8 | C3:9BB6–C3:9BB8 | 3 | `B9 69 18` | `20 E7 F0` | GetValidEquip helmet id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I384_VALIDH_PROP | 039BBD–039BBF | C3:9BBD–C3:9BBF | 3 | `20 21 83` | `20 37 F1` | GetValidEquip helmet type — extended properties |
+| I385_VALIDA_ID | 039BF2–039BF4 | C3:9BF2–C3:9BF4 | 3 | `B9 69 18` | `20 E7 F0` | GetValidEquip armor id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I386_VALIDA_PROP | 039BF9–039BFB | C3:9BF9–C3:9BFB | 3 | `20 21 83` | `20 37 F1` | GetValidEquip armor type — extended properties |
+| I387_EQLIST_NAME_ID | 039D25–039D27 | C3:9D25–C3:9D27 | 3 | `B9 69 18` | `20 E7 F0` | LoadEquipListItemName id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I388_EQLIST_NAME_HI | 039D2F–039D31 | C3:9D2F–C3:9D31 | 3 | `9C 1B 21` | `20 53 F1` | LoadEquipListItemName M7A high byte — name index = 9-bit id * 13 (ItemName retargeted to XItemName) |
+| I389_INCQTY_FIND | 039D63–039D65 | C3:9D63–C3:9D65 | 3 | `D9 69 18` | `20 19 F1` | IncItemQty find-same-item — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I390_INCQTY_PUT | 039D85–039D87 | C3:9D85–C3:9D87 | 3 | `99 69 18` | `20 25 F1` | IncItemQty empty-slot store — vanilla id stored -> high bit cleared |
+| I391_DECQTY_FIND | 039D9C–039D9E | C3:9D9C–C3:9D9E | 3 | `D9 69 18` | `20 19 F1` | DecItemQty find item — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I392_VALIDR_ID | 03A05F–03A061 | C3:A05F–C3:A061 | 3 | `B9 69 18` | `20 E7 F0` | relic list builder id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I393_VALIDR_PROP | 03A066–03A068 | C3:A066–C3:A068 | 3 | `20 21 83` | `20 37 F1` | relic list builder type/equippable — extended properties |
+| I394_RELIC_OLD | 03A0BB–03A0BD | C3:A0BB–C3:A0BD | 3 | `B9 23 00` | `20 90 F2` | relic equip currently equipped id ($0023,Y) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I395_RELIC_INC | 03A0C2–03A0C4 | C3:A0C2–C3:A0C4 | 3 | `20 5E 9D` | `20 54 F3` | relic equip IncItemQty — 9-bit id |
+| I396_RELIC_NEW | 03A0CE–03A0D0 | C3:A0CE–C3:A0D0 | 3 | `BD 69 18` | `20 F4 F0` | relic equip new id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I397_RELIC_STORE | 03A0D1–03A0D3 | C3:A0D1–C3:A0D3 | 3 | `99 23 00` | `20 1E F3` | relic equip store — high bit := B |
+| I398_RELIC_DEC | 03A0D4–03A0D6 | C3:A0D4–C3:A0D6 | 3 | `20 97 9D` | `20 69 F3` | relic equip DecItemQty — 9-bit id |
+| I399_RELICRM_ID | 03A124–03A126 | C3:A124–C3:A126 | 3 | `B9 23 00` | `20 90 F2` | relic remove id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I400_RELICRM_INC | 03A127–03A129 | C3:A127–C3:A129 | 3 | `20 5E 9D` | `20 54 F3` | relic remove IncItemQty — 9-bit id |
+| I401_RELICRM_CLR | 03A12C–03A12E | C3:A12C–C3:A12E | 3 | `99 23 00` | `20 1E F3` | relic remove slot := $FF — high bit cleared |
+| I402_SORT_ID | 03A16D–03A16F | C3:A16D–C3:A16F | 3 | `B9 69 18` | `20 E7 F0` | SortValidEquip id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I403_SORT_PROP | 03A170–03A172 | C3:A170–C3:A172 | 3 | `20 21 83` | `20 37 F1` | SortValidEquip attack/defense power — extended properties |
+| I404_RELICDESC_1 | 03A1CD–03A1CF | C3:A1CD–C3:A1CF | 3 | `B9 23 00` | `20 90 F2` | relic slot description (relic 1) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I405_RELICDESC_2 | 03A1D2–03A1D4 | C3:A1D2–C3:A1D4 | 3 | `B9 24 00` | `20 A1 F2` | relic slot description (relic 2) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I406_RELICDESC_LD | 03A1D5–03A1D7 | C3:A1D5–C3:A1D7 | 3 | `4C 38 57` | `4C 07 F2` | relic slot LoadItemDesc — extended description |
+| I407_RELICLDESC_ID | 03A1E4–03A1E6 | C3:A1E4–C3:A1E6 | 3 | `BD 69 18` | `20 F4 F0` | relic list description id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I408_RELICLDESC_LD | 03A1E7–03A1E9 | C3:A1E7–C3:A1E9 | 3 | `4C 38 57` | `4C 07 F2` | relic list LoadItemDesc — extended description |
+| I420_SELLDESC | 03B4FF–03B501 | C3:B4FF–C3:B501 | 3 | `BD 69 18` | `20 DE F5` | shop sell description id — TECH v0.9: sell description: a sellable extended consumable shows its own description; any other extended slot reads as $FF (XSHOPCURHI = current item high bit) |
+| I421_SELLITEM | 03BFCF–03BFD1 | C3:BFCF–C3:BFD1 | 3 | `B9 69 18` | `20 D5 F5` | _c3bfcb shop selected inventory item (sell select/qty/price) — TECH v0.9: Sell item id: a sellable extended consumable can be sold (XSHOPCURHI = 1), any other extended slot reads as $FF (cannot be selected) |
+| I422_BUY_FIND | 03B5BC–03B5BE | C3:B5BC–C3:B5BE | 3 | `D9 69 18` | `20 19 F1` | shop buy: find same item — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I423_BUY_PUT | 03B5DC–03B5DE | C3:B5DC–C3:B5DE | 3 | `99 69 18` | `20 25 F1` | shop buy: new slot store — high bit cleared |
+| I424_OWNED_FIND | 03BC66–03BC68 | C3:BC66–C3:BC68 | 3 | `D9 69 18` | `20 19 F1` | shop owned-quantity search — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I425_EQUIPPED_CNT | 03BF97–03BF9A | C3:BF97–C3:BF9A | 4 | `B7 E7 C5 E0` | `20 B6 F4 EA` | shop equipped-count compare — an extended equipment byte never equals a shop (vanilla) item |
+| I430_CMP_ARMOR_ID | 03BD5B–03BD5D | C3:BD5B–C3:BD5D | 3 | `B9 22 00` | `20 7F F2` | shop party compare: armor id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I431_CMP_ARMOR_P | 03BD66–03BD68 | C3:BD66–C3:BD68 | 3 | `20 21 83` | `20 37 F1` | shop party compare: armor defense — extended power |
+| I432_CMP_W_EQ1 | 03BDBA–03BDBC | C3:BDBA–C3:BDBC | 3 | `B9 1F 00` | `20 B2 F2` | shop party compare: weapon == shop item (R) — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I433_CMP_W_EQ2 | 03BDC1–03BDC3 | C3:BDC1–C3:BDC3 | 3 | `B9 20 00` | `20 C0 F2` | shop party compare: weapon == shop item (L) — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I434_CMP_W_R | 03BDC9–03BDCB | C3:BDC9–C3:BDCB | 3 | `B9 1F 00` | `20 4C F2` | shop party compare: R-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I435_CMP_W_R_P | 03BDD0–03BDD2 | C3:BDD0–C3:BDD2 | 3 | `20 21 83` | `20 37 F1` | shop party compare: R-hand type — extended properties |
+| I436_CMP_W_L | 03BDE1–03BDE3 | C3:BDE1–C3:BDE3 | 3 | `B9 20 00` | `20 5D F2` | shop party compare: L-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I437_CMP_W_L_P | 03BDE8–03BDEA | C3:BDE8–C3:BDEA | 3 | `20 21 83` | `20 37 F1` | shop party compare: L-hand type — extended properties |
+| I438_CMP_W_L2 | 03BDF9–03BDFB | C3:BDF9–C3:BDFB | 3 | `B9 20 00` | `20 5D F2` | shop party compare: L-hand id (power) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I439_CMP_W_R2 | 03BDFF–03BE01 | C3:BDFF–C3:BE01 | 3 | `B9 1F 00` | `20 4C F2` | shop party compare: R-hand id (power) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I440_CMP_W_POW | 03BE06–03BE08 | C3:BE06–C3:BE08 | 3 | `20 21 83` | `20 37 F1` | shop party compare: weapon power — extended power |
+| I441_CMP_S_EQ1 | 03BE4A–03BE4C | C3:BE4A–C3:BE4C | 3 | `B9 1F 00` | `20 B2 F2` | shop party compare: shield == shop item (R) — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I442_CMP_S_EQ2 | 03BE51–03BE53 | C3:BE51–C3:BE53 | 3 | `B9 20 00` | `20 C0 F2` | shop party compare: shield == shop item (L) — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I443_CMP_S_L | 03BE59–03BE5B | C3:BE59–C3:BE5B | 3 | `B9 20 00` | `20 5D F2` | shop party compare: L-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I444_CMP_S_L_P | 03BE5C–03BE5E | C3:BE5C–C3:BE5E | 3 | `20 21 83` | `20 37 F1` | shop party compare: L-hand type — extended properties |
+| I445_CMP_S_R | 03BE6D–03BE6F | C3:BE6D–C3:BE6F | 3 | `B9 1F 00` | `20 4C F2` | shop party compare: R-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I446_CMP_S_R_P | 03BE70–03BE72 | C3:BE70–C3:BE72 | 3 | `20 21 83` | `20 37 F1` | shop party compare: R-hand type — extended properties |
+| I447_CMP_S_R2 | 03BE81–03BE83 | C3:BE81–C3:BE83 | 3 | `B9 1F 00` | `20 4C F2` | shop party compare: R-hand id (power) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I448_CMP_S_L2 | 03BE87–03BE89 | C3:BE87–C3:BE89 | 3 | `B9 20 00` | `20 5D F2` | shop party compare: L-hand id (power) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I449_CMP_S_POW | 03BE8E–03BE90 | C3:BE8E–C3:BE90 | 3 | `20 21 83` | `20 37 F1` | shop party compare: shield power — extended power |
+| I450_CMP_H_ID | 03BED3–03BED5 | C3:BED3–C3:BED5 | 3 | `B9 21 00` | `20 6E F2` | shop party compare: helmet id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I451_CMP_H_P | 03BEDE–03BEE0 | C3:BEDE–C3:BEE0 | 3 | `20 21 83` | `20 37 F1` | shop party compare: helmet power — extended power |
+| I500_UPDEQ_LOAD | 020EE6–020EE8 | C2:0EE6–C2:0EE8 | 3 | `BD FB 15` | `20 70 64` | UpdateEquip 6-slot loop equipment read ($15FB,X) — low byte + equipment high bit (B) for CalcEquipEffect: all stats/elements/effects of extended equipment |
+| I501_CALCEQ_OFS | 020F9C–020FA2 | C2:0F9C–C2:0FA2 | 7 | `EB A9 1E 20 81 47 AA` | `20 8B 64 EA EA EA EA` | CalcEquipEffect id*30 (XBA/LDA #$1E/JSR MultAB/TAX) — 16-bit ItemProp offset of the 9-bit id (ItemProp retargeted to XItemProp) |
+| I502_LEARN_OFS | 02600C–026011 | C2:600C–C2:6011 | 6 | `EB A9 1E 20 81 47` | `20 9E 64 EA EA EA` | LearnItemMagic id*30 (battle end, equipped items) — spell-learning bytes of extended equipment from XItemProp |
+| I510_BINV_HAND_L | 025481–025483 | C2:5481–C2:5483 | 3 | `B9 20 16` | `20 D9 64` | InitInventory L-hand (shield slot) read — 9-bit id of the hand item (also clears the battle name queue) |
+| I511_BINV_HAND_L_CP | 025485–025487 | C2:5485–C2:5487 | 3 | `20 CD 54` | `20 1F 65` | InitInventory L-hand CopyItemProp — extended hand item: properties from XItemProp, never usable/throwable |
+| I512_BINV_HAND_R | 025493–025495 | C2:5493–C2:5495 | 3 | `B9 1F 16` | `20 F5 64` | InitInventory R-hand (weapon slot) read — 9-bit id |
+| I513_BINV_HAND_R_CP | 025497–025499 | C2:5497–C2:5499 | 3 | `20 CD 54` | `20 1F 65` | InitInventory R-hand CopyItemProp — extended hand item: properties from XItemProp, never usable/throwable |
+| I516_BINV_EXT_EMPTY | 0254B0–0254B2 | C2:54B0–C2:54B2 | 3 | `E2 30 7B` | `20 A8 65` | InitInventory: end of the 256-slot copy loop (SEP #$30 / TDC) — every extended slot is re-copied as the vanilla loop copies an empty slot (qty 0, CopyItemProp($FF)): not in Item/Throw/Tools lists, cannot be used or truncated; zero bitmap bytes skipped (battle init timing unchanged) |
+| I520_BTLEND_INV | 024981–024986 | C2:4981–C2:4986 | 6 | `A2 FF 00 A0 FB 04` | `22 30 80 FA 80 17` | battle end: battle inventory -> $1869/$1969 — vanilla slots copied as before; extended slots preserved; vanilla items placed at their positions re-homed |
+| I521_BTLEND_WAGER | 0249AD–0249AF | C2:49AD–C2:49AF | 3 | `DD 69 18` | `20 10 66` | battle end: colosseum wager removal search — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I530_ANIM_ID | 0229FE–022A00 | C2:29FE–C2:2A00 | 3 | `BD A8 3C` | `20 4D 66` | weapon animation number (RHandItem+1 -> $B7) — extended weapon -> animation number $C0+low byte (XWeaponAnimFull) |
+| I531_SPEAR_R | 021814–021819 | C2:1814–C2:1819 | 6 | `BD A8 3C 20 12 15` | `20 68 66 EA EA EA` | Jump: SpearEffect(RHandItem) — extended spear (XExtFlags bit1) doubles Jump damage like vanilla $1D-$24 |
+| I532_SPEAR_L | 02181A–02181F | C2:181A–C2:181F | 6 | `BD A9 3C 20 12 15` | `20 73 66 EA EA EA` | Jump: SpearEffect(LHandItem) — as above, left hand |
+| I533_OGRE_NIX | 023F0B–023F0D | C2:3F0B–C2:3F0D | 3 | `BD 86 2B` | `20 A5 66` | MP-crit weapon break test (Ogre Nix id $17) — an extended weapon never matches (would be broken/lost) |
+| I540_HANDNAMES | 014BDA–014BDF | C1:4BDA–C1:4BDF | 6 | `B9 9A 2B 8D 60 57` | `22 34 80 FA EA EA` | battle Item menu hand header (L-hand id store) — name queue for extended hand items |
+| I541_NAMEIDX | 01656C–01656F | C1:656C–C1:656F | 4 | `A6 30 A5 56` | `22 38 80 FA` | ListTextCmd_0e name index (LDX $30 / LDA $56) — extended hand name from XItemName |
+| I542_SWAPGUARD | 0189D2–0189D6 | C1:89D2–C1:89D6 | 5 | `AD 39 7B C9 FF` | `22 3C 80 FA EA` | check_equip (battle hand <-> inventory exchange, 3 callers) — the replaced hand (identified by the caller) cannot hold an extended item: refused like a vanilla refusal |
+| I545_HANDSWAP_BITS | 018E8F–018E92 | C1:8E8F–C1:8E92 | 4 | `AE 05 7B 7B` | `22 48 80 FA` | SelectEquipItem R-hand <-> L-hand exchange (LDX w7e7b05 / TDC) — the two hand equipment bits are swapped with the hand entries (write-back C2:20AB stores low bytes) |
+| I543_JUMPANIM_L | 01BA41–01BA44 | C1:BA41–C1:BA44 | 4 | `BD 9A 2B 1A` | `22 44 80 FA` | Jump animation: L-hand item id + 1 (ItemJumpThrowAnim index) — extended weapon -> $80 + low byte (XJumpAnim FA:3700; the C1:BA4C operand is retargeted) |
+| I544_JUMPANIM_R | 01BA47–01BA4A | C1:BA47–C1:BA4A | 4 | `BD 86 2B 1A` | `22 40 80 FA` | Jump animation: R-hand item id + 1 (ItemJumpThrowAnim index) — as I543 (right hand) |
+| V901_EVCMD_69 | 00992C–00992D | C0:992C–C0:992D | 2 | `1A B9` | `DA D6` | EventCmdTbl entry $69 (vanilla unused: RTS lock-up; no Rev 1 script uses it) — GIVE_RARE id (2 bytes) |
+| V902_EVCMD_6D | 009934–009935 | C0:9934–C0:9935 | 2 | `1A B9` | `EA D6` | EventCmdTbl entry $6D (vanilla unused) — TAKE_RARE id (2 bytes) |
+| V903_EVCMD_6E | 009936–009937 | C0:9936–C0:9937 | 2 | `1A B9` | `FA D6` | EventCmdTbl entry $6E (vanilla unused) — HAS_RARE id, switch16 (4 bytes) |
+| V910_INITTARGET_CMD | 0226D6–0226D9 | C2:26D6–C2:26D9 | 4 | `64 BA A2 40` | `20 E7 66 EA` | InitTarget C2:26D3 (A = command) — records the command (XCURCMD) for the extended-consumable property lookup |
+| V911_ITEMTARGET_PROP | 02271D–02271F | C2:271D–C2:271F | 3 | `20 63 2B` | `20 F0 66` | InitItemTarget C2:271A GetItemPropPtr — Item command + extended consumable id -> XItemProp record of $100|id (targeting, status) |
+| V912_ITEMEFFECT_PROP | 022A60–022A62 | C2:2A60–C2:2A62 | 3 | `20 63 2B` | `20 F0 66` | CalcItemEffect C2:2A37 GetItemPropPtr (battle Item command and field menu use via CalcMagicEffect) — extended consumable -> its own power / element / flags / status record |
+| V913_ITEMTARGET_SPELL | 02273C–022740 | C2:273C–C2:2740 | 5 | `C9 E6 20 1A 27` | `20 F5 66 EA EA` | Init target, Item command C2:273C — an extended consumable never casts a spell (carry set like the vanilla items $E6-$FF) |
+| V914_ITEMCMD_NAMEFLAG | 02189F–0218A3 | C2:189F–C2:18A3 | 5 | `A9 01 8D 12 34` | `22 94 80 FA EA` | Item / Throw command C2:189E — XATKX := extended name + animation flags for a character's Item command with an extended consumable |
+| V915_ITEMCMD_CONSUME | 0218B0–0218B4 | C2:18B0–C2:18B4 | 5 | `A9 FF 9D F4 32` | `22 98 80 FA EA` | Item command: held item used up — clears the held-extended flag (XHELD) with the held item |
+| V916_FIXATTACK_HOLD | 024DB0–024DB2 | C2:4DB0–C2:4DB2 | 3 | `99 F4 32` | `20 FC 66` | FixPlayerAttack C2:4DAF (Item / Throw queued) — XHELD[character] := the held item is an extended consumable |
+| V917_RETURN_HELD | 0262D8–0262DA | C2:62D8–C2:62DA | 3 | `20 DC 54` | `20 06 67` | return of a held / obtained item C2:62C7 — a held extended consumable goes back to the list with its own properties + marker |
+| V918_STEAL_OBTAIN | 0239EC–0239EE | C2:39EC–C2:39EE | 3 | `9D F4 32` | `20 01 67` | Steal: obtained item C2:39EC — a vanilla item replaces the held item: XHELD cleared |
+| V919_METAMORPH_OBTAIN | 023A7C–023A7E | C2:3A7C–C2:3A7E | 3 | `9D F4 32` | `20 01 67` | Metamorph: obtained item C2:3A7C — a vanilla item replaces the held item: XHELD cleared |
+| V920_CMD_DISPATCH | 021559–02155C | C2:1559–C2:155C | 4 | `85 B5 0A AA` | `22 9C 80 FA` | battle command dispatch C2:1554 — clears XATKX before every command |
+| V930_ITEMROW | 014CA5–014CAD | C1:4CA5–C1:4CAD | 9 | `B9 86 26 8D 5A 57 8D 61 57` | `22 6C 80 FA EA EA EA EA EA` | DrawItemListText C1:4C6B — row name: XBTLNAME := extended-consumable marker of the entry (XItemName + $D00 for the name) |
+| V931_ITEM_DECREMENT | 017164–017178 | C1:7164–C1:7178 | 21 | `7B AA B9 B0 2B DD 86 26 F0 0B E8 E8 E8 E8 E8 E0 00 05 D0  …` | `22 70 80 FA B0 0F 60 EA EA EA EA EA EA EA EA EA EA EA EA  …` | decrement of the used / thrown list item C1:7167 — matches id AND marker (Item command + extended consumable) instead of the id only |
+| V932_ITEM_ADD | 014458–014469 | C1:4458–C1:4469 | 18 | `A2 00 00 DD 86 26 F0 21 E8 E8 E8 E8 E8 E0 00 05 D0 F1` | `22 74 80 FA B0 23 80 0A EA EA EA EA EA EA EA EA EA EA` | obtained / returned item added to the list C1:4445 — matches id AND marker |
+| V933_FIND_VANILLA | 018CBC–018CCA | C1:8CBC–C1:8CCA | 15 | `DD 86 26 F0 0C E8 E8 E8 E8 E8 E0 00 05 D0 F1` | `22 78 80 FA 60 EA EA EA EA EA EA EA EA EA EA` | FindInventoryItem C1:8CB7 (hand item back to the list) — vanilla entries only: a hand katana never merges into an extended consumable |
+| V934_ATTACKNAME_ITEM | 01605B–01605F | C1:605B–C1:605F | 5 | `AF 16 42 00 AA` | `22 68 80 FA EA` | item attack name C1:6050 — extended consumable (XATKX bit0) -> XItemName + $D00 |
+| V935_ITEM_ANIM | 01BC58–01BC6B | C1:BC58–C1:BC6B | 20 | `C9 E0 90 05 38 E9 E0 80 02 A9 E0 C2 20 0A AA BF 00 00 D1 AA` | `22 64 80 FA EA EA EA EA EA EA EA EA EA EA EA EA EA EA EA EA` | item animation C1:BC4E — extended consumable (XATKX bit1) -> XItemAnimX; vanilla ItemAnimPtrs rule otherwise |
+| V940_ITEMCOLOR_ID | 038056–038058 | C3:8056–C3:8058 | 3 | `B9 69 18` | `20 E7 F0` | GetItemNameColor C3:8045 — 9-bit id (A low, B high bit) |
+| V941_ITEMCOLOR_PROP | 03806D–03806F | C3:806D–C3:806F | 3 | `20 21 83` | `20 37 F1` | GetItemNameColor — usable colour from the extended record |
+| V942_CANUSE | 038B3D–038B3F | C3:8B3D–C3:8B3F | 3 | `B9 14 00` | `20 42 F5` | CheckCanUseItem C3:8B3D — extended consumable: validity from its record (vanilla rules) |
+| V943_USE_CTX | 038B25–038B27 | C3:8B25–C3:8B27 | 3 | `20 2B 8C` | `20 20 F5` | _c38b1a (before CalcMagicEffect) — XCURCMD := $FE for an extended slot (C2 reads the extended record) |
+| V944_RESTORE_ID | 038C34–038C36 | C3:8C34–C3:8C36 | 3 | `20 2B 8C` | `20 33 F5` | _c38c33 HP / MP restore — 9-bit id |
+| V945_RESTORE_PROP | 038C37–038C39 | C3:8C37–C3:8C39 | 3 | `20 21 83` | `20 37 F1` | _c38c33 HP / MP restore — extended record |
+| V946_USE_DEC | 038B17–038B19 | C3:8B17–C3:8B19 | 3 | `4C 97 9D` | `4C 39 F5` | _c38b11 (item used) — one unit of the selected 9-bit item is removed (slot cleared at 0) |
+| V950_SHOP_TABLE_LIST | 03B9AF–03B9B2 | C3:B9AF–C3:B9B2 | 4 | `BF C0 7A C4` | `BF 00 54 FA` | shop item list C3:B9AF — ShopProp relocated (XShopProp: 128 vanilla shops byte-exact + extended shops $80+) |
+| V951_SHOP_TABLE_PRICE | 03BA32–03BA35 | C3:BA32–C3:BA35 | 4 | `BF C0 7A C4` | `BF 00 54 FA` | AdjustShopPrice C3:BA2C — ShopProp relocated |
+| V952_SHOP_TABLE_TYPE | 03BFF3–03BFF6 | C3:BFF3–C3:BFF6 | 4 | `BF C0 7A C4` | `BF 00 54 FA` | shop type C3:BFD3 — ShopProp relocated |
+| V953_SHOP_ROW_NAME | 03B9BD–03B9BF | C3:B9BD–C3:B9BF | 3 | `20 68 C0` | `20 11 F6` | shop list row — 9-bit name |
+| V954_SHOP_ROW_PRICE | 03B9C9–03B9CB | C3:B9C9–C3:B9CB | 3 | `20 21 83` | `20 21 F6` | shop list row price — 9-bit record |
+| V955_SHOP_OWNED | 03BC5D–03BC61 | C3:BC5D–C3:BC61 | 5 | `7B AA DA A4 00` | `22 7C 80 FA 60` | _c3bc57 owned counts — owned quantity of exactly the shop item (vanilla / extended) |
+| V956_SHOP_CUR | 03BFC6–03BFC9 | C3:BFC6–C3:BFC9 | 4 | `BF 89 9D 7E` | `4C C9 F5 EA` | _c3bfc2 current buy item — XSHOPCURHI := entry high bit |
+| V957_BUY_DESC | 03B4F5–03B4F7 | C3:B4F5–C3:B4F7 | 3 | `4C 38 57` | `4C 02 F6` | buy description — extended description |
+| V958_SELL_DESC2 | 03B502–03B504 | C3:B502–C3:B504 | 3 | `4C 38 57` | `4C 02 F6` | sell description — extended description |
+| V959_BUY | 03B5B7–03B5B9 | C3:B5B7–C3:B5B9 | 3 | `20 C2 BF` | `20 6C F6` | _c3b5b7 buy — extended entry: extended give |
+| V960_BUY_NAME | 03BAC6–03BAC8 | C3:BAC6–C3:BAC8 | 3 | `20 68 C0` | `20 41 F6` | buy quantity screen name — 9-bit name |
+| V961_SELL_NAME | 03BADF–03BAE1 | C3:BADF–C3:BAE1 | 3 | `20 68 C0` | `20 41 F6` | sell quantity screen name — 9-bit name |
+| V962_BUY_TYPE | 03B7E9–03B7EB | C3:B7E9–C3:B7EB | 3 | `20 21 83` | `20 37 F6` | _c3b7e6 (item type) — 9-bit record |
+| V963_SHOP_STAT | 03BAF8–03BAFA | C3:BAF8–C3:BAFA | 3 | `20 21 83` | `20 37 F6` | DrawShopItemStat — 9-bit record |
+| V964_SELL_PRICE | 03BB68–03BB6A | C3:BB68–C3:BB6A | 3 | `20 21 83` | `20 37 F6` | sell price — 9-bit record (price / 2) |
+| V965_CANEQ_ID | 03BCE1–03BCE4 | C3:BCE1–C3:BCE4 | 4 | `BF 89 9D 7E` | `20 C9 F5 EA` | shop: who can equip (current entry) — XSHOPCURHI := entry high bit |
+| V966_CANEQ_PROP | 03BCE5–03BCE7 | C3:BCE5–C3:BCE7 | 3 | `20 21 83` | `20 37 F6` | shop: who can equip — 9-bit record |
+| V967_CANEQ2_ID | 03C1B0–03C1B3 | C3:C1B0–C3:C1B3 | 4 | `BF 89 9D 7E` | `20 C9 F5 EA` | shop: who can equip (party sprites) — XSHOPCURHI := entry high bit |
+| V968_CANEQ2_PROP | 03C1B4–03C1B6 | C3:C1B4–C3:C1B6 | 3 | `20 21 83` | `20 37 F6` | shop: who can equip (party sprites) — 9-bit record |
+| V969_SHOP_STATS_X | 03BD13–03BD15 | C3:BD13–C3:BD15 | 3 | `20 21 83` | `20 2E F6` | _c3bcfd per-entry stats — 9-bit record |
+| V970_SELLALL_CLR | 03B739–03B73B | C3:B739–C3:B73B | 3 | `99 69 18` | `20 25 F1` | sell all units of a slot — the emptied slot's high bit is cleared |
+| V980_RARE_DESCPTR | 038339–03833B | C3:8339–C3:833B | 3 | `A2 60 FB` | `A2 90 50` | InitRareItemDesc C3:8339 — 52 rare descriptions (XRareDescPtr, absolute pointers in bank FA) |
+| V981_RARE_DESCBASE | 03833E–038340 | C3:833E–C3:8340 | 3 | `A2 B0 FC` | `A2 00 00` | InitRareItemDesc — absolute pointers |
+| V982_RARE_DESCBANK | 038343–038344 | C3:8343–C3:8344 | 2 | `A9 CE` | `A9 FA` | InitRareItemDesc — bank FA |
+| V983_RARE_COUNT | 03834C–03834E | C3:834C–C3:834E | 3 | `20 6B 83` | `20 AF F6` | InitRareItemDesc (count) — number of owned rare items over all pages |
+| V984_RARE_NAMEPTR | 03843B–03843D | C3:843B–C3:843D | 3 | `A0 A0 FB` | `A0 00 51` | GetRareItemNamePtr C3:8436 — 52 rare names (XRareName) |
+| V985_RARE_NAMEBANK | 038440–038441 | C3:8440–C3:8441 | 2 | `A9 CE` | `A9 FA` | GetRareItemNamePtr — bank FA |
+| V986_RARE_LIST | 03838E–038390 | C3:838E–C3:8390 | 3 | `20 94 83` | `20 AA F6` | InitRareItemList C3:838B — list of the current page (vanilla ids 0-19 + FF6X ids 20-51) |
+| V987_RARE_PAGE | 032748–03274A | C3:2748–C3:274A | 3 | `20 4A 7D` | `20 BF F6` | menu state ITEM_RARE C3:2741 — page turning (Down / Up at the edge, R / L) |
+| V988_RARE_OPEN | 0326A0–0326A2 | C3:26A0–C3:26A2 | 3 | `20 8B 83` | `20 B6 F6` | SelectItemOption_02 C3:268E — page 0 |
+| P999_CHECKSUM | 00FFDC–00FFDF | C0:FFDC–C0:FFDF | 4 | `9F 75 60 8A` | `AF 11 50 EE` | SNES header (emulator/flash-cart validation) — Recalculated checksum EE50 / complement 11AF |
+
+## item-tech — `FF6X_Rev1_TECH_v0.9_CONSUMABLE_RARE_QA.sfc`
+
+SHA-1 `e1136805cc792e11dbffab15e87df0f327a6a12e` · CRC32 `D8183069` · SNES checksum `31D2` · status: TECH v0.9 QA BUILD (consumables + rare items + 39 signature equipment + QA hub) - USER RUNTIME QA PENDING
+
+| ID | PC | SNES | Len | Original | New | Consumer / reason |
+|---|---|---|---|---|---|---|
+| P000_EXPAND_4MIB | 300000–3FFFFF | F0:0000–FF:FFFF | 1048576 | `` | `1048576 B sha1 3de8699aadf9` | All F0-FF expansion allocations. — Expand 3 MiB -> 4 MiB HiROM. Header ROM-size byte C0:FFD7 is already 0x0C (4 MiB class) in Rev 1; unchanged. |
+| P001_BUILD_METADATA | 300000–30003F | F0:0000–F0:003F | 64 | `FF fill (expansion)` | `46 46 36 58 2D 45 45 00 01 00 09 00 00 02 00 00 69 74 65  …` | tools/verify (offline). No runtime consumer. — Machine-readable build identity for QA tooling. |
+| P101_EXP_DLG_TABLE | 334000–33402A | F3:4000–F3:402A | 43 | `FF fill (expansion)` | `24 37 2F 20 2D 32 28 2E 2D 7F 23 28 20 2B 2E 26 34 24 7F  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1000: 'EXPANSION DIALOGUE ERROR:{n}ID OUT OF RANGE.' |
+| P101_EXP_DLG_TABLE | 33402B–334061 | F3:402B–F3:4061 | 55 | `FF fill (expansion)` | `33 24 22 27 7F 4F 54 65 57 61 7F 20 47 47 3E 51 7F 4D 3E  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1001: 'TECH v0.3: Annex test map.{n}Enter the Annex?{n}{choice} Yes{n}{choice} No' |
+| P101_EXP_DLG_TABLE | 334062–3340D5 | F3:4062–F3:40D5 | 116 | `FF fill (expansion)` | `35 20 2B 24 7F 6B 49 45 3A 3C 3E 41 48 45 3D 3E 4B 6C 61  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1002: 'VALE (placeholder): TECH v0.3.{n}This text is from bank F3.{n}Annex flag STARTED is now ON.{n}The north door is unsealed.' |
+| P101_EXP_DLG_TABLE | 3340D6–33413D | F3:40D6–F3:413D | 104 | `FF fill (expansion)` | `35 20 2B 24 7F 6B 49 45 3A 3C 3E 41 48 45 3D 3E 4B 6C 61  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1003: 'VALE (placeholder):{n}Annex flag STARTED is still ON.{n}Go north through the door{n}to start the test battle.' |
+| P101_EXP_DLG_TABLE | 33413E–3341A6 | F3:413E–F3:41A6 | 105 | `FF fill (expansion)` | `35 20 2B 24 7F 6B 49 45 3A 3C 3E 41 48 45 3D 3E 4B 6C 61  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1004: 'VALE (placeholder):{n}Annex flag BATTLE DONE is ON.{n}Take the test reward from{n}the chest in the north room.' |
+| P101_EXP_DLG_TABLE | 3341A7–33420E | F3:41A7–F3:420E | 104 | `FF fill (expansion)` | `35 20 2B 24 7F 6B 49 45 3A 3C 3E 41 48 45 3D 3E 4B 6C 61  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1005: 'VALE (placeholder):{n}Annex flag COMPLETE is ON.{n}TECH slice finished. Exit{n}south to return to the Falcon.' |
+| P101_EXP_DLG_TABLE | 33420F–334238 | F3:420F–F3:4238 | 42 | `FF fill (expansion)` | `33 41 3E 7F 3D 48 48 4B 7F 42 4C 7F 4C 3E 3A 45 3E 3D 65  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1006: 'The door is sealed.{n}(Talk to VALE first.)' |
+| P101_EXP_DLG_TABLE | 334239–334271 | F3:4239–F3:4271 | 57 | `FF fill (expansion)` | `33 24 22 27 7F 4F 54 65 57 61 7F 20 47 47 3E 51 7F 3D 3E  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1007: 'TECH v0.3: Annex defenses{n}activate! (placeholder battle)' |
+| P101_EXP_DLG_TABLE | 334272–3342A2 | F3:4272–F3:42A2 | 49 | `FF fill (expansion)` | `23 3E 3F 3E 47 4C 3E 4C 7F 3A 4B 3E 7F 3D 48 50 47 65 01  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1008: 'Defenses are down.{n}Annex flag BATTLE DONE is ON.' |
+| P101_EXP_DLG_TABLE | 3342A3–3342EE | F3:42A3–F3:42EE | 76 | `FF fill (expansion)` | `33 24 22 27 7F 4F 54 65 57 7F 49 45 3A 3C 3E 41 48 45 3D  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1009: 'TECH v0.3 placeholder reward:{n}Received 1 Potion.{n}Annex flag COMPLETE is ON.' |
+| P101_EXP_DLG_TABLE | 3342EF–33431A | F3:42EF–F3:431A | 44 | `FF fill (expansion)` | `33 41 3E 7F 3C 41 3E 4C 4D 7F 42 4C 7F 3E 46 49 4D 52 65  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $100A: 'The chest is empty.{n}(Reward already taken.)' |
+| P101_EXP_DLG_TABLE | 33431B–33438B | F3:431B–F3:438B | 113 | `FF fill (expansion)` | `33 24 22 27 7F 20 55 61 7F 46 3A 49 7F 55 20 54 7F 6B 47  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $100B: 'TECH A1: map 1A0 (new ID).{n}NPC data: relocated table F6.{n}My event: vector table F7.{n}Visit the room to the north.' |
+| P101_EXP_DLG_TABLE | 33438C–3343E1 | F3:438C–F3:43E1 | 86 | `FF fill (expansion)` | `33 24 22 27 7F 20 55 61 7F 3F 45 3A 40 7F 35 28 32 28 33  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $100C: 'TECH A1: flag VISITED B is ON.{n}The new NPC (A2) appeared.{n}NPC switch on a new map OK.' |
+| P101_EXP_DLG_TABLE | 3343E2–334435 | F3:43E2–F3:4435 | 84 | `FF fill (expansion)` | `33 24 22 27 7F 20 57 61 7F 4C 3E 3C 48 47 3D 7F 4B 48 4E  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $100D: 'TECH A3: second routed NPC.{n}Layout 160 is read from the{n}relocated pointer table F7.' |
+| P101_EXP_DLG_TABLE | 334436–334474 | F3:4436–F3:4474 | 63 | `FF fill (expansion)` | `33 24 22 27 7F 20 56 61 7F 28 7F 3A 46 7F 4F 42 4C 42 3B  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $100E: 'TECH A2: I am visible only{n}after VISITED B was set{n}in map 1A1.' |
+| P101_EXP_DLG_TABLE | 334475–3344AB | F3:4475–F3:44AB | 55 | `FF fill (expansion)` | `33 24 22 27 7F 4F 54 65 58 61 7F 3E 4F 3E 47 4D 7F 4D 4B  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $100F: 'TECH v0.4: event trigger on{n}map 1A0 (relocated table).' |
+| P101_EXP_DLG_TABLE | 3344AC–3344FB | F3:44AC–F3:44FB | 80 | `FF fill (expansion)` | `33 24 22 27 7F 21 55 61 7F 46 3A 49 7F 55 20 55 7F 6B 47  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1010: 'TECH B1: map 1A1 (new ID).{n}Composed vanilla room art.{n}Flag VISITED B is now ON.' |
+| P101_EXP_DLG_TABLE | 3344FC–334548 | F3:44FC–F3:4548 | 77 | `FF fill (expansion)` | `33 24 22 27 7F 21 55 61 7F 35 28 32 28 33 24 23 7F 21 7F  …` | field text renderer via $C9/$CB set by P100 hook — Expansion dialogue $1011: 'TECH B1: VISITED B is still ON.{n}Door: short entrance.{n}Stairs: long entrance.' |
+| P101_EXP_DLG_TABLE | 330000–330047 | F3:0000–F3:0047 | 72 | `FF fill (expansion)` | `00 40 F3 00 2B 40 F3 00 62 40 F3 00 D6 40 F3 00 3E 41 F3  …` | P100 hook (LDA.l table,X) — 18 x 4-byte pointers for dialogue IDs $1000-$1011 |
+| Q712_QA_DLG | 3F1000–3F105D | FF:1000–FF:105D | 94 | `FF fill (expansion)` | `33 24 22 27 7F 4F 54 65 5C 7F 30 20 7F 20 22 22 24 32 32  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1012: 'TECH v0.8 QA ACCESS{n}{choice} Equipment v0.8 (39 items){n}{choice} Older tests (v0.7 / v0.6){n}{choice} No (Save Point)' |
+| Q712_QA_DLG | 3F105E–3F10AD | FF:105E–FF:10AD | 80 | `FF fill (expansion)` | `2E 45 3D 3E 4B 7F 30 20 7F 4D 3E 4C 4D 4C 01 15 7F 28 4D  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1013: 'Older QA tests{n}{choice} Item bank tests (v0.7.1){n}{choice} Monster/map tests (v0.6.1){n}{choice} Cancel' |
+| Q712_QA_DLG | 3F10AE–3F1101 | FF:10AE–FF:1101 | 84 | `FF fill (expansion)` | `4F 54 65 5C 7F 49 4B 48 3D 4E 3C 4D 42 48 47 7F 3E 4A 4E  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1014: 'v0.8 production equipment{n}{choice} Grant all 39{n}{choice} Party presets{n}{choice} By type / Remove / Smith' |
+| Q712_QA_DLG | 3F1102–3F114C | FF:1102–FF:114C | 75 | `FF fill (expansion)` | `4F 54 65 5C 7F 3E 4A 4E 42 49 46 3E 47 4D 7F 4D 48 48 45  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1015: 'v0.8 equipment tools{n}{choice} Grant by type{n}{choice} Remove all 39 (inventory){n}{choice} More...' |
+| Q712_QA_DLG | 3F114D–3F11A4 | FF:114D–FF:11A4 | 88 | `FF fill (expansion)` | `4F 54 65 5C 7F 3E 4A 4E 42 49 46 3E 47 4D 7F 4D 48 48 45  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1016: 'v0.8 equipment tools{n}{choice} Test battle (guards){n}{choice} Boss battle (Whelk){n}{choice} Smith purchase demo' |
+| Q712_QA_DLG | 3F11A5–3F11EA | FF:11A5–FF:11EA | 70 | `FF fill (expansion)` | `26 4B 3A 47 4D 7F 3B 52 7F 4D 52 49 3E 01 15 7F 36 3E 3A  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1017: 'Grant by type{n}{choice} Weapons (13){n}{choice} Armor/helmet/shield (13){n}{choice} Relics (13)' |
+| Q712_QA_DLG | 3F11EB–3F1243 | FF:11EB–FF:1243 | 89 | `FF fill (expansion)` | `2F 3A 4B 4D 52 7F 49 4B 3E 4C 3E 4D 7F 6B 33 3E 4B 4B 3A  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1018: 'Party preset (Terra leads){n}{choice} Terra Locke Celes Edgar{n}{choice} Terra Sabin Cyan Shadow{n}{choice} More...' |
+| Q712_QA_DLG | 3F1244–3F1298 | FF:1244–FF:1298 | 85 | `FF fill (expansion)` | `2F 3A 4B 4D 52 7F 49 4B 3E 4C 3E 4D 7F 6B 33 3E 4B 4B 3A  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1019: 'Party preset (Terra leads){n}{choice} Terra Setzer Strago Relm{n}{choice} Terra Mog Gau Gogo{n}{choice} More...' |
+| Q712_QA_DLG | 3F1299–3F12F0 | FF:1299–FF:12F0 | 88 | `FF fill (expansion)` | `2F 3A 4B 4D 52 7F 49 4B 3E 4C 3E 4D 7F 6B 33 3E 4B 4B 3A  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $101A: 'Party preset (Terra leads){n}{choice} Terra Umaro Celes Locke{n}{choice} Opening party (Magitek){n}{choice} Cancel' |
+| Q712_QA_DLG | 3F12F1–3F131D | FF:12F1–FF:131D | 45 | `FF fill (expansion)` | `30 20 7F 49 3A 4B 4D 52 7F 4C 3E 4D 65 7F 33 3E 4B 4B 3A  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $101B: 'QA party set. Terra is out{n}of Magitek armor.' |
+| Q712_QA_DLG | 3F131E–3F1354 | FF:131E–FF:1354 | 55 | `FF fill (expansion)` | `2E 49 3E 47 42 47 40 7F 49 3A 4B 4D 52 7F 4B 3E 4C 4D 48  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $101C: 'Opening party restored{n}(Terra, Wedge, Vicks, Magitek).' |
+| Q712_QA_DLG | 3F1355–3F13A0 | FF:1355–FF:13A0 | 76 | `FF fill (expansion)` | `26 48 4D 7F 3A 45 45 7F 57 5D 7F 49 4B 48 3D 4E 3C 4D 42  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $101D: 'Got all 39 production items{n}(ids 100-126): 13 weapons,{n}13 armor, 13 relics.' |
+| Q712_QA_DLG | 3F13A1–3F13BF | FF:13A1–FF:13BF | 31 | `FF fill (expansion)` | `26 48 4D 7F 4D 41 3E 7F 55 57 7F 49 4B 48 3D 4E 3C 4D 42  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $101E: 'Got the 13 production weapons.' |
+| Q712_QA_DLG | 3F13C0–3F13F1 | FF:13C0–FF:13F1 | 50 | `FF fill (expansion)` | `26 48 4D 7F 4D 41 3E 7F 55 57 7F 49 4B 48 3D 4E 3C 4D 42  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $101F: 'Got the 13 production armor,{n}helmets and shields.' |
+| Q712_QA_DLG | 3F13F2–3F140F | FF:13F2–FF:140F | 30 | `FF fill (expansion)` | `26 48 4D 7F 4D 41 3E 7F 55 57 7F 49 4B 48 3D 4E 3C 4D 42  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1020: 'Got the 13 production relics.' |
+| Q712_QA_DLG | 3F1410–3F1464 | FF:1410–FF:1464 | 85 | `FF fill (expansion)` | `31 3E 46 48 4F 3E 3D 7F 4D 41 3E 7F 49 4B 48 3D 4E 3C 4D  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1021: 'Removed the production items{n}from the inventory (up to 10{n}each; equipped ones stay).' |
+| Q712_QA_DLG | 3F1465–3F14B7 | FF:1465–FF:14B7 | 83 | `FF fill (expansion)` | `32 46 42 4D 41 7F 3D 3E 46 48 7F 6B 2D 3A 4B 4C 41 3E 7F  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1022: 'Smith demo (Narshe forge){n}{choice} Buy TemperedEdge 18000 GP{n}{choice} Get 20000 GP (QA){n}{choice} Cancel' |
+| Q712_QA_DLG | 3F14B8–3F14E5 | FF:14B8–FF:14E5 | 46 | `FF fill (expansion)` | `32 46 42 4D 41 61 7F 33 3E 46 49 3E 4B 3E 3D 7F 24 3D 40  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1023: 'Smith: Tempered Edge is yours.{n}18000 GP paid.' |
+| Q712_QA_DLG | 3F14E6–3F1520 | FF:14E6–FF:1520 | 59 | `FF fill (expansion)` | `32 46 42 4D 41 61 7F 52 48 4E 7F 3A 45 4B 3E 3A 3D 52 7F  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1024: 'Smith: you already own the{n}Tempered Edge.{n}Nothing charged.' |
+| Q712_QA_DLG | 3F1521–3F154B | FF:1521–FF:154B | 43 | `FF fill (expansion)` | `32 46 42 4D 41 61 7F 52 48 4E 7F 47 3E 3E 3D 7F 55 5C 54  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1025: 'Smith: you need 18000 GP.{n}Nothing charged.' |
+| Q712_QA_DLG | 3F154C–3F1575 | FF:154C–FF:1575 | 42 | `FF fill (expansion)` | `32 46 42 4D 41 61 7F 47 48 7F 4B 48 48 46 7F 3F 48 4B 7F  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1026: 'Smith: no room for it.{n}18000 GP refunded.' |
+| Q712_QA_DLG | 3F1576–3F1587 | FF:1576–FF:1587 | 18 | `FF fill (expansion)` | `30 20 61 7F 40 48 4D 7F 56 54 54 54 54 7F 26 2F 65 00` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1027: 'QA: got 20000 GP.' |
+| Q712_QA_DLG | 3F1588–3F15F6 | FF:1588–FF:15F6 | 111 | `FF fill (expansion)` | `4F 54 65 5B 65 55 7F 3E 51 4D 3E 47 3D 3E 3D 7F 42 4D 3E  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1028: 'v0.7.1 extended item tests{n}{choice} Get QA items 13D/13E/13F{n}{choice} Check / remove QA Blade13D{n}{choice} Shop / Colosseum / Battle' |
+| Q712_QA_DLG | 3F15F7–3F1647 | FF:15F7–FF:1647 | 81 | `FF fill (expansion)` | `26 48 4D 7F 30 20 7F 21 45 3A 3D 3E 55 57 23 66 7F 30 20  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1029: 'Got QA Blade13D, QA Mail 13E,{n}QA Charm13F (extended) and{n}vanilla items 3D/3E/3F.' |
+| Q712_QA_DLG | 3F1648–3F167E | FF:1648–FF:167E | 55 | `FF fill (expansion)` | `27 20 32 7F 24 37 33 7F 28 33 24 2C 7F 55 57 23 61 7F 2D  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $102A: 'HAS EXT ITEM 13D: NO{n}(no QA Blade13D in the{n}inventory)' |
+| Q712_QA_DLG | 3F167F–3F16BB | FF:167F–FF:16BB | 61 | `FF fill (expansion)` | `27 20 32 7F 24 37 33 7F 28 33 24 2C 7F 55 57 23 61 7F 38  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $102B: 'HAS EXT ITEM 13D: YES{n}{choice} Remove one (TAKE EXT ITEM){n}{choice} Keep it' |
+| Q712_QA_DLG | 3F16BC–3F16EB | FF:16BC–FF:16EB | 48 | `FF fill (expansion)` | `33 20 2A 24 7F 24 37 33 7F 28 33 24 2C 7F 55 57 23 61 7F  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $102C: 'TAKE EXT ITEM 13D: one{n}QA Blade13D was removed.' |
+| Q712_QA_DLG | 3F16EC–3F1755 | FF:16EC–FF:1755 | 106 | `FF fill (expansion)` | `4F 54 65 5B 65 55 7F 3E 51 3C 45 4E 4C 42 48 47 7F 60 7F  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $102D: 'v0.7.1 exclusion / battle tests{n}{choice} Shop 48 (brushes){n}{choice} Colosseum (full battle){n}{choice} Battle: Terra w/o Magitek' |
+| Q712_QA_DLG | 3F1756–3F179F | FF:1756–FF:179F | 74 | `FF fill (expansion)` | `22 48 45 48 4C 4C 3E 4E 46 7F 6B 30 20 7F 49 3A 4B 4D 52  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $102E: 'Colosseum (QA party preset){n}{choice} Fight (wager list){n}{choice} Get wager kit{n}{choice} Cancel' |
+| Q712_QA_DLG | 3F17A0–3F17E8 | FF:17A0–FF:17E8 | 73 | `FF fill (expansion)` | `26 48 4D 7F 24 45 42 51 42 4B 7F 51 57 66 7F 25 3E 47 42  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $102F: 'Got Elixir x3, Fenix Down x3,{n}ThiefKnife, ValiantKnife{n}(vanilla wagers).' |
+| Q712_QA_DLG | 3F17E9–3F1837 | FF:17E9–FF:1837 | 79 | `FF fill (expansion)` | `4F 54 65 5A 65 55 61 7F 33 24 32 33 22 34 21 24 7F 6A 7F  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1030: 'v0.6.1: TESTCUBE + TESTEYE{n}Custom graphics from bank FB.{n}Formation 240 (0 MP).' |
+| Q712_QA_DLG | 3F1838–3F186C | FF:1838–FF:186C | 53 | `FF fill (expansion)` | `33 24 22 27 7F 4F 54 65 5A 65 55 61 7F 3B 3A 4D 4D 45 3E  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1031: 'TECH v0.6.1: battle returned{n}to the field correctly.' |
+| Q712_QA_DLG | 3F186D–3F18C2 | FF:186D–FF:18C2 | 86 | `FF fill (expansion)` | `33 24 22 27 7F 4F 54 65 5A 65 55 7F 30 20 61 7F 46 48 4B  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1032: 'TECH v0.6.1 QA: more tests{n}{choice} Dark Wind isolation{n}{choice} Magic Point test{n}{choice} Map/Annex tests' |
+| Q712_QA_DLG | 3F18C3–3F1920 | FF:18C3–FF:1920 | 94 | `FF fill (expansion)` | `23 3A 4B 44 7F 36 42 47 3D 7F 4D 3E 4C 4D 7F 6B 45 3E 3F  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1033: 'Dark Wind test (left=vanilla):{n}{choice} Vanilla, clone, Vulture pal{n}{choice} Reference: 3x vanilla{n}{choice} Cancel' |
+| Q712_QA_DLG | 3F1921–3F198A | FF:1921–FF:198A | 106 | `FF fill (expansion)` | `30 20 61 7F 31 3A 46 4E 41 7F 3A 3D 3D 3E 3D 65 7F 24 4A  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1034: 'QA: Ramuh added. Equip it first.{n}{choice} Fight 3-MP battle (241){n}{choice} Fight 0-MP battle (240){n}{choice} Not yet (go equip)' |
+| Q712_QA_DLG | 3F198B–3F19D0 | FF:198B–FF:19D0 | 70 | `FF fill (expansion)` | `33 24 22 27 7F 4F 54 65 5A 65 55 7F 30 20 61 7F 48 4D 41  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1035: 'TECH v0.6.1 QA: other tests{n}{choice} Map test A (1A0){n}{choice} Celes Annex{n}{choice} Cancel' |
+| Q712_QA_DLG | 3F19D1–3F1A13 | FF:19D1–FF:1A13 | 67 | `FF fill (expansion)` | `33 24 22 27 7F 4F 54 65 5A 65 55 7F 30 20 7F 4D 3E 4C 4D  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1036: 'TECH v0.6.1 QA tests{n}{choice} Custom monster battle{n}{choice} More tests{n}{choice} Cancel' |
+| Q712_QA_DLG | 3F1A14–3F1A56 | FF:1A14–FF:1A56 | 67 | `FF fill (expansion)` | `33 24 22 27 7F 4F 54 65 5D 7F 30 20 7F 20 22 22 24 32 32  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1037: 'TECH v0.9 QA ACCESS{n}{choice} Consumables v0.9{n}{choice} Rare items v0.9{n}{choice} More...' |
+| Q712_QA_DLG | 3F1A57–3F1AA7 | FF:1A57–FF:1AA7 | 81 | `FF fill (expansion)` | `33 24 22 27 7F 4F 54 65 5D 7F 30 20 7F 20 22 22 24 32 32  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1038: 'TECH v0.9 QA ACCESS{n}{choice} Stress / save (v0.9){n}{choice} Equipment v0.8 (39 items){n}{choice} More...' |
+| Q712_QA_DLG | 3F1AA8–3F1AED | FF:1AA8–FF:1AED | 70 | `FF fill (expansion)` | `33 24 22 27 7F 4F 54 65 5D 7F 30 20 7F 20 22 22 24 32 32  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1039: 'TECH v0.9 QA ACCESS{n}{choice} Older tests (v0.7 / v0.6){n}{choice} Save Point{n}{choice} Cancel' |
+| Q712_QA_DLG | 3F1AEE–3F1B41 | FF:1AEE–FF:1B41 | 84 | `FF fill (expansion)` | `22 48 47 4C 4E 46 3A 3B 45 3E 4C 7F 4F 54 65 5D 7F 6B 42  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $103A: 'Consumables v0.9 (ids 127-12E){n}{choice} Grant all 8 (x5 each){n}{choice} Consumable shops{n}{choice} More...' |
+| Q712_QA_DLG | 3F1B42–3F1B8A | FF:1B42–FF:1B8A | 73 | `FF fill (expansion)` | `22 48 47 4C 4E 46 3A 3B 45 3E 4C 7F 4F 54 65 5D 01 15 7F  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $103B: 'Consumables v0.9{n}{choice} Battle test (guards){n}{choice} Field-use setup (P1){n}{choice} More...' |
+| Q712_QA_DLG | 3F1B8B–3F1BCE | FF:1B8B–FF:1BCE | 68 | `FF fill (expansion)` | `22 48 47 4C 4E 46 3A 3B 45 3E 4C 7F 4F 54 65 5D 01 15 7F  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $103C: 'Consumables v0.9{n}{choice} Remove all 8 (x10 each){n}{choice} Party presets{n}{choice} Cancel' |
+| Q712_QA_DLG | 3F1BCF–3F1C20 | FF:1BCF–FF:1C20 | 82 | `FF fill (expansion)` | `22 48 47 4C 4E 46 3A 3B 45 3E 7F 4C 41 48 49 4C 01 15 7F  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $103D: 'Consumable shops{n}{choice} Rebuilt general store{n}{choice} Rebuilt late store{n}{choice} Get 20000 GP (QA)' |
+| Q712_QA_DLG | 3F1C21–3F1C6D | FF:1C21–FF:1C6D | 77 | `FF fill (expansion)` | `26 48 4D 7F 59 7F 48 3F 7F 3E 3A 3C 41 7F 3C 48 47 4C 4E  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $103E: 'Got 5 of each consumable:{n}Gaia Tonic, AetherFlask,{n}Phoenix Ash, Null Dust...' |
+| Q712_QA_DLG | 3F1C6E–3F1CAC | FF:1C6E–FF:1CAC | 63 | `FF fill (expansion)` | `31 3E 46 48 4F 3E 3D 7F 4D 41 3E 7F 3C 48 47 4C 4E 46 3A  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $103F: 'Removed the consumables{n}from the inventory{n}(up to 10 of each).' |
+| Q712_QA_DLG | 3F1CAD–3F1CF5 | FF:1CAD–FF:1CF5 | 73 | `FF fill (expansion)` | `25 42 3E 45 3D 64 4E 4C 3E 7F 4C 3E 4D 4E 49 61 7F 49 3A  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1040: 'Field-use setup: party P1.{n}Terra: Poison/Blind/Imp,{n}Locke: wounded (KO).' |
+| Q712_QA_DLG | 3F1CF6–3F1D36 | FF:1CF6–FF:1D36 | 65 | `FF fill (expansion)` | `31 3A 4B 3E 7F 42 4D 3E 46 4C 7F 4F 54 65 5D 01 15 7F 26  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1041: 'Rare items v0.9{n}{choice} Grant all 5 key items{n}{choice} Remove all 5{n}{choice} More...' |
+| Q712_QA_DLG | 3F1D37–3F1D7B | FF:1D37–FF:1D7B | 69 | `FF fill (expansion)` | `31 3A 4B 3E 7F 42 4D 3E 46 4C 7F 4F 54 65 5D 01 15 7F 33  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1042: 'Rare items v0.9{n}{choice} Toggle one key item{n}{choice} Check Triune Sigil{n}{choice} More...' |
+| Q712_QA_DLG | 3F1D7C–3F1DC7 | FF:1D7C–FF:1DC7 | 76 | `FF fill (expansion)` | `31 3A 4B 3E 7F 42 4D 3E 46 4C 7F 4F 54 65 5D 7F 6B 3C 3A  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1043: 'Rare items v0.9 (capacity){n}{choice} Fill all 52 (3 pages){n}{choice} Clear QA fill{n}{choice} Cancel' |
+| Q712_QA_DLG | 3F1DC8–3F1E02 | FF:1DC8–FF:1E02 | 59 | `FF fill (expansion)` | `33 48 40 40 45 3E 7F 44 3E 52 7F 42 4D 3E 46 01 15 7F 23  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1044: "Toggle key item{n}{choice} Darill's Token{n}{choice} Concord Sigil{n}{choice} More..." |
+| Q712_QA_DLG | 3F1E03–3F1E3E | FF:1E03–FF:1E3E | 60 | `FF fill (expansion)` | `33 48 40 40 45 3E 7F 44 3E 52 7F 42 4D 3E 46 01 15 7F 22  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1045: 'Toggle key item{n}{choice} Cinder Sigil{n}{choice} Triune Sigil{n}{choice} Broken Seal' |
+| Q712_QA_DLG | 3F1E3F–3F1E73 | FF:1E3F–FF:1E73 | 53 | `FF fill (expansion)` | `26 48 4D 7F 4D 41 3E 7F 59 7F 44 3E 52 7F 42 4D 3E 46 4C  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1046: 'Got the 5 key items.{n}Open the menu: Item, then Rare.' |
+| Q712_QA_DLG | 3F1E74–3F1E8C | FF:1E74–FF:1E8C | 25 | `FF fill (expansion)` | `31 3E 46 48 4F 3E 3D 7F 4D 41 3E 7F 59 7F 44 3E 52 7F 42  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1047: 'Removed the 5 key items.' |
+| Q712_QA_DLG | 3F1E8D–3F1EAF | FF:1E8D–FF:1EAF | 35 | `FF fill (expansion)` | `2A 3E 52 7F 42 4D 3E 46 7F 40 42 4F 3E 47 7F 6B 42 4D 7F  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1048: 'Key item given (it was{n}not owned).' |
+| Q712_QA_DLG | 3F1EB0–3F1ED0 | FF:1EB0–FF:1ED0 | 33 | `FF fill (expansion)` | `2A 3E 52 7F 42 4D 3E 46 7F 4B 3E 46 48 4F 3E 3D 7F 6B 42  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1049: 'Key item removed (it was{n}owned).' |
+| Q712_QA_DLG | 3F1ED1–3F1EF5 | FF:1ED1–FF:1EF5 | 37 | `FF fill (expansion)` | `27 20 32 7F 31 20 31 24 7F 6B 33 4B 42 4E 47 3E 7F 32 42  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $104A: 'HAS RARE (Triune Sigil) = 1{n}(owned).' |
+| Q712_QA_DLG | 3F1EF6–3F1F1E | FF:1EF6–FF:1F1E | 41 | `FF fill (expansion)` | `27 20 32 7F 31 20 31 24 7F 6B 33 4B 42 4E 47 3E 7F 32 42  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $104B: 'HAS RARE (Triune Sigil) = 0{n}(not owned).' |
+| Q712_QA_DLG | 3F1F1F–3F1F70 | FF:1F1F–FF:1F70 | 82 | `FF fill (expansion)` | `31 3A 4B 3E 7F 45 42 4C 4D 7F 3F 42 45 45 3E 3D 61 7F 56  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $104C: 'Rare list filled: 20 vanilla{n}+ 5 key items + 27 QA fillers{n}= 52 entries, 3 pages.' |
+| Q712_QA_DLG | 3F1F71–3F1FB6 | FF:1F71–FF:1FB6 | 70 | `FF fill (expansion)` | `30 20 7F 3F 42 45 45 3E 4B 4C 7F 3A 47 3D 7F 4F 3A 47 42  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $104D: 'QA fillers and vanilla rare{n}items removed (the 5 key{n}items are kept).' |
+| Q712_QA_DLG | 3F1FB7–3F1FF5 | FF:1FB7–FF:1FF5 | 63 | `FF fill (expansion)` | `32 4D 4B 3E 4C 4C 7F 60 7F 4C 3A 4F 3E 7F 6B 4F 54 65 5D  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $104E: 'Stress / save (v0.9){n}{choice} Grant everything{n}{choice} Save Point{n}{choice} More...' |
+| Q712_QA_DLG | 3F1FF6–3F2039 | FF:1FF6–FF:2039 | 68 | `FF fill (expansion)` | `32 4D 4B 3E 4C 4C 7F 60 7F 4C 3A 4F 3E 7F 6B 4F 54 65 5D  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $104F: 'Stress / save (v0.9){n}{choice} Battle (guards){n}{choice} Colosseum{n}{choice} Migration info' |
+| Q712_QA_DLG | 3F203A–3F2080 | FF:203A–FF:2080 | 71 | `FF fill (expansion)` | `26 48 4D 7F 57 5D 7F 3E 4A 4E 42 49 46 3E 47 4D 66 7F 55  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1050: 'Got 39 equipment, 10 of each{n}consumable, the 5 key items{n}and 20000 GP.' |
+| Q712_QA_DLG | 3F2081–3F20D9 | FF:2081–FF:20D9 | 89 | `FF fill (expansion)` | `32 3A 4F 3E 4C 7F 3F 4B 48 46 7F 31 3E 4F 7F 55 66 7F 4F  …` | field text renderer via $C9/$CB set by P100 hook — QA dialogue $1051: 'Saves from Rev 1, v0.7.x and{n}v0.8 load in v0.9: items and{n}equipment are kept (no reset).' |
+| Q712_QA_DLG | 330048–330147 | F3:0048–F3:0147 | 256 | `FF fill (expansion)` | `00 10 FF 00 5E 10 FF 00 AE 10 FF 00 02 11 FF 00 4D 11 FF  …` | P100 hook — pointer slots for QA IDs $1012+ |
+| P100_DLG_HOOK | 301000–301032 | F0:1000–F0:1032 | 51 | `FF fill (expansion)` | `C2 20 A5 D0 C9 00 10 B0 0A E2 20 A9 CD 85 CB 5C C3 7F C0  …` | JML from C0:7FBF (GetDlgPtr) — Dialogue-pointer hook: vanilla IDs unchanged, IDs $1000+ from expansion table |
+| P100_DLG_HOOK | 007FBF–007FC2 | C0:7FBF–C0:7FC2 | 4 | `A9 CD 85 CB` | `5C 00 10 F0` | GetDlgPtr C0:7FBF; callers C0:A49A ($48), C0:A4E1 ($4B), C0:D493 (debug) — Replace LDA #$CD / STA $CB with JML $F01000 (displaced code re-executed in hook) |
+| T400_ANNEX_EVENTS | 310000–31007E | F1:0000–F1:007E | 127 | `FF fill (expansion)` | `4B 01 10 B6 0A 00 27 1B 00 27 DC F8 C0 4C 81 14 00 27 DC  …` | event interpreter via 24-bit trigger pointers, NPC vectors, call/jump operands — celes_annex_tech event scripts (127 bytes) from events/celes_annex_tech/events.evt |
+| T410_MAPTECH_EVENTS | 311000–31102F | F1:1000–F1:102F | 48 | `FF fill (expansion)` | `C0 4D 81 0A 10 27 4B 0B 10 FE 4B 0C 10 FE 4B 0D 10 FE 4B  …` | event interpreter via 24-bit trigger pointers, NPC vectors, call/jump operands — map_tech_v04 event scripts (48 bytes) from events/map_tech_v04/events.evt |
+| Q710_QA_EVENT | 3F0000–3F0827 | FF:0000–FF:0827 | 2088 | `2088 B` | `2088 B sha1 74a83e04073a` | event interpreter via 24-bit trigger pointers, NPC vectors, call/jump operands — qa_access_v09 event scripts (2088 bytes) from events/qa_access_v09/events.evt |
+| T402_ANNEX_LAYOUT | 350000–350481 | F5:0000–F5:0481 | 1154 | `1154 B` | `1154 B sha1 dc1ba3890db6` | LoadMapTiles via MAPX_SUBTILEMAP_PTRS[$15F] — map 0C7 BG1 layout $15F (32x32, literal LZSS 1154 B) |
+| T412_MAPTECH_LAYOUTS | 350482–350903 | F5:0482–F5:0903 | 1154 | `1154 B` | `1154 B sha1 ebd100605c73` | LoadMapTiles via MAPX_SUBTILEMAP_PTRS[$160] — map 1A0 BG1 layout $160 (32x32, literal LZSS 1154 B) |
+| T412_MAPTECH_LAYOUTS | 350904–350D85 | F5:0904–F5:0D85 | 1154 | `1154 B` | `1154 B sha1 de70fe141835` | LoadMapTiles via MAPX_SUBTILEMAP_PTRS[$161] — map 1A1 BG1 layout $161 (32x32, literal LZSS 1154 B) |
+| T412_MAPTECH_LAYOUTS | 350D86–351207 | F5:0D86–F5:1207 | 1154 | `1154 B` | `1154 B sha1 248349637caa` | LoadMapTiles via MAPX_SUBTILEMAP_PTRS[$162] — map 1A1 BG2 layout $162 (32x32, literal LZSS 1154 B) |
+| M101_MAPX_EVENT_TRIGGERS | 360000–361AD1 | F6:0000–F6:1AD1 | 6866 | `6866 B` | `6866 B sha1 d23de2ea4699` | 12 retargeted consumers — EVENT_TRIGGERS: 1164 vanilla records (maps $000-$19F) + 4 content records; 513 pointers |
+| M102_MAPX_NPC_PROPS | 364000–369150 | F6:4000–F6:9150 | 20817 | `20817 B` | `20817 B sha1 c40f6922b011` | 21 retargeted consumers — NPC_PROPS: 2193 vanilla records (maps $000-$19F) + 6 content records; 513 pointers |
+| M103_MAPX_SHORT_ENTRANCES | 36C000–36DE89 | F6:C000–F6:DE89 | 7818 | `7818 B` | `7818 B sha1 7c6819967930` | 19 retargeted consumers — SHORT_ENTRANCES: 1129 vanilla records (maps $000-$1FF) + 3 content records; 513 pointers |
+| M104_MAPX_LONG_ENTRANCES | 370000–370837 | F7:0000–F7:0837 | 2104 | `2104 B` | `2104 B sha1 dda83ce1ad57` | 19 retargeted consumers — LONG_ENTRANCES: 152 vanilla records (maps $000-$1FF) + 2 content records; 513 pointers |
+| M105_MAPX_TREASURE | 372000–372997 | F7:2000–F7:2997 | 2456 | `2456 B` | `2456 B sha1 5067daac4c8a` | 12 retargeted consumers — TREASURE: 286 vanilla records (maps $000-$19E) + 0 content records; 513 pointers |
+| M106_MAPX_MAP_PROPS | 374000–3781FF | F7:4000–F7:81FF | 16896 | `16896 B` | `16896 B sha1 33c1d3f9667d` | LoadMapProp C0:1CAD (LDA.l MapProp,X; X = map*33) — 512 x 33-byte rows: vanilla $000-$19E copied; content rows ['0C7', '1A0', '1A1'] |
+| M107_MAPX_SUBTILEMAP_PTRS | 378400–378FFF | F7:8400–F7:8FFF | 3072 | `3072 B` | `3072 B sha1 607f38167544` | LoadMapTiles C0:2883 (BG1/BG2/BG3, 10-bit index * 3) — 1024 layout pointers: vanilla $000-$15E copied, unassigned = entry $000 value; content ['15F', '160', '161', '162'] |
+| M108_NPC_EVENT_VECTORS | 379000–379011 | F7:9000–F7:9011 | 18 | `FF fill (expansion)` | `1C 00 F1 69 00 F1 00 10 F1 0E 10 F1 12 10 F1 1E 10 F1` | M300 router (LDA.l vectors,X) — NPC event vectors: #0=F1:001C (0C7:VALE_PLACEHOLDER->EvVale), #1=F1:0069 (0C7:REWARD_CHEST->EvChest), #2=F1:1000 (1A0:TECH_A1->EvA1), #3=F1:100E (1A0:TECH_A3->EvA3), #4=F1:1012 (1A0:TECH_A2->EvA2), #5=F1:101E (1A1:TECH_B1->EvB1) |
+| M200_RETARGET_EVENT_TRIGGERS | 00BCAF–00BCB1 | C0:BCAF–C0:BCB1 | 3 | `02 00 C4` | `02 00 F6` | C0:BCAE opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0002 -> F6:0002 (ptr base + 2) |
+| M200_RETARGET_EVENT_TRIGGERS | 00BCB5–00BCB7 | C0:BCB5–C0:BCB7 | 3 | `00 00 C4` | `00 00 F6` | C0:BCB4 opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0000 -> F6:0000 (ptr base + 0) |
+| M200_RETARGET_EVENT_TRIGGERS | 00BCBE–00BCC0 | C0:BCBE–C0:BCC0 | 3 | `00 00 C4` | `00 00 F6` | C0:BCBD opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0000 -> F6:0000 (ptr base + 0) |
+| M200_RETARGET_EVENT_TRIGGERS | 00BCD4–00BCD6 | C0:BCD4–C0:BCD6 | 3 | `02 00 C4` | `02 00 F6` | C0:BCD3 opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0002 -> F6:0002 (ptr base + 2) |
+| M200_RETARGET_EVENT_TRIGGERS | 00BCEE–00BCF0 | C0:BCEE–C0:BCF0 | 3 | `04 00 C4` | `04 00 F6` | C0:BCED opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0004 -> F6:0004 (ptr base + 4) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E2177–2E2179 | EE:2177–EE:2179 | 3 | `00 00 C4` | `00 00 F6` | EE:2176 opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0000 -> F6:0000 (ptr base + 0) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E217D–2E217F | EE:217D–EE:217F | 3 | `02 00 C4` | `02 00 F6` | EE:217C opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0002 -> F6:0002 (ptr base + 2) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E218C–2E218E | EE:218C–EE:218E | 3 | `00 00 C4` | `00 00 F6` | EE:218B opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0000 -> F6:0000 (ptr base + 0) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E2194–2E2196 | EE:2194–EE:2196 | 3 | `01 00 C4` | `01 00 F6` | EE:2193 opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0001 -> F6:0001 (ptr base + 1) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E219C–2E219E | EE:219C–EE:219E | 3 | `02 00 C4` | `02 00 F6` | EE:219B opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0002 -> F6:0002 (ptr base + 2) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E21A5–2E21A7 | EE:21A5–EE:21A7 | 3 | `03 00 C4` | `03 00 F6` | EE:21A4 opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0003 -> F6:0003 (ptr base + 3) |
+| M200_RETARGET_EVENT_TRIGGERS | 2E21AD–2E21AF | EE:21AD–EE:21AF | 3 | `04 00 C4` | `04 00 F6` | EE:21AC opcode BF (long,X) reads EVENT_TRIGGERS — operand C4:0004 -> F6:0004 (ptr base + 4) |
+| M200_RETARGET_NPC_PROPS | 0052BD–0052BF | C0:52BD–C0:52BF | 3 | `12 1A C4` | `02 40 F6` | C0:52BC opcode BF (long,X) reads NPC_PROPS — operand C4:1A12 -> F6:4002 (ptr base + 2) |
+| M200_RETARGET_NPC_PROPS | 0052C3–0052C5 | C0:52C3–C0:52C5 | 3 | `10 1A C4` | `00 40 F6` | C0:52C2 opcode BF (long,X) reads NPC_PROPS — operand C4:1A10 -> F6:4000 (ptr base + 0) |
+| M200_RETARGET_NPC_PROPS | 0052D5–0052D7 | C0:52D5–C0:52D7 | 3 | `10 1A C4` | `00 40 F6` | C0:52D4 opcode BF (long,X) reads NPC_PROPS — operand C4:1A10 -> F6:4000 (ptr base + 0) |
+| M200_RETARGET_NPC_PROPS | 0052DC–0052DE | C0:52DC–C0:52DE | 3 | `11 1A C4` | `01 40 F6` | C0:52DB opcode BF (long,X) reads NPC_PROPS — operand C4:1A11 -> F6:4001 (ptr base + 1) |
+| M200_RETARGET_NPC_PROPS | 0052E3–0052E5 | C0:52E3–C0:52E5 | 3 | `12 1A C4` | `02 40 F6` | C0:52E2 opcode BF (long,X) reads NPC_PROPS — operand C4:1A12 -> F6:4002 (ptr base + 2) |
+| M200_RETARGET_NPC_PROPS | 0052EC–0052EE | C0:52EC–C0:52EE | 3 | `12 1A C4` | `02 40 F6` | C0:52EB opcode BF (long,X) reads NPC_PROPS — operand C4:1A12 -> F6:4002 (ptr base + 2) |
+| M200_RETARGET_NPC_PROPS | 0052F9–0052FB | C0:52F9–C0:52FB | 3 | `12 1A C4` | `02 40 F6` | C0:52F8 opcode BF (long,X) reads NPC_PROPS — operand C4:1A12 -> F6:4002 (ptr base + 2) |
+| M200_RETARGET_NPC_PROPS | 005306–005308 | C0:5306–C0:5308 | 3 | `12 1A C4` | `02 40 F6` | C0:5305 opcode BF (long,X) reads NPC_PROPS — operand C4:1A12 -> F6:4002 (ptr base + 2) |
+| M200_RETARGET_NPC_PROPS | 005322–005324 | C0:5322–C0:5324 | 3 | `14 1A C4` | `04 40 F6` | C0:5321 opcode BF (long,X) reads NPC_PROPS — operand C4:1A14 -> F6:4004 (ptr base + 4) |
+| M200_RETARGET_NPC_PROPS | 00532D–00532F | C0:532D–C0:532F | 3 | `14 1A C4` | `04 40 F6` | C0:532C opcode BF (long,X) reads NPC_PROPS — operand C4:1A14 -> F6:4004 (ptr base + 4) |
+| M200_RETARGET_NPC_PROPS | 00533B–00533D | C0:533B–C0:533D | 3 | `15 1A C4` | `05 40 F6` | C0:533A opcode BF (long,X) reads NPC_PROPS — operand C4:1A15 -> F6:4005 (ptr base + 5) |
+| M200_RETARGET_NPC_PROPS | 00535B–00535D | C0:535B–C0:535D | 3 | `15 1A C4` | `05 40 F6` | C0:535A opcode BF (long,X) reads NPC_PROPS — operand C4:1A15 -> F6:4005 (ptr base + 5) |
+| M200_RETARGET_NPC_PROPS | 00536A–00536C | C0:536A–C0:536C | 3 | `16 1A C4` | `06 40 F6` | C0:5369 opcode BF (long,X) reads NPC_PROPS — operand C4:1A16 -> F6:4006 (ptr base + 6) |
+| M200_RETARGET_NPC_PROPS | 005374–005376 | C0:5374–C0:5376 | 3 | `17 1A C4` | `07 40 F6` | C0:5373 opcode BF (long,X) reads NPC_PROPS — operand C4:1A17 -> F6:4007 (ptr base + 7) |
+| M200_RETARGET_NPC_PROPS | 005380–005382 | C0:5380–C0:5382 | 3 | `17 1A C4` | `07 40 F6` | C0:537F opcode BF (long,X) reads NPC_PROPS — operand C4:1A17 -> F6:4007 (ptr base + 7) |
+| M200_RETARGET_NPC_PROPS | 00538B–00538D | C0:538B–C0:538D | 3 | `17 1A C4` | `07 40 F6` | C0:538A opcode BF (long,X) reads NPC_PROPS — operand C4:1A17 -> F6:4007 (ptr base + 7) |
+| M200_RETARGET_NPC_PROPS | 005398–00539A | C0:5398–C0:539A | 3 | `18 1A C4` | `08 40 F6` | C0:5397 opcode BF (long,X) reads NPC_PROPS — operand C4:1A18 -> F6:4008 (ptr base + 8) |
+| M200_RETARGET_NPC_PROPS | 0053AE–0053B0 | C0:53AE–C0:53B0 | 3 | `18 1A C4` | `08 40 F6` | C0:53AD opcode BF (long,X) reads NPC_PROPS — operand C4:1A18 -> F6:4008 (ptr base + 8) |
+| M200_RETARGET_NPC_PROPS | 0053BD–0053BF | C0:53BD–C0:53BF | 3 | `18 1A C4` | `08 40 F6` | C0:53BC opcode BF (long,X) reads NPC_PROPS — operand C4:1A18 -> F6:4008 (ptr base + 8) |
+| M200_RETARGET_NPC_PROPS | 0053D1–0053D3 | C0:53D1–C0:53D3 | 3 | `18 1A C4` | `08 40 F6` | C0:53D0 opcode BF (long,X) reads NPC_PROPS — operand C4:1A18 -> F6:4008 (ptr base + 8) |
+| M200_RETARGET_NPC_PROPS | 0053E4–0053E6 | C0:53E4–C0:53E6 | 3 | `18 1A C4` | `08 40 F6` | C0:53E3 opcode BF (long,X) reads NPC_PROPS — operand C4:1A18 -> F6:4008 (ptr base + 8) |
+| M200_RETARGET_SHORT_ENTRANCES | 001A7E–001A80 | C0:1A7E–C0:1A80 | 3 | `02 BB DF` | `02 C0 F6` | C0:1A7D opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 001A84–001A86 | C0:1A84–C0:1A86 | 3 | `00 BB DF` | `00 C0 F6` | C0:1A83 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB00 -> F6:C000 (ptr base + 0) |
+| M200_RETARGET_SHORT_ENTRANCES | 001A90–001A92 | C0:1A90–C0:1A92 | 3 | `00 BB DF` | `00 C0 F6` | C0:1A8F opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB00 -> F6:C000 (ptr base + 0) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AAB–001AAD | C0:1AAB–C0:1AAD | 3 | `02 BB DF` | `02 C0 F6` | C0:1AAA opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AB7–001AB9 | C0:1AB7–C0:1AB9 | 3 | `02 BB DF` | `02 C0 F6` | C0:1AB6 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AC3–001AC5 | C0:1AC3–C0:1AC5 | 3 | `02 BB DF` | `02 C0 F6` | C0:1AC2 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AD2–001AD4 | C0:1AD2–C0:1AD4 | 3 | `04 BB DF` | `04 C0 F6` | C0:1AD1 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB04 -> F6:C004 (ptr base + 4) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AE7–001AE9 | C0:1AE7–C0:1AE9 | 3 | `04 BB DF` | `04 C0 F6` | C0:1AE6 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB04 -> F6:C004 (ptr base + 4) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AF1–001AF3 | C0:1AF1–C0:1AF3 | 3 | `03 BB DF` | `03 C0 F6` | C0:1AF0 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB03 -> F6:C003 (ptr base + 3) |
+| M200_RETARGET_SHORT_ENTRANCES | 001AFE–001B00 | C0:1AFE–C0:1B00 | 3 | `03 BB DF` | `03 C0 F6` | C0:1AFD opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB03 -> F6:C003 (ptr base + 3) |
+| M200_RETARGET_SHORT_ENTRANCES | 001B0C–001B0E | C0:1B0C–C0:1B0E | 3 | `03 BB DF` | `03 C0 F6` | C0:1B0B opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB03 -> F6:C003 (ptr base + 3) |
+| M200_RETARGET_SHORT_ENTRANCES | 001B2D–001B2F | C0:1B2D–C0:1B2F | 3 | `02 BB DF` | `02 C0 F6` | C0:1B2C opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 001B5F–001B61 | C0:1B5F–C0:1B61 | 3 | `03 BB DF` | `03 C0 F6` | C0:1B5E opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB03 -> F6:C003 (ptr base + 3) |
+| M200_RETARGET_SHORT_ENTRANCES | 2E20EA–2E20EC | EE:20EA–EE:20EC | 3 | `00 BB DF` | `00 C0 F6` | EE:20E9 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB00 -> F6:C000 (ptr base + 0) |
+| M200_RETARGET_SHORT_ENTRANCES | 2E20F0–2E20F2 | EE:20F0–EE:20F2 | 3 | `02 BB DF` | `02 C0 F6` | EE:20EF opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 2E20FF–2E2101 | EE:20FF–EE:2101 | 3 | `00 BB DF` | `00 C0 F6` | EE:20FE opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB00 -> F6:C000 (ptr base + 0) |
+| M200_RETARGET_SHORT_ENTRANCES | 2E2107–2E2109 | EE:2107–EE:2109 | 3 | `01 BB DF` | `01 C0 F6` | EE:2106 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB01 -> F6:C001 (ptr base + 1) |
+| M200_RETARGET_SHORT_ENTRANCES | 2E2111–2E2113 | EE:2111–EE:2113 | 3 | `02 BB DF` | `02 C0 F6` | EE:2110 opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB02 -> F6:C002 (ptr base + 2) |
+| M200_RETARGET_SHORT_ENTRANCES | 2E213D–2E213F | EE:213D–EE:213F | 3 | `04 BB DF` | `04 C0 F6` | EE:213C opcode BF (long,X) reads SHORT_ENTRANCES — operand DF:BB04 -> F6:C004 (ptr base + 4) |
+| M200_RETARGET_LONG_ENTRANCES | 0018EB–0018ED | C0:18EB–C0:18ED | 3 | `82 F4 ED` | `02 00 F7` | C0:18EA opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F482 -> F7:0002 (ptr base + 2) |
+| M200_RETARGET_LONG_ENTRANCES | 0018F1–0018F3 | C0:18F1–C0:18F3 | 3 | `80 F4 ED` | `00 00 F7` | C0:18F0 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F480 -> F7:0000 (ptr base + 0) |
+| M200_RETARGET_LONG_ENTRANCES | 001904–001906 | C0:1904–C0:1906 | 3 | `82 F4 ED` | `02 00 F7` | C0:1903 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F482 -> F7:0002 (ptr base + 2) |
+| M200_RETARGET_LONG_ENTRANCES | 00190C–00190E | C0:190C–C0:190E | 3 | `81 F4 ED` | `01 00 F7` | C0:190B opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F481 -> F7:0001 (ptr base + 1) |
+| M200_RETARGET_LONG_ENTRANCES | 001917–001919 | C0:1917–C0:1919 | 3 | `80 F4 ED` | `00 00 F7` | C0:1916 opcode FF (long,X) reads LONG_ENTRANCES — operand ED:F480 -> F7:0000 (ptr base + 0) |
+| M200_RETARGET_LONG_ENTRANCES | 00191F–001921 | C0:191F–C0:1921 | 3 | `80 F4 ED` | `00 00 F7` | C0:191E opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F480 -> F7:0000 (ptr base + 0) |
+| M200_RETARGET_LONG_ENTRANCES | 001930–001932 | C0:1930–C0:1932 | 3 | `80 F4 ED` | `00 00 F7` | C0:192F opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F480 -> F7:0000 (ptr base + 0) |
+| M200_RETARGET_LONG_ENTRANCES | 00193B–00193D | C0:193B–C0:193D | 3 | `81 F4 ED` | `01 00 F7` | C0:193A opcode FF (long,X) reads LONG_ENTRANCES — operand ED:F481 -> F7:0001 (ptr base + 1) |
+| M200_RETARGET_LONG_ENTRANCES | 001943–001945 | C0:1943–C0:1945 | 3 | `81 F4 ED` | `01 00 F7` | C0:1942 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F481 -> F7:0001 (ptr base + 1) |
+| M200_RETARGET_LONG_ENTRANCES | 001964–001966 | C0:1964–C0:1966 | 3 | `83 F4 ED` | `03 00 F7` | C0:1963 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F483 -> F7:0003 (ptr base + 3) |
+| M200_RETARGET_LONG_ENTRANCES | 001970–001972 | C0:1970–C0:1972 | 3 | `83 F4 ED` | `03 00 F7` | C0:196F opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F483 -> F7:0003 (ptr base + 3) |
+| M200_RETARGET_LONG_ENTRANCES | 00197C–00197E | C0:197C–C0:197E | 3 | `83 F4 ED` | `03 00 F7` | C0:197B opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F483 -> F7:0003 (ptr base + 3) |
+| M200_RETARGET_LONG_ENTRANCES | 00198B–00198D | C0:198B–C0:198D | 3 | `85 F4 ED` | `05 00 F7` | C0:198A opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F485 -> F7:0005 (ptr base + 5) |
+| M200_RETARGET_LONG_ENTRANCES | 0019A0–0019A2 | C0:19A0–C0:19A2 | 3 | `85 F4 ED` | `05 00 F7` | C0:199F opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F485 -> F7:0005 (ptr base + 5) |
+| M200_RETARGET_LONG_ENTRANCES | 0019AA–0019AC | C0:19AA–C0:19AC | 3 | `84 F4 ED` | `04 00 F7` | C0:19A9 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F484 -> F7:0004 (ptr base + 4) |
+| M200_RETARGET_LONG_ENTRANCES | 0019B7–0019B9 | C0:19B7–C0:19B9 | 3 | `84 F4 ED` | `04 00 F7` | C0:19B6 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F484 -> F7:0004 (ptr base + 4) |
+| M200_RETARGET_LONG_ENTRANCES | 0019C5–0019C7 | C0:19C5–C0:19C7 | 3 | `84 F4 ED` | `04 00 F7` | C0:19C4 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F484 -> F7:0004 (ptr base + 4) |
+| M200_RETARGET_LONG_ENTRANCES | 0019E6–0019E8 | C0:19E6–C0:19E8 | 3 | `83 F4 ED` | `03 00 F7` | C0:19E5 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F483 -> F7:0003 (ptr base + 3) |
+| M200_RETARGET_LONG_ENTRANCES | 001A15–001A17 | C0:1A15–C0:1A17 | 3 | `84 F4 ED` | `04 00 F7` | C0:1A14 opcode BF (long,X) reads LONG_ENTRANCES — operand ED:F484 -> F7:0004 (ptr base + 4) |
+| M200_RETARGET_TREASURE | 0015DE–0015E0 | C0:15DE–C0:15E0 | 3 | `F6 82 ED` | `02 20 F7` | C0:15DD opcode BF (long,X) reads TREASURE — operand ED:82F6 -> F7:2002 (ptr base + 2) |
+| M200_RETARGET_TREASURE | 0015E4–0015E6 | C0:15E4–C0:15E6 | 3 | `F4 82 ED` | `00 20 F7` | C0:15E3 opcode BF (long,X) reads TREASURE — operand ED:82F4 -> F7:2000 (ptr base + 0) |
+| M200_RETARGET_TREASURE | 0015F2–0015F4 | C0:15F2–C0:15F4 | 3 | `34 86 ED` | `02 24 F7` | C0:15F1 opcode BF (long,X) reads TREASURE — operand ED:8634 -> F7:2402 (data base + 0) |
+| M200_RETARGET_TREASURE | 0015F8–0015FA | C0:15F8–C0:15FA | 3 | `35 86 ED` | `03 24 F7` | C0:15F7 opcode BF (long,X) reads TREASURE — operand ED:8635 -> F7:2403 (data base + 1) |
+| M200_RETARGET_TREASURE | 0015FF–001601 | C0:15FF–C0:1601 | 3 | `36 86 ED` | `04 24 F7` | C0:15FE opcode BF (long,X) reads TREASURE — operand ED:8636 -> F7:2404 (data base + 2) |
+| M200_RETARGET_TREASURE | 00160A–00160C | C0:160A–C0:160C | 3 | `36 86 ED` | `04 24 F7` | C0:1609 opcode BF (long,X) reads TREASURE — operand ED:8636 -> F7:2404 (data base + 2) |
+| M200_RETARGET_TREASURE | 004BDB–004BDD | C0:4BDB–C0:4BDD | 3 | `F6 82 ED` | `02 20 F7` | C0:4BDA opcode BF (long,X) reads TREASURE — operand ED:82F6 -> F7:2002 (ptr base + 2) |
+| M200_RETARGET_TREASURE | 004BE1–004BE3 | C0:4BE1–C0:4BE3 | 3 | `F4 82 ED` | `00 20 F7` | C0:4BE0 opcode BF (long,X) reads TREASURE — operand ED:82F4 -> F7:2000 (ptr base + 0) |
+| M200_RETARGET_TREASURE | 004BED–004BEF | C0:4BED–C0:4BEF | 3 | `34 86 ED` | `02 24 F7` | C0:4BEC opcode BF (long,X) reads TREASURE — operand ED:8634 -> F7:2402 (data base + 0) |
+| M200_RETARGET_TREASURE | 004BF5–004BF7 | C0:4BF5–C0:4BF7 | 3 | `35 86 ED` | `03 24 F7` | C0:4BF4 opcode BF (long,X) reads TREASURE — operand ED:8635 -> F7:2403 (data base + 1) |
+| M200_RETARGET_TREASURE | 004C09–004C0B | C0:4C09–C0:4C0B | 3 | `38 86 ED` | `06 24 F7` | C0:4C08 opcode BF (long,X) reads TREASURE — operand ED:8638 -> F7:2406 (data base + 4) |
+| M200_RETARGET_TREASURE | 004C0F–004C11 | C0:4C0F–C0:4C11 | 3 | `36 86 ED` | `04 24 F7` | C0:4C0E opcode BF (long,X) reads TREASURE — operand ED:8636 -> F7:2404 (data base + 2) |
+| M200_RETARGET_MAP_PROPS | 001CC0–001CC2 | C0:1CC0–C0:1CC2 | 3 | `00 8F ED` | `00 40 F7` | C0:1CBF opcode BF (long,X) reads MAP_PROPS — operand ED:8F00 -> F7:4000 (data base + 0) |
+| M200_RETARGET_SUBTILEMAP_PTRS | 002893–002895 | C0:2893–C0:2895 | 3 | `90 CD D9` | `00 84 F7` | C0:2892 opcode BF (long,X) reads SUBTILEMAP_PTRS — operand D9:CD90 -> F7:8400 (ptr base + 0) |
+| M200_RETARGET_SUBTILEMAP_PTRS | 0028A0–0028A2 | C0:28A0–C0:28A2 | 3 | `92 CD D9` | `02 84 F7` | C0:289F opcode BF (long,X) reads SUBTILEMAP_PTRS — operand D9:CD92 -> F7:8402 (ptr base + 2) |
+| M200_RETARGET_SUBTILEMAP_PTRS | 0028E7–0028E9 | C0:28E7–C0:28E9 | 3 | `90 CD D9` | `00 84 F7` | C0:28E6 opcode BF (long,X) reads SUBTILEMAP_PTRS — operand D9:CD90 -> F7:8400 (ptr base + 0) |
+| M200_RETARGET_SUBTILEMAP_PTRS | 0028F4–0028F6 | C0:28F4–C0:28F6 | 3 | `92 CD D9` | `02 84 F7` | C0:28F3 opcode BF (long,X) reads SUBTILEMAP_PTRS — operand D9:CD92 -> F7:8402 (ptr base + 2) |
+| M200_RETARGET_SUBTILEMAP_PTRS | 00293D–00293F | C0:293D–C0:293F | 3 | `90 CD D9` | `00 84 F7` | C0:293C opcode BF (long,X) reads SUBTILEMAP_PTRS — operand D9:CD90 -> F7:8400 (ptr base + 0) |
+| M200_RETARGET_SUBTILEMAP_PTRS | 00294A–00294C | C0:294A–C0:294C | 3 | `92 CD D9` | `02 84 F7` | C0:2949 opcode BF (long,X) reads SUBTILEMAP_PTRS — operand D9:CD92 -> F7:8402 (ptr base + 2) |
+| M300_NPC_EVENT_ROUTER | 301100–301146 | F0:1100–F0:1146 | 71 | `FF fill (expansion)` | `29 03 C9 03 D0 3D BF 04 40 F6 30 35 C2 20 B9 89 08 C9 06  …` | JSL from C0:52E6 (InitNPCs) — NPC event router: vanilla NPCs unchanged; non-special NPCs with event field $3xxxx -> vector table |
+| M300_NPC_EVENT_ROUTER | 0052E6–0052EA | C0:52E6–C0:52EA | 5 | `29 03 99 8B 08` | `22 00 11 F0 EA` | InitNPCs C0:52E6 (after LDA NPCProp::EventPtr+2,X) — AND #$03 / STA $088B,Y -> JSL F0:1100 / NOP (router re-executes both for vanilla NPCs) |
+| Q713_QA_ANNEX_BATTLE_GROUP | 310057–310059 | F1:0057–F1:0059 | 3 | `4D 28 3F` | `4D 01 3F` | event cmd $4D in EvBattleDoor_Fight — QA: Annex battle group $28 -> $01 (as v0.3.1/v0.4 harness) |
+| N101_MONSTER_PROP | 380000–383FFF | F8:0000–F8:3FFF | 16384 | `16384 B` | `16384 B sha1 255981a503e5` | 25 retargeted consumers — MONSTER_PROP relocated (16384 bytes); vanilla entries byte-identical; content: ['180', '181', '182', '183'] |
+| N102_MONSTER_NAME | 384000–3853FF | F8:4000–F8:53FF | 5120 | `5120 B` | `5120 B sha1 68aca3e49dbf` | 6 retargeted consumers — MONSTER_NAME relocated (5120 bytes); vanilla entries byte-identical; content: ['180', '181', '182', '183'] |
+| N103_MONSTER_SPECIAL_NAME | 385400–3867FF | F8:5400–F8:67FF | 5120 | `5120 B` | `5120 B sha1 2c867445fda0` | 2 retargeted consumers — MONSTER_SPECIAL_NAME relocated (5120 bytes); vanilla entries byte-identical; content: ['180', '181', '182', '183'] |
+| N104_MONSTER_ITEMS | 386800–386FFF | F8:6800–F8:6FFF | 2048 | `2048 B` | `2048 B sha1 3cb358353363` | 2 retargeted consumers — MONSTER_ITEMS relocated (2048 bytes); vanilla entries byte-identical; content: ['180', '181', '182', '183'] |
+| N105_MONSTER_CONTROL | 387000–3877FF | F8:7000–F8:77FF | 2048 | `2048 B` | `2048 B sha1 8c577664ec73` | 3 retargeted consumers — MONSTER_CONTROL relocated (2048 bytes); vanilla entries byte-identical; content: ['180', '181', '182', '183'] |
+| N106_MONSTER_SKETCH | 387800–387BFF | F8:7800–F8:7BFF | 1024 | `1024 B` | `1024 B sha1 dc32b9127fb3` | 1 retargeted consumers — MONSTER_SKETCH relocated (1024 bytes); vanilla entries byte-identical; content: ['180', '181', '182', '183'] |
+| N107_MONSTER_SPECIAL_ANIM | 387C00–387DFF | F8:7C00–F8:7DFF | 512 | `FF fill (expansion)` | `03 03 0D 18 07 0E 1B 21 0C 10 0B 0C 0C 00 1C 0E 12 0B 15  …` | 2 retargeted consumers — MONSTER_SPECIAL_ANIM relocated (512 bytes); vanilla entries byte-identical; content: ['180', '181', '182', '183'] |
+| N108_MONSTER_OVERLAP | 387E00–387FFF | F8:7E00–F8:7FFF | 512 | `FF fill (expansion)` | `00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  …` | 1 retargeted consumers — MONSTER_OVERLAP relocated (512 bytes); vanilla entries byte-identical; content: ['180', '181', '182', '183'] |
+| N109_MONSTER_GFX_PROP | 388000–388A9A | F8:8000–F8:8A9A | 2715 | `2715 B` | `2715 B sha1 0a2259cbe81a` | 15 retargeted consumers — MONSTER_GFX_PROP relocated (2715 bytes); vanilla entries byte-identical; content: ['180', '181', '182', '183'] |
+| N112_AI_SCRIPT_PTRS | 390000–3903FF | F9:0000–F9:03FF | 1024 | `1024 B` | `1024 B sha1 e25a8c3a8c6d` | 1 retargeted consumers — AI_SCRIPT_PTRS relocated (1024 bytes); vanilla entries byte-identical; content: ['180', '181', '182', '183'] |
+| N113_AI_SCRIPT | 390400–393D69 | F9:0400–F9:3D69 | 14698 | `14698 B` | `14698 B sha1 2a82ed70c901` | 4 retargeted consumers — AI_SCRIPT relocated (14698 bytes); vanilla entries byte-identical; content: ['180', '181', '182', '183'] |
+| N110_FORMATION_PROP | 389000–389FFF | F8:9000–F8:9FFF | 4096 | `4096 B` | `4096 B sha1 4eac84bc4c16` | 2 retargeted consumers — FORMATION_PROP relocated (4096 bytes); vanilla entries byte-identical; content: ['180', '181', '182', '183'] |
+| N111_FORMATION_MONSTERS | 38A000–38DC0F | F8:A000–F8:DC0F | 15376 | `15376 B` | `15376 B sha1 fde5c1837f15` | 7 retargeted consumers — FORMATION_MONSTERS relocated (15376 bytes); vanilla entries byte-identical; content: ['180', '181', '182', '183'] |
+| N200_RETARGET_MONSTER_PROP | 020626–020628 | C2:0626–C2:0628 | 3 | `1A 00 CF` | `1A 00 F8` | C2:0625 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 26 |
+| N200_RETARGET_MONSTER_PROP | 022CA4–022CA6 | C2:2CA4–C2:2CA6 | 3 | `05 00 CF` | `05 00 F8` | C2:2CA3 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 5 |
+| N200_RETARGET_MONSTER_PROP | 022CAB–022CAD | C2:2CAB–C2:2CAD | 3 | `0C 00 CF` | `0C 00 F8` | C2:2CAA opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 12 |
+| N200_RETARGET_MONSTER_PROP | 022CB2–022CB4 | C2:2CB2–C2:2CB4 | 3 | `0E 00 CF` | `0E 00 F8` | C2:2CB1 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 14 |
+| N200_RETARGET_MONSTER_PROP | 022CBE–022CC0 | C2:2CBE–C2:2CC0 | 3 | `0A 00 CF` | `0A 00 F8` | C2:2CBD opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 10 |
+| N200_RETARGET_MONSTER_PROP | 022CC8–022CCA | C2:2CC8–C2:2CCA | 3 | `08 00 CF` | `08 00 F8` | C2:2CC7 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 8 |
+| N200_RETARGET_MONSTER_PROP | 022CF6–022CF8 | C2:2CF6–C2:2CF8 | 3 | `01 00 CF` | `01 00 F8` | C2:2CF5 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 1 |
+| N200_RETARGET_MONSTER_PROP | 022CFD–022CFF | C2:2CFD–C2:2CFF | 3 | `1A 00 CF` | `1A 00 F8` | C2:2CFC opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 26 |
+| N200_RETARGET_MONSTER_PROP | 022D04–022D06 | C2:2D04–C2:2D06 | 3 | `03 00 CF` | `03 00 F8` | C2:2D03 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 3 |
+| N200_RETARGET_MONSTER_PROP | 022D0E–022D10 | C2:2D0E–C2:2D10 | 3 | `04 00 CF` | `04 00 F8` | C2:2D0D opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 4 |
+| N200_RETARGET_MONSTER_PROP | 022D18–022D1A | C2:2D18–C2:2D1A | 3 | `02 00 CF` | `02 00 F8` | C2:2D17 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 2 |
+| N200_RETARGET_MONSTER_PROP | 022D1F–022D21 | C2:2D1F–C2:2D21 | 3 | `10 00 CF` | `10 00 F8` | C2:2D1E opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 16 |
+| N200_RETARGET_MONSTER_PROP | 022D26–022D28 | C2:2D26–C2:2D28 | 3 | `00 00 CF` | `00 00 F8` | C2:2D25 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 0 |
+| N200_RETARGET_MONSTER_PROP | 022D2D–022D2F | C2:2D2D–C2:2D2F | 3 | `07 00 CF` | `07 00 F8` | C2:2D2C opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 7 |
+| N200_RETARGET_MONSTER_PROP | 022D37–022D39 | C2:2D37–C2:2D39 | 3 | `1E 00 CF` | `1E 00 F8` | C2:2D36 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 30 |
+| N200_RETARGET_MONSTER_PROP | 022D43–022D45 | C2:2D43–C2:2D45 | 3 | `13 00 CF` | `13 00 F8` | C2:2D42 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 19 |
+| N200_RETARGET_MONSTER_PROP | 022DC3–022DC5 | C2:2DC3–C2:2DC5 | 3 | `1F 00 CF` | `1F 00 F8` | C2:2DC2 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 31 |
+| N200_RETARGET_MONSTER_PROP | 022DCA–022DCC | C2:2DCA–C2:2DCC | 3 | `19 00 CF` | `19 00 F8` | C2:2DC9 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 25 |
+| N200_RETARGET_MONSTER_PROP | 022DD4–022DD6 | C2:2DD4–C2:2DD6 | 3 | `16 00 CF` | `16 00 F8` | C2:2DD3 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 22 |
+| N200_RETARGET_MONSTER_PROP | 022DEA–022DEC | C2:2DEA–C2:2DEC | 3 | `1B 00 CF` | `1B 00 F8` | C2:2DE9 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 27 |
+| N200_RETARGET_MONSTER_PROP | 022DF1–022DF3 | C2:2DF1–C2:2DF3 | 3 | `1D 00 CF` | `1D 00 F8` | C2:2DF0 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 29 |
+| N200_RETARGET_MONSTER_PROP | 022E11–022E13 | C2:2E11–C2:2E13 | 3 | `1C 00 CF` | `1C 00 F8` | C2:2E10 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 28 |
+| N200_RETARGET_MONSTER_PROP | 022E1B–022E1D | C2:2E1B–C2:2E1D | 3 | `14 00 CF` | `14 00 F8` | C2:2E1A opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 20 |
+| N200_RETARGET_MONSTER_PROP | 022E28–022E2A | C2:2E28–C2:2E2A | 3 | `17 00 CF` | `17 00 F8` | C2:2E27 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 23 |
+| N200_RETARGET_MONSTER_PROP | 022E32–022E34 | C2:2E32–C2:2E34 | 3 | `11 00 CF` | `11 00 F8` | C2:2E31 opcode BF (long) reads MONSTER_PROP — long operand -> F8:0000 + 17 |
+| N200_RETARGET_MONSTER_NAME | 016641–016643 | C1:6641–C1:6643 | 3 | `50 C0 CF` | `00 40 F8` | C1:6640 opcode BF (long) reads MONSTER_NAME — long operand -> F8:4000 + 0 |
+| N200_RETARGET_MONSTER_NAME | 0169C7–0169C9 | C1:69C7–C1:69C9 | 3 | `50 C0 CF` | `00 40 F8` | C1:69C6 opcode BF (long) reads MONSTER_NAME — long operand -> F8:4000 + 0 |
+| N200_RETARGET_MONSTER_NAME | 022C57–022C59 | C2:2C57–C2:2C59 | 3 | `50 C0 CF` | `00 40 F8` | C2:2C56 opcode BF (long) reads MONSTER_NAME — long operand -> F8:4000 + 0 |
+| N200_RETARGET_MONSTER_NAME | 022C79–022C7B | C2:2C79–C2:2C7B | 3 | `50 C0 CF` | `00 40 F8` | C2:2C78 opcode DF (long) reads MONSTER_NAME — long operand -> F8:4000 + 0 |
+| N200_RETARGET_MONSTER_NAME | 03540F–035410 | C3:540F–C3:5410 | 2 | `50 C0` | `00 40` | C3:540E opcode A0 (imm_near) reads MONSTER_NAME — imm_near operand -> F8:4000 + 0 |
+| N200_RETARGET_MONSTER_NAME | 035414–035414 | C3:5414–C3:5414 | 1 | `CF` | `F8` | C3:5413 opcode A9 (imm_bank) reads MONSTER_NAME — imm_bank operand -> F8:4000 + 0 |
+| N200_RETARGET_MONSTER_SPECIAL_NAME | 019739–019739 | C1:9739–C1:9739 | 1 | `CF` | `F8` | C1:9738 opcode A9 (imm_bank) reads MONSTER_SPECIAL_NAME — imm_bank operand -> F8:5400 + 0 |
+| N200_RETARGET_MONSTER_SPECIAL_NAME | 01974D–01974E | C1:974D–C1:974E | 2 | `D0 D0` | `00 54` | C1:974C opcode 69 (imm_near) reads MONSTER_SPECIAL_NAME — imm_near operand -> F8:5400 + 0 |
+| N200_RETARGET_MONSTER_ITEMS | 022C42–022C44 | C2:2C42–C2:2C44 | 3 | `00 30 CF` | `00 68 F8` | C2:2C41 opcode BF (long) reads MONSTER_ITEMS — long operand -> F8:6800 + 0 |
+| N200_RETARGET_MONSTER_ITEMS | 025F2E–025F30 | C2:5F2E–C2:5F30 | 3 | `02 30 CF` | `02 68 F8` | C2:5F2D opcode BF (long) reads MONSTER_ITEMS — long operand -> F8:6800 + 2 |
+| N200_RETARGET_MONSTER_CONTROL | 02063E–020640 | C2:063E–C2:0640 | 3 | `00 3D CF` | `00 70 F8` | C2:063D opcode BF (long) reads MONSTER_CONTROL — long operand -> F8:7000 + 0 |
+| N200_RETARGET_MONSTER_CONTROL | 020644–020646 | C2:0644–C2:0646 | 3 | `02 3D CF` | `02 70 F8` | C2:0643 opcode BF (long) reads MONSTER_CONTROL — long operand -> F8:7000 + 2 |
+| N200_RETARGET_MONSTER_CONTROL | 023759–02375B | C2:3759–C2:375B | 3 | `00 3D CF` | `00 70 F8` | C2:3758 opcode BF (long) reads MONSTER_CONTROL — long operand -> F8:7000 + 0 |
+| N200_RETARGET_MONSTER_SKETCH | 023B5B–023B5D | C2:3B5B–C2:3B5D | 3 | `00 43 CF` | `00 78 F8` | C2:3B5A opcode BF (long) reads MONSTER_SKETCH — long operand -> F8:7800 + 0 |
+| N200_RETARGET_MONSTER_SPECIAL_ANIM | 020617–020619 | C2:0617–C2:0619 | 3 | `C0 37 CF` | `00 7C F8` | C2:0616 opcode BF (long) reads MONSTER_SPECIAL_ANIM — long operand -> F8:7C00 + 0 |
+| N200_RETARGET_MONSTER_SPECIAL_ANIM | 022D50–022D52 | C2:2D50–C2:2D52 | 3 | `C0 37 CF` | `00 7C F8` | C2:2D4F opcode BF (long) reads MONSTER_SPECIAL_ANIM — long operand -> F8:7C00 + 0 |
+| N200_RETARGET_MONSTER_OVERLAP | 012145–012147 | C1:2145–C1:2147 | 3 | `00 36 CF` | `00 7E F8` | C1:2144 opcode BF (long) reads MONSTER_OVERLAP — long operand -> F8:7E00 + 0 |
+| N200_RETARGET_MONSTER_GFX_PROP | 012063–012065 | C1:2063–C1:2065 | 3 | `02 70 D2` | `02 80 F8` | C1:2062 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 2 |
+| N200_RETARGET_MONSTER_GFX_PROP | 012081–012083 | C1:2081–C1:2083 | 3 | `00 70 D2` | `00 80 F8` | C1:2080 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 0 |
+| N200_RETARGET_MONSTER_GFX_PROP | 01208E–012090 | C1:208E–C1:2090 | 3 | `01 70 D2` | `01 80 F8` | C1:208D opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 1 |
+| N200_RETARGET_MONSTER_GFX_PROP | 012097–012099 | C1:2097–C1:2099 | 3 | `02 70 D2` | `02 80 F8` | C1:2096 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 2 |
+| N200_RETARGET_MONSTER_GFX_PROP | 0120AC–0120AE | C1:20AC–C1:20AE | 3 | `04 70 D2` | `04 80 F8` | C1:20AB opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 4 |
+| N200_RETARGET_MONSTER_GFX_PROP | 0124FD–0124FF | C1:24FD–C1:24FF | 3 | `02 70 D2` | `02 80 F8` | C1:24FC opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 2 |
+| N200_RETARGET_MONSTER_GFX_PROP | 01250C–01250E | C1:250C–C1:250E | 3 | `00 70 D2` | `00 80 F8` | C1:250B opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 0 |
+| N200_RETARGET_MONSTER_GFX_PROP | 012519–01251B | C1:2519–C1:251B | 3 | `01 70 D2` | `01 80 F8` | C1:2518 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 1 |
+| N200_RETARGET_MONSTER_GFX_PROP | 012522–012524 | C1:2522–C1:2524 | 3 | `02 70 D2` | `02 80 F8` | C1:2521 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 2 |
+| N200_RETARGET_MONSTER_GFX_PROP | 012537–012539 | C1:2537–C1:2539 | 3 | `04 70 D2` | `04 80 F8` | C1:2536 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 4 |
+| N200_RETARGET_MONSTER_GFX_PROP | 03AF60–03AF62 | C3:AF60–C3:AF62 | 3 | `00 70 D2` | `00 80 F8` | C3:AF5F opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 0 |
+| N200_RETARGET_MONSTER_GFX_PROP | 03AF66–03AF68 | C3:AF66–C3:AF68 | 3 | `01 70 D2` | `01 80 F8` | C3:AF65 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 1 |
+| N200_RETARGET_MONSTER_GFX_PROP | 03AF6C–03AF6E | C3:AF6C–C3:AF6E | 3 | `02 70 D2` | `02 80 F8` | C3:AF6B opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 2 |
+| N200_RETARGET_MONSTER_GFX_PROP | 03AF72–03AF74 | C3:AF72–C3:AF74 | 3 | `03 70 D2` | `03 80 F8` | C3:AF71 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 3 |
+| N200_RETARGET_MONSTER_GFX_PROP | 03AF78–03AF7A | C3:AF78–C3:AF7A | 3 | `04 70 D2` | `04 80 F8` | C3:AF77 opcode BF (long) reads MONSTER_GFX_PROP — long operand -> F8:8000 + 4 |
+| N200_RETARGET_AI_SCRIPT_PTRS | 022D79–022D7B | C2:2D79–C2:2D7B | 3 | `00 84 CF` | `00 00 F9` | C2:2D78 opcode BF (long) reads AI_SCRIPT_PTRS — long operand -> F9:0000 + 0 |
+| N200_RETARGET_AI_SCRIPT | 021A45–021A47 | C2:1A45–C2:1A47 | 3 | `00 87 CF` | `00 04 F9` | C2:1A44 opcode BF (long) reads AI_SCRIPT — long operand -> F9:0400 + 0 |
+| N200_RETARGET_AI_SCRIPT | 021A65–021A67 | C2:1A65–C2:1A67 | 3 | `02 87 CF` | `02 04 F9` | C2:1A64 opcode BF (long) reads AI_SCRIPT — long operand -> F9:0400 + 2 |
+| N200_RETARGET_AI_SCRIPT | 021A6C–021A6E | C2:1A6C–C2:1A6E | 3 | `00 87 CF` | `00 04 F9` | C2:1A6B opcode BF (long) reads AI_SCRIPT — long operand -> F9:0400 + 0 |
+| N200_RETARGET_AI_SCRIPT | 022D89–022D8B | C2:2D89–C2:2D8B | 3 | `00 87 CF` | `00 04 F9` | C2:2D88 opcode BF (long) reads AI_SCRIPT — long operand -> F9:0400 + 0 |
+| N200_RETARGET_FORMATION_PROP | 023137–023139 | C2:3137–C2:3139 | 3 | `02 59 CF` | `02 90 F8` | C2:3136 opcode BF (long) reads FORMATION_PROP — long operand -> F8:9000 + 2 |
+| N200_RETARGET_FORMATION_PROP | 02313E–023140 | C2:313E–C2:3140 | 3 | `00 59 CF` | `00 90 F8` | C2:313D opcode BF (long) reads FORMATION_PROP — long operand -> F8:9000 + 0 |
+| N200_RETARGET_FORMATION_MONSTERS | 010E9A–010E9C | C1:0E9A–C1:0E9C | 3 | `0E 62 CF` | `0E A0 F8` | C1:0E99 opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 14 |
+| N200_RETARGET_FORMATION_MONSTERS | 010EA2–010EA4 | C1:0EA2–C1:0EA4 | 3 | `00 62 CF` | `00 A0 F8` | C1:0EA1 opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 0 |
+| N200_RETARGET_FORMATION_MONSTERS | 010EB5–010EB7 | C1:0EB5–C1:0EB7 | 3 | `00 62 CF` | `00 A0 F8` | C1:0EB4 opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 0 |
+| N200_RETARGET_FORMATION_MONSTERS | 010EC0–010EC2 | C1:0EC0–C1:0EC2 | 3 | `01 62 CF` | `01 A0 F8` | C1:0EBF opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 1 |
+| N200_RETARGET_FORMATION_MONSTERS | 010ED2–010ED4 | C1:0ED2–C1:0ED4 | 3 | `08 62 CF` | `08 A0 F8` | C1:0ED1 opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 8 |
+| N200_RETARGET_FORMATION_MONSTERS | 010EE0–010EE2 | C1:0EE0–C1:0EE2 | 3 | `08 62 CF` | `08 A0 F8` | C1:0EDF opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 8 |
+| N200_RETARGET_FORMATION_MONSTERS | 023156–023158 | C2:3156–C2:3158 | 3 | `00 62 CF` | `00 A0 F8` | C2:3155 opcode BF (long) reads FORMATION_MONSTERS — long operand -> F8:A000 + 0 |
+| N300_GFX_SLOT_ROUTERS | 301200–301230 | F0:1200–F0:1230 | 49 | `FF fill (expansion)` | `BD 01 20 C9 80 01 90 03 69 1F 00 48 0A 0A 18 63 01 FA 6B  …` | JSL from C1:2058 (battle monster loader), C2:F5F1 (Sketch), C2:2F75 (colosseum detection) — graphics-property slot remap (monsters $180-$1FE -> slots $1A0-$21E) + colosseum range check |
+| N301_GFX_SLOT_HOOK_BATTLE | 012058–012060 | C1:2058–C1:2060 | 9 | `BD 01 20 0A 0A 18 7D 01 20` | `22 00 12 F0 EA EA EA EA EA` | LoadMonsterGfxProp (C1:204E) monster id*5 computation — LDA $2001,X/ASL/ASL/CLC/ADC $2001,X -> JSL MonsterGfxSlot5 + 5x NOP |
+| N302_GFX_SLOT_HOOK_SKETCH | 02F5F1–02F5F4 | C2:F5F1–C2:F5F4 | 4 | `BD 01 20 AA` | `22 13 12 F0` | battle animation init $0B (Sketch): monster id -> LoadSketchMonsterGfx — LDA $2001,X/TAX -> JSL MonsterGfxSlotSketch |
+| N303_FORMATION_COLOSSEUM_RANGE | 022F75–022F7A | C2:2F75–C2:2F7A | 6 | `AE D4 3E E0 3E 02` | `22 20 12 F0 EA EA` | InitParty C2:2F75 colosseum detection (battle id >= $23E) — LDX wBattleID/CPX #$023E -> JSL ColosseumRangeCheck + 2x NOP; colosseum iff $23E <= id < $240 so new formations $240-$3FF load normally |
+| Q601_QA_EVENT_BATTLE_GROUP_FE | 0F53F8–0F53FB | CF:53F8–CF:53FB | 4 | `00 00 00 00` | `40 02 40 02` | event cmd $4D (EventBattle C0:A5A7) group $FE — QA: group $FE -> formation $240 (custom assets, MP 0) |
+| Q601_QA_EVENT_BATTLE_GROUP_FD | 0F53F4–0F53F7 | CF:53F4–CF:53F7 | 4 | `00 00 00 00` | `41 02 41 02` | event cmd $4D (EventBattle C0:A5A7) group $FD — QA: group $FD -> formation $241 (custom assets, MP 3) |
+| Q601_QA_EVENT_BATTLE_GROUP_FC | 0F53F0–0F53F3 | CF:53F0–CF:53F3 | 4 | `00 00 00 00` | `42 02 42 02` | event cmd $4D (EventBattle C0:A5A7) group $FC — QA: group $FC -> formation $242 (vanilla Dark Wind + exact clone + Vulture-palette variant, Magitek-safe VRAM map 8) |
+| Q601_QA_EVENT_BATTLE_GROUP_FB | 0F53EC–0F53EF | CF:53EC–CF:53EF | 4 | `00 00 00 00` | `43 02 43 02` | event cmd $4D (EventBattle C0:A5A7) group $FB — QA: group $FB -> formation $243 (reference: 3 vanilla Dark Winds, same layout) |
+| E101_MONSTER_PAL | 3B0000–3B3FFF | FB:0000–FB:3FFF | 16384 | `16384 B` | `16384 B sha1 f70462ec833d` | 6 retargeted consumers — MonsterPal relocated: units $000-$2FF vanilla, 4 new units from $300 |
+| E101_MONSTER_PAL | 3BFFF0–3BFFFF | FB:FFF0–FB:FFFF | 16 | `FF fill (expansion)` | `00 00 70 3C 1E 0F 06 04 06 00 0A 00 1A 00 3A 00` | LoadMonsterPal empty-slot read (index $FFFF): keeps battle palette RAM identical to vanilla — 16 vanilla bytes from D3:7810 (what vanilla reads for an empty palette slot at MonsterPal+$FFF0) |
+| E102_MONSTER_STENCIL | 3B4000–3B4E03 | FB:4000–FB:4E03 | 3588 | `3588 B` | `3588 B sha1 698d86938311` | 8 retargeted consumers (7 symbolic + colosseum literal C3:AFFD) — MonsterStencil relocated: header -> FB:4004/FB:4804; 130 small (128 vanilla) + 48 large (48 vanilla) maps |
+| E103_ENEMY_GFX_DATA | 3C0000–3C035F | FC:0000–FC:035F | 864 | `864 B` | `864 B sha1 82212e362527` | LoadMonsterGfxTile via graphics index (base FB:0000) — custom enemy tile data for ['180', '181'] |
+| E104_BATTLE_MAGIC_POINTS | 38E000–38E3FF | F8:E000–F8:E3FF | 1024 | `1024 B` | `1024 B sha1 f0664a804b09` | C2:5D9C LDA BattleMagicPoints,X (bound C2:5D97 now #$0400) — BattleMagicPoints relocated (1024): $000-$1FF vanilla, $200-$23F = 0, new: {'240': 0, '241': 3, '242': 0, '243': 0} |
+| E105_MAGIC_POINTS_BOUND | 025D98–025D99 | C2:5D98–C2:5D99 | 2 | `00 02` | `00 04` | battle win C2:5D97 CPX #$0200 / BCS (no magic points for battles >= bound) — bound $0200 -> $0400: table covers all 1024 formations; $200-$23F hold 0 = vanilla result |
+| E200_RETARGET_MONSTER_PAL | 01233E–012340 | C1:233E–C1:2340 | 3 | `20 78 D2` | `00 00 FB` | C1:233D opcode BF (long) reads MONSTER_PAL — long operand -> FB:0000 + 0 |
+| E200_RETARGET_MONSTER_PAL | 01D67A–01D67C | C1:D67A–C1:D67C | 3 | `20 78 D2` | `00 00 FB` | C1:D679 opcode BF (long) reads MONSTER_PAL — long operand -> FB:0000 + 0 |
+| E200_RETARGET_MONSTER_PAL | 02BBD5–02BBD7 | C2:BBD5–C2:BBD7 | 3 | `40 78 D2` | `20 00 FB` | C2:BBD4 opcode BF (long) reads MONSTER_PAL — long operand -> FB:0000 + 32 |
+| E200_RETARGET_MONSTER_PAL | 02FA7D–02FA7F | C2:FA7D–C2:FA7F | 3 | `20 78 D2` | `00 00 FB` | C2:FA7C opcode BF (long) reads MONSTER_PAL — long operand -> FB:0000 + 0 |
+| E200_RETARGET_MONSTER_PAL | 02FA94–02FA96 | C2:FA94–C2:FA96 | 3 | `20 78 D2` | `00 00 FB` | C2:FA93 opcode BF (long) reads MONSTER_PAL — long operand -> FB:0000 + 0 |
+| E200_RETARGET_MONSTER_PAL | 03B172–03B174 | C3:B172–C3:B174 | 3 | `20 78 D2` | `00 00 FB` | C3:B171 opcode BF (long) reads MONSTER_PAL — long operand -> FB:0000 + 0 |
+| E200_RETARGET_MONSTER_STENCIL | 01216F–012171 | C1:216F–C1:2171 | 3 | `20 A8 D2` | `00 40 FB` | C1:216E opcode 6F (long) reads MONSTER_STENCIL — long operand -> FB:4000 + 0 |
+| E200_RETARGET_MONSTER_STENCIL | 012179–01217B | C1:2179–C1:217B | 3 | `00 00 D2` | `00 00 FB` | C1:2178 opcode BF (long_bank) reads MONSTER_STENCIL — long_bank operand -> FB:4000 + 0 |
+| E200_RETARGET_MONSTER_STENCIL | 012195–012197 | C1:2195–C1:2197 | 3 | `22 A8 D2` | `02 40 FB` | C1:2194 opcode 6F (long) reads MONSTER_STENCIL — long operand -> FB:4000 + 2 |
+| E200_RETARGET_MONSTER_STENCIL | 01219F–0121A1 | C1:219F–C1:21A1 | 3 | `00 00 D2` | `00 00 FB` | C1:219E opcode BF (long_bank) reads MONSTER_STENCIL — long_bank operand -> FB:4000 + 0 |
+| E200_RETARGET_MONSTER_STENCIL | 03AFC0–03AFC1 | C3:AFC0–C3:AFC1 | 2 | `20 A8` | `00 40` | C3:AFBF opcode A0 (imm_near) reads MONSTER_STENCIL — imm_near operand -> FB:4000 + 0 |
+| E200_RETARGET_MONSTER_STENCIL | 03AFC9–03AFCA | C3:AFC9–C3:AFCA | 2 | `22 A8` | `02 40` | C3:AFC8 opcode A0 (imm_near) reads MONSTER_STENCIL — imm_near operand -> FB:4000 + 2 |
+| E200_RETARGET_MONSTER_STENCIL | 03AFD4–03AFD4 | C3:AFD4–C3:AFD4 | 1 | `D2` | `FB` | C3:AFD3 opcode A9 (imm_bank) reads MONSTER_STENCIL — imm_bank operand -> FB:4000 + 0 |
+| E200_RETARGET_MONSTER_STENCIL | 03AFFE–03AFFE | C3:AFFE–C3:AFFE | 1 | `D2` | `FB` | C3:AFFD opcode A9 (imm_bank) reads MONSTER_STENCIL [src/menu/colosseum.asm:456 'lda #$d2' (stencil data bank literal)] — imm_bank operand -> FB:4000 + 0 |
+| E200_RETARGET_BATTLE_MAGIC_POINTS | 025D9D–025D9F | C2:5D9D–C2:5D9F | 3 | `00 B4 DF` | `00 E0 F8` | C2:5D9C opcode BF (long) reads BATTLE_MAGIC_POINTS — long operand -> F8:E000 + 0 |
+| E300_ENEMY_GFX_BASE_ROUTER | 301240–301262 | F0:1240–F0:1262 | 35 | `FF fill (expansion)` | `AD AC 81 29 10 D0 14 A5 64 18 69 00 85 64 A5 65 69 70 85  …` | JSL from AddMonsterGfxOffset C1:20FF (battle loader fallthrough + summon/Sketch JMP) — graphics data base select: E9:7000 (vanilla) or FB:0000 (MonsterGfxProp byte2 bit5) |
+| E301_ENEMY_GFX_OFFSET_HOOK | 0120FF–012103 | C1:20FF–C1:2103 | 5 | `A5 64 18 69 00` | `22 40 12 F0 60` | AddMonsterGfxOffset (C1:20FF) — LDA $64/CLC/ADC #$00 -> JSL EnemyGfxBase / RTS (rest of the vanilla routine becomes unreachable, unchanged) |
+| I101_ITEM_TABLES | 3A0000–3A257F | FA:0000–FA:257F | 9600 | `9600 B` | `9600 B sha1 130b176fb694` | retargeted ItemProp/ItemName consumers and the extended item engine — XItemProp: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A2580–3A35BF | FA:2580–FA:35BF | 4160 | `4160 B` | `4160 B sha1 02d78e26759b` | retargeted ItemProp/ItemName consumers and the extended item engine — XItemName: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A35C0–3A35FF | FA:35C0–FA:35FF | 64 | `FF fill (expansion)` | `01 01 01 01 03 01 01 01 01 01 01 03 01 01 01 01 01 01 01  …` | retargeted ItemProp/ItemName consumers and the extended item engine — XExtFlags: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A3600–3A367F | FA:3600–FA:367F | 128 | `FF fill (expansion)` | `00 40 33 40 66 40 8A 40 AE 40 D0 40 FE 40 31 41 61 41 92  …` | retargeted ItemProp/ItemName consumers and the extended item engine — XDescPtr: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A3800–3A3FFF | FA:3800–FA:3FFF | 2048 | `2048 B` | `2048 B sha1 1f8d27e32037` | retargeted ItemProp/ItemName consumers and the extended item engine — XWeaponAnimFull: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A3700–3A37FF | FA:3700–FA:37FF | 256 | `FF fill (expansion)` | `00 21 21 21 21 21 21 21 10 10 21 10 10 21 10 10 10 10 10  …` | retargeted ItemProp/ItemName consumers and the extended item engine — XJumpAnim: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A4000–3A4840 | FA:4000–FA:4840 | 2113 | `2113 B` | `2113 B sha1 4df3b79963f3` | retargeted ItemProp/ItemName consumers and the extended item engine — XDescText: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5000–3A507F | FA:5000–FA:507F | 128 | `FF fill (expansion)` | `00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  …` | retargeted ItemProp/ItemName consumers and the extended item engine — XItemAnimX: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5080–3A5083 | FA:5080–FA:5083 | 4 | `FF fill (expansion)` | `FF FF FF FF` | retargeted ItemProp/ItemName consumers and the extended item engine — XRareDef: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5090–3A50F7 | FA:5090–FA:50F7 | 104 | `FF fill (expansion)` | `80 5E 9E 5E C4 5E D1 5E DD 5E EB 5E F0 5E 1A 5F 4F 5F 83  …` | retargeted ItemProp/ItemName consumers and the extended item engine — XRareDescPtr: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5100–3A53A3 | FA:5100–FA:53A3 | 676 | `676 B` | `676 B sha1 2b153c932518` | retargeted ItemProp/ItemName consumers and the extended item engine — XRareName: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5400–3A590F | FA:5400–FA:590F | 1296 | `1296 B` | `1296 B sha1 8b35670e033d` | retargeted ItemProp/ItemName consumers and the extended item engine — XShopProp: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5940–3A5E4F | FA:5940–FA:5E4F | 1296 | `1296 B` | `1296 B sha1 a5a8ec4a0a87` | retargeted ItemProp/ItemName consumers and the extended item engine — XShopPropHi: extended item table (TECH v0.9 layout) |
+| I101_ITEM_TABLES | 3A5E80–3A65FF | FA:5E80–FA:65FF | 1920 | `1920 B` | `1920 B sha1 d85682e159e1` | retargeted ItemProp/ItemName consumers and the extended item engine — XRareDescText: extended item table (TECH v0.9 layout) |
+| I102_ITEM_ENGINE_CODE | 3A8000–3A8C6B | FA:8000–FA:8C6B | 3180 | `3180 B` | `3180 B sha1 e53703744306` | JSL from hook sites / bank stubs — TECH v0.9 extended item engine (65816, asm/item_v09) |
+| I103_XC0_STUBS | 00D620–00D70F | C0:D620–C0:D70F | 240 | `FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF  …` | `C2 20 A5 EB 22 18 80 FA E2 20 7B A9 03 4C 5C 9B C2 20 A5  …` | JSR from same-bank hook sites (XC0) — same-bank helper stubs in audited vanilla padding (never referenced, all $FF) |
+| I103_XC3_STUBS | 03F0A0–03F74E | C3:F0A0–C3:F74E | 1711 | `1711 B` | `1711 B sha1 7be43575cd34` | JSR from same-bank hook sites (XC3) — same-bank helper stubs in audited vanilla padding (never referenced, all $FF) |
+| I103_XC2_STUBS | 026470–02670F | C2:6470–C2:670F | 672 | `672 B` | `672 B sha1 c1f22ee6f7be` | JSR from same-bank hook sites (XC2) — same-bank helper stubs in audited vanilla padding (never referenced, all $FF) |
+| I110_RETARGET_ITEM_PROP | 020FA4–020FA6 | C2:0FA4–C2:0FA6 | 3 | `05 50 D8` | `05 00 FA` | C2:0FA3 src/battle/equip.asm:209 lda     f:ItemProp+5,x          ; field effects — long operand ITEM_PROP+5 -> FA:0000+5 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 020FAD–020FAF | C2:0FAD–C2:0FAF | 3 | `06 50 D8` | `06 00 FA` | C2:0FAC src/battle/equip.asm:212 lda     f:ItemProp+6,x          ; status 1 & 2 protection — long operand ITEM_PROP+6 -> FA:0000+6 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 020FB4–020FB6 | C2:0FB4–C2:0FB6 | 3 | `08 50 D8` | `08 00 FA` | C2:0FB3 src/battle/equip.asm:214 lda     f:ItemProp+8,x          ; status 3 set and relic eff — long operand ITEM_PROP+8 -> FA:0000+8 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 020FBB–020FBD | C2:0FBB–C2:0FBD | 3 | `0A 50 D8` | `0A 00 FA` | C2:0FBA src/battle/equip.asm:216 lda     f:ItemProp+10,x         ; relic effects — long operand ITEM_PROP+10 -> FA:0000+10 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 020FC2–020FC4 | C2:0FC2–C2:0FC4 | 3 | `0C 50 D8` | `0C 00 FA` | C2:0FC1 src/battle/equip.asm:218 lda     f:ItemProp+12,x — long operand ITEM_PROP+12 -> FA:0000+12 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 020FC9–020FCB | C2:0FC9–C2:0FCB | 3 | `10 50 D8` | `10 00 FA` | C2:0FC8 src/battle/equip.asm:220 lda     f:ItemProp+16,x         ; stat boosts — long operand ITEM_PROP+16 -> FA:0000+16 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 020FED–020FEF | C2:0FED–C2:0FEF | 3 | `1A 50 D8` | `1A 00 FA` | C2:0FEC src/battle/equip.asm:235 lda     f:ItemProp+26,x         ; evade/mblock — long operand ITEM_PROP+26 -> FA:0000+26 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021019–02101B | C2:1019–C2:101B | 3 | `14 50 D8` | `14 00 FA` | C2:1018 src/battle/equip.asm:255 lda     f:ItemProp+20,x         ; battle/defense power — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 02101E–021020 | C2:101E–C2:1020 | 3 | `02 50 D8` | `02 00 FA` | C2:101D src/battle/equip.asm:257 lda     f:ItemProp+2,x          ; imp bit — long operand ITEM_PROP+2 -> FA:0000+2 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021034–021036 | C2:1034–C2:1036 | 3 | `00 50 D8` | `00 00 FA` | C2:1033 src/battle/equip.asm:268 lda     f:ItemProp,x            ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 02103D–02103F | C2:103D–C2:103F | 3 | `19 50 D8` | `19 00 FA` | C2:103C src/battle/equip.asm:274 lda     f:ItemProp+25,x         ; status 2 set — long operand ITEM_PROP+25 -> FA:0000+25 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021044–021046 | C2:1044–C2:1046 | 3 | `0F 50 D8` | `0F 00 FA` | C2:1043 src/battle/equip.asm:276 lda     f:ItemProp+15,x         ; elements halved — long operand ITEM_PROP+15 -> FA:0000+15 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021049–02104B | C2:1049–C2:104B | 3 | `18 50 D8` | `18 00 FA` | C2:1048 src/battle/equip.asm:278 lda     f:ItemProp+24,x         ; element weak point — long operand ITEM_PROP+24 -> FA:0000+24 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021052–021054 | C2:1052–C2:1054 | 3 | `16 50 D8` | `16 00 FA` | C2:1051 src/battle/equip.asm:281 lda     f:ItemProp+22,x         ; absorbed and nullified ele — long operand ITEM_PROP+22 -> FA:0000+22 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021069–02106B | C2:1069–C2:106B | 3 | `15 50 D8` | `15 00 FA` | C2:1068 src/battle/equip.asm:291 lda     f:ItemProp+21,x         ; add item magic defense to  — long operand ITEM_PROP+21 -> FA:0000+21 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 021088–02108A | C2:1088–C2:108A | 3 | `1B 50 D8` | `1B 00 FA` | C2:1087 src/battle/equip.asm:306 lda     f:ItemProp+27,x         ; block animation — long operand ITEM_PROP+27 -> FA:0000+27 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0210D4–0210D6 | C2:10D4–C2:10D6 | 3 | `16 50 D8` | `16 00 FA` | C2:10D3 src/battle/equip.asm:360 lda     f:ItemProp+22,x         ; absorb elements (unused) — long operand ITEM_PROP+22 -> FA:0000+22 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0210DB–0210DD | C2:10DB–C2:10DD | 3 | `0F 50 D8` | `0F 00 FA` | C2:10DA src/battle/equip.asm:362 lda     f:ItemProp+15,x         ; elemental properties (left — long operand ITEM_PROP+15 -> FA:0000+15 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0210EE–0210F0 | C2:10EE–C2:10F0 | 3 | `15 50 D8` | `15 00 FA` | C2:10ED src/battle/equip.asm:369 lda     f:ItemProp+21,x         ; hit rate — long operand ITEM_PROP+21 -> FA:0000+21 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0210F5–0210F7 | C2:10F5–C2:10F7 | 3 | `12 50 D8` | `12 00 FA` | C2:10F4 src/battle/equip.asm:371 lda     f:ItemProp+18,x         ; spell cast — long operand ITEM_PROP+18 -> FA:0000+18 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0210FC–0210FE | C2:10FC–C2:10FE | 3 | `13 50 D8` | `13 00 FA` | C2:10FB src/battle/equip.asm:373 lda     f:ItemProp+19,x         ; weapon special effects — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022724–022726 | C2:2724–C2:2726 | 3 | `0E 50 D8` | `0E 00 FA` | C2:2723 src/battle/init_target.asm:91 lda     f:ItemProp+14,x   ; targetting — long operand ITEM_PROP+14 -> FA:0000+14 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 02272A–02272C | C2:272A–C2:272C | 3 | `15 50 D8` | `15 00 FA` | C2:2729 src/battle/init_target.asm:93 lda     f:ItemProp+21,x   ; — long operand ITEM_PROP+21 -> FA:0000+21 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022736–022738 | C2:2736–C2:2738 | 3 | `12 50 D8` | `12 00 FA` | C2:2735 src/battle/init_target.asm:98 @2735:  lda     f:ItemProp+18,x   ; — long operand ITEM_PROP+18 -> FA:0000+18 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022A67–022A69 | C2:2A67–C2:2A69 | 3 | `14 50 D8` | `14 00 FA` | C2:2A66 src/battle/init_attacker.asm:414 lda     f:ItemProp+20,x   ; battle/defense power — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022A6E–022A70 | C2:2A6E–C2:2A70 | 3 | `0F 50 D8` | `0F 00 FA` | C2:2A6D src/battle/init_attacker.asm:416 lda     f:ItemProp+15,x   ; item element — long operand ITEM_PROP+15 -> FA:0000+15 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022A7C–022A7E | C2:2A7C–C2:2A7E | 3 | `1B 50 D8` | `1B 00 FA` | C2:2A7B src/battle/init_attacker.asm:421 lda     f:ItemProp+27,x   ; item special effect — long operand ITEM_PROP+27 -> FA:0000+27 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022A8A–022A8C | C2:2A8A–C2:2A8C | 3 | `15 50 D8` | `15 00 FA` | C2:2A89 src/battle/init_attacker.asm:427 lda     f:ItemProp+21,x   ; status 1 and 2 — long operand ITEM_PROP+21 -> FA:0000+21 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022A91–022A93 | C2:2A91–C2:2A93 | 3 | `17 50 D8` | `17 00 FA` | C2:2A90 src/battle/init_attacker.asm:429 lda     f:ItemProp+23,x   ; status 3 and 4 — long operand ITEM_PROP+23 -> FA:0000+23 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022A9A–022A9C | C2:2A9A–C2:2A9C | 3 | `13 50 D8` | `13 00 FA` | C2:2A99 src/battle/init_attacker.asm:432 lda     f:ItemProp+19,x   ; item properties — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022AF3–022AF5 | C2:2AF3–C2:2AF5 | 3 | `00 50 D8` | `00 00 FA` | C2:2AF2 src/battle/init_attacker.asm:471 @2af2:  lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 022B03–022B05 | C2:2B03–C2:2B05 | 3 | `15 50 D8` | `15 00 FA` | C2:2B02 src/battle/init_attacker.asm:477 lda     f:ItemProp+21,x — long operand ITEM_PROP+21 -> FA:0000+21 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0254FD–0254FF | C2:54FD–C2:54FF | 3 | `0E 50 D8` | `0E 00 FA` | C2:54FC src/battle/party.asm:503 lda     f:ItemProp+14,x   ; targetting — long operand ITEM_PROP+14 -> FA:0000+14 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 025504–025506 | C2:5504–C2:5506 | 3 | `00 50 D8` | `00 00 FA` | C2:5503 src/battle/party.asm:505 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 02552D–02552F | C2:552D–C2:552F | 3 | `01 50 D8` | `01 00 FA` | C2:552C src/battle/party.asm:527 lda     f:ItemProp+1,x   ; equippable characters — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 026017–026019 | C2:6017–C2:6019 | 3 | `04 50 D8` | `04 00 FA` | C2:6016 src/battle/win.asm:360 lda     f:ItemProp+4,x   ; spell taught by item — long operand ITEM_PROP+4 -> FA:0000+4 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 02601C–02601E | C2:601C–C2:601E | 3 | `03 50 D8` | `03 00 FA` | C2:601B src/battle/win.asm:362 lda     f:ItemProp+3,x   ; spell learn rate — long operand ITEM_PROP+3 -> FA:0000+3 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038074–038076 | C3:8074–C3:8076 | 3 | `00 50 D8` | `00 00 FA` | C3:8073 src/menu/item.asm:572 lda     f:ItemProp,x   ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03807E–038080 | C3:807E–C3:8080 | 3 | `00 50 D8` | `00 00 FA` | C3:807D src/menu/item.asm:576 lda     f:ItemProp,x   ; branch if not useable on field — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0384AF–0384B1 | C3:84AF–C3:84B1 | 3 | `00 50 D8` | `00 00 FA` | C3:84AE src/menu/item.asm:1302 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0384B9–0384BB | C3:84B9–C3:84BB | 3 | `00 50 D8` | `00 00 FA` | C3:84B8 src/menu/item.asm:1306 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038524–038526 | C3:8524–C3:8526 | 3 | `01 50 D8` | `01 00 FA` | C3:8523 src/menu/item.asm:1365 lda     f:ItemProp+1,x          ; equippable characters — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0386B5–0386B7 | C3:86B5–C3:86B7 | 3 | `10 50 D8` | `10 00 FA` | C3:86B4 src/menu/item.asm:1590 lda     f:ItemProp+16,x         ; vigor/speed — long operand ITEM_PROP+16 -> FA:0000+16 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0386E4–0386E6 | C3:86E4–C3:86E6 | 3 | `11 50 D8` | `11 00 FA` | C3:86E3 src/menu/item.asm:1610 lda     f:ItemProp+17,x         ; stamina/mag.pwr — long operand ITEM_PROP+17 -> FA:0000+17 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038707–038709 | C3:8707–C3:8709 | 3 | `00 50 D8` | `00 00 FA` | C3:8706 src/menu/item.asm:1625 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038711–038713 | C3:8711–C3:8713 | 3 | `14 50 D8` | `14 00 FA` | C3:8710 src/menu/item.asm:1631 lda     f:ItemProp+20,x         ; defense power — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038721–038723 | C3:8721–C3:8723 | 3 | `15 50 D8` | `15 00 FA` | C3:8720 src/menu/item.asm:1636 lda     f:ItemProp+21,x         ; magic defense — long operand ITEM_PROP+21 -> FA:0000+21 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038761–038763 | C3:8761–C3:8763 | 3 | `13 50 D8` | `13 00 FA` | C3:8760 src/menu/item.asm:1661 lda     f:ItemProp+19,x         ; weapon properties — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038772–038774 | C3:8772–C3:8774 | 3 | `13 50 D8` | `13 00 FA` | C3:8771 src/menu/item.asm:1667 lda     f:ItemProp+19,x — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038785–038787 | C3:8785–C3:8787 | 3 | `13 50 D8` | `13 00 FA` | C3:8784 src/menu/item.asm:1674 lda     f:ItemProp+19,x — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0387B4–0387B6 | C3:87B4–C3:87B6 | 3 | `14 50 D8` | `14 00 FA` | C3:87B3 src/menu/item.asm:1708 lda     f:ItemProp+20,x         ; battle power — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0387CF–0387D1 | C3:87CF–C3:87D1 | 3 | `03 50 D8` | `03 00 FA` | C3:87CE src/menu/item.asm:1724 lda     f:ItemProp+3,x   ; spell learn rate — long operand ITEM_PROP+3 -> FA:0000+3 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0387D7–0387D9 | C3:87D7–C3:87D9 | 3 | `04 50 D8` | `04 00 FA` | C3:87D6 src/menu/item.asm:1727 lda     f:ItemProp+4,x   ; spell learned — long operand ITEM_PROP+4 -> FA:0000+4 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0387FB–0387FD | C3:87FB–C3:87FD | 3 | `1A 50 D8` | `1A 00 FA` | C3:87FA src/menu/item.asm:1751 lda     f:ItemProp+26,x         ; evade%/mblock% — long operand ITEM_PROP+26 -> FA:0000+26 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0388A5–0388A7 | C3:88A5–C3:88A7 | 3 | `0F 50 D8` | `0F 00 FA` | C3:88A4 src/menu/item.asm:1837 lda     f:ItemProp+15,x         ; element — long operand ITEM_PROP+15 -> FA:0000+15 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03895E–038960 | C3:895E–C3:8960 | 3 | `16 50 D8` | `16 00 FA` | C3:895D src/menu/item.asm:1955 lda     f:ItemProp+22,x   ; absorbed — long operand ITEM_PROP+22 -> FA:0000+22 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03896C–03896E | C3:896C–C3:896E | 3 | `17 50 D8` | `17 00 FA` | C3:896B src/menu/item.asm:1960 lda     f:ItemProp+23,x   ; no effect — long operand ITEM_PROP+23 -> FA:0000+23 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03897A–03897C | C3:897A–C3:897C | 3 | `18 50 D8` | `18 00 FA` | C3:8979 src/menu/item.asm:1965 lda     f:ItemProp+24,x   ; weak point — long operand ITEM_PROP+24 -> FA:0000+24 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038C44–038C46 | C3:8C44–C3:8C46 | 3 | `13 50 D8` | `13 00 FA` | C3:8C43 src/menu/item.asm:2417 lda     f:ItemProp+19,x         ; item properties — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038C5F–038C61 | C3:8C5F–C3:8C61 | 3 | `13 50 D8` | `13 00 FA` | C3:8C5E src/menu/item.asm:2430 lda     f:ItemProp+19,x — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038C77–038C79 | C3:8C77–C3:8C79 | 3 | `13 50 D8` | `13 00 FA` | C3:8C76 src/menu/item.asm:2442 @8c76:  lda     f:ItemProp+19,x — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038CA3–038CA5 | C3:8CA3–C3:8CA5 | 3 | `13 50 D8` | `13 00 FA` | C3:8CA2 src/menu/item.asm:2459 lda     f:ItemProp+19,x — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 038CCE–038CD0 | C3:8CCE–C3:8CD0 | 3 | `14 50 D8` | `14 00 FA` | C3:8CCD src/menu/item.asm:2483 @8ccd:  lda     f:ItemProp+20,x         ; hp/mp restored — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0397AD–0397AF | C3:97AD–C3:97AF | 3 | `00 50 D8` | `00 00 FA` | C3:97AC src/menu/equip.asm:1596 lda     f:ItemProp,x   ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0397B9–0397BB | C3:97B9–C3:97BB | 3 | `01 50 D8` | `01 00 FA` | C3:97B8 src/menu/equip.asm:1601 lda     f:ItemProp+1,x — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0397EF–0397F1 | C3:97EF–C3:97F1 | 3 | `00 50 D8` | `00 00 FA` | C3:97EE src/menu/equip.asm:1631 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0397FB–0397FD | C3:97FB–C3:97FD | 3 | `01 50 D8` | `01 00 FA` | C3:97FA src/menu/equip.asm:1636 lda     f:ItemProp+1,x — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03986E–039870 | C3:986E–C3:9870 | 3 | `13 50 D8` | `13 00 FA` | C3:986D src/menu/equip.asm:1708 lda     f:ItemProp+19,x   ; 2-handed weapon — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0399B6–0399B8 | C3:99B6–C3:99B8 | 3 | `13 50 D8` | `13 00 FA` | C3:99B5 src/menu/equip.asm:1891 lda     f:ItemProp+19,x   ; weapon effects — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 0399D4–0399D6 | C3:99D4–C3:99D6 | 3 | `13 50 D8` | `13 00 FA` | C3:99D3 src/menu/equip.asm:1905 lda     f:ItemProp+19,x — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039A1E–039A20 | C3:9A1E–C3:9A20 | 3 | `13 50 D8` | `13 00 FA` | C3:9A1D src/menu/equip.asm:1949 lda     f:ItemProp+19,x   ; weapon properties — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039A35–039A37 | C3:9A35–C3:9A37 | 3 | `13 50 D8` | `13 00 FA` | C3:9A34 src/menu/equip.asm:1959 lda     f:ItemProp+19,x   ; weapon properties — long operand ITEM_PROP+19 -> FA:0000+19 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039A67–039A69 | C3:9A67–C3:9A69 | 3 | `00 50 D8` | `00 00 FA` | C3:9A66 src/menu/equip.asm:2006 lda     f:ItemProp,x            ; $f6 = item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039A87–039A89 | C3:9A87–C3:9A89 | 3 | `00 50 D8` | `00 00 FA` | C3:9A86 src/menu/equip.asm:2022 lda     f:ItemProp,x            ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039A9A–039A9C | C3:9A9A–C3:9A9C | 3 | `00 50 D8` | `00 00 FA` | C3:9A99 src/menu/equip.asm:2031 @9a99:  lda     f:ItemProp,x            ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039AB3–039AB5 | C3:9AB3–C3:9AB5 | 3 | `00 50 D8` | `00 00 FA` | C3:9AB2 src/menu/equip.asm:2044 lda     f:ItemProp,x            ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039AC6–039AC8 | C3:9AC6–C3:9AC8 | 3 | `00 50 D8` | `00 00 FA` | C3:9AC5 src/menu/equip.asm:2053 @9ac5:  lda     f:ItemProp,x            ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039B84–039B86 | C3:9B84–C3:9B86 | 3 | `00 50 D8` | `00 00 FA` | C3:9B83 src/menu/equip.asm:2163 lda     f:ItemProp,x   ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039B94–039B96 | C3:9B94–C3:9B96 | 3 | `01 50 D8` | `01 00 FA` | C3:9B93 src/menu/equip.asm:2170 lda     f:ItemProp+1,x   ; equippable characters — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039BC4–039BC6 | C3:9BC4–C3:9BC6 | 3 | `00 50 D8` | `00 00 FA` | C3:9BC3 src/menu/equip.asm:2194 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039BD0–039BD2 | C3:9BD0–C3:9BD2 | 3 | `01 50 D8` | `01 00 FA` | C3:9BCF src/menu/equip.asm:2199 lda     f:ItemProp+1,x — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039C00–039C02 | C3:9C00–C3:9C02 | 3 | `00 50 D8` | `00 00 FA` | C3:9BFF src/menu/equip.asm:2223 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 039C0C–039C0E | C3:9C0C–C3:9C0E | 3 | `01 50 D8` | `01 00 FA` | C3:9C0B src/menu/equip.asm:2228 lda     f:ItemProp+1,x — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03A06D–03A06F | C3:A06D–C3:A06F | 3 | `00 50 D8` | `00 00 FA` | C3:A06C src/menu/equip.asm:2975 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03A079–03A07B | C3:A079–C3:A07B | 3 | `01 50 D8` | `01 00 FA` | C3:A078 src/menu/equip.asm:2980 lda     f:ItemProp+1,x — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03A177–03A179 | C3:A177–C3:A179 | 3 | `14 50 D8` | `14 00 FA` | C3:A176 src/menu/equip.asm:3111 lda     f:ItemProp+20,x   ; attack/defense power — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03B7F0–03B7F2 | C3:B7F0–C3:B7F2 | 3 | `00 50 D8` | `00 00 FA` | C3:B7EF src/menu/shop.asm:546 lda     f:ItemProp,x   ; item type — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BA17–03BA19 | C3:BA17–C3:BA19 | 3 | `00 50 D8` | `00 00 FA` | C3:BA16 src/menu/shop.asm:890 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BAFF–03BB01 | C3:BAFF–C3:BB01 | 3 | `00 50 D8` | `00 00 FA` | C3:BAFE src/menu/shop.asm:1093 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BB12–03BB14 | C3:BB12–C3:BB14 | 3 | `14 50 D8` | `14 00 FA` | C3:BB11 src/menu/shop.asm:1103 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BB34–03BB36 | C3:BB34–C3:BB36 | 3 | `14 50 D8` | `14 00 FA` | C3:BB33 src/menu/shop.asm:1116 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BB76–03BB78 | C3:BB76–C3:BB78 | 3 | `00 50 D8` | `00 00 FA` | C3:BB75 src/menu/shop.asm:1157 lda     f:ItemProp,x            ; item price / 2 — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BCEE–03BCF0 | C3:BCEE–C3:BCF0 | 3 | `01 50 D8` | `01 00 FA` | C3:BCED src/menu/shop.asm:1426 lda     f:ItemProp+1,x   ; equippable characters — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BD1A–03BD1C | C3:BD1A–C3:BD1C | 3 | `14 50 D8` | `14 00 FA` | C3:BD19 src/menu/shop.asm:1453 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BD20–03BD22 | C3:BD20–C3:BD22 | 3 | `00 50 D8` | `00 00 FA` | C3:BD1F src/menu/shop.asm:1455 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BD6D–03BD6F | C3:BD6D–C3:BD6F | 3 | `14 50 D8` | `14 00 FA` | C3:BD6C src/menu/shop.asm:1489 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BDD7–03BDD9 | C3:BDD7–C3:BDD9 | 3 | `00 50 D8` | `00 00 FA` | C3:BDD6 src/menu/shop.asm:1539 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BDEF–03BDF1 | C3:BDEF–C3:BDF1 | 3 | `00 50 D8` | `00 00 FA` | C3:BDEE src/menu/shop.asm:1549 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BE0D–03BE0F | C3:BE0D–C3:BE0F | 3 | `14 50 D8` | `14 00 FA` | C3:BE0C src/menu/shop.asm:1562 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BE63–03BE65 | C3:BE63–C3:BE65 | 3 | `00 50 D8` | `00 00 FA` | C3:BE62 src/menu/shop.asm:1600 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BE77–03BE79 | C3:BE77–C3:BE79 | 3 | `00 50 D8` | `00 00 FA` | C3:BE76 src/menu/shop.asm:1608 lda     f:ItemProp,x — long operand ITEM_PROP+0 -> FA:0000+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BE95–03BE97 | C3:BE95–C3:BE97 | 3 | `14 50 D8` | `14 00 FA` | C3:BE94 src/menu/shop.asm:1621 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03BEE5–03BEE7 | C3:BEE5–C3:BEE7 | 3 | `14 50 D8` | `14 00 FA` | C3:BEE4 src/menu/shop.asm:1657 lda     f:ItemProp+20,x — long operand ITEM_PROP+20 -> FA:0000+20 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_PROP | 03C1BD–03C1BF | C3:C1BD–C3:C1BF | 3 | `01 50 D8` | `01 00 FA` | C3:C1BC src/menu/shop.asm:2080 lda     f:ItemProp+1,x — long operand ITEM_PROP+1 -> FA:0000+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 008130–008132 | C0:8130–C0:8132 | 3 | `01 B3 D2` | `81 25 FA` | C0:812F src/field/text.asm:302 lda     f:ItemName+1,x          ; item name — long operand ITEM_NAME+1 -> FA:2580+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 0083EF–0083F1 | C0:83EF–C0:83F1 | 3 | `01 B3 D2` | `81 25 FA` | C0:83EE src/field/text.asm:750 _83ee:  lda     f:ItemName+1,x          ; ignore symbol — long operand ITEM_NAME+1 -> FA:2580+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 016067–016069 | C1:6067–C1:6069 | 3 | `01 B3 D2` | `81 25 FA` | C1:6066 src/btlgfx/menu.asm:5734 @6069:  lda     f:ItemName+1,x   ; item name — long operand ITEM_NAME+1 -> FA:2580+1 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 01652E–016530 | C1:652E–C1:6530 | 3 | `00 B3 D2` | `80 25 FA` | C1:652D src/btlgfx/menu.asm:6513 lda     f:ItemName,x   ; item name — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 016576–016578 | C1:6576–C1:6578 | 3 | `00 B3 D2` | `80 25 FA` | C1:6575 src/btlgfx/menu.asm:6568 @6578:  lda     f:ItemName,x   ; item name — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 016A56–016A58 | C1:6A56–C1:6A58 | 3 | `00 B3 D2` | `80 25 FA` | C1:6A55 src/btlgfx/menu.asm:7573 lda     f:ItemName,x   ; item name (first character) — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 016AA0–016AA2 | C1:6AA0–C1:6AA2 | 3 | `00 B3 D2` | `80 25 FA` | C1:6A9F src/btlgfx/menu.asm:7613 @6aa2:  lda     f:ItemName,x — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 032720–032722 | C3:2720–C3:2722 | 3 | `00 B3 D2` | `80 25 FA` | C3:271F src/menu/field_menu.asm:2256 lda     f:ItemName,x — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 0380E3–0380E5 | C3:80E3–C3:80E5 | 3 | `00 B3 D2` | `80 25 FA` | C3:80E2 src/menu/item.asm:643 @80e2:  lda     f:ItemName,x            ; item name — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 039011–039013 | C3:9011–C3:9013 | 3 | `00 B3 D2` | `80 25 FA` | C3:9010 src/menu/equip.asm:441 @9010:  lda     f:ItemName,x — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 039D41–039D43 | C3:9D41–C3:9D43 | 3 | `00 B3 D2` | `80 25 FA` | C3:9D40 src/menu/equip.asm:2422 @9d40:  lda     f:ItemName,x — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_ITEM_NAME | 03C08C–03C08E | C3:C08C–C3:C08E | 3 | `00 B3 D2` | `80 25 FA` | C3:C08B src/menu/shop.asm:1900 @c08b:  lda     f:ItemName,x — long operand ITEM_NAME+0 -> FA:2580+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_WEAPON_ANIM | 019DB6–019DB8 | C1:9DB6–C1:9DB8 | 3 | `00 E4 EC` | `00 38 FA` | C1:9DB5 src/btlgfx/gfx_cmd.asm:1879 @9db8:  lda     f:WeaponAnimProp,x — long operand WEAPON_ANIM+0 -> FA:3800+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I110_RETARGET_JUMP_ANIM | 01BA4D–01BA4F | C1:BA4D–C1:BA4F | 3 | `40 00 D1` | `00 37 FA` | C1:BA4C src/btlgfx/anim_cmd.asm:521 lda     f:ItemJumpThrowAnim,x — long operand JUMP_ANIM+0 -> FA:3700+0 (table relocated to 320 entries for 16-bit extended ids) |
+| I201_EVCMD_66 | 009926–009927 | C0:9926–C0:9927 | 2 | `1A B9` | `20 D6` | EventCmdTbl entry $66 (vanilla EventCmd_66 = RTS lock-up; unused by Rev 1 scripts) — GIVE_EXT_ITEM id16 (3 bytes) |
+| I202_EVCMD_67 | 009928–009929 | C0:9928–C0:9929 | 2 | `1A B9` | `30 D6` | EventCmdTbl entry $67 (vanilla unused) — TAKE_EXT_ITEM id16 (3 bytes) |
+| I203_EVCMD_68 | 00992A–00992B | C0:992A–C0:992B | 2 | `1A B9` | `40 D6` | EventCmdTbl entry $68 (vanilla unused) — HAS_EXT_ITEM id16, switch16 (5 bytes) |
+| I210_GIVEITEM_FIND | 00ACFE–00AD00 | C0:ACFE–C0:AD00 | 3 | `BD 69 18` | `20 65 D6` | GiveItem C0:ACFC (event $80, treasure chests) find-same-item loop — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I211_GIVEITEM_PUT | 00AD19–00AD1B | C0:AD19–C0:AD1B | 3 | `9D 69 18` | `20 71 D6` | GiveItem first-empty-slot store — vanilla id stored -> slot high bit cleared |
+| I212_TAKEITEM_FIND | 00AD2F–00AD31 | C0:AD2F–C0:AD31 | 3 | `BD 69 18` | `20 65 D6` | EventCmd_81 take-item search — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I213_EVCMD8D_SLOT | 009FE7–009FE9 | C0:9FE7–C0:9FE9 | 3 | `BD 1F 16` | `20 83 D6` | EventCmd_8d (remove character equipment) slot read — extended equipment returns to the inventory with its 9-bit id; vanilla path sees $FF and skips it |
+| I214_EVCMD8D_FIND | 009FF7–009FF9 | C0:9FF7–C0:9FF9 | 3 | `BD 69 18` | `20 65 D6` | EventCmd_8d find-same-item loop — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I215_EVCMD8D_PUT | 00A017–00A019 | C0:A017–C0:A019 | 3 | `9D 69 18` | `20 71 D6` | EventCmd_8d empty-slot store — vanilla id stored -> slot high bit cleared |
+| I216_CHARINIT_EQUIP | 00A0D0–00A0D2 | C0:A0D0–C0:A0D2 | 3 | `99 1F 16` | `20 BC D6` | character init from CharProp (6 equipment bytes := vanilla ids) — clear the record's 6 equipment high bits |
+| I220_NEWGAME_EXT | 00BDE2–00BDE7 | C0:BDE2–C0:BDE7 | 6 | `A6 00 BF 40 3C CF` | `22 14 80 FA 80 09` | InitNewGame Bushido-name copy to $1CF8-$1D27 (JP leftover, never read by the EN game) — extended metadata := 0 + signature; the copy loop is bypassed |
+| I221_LOADGAME_SANITIZE | 03150E–031510 | C3:150E–C3:1510 | 3 | `20 95 15` | `20 A0 F0` | LoadSavedGame (game-over restart) after the slot checksum passed — no/legacy signature -> clear extended metadata; valid -> drop stale/undefined bits; then PopTimers |
+| I222_LOADMENU_SANITIZE | 0329EB–0329ED | C3:29EB–C3:29ED | 3 | `20 66 15` | `20 A7 F0` | load menu slot select (title Continue) — same sanitize right after LoadSaveSlot |
+| I300_ITEMLIST_QTY | 037FA8–037FAA | C3:7FA8–C3:7FAA | 3 | `B9 69 19` | `20 F3 F1` | DrawItemListRow quantity — shop / colosseum: extended slot drawn as empty (qty 0) |
+| I301_ITEMLIST_NAME | 0380C7–0380CB | C3:80C7–C3:80CB | 5 | `B9 69 18 C9 FF` | `20 A2 F1 60 EA` | LoadListItemName (item menu, shop sell list, colosseum list) — name via XItemName with the 9-bit id; shop/colosseum: extended slot drawn as empty |
+| I302_ITEMDESC_ID | 0382F8–0382FA | C3:82F8–C3:82FA | 3 | `B9 69 18` | `20 E7 F0` | InitItemDesc item id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I303_ITEMDESC_LOAD | 0382FB–0382FD | C3:82FB–C3:82FD | 3 | `20 38 57` | `20 07 F2` | InitItemDesc LoadItemDesc — extended description from XDescPtr/XDescText (hidden in shop/colosseum) |
+| I304_USEITEM_ID | 03849D–03849F | C3:849D–C3:849F | 3 | `B9 69 18` | `20 E7 F0` | UseItem item id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I305_USEITEM_PROP | 0384A8–0384AA | C3:84A8–C3:84AA | 3 | `20 21 83` | `20 37 F1` | UseItem GetItemPropPtr — type / equippable characters of the extended item (item details screen) |
+| I306_DETAILS_ID | 038696–038698 | C3:8696–C3:8698 | 3 | `B9 69 18` | `20 E7 F0` | DrawItemDetails item id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I307_DETAILS_PROP | 038699–03869B | C3:8699–C3:869B | 3 | `20 21 83` | `20 37 F1` | DrawItemDetails GetItemPropPtr — stats / elements / power of the extended item |
+| I308_DETAILS_POWER | 0387A0–0387A2 | C3:87A0–C3:87A2 | 3 | `B9 69 18` | `20 01 F1` | DrawWeaponPower Atma/Soul Sabre/Dice id test — an extended weapon is never one of the vanilla '???' weapons (low byte alias) |
+| I309_ITEM_SWAP_BITS | 0327DE–0327E0 | C3:27DE–C3:27E0 | 3 | `4C 88 7F` | `4C D9 F4` | item move: swap two inventory slots — swap the two slots' high bits too |
+| I310_ARRANGE | 03267F–032684 | C3:267F–C3:2684 | 6 | `20 B8 26 20 E0 26` | `22 2C 80 FA EA EA` | Arrange (copy + SortItemsByIcon) — same algorithm/buffers, 9-bit ids carried, icon from XItemName |
+| I311_COLOSSEUM_PICK | 03ACFA–03ACFC | C3:ACFA–C3:ACFC | 3 | `BD 69 18` | `20 0D F1` | colosseum item select (wager) — extended items cannot be wagered |
+| I320_PARTYEQ_NAME_ID | 038FC2–038FC4 | C3:8FC2–C3:8FC4 | 3 | `B9 1F 00` | `20 4C F2` | DrawPartyEquipItems equipment id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I321_EQNAME | 038FE1–038FE4 | C3:8FE1–C3:8FE4 | 4 | `48 A2 8B 9E` | `4C 48 F4 EA` | _c38fe1 equipped item name — name via XItemName with the 9-bit id |
+| I322_EQNAME_RH | 039405–039407 | C3:9405–C3:9407 | 3 | `B9 1F 00` | `20 4C F2` | equip menu R-hand name — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I323_EQNAME_LH | 039417–039419 | C3:9417–C3:9419 | 3 | `B9 20 00` | `20 5D F2` | equip menu L-hand name — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I324_EQNAME_HEAD | 03943D–03943F | C3:943D–C3:943F | 3 | `B9 21 00` | `20 6E F2` | equip menu helmet name — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I325_EQNAME_BODY | 03944B–03944D | C3:944B–C3:944D | 3 | `B9 22 00` | `20 7F F2` | equip menu armor name — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I326_EQNAME_RELIC1 | 039459–03945B | C3:9459–C3:945B | 3 | `B9 23 00` | `20 90 F2` | relic menu relic 1 name — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I327_EQNAME_RELIC2 | 039467–039469 | C3:9467–C3:9469 | 3 | `B9 24 00` | `20 A1 F2` | relic menu relic 2 name — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I330_PREVIEW_SAVE | 03925F–039263 | C3:925F–C3:9263 | 5 | `B9 1F 00 85 64` | `20 A0 F4 EA EA` | _c39233 stat preview: save equipped item — save the slot's high bit too (XSCRATCH $1E3F, transient) |
+| I331_PREVIEW_CAND | 039264–039266 | C3:9264–C3:9266 | 3 | `BD 69 18` | `20 F4 F0` | _c39233 candidate id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I332_PREVIEW_PUT | 039267–039269 | C3:9267–C3:9269 | 3 | `99 1F 00` | `20 CE F2` | _c39233 temporary equip of the candidate — equipment high bit := candidate high bit for UpdateEquip |
+| I333_PREVIEW_RESTORE | 03931A–03931E | C3:931A–C3:931E | 5 | `A5 64 99 1F 00` | `20 AC F4 EA EA` | _c39233 restore equipped item — restore the slot's id and high bit |
+| I340_REMOVEALL | 0396A8–0396AA | C3:96A8–C3:96AA | 3 | `20 F2 93` | `4C 7E F3` | EquipRemoveAll (Empty, Optimum) — weapon/shield/helmet/armor return to the inventory with their 9-bit ids; high bits cleared |
+| I341_OPT_2H_STORE | 039712–039714 | C3:9712–C3:9714 | 3 | `99 1F 00` | `20 CE F2` | EquipOptimum 2-handed weapon store — high bit := B |
+| I342_OPT_2H_DEC | 039715–039717 | C3:9715–C3:9717 | 3 | `20 97 9D` | `20 69 F3` | EquipOptimum DecItemQty — 9-bit id removal |
+| I343_OPT_W_STORE | 03972A–03972C | C3:972A–C3:972C | 3 | `99 1F 00` | `20 CE F2` | EquipOptimum weapon store — high bit := B |
+| I344_OPT_W_DEC | 03972D–03972F | C3:972D–C3:972F | 3 | `20 97 9D` | `20 69 F3` | EquipOptimum DecItemQty — 9-bit id removal |
+| I345_OPT_S_STORE | 039749–03974B | C3:9749–C3:974B | 3 | `99 20 00` | `20 E2 F2` | EquipOptimum shield store — high bit := B |
+| I346_OPT_S_DEC | 03974C–03974E | C3:974C–C3:974E | 3 | `20 97 9D` | `20 69 F3` | EquipOptimum DecItemQty — 9-bit id removal |
+| I347_OPT_G_STORE | 039763–039765 | C3:9763–C3:9765 | 3 | `99 20 00` | `20 E2 F2` | EquipOptimum genji off-hand store — high bit := B |
+| I348_OPT_G_DEC | 039766–039768 | C3:9766–C3:9768 | 3 | `20 97 9D` | `20 69 F3` | EquipOptimum DecItemQty — 9-bit id removal |
+| I349_OPT_H_STORE | 03977A–03977C | C3:977A–C3:977C | 3 | `99 21 00` | `20 F6 F2` | EquipOptimum helmet store — high bit := B |
+| I350_OPT_H_DEC | 03977D–03977F | C3:977D–C3:977F | 3 | `20 97 9D` | `20 69 F3` | EquipOptimum DecItemQty — 9-bit id removal |
+| I351_OPT_A_STORE | 03978F–039791 | C3:978F–C3:9791 | 3 | `99 22 00` | `20 0A F3` | EquipOptimum armor store — high bit := B |
+| I352_OPT_A_DEC | 039792–039794 | C3:9792–C3:9794 | 3 | `4C 97 9D` | `4C 69 F3` | EquipOptimum DecItemQty (tail) — 9-bit id removal |
+| I353_VALIDW_ID | 03979F–0397A1 | C3:979F–C3:97A1 | 3 | `B9 69 18` | `20 E7 F0` | GetValidWeapons item id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I354_VALIDW_PROP | 0397A6–0397A8 | C3:97A6–C3:97A8 | 3 | `20 21 83` | `20 37 F1` | GetValidWeapons type/equippable — extended properties |
+| I355_VALIDS_ID | 0397E1–0397E3 | C3:97E1–C3:97E3 | 3 | `B9 69 18` | `20 E7 F0` | GetValidShields item id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I356_VALIDS_PROP | 0397E8–0397EA | C3:97E8–C3:97EA | 3 | `20 21 83` | `20 37 F1` | GetValidShields type/equippable — extended properties |
+| I357_BESTEQUIP | 039819–03981C | C3:9819–C3:981C | 4 | `5A 8B A9 7E` | `4C AB F3 EA` | GetBestEquip (Optimum) — returns the 9-bit id; extended items are never imp items (ImpItem low-byte aliases $12/$16/$1C/$24) |
+| I358_BEST2HAND | 03983F–039842 | C3:983F–C3:9842 | 4 | `AF 89 9D 7E` | `4C E7 F3 EA` | GetBest2Hand (Optimum, gauntlet) — returns the 9-bit id; 2-hand flag from the extended properties |
+| I359_REMOVE_ID | 0398E6–0398E8 | C3:98E6–C3:98E8 | 3 | `B9 1F 00` | `20 4C F2` | equip Remove (one slot) id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I360_REMOVE_INC | 0398E9–0398EB | C3:98E9–C3:98EB | 3 | `20 5E 9D` | `20 54 F3` | equip Remove IncItemQty — 9-bit id back to inventory |
+| I361_REMOVE_CLR | 0398EE–0398F0 | C3:98EE–C3:98F0 | 3 | `99 1F 00` | `20 CE F2` | equip Remove slot := $FF — high bit cleared |
+| I362_EQUIP_OLD | 039923–039925 | C3:9923–C3:9925 | 3 | `B9 1F 00` | `20 4C F2` | equip (item select) currently equipped id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I363_EQUIP_INC | 03992A–03992C | C3:992A–C3:992C | 3 | `20 5E 9D` | `20 54 F3` | equip IncItemQty (old item back) — 9-bit id |
+| I364_EQUIP_NEW | 039936–039938 | C3:9936–C3:9938 | 3 | `BD 69 18` | `20 F4 F0` | equip new item id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I365_EQUIP_STORE | 039939–03993B | C3:9939–C3:993B | 3 | `99 1F 00` | `20 CE F2` | equip store — high bit := B |
+| I366_EQUIP_DEC | 03993C–03993E | C3:993C–C3:993E | 3 | `20 97 9D` | `20 69 F3` | equip DecItemQty (new item out) — 9-bit id |
+| I367_HANDTXT_LH | 0399A6–0399A8 | C3:99A6–C3:99A8 | 3 | `B9 20 00` | `20 5D F2` | R-Hand/L-Hand text (gauntlet) L-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I368_HANDTXT_LH_P | 0399AF–0399B1 | C3:99AF–C3:99B1 | 3 | `20 21 83` | `20 37 F1` | R-Hand/L-Hand text 2-hand flag — extended properties |
+| I369_HANDTXT_RH | 0399CA–0399CC | C3:99CA–C3:99CC | 3 | `B9 1F 00` | `20 4C F2` | R-Hand/L-Hand text R-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I370_HANDTXT_RH_P | 0399CD–0399CF | C3:99CD–C3:99CF | 3 | `20 21 83` | `20 37 F1` | R-Hand/L-Hand text 2-hand flag — extended properties |
+| I371_HANDFX_LH | 039A0E–039A10 | C3:9A0E–C3:9A10 | 3 | `B9 20 00` | `20 5D F2` | CheckHandEffects L-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I372_HANDFX_LH_P | 039A17–039A19 | C3:9A17–C3:9A19 | 3 | `20 21 83` | `20 37 F1` | CheckHandEffects 2-hand flag — extended properties |
+| I373_HANDFX_RH | 039A2B–039A2D | C3:9A2B–C3:9A2D | 3 | `B9 1F 00` | `20 4C F2` | CheckHandEffects R-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I374_HANDFX_RH_P | 039A2E–039A30 | C3:9A2E–C3:9A30 | 3 | `20 21 83` | `20 37 F1` | CheckHandEffects 2-hand flag — extended properties |
+| I375_CANEQ_ID | 039A5D–039A5F | C3:9A5D–C3:9A5F | 3 | `BD 69 18` | `20 F4 F0` | CheckCanEquipItem candidate id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I376_CANEQ_PROP | 039A60–039A62 | C3:9A60–C3:9A62 | 3 | `20 21 83` | `20 37 F1` | CheckCanEquipItem candidate type — extended properties |
+| I377_CANEQ_LH | 039A79–039A7B | C3:9A79–C3:9A7B | 3 | `B9 20 00` | `20 5D F2` | CheckCanEquipItem L-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I378_CANEQ_LH_P | 039A80–039A82 | C3:9A80–C3:9A82 | 3 | `20 21 83` | `20 37 F1` | CheckCanEquipItem L-hand type — extended properties |
+| I379_CANEQ_RH | 039AA5–039AA7 | C3:9AA5–C3:9AA7 | 3 | `B9 1E 00` | `20 3B F2` | CheckCanEquipItem R-hand id ($001E,Y) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I380_CANEQ_RH_P | 039AAC–039AAE | C3:9AAC–C3:9AAE | 3 | `20 21 83` | `20 37 F1` | CheckCanEquipItem R-hand type — extended properties |
+| I381_VALIDE_ID | 039B76–039B78 | C3:9B76–C3:9B78 | 3 | `B9 69 18` | `20 E7 F0` | GetValidEquip weapon/shield id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I382_VALIDE_PROP | 039B7D–039B7F | C3:9B7D–C3:9B7F | 3 | `20 21 83` | `20 37 F1` | GetValidEquip weapon/shield type — extended properties |
+| I383_VALIDH_ID | 039BB6–039BB8 | C3:9BB6–C3:9BB8 | 3 | `B9 69 18` | `20 E7 F0` | GetValidEquip helmet id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I384_VALIDH_PROP | 039BBD–039BBF | C3:9BBD–C3:9BBF | 3 | `20 21 83` | `20 37 F1` | GetValidEquip helmet type — extended properties |
+| I385_VALIDA_ID | 039BF2–039BF4 | C3:9BF2–C3:9BF4 | 3 | `B9 69 18` | `20 E7 F0` | GetValidEquip armor id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I386_VALIDA_PROP | 039BF9–039BFB | C3:9BF9–C3:9BFB | 3 | `20 21 83` | `20 37 F1` | GetValidEquip armor type — extended properties |
+| I387_EQLIST_NAME_ID | 039D25–039D27 | C3:9D25–C3:9D27 | 3 | `B9 69 18` | `20 E7 F0` | LoadEquipListItemName id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I388_EQLIST_NAME_HI | 039D2F–039D31 | C3:9D2F–C3:9D31 | 3 | `9C 1B 21` | `20 53 F1` | LoadEquipListItemName M7A high byte — name index = 9-bit id * 13 (ItemName retargeted to XItemName) |
+| I389_INCQTY_FIND | 039D63–039D65 | C3:9D63–C3:9D65 | 3 | `D9 69 18` | `20 19 F1` | IncItemQty find-same-item — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I390_INCQTY_PUT | 039D85–039D87 | C3:9D85–C3:9D87 | 3 | `99 69 18` | `20 25 F1` | IncItemQty empty-slot store — vanilla id stored -> high bit cleared |
+| I391_DECQTY_FIND | 039D9C–039D9E | C3:9D9C–C3:9D9E | 3 | `D9 69 18` | `20 19 F1` | DecItemQty find item — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I392_VALIDR_ID | 03A05F–03A061 | C3:A05F–C3:A061 | 3 | `B9 69 18` | `20 E7 F0` | relic list builder id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I393_VALIDR_PROP | 03A066–03A068 | C3:A066–C3:A068 | 3 | `20 21 83` | `20 37 F1` | relic list builder type/equippable — extended properties |
+| I394_RELIC_OLD | 03A0BB–03A0BD | C3:A0BB–C3:A0BD | 3 | `B9 23 00` | `20 90 F2` | relic equip currently equipped id ($0023,Y) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I395_RELIC_INC | 03A0C2–03A0C4 | C3:A0C2–C3:A0C4 | 3 | `20 5E 9D` | `20 54 F3` | relic equip IncItemQty — 9-bit id |
+| I396_RELIC_NEW | 03A0CE–03A0D0 | C3:A0CE–C3:A0D0 | 3 | `BD 69 18` | `20 F4 F0` | relic equip new id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I397_RELIC_STORE | 03A0D1–03A0D3 | C3:A0D1–C3:A0D3 | 3 | `99 23 00` | `20 1E F3` | relic equip store — high bit := B |
+| I398_RELIC_DEC | 03A0D4–03A0D6 | C3:A0D4–C3:A0D6 | 3 | `20 97 9D` | `20 69 F3` | relic equip DecItemQty — 9-bit id |
+| I399_RELICRM_ID | 03A124–03A126 | C3:A124–C3:A126 | 3 | `B9 23 00` | `20 90 F2` | relic remove id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I400_RELICRM_INC | 03A127–03A129 | C3:A127–C3:A129 | 3 | `20 5E 9D` | `20 54 F3` | relic remove IncItemQty — 9-bit id |
+| I401_RELICRM_CLR | 03A12C–03A12E | C3:A12C–C3:A12E | 3 | `99 23 00` | `20 1E F3` | relic remove slot := $FF — high bit cleared |
+| I402_SORT_ID | 03A16D–03A16F | C3:A16D–C3:A16F | 3 | `B9 69 18` | `20 E7 F0` | SortValidEquip id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I403_SORT_PROP | 03A170–03A172 | C3:A170–C3:A172 | 3 | `20 21 83` | `20 37 F1` | SortValidEquip attack/defense power — extended properties |
+| I404_RELICDESC_1 | 03A1CD–03A1CF | C3:A1CD–C3:A1CF | 3 | `B9 23 00` | `20 90 F2` | relic slot description (relic 1) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I405_RELICDESC_2 | 03A1D2–03A1D4 | C3:A1D2–C3:A1D4 | 3 | `B9 24 00` | `20 A1 F2` | relic slot description (relic 2) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I406_RELICDESC_LD | 03A1D5–03A1D7 | C3:A1D5–C3:A1D7 | 3 | `4C 38 57` | `4C 07 F2` | relic slot LoadItemDesc — extended description |
+| I407_RELICLDESC_ID | 03A1E4–03A1E6 | C3:A1E4–C3:A1E6 | 3 | `BD 69 18` | `20 F4 F0` | relic list description id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I408_RELICLDESC_LD | 03A1E7–03A1E9 | C3:A1E7–C3:A1E9 | 3 | `4C 38 57` | `4C 07 F2` | relic list LoadItemDesc — extended description |
+| I420_SELLDESC | 03B4FF–03B501 | C3:B4FF–C3:B501 | 3 | `BD 69 18` | `20 DE F5` | shop sell description id — TECH v0.9: sell description: a sellable extended consumable shows its own description; any other extended slot reads as $FF (XSHOPCURHI = current item high bit) |
+| I421_SELLITEM | 03BFCF–03BFD1 | C3:BFCF–C3:BFD1 | 3 | `B9 69 18` | `20 D5 F5` | _c3bfcb shop selected inventory item (sell select/qty/price) — TECH v0.9: Sell item id: a sellable extended consumable can be sold (XSHOPCURHI = 1), any other extended slot reads as $FF (cannot be selected) |
+| I422_BUY_FIND | 03B5BC–03B5BE | C3:B5BC–C3:B5BE | 3 | `D9 69 18` | `20 19 F1` | shop buy: find same item — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I423_BUY_PUT | 03B5DC–03B5DE | C3:B5DC–C3:B5DE | 3 | `99 69 18` | `20 25 F1` | shop buy: new slot store — high bit cleared |
+| I424_OWNED_FIND | 03BC66–03BC68 | C3:BC66–C3:BC68 | 3 | `D9 69 18` | `20 19 F1` | shop owned-quantity search — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I425_EQUIPPED_CNT | 03BF97–03BF9A | C3:BF97–C3:BF9A | 4 | `B7 E7 C5 E0` | `20 B6 F4 EA` | shop equipped-count compare — an extended equipment byte never equals a shop (vanilla) item |
+| I430_CMP_ARMOR_ID | 03BD5B–03BD5D | C3:BD5B–C3:BD5D | 3 | `B9 22 00` | `20 7F F2` | shop party compare: armor id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I431_CMP_ARMOR_P | 03BD66–03BD68 | C3:BD66–C3:BD68 | 3 | `20 21 83` | `20 37 F1` | shop party compare: armor defense — extended power |
+| I432_CMP_W_EQ1 | 03BDBA–03BDBC | C3:BDBA–C3:BDBC | 3 | `B9 1F 00` | `20 B2 F2` | shop party compare: weapon == shop item (R) — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I433_CMP_W_EQ2 | 03BDC1–03BDC3 | C3:BDC1–C3:BDC3 | 3 | `B9 20 00` | `20 C0 F2` | shop party compare: weapon == shop item (L) — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I434_CMP_W_R | 03BDC9–03BDCB | C3:BDC9–C3:BDCB | 3 | `B9 1F 00` | `20 4C F2` | shop party compare: R-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I435_CMP_W_R_P | 03BDD0–03BDD2 | C3:BDD0–C3:BDD2 | 3 | `20 21 83` | `20 37 F1` | shop party compare: R-hand type — extended properties |
+| I436_CMP_W_L | 03BDE1–03BDE3 | C3:BDE1–C3:BDE3 | 3 | `B9 20 00` | `20 5D F2` | shop party compare: L-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I437_CMP_W_L_P | 03BDE8–03BDEA | C3:BDE8–C3:BDEA | 3 | `20 21 83` | `20 37 F1` | shop party compare: L-hand type — extended properties |
+| I438_CMP_W_L2 | 03BDF9–03BDFB | C3:BDF9–C3:BDFB | 3 | `B9 20 00` | `20 5D F2` | shop party compare: L-hand id (power) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I439_CMP_W_R2 | 03BDFF–03BE01 | C3:BDFF–C3:BE01 | 3 | `B9 1F 00` | `20 4C F2` | shop party compare: R-hand id (power) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I440_CMP_W_POW | 03BE06–03BE08 | C3:BE06–C3:BE08 | 3 | `20 21 83` | `20 37 F1` | shop party compare: weapon power — extended power |
+| I441_CMP_S_EQ1 | 03BE4A–03BE4C | C3:BE4A–C3:BE4C | 3 | `B9 1F 00` | `20 B2 F2` | shop party compare: shield == shop item (R) — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I442_CMP_S_EQ2 | 03BE51–03BE53 | C3:BE51–C3:BE53 | 3 | `B9 20 00` | `20 C0 F2` | shop party compare: shield == shop item (L) — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I443_CMP_S_L | 03BE59–03BE5B | C3:BE59–C3:BE5B | 3 | `B9 20 00` | `20 5D F2` | shop party compare: L-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I444_CMP_S_L_P | 03BE5C–03BE5E | C3:BE5C–C3:BE5E | 3 | `20 21 83` | `20 37 F1` | shop party compare: L-hand type — extended properties |
+| I445_CMP_S_R | 03BE6D–03BE6F | C3:BE6D–C3:BE6F | 3 | `B9 1F 00` | `20 4C F2` | shop party compare: R-hand id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I446_CMP_S_R_P | 03BE70–03BE72 | C3:BE70–C3:BE72 | 3 | `20 21 83` | `20 37 F1` | shop party compare: R-hand type — extended properties |
+| I447_CMP_S_R2 | 03BE81–03BE83 | C3:BE81–C3:BE83 | 3 | `B9 1F 00` | `20 4C F2` | shop party compare: R-hand id (power) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I448_CMP_S_L2 | 03BE87–03BE89 | C3:BE87–C3:BE89 | 3 | `B9 20 00` | `20 5D F2` | shop party compare: L-hand id (power) — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I449_CMP_S_POW | 03BE8E–03BE90 | C3:BE8E–C3:BE90 | 3 | `20 21 83` | `20 37 F1` | shop party compare: shield power — extended power |
+| I450_CMP_H_ID | 03BED3–03BED5 | C3:BED3–C3:BED5 | 3 | `B9 21 00` | `20 6E F2` | shop party compare: helmet id — 16-bit id (B = high bit) for the following extended-aware lookup |
+| I451_CMP_H_P | 03BEDE–03BEE0 | C3:BEDE–C3:BEE0 | 3 | `20 21 83` | `20 37 F1` | shop party compare: helmet power — extended power |
+| I500_UPDEQ_LOAD | 020EE6–020EE8 | C2:0EE6–C2:0EE8 | 3 | `BD FB 15` | `20 70 64` | UpdateEquip 6-slot loop equipment read ($15FB,X) — low byte + equipment high bit (B) for CalcEquipEffect: all stats/elements/effects of extended equipment |
+| I501_CALCEQ_OFS | 020F9C–020FA2 | C2:0F9C–C2:0FA2 | 7 | `EB A9 1E 20 81 47 AA` | `20 8B 64 EA EA EA EA` | CalcEquipEffect id*30 (XBA/LDA #$1E/JSR MultAB/TAX) — 16-bit ItemProp offset of the 9-bit id (ItemProp retargeted to XItemProp) |
+| I502_LEARN_OFS | 02600C–026011 | C2:600C–C2:6011 | 6 | `EB A9 1E 20 81 47` | `20 9E 64 EA EA EA` | LearnItemMagic id*30 (battle end, equipped items) — spell-learning bytes of extended equipment from XItemProp |
+| I510_BINV_HAND_L | 025481–025483 | C2:5481–C2:5483 | 3 | `B9 20 16` | `20 D9 64` | InitInventory L-hand (shield slot) read — 9-bit id of the hand item (also clears the battle name queue) |
+| I511_BINV_HAND_L_CP | 025485–025487 | C2:5485–C2:5487 | 3 | `20 CD 54` | `20 1F 65` | InitInventory L-hand CopyItemProp — extended hand item: properties from XItemProp, never usable/throwable |
+| I512_BINV_HAND_R | 025493–025495 | C2:5493–C2:5495 | 3 | `B9 1F 16` | `20 F5 64` | InitInventory R-hand (weapon slot) read — 9-bit id |
+| I513_BINV_HAND_R_CP | 025497–025499 | C2:5497–C2:5499 | 3 | `20 CD 54` | `20 1F 65` | InitInventory R-hand CopyItemProp — extended hand item: properties from XItemProp, never usable/throwable |
+| I516_BINV_EXT_EMPTY | 0254B0–0254B2 | C2:54B0–C2:54B2 | 3 | `E2 30 7B` | `20 A8 65` | InitInventory: end of the 256-slot copy loop (SEP #$30 / TDC) — every extended slot is re-copied as the vanilla loop copies an empty slot (qty 0, CopyItemProp($FF)): not in Item/Throw/Tools lists, cannot be used or truncated; zero bitmap bytes skipped (battle init timing unchanged) |
+| I520_BTLEND_INV | 024981–024986 | C2:4981–C2:4986 | 6 | `A2 FF 00 A0 FB 04` | `22 30 80 FA 80 17` | battle end: battle inventory -> $1869/$1969 — vanilla slots copied as before; extended slots preserved; vanilla items placed at their positions re-homed |
+| I521_BTLEND_WAGER | 0249AD–0249AF | C2:49AD–C2:49AF | 3 | `DD 69 18` | `20 10 66` | battle end: colosseum wager removal search — extended slot reads as $FF: never selectable / never matched by a vanilla id |
+| I530_ANIM_ID | 0229FE–022A00 | C2:29FE–C2:2A00 | 3 | `BD A8 3C` | `20 4D 66` | weapon animation number (RHandItem+1 -> $B7) — extended weapon -> animation number $C0+low byte (XWeaponAnimFull) |
+| I531_SPEAR_R | 021814–021819 | C2:1814–C2:1819 | 6 | `BD A8 3C 20 12 15` | `20 68 66 EA EA EA` | Jump: SpearEffect(RHandItem) — extended spear (XExtFlags bit1) doubles Jump damage like vanilla $1D-$24 |
+| I532_SPEAR_L | 02181A–02181F | C2:181A–C2:181F | 6 | `BD A9 3C 20 12 15` | `20 73 66 EA EA EA` | Jump: SpearEffect(LHandItem) — as above, left hand |
+| I533_OGRE_NIX | 023F0B–023F0D | C2:3F0B–C2:3F0D | 3 | `BD 86 2B` | `20 A5 66` | MP-crit weapon break test (Ogre Nix id $17) — an extended weapon never matches (would be broken/lost) |
+| I540_HANDNAMES | 014BDA–014BDF | C1:4BDA–C1:4BDF | 6 | `B9 9A 2B 8D 60 57` | `22 34 80 FA EA EA` | battle Item menu hand header (L-hand id store) — name queue for extended hand items |
+| I541_NAMEIDX | 01656C–01656F | C1:656C–C1:656F | 4 | `A6 30 A5 56` | `22 38 80 FA` | ListTextCmd_0e name index (LDX $30 / LDA $56) — extended hand name from XItemName |
+| I542_SWAPGUARD | 0189D2–0189D6 | C1:89D2–C1:89D6 | 5 | `AD 39 7B C9 FF` | `22 3C 80 FA EA` | check_equip (battle hand <-> inventory exchange, 3 callers) — the replaced hand (identified by the caller) cannot hold an extended item: refused like a vanilla refusal |
+| I545_HANDSWAP_BITS | 018E8F–018E92 | C1:8E8F–C1:8E92 | 4 | `AE 05 7B 7B` | `22 48 80 FA` | SelectEquipItem R-hand <-> L-hand exchange (LDX w7e7b05 / TDC) — the two hand equipment bits are swapped with the hand entries (write-back C2:20AB stores low bytes) |
+| I543_JUMPANIM_L | 01BA41–01BA44 | C1:BA41–C1:BA44 | 4 | `BD 9A 2B 1A` | `22 44 80 FA` | Jump animation: L-hand item id + 1 (ItemJumpThrowAnim index) — extended weapon -> $80 + low byte (XJumpAnim FA:3700; the C1:BA4C operand is retargeted) |
+| I544_JUMPANIM_R | 01BA47–01BA4A | C1:BA47–C1:BA4A | 4 | `BD 86 2B 1A` | `22 40 80 FA` | Jump animation: R-hand item id + 1 (ItemJumpThrowAnim index) — as I543 (right hand) |
+| V901_EVCMD_69 | 00992C–00992D | C0:992C–C0:992D | 2 | `1A B9` | `DA D6` | EventCmdTbl entry $69 (vanilla unused: RTS lock-up; no Rev 1 script uses it) — GIVE_RARE id (2 bytes) |
+| V902_EVCMD_6D | 009934–009935 | C0:9934–C0:9935 | 2 | `1A B9` | `EA D6` | EventCmdTbl entry $6D (vanilla unused) — TAKE_RARE id (2 bytes) |
+| V903_EVCMD_6E | 009936–009937 | C0:9936–C0:9937 | 2 | `1A B9` | `FA D6` | EventCmdTbl entry $6E (vanilla unused) — HAS_RARE id, switch16 (4 bytes) |
+| V910_INITTARGET_CMD | 0226D6–0226D9 | C2:26D6–C2:26D9 | 4 | `64 BA A2 40` | `20 E7 66 EA` | InitTarget C2:26D3 (A = command) — records the command (XCURCMD) for the extended-consumable property lookup |
+| V911_ITEMTARGET_PROP | 02271D–02271F | C2:271D–C2:271F | 3 | `20 63 2B` | `20 F0 66` | InitItemTarget C2:271A GetItemPropPtr — Item command + extended consumable id -> XItemProp record of $100|id (targeting, status) |
+| V912_ITEMEFFECT_PROP | 022A60–022A62 | C2:2A60–C2:2A62 | 3 | `20 63 2B` | `20 F0 66` | CalcItemEffect C2:2A37 GetItemPropPtr (battle Item command and field menu use via CalcMagicEffect) — extended consumable -> its own power / element / flags / status record |
+| V913_ITEMTARGET_SPELL | 02273C–022740 | C2:273C–C2:2740 | 5 | `C9 E6 20 1A 27` | `20 F5 66 EA EA` | Init target, Item command C2:273C — an extended consumable never casts a spell (carry set like the vanilla items $E6-$FF) |
+| V914_ITEMCMD_NAMEFLAG | 02189F–0218A3 | C2:189F–C2:18A3 | 5 | `A9 01 8D 12 34` | `22 94 80 FA EA` | Item / Throw command C2:189E — XATKX := extended name + animation flags for a character's Item command with an extended consumable |
+| V915_ITEMCMD_CONSUME | 0218B0–0218B4 | C2:18B0–C2:18B4 | 5 | `A9 FF 9D F4 32` | `22 98 80 FA EA` | Item command: held item used up — clears the held-extended flag (XHELD) with the held item |
+| V916_FIXATTACK_HOLD | 024DB0–024DB2 | C2:4DB0–C2:4DB2 | 3 | `99 F4 32` | `20 FC 66` | FixPlayerAttack C2:4DAF (Item / Throw queued) — XHELD[character] := the held item is an extended consumable |
+| V917_RETURN_HELD | 0262D8–0262DA | C2:62D8–C2:62DA | 3 | `20 DC 54` | `20 06 67` | return of a held / obtained item C2:62C7 — a held extended consumable goes back to the list with its own properties + marker |
+| V918_STEAL_OBTAIN | 0239EC–0239EE | C2:39EC–C2:39EE | 3 | `9D F4 32` | `20 01 67` | Steal: obtained item C2:39EC — a vanilla item replaces the held item: XHELD cleared |
+| V919_METAMORPH_OBTAIN | 023A7C–023A7E | C2:3A7C–C2:3A7E | 3 | `9D F4 32` | `20 01 67` | Metamorph: obtained item C2:3A7C — a vanilla item replaces the held item: XHELD cleared |
+| V920_CMD_DISPATCH | 021559–02155C | C2:1559–C2:155C | 4 | `85 B5 0A AA` | `22 9C 80 FA` | battle command dispatch C2:1554 — clears XATKX before every command |
+| V930_ITEMROW | 014CA5–014CAD | C1:4CA5–C1:4CAD | 9 | `B9 86 26 8D 5A 57 8D 61 57` | `22 6C 80 FA EA EA EA EA EA` | DrawItemListText C1:4C6B — row name: XBTLNAME := extended-consumable marker of the entry (XItemName + $D00 for the name) |
+| V931_ITEM_DECREMENT | 017164–017178 | C1:7164–C1:7178 | 21 | `7B AA B9 B0 2B DD 86 26 F0 0B E8 E8 E8 E8 E8 E0 00 05 D0  …` | `22 70 80 FA B0 0F 60 EA EA EA EA EA EA EA EA EA EA EA EA  …` | decrement of the used / thrown list item C1:7167 — matches id AND marker (Item command + extended consumable) instead of the id only |
+| V932_ITEM_ADD | 014458–014469 | C1:4458–C1:4469 | 18 | `A2 00 00 DD 86 26 F0 21 E8 E8 E8 E8 E8 E0 00 05 D0 F1` | `22 74 80 FA B0 23 80 0A EA EA EA EA EA EA EA EA EA EA` | obtained / returned item added to the list C1:4445 — matches id AND marker |
+| V933_FIND_VANILLA | 018CBC–018CCA | C1:8CBC–C1:8CCA | 15 | `DD 86 26 F0 0C E8 E8 E8 E8 E8 E0 00 05 D0 F1` | `22 78 80 FA 60 EA EA EA EA EA EA EA EA EA EA` | FindInventoryItem C1:8CB7 (hand item back to the list) — vanilla entries only: a hand katana never merges into an extended consumable |
+| V934_ATTACKNAME_ITEM | 01605B–01605F | C1:605B–C1:605F | 5 | `AF 16 42 00 AA` | `22 68 80 FA EA` | item attack name C1:6050 — extended consumable (XATKX bit0) -> XItemName + $D00 |
+| V935_ITEM_ANIM | 01BC58–01BC6B | C1:BC58–C1:BC6B | 20 | `C9 E0 90 05 38 E9 E0 80 02 A9 E0 C2 20 0A AA BF 00 00 D1 AA` | `22 64 80 FA EA EA EA EA EA EA EA EA EA EA EA EA EA EA EA EA` | item animation C1:BC4E — extended consumable (XATKX bit1) -> XItemAnimX; vanilla ItemAnimPtrs rule otherwise |
+| V940_ITEMCOLOR_ID | 038056–038058 | C3:8056–C3:8058 | 3 | `B9 69 18` | `20 E7 F0` | GetItemNameColor C3:8045 — 9-bit id (A low, B high bit) |
+| V941_ITEMCOLOR_PROP | 03806D–03806F | C3:806D–C3:806F | 3 | `20 21 83` | `20 37 F1` | GetItemNameColor — usable colour from the extended record |
+| V942_CANUSE | 038B3D–038B3F | C3:8B3D–C3:8B3F | 3 | `B9 14 00` | `20 42 F5` | CheckCanUseItem C3:8B3D — extended consumable: validity from its record (vanilla rules) |
+| V943_USE_CTX | 038B25–038B27 | C3:8B25–C3:8B27 | 3 | `20 2B 8C` | `20 20 F5` | _c38b1a (before CalcMagicEffect) — XCURCMD := $FE for an extended slot (C2 reads the extended record) |
+| V944_RESTORE_ID | 038C34–038C36 | C3:8C34–C3:8C36 | 3 | `20 2B 8C` | `20 33 F5` | _c38c33 HP / MP restore — 9-bit id |
+| V945_RESTORE_PROP | 038C37–038C39 | C3:8C37–C3:8C39 | 3 | `20 21 83` | `20 37 F1` | _c38c33 HP / MP restore — extended record |
+| V946_USE_DEC | 038B17–038B19 | C3:8B17–C3:8B19 | 3 | `4C 97 9D` | `4C 39 F5` | _c38b11 (item used) — one unit of the selected 9-bit item is removed (slot cleared at 0) |
+| V950_SHOP_TABLE_LIST | 03B9AF–03B9B2 | C3:B9AF–C3:B9B2 | 4 | `BF C0 7A C4` | `BF 00 54 FA` | shop item list C3:B9AF — ShopProp relocated (XShopProp: 128 vanilla shops byte-exact + extended shops $80+) |
+| V951_SHOP_TABLE_PRICE | 03BA32–03BA35 | C3:BA32–C3:BA35 | 4 | `BF C0 7A C4` | `BF 00 54 FA` | AdjustShopPrice C3:BA2C — ShopProp relocated |
+| V952_SHOP_TABLE_TYPE | 03BFF3–03BFF6 | C3:BFF3–C3:BFF6 | 4 | `BF C0 7A C4` | `BF 00 54 FA` | shop type C3:BFD3 — ShopProp relocated |
+| V953_SHOP_ROW_NAME | 03B9BD–03B9BF | C3:B9BD–C3:B9BF | 3 | `20 68 C0` | `20 11 F6` | shop list row — 9-bit name |
+| V954_SHOP_ROW_PRICE | 03B9C9–03B9CB | C3:B9C9–C3:B9CB | 3 | `20 21 83` | `20 21 F6` | shop list row price — 9-bit record |
+| V955_SHOP_OWNED | 03BC5D–03BC61 | C3:BC5D–C3:BC61 | 5 | `7B AA DA A4 00` | `22 7C 80 FA 60` | _c3bc57 owned counts — owned quantity of exactly the shop item (vanilla / extended) |
+| V956_SHOP_CUR | 03BFC6–03BFC9 | C3:BFC6–C3:BFC9 | 4 | `BF 89 9D 7E` | `4C C9 F5 EA` | _c3bfc2 current buy item — XSHOPCURHI := entry high bit |
+| V957_BUY_DESC | 03B4F5–03B4F7 | C3:B4F5–C3:B4F7 | 3 | `4C 38 57` | `4C 02 F6` | buy description — extended description |
+| V958_SELL_DESC2 | 03B502–03B504 | C3:B502–C3:B504 | 3 | `4C 38 57` | `4C 02 F6` | sell description — extended description |
+| V959_BUY | 03B5B7–03B5B9 | C3:B5B7–C3:B5B9 | 3 | `20 C2 BF` | `20 6C F6` | _c3b5b7 buy — extended entry: extended give |
+| V960_BUY_NAME | 03BAC6–03BAC8 | C3:BAC6–C3:BAC8 | 3 | `20 68 C0` | `20 41 F6` | buy quantity screen name — 9-bit name |
+| V961_SELL_NAME | 03BADF–03BAE1 | C3:BADF–C3:BAE1 | 3 | `20 68 C0` | `20 41 F6` | sell quantity screen name — 9-bit name |
+| V962_BUY_TYPE | 03B7E9–03B7EB | C3:B7E9–C3:B7EB | 3 | `20 21 83` | `20 37 F6` | _c3b7e6 (item type) — 9-bit record |
+| V963_SHOP_STAT | 03BAF8–03BAFA | C3:BAF8–C3:BAFA | 3 | `20 21 83` | `20 37 F6` | DrawShopItemStat — 9-bit record |
+| V964_SELL_PRICE | 03BB68–03BB6A | C3:BB68–C3:BB6A | 3 | `20 21 83` | `20 37 F6` | sell price — 9-bit record (price / 2) |
+| V965_CANEQ_ID | 03BCE1–03BCE4 | C3:BCE1–C3:BCE4 | 4 | `BF 89 9D 7E` | `20 C9 F5 EA` | shop: who can equip (current entry) — XSHOPCURHI := entry high bit |
+| V966_CANEQ_PROP | 03BCE5–03BCE7 | C3:BCE5–C3:BCE7 | 3 | `20 21 83` | `20 37 F6` | shop: who can equip — 9-bit record |
+| V967_CANEQ2_ID | 03C1B0–03C1B3 | C3:C1B0–C3:C1B3 | 4 | `BF 89 9D 7E` | `20 C9 F5 EA` | shop: who can equip (party sprites) — XSHOPCURHI := entry high bit |
+| V968_CANEQ2_PROP | 03C1B4–03C1B6 | C3:C1B4–C3:C1B6 | 3 | `20 21 83` | `20 37 F6` | shop: who can equip (party sprites) — 9-bit record |
+| V969_SHOP_STATS_X | 03BD13–03BD15 | C3:BD13–C3:BD15 | 3 | `20 21 83` | `20 2E F6` | _c3bcfd per-entry stats — 9-bit record |
+| V970_SELLALL_CLR | 03B739–03B73B | C3:B739–C3:B73B | 3 | `99 69 18` | `20 25 F1` | sell all units of a slot — the emptied slot's high bit is cleared |
+| V980_RARE_DESCPTR | 038339–03833B | C3:8339–C3:833B | 3 | `A2 60 FB` | `A2 90 50` | InitRareItemDesc C3:8339 — 52 rare descriptions (XRareDescPtr, absolute pointers in bank FA) |
+| V981_RARE_DESCBASE | 03833E–038340 | C3:833E–C3:8340 | 3 | `A2 B0 FC` | `A2 00 00` | InitRareItemDesc — absolute pointers |
+| V982_RARE_DESCBANK | 038343–038344 | C3:8343–C3:8344 | 2 | `A9 CE` | `A9 FA` | InitRareItemDesc — bank FA |
+| V983_RARE_COUNT | 03834C–03834E | C3:834C–C3:834E | 3 | `20 6B 83` | `20 AF F6` | InitRareItemDesc (count) — number of owned rare items over all pages |
+| V984_RARE_NAMEPTR | 03843B–03843D | C3:843B–C3:843D | 3 | `A0 A0 FB` | `A0 00 51` | GetRareItemNamePtr C3:8436 — 52 rare names (XRareName) |
+| V985_RARE_NAMEBANK | 038440–038441 | C3:8440–C3:8441 | 2 | `A9 CE` | `A9 FA` | GetRareItemNamePtr — bank FA |
+| V986_RARE_LIST | 03838E–038390 | C3:838E–C3:8390 | 3 | `20 94 83` | `20 AA F6` | InitRareItemList C3:838B — list of the current page (vanilla ids 0-19 + FF6X ids 20-51) |
+| V987_RARE_PAGE | 032748–03274A | C3:2748–C3:274A | 3 | `20 4A 7D` | `20 BF F6` | menu state ITEM_RARE C3:2741 — page turning (Down / Up at the edge, R / L) |
+| V988_RARE_OPEN | 0326A0–0326A2 | C3:26A0–C3:26A2 | 3 | `20 8B 83` | `20 B6 F6` | SelectItemOption_02 C3:268E — page 0 |
+| P999_CHECKSUM | 00FFDC–00FFDF | C0:FFDC–C0:FFDF | 4 | `9F 75 60 8A` | `2D CE D2 31` | SNES header (emulator/flash-cart validation) — Recalculated checksum 31D2 / complement CE2D |

@@ -430,7 +430,7 @@ nr = sum(len(t["consumers"]) for t in rel["tables"].values())
 print(f"PASS v0.7.1 production vanilla-space diff limited to {len(changed7)} declared bytes ({len(IHOOKS)} hook sites/{nh} B, {nr} retargets, 3 stub claims)"); ok += 1
 # 43b TECH v0.8 production vs accepted v0.7.2 production: only FA tables, F0 metadata, header checksum, the XC3 stub
 #     claim (v0.8 B-accumulator reset, KNOWN_RISKS_v0.8 R32) and the operands of C3 hook sites (routines moved) differ
-rom8, out8, _, _ = B.build_target(clean, alloc, "production")
+rom8, out8, _, _ = B.build_target(clean, alloc, "production-v0.8")
 d8 = [i for i in range(0x400000) if out8[i] != out7[i]]
 c3s = [x for x in alloc.claims if x["name"] == "ITEMX_C3_STUBS"][0]
 c3r = range(pc(int(c3s["snes_start"], 16)), pc(int(c3s["snes_end"], 16)) + 1)
@@ -458,7 +458,7 @@ dl = [l for l in difflib.unified_diff(open(os.path.join(HERE, "asm/item_v071/c3.
 code_dl = [l for l in dl if l[1:].split(";")[0].strip()]
 assert all(l.startswith("+") or l.strip() in ("-        rts", "-        xba") for l in code_dl), code_dl
 assert {t: B.TARGETS[t]["engine_asm"] for t in B.TARGETS if B.TARGETS[t].get("engine_asm")} == \
-    {"production": "asm/item_v08", "celes-tech": "asm/item_v08", "item-tech": "asm/item_v08"}
+    {"production-v0.8": "asm/item_v08", "celes-tech-v0.8": "asm/item_v08", "item-tech-v0.8": "asm/item_v08"}
 print(f"PASS v0.8 engine source = accepted v0.7.1 engine + B-reset exits only ({len(code_dl)} code lines in c3.s); "
       "frozen v0.7.x targets assemble asm/item_v071"); ok += 1
 # 43c every production record decodes back to its source definition (stats, users = equip matrix, elements, status, relic bits)
@@ -486,7 +486,7 @@ print(f"PASS v0.8: all {len(eq8)} production records decode to their source (sta
 # 44 QA items / QA harness only in item-tech; production + celes-tech carry no QA content and a pristine FF bank
 PROD_IDS = list(range(0x00, 0x27))                    # $100-$126
 SPEARS = [0x04, 0x0B]                                  # Sandpiercer $104, Gale Lance $10B
-for t in ("production", "celes-tech", "production-v0.7.2", "celes-tech-v0.7.2"):
+for t in ("production-v0.8", "celes-tech-v0.8", "production-v0.7.2", "celes-tech-v0.7.2"):
     r_, o_, _, _ = B.build_target(clean, alloc, t)
     assert not any(x["patch_id"].startswith("Q") for x in r_.records), t
     assert o_[0x3F0000:0x400000] == b"\xFF" * 0x10000, t
@@ -494,7 +494,7 @@ for t in ("production", "celes-tech", "production-v0.7.2", "celes-tech-v0.7.2"):
     want = [] if t.endswith("v0.7.2") else PROD_IDS
     assert [k for k in range(64) if fl[k]] == want, t
     assert all(fl[k] == (3 if k in SPEARS else 1) for k in want), t
-r_, o_, _, _ = B.build_target(clean, alloc, "item-tech")
+r_, o_, _, _ = B.build_target(clean, alloc, "item-tech-v0.8")
 fl = o_[pc(IV.T_FLAGS):pc(IV.T_FLAGS) + 64]
 assert [k for k in range(64) if fl[k]] == PROD_IDS + [0x3D, 0x3E, 0x3F] and all(fl[k] == 1 for k in (0x3D, 0x3E, 0x3F))
 assert o_[pc(IV.T_PROP):pc(IV.T_PROP) + 256 * 30] == clean[pc(IV.VAN_PROP):pc(IV.VAN_PROP) + 256 * 30]
@@ -546,4 +546,98 @@ expect_fail("eq8-name-too-long", lambda: IV.check_text_v08(dict(eq8[0], display_
 expect_fail("eq8-desc-too-long", lambda: IV.check_text_v08(dict(eq8[0], desc="x" * 29)), (SystemExit,))
 expect_fail("eq8-spear-flag-on-sword", lambda: IV.build_tables(clean, [dict(eq8[0], spear=True, _src="x")]), (SystemExit,))
 print("PASS v0.8 equipment validators fail closed (count, duplicate reward/id, repeatable, smith GP, missing binding, Gau, power, fallback, text, spear)"); ok += 1
+# ===================================================================================================== TECH v0.9
+from patches import item_v09 as I9, consumables_v09 as CV9
+from patches.item_v09_hooks import HOOKS as H09, OVERRIDES as O09
+cons9 = json.load(open(os.path.join(HERE, "items/production_v09/consumables.json")))["items"]
+CONS_IDS = list(range(0x27, 0x2F))
+# 47 v0.9 extended ids: production / celes-tech define equipment $100-$126 + consumables $127-$12E; QA adds $13D-$13F
+r9, out9, _, _ = B.build_target(clean, alloc, "production")
+for t, o_ in (("production", out9), ("celes-tech", B.build_target(clean, alloc, "celes-tech")[1])):
+    fl = o_[pc(IV.T_FLAGS):pc(IV.T_FLAGS) + 64]
+    assert [k for k in range(64) if fl[k]] == PROD_IDS + CONS_IDS, t
+    assert all(fl[k] == (3 if k in SPEARS else 1) for k in PROD_IDS), t
+    assert all(fl[0x27 + n] == (0x0D if c["sellable"] else 0x05) for n, c in enumerate(cons9)), t
+    assert o_[0x3F0000:0x400000] == b"\xFF" * 0x10000, t
+    assert o_[pc(IV.T_PROP) + 0x100 * 30:pc(IV.T_PROP) + 0x127 * 30] == out8[pc(IV.T_PROP) + 0x100 * 30:pc(IV.T_PROP) + 0x127 * 30], t
+    assert all(o_[pc(IV.T_PROP) + 30 * (0x100 + k):pc(IV.T_PROP) + 30 * (0x101 + k)] == CV9.compose(c)
+               for k, c in zip(CONS_IDS, cons9)), t
+r_, o_, _, _ = B.build_target(clean, alloc, "item-tech")
+fl = o_[pc(IV.T_FLAGS):pc(IV.T_FLAGS) + 64]
+assert [k for k in range(64) if fl[k]] == PROD_IDS + CONS_IDS + [0x3D, 0x3E, 0x3F]
+assert o_[pc(I9.T_RDEF):pc(I9.T_RDEF) + 4] == b"\xFF" * 4 and out9[pc(I9.T_RDEF):pc(I9.T_RDEF) + 4] == b"\x1F\x00\x00\x00"
+print("PASS v0.9: production/celes-tech define $100-$126 (v0.8 records byte-identical) + consumables $127-$12E "
+      "(flags defined|consumable[|sellable], records = source); QA adds $13D-$13F and the rare fillers 25-51"); ok += 1
+# 48 v0.9 production vs accepted v0.8 production: only ITEMX (FA), F0 metadata, checksum, the 3 stub claims, the v0.9 hook
+#    sites and the operands of v0.7.1 hook sites whose stub routines moved
+claims = set()
+for c in ("ITEMX_C0_STUBS", "ITEMX_C2_STUBS", "ITEMX_C3_STUBS"):
+    cl = [x for x in alloc.claims if x["name"] == c][0]
+    claims |= set(range(pc(int(cl["snes_start"], 16)), pc(int(cl["snes_end"], 16)) + 1))
+sites9 = set()
+for h in H09:
+    a0 = pc(int(h["snes"], 16)); sites9 |= set(range(a0, a0 + len(bytes.fromhex(h["expect"]))))
+sites71 = {}
+for h in IHOOKS:
+    a0 = pc(int(h["snes"], 16)); sites71.update({a: h["id"] for a in range(a0, a0 + len(bytes.fromhex(h["expect"])))})
+d9 = [i for i in range(0x400000) if out9[i] != out8[i]]
+other = [hex(i) for i in d9 if not (0x3A0000 <= i < 0x3B0000 or 0x300000 <= i < 0x300040 or 0xFFDC <= i <= 0xFFDF or
+                                     i in claims or i in sites9 or i in sites71)]
+assert not other, other[:10]
+moved = sorted({sites71[i] for i in d9 if i in sites71})
+for h in IHOOKS:                                   # a moved v0.7.1 hook keeps its instruction (opcode), only the operand moves
+    a0 = pc(int(h["snes"], 16))
+    assert out9[a0] == out8[a0] or h["id"] in O09, h["id"]
+assert not set(sites9) & set(sites71), "v0.9 hook overlaps a v0.7.1 hook"
+print(f"PASS v0.9 production vs accepted v0.8 production: {len(d9)} bytes = FA tables/engine + metadata + checksum + stub "
+      f"claims + {len(H09)} v0.9 hook sites + operands of {len(moved)} v0.7.1 hooks (moved stubs; 2 overrides)"); ok += 1
+# 49 frozen v0.8 engine untouched by v0.9: rare event opcodes still the vanilla 'unused' entry in production-v0.8
+assert out8[pc(0xC0992C):pc(0xC0992C) + 2] == b"\x1A\xB9" and out9[pc(0xC0992C):pc(0xC0992C) + 2] != b"\x1A\xB9"
+print("PASS v0.9 event opcodes $69/$6D/$6E only in v0.9 targets (frozen v0.8 keeps the vanilla table entries)"); ok += 1
+# 50 v0.9 validators fail closed
+def bad_cons(mod):
+    j = _copy.deepcopy(cons9); mod(j); CV9.validate(j, clean, snes_to_pc)
+from ff6x.hirom import snes_to_pc
+expect_fail("cons9-7-items", lambda: bad_cons(lambda L: L.pop()), (SystemExit,))
+expect_fail("cons9-id-in-reserve", lambda: bad_cons(lambda L: L[7].update(id="12F")), (SystemExit,))
+expect_fail("cons9-dup-code", lambda: bad_cons(lambda L: L[1].update(code="CN-01")), (SystemExit,))
+expect_fail("cons9-stealable", lambda: bad_cons(lambda L: L[0].update(steal=True)), (SystemExit,))
+expect_fail("cons9-throwable", lambda: bad_cons(lambda L: L[0].update(throwable=True)), (SystemExit,))
+expect_fail("cons9-wager", lambda: bad_cons(lambda L: L[0].update(colosseum_wager=True)), (SystemExit,))
+expect_fail("cons9-sold-not-sellable", lambda: bad_cons(lambda L: L[0].update(sellable=False)), (SystemExit,))
+expect_fail("cons9-unknown-status", lambda: bad_cons(lambda L: L[5]["effect"]["status"].append("DOOM")), (SystemExit,))
+expect_fail("cons9-revive-without-hp", lambda: bad_cons(lambda L: L[2]["effect"].pop("restore_hp")), (SystemExit,))
+expect_fail("cons9-no-derived", lambda: bad_cons(lambda L: L[3].pop("derived")), (SystemExit,))
+_alias = bytearray(clean); _alias[0x185000 + 30 * 0x27] |= 0x20       # Blossom made battle-usable (test ROM copy)
+expect_fail("cons9-battle-usable-alias", lambda: CV9.validate(cons9, bytes(_alias), snes_to_pc), (SystemExit,))
+rare9 = json.load(open(os.path.join(HERE, "items/production_v09/rare_items.json")))["rare_items"]
+qa9 = json.load(open(os.path.join(HERE, "items/qa_v09/qa_rare_items.json")))["rare_items"]
+expect_fail("rare9-4-keys", lambda: CV9.validate_rare(rare9[:4], qa9), (SystemExit,))
+expect_fail("rare9-combat-stats", lambda: CV9.validate_rare([dict(rare9[0], combat_stats={"def": 5})] + rare9[1:], qa9), (SystemExit,))
+expect_fail("rare9-dup-id", lambda: CV9.validate_rare(rare9, qa9 + [dict(qa9[0])]), (SystemExit,))
+expect_fail("rare9-name-14", lambda: CV9.validate_rare([dict(rare9[0], display_name="Darill's Token")] + rare9[1:], qa9), (SystemExit,))
+expect_fail("rare9-qa-id-19", lambda: CV9.validate_rare(rare9, [dict(qa9[0], rare_id=19)] + qa9[1:]), (SystemExit,))
+expect_fail("shop9-equipment-sold", lambda: CV9.validate_shops([{"shop_id": "80", "items": ["100"]}], {0x127}), (SystemExit,))
+expect_fail("shop9-id-7F", lambda: CV9.validate_shops([{"shop_id": "7F", "items": []}], set()), (SystemExit,))
+expect_fail("give-rare-without-v09-engine", lambda: EventProgram(0xFF0000, {}, {}, ext_items=True).parse("give_rare 20"), (EventAsmError,))
+expect_fail("give-rare-id-52", lambda: EventProgram(0xFF0000, {}, {}, ext_items="v09").parse("give_rare 52"), (EventAsmError,))
+def qa_rare_in_prod():
+    m = dict(B.TARGETS["production"]); m["qa_harness"] = False
+    r = RomImage(clean, alloc, "production"); r.expand()
+    tabs, notes = I9.build_tables(r, m)
+    assert not any(v["qa"] for v in notes["_rare"].values())
+    raise SystemExit("ok: production carries no QA rare filler")
+expect_fail("production-has-no-qa-rare-filler", qa_rare_in_prod, (SystemExit,))
+print("PASS v0.9 validators fail closed (consumable count / ids / codes / exclusions / status / revive / derived / "
+      "battle-usable alias, rare count / stats / ids / names / QA range, shop content / ids, rare event API engine / ids)"); ok += 1
+# 51 saved-RAM allocations: inside the audited free bytes, no overlap
+sra = alloc.raw["saved_ram_allocations"]
+spans = []
+for a in sra:
+    lo, hi = [int(x, 16) & 0xFFFF for x in a["wram"].split("-")] if "-" in a["wram"] else [int(a["wram"], 16) & 0xFFFF] * 2
+    spans.append((lo, hi, a["name"]))
+    assert 0x1CF8 <= lo <= hi <= 0x1D27 or 0x1E1D <= lo <= hi <= 0x1E3F, a["name"]
+spans.sort()
+assert all(spans[k][1] < spans[k + 1][0] for k in range(len(spans) - 1)), spans
+print(f"PASS v0.9 saved-RAM allocations ({len(sra)} entries) inside the audited free bytes $1CF8-$1D27 / $1E1D-$1E3F, no overlap"); ok += 1
 print(f"ALL {ok} SELF-TESTS PASS")

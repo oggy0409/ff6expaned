@@ -1,0 +1,285 @@
+{
+ "_comment": "TECH v0.9 rare items: logical rare ids 0-19 vanilla, 20-24 the 5 locked key items, 25-51 reserved (32 FF6X ids = capacity). Locked: the 5 names.",
+ "vanilla": [
+  {
+   "rare_id": 0,
+   "name": "Cider",
+   "storage": "event bit $1D0",
+   "source": "vanilla (unchanged)"
+  },
+  {
+   "rare_id": 1,
+   "name": "Old Clock-Key",
+   "storage": "event bit $1D1",
+   "source": "vanilla (unchanged)"
+  },
+  {
+   "rare_id": 2,
+   "name": "Fish",
+   "storage": "event bit $1D2",
+   "source": "vanilla (unchanged)"
+  },
+  {
+   "rare_id": 3,
+   "name": "Fish",
+   "storage": "event bit $1D3",
+   "source": "vanilla (unchanged)"
+  },
+  {
+   "rare_id": 4,
+   "name": "Fish",
+   "storage": "event bit $1D4",
+   "source": "vanilla (unchanged)"
+  },
+  {
+   "rare_id": 5,
+   "name": "Fish",
+   "storage": "event bit $1D5",
+   "source": "vanilla (unchanged)"
+  },
+  {
+   "rare_id": 6,
+   "name": "Lump of Metal",
+   "storage": "event bit $1D6",
+   "source": "vanilla (unchanged)"
+  },
+  {
+   "rare_id": 7,
+   "name": "Lola's Letter",
+   "storage": "event bit $1D7",
+   "source": "vanilla (unchanged)"
+  },
+  {
+   "rare_id": 8,
+   "name": "Coral",
+   "storage": "event bit $1D8",
+   "source": "vanilla (unchanged)"
+  },
+  {
+   "rare_id": 9,
+   "name": "Books",
+   "storage": "event bit $1D9",
+   "source": "vanilla (unchanged)"
+  },
+  {
+   "rare_id": 10,
+   "name": "Royal Letter",
+   "storage": "event bit $1DA",
+   "source": "vanilla (unchanged)"
+  },
+  {
+   "rare_id": 11,
+   "name": "Rust-Rid",
+   "storage": "event bit $1DB",
+   "source": "vanilla (unchanged)"
+  },
+  {
+   "rare_id": 12,
+   "name": "Autograph",
+   "storage": "event bit $1DC",
+   "source": "vanilla (unchanged)"
+  },
+  {
+   "rare_id": 13,
+   "name": "Manicure",
+   "storage": "event bit $1DD",
+   "source": "vanilla (unchanged)"
+  },
+  {
+   "rare_id": 14,
+   "name": "Opera Record",
+   "storage": "event bit $1DE",
+   "source": "vanilla (unchanged)"
+  },
+  {
+   "rare_id": 15,
+   "name": "Magn.Glass",
+   "storage": "event bit $1DF",
+   "source": "vanilla (unchanged)"
+  },
+  {
+   "rare_id": 16,
+   "name": "Eerie Stone",
+   "storage": "event bit $1E0",
+   "source": "vanilla (unchanged)"
+  },
+  {
+   "rare_id": 17,
+   "name": "Odd Picture",
+   "storage": "event bit $1E1",
+   "source": "vanilla (unchanged)"
+  },
+  {
+   "rare_id": 18,
+   "name": "Dull Picture",
+   "storage": "event bit $1E2",
+   "source": "vanilla (unchanged)"
+  },
+  {
+   "rare_id": 19,
+   "name": "Pendant",
+   "storage": "event bit $1E3",
+   "source": "vanilla (unchanged)"
+  }
+ ],
+ "ff6x": [
+  {
+   "rare_id": 20,
+   "code": "KI-01",
+   "symbol": "KEY_DARILLS_TOKEN",
+   "locked_name": "Darill's Token",
+   "display_name": "Darill'sToken",
+   "description": "A token of Darill, kept / aboard the Falcon.",
+   "story_arc": "Setzer arc (Darill)",
+   "acquisition": {
+    "planned_source": "Setzer arc: Darill's tomb / Falcon",
+    "future_event_symbol": "EV_RARE_DARILLS_TOKEN",
+    "prerequisite_flags": [
+     "PREREQ_SETZER_ARC"
+    ],
+    "one_time": true
+   },
+   "consumed": "no",
+   "ending_dependency": "none",
+   "combat_stats": null,
+   "storage": "XRARE $1E1D bit 0",
+   "event_api": {
+    "give": "$69 14",
+    "take": "$6D 14",
+    "has": "$6E 14 sl sh"
+   },
+   "derived": [
+    "story arc + source from the name",
+    "display name Darill'sToken (13-char rare-name field)",
+    "description"
+   ]
+  },
+  {
+   "rare_id": 21,
+   "code": "KI-02",
+   "symbol": "KEY_CONCORD_SIGIL",
+   "locked_name": "Concord Sigil",
+   "display_name": "Concord Sigil",
+   "description": "Sigil of the Sanctuary / of Concord.",
+   "story_arc": "Sanctuary of Concord arc",
+   "acquisition": {
+    "planned_source": "Sanctuary of Concord",
+    "future_event_symbol": "EV_RARE_CONCORD_SIGIL",
+    "prerequisite_flags": [
+     "PREREQ_SANCTUARY_OF_CONCORD"
+    ],
+    "one_time": true
+   },
+   "consumed": "no",
+   "ending_dependency": "Triune Sigil prerequisite",
+   "combat_stats": null,
+   "storage": "XRARE $1E1D bit 1",
+   "event_api": {
+    "give": "$69 15",
+    "take": "$6D 15",
+    "has": "$6E 15 sl sh"
+   },
+   "derived": [
+    "source from the name (Sanctuary of Concord is a locked equipment source)",
+    "description"
+   ]
+  },
+  {
+   "rare_id": 22,
+   "code": "KI-03",
+   "symbol": "KEY_CINDER_SIGIL",
+   "locked_name": "Cinder Sigil",
+   "display_name": "Cinder Sigil",
+   "description": "A sigil warm as / smoldering cinders.",
+   "story_arc": "arc TBD (Cinder)",
+   "acquisition": {
+    "planned_source": "arc design (source not recovered)",
+    "future_event_symbol": "EV_RARE_CINDER_SIGIL",
+    "prerequisite_flags": [
+     "PREREQ_TBD_ARC_DESIGN"
+    ],
+    "one_time": true
+   },
+   "consumed": "no",
+   "ending_dependency": "Triune Sigil prerequisite",
+   "combat_stats": null,
+   "storage": "XRARE $1E1D bit 2",
+   "event_api": {
+    "give": "$69 16",
+    "take": "$6D 16",
+    "has": "$6E 16 sl sh"
+   },
+   "derived": [
+    "story arc / source unknown (TBD)",
+    "description"
+   ]
+  },
+  {
+   "rare_id": 23,
+   "code": "KI-04",
+   "symbol": "KEY_TRIUNE_SIGIL",
+   "locked_name": "Triune Sigil",
+   "display_name": "Triune Sigil",
+   "description": "Three sigils made one.",
+   "story_arc": "reconstruction / finale",
+   "acquisition": {
+    "planned_source": "joins the Concord and Cinder sigils",
+    "future_event_symbol": "EV_RARE_TRIUNE_SIGIL",
+    "prerequisite_flags": [
+     "HAS_RARE KEY_CONCORD_SIGIL",
+     "HAS_RARE KEY_CINDER_SIGIL"
+    ],
+    "one_time": true
+   },
+   "consumed": "no (the two sigils are kept: consumption not locked)",
+   "ending_dependency": "ending / reconstruction dependency",
+   "combat_stats": null,
+   "storage": "XRARE $1E1D bit 3",
+   "event_api": {
+    "give": "$69 17",
+    "take": "$6D 17",
+    "has": "$6E 17 sl sh"
+   },
+   "derived": [
+    "prerequisite = both sigils (read from 'Triune')",
+    "no consumption of the two sigils (not locked)",
+    "description"
+   ]
+  },
+  {
+   "rare_id": 24,
+   "code": "KI-05",
+   "symbol": "KEY_BROKEN_SEAL",
+   "locked_name": "Broken Seal",
+   "display_name": "Broken Seal",
+   "description": "A broken seal. Its power / is spent.",
+   "story_arc": "finale / reconstruction",
+   "acquisition": {
+    "planned_source": "late story (World of Ruin)",
+    "future_event_symbol": "EV_RARE_BROKEN_SEAL",
+    "prerequisite_flags": [
+     "PREREQ_TBD_ARC_DESIGN"
+    ],
+    "one_time": true
+   },
+   "consumed": "no",
+   "ending_dependency": "ending / reconstruction dependency",
+   "combat_stats": null,
+   "storage": "XRARE $1E1D bit 4",
+   "event_api": {
+    "give": "$69 18",
+    "take": "$6D 18",
+    "has": "$6E 18 sl sh"
+   },
+   "derived": [
+    "story placement",
+    "description"
+   ]
+  }
+ ],
+ "reserved": {
+  "ids": "25-51",
+  "count": 27,
+  "qa_fillers": "items/qa_v09/qa_rare_items.json (QA build only)"
+ }
+}

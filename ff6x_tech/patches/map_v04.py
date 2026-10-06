@@ -80,7 +80,8 @@ def dialogue(rom, pkgs, diag):
     if qa:
         fw = rom.clean[snes_to_pc(FONT_WIDTH_SNES):snes_to_pc(FONT_WIDTH_SNES) + 256]
         ptrs = bytearray()
-        at = 0xFF0800                     # QA_HARNESS: events at FF:0000, QA text at FF:0800+
+        # QA_HARNESS: events at FF:0000, QA text at FF:0800+ (a package may move it: "dlg_org", TECH v0.9 FF:1000)
+        at = int(next((p["dlg_org"] for p in pkgs if p.get("qa") and p.get("dlg_org")), "FF0800"), 16)
         for k, (label, text) in enumerate(qa):
             data = encode_dialogue(text)
             lw = line_widths(data, fw)

@@ -1,0 +1,49 @@
+{
+ "_comment": "TECH v0.9 extended shops (XShopProp ids $80+, 8 entries each, 9-bit item ids). Vanilla shops $00-$7F are copied byte-exact.",
+ "shops": [
+  {
+   "shop_id": "80",
+   "symbol": "EXT_SHOP_REBUILT_GENERAL",
+   "type": 3,
+   "price_mod": 0,
+   "items": [
+    "127",
+    "12B",
+    "12A",
+    "E9",
+    "EB",
+    "F0",
+    "F5",
+    "F7"
+   ],
+   "note": "rebuilt general store: Gaia Tonic, Iron Ration, Null Dust + vanilla Potion, Tincture, Fenix Down, Remedy, Tent",
+   "derived": [
+    "composition",
+    "shop id $80",
+    "placement (future World of Ruin reconstruction event)"
+   ]
+  },
+  {
+   "shop_id": "81",
+   "symbol": "EXT_SHOP_REBUILT_LATE",
+   "type": 3,
+   "price_mod": 0,
+   "items": [
+    "12C",
+    "127",
+    "12B",
+    "12A",
+    "E9",
+    "F0",
+    "F5",
+    "FD"
+   ],
+   "note": "rebuilt late store: Remedy+ (late game) + the general consumables + vanilla Potion, Fenix Down, Remedy, Warp Stone",
+   "derived": [
+    "composition",
+    "shop id $81",
+    "placement (future late reconstruction event)"
+   ]
+  }
+ ]
+}

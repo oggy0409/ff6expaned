@@ -17,22 +17,41 @@ from ff6x.hirom import pc_to_snes, fmt_snes
 from ff6x.patchfmt import make_ips, apply_ips, make_bps, apply_bps
 from ff6x.romimage import RomImage, load_clean_rom, sha1, crc32, md5, BuildError
 
-BUILD_VERSION = "0.8.0"   # TECH v0.8: complete signature equipment population ($100-$126)
-FILE_VER = "0.8"
+BUILD_VERSION = "0.9.0"   # TECH v0.9: extended consumables ($127-$12E) + extended shops + FF6X rare items (capacity 32)
+FILE_VER = "0.9"
 PROD_ITEMS = "items/production_v08/equipment.json"
 ENGINE_V08 = "asm/item_v08"     # v0.7.1 engine + v0.8 B-accumulator reset (R32); frozen v0.7.x targets keep asm/item_v071
 
 TARGETS = {
-    # ---- TECH v0.8 (current; USER RUNTIME PASS - pinned, must reproduce exactly) ---------------------
+    # ---- TECH v0.9 (current; USER RUNTIME QA PENDING) ------------------------------------------------
     "production":  {"file": f"FF6X_Rev1_TECH_v{FILE_VER}_PRODUCTION", "version": BUILD_VERSION, "kind": "v07",
+                    "packages": [], "monsters": [], "formations": [], "ext_item_sources": [PROD_ITEMS],
+                    "item_builder": "v09",
+                    "status": "PRODUCTION BRANCH v0.9 - v0.8 + 8 extended consumables ($127-$12E), extended shops, FF6X rare items"},
+    "celes-tech":  {"file": f"FF6X_Rev1_TECH_v{FILE_VER}_CELES_TECH", "version": BUILD_VERSION, "kind": "v07",
+                    "packages": ["celes_annex_tech"], "monsters": [], "formations": [], "ext_item_sources": [PROD_ITEMS],
+                    "item_builder": "v09",
+                    "status": "production v0.9 + accepted Celes Annex slice"},
+    "item-tech":   {"file": f"FF6X_Rev1_TECH_v{FILE_VER}_CONSUMABLE_RARE_QA", "version": BUILD_VERSION, "kind": "v07",
+                    "packages": ["celes_annex_tech", "map_tech_v04", "qa_access_v09"],
+                    "monsters": ["tech6_0180", "tech6_0181", "tech6_0182", "tech6_0183"],
+                    "formations": ["tech6_0240", "tech6_0241", "tech61_0242", "tech61_0243"],
+                    "qa_overrides": "formations/qa_v061.json", "qa_harness": True,
+                    "ext_item_sources": [PROD_ITEMS, "items/qa_v071/qa_items.json"],
+                    "item_builder": "v09",
+                    "formation_safety": "report",
+                    "formation_safety_reason": "v0.6.1 QA formations carried unchanged for regression ($242 slot 0 known non-blocking)",
+                    "status": "TECH v0.9 QA BUILD (consumables + rare items + 39 signature equipment + QA hub) - USER RUNTIME QA PENDING"},
+    # ---- TECH v0.8 frozen (USER RUNTIME PASS, must reproduce exactly) --------------------------------
+    "production-v0.8": {"file": "FF6X_Rev1_TECH_v0.8_PRODUCTION", "version": "0.8.0", "kind": "v07", "meta_target": "production",
                     "packages": [], "monsters": [], "formations": [], "ext_item_sources": [PROD_ITEMS],
                     "status": "PRODUCTION BRANCH v0.8 - v0.7.2 item engine (+ v0.8 B-reset fix) + 39 signature equipment items ($100-$126)", "engine_asm": ENGINE_V08,
                     "expect_sha1": "1091d0779c5278f40c6e74648dbfb8cb2ce6818b", "expect_crc32": "2F5FB45A"},
-    "celes-tech":  {"file": f"FF6X_Rev1_TECH_v{FILE_VER}_CELES_TECH", "version": BUILD_VERSION, "kind": "v07",
+    "celes-tech-v0.8": {"file": "FF6X_Rev1_TECH_v0.8_CELES_TECH", "version": "0.8.0", "kind": "v07", "meta_target": "celes-tech",
                     "packages": ["celes_annex_tech"], "monsters": [], "formations": [], "ext_item_sources": [PROD_ITEMS],
                     "status": "production v0.8 + accepted Celes Annex slice", "engine_asm": ENGINE_V08,
                     "expect_sha1": "e8a96146507f4587f75344f5cea2781ed02e6b72", "expect_crc32": "332238AF"},
-    "item-tech":   {"file": f"FF6X_Rev1_TECH_v{FILE_VER}_EQUIPMENT_QA", "version": BUILD_VERSION, "kind": "v07",
+    "item-tech-v0.8": {"file": "FF6X_Rev1_TECH_v0.8_EQUIPMENT_QA", "version": "0.8.0", "kind": "v07", "meta_target": "item-tech",
                     "packages": ["celes_annex_tech", "map_tech_v04", "qa_access_v08"],
                     "monsters": ["tech6_0180", "tech6_0181", "tech6_0182", "tech6_0183"],
                     "formations": ["tech6_0240", "tech6_0241", "tech61_0242", "tech61_0243"],
@@ -40,7 +59,7 @@ TARGETS = {
                     "ext_item_sources": [PROD_ITEMS, "items/qa_v071/qa_items.json"],
                     "formation_safety": "report",
                     "formation_safety_reason": "v0.6.1 QA formations carried unchanged for regression ($242 slot 0 known non-blocking)",
-                    "status": "TECH v0.8 QA BUILD (39 production signature equipment + QA grant menus) - USER RUNTIME QA PENDING", "engine_asm": ENGINE_V08,
+                    "status": "TECH v0.8 QA BUILD (39 production signature equipment + QA grant menus) - USER RUNTIME PASS", "engine_asm": ENGINE_V08,
                     "expect_sha1": "498d62c47477a91d6df7b4619f76bb03e7a1fbb5", "expect_crc32": "4A8A7533"},
     # ---- TECH v0.7.2 / v0.7.3 frozen (runtime accepted, must reproduce exactly) ---------------------
     "production-v0.7.2": {"file": "FF6X_Rev1_TECH_v0.7.2_PRODUCTION", "version": "0.7.2", "kind": "v07", "meta_target": "production",
@@ -153,7 +172,7 @@ def build_target(clean, alloc, target):
         rom.expand()
         core.p001_build_metadata(rom, meta.get("meta_target", target), meta["version"])
         notes.update(map_v04.build(rom, target, alloc, RESERVED_DIAGNOSTIC, packages=meta["packages"],
-                                   ext_items=(kind == "v07")))
+                                   ext_items=("v09" if meta.get("item_builder") == "v09" else kind == "v07")))
         if kind == "v05":
             from patches import monster_v05
             notes["monster_foundation"] = monster_v05.build(rom, target, alloc, meta)
@@ -163,8 +182,12 @@ def build_target(clean, alloc, target):
             notes["monster_foundation"] = monster_v05.build(rom, target, alloc, meta, gfx_override=prep.gfx_props)
             notes["enemy_foundation"] = enemy_v06.build(rom, target, alloc, meta, prep)
         if kind == "v07":
-            from patches import item_v071
-            notes["item_bank"] = item_v071.build(rom, target, alloc, meta)
+            if meta.get("item_builder") == "v09":
+                from patches import item_v09
+                notes["item_bank"] = item_v09.build(rom, target, alloc, meta)
+            else:
+                from patches import item_v071
+                notes["item_bank"] = item_v071.build(rom, target, alloc, meta)
     else:
         from patches import core, dialogue_hook
         rom.expand()
@@ -228,7 +251,7 @@ def write_outputs(clean, rom, out, chk, notes, target, outdir):
              "ips": {"file": os.path.basename(base + ".ips"), "sha1": sha1(ips)},
              "bps": {"file": os.path.basename(base + ".bps"), "sha1": sha1(bps)},
              "input": {"sha1": sha1(clean), "crc32": crc32(clean)},
-             "static_pass": True, "qa_harness_only": bool(meta.get("qa_harness")), "runtime": {"legacy-v0.1": "VERIFIED (as TECH v0.1)", "evtest": "VERIFIED (as TECH v0.2)", "celes-tech-v0.3.0": "VERIFIED (TECH v0.3 accepted via v0.3.1 QA harness)", "celes-qa-v0.3.1": "VERIFIED (user QA of v0.3.1)", "map-tech-v0.4.0": "VERIFIED (TECH v0.4 accepted)", "celes-tech-v0.4.0": "VERIFIED via map-tech v0.4 QA", "production-v0.4.0": "engine of accepted v0.4", "monster-tech-v0.5.0": "VERIFIED (TECH v0.5 accepted)", "celes-tech-v0.5.0": "engine of accepted v0.5", "production-v0.5.0": "engine of accepted v0.5", "monster-tech-v0.6.1": "VERIFIED (TECH v0.6.1 accepted)", "production-v0.6.0": "engine of accepted v0.6.1", "celes-tech-v0.6.0": "engine of accepted v0.6.1 + accepted Annex slice", "monster-tech-v0.6.0": "NOT ACCEPTED (superseded by v0.6.1)"}.get(target, "PENDING USER QA")}
+             "static_pass": True, "qa_harness_only": bool(meta.get("qa_harness")), "runtime": {"legacy-v0.1": "VERIFIED (as TECH v0.1)", "evtest": "VERIFIED (as TECH v0.2)", "celes-tech-v0.3.0": "VERIFIED (TECH v0.3 accepted via v0.3.1 QA harness)", "celes-qa-v0.3.1": "VERIFIED (user QA of v0.3.1)", "map-tech-v0.4.0": "VERIFIED (TECH v0.4 accepted)", "celes-tech-v0.4.0": "VERIFIED via map-tech v0.4 QA", "production-v0.4.0": "engine of accepted v0.4", "monster-tech-v0.5.0": "VERIFIED (TECH v0.5 accepted)", "celes-tech-v0.5.0": "engine of accepted v0.5", "production-v0.5.0": "engine of accepted v0.5", "monster-tech-v0.6.1": "VERIFIED (TECH v0.6.1 accepted)", "production-v0.6.0": "engine of accepted v0.6.1", "celes-tech-v0.6.0": "engine of accepted v0.6.1 + accepted Annex slice", "monster-tech-v0.6.0": "NOT ACCEPTED (superseded by v0.6.1)", "production-v0.8": "VERIFIED (TECH v0.8 accepted)", "celes-tech-v0.8": "engine of accepted v0.8 + accepted Annex slice", "item-tech-v0.8": "VERIFIED (TECH v0.8 user runtime PASS)"}.get(target, "PENDING USER QA")}
     diff = {"identity": ident,
             "patches": rom.records,
             "placements": [{"region": r, "label": l, "patch_id": p, "pc_start": f"{a:06X}", "pc_end": f"{b:06X}",

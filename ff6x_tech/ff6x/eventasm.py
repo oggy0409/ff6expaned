@@ -36,6 +36,10 @@ Source syntax (one command per line, '#' comments):
     give_ext_item <id $100-$13F>               # event cmd $66 lo hi   (XC0_Ev66 -> XGiveExt)
     take_ext_item <id $100-$13F>               # event cmd $67 lo hi   (XC0_Ev67 -> XTakeExt)
     has_ext_item <id $100-$13F> -> <BIT_NAME>  # event cmd $68 lo hi sw (XC0_Ev68 -> XHasExt: bit := owned)
+  TECH v0.9 rare-item API (only with the v0.9 item engine, ext_items="v09"):
+    give_rare <rare id 0-51>                   # event cmd $69 id      (XC0_Ev69 -> XRareGive)
+    take_rare <rare id 0-51>                   # event cmd $6D id      (XC0_Ev6D -> XRareTake)
+    has_rare <rare id 0-51> -> <BIT_NAME>      # event cmd $6E id sw   (XC0_Ev6E -> XRareHas: bit := owned)
 """
 from .hirom import event_offset
 
@@ -227,6 +231,25 @@ class EventProgram:
                 if lab:
                     raise EventAsmError(f"{op} takes no switch")
                 self._emit(line, [0x66 if op == "give_ext_item" else 0x67, i & 0xFF, i >> 8])
+        elif op in ("give_rare", "take_rare", "has_rare"):
+            if self.ext_items != "v09":
+                raise EventAsmError(f"{op} needs the TECH v0.9 item engine (event opcodes $69 / $6D / $6E)")
+            ids, _, lab = args.partition("->")
+            i = _num(ids)
+            if not 0 <= i <= 51:
+                raise EventAsmError(f"{op}: rare id must be 0-51")
+            if op == "has_rare":
+                name = lab.strip()
+                if name in self.readonly:
+                    raise EventAsmError(f"{name} is a vanilla read-only bit; project scripts may not write it")
+                b = self._bit(name)
+                if b > 0x6FF:
+                    raise EventAsmError("switch out of range")
+                self._emit(line, [0x6E, i, b & 0xFF, b >> 8])
+            else:
+                if lab:
+                    raise EventAsmError(f"{op} takes no switch")
+                self._emit(line, [0x69 if op == "give_rare" else 0x6D, i])
         else:
             raise EventAsmError(f"unsupported command '{op}'")
 

@@ -231,7 +231,11 @@ def phase_save(rom, out):
             ok and st["formation"] == f"{fid:03X}" and st["ids"] == ids_exp and st["pals"] == pals_exp and all(exact.values())
             and won and h.r16(0x82) == 0x013, **st)
     walk(h, "LEFT", 1)
-    d = choose(h, out, "15_qa_no", 2); idle(h); h.step(30)
+    # TECH v0.9: the Save Point is two levels down in the v0.9 QA hub; FF6X_QA_SAVE_PICKS="2,2,1" (unset: top choice 2)
+    sp = [int(x) for x in os.environ.get("FF6X_QA_SAVE_PICKS", "2").split(",") if x.strip()]
+    for n in sp[:-1]:
+        M.choose_once(h, n)
+    d = choose(h, out, "15_qa_no", sp[-1]); idle(h); h.step(30)
     R["before_save"] = {"gil": M.gil(h), "inv": {f"{k:02X}": v for k, v in M.inv(h).items()}, "map": f"{h.r16(0x82):03X}",
                         "pos": list(pos(h)), "esper": h.r8(0x161E), "learn": learn(h)}
     menu_save(h, out, "15")

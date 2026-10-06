@@ -40,6 +40,8 @@ MENU_CH = {}
 for _i, _c in enumerate("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"):
     MENU_CH[_c] = 0x80 + _i
 MENU_CH.update({"/": 0xC0, "'": 0xC3, "-": 0xC4, ".": 0xC5, ",": 0xC6, "%": 0xCD})
+# TECH v0.9: further menu-font punctuation (texts that encoded before are unchanged)
+MENU_CH.update({"!": 0xBE, "?": 0xBF, ":": 0xC1, ";": 0xC8, "#": 0xC9, "+": 0xCA, "(": 0xCB, ")": 0xCC})
 
 
 def menu_encode(text, space):

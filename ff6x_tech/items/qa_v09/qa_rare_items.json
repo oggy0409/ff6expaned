@@ -1,0 +1,195 @@
+{
+ "qa": true,
+ "_comment": "TECH v0.9 QA-only rare item placeholders (rare ids 25-51) that fill the FF6X rare registry to its 32-entry capacity (52 logical rare ids with the 20 vanilla ones) to prove menu paging and storage at runtime. Never built into production / celes-tech.",
+ "rare_items": [
+  {
+   "rare_id": 25,
+   "code": "QA-R25",
+   "symbol": "QA_RARE_25",
+   "display_name": "QA Rare 25",
+   "desc": "QA filler 25{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 26,
+   "code": "QA-R26",
+   "symbol": "QA_RARE_26",
+   "display_name": "QA Rare 26",
+   "desc": "QA filler 26{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 27,
+   "code": "QA-R27",
+   "symbol": "QA_RARE_27",
+   "display_name": "QA Rare 27",
+   "desc": "QA filler 27{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 28,
+   "code": "QA-R28",
+   "symbol": "QA_RARE_28",
+   "display_name": "QA Rare 28",
+   "desc": "QA filler 28{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 29,
+   "code": "QA-R29",
+   "symbol": "QA_RARE_29",
+   "display_name": "QA Rare 29",
+   "desc": "QA filler 29{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 30,
+   "code": "QA-R30",
+   "symbol": "QA_RARE_30",
+   "display_name": "QA Rare 30",
+   "desc": "QA filler 30{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 31,
+   "code": "QA-R31",
+   "symbol": "QA_RARE_31",
+   "display_name": "QA Rare 31",
+   "desc": "QA filler 31{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 32,
+   "code": "QA-R32",
+   "symbol": "QA_RARE_32",
+   "display_name": "QA Rare 32",
+   "desc": "QA filler 32{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 33,
+   "code": "QA-R33",
+   "symbol": "QA_RARE_33",
+   "display_name": "QA Rare 33",
+   "desc": "QA filler 33{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 34,
+   "code": "QA-R34",
+   "symbol": "QA_RARE_34",
+   "display_name": "QA Rare 34",
+   "desc": "QA filler 34{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 35,
+   "code": "QA-R35",
+   "symbol": "QA_RARE_35",
+   "display_name": "QA Rare 35",
+   "desc": "QA filler 35{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 36,
+   "code": "QA-R36",
+   "symbol": "QA_RARE_36",
+   "display_name": "QA Rare 36",
+   "desc": "QA filler 36{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 37,
+   "code": "QA-R37",
+   "symbol": "QA_RARE_37",
+   "display_name": "QA Rare 37",
+   "desc": "QA filler 37{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 38,
+   "code": "QA-R38",
+   "symbol": "QA_RARE_38",
+   "display_name": "QA Rare 38",
+   "desc": "QA filler 38{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 39,
+   "code": "QA-R39",
+   "symbol": "QA_RARE_39",
+   "display_name": "QA Rare 39",
+   "desc": "QA filler 39{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 40,
+   "code": "QA-R40",
+   "symbol": "QA_RARE_40",
+   "display_name": "QA Rare 40",
+   "desc": "QA filler 40{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 41,
+   "code": "QA-R41",
+   "symbol": "QA_RARE_41",
+   "display_name": "QA Rare 41",
+   "desc": "QA filler 41{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 42,
+   "code": "QA-R42",
+   "symbol": "QA_RARE_42",
+   "display_name": "QA Rare 42",
+   "desc": "QA filler 42{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 43,
+   "code": "QA-R43",
+   "symbol": "QA_RARE_43",
+   "display_name": "QA Rare 43",
+   "desc": "QA filler 43{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 44,
+   "code": "QA-R44",
+   "symbol": "QA_RARE_44",
+   "display_name": "QA Rare 44",
+   "desc": "QA filler 44{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 45,
+   "code": "QA-R45",
+   "symbol": "QA_RARE_45",
+   "display_name": "QA Rare 45",
+   "desc": "QA filler 45{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 46,
+   "code": "QA-R46",
+   "symbol": "QA_RARE_46",
+   "display_name": "QA Rare 46",
+   "desc": "QA filler 46{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 47,
+   "code": "QA-R47",
+   "symbol": "QA_RARE_47",
+   "display_name": "QA Rare 47",
+   "desc": "QA filler 47{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 48,
+   "code": "QA-R48",
+   "symbol": "QA_RARE_48",
+   "display_name": "QA Rare 48",
+   "desc": "QA filler 48{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 49,
+   "code": "QA-R49",
+   "symbol": "QA_RARE_49",
+   "display_name": "QA Rare 49",
+   "desc": "QA filler 49{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 50,
+   "code": "QA-R50",
+   "symbol": "QA_RARE_50",
+   "display_name": "QA Rare 50",
+   "desc": "QA filler 50{n}(capacity test, QA build only)"
+  },
+  {
+   "rare_id": 51,
+   "code": "QA-R51",
+   "symbol": "QA_RARE_51",
+   "display_name": "QA Rare 51",
+   "desc": "QA filler 51{n}(capacity test, QA build only)"
+  }
+ ]
+}
