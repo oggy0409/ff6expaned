@@ -1,6 +1,6 @@
 # FF6 Expanded Edition — TECH v0.8: COMPLETE SIGNATURE EQUIPMENT POPULATION
 
-**STATIC PASS · EMULATOR PASS · USER RUNTIME QA PENDING** — one consolidated package for one user runtime QA pass.
+**STATIC PASS · EMULATOR PASS · USER RUNTIME PASS** — accepted baseline (user runtime QA: all 39 items, equip restrictions / stats, battle / boss graphics, Optimum / Empty / Arrange, save / load, Sell / Colosseum exclusion, smith: PASS). The builder pins the three v0.8 SHA-1s.
 Baseline: v0.7.2 production item/equipment engine and v0.7.3 QA harness (both user-runtime accepted).
 
 ## Result

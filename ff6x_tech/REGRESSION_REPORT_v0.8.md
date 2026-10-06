@@ -107,4 +107,4 @@ $242 slot 0 the known non-blocking placement).
 | Leaving the Relic menu with Genji Glove re-arranges the hands (vanilla) | documented (R28, user guide step 16) |
 | The boss test battle (vanilla event battle 64, Whelk) shows its scripted "VICKS: Hold it!" line | vanilla script text, expected |
 
-**STATIC PASS · EMULATOR PASS · USER RUNTIME QA PENDING.**
+**STATIC PASS · EMULATOR PASS · USER RUNTIME PASS** (user report: 39 items OK; equip restrictions / stats OK; battle / boss graphics OK; Optimum / Empty / Arrange OK; save / load OK; Sell / Colosseum exclusion OK; smith OK).
