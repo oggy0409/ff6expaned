@@ -29,6 +29,9 @@ Source syntax (one command per line, '#' comments):
     char_name <char $00-$0F> <name $hex>       # event cmd $7F (EventCmd_7f: character name)
     create_obj <obj $00-$0F> / delete_obj <obj $00-$0F>   # event cmd $3D / $3E
     char_party <char $00-$0F> <party 0-7>      # event cmd $3F (EventCmd_3f: 0 = remove from party)
+  TECH v0.8 (vanilla commands):
+    give_gp <amount 1-65535> / take_gp <amount 1-65535>   # event cmd $84 / $85 ($85 sets vanilla switch $1BE if short)
+    loop <count 1-254> / end_loop              # event cmd $B0 count / $B1
   TECH v0.7.1 extended-item API (only when the target carries the item engine, ext_items=True):
     give_ext_item <id $100-$13F>               # event cmd $66 lo hi   (XC0_Ev66 -> XGiveExt)
     take_ext_item <id $100-$13F>               # event cmd $67 lo hi   (XC0_Ev67 -> XTakeExt)
@@ -188,6 +191,18 @@ class EventProgram:
             if not (0 <= c <= 0x0F and 0 <= v <= lim):
                 raise EventAsmError(f"{op}: character/object $00-$0F, operand <= ${lim:02X}")
             self._emit(line, [{"char_prop": 0x40, "obj_gfx": 0x37, "char_name": 0x7F, "char_party": 0x3F}[op], c, v])
+        elif op in ("give_gp", "take_gp"):
+            v = _num(args)
+            if not 1 <= v <= 0xFFFF:
+                raise EventAsmError(f"{op}: amount 1-65535")
+            self._emit(line, [0x84 if op == "give_gp" else 0x85, v & 0xFF, v >> 8])
+        elif op == "loop":
+            v = _num(args)
+            if not 1 <= v <= 0xFE:
+                raise EventAsmError("loop count 1-254 ($FF = loop-until-bit is not supported)")
+            self._emit(line, [0xB0, v])
+        elif op == "end_loop":
+            self._emit(line, [0xB1])
         elif op in ("create_obj", "delete_obj"):
             c = _num(args)
             if not 0 <= c <= 0x0F:

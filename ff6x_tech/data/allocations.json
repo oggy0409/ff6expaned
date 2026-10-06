@@ -30,7 +30,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "no_bank_cross": true,
    "purpose": "Build identification block (signature, framework version, target id). Consumer: tools/verify.py only; no game code reads it."
@@ -58,7 +61,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Reserved. Kept empty so the TECH v0.1 legacy layout (F0:0000-F0:011F) never aliases production code/data."
   },
@@ -85,7 +91,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "no_bank_cross": true,
    "purpose": "New 65816 routines / hook bodies (JML targets from vanilla banks)."
@@ -113,7 +122,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "no_bank_cross": true,
    "purpose": "Engine lookup tables (future: relocated map/monster pointer tables)."
@@ -141,7 +153,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "New event scripts. Reachable natively by 24-bit event operands ($B2 call, $C0-$CF jumps): bank = operand_hi + $CA."
   },
@@ -168,7 +183,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "no_bank_cross": true,
    "purpose": "Expansion dialogue pointer table: 4096 entries x 4 bytes (lo, hi, bank, 0) for dialogue IDs $1000-$1FFF."
@@ -196,7 +214,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "no_string_bank_cross": true,
    "purpose": "Expansion dialogue strings (vanilla dialogue encoding, DTE-free)."
@@ -224,7 +245,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "no_bank_cross": true,
    "purpose": "Compressed (FF6 LZSS) BG layouts referenced by the 3-byte SubTilemap pointer table (D9:CD90, offsets relative to D9:D1B0; 24-bit add reaches F5). v0.4: all new layouts (indices $15F-$3FF via MAPX_SUBTILEMAP_PTRS)."
@@ -261,7 +285,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Relocated event-trigger table: 513 x 16-bit ptrs (rel. to table start) + 5-byte records. 12 consumers retargeted.",
    "no_bank_cross": true
@@ -285,7 +312,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Relocated NPC table: 513 ptrs + 9-byte records. 21 consumers retargeted.",
    "no_bank_cross": true
@@ -309,7 +339,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Relocated short entrances: 513 ptrs + 6-byte records. 19 consumers (13 field, 6 world).",
    "no_bank_cross": true
@@ -333,7 +366,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Relocated long entrances: 513 ptrs + 7-byte records. 19 consumers.",
    "no_bank_cross": true
@@ -357,7 +393,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Relocated treasure table: 513 ptrs (relative to record data) + 5-byte records. 12 consumers.",
    "no_bank_cross": true
@@ -381,7 +420,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Relocated map properties: 512 rows x 33 bytes (maps $000-$1FF). 1 consumer (LoadMapProp).",
    "no_bank_cross": true
@@ -405,7 +447,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Relocated layout pointer table: 1024 x 3-byte offsets from D9:D1B0 (10-bit layout index). 6 consumers.",
    "no_bank_cross": true
@@ -429,7 +474,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "NPC event vector table: 3-byte SNES addresses, indexed by NPC records whose 18-bit event field is $3xxxx (non-special NPCs). Consumer: M300 router.",
    "no_bank_cross": true
@@ -453,7 +501,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Reserved for future map-table growth.",
    "no_bank_cross": true
@@ -490,7 +541,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Monster stats: 512 x 32 B (IDs $000-$1FF). Vanilla $000-$17F copied. 25 consumers.",
    "no_bank_cross": true
@@ -511,7 +565,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Monster names: 512 x 10 B. 6 consumers (4 long, 2 immediates).",
    "no_bank_cross": true
@@ -532,7 +589,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Monster special-attack names: 512 x 10 B. 2 immediate consumers (bank + near base).",
    "no_bank_cross": true
@@ -553,7 +613,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Steal/drop: 512 x 4 B. 2 consumers.",
    "no_bank_cross": true
@@ -574,7 +637,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Control/muddled attacks: 512 x 4 B. 3 consumers.",
    "no_bank_cross": true
@@ -595,7 +661,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Sketch attacks: 512 x 2 B. 1 consumer.",
    "no_bank_cross": true
@@ -616,7 +685,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Special attack animation: 512 x 1 B. 2 consumers.",
    "no_bank_cross": true
@@ -637,7 +709,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Sprite-priority overlap shift: 512 x 1 B. 1 consumer.",
    "no_bank_cross": true
@@ -658,7 +733,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Graphics properties: slots $000-$19F vanilla (monsters + espers/Imp), slots $1A0-$21E = monsters $180-$1FE (remapped by hooks N301/N302). 15 consumers.",
    "no_bank_cross": true
@@ -679,7 +757,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Reserved.",
    "no_bank_cross": true
@@ -700,7 +781,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Formation aux properties: 1024 x 4 B (formations $000-$3FF). 2 consumers.",
    "no_bank_cross": true
@@ -721,7 +805,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "Formation monster sets: 1024 x 15 B (+pad). 7 consumers.",
    "no_bank_cross": true
@@ -752,7 +839,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "TECH v0.6: BattleMagicPoints relocated, 1024 battles ($000-$1FF vanilla bytes, $200-$23F = 0 as vanilla, $240-$3FF per formation source)"
   },
@@ -769,7 +859,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "TECH v0.6: remaining monster-module reserve"
   },
@@ -789,7 +882,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "AI script pointers: 512 x 16-bit offsets (relative to MONX_AI_SCRIPT start). 1 consumer.",
    "no_bank_cross": true
@@ -810,7 +906,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "AI scripts: vanilla scripts copied at their original offsets + new scripts. 4 consumers.",
    "no_bank_cross": true
@@ -847,7 +946,10 @@
    "targets": [
     "production",
     "celes-tech",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "no_bank_cross": true,
    "purpose": "TECH v0.7.1: XItemProp (320x30, ids $000-$13F; $000-$0FF = D8:5000 copy), XItemName (320x13; $000-$0FF = D2:B300 copy), XExtFlags, XDescPtr/XDescText, XWeaponAnim. Consumers: 116 retargeted long operands (data/item_relocation_v071.json) + TECH v0.7.1 routines."
@@ -860,7 +962,10 @@
    "targets": [
     "production",
     "celes-tech",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "no_bank_cross": true,
    "purpose": "TECH v0.7.1: extended item engine (asm/item_v071), JSL targets from hook sites and bank stubs."
@@ -897,7 +1002,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "TECH v0.6: MonsterPal relocated, 1024 x 16-byte units ($000-$2FF vanilla bytes, $300-$3FF new palettes)"
   },
@@ -914,7 +1022,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "TECH v0.6: MonsterStencil relocated: header + 256 small maps (128 vanilla) + 191 large maps (48 vanilla)"
   },
@@ -931,7 +1042,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "TECH v0.6: enemy-module reserve (stencil/palette growth)"
   },
@@ -948,7 +1062,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "TECH v0.6: LoadMonsterPal reads MonsterPal+$FFF0 (index $FFFF x 16, 16-bit X) for each EMPTY battle palette slot; holds the 16 vanilla bytes from D3:7810 so CGRAM stays identical to vanilla"
   },
@@ -965,7 +1082,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "TECH v0.6: custom enemy tile data (graphics index base FB:0000, MonsterGfxProp byte2 bit5)"
   },
@@ -982,7 +1102,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "TECH v0.6: graphics reserve (not enemy module)"
   },
@@ -1002,7 +1125,9 @@
     "production-v0.5.0",
     "celes-tech-v0.5.0",
     "production-v0.6.0",
-    "celes-tech-v0.6.0"
+    "celes-tech-v0.6.0",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2"
    ],
    "purpose": "Unassigned reserve bank."
   },
@@ -1018,7 +1143,8 @@
     "monster-tech-v0.5.0",
     "monster-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "item-tech-v0.7.3"
    ],
    "purpose": "QA HARNESS ONLY (TECH v0.3.1 celes-qa target). Temporary QA access event + QA dialogue strings. Never active for production/celes-tech; the same range is UNALLOCATED (reserved) for every other target. TECH v0.4: QA access event/dialogue for target map-tech only.",
    "no_bank_cross": true
@@ -1110,7 +1236,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "original_fill": "29 03 99 8B 08",
    "purpose": "InitNPCs: AND #$03 / STA $088B,Y replaced by JSL F0:1100 (NPC event router) + NOP. Router re-executes both for every vanilla NPC.",
@@ -1131,7 +1260,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "original_fill": "BD 01 20 0A 0A 18 7D 01 20",
    "purpose": "LoadMonsterGfxProp: LDA $2001,X / ASL / ASL / CLC / ADC $2001,X (monster id*5) -> JSL gfx-slot remap router (N301) + NOP x5",
@@ -1152,7 +1284,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "original_fill": "BD 01 20 AA",
    "purpose": "Sketch graphics: LDA $2001,X / TAX -> JSL gfx-slot remap router (N302)",
@@ -1167,7 +1302,8 @@
     "monster-tech-v0.5.0",
     "monster-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "item-tech-v0.7.3"
    ],
    "original_fill": "00",
    "purpose": "QA HARNESS ONLY: event battle group $FE -> QA formation $240 (both slots).",
@@ -1188,7 +1324,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "original_fill": "AE D4 3E E0 3E 02",
    "purpose": "InitParty colosseum detection: vanilla treats every battle id >= $23E as colosseum; replaced by JSL range check ($23E-$23F only) so formations $240-$3FF are usable.",
@@ -1206,7 +1345,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "AddMonsterGfxOffset: LDA $64/CLC/ADC #$00 -> JSL EnemyGfxBase + RTS (selects E9:7000 or FB:0000 by MonsterGfxProp byte2 bit5)",
    "consumer": "LoadMonsterGfxProp fallthrough, LoadSummonGfxProp JMP"
@@ -1223,7 +1365,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "purpose": "battle win: CPX #$0200 operand -> #$0400 (MP table now 1024 battles)",
    "consumer": "C2:5D97 CPX / C2:5D9C LDA BattleMagicPoints,X"
@@ -1236,7 +1381,8 @@
     "monster-tech",
     "monster-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "item-tech-v0.7.3"
    ],
    "purpose": "QA only: event battle group $FB (unreferenced, audited) -> v0.6 QA formation",
    "consumer": "event cmd $4D in qa_access_v06"
@@ -1249,7 +1395,8 @@
     "monster-tech",
     "monster-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "item-tech-v0.7.3"
    ],
    "purpose": "QA only: event battle group $FC (unreferenced, audited) -> v0.6 QA formation",
    "consumer": "event cmd $4D in qa_access_v06"
@@ -1262,7 +1409,8 @@
     "monster-tech",
     "monster-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "item-tech-v0.7.3"
    ],
    "purpose": "QA only: event battle group $FD (unreferenced, audited) -> v0.6 QA formation",
    "consumer": "event cmd $4D in qa_access_v06"
@@ -1274,7 +1422,10 @@
    "targets": [
     "production",
     "celes-tech",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "original_fill": "FF",
    "purpose": "TECH v0.7.1 same-bank stubs (event API, vanilla give/take fixes).",
@@ -1287,7 +1438,10 @@
    "targets": [
     "production",
     "celes-tech",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "original_fill": "FF",
    "purpose": "TECH v0.7.1 same-bank stubs (battle equipment/inventory).",
@@ -1300,7 +1454,10 @@
    "targets": [
     "production",
     "celes-tech",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ],
    "original_fill": "FF",
    "purpose": "TECH v0.7.1 same-bank stubs (menus: item/equip/relic/status/shop/colosseum/save).",
@@ -1376,7 +1533,9 @@
      "monster-tech-v0.6.0",
      "celes-tech-v0.6.0",
      "monster-tech-v0.6.1",
-     "item-tech"
+     "item-tech",
+     "celes-tech-v0.7.2",
+     "item-tech-v0.7.3"
     ]
    },
    {
@@ -1397,7 +1556,9 @@
      "monster-tech-v0.6.0",
      "celes-tech-v0.6.0",
      "monster-tech-v0.6.1",
-     "item-tech"
+     "item-tech",
+     "celes-tech-v0.7.2",
+     "item-tech-v0.7.3"
     ]
    },
    {
@@ -1418,7 +1579,9 @@
      "monster-tech-v0.6.0",
      "celes-tech-v0.6.0",
      "monster-tech-v0.6.1",
-     "item-tech"
+     "item-tech",
+     "celes-tech-v0.7.2",
+     "item-tech-v0.7.3"
     ]
    },
    {
@@ -1439,7 +1602,9 @@
      "monster-tech-v0.6.0",
      "celes-tech-v0.6.0",
      "monster-tech-v0.6.1",
-     "item-tech"
+     "item-tech",
+     "celes-tech-v0.7.2",
+     "item-tech-v0.7.3"
     ]
    },
    {
@@ -1460,7 +1625,9 @@
      "monster-tech-v0.6.0",
      "celes-tech-v0.6.0",
      "monster-tech-v0.6.1",
-     "item-tech"
+     "item-tech",
+     "celes-tech-v0.7.2",
+     "item-tech-v0.7.3"
     ]
    },
    {
@@ -1475,7 +1642,8 @@
      "monster-tech-v0.5.0",
      "monster-tech-v0.6.0",
      "monster-tech-v0.6.1",
-     "item-tech"
+     "item-tech",
+     "item-tech-v0.7.3"
     ]
    },
    {
@@ -1490,7 +1658,8 @@
      "monster-tech-v0.5.0",
      "monster-tech-v0.6.0",
      "monster-tech-v0.6.1",
-     "item-tech"
+     "item-tech",
+     "item-tech-v0.7.3"
     ]
    },
    {
@@ -1499,6 +1668,17 @@
     "kind": "event",
     "default": 0,
     "status": "TECH v0.7.1 QA HARNESS ONLY: result of HAS_EXT_ITEM (event cmd $68) in the item-test menu (reserved permanently, never reused)",
+    "targets": [
+     "item-tech",
+     "item-tech-v0.7.3"
+    ]
+   },
+   {
+    "bit": "150",
+    "name": "QA_V08_PARTY_READY",
+    "kind": "event",
+    "default": 0,
+    "status": "TECH v0.8 QA HARNESS ONLY: the 13 permanent characters were initialized once by the QA party presets (prevents re-running event $40, which would reset their equipment) (reserved permanently, never reused)",
     "targets": [
      "item-tech"
     ]
@@ -1518,7 +1698,8 @@
      "monster-tech-v0.5.0",
      "monster-tech-v0.6.0",
      "monster-tech-v0.6.1",
-     "item-tech"
+     "item-tech",
+     "item-tech-v0.7.3"
     ],
     "owner": "vanilla SavePoint (CC:9AEB) sets it; field code clears it when the player moves",
     "use": "QA access event skips if already latched (prevents re-fire while standing on the tile). Never written by project scripts."
@@ -1534,10 +1715,22 @@
      "monster-tech-v0.5.0",
      "monster-tech-v0.6.0",
      "monster-tech-v0.6.1",
-     "item-tech"
+     "item-tech",
+     "item-tech-v0.7.3"
     ],
     "owner": "vanilla: set by InitNPCSwitch at New Game, never written by any event script (audit: script_refs 0), used as the visibility switch of 336 vanilla NPCs",
     "use": "visibility switch of always-present proof-map NPCs (read-only use, same as vanilla)"
+   },
+   {
+    "bit": "1BE",
+    "name": "VANILLA_NOT_ENOUGH_GIL",
+    "kind": "event",
+    "access": "read",
+    "targets": [
+     "item-tech"
+    ],
+    "owner": "vanilla event command $85 (take GP, C0:AD7F) sets it ($1EB7 bit 6) when GP is insufficient and clears it otherwise",
+    "use": "TECH v0.8 QA smith-purchase demo: branch to 'not enough GP' after take_gp. Never written by project scripts."
    }
   ]
  },
@@ -1560,7 +1753,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ]
   },
   {
@@ -1577,7 +1773,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ]
   },
   {
@@ -1591,7 +1790,10 @@
     "production-v0.6.0",
     "celes-tech-v0.6.0",
     "monster-tech-v0.6.1",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ]
   },
   {
@@ -1600,7 +1802,10 @@
    "targets": [
     "production",
     "celes-tech",
-    "item-tech"
+    "item-tech",
+    "production-v0.7.2",
+    "celes-tech-v0.7.2",
+    "item-tech-v0.7.3"
    ]
   }
  ],

@@ -27,7 +27,7 @@ def labels(manifest):
     def walk(o):
         if isinstance(o, dict):
             for k, v in o.items():
-                if k == "qa_access_v071" and isinstance(v, str):
+                if k.startswith("qa_access_v0") and isinstance(v, str):
                     for a, lab in re.findall(r"^([0-9A-F]{2}:[0-9A-F]{4})\s+@(\w+)", v, re.M):
                         out[lab] = int(a.replace(":", ""), 16)
                 walk(v)
@@ -36,6 +36,16 @@ def labels(manifest):
                 walk(v)
     walk(m)
     return out
+
+
+# QA menu root of the v0.7.1 "Item bank tests" submenu: v0.7.x top choice 0; TECH v0.8: FF6X_QA_ITEM_ROOT=1,0
+# ("Older tests" -> "Item bank tests (v0.7.1)")
+ITEM_ROOT = [int(x) for x in os.environ.get("FF6X_QA_ITEM_ROOT", "0").split(",") if x.strip()]
+
+
+def qa_items(h, picks):
+    """picks inside the v0.7.1 item-test menu, below its root"""
+    return talk(h, ITEM_ROOT + list(picks))
 
 
 def talk(h, picks, frames=3000):
@@ -125,19 +135,19 @@ def main(rom, manifest, out, clean=None):
     # ---------------------------------------------------------------- harness: give x2, HAS, TAKE
     h.call_event(L["QaAccess6"], frames=1)
     q.shot(h, "QA_menu_top")
-    talk(h, [0, 0])
+    qa_items(h, [0])
     inv = {i: n for s, i, n in h.inv()}
     q.check("Q1 QA menu 'Get QA items' gives $13D/$13E/$13F + vanilla $3D/$3E/$3F",
             all(inv.get(i) == 1 for i in (0x13D, 0x13E, 0x13F, 0x03D, 0x03E, 0x03F)),
             {f"{i:03X}": n for i, n in inv.items()})
     h.call_event(L["QaAccess6"], frames=1)
-    talk(h, [0, 0])
+    qa_items(h, [0])
     inv = {i: n for s, i, n in h.inv()}
     q.check("Q2 second grant stacks (each x2, extended and vanilla kept apart)",
             all(inv.get(i) == 2 for i in (0x13D, 0x13E, 0x13F, 0x03D, 0x03E, 0x03F)),
             {f"{i:03X}": n for i, n in inv.items()})
     h.call_event(L["QaAccess6"], frames=1)
-    talk(h, [0, 1, 0])
+    qa_items(h, [1, 0])
     inv = {i: n for s, i, n in h.inv()}
     q.check("K3 QA menu HAS_EXT_ITEM sets the QA bit, TAKE_EXT_ITEM removes one $13D (vanilla $3D untouched)",
             h.r8(0x1E80 + (QA_BIT >> 3)) >> (QA_BIT & 7) & 1 == 1 and inv.get(0x13D) == 1 and inv.get(0x03D) == 2,

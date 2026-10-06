@@ -397,9 +397,9 @@ print("PASS vram_map override (byte 0 high nibble only) + deterministic preview 
 from patches import item_v071 as IV
 from patches.item_v071_hooks import HOOKS as IHOOKS
 from ff6x.eventasm import EventProgram, EventAsmError
-rom7, out7, _, _ = B.build_target(clean, alloc, "production")
+rom7, out7, _, _ = B.build_target(clean, alloc, "production-v0.7.2")
 pc = lambda a: a - 0xC00000
-# 42 relocated item tables: vanilla records byte-identical, production has no extended content
+# 42 relocated item tables: vanilla records byte-identical, (accepted v0.7.2) production has no extended content
 assert out7[pc(IV.T_PROP):pc(IV.T_PROP) + 256 * 30] == clean[pc(IV.VAN_PROP):pc(IV.VAN_PROP) + 256 * 30]
 assert out7[pc(IV.T_PROP) + 256 * 30:pc(IV.T_PROP) + 320 * 30] == bytes(64 * 30)
 assert out7[pc(IV.T_NAME):pc(IV.T_NAME) + 256 * 13] == clean[pc(IV.VAN_NAME):pc(IV.VAN_NAME) + 256 * 13]
@@ -428,17 +428,51 @@ assert not extra7, extra7[:10]
 nh = sum(len(bytes.fromhex(h["expect"])) for h in IHOOKS)
 nr = sum(len(t["consumers"]) for t in rel["tables"].values())
 print(f"PASS v0.7.1 production vanilla-space diff limited to {len(changed7)} declared bytes ({len(IHOOKS)} hook sites/{nh} B, {nr} retargets, 3 stub claims)"); ok += 1
+# 43b TECH v0.8 production: vanilla space byte-identical to accepted v0.7.2 production (only FA tables, F0 metadata, header checksum differ)
+rom8, out8, _, _ = B.build_target(clean, alloc, "production")
+d8 = [i for i in range(0x400000) if out8[i] != out7[i]]
+assert all(0x3A0000 <= i < 0x3A8000 or 0x300000 <= i < 0x300040 or 0xFFDC <= i <= 0xFFDF for i in d8), [hex(i) for i in d8
+                                                                                                    if not 0x3A0000 <= i < 0x3A8000][:8]
+print(f"PASS v0.8 production vs accepted v0.7.2 production: {len(d8)} bytes, all in ITEMX_TABLES (FA:0000-FA:7FFF) + metadata + checksum"); ok += 1
+# 43c every production record decodes back to its source definition (stats, users = equip matrix, elements, status, relic bits)
+from patches import equipment_v08 as EQ8
+eq8 = json.load(open(os.path.join(HERE, "items/production_v08/equipment.json")))["items"]
+nibv = lambda v: v if v < 8 else -(v - 8)
+nibe = lambda v: v * 10 if v < 6 else -(v - 5) * 10
+mat = EQ8.equip_matrix(eq8)
+for it in eq8:
+    i = int(it["id"], 16)
+    r = out8[pc(IV.T_PROP) + 30 * i:pc(IV.T_PROP) + 30 * i + 30]
+    w = r[1] | r[2] << 8
+    assert [w >> k & 1 for k in range(14)] == mat[it["id"]] and w >> 14 == 0, it["id"]
+    assert r[0] == IV.CATEGORY_TYPE[it["category"]] and r[20] == it["power"], it["id"]
+    assert r[21] == (it["hit_rate"] if it["category"] == "weapon" else it["mdef"]), it["id"]
+    assert (nibv(r[16] & 15), nibv(r[16] >> 4), nibv(r[17] & 15), nibv(r[17] >> 4)) == \
+        (it["vigor"], it["speed"], it["stamina"], it["mag_pwr"]), it["id"]
+    assert (nibe(r[26] & 15), nibe(r[26] >> 4)) == (it["evade"], it["mblock"]), it["id"]
+    assert r[6] | r[7] << 8 == IV.bits(it.get("immune_status", []), IV.STATUS12, "s"), it["id"]
+    el = it.get("elem_attack", []) if it["category"] == "weapon" else it.get("elem_half", [])
+    assert r[15] == IV.bits(el, IV.ELEMENT, "e"), it["id"]
+    nm = out8[pc(IV.T_NAME) + 13 * i + 1:pc(IV.T_NAME) + 13 * i + 13]
+    assert nm.rstrip(b"\xFF") == IV.menu_encode(it["display_name"], 0xFE), it["id"]
+print(f"PASS v0.8: all {len(eq8)} production records decode to their source (stats, equip matrix, elements, status, names)"); ok += 1
 # 44 QA items / QA harness only in item-tech; production + celes-tech carry no QA content and a pristine FF bank
-for t in ("production", "celes-tech"):
+PROD_IDS = list(range(0x00, 0x27))                    # $100-$126
+SPEARS = [0x04, 0x0B]                                  # Sandpiercer $104, Gale Lance $10B
+for t in ("production", "celes-tech", "production-v0.7.2", "celes-tech-v0.7.2"):
     r_, o_, _, _ = B.build_target(clean, alloc, t)
     assert not any(x["patch_id"].startswith("Q") for x in r_.records), t
     assert o_[0x3F0000:0x400000] == b"\xFF" * 0x10000, t
-    assert o_[pc(IV.T_FLAGS):pc(IV.T_FLAGS) + 64] == bytes(64), t
+    fl = o_[pc(IV.T_FLAGS):pc(IV.T_FLAGS) + 64]
+    want = [] if t.endswith("v0.7.2") else PROD_IDS
+    assert [k for k in range(64) if fl[k]] == want, t
+    assert all(fl[k] == (3 if k in SPEARS else 1) for k in want), t
 r_, o_, _, _ = B.build_target(clean, alloc, "item-tech")
 fl = o_[pc(IV.T_FLAGS):pc(IV.T_FLAGS) + 64]
-assert [k for k in range(64) if fl[k]] == [0x3D, 0x3E, 0x3F] and all(fl[k] == 1 for k in (0x3D, 0x3E, 0x3F))
+assert [k for k in range(64) if fl[k]] == PROD_IDS + [0x3D, 0x3E, 0x3F] and all(fl[k] == 1 for k in (0x3D, 0x3E, 0x3F))
 assert o_[pc(IV.T_PROP):pc(IV.T_PROP) + 256 * 30] == clean[pc(IV.VAN_PROP):pc(IV.VAN_PROP) + 256 * 30]
-print("PASS QA items $13D-$13F + QA harness only in item-tech (no spear flag); production/celes-tech undefined"); ok += 1
+assert o_[pc(IV.T_PROP) + 0x100 * 30:pc(IV.T_PROP) + 0x127 * 30] == out8[pc(IV.T_PROP) + 0x100 * 30:pc(IV.T_PROP) + 0x127 * 30]
+print("PASS v0.8: production/celes-tech define exactly $100-$126 (spear flag only $104/$10B), no QA content; item-tech = same 39 records + QA $13D-$13F; v0.7.2 frozen targets undefined"); ok += 1
 # 45 item / event-API guards fail closed
 qa_meta = {"ext_item_sources": ["items/qa_v071/qa_items.json"]}
 expect_fail("qa-items-in-non-qa-target", lambda: IV.load_defs(dict(qa_meta)), (SystemExit,))
@@ -465,4 +499,24 @@ def bad_hook():
     h = IHOOKS[0]
     r.patch(int(h["snes"], 16), b"\x00" * len(bytes.fromhex(h["expect"])), bytes.fromhex(h["expect"]), "X", "c", "r")
 expect_fail("item-hook-original-bytes", bad_hook)
+# 46 TECH v0.8 equipment validators fail closed
+import copy as _copy
+def bad_eq(mod):
+    j = json.load(open(os.path.join(HERE, "items/production_v08/equipment.json"))); mod(j["items"])
+    EQ8.validate([dict(it, _qa=False) for it in j["items"]])
+expect_fail("eq8-38-items", lambda: bad_eq(lambda L: L.pop()), (SystemExit,))
+expect_fail("eq8-dup-reward-symbol", lambda: bad_eq(lambda L: L[1]["acquisition"].update(
+    future_event_symbol=L[0]["acquisition"]["future_event_symbol"])), (SystemExit,))
+expect_fail("eq8-repeatable", lambda: bad_eq(lambda L: L[2]["acquisition"].update(one_time=False)), (SystemExit,))
+expect_fail("eq8-smith-without-gp", lambda: bad_eq(lambda L: L[0]["acquisition"].update(gp_cost=None)), (SystemExit,))
+expect_fail("eq8-gp-on-chest", lambda: bad_eq(lambda L: L[1]["acquisition"].update(gp_cost=500)), (SystemExit,))
+expect_fail("eq8-no-binding", lambda: bad_eq(lambda L: L[3].pop("acquisition")), (SystemExit,))
+expect_fail("eq8-gau-weapon", lambda: bad_eq(lambda L: L[0]["users"].append("Gau")), (SystemExit,))
+expect_fail("eq8-power-envelope", lambda: bad_eq(lambda L: L[0].update(power=255)), (SystemExit,))
+expect_fail("eq8-fallback-missing", lambda: bad_eq(lambda L: [it.update(fallback=None) for it in L if it["code"] == "EQ-R01"]), (SystemExit,))
+expect_fail("eq8-dup-id", lambda: bad_eq(lambda L: L[5].update(id="100")), (SystemExit,))
+expect_fail("eq8-name-too-long", lambda: IV.check_text_v08(dict(eq8[0], display_name="Tempered Edge")), (SystemExit,))
+expect_fail("eq8-desc-too-long", lambda: IV.check_text_v08(dict(eq8[0], desc="x" * 29)), (SystemExit,))
+expect_fail("eq8-spear-flag-on-sword", lambda: IV.build_tables(clean, [dict(eq8[0], spear=True, _src="x")]), (SystemExit,))
+print("PASS v0.8 equipment validators fail closed (count, duplicate reward/id, repeatable, smith GP, missing binding, Gau, power, fallback, text, spear)"); ok += 1
 print(f"ALL {ok} SELF-TESTS PASS")

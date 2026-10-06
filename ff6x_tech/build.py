@@ -17,20 +17,37 @@ from ff6x.hirom import pc_to_snes, fmt_snes
 from ff6x.patchfmt import make_ips, apply_ips, make_bps, apply_bps
 from ff6x.romimage import RomImage, load_clean_rom, sha1, crc32, md5, BuildError
 
-BUILD_VERSION = "0.7.2"   # production / celes-tech: unchanged in v0.7.3 (frozen by SHA-1 below)
-QA_VERSION = "0.7.3"      # item-tech QA ROM only: v0.7.3 normalized QA Colosseum party
+BUILD_VERSION = "0.8.0"   # TECH v0.8: complete signature equipment population ($100-$126)
+FILE_VER = "0.8"
+PROD_ITEMS = "items/production_v08/equipment.json"
 
 TARGETS = {
-    # ---- TECH v0.7.2 production / celes-tech (unchanged, frozen) + TECH v0.7.3 QA ROM (QA-state fix) -------
-    "production":  {"file": f"FF6X_Rev1_TECH_v{BUILD_VERSION}_PRODUCTION", "version": BUILD_VERSION, "kind": "v07",
+    # ---- TECH v0.8 (current): 39 production signature equipment items --------------------------------
+    "production":  {"file": f"FF6X_Rev1_TECH_v{FILE_VER}_PRODUCTION", "version": BUILD_VERSION, "kind": "v07",
+                    "packages": [], "monsters": [], "formations": [], "ext_item_sources": [PROD_ITEMS],
+                    "status": "PRODUCTION BRANCH v0.8 - accepted v0.7.2 item engine + 39 signature equipment items ($100-$126)"},
+    "celes-tech":  {"file": f"FF6X_Rev1_TECH_v{FILE_VER}_CELES_TECH", "version": BUILD_VERSION, "kind": "v07",
+                    "packages": ["celes_annex_tech"], "monsters": [], "formations": [], "ext_item_sources": [PROD_ITEMS],
+                    "status": "production v0.8 + accepted Celes Annex slice"},
+    "item-tech":   {"file": f"FF6X_Rev1_TECH_v{FILE_VER}_EQUIPMENT_QA", "version": BUILD_VERSION, "kind": "v07",
+                    "packages": ["celes_annex_tech", "map_tech_v04", "qa_access_v08"],
+                    "monsters": ["tech6_0180", "tech6_0181", "tech6_0182", "tech6_0183"],
+                    "formations": ["tech6_0240", "tech6_0241", "tech61_0242", "tech61_0243"],
+                    "qa_overrides": "formations/qa_v061.json", "qa_harness": True,
+                    "ext_item_sources": [PROD_ITEMS, "items/qa_v071/qa_items.json"],
+                    "formation_safety": "report",
+                    "formation_safety_reason": "v0.6.1 QA formations carried unchanged for regression ($242 slot 0 known non-blocking)",
+                    "status": "TECH v0.8 QA BUILD (39 production signature equipment + QA grant menus) - USER RUNTIME QA PENDING"},
+    # ---- TECH v0.7.2 / v0.7.3 frozen (runtime accepted, must reproduce exactly) ---------------------
+    "production-v0.7.2": {"file": "FF6X_Rev1_TECH_v0.7.2_PRODUCTION", "version": "0.7.2", "kind": "v07", "meta_target": "production",
                     "packages": [], "monsters": [], "formations": [], "ext_item_sources": [],
                     "status": "PRODUCTION BRANCH v0.7.2 - accepted v0.6.1 foundation + extended item engine (ids $100-$13F, no item content)",
                     "expect_sha1": "f8f92c81475e14e90adecd541aec19fd251e7e45", "expect_crc32": "91346FF2"},
-    "celes-tech":  {"file": f"FF6X_Rev1_TECH_v{BUILD_VERSION}_CELES_TECH", "version": BUILD_VERSION, "kind": "v07",
+    "celes-tech-v0.7.2": {"file": "FF6X_Rev1_TECH_v0.7.2_CELES_TECH", "version": "0.7.2", "kind": "v07", "meta_target": "celes-tech",
                     "packages": ["celes_annex_tech"], "monsters": [], "formations": [], "ext_item_sources": [],
                     "status": "production v0.7.2 + accepted Celes Annex slice",
                     "expect_sha1": "2789edb5621954421c1f2819d0b8a7f54739ce90", "expect_crc32": "7399F9CA"},
-    "item-tech":   {"file": f"FF6X_Rev1_TECH_v{QA_VERSION}_ITEM_BANK_QA", "version": QA_VERSION, "kind": "v07",
+    "item-tech-v0.7.3": {"file": "FF6X_Rev1_TECH_v0.7.3_ITEM_BANK_QA", "version": "0.7.3", "kind": "v07", "meta_target": "item-tech",
                     "packages": ["celes_annex_tech", "map_tech_v04", "qa_access_v071"],
                     "monsters": ["tech6_0180", "tech6_0181", "tech6_0182", "tech6_0183"],
                     "formations": ["tech6_0240", "tech6_0241", "tech61_0242", "tech61_0243"],
@@ -38,7 +55,8 @@ TARGETS = {
                     "ext_item_sources": ["items/qa_v071/qa_items.json"],
                     "formation_safety": "report",
                     "formation_safety_reason": "v0.6.1 QA formations carried unchanged for regression ($242 slot 0 known non-blocking)",
-                    "status": "TECH v0.7.3 QA BUILD (v0.7.1 signature equipment bank proof + v0.7.2 Colosseum hotfix + v0.7.3 normalized QA Colosseum party) - USER RUNTIME QA PENDING"},
+                    "status": "TECH v0.7.3 QA BUILD (v0.7.1 signature equipment bank proof + v0.7.2 Colosseum hotfix + v0.7.3 normalized QA Colosseum party) - USER RUNTIME QA PENDING",
+                    "expect_sha1": "3a784e0d3df817dd47d796f8b50b8ac34b143b31", "expect_crc32": "EB2923BA"},
     # ---- TECH v0.6.x frozen (accepted baselines, must reproduce exactly) ----------------------------
     "production-v0.6.0": {"file": "FF6X_Rev1_TECH_v0.6.0_PRODUCTION", "version": "0.6.0", "kind": "v06", "meta_target": "production",
                     "packages": [], "monsters": [], "formations": [],

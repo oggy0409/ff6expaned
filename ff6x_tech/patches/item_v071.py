@@ -89,7 +89,101 @@ def load_defs(meta):
             raise SystemExit(f"extended id {i:03X} outside $100-$13F")
         if it["_qa"] and not 0x13D <= i <= 0x13F:
             raise SystemExit("QA items must use $13D-$13F only")
+        if not it["_qa"] and not 0x100 <= i <= 0x126:
+            raise SystemExit(f"production item {i:03X} outside $100-$126 ($127-$13C reserve, $13D-$13F QA)")
+    prod = [it for it in defs if not it["_qa"]]
+    if prod:
+        from patches import equipment_v08
+        equipment_v08.validate(prod)
     return defs
+
+
+ELEMENT = {"FIRE": 0x01, "ICE": 0x02, "LIGHTNING": 0x04, "POISON": 0x08, "WIND": 0x10, "HOLY": 0x20, "EARTH": 0x40, "WATER": 0x80}
+STATUS12 = {"BLIND": 0x0001, "ZOMBIE": 0x0002, "POISON": 0x0004, "MAGITEK": 0x0008, "VANISH": 0x0010, "IMP": 0x0020,
+            "PETRIFY": 0x0040, "DEAD": 0x0080, "CONDEMNED": 0x0100, "NEAR_FATAL": 0x0200, "IMAGE": 0x0400,
+            "SILENCE": 0x0800, "BERSERK": 0x1000, "CONFUSE": 0x2000, "SAP": 0x4000, "SLEEP": 0x8000}
+RELIC_EFFECT = {"ATLAS_ARMLET": (9, 0x01), "EARRING": (9, 0x02), "HP_PLUS_25": (9, 0x04), "HP_PLUS_50": (9, 0x08),
+                "HP_PLUS_12": (9, 0x10), "MP_PLUS_25": (9, 0x20), "MP_PLUS_50": (9, 0x40), "MP_PLUS_12": (9, 0x80),
+                "INC_STEAL_RATE": (11, 0x01), "INC_SKETCH_RATE": (11, 0x04), "INC_CONTROL_RATE": (11, 0x08),
+                "MAX_HIT_RATE": (11, 0x10)}
+WEAPON_FLAG = {"BUSHIDO": 0x02, "BACK_ROW": 0x20, "TWO_HAND": 0x40, "RUNIC": 0x80}
+WEAPON_SPECIAL = {"NONE": 0, "STEAL": 1}          # ThiefKnife's special (ItemProp byte 27 high nibble = 1)
+CHARS = ["Terra", "Locke", "Cyan", "Shadow", "Edgar", "Sabin", "Celes", "Strago", "Relm", "Setzer", "Mog", "Gau",
+         "Gogo", "Umaro"]
+CATEGORY_TYPE = {"weapon": 1, "armor": 2, "shield": 3, "helmet": 4, "relic": 5}
+DESC_LINE_MAX = 28        # vanilla descriptions reach 32 characters per line; signature items stay within 28
+
+
+def bits(names, table, what):
+    v = 0
+    for n in names:
+        if n not in table:
+            raise SystemExit(f"unknown {what} {n!r}")
+        v |= table[n]
+    return v
+
+
+def equip_word(users):
+    w = 0
+    for u in users:
+        if u not in CHARS:
+            raise SystemExit(f"unknown character {u!r}")
+        w |= 1 << CHARS.index(u)
+    return w
+
+
+def compose_v08(clean, it):
+    """TECH v0.8 explicit record: every ItemProp byte comes from the item definition; the vanilla template only
+    supplies the icon, the block graphic (byte 27 low nibble), the weapon targeting byte and the weapon animation."""
+    pc = lambda s: snes_to_pc(s)
+    tpl = int(it["template"], 16)
+    t = clean[pc(VAN_PROP) + 30 * tpl:pc(VAN_PROP) + 30 * tpl + 30]
+    typ = CATEGORY_TYPE[it["category"]]
+    if t[0] & 7 != typ:
+        raise SystemExit(f"{it['id']}: template ${tpl:02X} is not a {it['category']}")
+    rec = bytearray(30)
+    rec[0] = typ                                        # usage bits clear: not throwable / not usable as an item
+    w = equip_word(it["users"])
+    rec[1], rec[2] = w & 0xFF, w >> 8                   # no MERIT / IMP flag: the locked users only
+    imm = bits(it.get("immune_status", []), STATUS12, "status")
+    rec[6], rec[7] = imm & 0xFF, imm >> 8
+    for n in it.get("relic_effects", []):
+        if n not in RELIC_EFFECT:
+            raise SystemExit(f"{it['id']}: unknown relic effect {n}")
+        o, b = RELIC_EFFECT[n]
+        rec[o] |= b
+    rec[16] = nib_signed(it["vigor"]) | nib_signed(it["speed"]) << 4
+    rec[17] = nib_signed(it["stamina"]) | nib_signed(it["mag_pwr"]) << 4
+    rec[20] = it["power"]
+    rec[26] = nib_evade(it["evade"]) | nib_evade(it["mblock"]) << 4
+    rec[28], rec[29] = 2, 0                             # vanilla price of unsold items; Sell excludes $1xx anyway
+    if typ == 1:
+        rec[14] = t[14]                                 # weapon targeting (single enemy, as every vanilla weapon)
+        rec[15] = bits(it.get("elem_attack", []), ELEMENT, "element")
+        rec[19] = bits(it.get("weapon_flags", []), WEAPON_FLAG, "weapon flag")
+        rec[21] = it["hit_rate"]
+        sp = it.get("weapon_special", "NONE")
+        if sp not in WEAPON_SPECIAL:
+            raise SystemExit(f"{it['id']}: unknown weapon special {sp}")
+        rec[27] = (t[27] & 0x0F) | WEAPON_SPECIAL[sp] << 4
+    else:
+        rec[15] = bits(it.get("elem_half", []), ELEMENT, "element")
+        rec[21] = it["mdef"]
+        rec[22] = bits(it.get("elem_absorb", []), ELEMENT, "element")
+        rec[23] = bits(it.get("elem_null", []), ELEMENT, "element")
+        rec[24] = bits(it.get("elem_weak", []), ELEMENT, "element")
+        rec[27] = t[27] & 0x0F if typ == 3 else 0       # shield block graphic / block type
+    return bytes(rec)
+
+
+def check_text_v08(it):
+    nm = menu_encode(it["display_name"], 0xFE)
+    if len(nm) > 12:
+        raise SystemExit(f"{it['id']}: display name {it['display_name']!r} longer than 12")
+    lines = it["desc"].split("{n}")
+    if len(lines) > 2 or any(len(l) > DESC_LINE_MAX for l in lines):
+        raise SystemExit(f"{it['id']}: description must be <= 2 lines of <= {DESC_LINE_MAX} characters")
+    menu_encode(it["desc"], 0xFF)
 
 
 def build_tables(clean, defs):
@@ -107,12 +201,17 @@ def build_tables(clean, defs):
     notes = {}
     for it in defs:
         i = int(it["id"], 16); k = i - 0x100
-        b = int(it["base"], 16)
-        rec = bytearray(clean[pc(VAN_PROP) + 30 * b:pc(VAN_PROP) + 30 * b + 30])
+        v08 = "category" in it                         # TECH v0.8 explicit-field definition
+        b = int(it["template"] if v08 else it["base"], 16)
+        if v08:
+            check_text_v08(it)
+            rec = bytearray(compose_v08(clean, it))
+        else:
+            rec = bytearray(clean[pc(VAN_PROP) + 30 * b:pc(VAN_PROP) + 30 * b + 30])
         if it.get("clear_effects"):
             for o in list(range(3, 14)) + [15, 18, 19] + list(range(22, 26)):
                 rec[o] = 0
-        f = it.get("fields", {})
+        f = {} if v08 else it.get("fields", {})
         if "equip_chars" in f or "equip_flags" in f:
             w = int(f.get("equip_chars", "0"), 16) | int(f.get("equip_flags", "0"), 16)
             rec[1], rec[2] = w & 0xFF, w >> 8
@@ -126,7 +225,7 @@ def build_tables(clean, defs):
         if "price" in f: rec[28], rec[29] = f["price"] & 0xFF, f["price"] >> 8
         prop[30 * i:30 * i + 30] = rec
         icon = clean[pc(VAN_NAME) + 13 * b]
-        nm = menu_encode(it["name"], 0xFE)
+        nm = menu_encode(it["display_name"] if v08 else it["name"], 0xFE)
         if len(nm) > 12:
             raise SystemExit(f"{it['id']}: name longer than 12")
         name[13 * i:13 * i + 13] = bytes([icon]) + nm + b"\xFF" * (12 - len(nm))
@@ -135,16 +234,19 @@ def build_tables(clean, defs):
             # Gau's Rage (C2:0610 SetRage) and Umaro overwrite the battle hand ids; vanilla never lets them hold a
             # weapon or shield, and an extended hand item would misdirect the extended-hand checks (I530-I533)
             raise SystemExit(f"{it['id']}: extended weapon/shield must not be equippable by Gau ($0800) or Umaro ($2000)")
+        if it.get("spear") and not (typ == 1 and (not v08 or it["family"] == "spear")):
+            raise SystemExit(f"{it['id']}: spear flag (Jump x2) on a non-spear")
         flags[k] = 0x01 | (0x02 if it.get("spear") else 0)
         if typ == 1:
-            wb = int(it.get("weapon_anim_from", it["base"]), 16)
+            wb = int(it.get("weapon_anim_from", it["template"] if v08 else it["base"]), 16)
             a = pc(VAN_ANIM) + 8 * (wb + 1)
             anim[8 * (ANIM_EXT0 + k):8 * (ANIM_EXT0 + k) + 8] = clean[a:a + 8]
             jump[JUMP_EXT0 + k] = clean[pc(VAN_JUMP) + wb + 1]
         txt = menu_encode(it["desc"], 0xFF) + b"\x00"
         dptr[2 * k:2 * k + 2] = ((T_DTXT + len(dtxt)) & 0xFFFF).to_bytes(2, "little")
         dtxt += txt
-        notes[f"{i:03X}"] = {"name": it["name"], "base": it["base"], "type": typ, "prop": rec.hex(" ").upper(),
+        notes[f"{i:03X}"] = {"name": it["display_name"] if v08 else it["name"], "base": it["template"] if v08 else it["base"],
+                             "type": typ, "prop": rec.hex(" ").upper(),
                              "name_bytes": name[13 * i:13 * i + 13].hex(" ").upper(), "flags": f"{flags[k]:02X}",
                              "weapon_anim": anim[8 * (ANIM_EXT0 + k):8 * (ANIM_EXT0 + k) + 8].hex(" ").upper() if typ == 1 else None,
                              "jump_anim": f"{jump[JUMP_EXT0 + k]:02X}" if typ == 1 else None,
