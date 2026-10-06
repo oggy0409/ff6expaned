@@ -1,0 +1,5 @@
+# FF6X_PROJECT_HANDOFF_v0.9_ACCEPTED.zip
+SHA-1   6d8ba6a44b6bb06f69a9e04c7dede2f447242d6e
+SHA-256 a8a136e9e7003c045dbc14fad8f08ef553742030207f05409cd09c3a7995d6a9
+size    25773334 bytes (uncompressed 50568006 bytes), 1016 files
+source-freeze commit 2d44bb23ccb1eaa2e6998dd85f479c93ea952970 (branch claude/festive-mayer-i6uurp)
