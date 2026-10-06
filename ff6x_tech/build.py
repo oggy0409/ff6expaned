@@ -20,15 +20,16 @@ from ff6x.romimage import RomImage, load_clean_rom, sha1, crc32, md5, BuildError
 BUILD_VERSION = "0.8.0"   # TECH v0.8: complete signature equipment population ($100-$126)
 FILE_VER = "0.8"
 PROD_ITEMS = "items/production_v08/equipment.json"
+ENGINE_V08 = "asm/item_v08"     # v0.7.1 engine + v0.8 B-accumulator reset (R32); frozen v0.7.x targets keep asm/item_v071
 
 TARGETS = {
     # ---- TECH v0.8 (current): 39 production signature equipment items --------------------------------
     "production":  {"file": f"FF6X_Rev1_TECH_v{FILE_VER}_PRODUCTION", "version": BUILD_VERSION, "kind": "v07",
                     "packages": [], "monsters": [], "formations": [], "ext_item_sources": [PROD_ITEMS],
-                    "status": "PRODUCTION BRANCH v0.8 - accepted v0.7.2 item engine + 39 signature equipment items ($100-$126)"},
+                    "status": "PRODUCTION BRANCH v0.8 - v0.7.2 item engine (+ v0.8 B-reset fix) + 39 signature equipment items ($100-$126)", "engine_asm": ENGINE_V08},
     "celes-tech":  {"file": f"FF6X_Rev1_TECH_v{FILE_VER}_CELES_TECH", "version": BUILD_VERSION, "kind": "v07",
                     "packages": ["celes_annex_tech"], "monsters": [], "formations": [], "ext_item_sources": [PROD_ITEMS],
-                    "status": "production v0.8 + accepted Celes Annex slice"},
+                    "status": "production v0.8 + accepted Celes Annex slice", "engine_asm": ENGINE_V08},
     "item-tech":   {"file": f"FF6X_Rev1_TECH_v{FILE_VER}_EQUIPMENT_QA", "version": BUILD_VERSION, "kind": "v07",
                     "packages": ["celes_annex_tech", "map_tech_v04", "qa_access_v08"],
                     "monsters": ["tech6_0180", "tech6_0181", "tech6_0182", "tech6_0183"],
@@ -37,7 +38,7 @@ TARGETS = {
                     "ext_item_sources": [PROD_ITEMS, "items/qa_v071/qa_items.json"],
                     "formation_safety": "report",
                     "formation_safety_reason": "v0.6.1 QA formations carried unchanged for regression ($242 slot 0 known non-blocking)",
-                    "status": "TECH v0.8 QA BUILD (39 production signature equipment + QA grant menus) - USER RUNTIME QA PENDING"},
+                    "status": "TECH v0.8 QA BUILD (39 production signature equipment + QA grant menus) - USER RUNTIME QA PENDING", "engine_asm": ENGINE_V08},
     # ---- TECH v0.7.2 / v0.7.3 frozen (runtime accepted, must reproduce exactly) ---------------------
     "production-v0.7.2": {"file": "FF6X_Rev1_TECH_v0.7.2_PRODUCTION", "version": "0.7.2", "kind": "v07", "meta_target": "production",
                     "packages": [], "monsters": [], "formations": [], "ext_item_sources": [],

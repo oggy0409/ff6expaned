@@ -428,12 +428,39 @@ assert not extra7, extra7[:10]
 nh = sum(len(bytes.fromhex(h["expect"])) for h in IHOOKS)
 nr = sum(len(t["consumers"]) for t in rel["tables"].values())
 print(f"PASS v0.7.1 production vanilla-space diff limited to {len(changed7)} declared bytes ({len(IHOOKS)} hook sites/{nh} B, {nr} retargets, 3 stub claims)"); ok += 1
-# 43b TECH v0.8 production: vanilla space byte-identical to accepted v0.7.2 production (only FA tables, F0 metadata, header checksum differ)
+# 43b TECH v0.8 production vs accepted v0.7.2 production: only FA tables, F0 metadata, header checksum, the XC3 stub
+#     claim (v0.8 B-accumulator reset, KNOWN_RISKS_v0.8 R32) and the operands of C3 hook sites (routines moved) differ
 rom8, out8, _, _ = B.build_target(clean, alloc, "production")
 d8 = [i for i in range(0x400000) if out8[i] != out7[i]]
-assert all(0x3A0000 <= i < 0x3A8000 or 0x300000 <= i < 0x300040 or 0xFFDC <= i <= 0xFFDF for i in d8), [hex(i) for i in d8
-                                                                                                    if not 0x3A0000 <= i < 0x3A8000][:8]
-print(f"PASS v0.8 production vs accepted v0.7.2 production: {len(d8)} bytes, all in ITEMX_TABLES (FA:0000-FA:7FFF) + metadata + checksum"); ok += 1
+c3s = [x for x in alloc.claims if x["name"] == "ITEMX_C3_STUBS"][0]
+c3r = range(pc(int(c3s["snes_start"], 16)), pc(int(c3s["snes_end"], 16)) + 1)
+c3hook = set()
+for h in IHOOKS:
+    if h["snes"].startswith("C3"):
+        a0 = pc(int(h["snes"], 16))
+        c3hook |= set(range(a0, a0 + len(bytes.fromhex(h["expect"]))))
+assert all(0x3A0000 <= i < 0x3A8000 or 0x300000 <= i < 0x300040 or 0xFFDC <= i <= 0xFFDF or i in c3r or i in c3hook
+           for i in d8), [hex(i) for i in d8 if not 0x3A0000 <= i < 0x3A8000][:8]
+nc3 = sum(1 for i in d8 if i in c3r); nh3 = sum(1 for i in d8 if i in c3hook)
+for h in IHOOKS:                                   # hook sites: same instruction (opcode) everywhere, C0/C1/C2 unchanged
+    a0 = pc(int(h["snes"], 16)); n_ = len(bytes.fromhex(h["expect"]))
+    assert out8[a0] == out7[a0] and (h["snes"].startswith("C3") or out8[a0:a0 + n_] == out7[a0:a0 + n_]), h["id"]
+print(f"PASS v0.8 production vs accepted v0.7.2 production: {len(d8)} bytes = ITEMX_TABLES + metadata + checksum + {nc3} "
+      f"B in the XC3 stub claim (B-reset fix) + {nh3} C3 hook operand bytes (moved routines); C0/C1/C2 engine identical"); ok += 1
+# 43d engine sources: asm/item_v08 = asm/item_v071 except c3.s, and c3.s only adds the B := 0 exits (frozen targets keep v071)
+for f_ in IV.SOURCES:
+    a_ = open(os.path.join(HERE, "asm/item_v071", f_)).read(); b_ = open(os.path.join(HERE, "asm/item_v08", f_)).read()
+    assert (a_ == b_) == (f_ != "c3.s"), f_
+import difflib
+dl = [l for l in difflib.unified_diff(open(os.path.join(HERE, "asm/item_v071/c3.s")).read().splitlines(),
+                                      open(os.path.join(HERE, "asm/item_v08/c3.s")).read().splitlines(), lineterm="", n=0)
+      if l[:1] in "+-" and not l.startswith(("+++", "---"))]
+code_dl = [l for l in dl if l[1:].split(";")[0].strip()]
+assert all(l.startswith("+") or l.strip() in ("-        rts", "-        xba") for l in code_dl), code_dl
+assert {t: B.TARGETS[t]["engine_asm"] for t in B.TARGETS if B.TARGETS[t].get("engine_asm")} == \
+    {"production": "asm/item_v08", "celes-tech": "asm/item_v08", "item-tech": "asm/item_v08"}
+print(f"PASS v0.8 engine source = accepted v0.7.1 engine + B-reset exits only ({len(code_dl)} code lines in c3.s); "
+      "frozen v0.7.x targets assemble asm/item_v071"); ok += 1
 # 43c every production record decodes back to its source definition (stats, users = equip matrix, elements, status, relic bits)
 from patches import equipment_v08 as EQ8
 eq8 = json.load(open(os.path.join(HERE, "items/production_v08/equipment.json")))["items"]

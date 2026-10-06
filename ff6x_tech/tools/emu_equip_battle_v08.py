@@ -134,7 +134,6 @@ def main(qa, manifest, out):
         menu(h, L, PRESET_PICKS[preset_for(c)])
         h.run_event([0x8D, c])
         equip_menu(h, c, wid)
-        solo(h, c)
         return party_order(h).index(c)
 
     def clear_hand_bit(c, hand=0):
@@ -195,7 +194,7 @@ def main(qa, manifest, out):
         Image.fromarray(np_pair).resize((1024, 448), Image.NEAREST).save(
             os.path.join(out, f"{q.n:03d}_W_{wid:03X}_ext_vs_template.png"))
     res["weapons"] = wdet
-    q.check("W1 all 13 weapons (solo party): Fight uses animation number $C0+low byte (the template run uses the "
+    q.check("W1 all 13 weapons: Fight uses animation number $C0+low byte (the template run uses the "
             "template's id+1), battle power differs from the template weapon's by exactly the power difference, hit "
             "rate = the item's, and every rendered frame of the attack equals the same battle with the template "
             "vanilla weapon in hand (no Brush alias, no unarmed)",
@@ -238,17 +237,17 @@ def main(qa, manifest, out):
     if h.eq(c)[0] != 0x103:
         equip_menu(h, c, 0x103, hand=0)
     eq = h.eq(c)
-    solo(h, c)
     si = party_order(h).index(c); x = 2 * si
     start_battle(h, si)
-    pw = (h.r8(0x3B68 + x), h.r8(0x3B69 + x)); r4 = h.r8(0x3C58 + x)
+    pw = (h.r8(0x3B68 + x), h.r8(0x3B69 + x)); r4 = h.r8(0x2E6E + si)            # C2:2883: $11D8 & $10 (Genji)
     seq, _ = fight(h, 500)
     q.shot(h, "G_genji_fight")
     loff = wdet["103"]["battle"]["power"] - 198                        # Locke's own battle-power offset (W1, same item)
+    # Genji flag: battle copies $11D8 & $10 to $2E6E + slot (C2:2883)
     q.check("G1 Genji Glove: Raider Knife R + Darill's Dirk L equipped (9-bit ids), battle powers 198/202 (+ Locke's "
             "offset measured in W1), both "
             "animation numbers ($C3, $C8) used by Fight",
-            eq[0] == 0x103 and eq[1] == 0x108 and pw == (198 + loff, 202 + loff) and 0xC3 in seq and 0xC8 in seq and r4 & 0x20,
+            eq[0] == 0x103 and eq[1] == 0x108 and pw == (198 + loff, 202 + loff) and 0xC3 in seq and 0xC8 in seq and r4 & 0x10,   # $11D8 bit 4: Genji Glove
             {"eq": [f"{v:03X}" for v in eq], "power": pw, "relic4": f"{r4:02X}", "anim_runs": runs(seq)[:16]})
     finish_battle(h)
     q.check("P1 battle end (Genji run): Locke's two extended weapons and the inventory are unchanged",
@@ -261,13 +260,14 @@ def main(qa, manifest, out):
     h.run_event([0x8D, c])
     equip_relic_vanilla(h, c, 0xD0)                                   # Gauntlet
     equip_menu(h, c, 0x100, hand=0)
-    solo(h, c)
     si = party_order(h).index(c); x = 2 * si
     start_battle(h, si)
-    r4 = h.r8(0x3C58 + x)
+    r4 = h.r8(0x3C58 + x); wf = h.r8(0x3BA4 + x)
     seq, _ = fight(h)
-    q.check("H1 Gauntlet + Tempered Edge (two-hand flag, other hand empty): battle 'uses weapon 2-handed' set, Fight "
-            "uses animation $C0", r4 & 0x10 and 0xC0 in seq, {"relic4": f"{r4:02X}", "anim_runs": runs(seq)[:10]})
+    q.check("H1 Gauntlet + Tempered Edge (two-hand flag, other hand empty): Gauntlet effect ($11D8 bit 3) active and the "
+            "weapon's two-hand flag kept in battle (C2 clears it without Gauntlet), Fight uses animation $C0",
+            r4 & 0x08 and wf & 0x40 and 0xC0 in seq, {"relic4": f"{r4:02X}", "weapon_flags": f"{wf:02X}",
+                                                     "anim_runs": runs(seq)[:10]})
     finish_battle(h)
 
     # ------------------------------------------------------------------ O: Offering
@@ -277,13 +277,23 @@ def main(qa, manifest, out):
     h.run_event([0x8D, c])
     equip_relic_vanilla(h, c, 0xD3)                                   # Offering
     equip_menu(h, c, 0x106, hand=0)
-    solo(h, c)
     si = party_order(h).index(c)
     start_battle(h, si)
-    seq, _ = fight(h, 900)
-    strikes = sum(1 for k, n in runs(seq) if k == "C6")
-    q.check("O1 Offering + Moonless: Fight strikes 4 times with the extended animation number $C6", strikes >= 4,
-            {"anim_runs": runs(seq)[:20]})
+    mons = [k for k in range(6) if h.r16(0x3C1C + 8 + 2 * k) not in (0, 0xFFFF)]
+    for k in mons:                                                    # POKE: enemies survive all strikes (test only)
+        h.w8(0x3BF4 + 8 + 2 * k, 0x30); h.w8(0x3BF4 + 9 + 2 * k, 0x75)
+    hp = lambda: [h.r16(0x3BF4 + 8 + 2 * k) for k in mons]
+    h.press("A", 8, 30); h.press("A", 8, 10)
+    seq, drops, last = [], 0, hp()
+    for t in range(900):
+        h.step(1)
+        seq.append(h.r8(ANIM_NO))
+        now = hp()
+        drops += sum(1 for a_, b_ in zip(last, now) if b_ < a_)
+        last = now
+    q.check("O1 Offering + Moonless: one Fight = 4 strikes (4 separate enemy HP drops), all with the extended animation "
+            "number $C6", drops == 4 and 0xC6 in seq and not set(seq) & {0xC0 + k for k in range(0x40) if k != 6},
+            {"hp_drops": drops, "anim_runs": runs(seq)[:20]})
     finish_battle(h)
 
     # ------------------------------------------------------------------ R: Runic / Bushido availability

@@ -204,8 +204,9 @@ def main(clean, out):
                 "(EC:E400, index template+1) into XWeaponAnimFull[$C0 + low byte] and its ItemJumpThrowAnim byte "
                 "(D1:0040) into XJumpAnim[$80 + low byte]; the ItemProp record is built from the item definition only. "
                 "The low-byte vanilla alias (e.g. $100 -> Dirk, $13D -> Chocobo Brsh) is never consulted for graphics. "
-                "Verified in the emulator (`tools/emu_equip_battle_v08.py`): animation number, and every rendered frame of "
-                "Fight equal to the template weapon's with equal stats.\n\n"
+                "Verified in the emulator (`tools/emu_equip_battle_v08.py` W1/J1): the animation number used by Fight, and "
+                "every rendered frame of Fight (all 13) and Jump (both spears) equal to the same battle continued with the "
+                "template weapon in hand (one in-battle state, only the hand item id differs).\n\n"
                 "| ID | Weapon | Family | Template (graphic + animation) | Icon | Jump | Runic | 2-hand (Gauntlet) | Bushido flag | Dual wield | Notes |\n|---|---|---|---|---|---|---|---|---|---|---|\n")
         for it in items:
             if it["category"] != "weapon":

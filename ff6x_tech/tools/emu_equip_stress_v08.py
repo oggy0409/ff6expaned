@@ -117,6 +117,9 @@ def main(qa, manifest, prod, clean, out):
     h.run_event(sum(([0x80, v] for v in STRONG_VANILLA), []))
     owned0 = sorted([i for s, i, n in h.inv() for _ in range(n)] + [x for v in all_eq(h).values() for x in v if x != 0xFF])
     opt = {}
+    best_bad = []
+    rom = open(qa, "rb").read()
+    rec = lambda i: rom[0x3A0000 + 30 * i:0x3A0000 + 30 * i + 30]          # XItemProp FA:0000 (ids $000-$13F)
     for name in LOADOUT:
         c = CHARS.index(name); si = party_order(h).index(c)
         nv = Nav(h); h.step(20)
@@ -126,6 +129,14 @@ def main(qa, manifest, prod, clean, out):
         nv.cursor_lr(1); h.press("A", 4, 60)              # Optimum
         opt[name] = h.eq(c)
         nv.back_to_main(); nv.close(); h.step(20)
+        # vanilla rule: per slot, the highest attack / defense power among the items the character can equip
+        pool = {i for s_, i, n in h.inv()} | {i for i in opt[name][:4] if i != 0xFF}
+        for k, typ in ((0, 1), (1, 3), (2, 4), (3, 2)):
+            cand = [i for i in pool if rec(i)[0] & 7 == typ and (rec(i)[1] | rec(i)[2] << 8) >> c & 1]
+            want = max((rec(i)[20] for i in cand), default=None)
+            got = rec(opt[name][k])[20] if opt[name][k] != 0xFF else None
+            if want is not None and got != want:
+                best_bad.append((name, k, f"{opt[name][k]:03X}", got, want))
     owned1 = sorted([i for s, i, n in h.inv() for _ in range(n)] + [x for v in all_eq(h).values() for x in v if x != 0xFF])
     def can(n, i):
         if i == 0xFF:
@@ -136,9 +147,11 @@ def main(qa, manifest, prod, clean, out):
     res["optimum"] = {n: [f"{v:03X}" for v in e] for n, e in opt.items()}
     q.check("L1 Optimum (vanilla + new competing): no duplication or loss of any item, every chosen item equippable",
             owned0 == owned1 and all(can(n, i) for n, e in opt.items() for i in e), res["optimum"])
-    q.check("L2 Optimum keeps vanilla where it is stronger: Celes/Terra/Edgar weapon = Illumina or Ragnarok (255), "
-            "not a signature sword (<= 222)", all(opt[n][0] in (0x1A, 0x1B) for n in ("Terra", "Celes", "Edgar")) or
-            all(opt[n][0] in (0x1A, 0x1B) for n in ("Terra", "Celes")), res["optimum"])
+    q.check("L2 Optimum keeps vanilla where it is stronger: Terra and Locke (optimized first) take Illumina and Ragnarok "
+            "(255), not a signature sword (<= 222)", {opt["Terra"][0], opt["Locke"][0]} == {0x1A, 0x1B}, res["optimum"])
+    q.check("L3 Optimum picks, for every slot, the highest attack / defense power among the items the character can "
+            "equip - extended and vanilla ranked by their own properties (v0.8 fix: equip-list sort keys)",
+            not best_bad, {"mismatch": best_bad})
     # ------------------------------------------------------------------ M: Empty returns ids
     h.em.set_state(st_loadout); h.step(10)
     c = 0; si = party_order(h).index(c)

@@ -262,10 +262,10 @@ def table_externs():
             "XWeaponAnimFull": T_ANIM, "XJumpAnim": T_JUMP}
 
 
-def load_source():
+def load_source(asm_dir=None):
     src = []
     for f in SOURCES:
-        p = os.path.join(ASM, f)
+        p = os.path.join(asm_dir or ASM, f)
         if os.path.exists(p):
             src.append(f"; ==== {f}\n" + open(p).read())
     return "\n".join(src)
@@ -312,7 +312,9 @@ def build(rom, target, alloc, meta):
                   consumer="retargeted ItemProp/ItemName consumers and TECH v0.7.1 routines")
         notes["tables"][label] = {"snes": fmt_snes(at), "length": len(data)}
     ext = table_externs()
-    prog = Program(load_source(), ext, "item_v071")
+    # engine source: frozen v0.7.x targets keep asm/item_v071 byte-for-byte; v0.8 targets use asm/item_v08
+    # (same engine + the B-accumulator reset of KNOWN_RISKS_v0.8 R32)
+    prog = Program(load_source(os.path.join(HERE, meta["engine_asm"]) if meta.get("engine_asm") else None), ext, "item_v071")
     secs = prog.assemble()
     for name, (org, code) in secs.items():
         how, reg = REGION_OF[name]
