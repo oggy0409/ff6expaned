@@ -81,7 +81,7 @@ user runtime QA. Logs, JSON reports and screenshots: `out/emulator_v09/`; contac
 | `tools/emu_enemy_tech.py load` | v0.9 QA | **11/11** | Continue, custom battle after load, map test A, routed NPC, Celes Annex, vanilla Guard battle |
 | `tools/emu_enemy_tech.py cmds` | v0.9 QA | **6/6** | Steal / Sketch / Control on custom monsters (POKE) |
 | `tools/emu_celes_suite.py` | v0.9 celes-tech | **24/24** | Celes Annex dialogue hook, map / NPC / door / battle / reward / exit |
-| `tools/emu_colosseum.py` (+ v0.6.0 / v0.7.2 / v0.8 / **v0.9 production** differential, v0.7.1 harness reference) | v0.9 QA, Rev 1 | **COLO_RESULT** | Colosseum fight / cancel / win / loss, real receptionist on map $19D: frames, inventory, return identical to Rev 1 |
+| `tools/emu_colosseum.py` (+ v0.6.0 / v0.7.2 / v0.8 / **v0.9 production** differential, v0.7.1 harness reference) | v0.9 QA, Rev 1 | **66/66** | Colosseum fight / cancel / win / loss, real receptionist on map $19D: frames, inventory, return identical to Rev 1 (v0.8 and v0.9 production included); the v0.7.1 harness reference still reproduces the original black screen |
 
 The QA hub moved (Consumables / Rare / More → v0.8 equipment tools / older tests); the older suites reach their menus
 through the root override environment variables (`FF6X_QA_V08_ROOT`, `FF6X_QA_ITEM_ROOT`, `FF6X_QA_PREFIX`,
