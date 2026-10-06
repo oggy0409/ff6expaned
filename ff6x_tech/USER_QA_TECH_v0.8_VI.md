@@ -32,7 +32,7 @@ Lưu ý: tên hiển thị tối đa **12 ký tự** (giới hạn của game g�
 | 4 | Ma trận (kiểm tra nhanh): Locke **không** thấy `Doma Edge`; P2 → Cyan thấy `Doma Edge` / `Doma Kabuto` / `Doma Crest`; P3 → Relm thấy `ConcordBrush` / `PaintersLens`; P4 → Gau / Umaro (P5) **không** thấy vũ khí/khiên mới | đúng như `EQUIP_MATRIX_v0.8.csv` |
 | 5 | Đội P1 (bước 2–3) → `Test battle (guards)` → Fight bằng cả 4 người | đòn đánh có hình vũ khí bình thường (giống vũ khí mẫu: Excalibur, ThiefKnife, Enhancer, Aura Lance), **không** đánh tay không, **không** ra hình cọ vẽ (Brush); thắng → về Narshe, sáng màn hình, điều khiển được |
 | 6 | Sau trận: Equip của 4 người | vẫn đúng các món đã mặc; Item không mất / không nhân đôi |
-| 7 | `Boss battle (Whelk)` với đội P1 | vào trận, đánh được, về lại field; trang bị không đổi |
+| 7 | `Boss battle (Whelk)` với đội P1 | vào trận, đánh được, về lại field; trang bị không đổi (câu “VICKS: Hold it!” là thoại gốc của trận Whelk — bình thường) |
 | 8 | **Equip → Optimum** (Terra) rồi **Empty**; **Item → Arrange** | Optimum chọn món **mạnh nhất** Terra mặc được ở mỗi ô (Bat.Pwr/Defense cao nhất — đã sửa lỗi xếp hạng ở v0.8), không nhân đôi/mất món; danh sách Equip xếp từ mạnh đến yếu; Empty trả các món về Item với **đúng tên**; Arrange giữ nguyên 39 món + số lượng |
 | 9 | **Save** (ô Save Point/menu QA) → **Reset** → **Continue** | toàn bộ món trong Item và trên người giữ nguyên |
 | 10 | (tùy chọn) mở save bước 9 bằng ROM **PRODUCTION** | mọi món `$100-$126` giữ nguyên (cả đang mặc) |

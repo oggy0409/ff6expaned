@@ -283,17 +283,31 @@ def main(qa, manifest, out):
     for k in mons:                                                    # POKE: enemies survive all strikes (test only)
         h.w8(0x3BF4 + 8 + 2 * k, 0x30); h.w8(0x3BF4 + 9 + 2 * k, 0x75)
     hp = lambda: [h.r16(0x3BF4 + 8 + 2 * k) for k in mons]
-    h.press("A", 8, 30); h.press("A", 8, 10)
-    seq, drops, last = [], 0, hp()
-    for t in range(900):
-        h.step(1)
-        seq.append(h.r8(ANIM_NO))
-        now = hp()
-        drops += sum(1 for a_, b_ in zip(last, now) if b_ < a_)
-        last = now
-    q.check("O1 Offering + Moonless: one Fight = 4 strikes (4 separate enemy HP drops), all with the extended animation "
-            "number $C6", drops == 4 and 0xC6 in seq and not set(seq) & {0xC0 + k for k in range(0x40) if k != 6},
-            {"hp_drops": drops, "anim_runs": runs(seq)[:20]})
+    st_menu = h.em.get_state()
+
+    def offering_run():
+        h.press("A", 8, 30); h.press("A", 8, 10)
+        seq, shots, drops, last = [], [], 0, hp()
+        for t in range(900):
+            h.step(1)
+            seq.append(h.r8(ANIM_NO))
+            if t % 4 == 0:
+                shots.append(np.asarray(h.em.get_screen()).copy())
+            now = hp()
+            drops += sum(1 for a_, b_ in zip(last, now) if b_ < a_)
+            last = now
+        return seq, shots, drops, hp()
+    seq, fa, drops, hp_a = offering_run()
+    h.em.set_state(st_menu)
+    as_template(c, si, int(BYID[0x106]["template"], 16))               # Hardened, same battle state
+    seq_b, fb, drops_b, hp_b = offering_run()
+    diff = [k for k, (u, v) in enumerate(zip(fa, fb)) if (u != v).any()]
+    q.check("O1 Offering + Moonless: the multi-strike Fight (Offering) is identical to the same battle with the template "
+            "Hardened in hand - every sampled frame, the number of enemy HP drops and the enemies' HP afterwards - and uses "
+            "the extended animation number $C6 (template: $29)",
+            not diff and drops == drops_b and hp_a == hp_b and drops >= 2 and 0xC6 in seq and 0x29 in seq_b,
+            {"hp_drops": drops, "template_hp_drops": drops_b, "differing_samples": diff[:10],
+             "anim_runs": runs(seq)[:12], "template_anim_runs": runs(seq_b)[:12]})
     finish_battle(h)
 
     # ------------------------------------------------------------------ R: Runic / Bushido availability
