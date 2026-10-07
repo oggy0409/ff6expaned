@@ -360,7 +360,7 @@
   }
  ],
  "unfinished_feature_branches": [],
- "next_recommended_milestone": "ART ASSET GATE v1.0 (export only: map $1A2 tiles / metatiles / palette, E8 regions, vanilla references, custom asset spec, art pipeline). Then a human art pass. Do not start CONTENT v1.0 or the Celes ROM Script Pass automatically.",
+ "next_recommended_milestone": "Human art pass on the ART ASSET GATE v1.0 material (decisions listed under art_asset_gate_v1_0). Then a TECH milestone for the art injection pipeline. Do not start CONTENT v1.0 or the Celes ROM Script Pass automatically.",
  "do_not_start_automatically": true,
  "handoff_document": "ff6x_tech/ACCEPTANCE_v0.9.3.md",
  "handoff_zip": "FF6X_TECH_v0.9.3_VISUAL_STATE_VRAM_HOTFIX_QA.zip",
@@ -428,6 +428,23 @@
    "PATCH_TABLE_v0.9.3.md",
    "KNOWN_RISKS_v0.9.3.md",
    "HASHES_v0.9.3.txt"
+  ]
+ },
+ "art_asset_gate_v1_0": {
+  "status": "DELIVERED (export only, no ROM change) - awaiting human art pass decisions",
+  "package": "FF6X_ART_ASSET_GATE_v1.0.zip",
+  "sha1": "e8a00d8cd514e0cd0ceeea5af86744445e09df9b",
+  "docs": "ff6x_tech/art/gate_v1.0/",
+  "tools": [
+   "tools/art_gate_v10.py",
+   "tools/art_gate_export_v10.py",
+   "tools/art_gate_capture_v10.py",
+   "ff6x/fieldgfx.py"
+  ],
+  "open_decisions": [
+   "permanent memorial 4x2 or 4x3 (rows 9-11)",
+   "reuse the v0.9.3 sealed gate",
+   "new colours in palette $30 rows 4-6 or wait for the production Vector-ruins palette"
   ]
  }
 }
