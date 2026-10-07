@@ -1,0 +1,30 @@
+diff --git a/bsnes/target-libretro/GNUmakefile b/bsnes/target-libretro/GNUmakefile
+index 53ebb7d..a3abf80 100644
+--- a/bsnes/target-libretro/GNUmakefile
++++ b/bsnes/target-libretro/GNUmakefile
+@@ -11,10 +11,11 @@ else ifeq ($(platform), tvos-arm64)
+ 	options += -dynamiclib
+ endif
+ 
+-objects := libretro $(objects)
++objects := libretro ff6x_dump $(objects)
+ objects := $(patsubst %,obj/%.o,$(objects))
+ 
+ obj/libretro.o: target-libretro/libretro.cpp
++obj/ff6x_dump.o: target-libretro/ff6x_dump.cpp
+ 
+ all: $(objects)
+ ifeq ($(platform),linux)
+diff --git a/bsnes/target-libretro/program.cpp b/bsnes/target-libretro/program.cpp
+index 9a5b12b..26afe9a 100644
+--- a/bsnes/target-libretro/program.cpp
++++ b/bsnes/target-libretro/program.cpp
+@@ -168,7 +168,7 @@ auto Program::open(uint id, string name, vfs::file::mode mode, bool required) ->
+ auto Program::updateVideoPalette() -> void {
+   double luminance = 100.0 / 100.0;
+   double saturation = 100.0 / 100.0;
+-  double gamma = 150.0 / 100.0;
++  double gamma = getenv("FF6X_BSNES_GAMMA") ? atof(getenv("FF6X_BSNES_GAMMA")) : 150.0 / 100.0;   // FF6X harness: 1.0 = raw colours
+ 
+   uint depth = 24;
+ 

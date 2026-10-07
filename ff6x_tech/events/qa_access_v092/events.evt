@@ -866,6 +866,53 @@ clr_switch EXP_HOPE_EMPIRE
 dlg qa92_done_off
 party_step RIGHT 1
 return
+# TECH v0.9.3: party normaliser for every Celes-enabler entry (WoR, Praetor, walk-in). User runtime V2 / V3: right after
+# New Game the party is Terra + Wedge + Vicks, all three in Magitek armor; v0.9.2 cleared Terra's Magitek only, so the
+# WoR encounters and the Praetor battle ran in Magitek battle mode and the armor graphics overwrote the monster VRAM
+# cells (WoR Lunaris head, second Suppressor Bit). Here: Wedge / Vicks leave, Magitek is cleared on all 16 records,
+# Terra leaves the field Magitek armor (vehicle), and a party that has nobody besides Terra gets preset P1 (Locke, Celes, Edgar).
+# Parties chosen with a preset (P1-P5, E5 presets) are kept.
+@QaCelParty93
+call QaReady8
+char_party $0E 0
+char_party $0F 0
+party_case
+if_switch CASE_CHAR_LOCKE=1 -> QaCelPartyOk93
+if_switch CASE_CHAR_CYAN=1 -> QaCelPartyOk93
+if_switch CASE_CHAR_SHADOW=1 -> QaCelPartyOk93
+if_switch CASE_CHAR_EDGAR=1 -> QaCelPartyOk93
+if_switch CASE_CHAR_SABIN=1 -> QaCelPartyOk93
+if_switch CASE_CHAR_CELES=1 -> QaCelPartyOk93
+if_switch CASE_CHAR_STRAGO=1 -> QaCelPartyOk93
+if_switch CASE_CHAR_RELM=1 -> QaCelPartyOk93
+if_switch CASE_CHAR_SETZER=1 -> QaCelPartyOk93
+if_switch CASE_CHAR_MOG=1 -> QaCelPartyOk93
+if_switch CASE_CHAR_GAU=1 -> QaCelPartyOk93
+if_switch CASE_CHAR_GOGO=1 -> QaCelPartyOk93
+if_switch CASE_CHAR_UMARO=1 -> QaCelPartyOk93
+call QaLeave8
+char_party $01 1   # Locke
+char_party $06 1   # Celes
+char_party $04 1   # Edgar
+@QaCelPartyOk93
+status_clear $00 $FFF7
+status_clear $01 $FFF7
+status_clear $02 $FFF7
+status_clear $03 $FFF7
+status_clear $04 $FFF7
+status_clear $05 $FFF7
+status_clear $06 $FFF7
+status_clear $07 $FFF7
+status_clear $08 $FFF7
+status_clear $09 $FFF7
+status_clear $0A $FFF7
+status_clear $0B $FFF7
+status_clear $0C $FFF7
+status_clear $0D $FFF7
+status_clear $0E $FFF7
+status_clear $0F $FFF7
+obj_vehicle $00 $00   # Terra on foot: vehicle NONE (the opening Magitek armor is a field vehicle, event cmd $44; vanilla uses $00)
+return
 # ---- v0.9.2 Celes enablers ----------------------------------------------------------------------------
 @QaCel92
 dlg qa92_cel
@@ -879,9 +926,8 @@ choice QaOuter92, QaVale92, QaCancel6
 # E1: World of Ruin aboard the airship at (146,204), two tiles south of the Vector Outer Ward entrance (146,202).
 # QA: one Moogle Charm ($DE, no random battles when equipped) is given each time - WoR monsters vs an early QA party.
 @QaWor92
-call QaReady8
+call QaCelParty93
 give_item $DE
-status_clear $00 $FFF7
 set_switch EXP_CELES_STARTED
 set_switch QA_VANILLA_AIRSHIP_AVAILABLE   # QA only: 'airship owned' (vanilla $1B9) so the parked Falcon can be boarded
 load_map $001 146 204 UP Z_UPPER AIRSHIP
@@ -891,8 +937,7 @@ world_end
 dlg qa92_praetor
 choice QaPraetorL92, QaPraetorS92, QaCancel6
 @QaPraetorL92
-call QaReady8
-status_clear $00 $FFF7
+call QaCelParty93
 battle $FA bg $3F
 call VanillaPostBattleCheck
 fade_in
@@ -901,8 +946,7 @@ party_step RIGHT 1
 return
 # manual-QA scaled twin (formation $245: 1/10 HP, attack / magic 1, identical AI) - reachable by an early party
 @QaPraetorS92
-call QaReady8
-status_clear $00 $FFF7
+call QaCelParty93
 battle $F9 bg $3F
 call VanillaPostBattleCheck
 fade_in
@@ -911,8 +955,7 @@ party_step RIGHT 1
 return
 # E1 shortcut: walk-in directly (no world map), arrival tile of the map
 @QaOuter92
-call QaReady8
-status_clear $00 $FFF7
+call QaCelParty93
 load_map $1A2 16 27 UP Z_UPPER STARTUP_EVENT
 return
 @QaVale92

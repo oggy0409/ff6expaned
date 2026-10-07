@@ -7,29 +7,31 @@ load_pal 15 $20                     # E7: Vale variant palette (MapSpritePal $20
 call EvOuterMem
 call EvOuterArc
 return
-# E8 memorial wall (10-12,10): none -> temporary tag wall (arc done, both branches) -> stone (Graves done)
+# E8 memorial wall (9-12, 10-11): none -> temporary tag memorial (arc done, both branches) -> stone memorial (Graves)
+# TECH v0.9.3: 4 x 2 tiles per state from maps/celes_outer_v092/states.json (builder-checked: equal to that file,
+# reachable floor unchanged in every state combination)
 @EvOuterMem
 if_switch EXP_GRAVES_DONE=1 -> EvOuterStone
 if_switch EXP_CELES_DONE=1 -> EvOuterTags
-set_tiles BG1 10 10 3 1 56 57 56
+set_tiles BG1 9 10 4 2 57 56 57 56 67 66 67 66
 return
 @EvOuterTags
-set_tiles BG1 10 10 3 1 B0 B3 B0
+set_tiles BG1 9 10 4 2 91 92 91 92 90 93 90 93
 return
 @EvOuterStone
-set_tiles BG1 10 10 3 1 C0 66 C3
+set_tiles BG1 9 10 4 2 F1 F2 F1 F2 11 11 11 11
 return
-# E8 archive door (19-20,10): sealed (no choice) / retained (Preserve) / burned (Burn)
+# E8 archive doorway (19-20, 10-11): sealed (no choice) / retained (Preserve) / burned (Burn)
 @EvOuterArc
 if_switch EXP_CELES_RECORDS_CHOSEN=0 -> EvOuterArcSealed
 if_switch EXP_CELES_RECORDS_PRESERVED=1 -> EvOuterArcKept
-set_tiles BG1 19 10 2 1 02 02
+set_tiles BG1 19 10 2 2 02 02 96 97
 return
 @EvOuterArcKept
-set_tiles BG1 19 10 2 1 D0 D3
+set_tiles BG1 19 10 2 2 BB BB CB CB
 return
 @EvOuterArcSealed
-set_tiles BG1 19 10 2 1 57 56
+set_tiles BG1 19 10 2 2 12 12 13 13
 return
 
 # ---- E8: the state read back by the player -------------------------------------------------------------------------

@@ -20,7 +20,8 @@ just above a threshold). Everything else goes through the real QA hub, menus, ba
       line dropped (Terra + Celes)
   E6  map $1A2 palette buffer = derived palette $30; vanilla map palettes intact in the relocated table (ROM)
   E7  Vale visible only with NPC_CELES_VALE_OUTER; sprite palette slot 7 = new palette $20 (relocated table entry)
-  E8  outer-map state presentation for none / BURN / PRESERVE / Graves (BG1 tiles in WRAM) + state survives a
+  E8  outer-map state presentation for none / BURN / PRESERVE / Graves (BG1 tiles in WRAM, regions / tiles from
+      maps/celes_outer_v092/states.json since v0.9.3; rendered frames: tools/emu_visual_v093.py S4) + state survives a
       save -> power cycle -> load
   E9  formation $244 / $245 bytes: front attack only (aux $E3), hidden slots; 12 battle starts are all front attacks;
       build formation_safety report: 0 errors for $244 / $245 (hidden slots included)
@@ -145,11 +146,19 @@ def finish_battle(h):
     h.step(60)
 
 
+STATES = json.load(open(os.path.join(HERE, "maps", "celes_outer_v092", "states.json")))   # TECH v0.9.3 E8 regions / states
+
+
 def tiles(h):
-    h.gd.update_ram()
-    mem = lambda a: h.gd.memory.extract(a, '|u1')
-    return {"memorial": [mem(0x7F0000 + 10 * 256 + x) for x in (10, 11, 12)],
-            "archive": [mem(0x7F0000 + 10 * 256 + x) for x in (19, 20)]}
+    """BG1 map layout buffer ($7F:0000, 256 per row) over the E8 memorial / archive regions (states.json)"""
+    out = {}
+    for reg, r in STATES["regions"].items():
+        out[reg] = [h.r8(0x10000 + (r["y"] + j) * 256 + r["x"] + i) for j in range(r["h"]) for i in range(r["w"])]
+    return out
+
+
+def state_tiles(region, state):
+    return [int(t, 16) for row in STATES["states"][region][state]["rows"] for t in row.split()]
 
 
 def main(qa, manifest, out):
@@ -390,10 +399,13 @@ def main(qa, manifest, out):
         states[tag] = tiles(h)
         q.shot(h, f"E8_{tag}")
     res["E8"] = states
-    expect = {"none": ([0x56, 0x57, 0x56], [0x57, 0x56]), "burn": ([0xB0, 0xB3, 0xB0], [0x02, 0x02]),
-              "preserve": ([0xB0, 0xB3, 0xB0], [0xD0, 0xD3]), "graves": ([0xC0, 0x66, 0xC3], [0xD0, 0xD3])}
-    q.check("E8 outer-map presentation from the persistent bits: none = machinery / sealed; BURN = tag wall / burned "
-            "archive; PRESERVE = tag wall / retained archive; Graves = stone memorial (archive keeps its branch)",
+    expect = {"none": (state_tiles("memorial", "none"), state_tiles("archive", "sealed")),
+              "burn": (state_tiles("memorial", "tags"), state_tiles("archive", "burned")),
+              "preserve": (state_tiles("memorial", "tags"), state_tiles("archive", "kept")),
+              "graves": (state_tiles("memorial", "stone"), state_tiles("archive", "kept"))}
+    q.check("E8 outer-map presentation from the persistent bits (BG1 tiles of the 4 x 2 memorial / 2 x 2 archive regions, "
+            "maps/celes_outer_v092/states.json): none = machinery wall / sealed door; BURN = tag memorial / burned archive; "
+            "PRESERVE = tag memorial / retained archive; Graves = stone memorial (archive keeps its branch)",
             all((states[k]["memorial"], states[k]["archive"]) == (list(m), list(a)) for k, (m, a) in expect.items()),
             states)
     # persistence: PRESERVE + Graves state saved, power cycle, loaded, map re-entered
@@ -435,7 +447,8 @@ def main(qa, manifest, out):
     q.shot(h2, "E8_after_load")
     q.check("E8 save -> power cycle -> load: the Celes state bits survive and $1A2 re-entered shows the stone "
             "memorial + retained archive", pre == post and post["GRAVES"] == 1 and post["PRESERVED"] == 1 and
-            (t2["memorial"], t2["archive"]) == ([0xC0, 0x66, 0xC3], [0xD0, 0xD3]), {"pre": pre, "post": post, "tiles": t2})
+            (t2["memorial"], t2["archive"]) == (state_tiles("memorial", "stone"), state_tiles("archive", "kept")),
+            {"pre": pre, "post": post, "tiles": t2})
     h2.close()
     out_rep = {"rom": os.path.basename(qa), "checks": q.checks, "results": res, "all_pass": all(c["pass"] for c in q.checks)}
     json.dump(out_rep, open(os.path.join(out, "ENABLERS_EMULATOR_REPORT_v092.json"), "w"), indent=1, default=str)

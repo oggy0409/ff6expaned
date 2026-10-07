@@ -18,7 +18,7 @@ from ff6x.patchfmt import make_ips, apply_ips, make_bps, apply_bps
 from ff6x.romimage import RomImage, load_clean_rom, sha1, crc32, md5, BuildError
 
 BUILD_VERSION = "0.9.1"   # TECH v0.9.1: item data alignment (locked consumable effects, reconstruction shops, metadata)
-QA_VERSION = "0.9.2"      # TECH v0.9.2: QA build = v0.9.1 + Celes enablers E1-E9 (QA targets only)
+QA_VERSION = "0.9.3"      # TECH v0.9.3: QA build = v0.9.1 + Celes enablers E1-E9 + visual state / VRAM hotfix (QA only)
 FILE_VER = "0.9.1"
 PROD_ITEMS = "items/production_v08/equipment.json"          # frozen v0.8 / v0.9 targets
 PROD_ITEMS_V091 = "items/production_v091/equipment.json"    # TECH v0.9.1
@@ -30,13 +30,15 @@ TARGETS = {
                     "packages": [], "monsters": [], "formations": [], "ext_item_sources": [PROD_ITEMS_V091],
                     "item_builder": "v09", "item_cfg": "v091",
                     "status": "PRODUCTION BRANCH v0.9.1 - v0.9 + locked item data alignment (consumable effects, "
-                              "reconstruction shops $80-$84, Darill's Coin Mag +2, source metadata)"},
+                              "reconstruction shops $80-$84, Darill's Coin Mag +2, source metadata)",
+                    "expect_sha1": "2dc73bfbbcf4657eb59eec93bd614181ecdc817c", "expect_crc32": "01AE6F84"},   # v0.9.3: unchanged
     "celes-tech":  {"file": "FF6X_Rev1_TECH_v0.9.1_CELES_TECH", "version": BUILD_VERSION, "kind": "v07",
                     "packages": ["celes_annex_tech"], "monsters": [], "formations": [],
                     "ext_item_sources": [PROD_ITEMS_V091], "item_builder": "v09", "item_cfg": "v091",
-                    "status": "production v0.9.1 + accepted Celes Annex slice"},
-    # ---- TECH v0.9.2 QA (v0.9.1 + Celes enablers E1-E9, QA targets only) ---------------------------
-    "item-tech":   {"file": "FF6X_Rev1_TECH_v0.9.2_ITEM_ALIGNMENT_CELES_ENABLERS_QA", "version": QA_VERSION,
+                    "status": "production v0.9.1 + accepted Celes Annex slice",
+                    "expect_sha1": "e2192311a997ee49315807508d71ca202d4a8d09", "expect_crc32": "EA66714A"},   # v0.9.3: unchanged
+    # ---- TECH v0.9.3 QA (v0.9.1 + Celes enablers E1-E9 + v0.9.3 visual hotfix, QA targets only) ------
+    "item-tech":   {"file": "FF6X_Rev1_TECH_v0.9.3_VISUAL_STATE_VRAM_HOTFIX_QA", "version": QA_VERSION,
                     "kind": "v07",
                     "packages": ["celes_annex_tech", "map_tech_v04", "celes_enablers_v092", "qa_access_v092"],
                     "monsters": ["tech6_0180", "tech6_0181", "tech6_0182", "tech6_0183", "qa92_praetor",
@@ -47,7 +49,8 @@ TARGETS = {
                     "item_builder": "v09", "item_cfg": "v091", "celes_enablers": True, "ext_ai": True,
                     "formation_safety": "report",
                     "formation_safety_reason": "v0.6.1 QA formations carried unchanged for regression ($242 slot 0 known non-blocking)",
-                    "status": "TECH v0.9.2 QA BUILD (v0.9.1 item alignment + Celes enablers E1-E9 + QA hub) - USER RUNTIME QA PENDING"},
+                    "status": "TECH v0.9.3 QA BUILD (v0.9.1 item alignment + Celes enablers E1-E9 + QA hub + visual state / VRAM "
+                              "hotfix) - USER RUNTIME QA PENDING"},
     # ---- TECH v0.9 frozen (USER RUNTIME PASS / ACCEPTED, must reproduce exactly) ----------------------
     "production-v0.9": {"file": "FF6X_Rev1_TECH_v0.9_PRODUCTION", "version": "0.9.0", "kind": "v07", "meta_target": "production",
                     "packages": [], "monsters": [], "formations": [], "ext_item_sources": [PROD_ITEMS],

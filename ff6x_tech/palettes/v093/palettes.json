@@ -1,0 +1,59 @@
+{
+ "_comment": "TECH v0.9.3 enabler palettes (D-14: palette-adapted vanilla placeholders, never final art). Each new palette is DERIVED from a vanilla palette by a documented colour transform (patches/celes_enablers_v092.py derive()); index 0 of every 16-colour row stays as in the source (transparent / backdrop). v0.9.3 change: map palette $30 only (user runtime V1: the v0.9.2 transform desaturated 45% and then re-warmed the colours with tint 1.08/0.97/0.88, so the result was within a few RGB levels of vanilla $18 and read as unchanged - PALETTE_AUDIT_v0.9.3.md). Sprite palette $20 and the overload palette are unchanged (byte-identical to v0.9.2).",
+ "map_palettes": [
+  {
+   "index": "0x30",
+   "name": "PAL-01 Imperial Ruins (Magitek-lab variant)",
+   "from_vanilla_map_palette": "0x18",
+   "transform": {
+    "desaturate": 0.75,
+    "tint": [
+     0.95,
+     1.0,
+     1.08
+    ],
+    "gain": 1.04
+   },
+   "use": "map $1A2 Vector Outer Ward (QA enabler E6): muted ash grey / steel version of the vanilla Magitek Research Facility palette (75% toward luma, slight cool tint, +4% gain for readability); visibly distinct from vanilla $18",
+   "v092_transform": {
+    "desaturate": 0.45,
+    "tint": [
+     1.08,
+     0.97,
+     0.88
+    ],
+    "gain": 0.92
+   }
+  }
+ ],
+ "sprite_palettes": [
+  {
+   "index": "0x20",
+   "name": "Vale (records technician) NPC variant",
+   "from_vanilla_sprite_palette": "0x01",
+   "transform": {
+    "desaturate": 0.35,
+    "tint": [
+     0.92,
+     1.0,
+     1.06
+    ],
+    "gain": 1.0
+   },
+   "use": "Vale on map $1A2 (QA enabler E7): loaded into sprite palette slot 7 by the map startup event (event cmd $60)"
+  }
+ ],
+ "monster_overload": {
+  "from_vanilla_monster_palette": "0x1E1",
+  "transform": {
+   "desaturate": 0.0,
+   "tint": [
+    1.35,
+    0.9,
+    0.6
+   ],
+   "gain": 1.05
+  },
+  "use": "Magitek Praetor overload (E3 placeholder, VFX-02 white/orange): written over the Praetor's battle palette by AI effect OVERLOAD"
+ }
+}

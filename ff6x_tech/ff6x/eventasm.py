@@ -26,6 +26,7 @@ Source syntax (one command per line, '#' comments):
   TECH v0.7.3 (vanilla party commands, same encoding as the vanilla recruit scripts, e.g. Locke joins at CC:A621):
     char_prop <char $00-$0F> <actor props $00-$3F>  # event cmd $40 (EventCmd_40: stats/equipment/level/actor)
     obj_gfx <obj $00-$0F> <gfx $hex>           # event cmd $37 (EventCmd_37: object + character graphics $1601)
+    obj_vehicle <obj $00-$0F> <flags $hex>     # event cmd $44 (EventCmd_44: $0868 svv-----; $00 = no vehicle, as vanilla "vehicle X, NONE")
     char_name <char $00-$0F> <name $hex>       # event cmd $7F (EventCmd_7f: character name)
     create_obj <obj $00-$0F> / delete_obj <obj $00-$0F>   # event cmd $3D / $3E
     char_party <char $00-$0F> <party 0-7>      # event cmd $3F (EventCmd_3f: 0 = remove from party)
@@ -221,6 +222,12 @@ class EventProgram:
             if not (0 <= c <= 0x0F and 0 <= v <= lim):
                 raise EventAsmError(f"{op}: character/object $00-$0F, operand <= ${lim:02X}")
             self._emit(line, [{"char_prop": 0x40, "obj_gfx": 0x37, "char_name": 0x7F, "char_party": 0x3F}[op], c, v])
+        elif op == "obj_vehicle":
+            c, v = (_num(t) for t in args.split())
+            if not (0 <= c <= 0x0F and v & 0x1F == 0 and 0 <= v <= 0xFF):
+                raise EventAsmError("obj_vehicle: character object $00-$0F, flags svv00000 (s = character shown, "
+                                    "vv = 0 none / 1 chocobo / 2 magitek / 3 raft)")
+            self._emit(line, [0x44, c, v])
         elif op in ("give_gp", "take_gp"):
             v = _num(args)
             if not 1 <= v <= 0xFFFF:

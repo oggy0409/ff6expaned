@@ -1,0 +1,382 @@
+{
+ "project": "FFVI Expanded Edition (FF6X) - TECH foundation",
+ "clean_rom": {
+  "title": "Final Fantasy III (USA) (Rev 1)",
+  "file": "Final Fantasy III (USA) (Rev 1).sfc",
+  "sha1": "057ada1c641e3e0b3ca34e6e4f4eb1b05a87143a",
+  "crc32": "C0FA0464",
+  "size": 3145728,
+  "header": "none (unheadered)",
+  "map": "FastROM HiROM",
+  "internal_revision": 1
+ },
+ "build": {
+  "entry": "ff6x_tech/build.py",
+  "command": "python3 build.py \"<clean Rev 1>.sfc\" --target all --out out",
+  "python": ">=3.8, stdlib only (verified 3.11.15)",
+  "targets": 27,
+  "deterministic": true,
+  "selftest": "python3 tools/selftest.py \"<clean Rev 1>.sfc\" -> ALL 156 SELF-TESTS PASS",
+  "emulator_requirements": [
+   "stable-retro 1.0.1 (snes9x core)",
+   "numpy",
+   "Pillow",
+   "bsnes libretro core (tools/build_bsnes_core.sh) for tools/emu_bsnes.py"
+  ],
+  "allocation_manifest": "ff6x_tech/data/allocations.json",
+  "regression": "tools/run_regression_v093.sh <clean> <out> <evidence> <v0.7.1 ITEM_BANK_QA .sfc> (REGRESSION_REPORT_v0.9.3.md); visual checks on bsnes (tools/build_bsnes_core.sh) and snes9x"
+ },
+ "accepted_baseline": "TECH v0.9",
+ "accepted_baseline_label": "TECH v0.9 - ACCEPTED / USER RUNTIME QA PASS (frozen, rebuilt byte-exact as production-v0.9 / celes-tech-v0.9 / item-tech-v0.9)",
+ "accepted_hashes": {
+  "qa": {
+   "file": "FF6X_Rev1_TECH_v0.9_CONSUMABLE_RARE_QA.sfc",
+   "target": "item-tech",
+   "sha1": "e1136805cc792e11dbffab15e87df0f327a6a12e",
+   "crc32": "D8183069"
+  },
+  "production": {
+   "file": "FF6X_Rev1_TECH_v0.9_PRODUCTION.sfc",
+   "target": "production",
+   "sha1": "99cd74dfac5b91756120992dd1560534b40c66c3",
+   "crc32": "FF753A76"
+  },
+  "celes_tech": {
+   "file": "FF6X_Rev1_TECH_v0.9_CELES_TECH.sfc",
+   "target": "celes-tech",
+   "sha1": "e4c0703189fbde9b2df4ca972bfc801778aa6899",
+   "crc32": "3067CF9B"
+  }
+ },
+ "accepted_milestones": [
+  {
+   "version": "0.1",
+   "status": "ACCEPTED",
+   "summary": "4 MiB expansion + F0 reads",
+   "pinned": {
+    "legacy-v0.1": [
+     "c412f12938f9f4bd9c7e3f857572d3b773bab649",
+     "DA88A7DE"
+    ]
+   }
+  },
+  {
+   "version": "0.2",
+   "status": "ACCEPTED",
+   "summary": "expansion dialogue + event hook/bridge + persistent bit",
+   "pinned": {
+    "evtest": [
+     "0258a0fc122bb109e7ca343dda61c58af2e921fb",
+     "32725A65"
+    ]
+   }
+  },
+  {
+   "version": "0.3",
+   "status": "ACCEPTED",
+   "summary": "map/NPC/dialogue/event/battle/reward/save-load pipeline (Celes Annex tech slice)",
+   "pinned": {
+    "celes-tech-v0.3.0": [
+     "e0196eb30fc03cf076c0d1306b0c09b664f7b2a4",
+     "3E6B68E2"
+    ],
+    "production-v0.3.0": [
+     "0eda0bab925f8b6f1c840c20523f9413cb586ec3",
+     "8D05263F"
+    ]
+   }
+  },
+  {
+   "version": "0.3.1",
+   "status": "QA harness (accepted, QA-only issue documented)",
+   "summary": "QA access menu",
+   "pinned": {
+    "celes-qa-v0.3.1": [
+     "bf443c85dc448c0a86169f58dce43d77684c36f5",
+     "B982BC11"
+    ]
+   }
+  },
+  {
+   "version": "0.4",
+   "status": "ACCEPTED",
+   "summary": "map expansion foundation + NPC event routing",
+   "pinned": {
+    "production-v0.4.0": [
+     "0181dbaa133b679e04bfa4fd7349292fc2e5f32a",
+     "2EB2033F"
+    ],
+    "celes-tech-v0.4.0": [
+     "51587eaef3837d797e05cc58b8f535f6369fb8c3",
+     "B4E71558"
+    ],
+    "map-tech-v0.4.0": [
+     "e1d5387a819e3db87ce572d35ca51a5f5c91b6f1",
+     "EE846BD5"
+    ]
+   }
+  },
+  {
+   "version": "0.5",
+   "status": "ACCEPTED",
+   "summary": "monster expansion (ids > $17F, 512 monsters / 1024 formations)",
+   "pinned": {
+    "production-v0.5.0": [
+     "34ad5625ed08f791ca98ccde6a1dbf4ba4744cec",
+     "844CC192"
+    ],
+    "celes-tech-v0.5.0": [
+     "3805944217af91e7b360225d3e73dd2afdd714a7",
+     "239DD0DF"
+    ],
+    "monster-tech-v0.5.0": [
+     "416d5d9fbd88751e8fbd5ab4290dbb51fff3e69f",
+     "381E6EE5"
+    ]
+   }
+  },
+  {
+   "version": "0.6.0",
+   "status": "NOT ACCEPTED (superseded by 0.6.1)",
+   "summary": "QA formation used Magitek-conflicting VRAM slot",
+   "pinned": {
+    "monster-tech-v0.6.0": [
+     "14d179cfa61e720aa81ea9c4be518df1e13212fa",
+     "F13B490B"
+    ]
+   }
+  },
+  {
+   "version": "0.6.1",
+   "status": "ACCEPTED",
+   "summary": "custom enemy graphics/palettes + formation Magic Points",
+   "pinned": {
+    "monster-tech-v0.6.1": [
+     "8a55707ff2b4cd1364fdabf75e91422ba90ff8bb",
+     "289BD3B9"
+    ],
+    "production-v0.6.0": [
+     "26ebd7d3b1a16bfae94625cead054edc34a1a5b6",
+     "C9DB005B"
+    ],
+    "celes-tech-v0.6.0": [
+     "a7ae5d4c1c49ce5cfcbca65de943678b86923fce",
+     "E2BDA3B1"
+    ]
+   }
+  },
+  {
+   "version": "0.6.2",
+   "status": "tooling only",
+   "summary": "formation safety validator + Magitek VRAM matrix",
+   "pinned": {}
+  },
+  {
+   "version": "0.7",
+   "status": "audit/decision",
+   "summary": "Option C signature equipment bank approved",
+   "pinned": {}
+  },
+  {
+   "version": "0.7.1",
+   "status": "superseded by 0.7.2",
+   "summary": "extended item ids $100-$13F engine proof",
+   "pinned": {}
+  },
+  {
+   "version": "0.7.2",
+   "status": "ACCEPTED",
+   "summary": "Colosseum QA harness hotfix; production item engine",
+   "pinned": {
+    "production-v0.7.2": [
+     "f8f92c81475e14e90adecd541aec19fd251e7e45",
+     "91346FF2"
+    ],
+    "celes-tech-v0.7.2": [
+     "2789edb5621954421c1f2819d0b8a7f54739ce90",
+     "7399F9CA"
+    ]
+   }
+  },
+  {
+   "version": "0.7.3",
+   "status": "ACCEPTED",
+   "summary": "Colosseum QA-state validation (vanilla behaviour)",
+   "pinned": {
+    "item-tech-v0.7.3": [
+     "3a784e0d3df817dd47d796f8b50b8ac34b143b31",
+     "EB2923BA"
+    ]
+   }
+  },
+  {
+   "version": "0.8",
+   "status": "ACCEPTED / USER RUNTIME PASS",
+   "summary": "39 signature equipment $100-$126 + B-accumulator fix",
+   "pinned": {
+    "production-v0.8": [
+     "1091d0779c5278f40c6e74648dbfb8cb2ce6818b",
+     "2F5FB45A"
+    ],
+    "celes-tech-v0.8": [
+     "e8a96146507f4587f75344f5cea2781ed02e6b72",
+     "332238AF"
+    ],
+    "item-tech-v0.8": [
+     "498d62c47477a91d6df7b4619f76bb03e7a1fbb5",
+     "4A8A7533"
+    ]
+   }
+  },
+  {
+   "version": "0.9",
+   "status": "ACCEPTED / USER RUNTIME PASS",
+   "summary": "8 consumables $127-$12E, extended shops + Sell, rare/key items (52 ids), rare event API, save compat, QA hub",
+   "pinned": {
+    "production": [
+     "99cd74dfac5b91756120992dd1560534b40c66c3",
+     "FF753A76"
+    ],
+    "celes-tech": [
+     "e4c0703189fbde9b2df4ca972bfc801778aa6899",
+     "3067CF9B"
+    ],
+    "item-tech": [
+     "e1136805cc792e11dbffab15e87df0f327a6a12e",
+     "D8183069"
+    ]
+   }
+  }
+ ],
+ "repository": "https://github.com/oggy0409/ff6expaned",
+ "current_branch": "claude/festive-mayer-i6uurp",
+ "commit": "see git log of claude/festive-mayer-i6uurp (commit \"TECH v0.9.3 visual state / VRAM hotfix QA\")",
+ "commit_note": "v0.9 frozen targets are asserted byte-exact by build.py",
+ "open_pull_request": "oggy0409/ff6expaned#1 (claude/festive-mayer-i6uurp -> main)",
+ "qa_status": "USER_RUNTIME_QA_PENDING (v0.9.3 visual hotfix); v0.9 remains the accepted baseline",
+ "status_split": {
+  "static": "PASS",
+  "emulator": "PASS",
+  "user_runtime": "PENDING"
+ },
+ "known_risks": [
+  "see ff6x_tech/KNOWN_RISKS_v0.9.3.md (R1-R78)",
+  "Creative Lock / Tech Gate spreadsheets missing from the workspace",
+  "v0.9 derived consumable / key-item values need creative confirmation (R33); v0.8 derived smith GP / prerequisites (R23), arc_reward_tbd sources (R22), 12-char display names (R21), balance notes (R31)",
+  "Deferred custom relic ASM: 7 relics ship with BAL-18 stat fallback (R14, FALLBACK_EFFECTS_v0.8.md)",
+  "Formation safety: back/pincer/side placements not validated (F2); only Magitek party state audited for VRAM (F3); monster overlap (F4); transforming bosses (F5); visible field measured in snes9x (F1)",
+  "Vanilla quirks kept: katana DIRK in battle lists (R37), hand-exchange+B bug (R10), Colosseum temp-character / Magitek fighter (R18/R19), Genji/Gauntlet hand re-evaluation (R28), $40 char_prop drops equipment (R25)",
+  "Non-blocking timing: 26/576 formations 1 frame later (R12), gfx router 1 frame in 3/576 (v0.6 R5), event $80 give loop longer (R16)",
+  "One-way downgrade: v0.9 saves lose consumables in older builds (R1)",
+  "Design rules: katanas $27-$2E must stay non-Item-usable (R36); no extended weapons/shields for Gau/Umaro (R8); dialogue cannot print extended item names (R7); shops $82-$8F empty (R40)",
+  "Test-only assumptions: snes9x/stable-retro evidence, POKE setup, battles from ROM labels only (R29), QA presets (R30), Colosseum harness switch $1EF = 0 (R17); Steal/Sketch/Control on custom monsters only emulator-poked (user NOT TESTED)",
+  "Acquisition of the 39 equipment items and 5 key items is bound, not placed in story events (R22)",
+  "QA-only: opening-Magitek QA save tile restores walking sprite (KNOWN_QA_ISSUE_v0.3.1)"
+ ],
+ "deferred_work": [
+  "Celes ROM Script Pass (after acceptance of this package)",
+  "CONTENT v1.0",
+  "final Celes production quest",
+  "Terra production arc",
+  "Cyan production arc",
+  "Shadow/Relm production arc",
+  "Figaro production arc",
+  "Setzer production arc",
+  "Forgotten Age production content",
+  "Vael / First Magi production content",
+  "final custom enemy art",
+  "final map production",
+  "deferred special relic ASM",
+  "ending implementation",
+  "post-Kefka content",
+  "story placement of the 39 equipment items and 5 key items"
+ ],
+ "wip_files": [
+  {
+   "path": "ff6x_tech/wip/session_scratch_v07_v09/",
+   "label": "experimental",
+   "in_accepted_build": false,
+   "safe_to_delete": true,
+   "purpose": "session debug probes, old regression runners, patch-table drafts"
+  },
+  {
+   "path": "ff6x_tech/asm/item_v071/",
+   "label": "obsolete for new work, frozen",
+   "in_accepted_build": true,
+   "safe_to_delete": false,
+   "purpose": "engine of frozen v0.7.2/v0.7.3 targets"
+  },
+  {
+   "path": "ff6x_tech/asm/item_v08/",
+   "label": "obsolete for new work, frozen",
+   "in_accepted_build": true,
+   "safe_to_delete": false,
+   "purpose": "engine of frozen v0.8 targets"
+  },
+  {
+   "path": "ff6x_tech/audits/eventbit_allocation_PROPOSED.json",
+   "label": "proposal",
+   "in_accepted_build": false,
+   "safe_to_delete": false,
+   "purpose": "event-bit pool for future arcs"
+  },
+  {
+   "path": "ff6x_tech/items/production_v09/author_v09.py",
+   "label": "tooling",
+   "in_accepted_build": false,
+   "safe_to_delete": false,
+   "purpose": "authored the v0.9 JSON sources"
+  }
+ ],
+ "unfinished_feature_branches": [],
+ "next_recommended_milestone": "User runtime QA of FF6X_TECH_v0.9.3_VISUAL_STATE_VRAM_HOTFIX_QA.zip (H0-H5, 5-10 min); after acceptance: Celes ROM Script Pass, then CONTENT v1.0 (do not start before acceptance).",
+ "do_not_start_automatically": true,
+ "handoff_document": "ff6x_tech/README_TECH_v0.9.3.md",
+ "handoff_zip": "FF6X_TECH_v0.9.3_VISUAL_STATE_VRAM_HOTFIX_QA.zip",
+ "candidate": {
+  "label": "TECH v0.9.3 VISUAL STATE / VRAM HOTFIX (QA only; on top of v0.9.1 item alignment + v0.9.2 Celes enablers)",
+  "package": "FF6X_TECH_v0.9.3_VISUAL_STATE_VRAM_HOTFIX_QA.zip",
+  "status_split": {
+   "static": "PASS",
+   "emulator": "PASS",
+   "user_runtime": "PENDING"
+  },
+  "hashes": {
+   "qa": {
+    "file": "FF6X_Rev1_TECH_v0.9.3_VISUAL_STATE_VRAM_HOTFIX_QA.sfc",
+    "target": "item-tech",
+    "sha1": "15af77fe9c01f54844fbcbbb0c5f1d65768d55f0",
+    "crc32": "02DA7373"
+   },
+   "production": {
+    "file": "FF6X_Rev1_TECH_v0.9.1_PRODUCTION.sfc",
+    "sha1": "2dc73bfbbcf4657eb59eec93bd614181ecdc817c",
+    "crc32": "01AE6F84",
+    "note": "unchanged since v0.9.1 (pinned)"
+   },
+   "celes_tech": {
+    "file": "FF6X_Rev1_TECH_v0.9.1_CELES_TECH.sfc",
+    "sha1": "e2192311a997ee49315807508d71ca202d4a8d09",
+    "crc32": "EA66714A",
+    "note": "unchanged since v0.9.1 (pinned)"
+   }
+  },
+  "previous_candidate": {
+   "version": "0.9.2",
+   "qa_sha1": "697a25e886e843ad356d98cdfb078fcba7c8615f",
+   "user_runtime": "mostly PASS; visual failures V1-V4 -> v0.9.3"
+  },
+  "user_qa": "ff6x_tech/USER_QA_TECH_v0.9.3_VI.md",
+  "docs": [
+   "README_TECH_v0.9.3.md",
+   "ROOT_CAUSE_VISUAL_v0.9.3.md",
+   "VRAM_AUDIT_v0.9.3.md",
+   "MAP_STATE_VISUAL_AUDIT_v0.9.3.md",
+   "PALETTE_AUDIT_v0.9.3.md",
+   "REGRESSION_REPORT_v0.9.3.md",
+   "PATCH_TABLE_v0.9.3.md",
+   "KNOWN_RISKS_v0.9.3.md",
+   "HASHES_v0.9.3.txt"
+  ]
+ }
+}

@@ -5,7 +5,7 @@ E2-E4  battle AI extension (asm/celes_v092/ai_ext.s): FC/FB index >= $40 routed 
 E6/E7  palette relocation: MapPal (ED:C480, 48 x 256 B, consumer C0:266D) -> MAPX_MAP_PAL F7:A000 with new map palettes
        from index $30; MapSpritePal (E6:8000, 32 x 32 B, consumers C0:50EE / C0:AA21) -> MAPX_SPRITE_PAL F7:E000 with
        new sprite palettes from index $20. Vanilla entries byte-identical (asserted). New palettes are DERIVED from
-       vanilla palettes by the documented transform in palettes/v092/palettes.json (D-14 placeholders).
+       vanilla palettes by the documented transform in palettes/v093/palettes.json (D-14 placeholders; v0.9.3 retuned map palette $30).
 The map / event / monster / formation parts of the enablers are ordinary source packages (maps/celes_outer_v092,
 events/celes_enablers_v092, monsters/qa92_*, formations/qa92_0244.json) built by the existing builders.
 """
@@ -52,7 +52,7 @@ def derive(raw, t):
 
 
 def load_palettes():
-    return json.load(open(os.path.join(HERE, "palettes", "v092", "palettes.json")))
+    return json.load(open(os.path.join(HERE, "palettes", "v093", "palettes.json")))   # TECH v0.9.3 (map palette $30 retuned)
 
 
 def palettes(rom, notes):
@@ -77,7 +77,7 @@ def palettes(rom, notes):
     assert bytes(mp[:256 * MAP_PAL_N]) == clean[snes_to_pc(MAP_PAL):snes_to_pc(MAP_PAL) + 256 * MAP_PAL_N]
     assert bytes(sp[:32 * SPR_PAL_N]) == clean[snes_to_pc(SPR_PAL):snes_to_pc(SPR_PAL) + 32 * SPR_PAL_N]
     rom.place("MAPX_MAP_PAL", bytes(mp), "map_pal_x", "V9213_MAP_PAL", at=NEW_MAP_PAL,
-              reason=f"MapPal relocated: 48 vanilla palettes byte-exact + {len(mp) // 256 - MAP_PAL_N} new (palettes/v092)",
+              reason=f"MapPal relocated: 48 vanilla palettes byte-exact + {len(mp) // 256 - MAP_PAL_N} new (palettes/v093)",
               consumer="LoadMapPal (operand C0:266D retargeted)")
     rom.place("MAPX_SPRITE_PAL", bytes(sp), "sprite_pal_x", "V9214_SPRITE_PAL", at=NEW_SPR_PAL,
               reason=f"MapSpritePal relocated: 32 vanilla palettes byte-exact + {len(sp) // 32 - SPR_PAL_N} new",
@@ -126,8 +126,62 @@ def ai_extension(rom, notes):
         notes["ai_ext"]["hooks"].append({"id": pid, "snes": fmt_snes(site), "original": expect, "new": new.hex(" ").upper()})
 
 
+def map_states(rom, notes, st=None, evt=None):
+    """TECH v0.9.3 E8: the visible outer-map states (maps/celes_outer_v092/states.json) against the startup event and the
+    movement model. Fails the build if an event set_tiles line differs from the state file, if the 'none' memorial is not
+    the compiled layout, if two states of a region look the same, or if any memorial x archive combination changes the
+    reachable floor of the base map (a wall made walkable / a trigger cut off)."""
+    from ff6x.mapsrc4 import MapPackageV4
+    clean = rom.clean
+    st = st or json.load(open(os.path.join(HERE, "maps", "celes_outer_v092", "states.json")))
+    evt = evt or [l.split("#")[0].strip() for l in open(os.path.join(HERE, "events", "celes_enablers_v092", "events.evt"))]
+    pkg = MapPackageV4(os.path.join(HERE, "maps", "celes_outer_v092"))
+    bg1 = list(pkg.compile_layer(clean, "bg1"))
+    w = pkg.w
+    base = pkg.movement_reach(clean, bg1)
+    out = {}
+    for reg, r in st["regions"].items():
+        seen = {}
+        for name, s_ in st["states"][reg].items():
+            tiles = [int(t, 16) for row in s_["rows"] for t in row.split()]
+            if len(s_["rows"]) != r["h"] or len(tiles) != r["w"] * r["h"]:
+                raise SystemExit(f"E8 states: {reg}/{name}: {r['w']} x {r['h']} tiles expected")
+            line = f"set_tiles {st['layer']} {r['x']} {r['y']} {r['w']} {r['h']} " + " ".join(f"{t:02X}" for t in tiles)
+            if line not in evt:
+                raise SystemExit(f"E8 states: events.evt has no line '{line}' ({reg}/{name})")
+            if tuple(tiles) in seen:
+                raise SystemExit(f"E8 states: {reg}/{name} looks the same as {seen[tuple(tiles)]}")
+            seen[tuple(tiles)] = name
+            out.setdefault(reg, {})[name] = line
+        if reg == "memorial":
+            lay = [bg1[(r["y"] + j) * w + r["x"] + i] for j in range(r["h"]) for i in range(r["w"])]
+            want = [int(t, 16) for row in st["states"][reg]["none"]["rows"] for t in row.split()]
+            if lay != want:
+                raise SystemExit("E8 states: memorial 'none' must equal the compiled layout")
+        if tuple(r["trigger"]) not in base:
+            raise SystemExit(f"E8 states: {reg} trigger {r['trigger']} not reachable")
+    combos = 0
+    for m_name, m in st["states"]["memorial"].items():
+        for a_name, a in st["states"]["archive"].items():
+            b = list(bg1)
+            for reg, s_ in (("memorial", m), ("archive", a)):
+                r = st["regions"][reg]
+                tiles = [int(t, 16) for row in s_["rows"] for t in row.split()]
+                for j in range(r["h"]):
+                    for i in range(r["w"]):
+                        b[(r["y"] + j) * w + r["x"] + i] = tiles[j * r["w"] + i]
+            reach = pkg.movement_reach(clean, b)
+            if reach != base:
+                raise SystemExit(f"E8 states: memorial {m_name} + archive {a_name} changes the reachable floor: "
+                                 f"+{sorted(reach - base)[:6]} -{sorted(base - reach)[:6]}")
+            combos += 1
+    notes["map_states"] = {"source": "maps/celes_outer_v092/states.json", "event_lines": out,
+                           "movement_check": f"{combos} state combinations: reachable floor = base map ({len(base)} cells)"}
+
+
 def build(rom, target, alloc, meta):
     notes = {}
     palettes(rom, notes)
     ai_extension(rom, notes)
+    map_states(rom, notes)                  # TECH v0.9.3 E8 visual states (validation only, no bytes)
     return notes

@@ -528,6 +528,7 @@ def bad_hook():
 expect_fail("item-hook-original-bytes", bad_hook)
 # 46 TECH v0.8 equipment validators fail closed
 import copy as _copy
+from ff6x.romimage import sha1
 def bad_eq(mod):
     j = json.load(open(os.path.join(HERE, "items/production_v08/equipment.json"))); mod(j["items"])
     EQ8.validate([dict(it, _qa=False) for it in j["items"]])
@@ -772,5 +773,75 @@ expect_fail("set-tiles-count", lambda: EventProgram(0xF10000, {}, {}).parse("set
 print("PASS v0.9.2: palette tables relocated only in the QA target (vanilla 48 map / 32 sprite palettes byte-identical, "
       "3 consumer operands retargeted), enabler regions refused for production / frozen targets; D-21 bits allocated "
       "from the audited free pool; vanilla QA write bit only for QA packages; new event commands fail closed"); ok += 1
+# ===================================================================================================== TECH v0.9.3
+# 57 E8 visible-state validator fails closed (walkable tile, event mismatch, look-alike state, 'none' != layout)
+import copy as _copy
+from ff6x.romimage import sha1
+from patches import celes_enablers_v092 as CE93
+class _R93:
+    pass
+_r93 = _R93(); _r93.clean = clean
+_st93 = json.load(open(os.path.join(HERE, "maps", "celes_outer_v092", "states.json")))
+_ev93 = [l.split("#")[0].strip() for l in open(os.path.join(HERE, "events", "celes_enablers_v092", "events.evt"))]
+_n93 = {}
+CE93.map_states(_r93, _n93)
+assert _n93["map_states"]["movement_check"].startswith("9 state combinations")
+def _bad93(mod, fix_evt=True):
+    st = _copy.deepcopy(_st93); mod(st)
+    ev = list(_ev93)
+    if fix_evt:
+        for reg, r in st["regions"].items():
+            for name, s_ in st["states"][reg].items():
+                ev.append(f"set_tiles {st['layer']} {r['x']} {r['y']} {r['w']} {r['h']} " + " ".join(t for row in s_["rows"] for t in row.split()))
+    return lambda: CE93.map_states(_r93, {}, st, ev)
+def _m_walk(st): st["states"]["memorial"]["stone"]["rows"] = ["C4 C5 C4 C5", "D4 D5 D4 D5"]     # floor plates: walkable
+def _m_same(st): st["states"]["archive"]["kept"]["rows"] = list(st["states"]["archive"]["sealed"]["rows"])
+def _m_none(st): st["states"]["memorial"]["none"]["rows"] = ["56 57 56 57", "66 67 66 67"]
+expect_fail("e8-state-makes-wall-walkable", _bad93(_m_walk), (SystemExit,))
+expect_fail("e8-look-alike-states", _bad93(_m_same), (SystemExit,))
+expect_fail("e8-none-not-layout", _bad93(_m_none), (SystemExit,))
+expect_fail("e8-event-line-mismatch", _bad93(lambda st: st["states"]["archive"]["burned"].update(rows=["02 02", "97 96"]),
+                                             fix_evt=False), (SystemExit,))
+print("PASS v0.9.3 E8 visible states: 2 regions x 3 states validated against the startup event and the movement model "
+      "(9 combinations keep the reachable floor); walkable / look-alike / layout-mismatch / event-mismatch refused"); ok += 1
+# 58 QA hub: every Celes-enabler entry normalises the party before WoR / Praetor / walk-in (user runtime V2 / V3)
+_hub = open(os.path.join(HERE, "events", "qa_access_v092", "events.evt")).read()
+_blocks = {}
+for _blk in _hub.split("\n@")[1:]:
+    _lab, _body = _blk.split("\n", 1)
+    _blocks[_lab.strip()] = [l.split("#")[0].strip() for l in _body.split("\n")]
+for _lab in ("QaWor92", "QaPraetorL92", "QaPraetorS92", "QaOuter92"):
+    _b = _blocks[_lab]
+    _first = next(l for l in _b if l)
+    assert _first == "call QaCelParty93", (_lab, _first)
+_norm = _blocks["QaCelParty93"] + _blocks["QaCelPartyOk93"]
+assert "char_party $0E 0" in _norm and "char_party $0F 0" in _norm
+assert all(f"status_clear ${c:02X} $FFF7" in _norm for c in range(16)) and "obj_vehicle $00 $00" in _norm
+expect_fail("obj-vehicle-low-bits", lambda: EventProgram(0xF10000, {}, {}).parse("obj_vehicle $00 $81"), (EventAsmError,))
+for _l in _hub.split("\n"):
+    _l = _l.split("#")[0].strip()
+    if _l.startswith("battle $FA") or _l.startswith("battle $F9") or _l.startswith("load_map $1A2") or (_l.startswith("load_map $001") and "AIRSHIP" in _l):
+        _owner = [k for k, v in _blocks.items() if _l in v]
+        assert _owner and all(_blocks[k][0] == "call QaCelParty93" or k.startswith("EvPraetor") for k in _owner), (_l, _owner)
+print("PASS v0.9.3 QA hub: WoR / Praetor (locked, scaled) / walk-in entries call the party normaliser first (Wedge / Vicks "
+      "out, Magitek cleared on all 16 records, P1 if nobody but Terra)"); ok += 1
+# 59 map palette $30 retuned (grey / ash), v0.9.1 production / celes-tech untouched by the QA hotfix
+_p30 = out92[0x37A000 + 0x30 * 256:0x37A000 + 0x31 * 256]
+_v18 = clean[pc(0xEDC480) + 0x18 * 256:pc(0xEDC480) + 0x19 * 256]
+assert _p30 == CE93.derive(_v18, CE93.load_palettes()["map_palettes"][0]["transform"])
+def _sat(p):
+    v = []
+    for i in range(1, 128):
+        if i % 16 == 0:
+            continue
+        c = p[2 * i] | p[2 * i + 1] << 8
+        r, g, b = c & 31, (c >> 5) & 31, (c >> 10) & 31
+        if r + g + b >= 24:
+            v.append(max(r, g, b) - min(r, g, b))
+    return sum(v) / len(v)
+assert _sat(_p30) <= 0.5 * _sat(_v18), (_sat(_p30), _sat(_v18))
+assert sha1(B.build_target(clean, alloc, "production")[1]) == "2dc73bfbbcf4657eb59eec93bd614181ecdc817c"
+print("PASS v0.9.3 map palette $30 = documented transform of vanilla $18, lit-colour saturation <= 50% of vanilla (ash / "
+      "steel); production v0.9.1 byte-identical"); ok += 1
 print(f"ALL {ok} SELF-TESTS PASS")
 
