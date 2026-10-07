@@ -1,6 +1,6 @@
 # FFVI Expanded Edition — TECH v0.9.3 Visual State / VRAM Hotfix (QA)
 
-**Status: STATIC PASS · EMULATOR PASS · USER RUNTIME QA PENDING.**
+**Status: ACCEPTED / USER RUNTIME PASS (2026-10-07; frozen).** STATIC PASS · EMULATOR PASS · USER RUNTIME PASS. See `ACCEPTANCE_v0.9.3.md`. E8 state / persistence accepted; E8 placeholder memorial / archive art rejected for production and deferred to a dedicated art pass.
 
 * Scope: a focused hotfix for the four visual failures of the v0.9.2 user runtime QA (V1-V4). It changes the QA ROM only.
 * Baseline: TECH v0.9 (accepted, frozen, rebuilt byte-exact) + TECH v0.9.1 item alignment (production / celes-tech,
@@ -8,7 +8,7 @@
 
 | target | file | SHA-1 | CRC32 | v0.9.3 |
 |---|---|---|---|---|
-| `item-tech` | `FF6X_Rev1_TECH_v0.9.3_VISUAL_STATE_VRAM_HOTFIX_QA` | `15af77fe9c01f54844fbcbbb0c5f1d65768d55f0` | `02DA7373` | **the QA ROM to test** |
+| `item-tech` | `FF6X_Rev1_TECH_v0.9.3_VISUAL_STATE_VRAM_HOTFIX_QA` | `15af77fe9c01f54844fbcbbb0c5f1d65768d55f0` | `02DA7373` | **accepted (pinned in `build.py`)** |
 | `production` | `FF6X_Rev1_TECH_v0.9.1_PRODUCTION` | `2dc73bfbbcf4657eb59eec93bd614181ecdc817c` | `01AE6F84` | unchanged (pinned) |
 | `celes-tech` | `FF6X_Rev1_TECH_v0.9.1_CELES_TECH` | `e2192311a997ee49315807508d71ca202d4a8d09` | `EA66714A` | unchanged (pinned) |
 

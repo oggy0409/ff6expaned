@@ -1,12 +1,13 @@
-# KNOWN RISKS — TECH v0.9.3 (visual state / VRAM hotfix, QA ROM only)
+# KNOWN RISKS — TECH v0.9.3 (visual state / VRAM hotfix, QA ROM only) — ACCEPTED / USER RUNTIME PASS
 
 R1-R67 of `KNOWN_RISKS_v0.9.2.md` still apply, with the updates below. New rows R68-R78.
 
 ## Updated v0.9.2 rows
 | # | v0.9.2 text | v0.9.3 |
 |---|---|---|
-| R55 | Placeholder graphics (D-14): … map `$1A2` = vanilla tiles with a derived palette … | The map palette `$30` is retuned to a visible ash / steel (`PALETTE_AUDIT_v0.9.3.md`). The E8 states use distinct vanilla-tile objects (`MAP_STATE_VISUAL_AUDIT_v0.9.3.md`). Both are still placeholders, not final art. |
+| R55 | Placeholder graphics (D-14): … map `$1A2` = vanilla tiles with a derived palette … | The map palette `$30` is retuned to a visible ash / steel (`PALETTE_AUDIT_v0.9.3.md`). The E8 states use distinct vanilla-tile objects (`MAP_STATE_VISUAL_AUDIT_v0.9.3.md`). Both are still placeholders, not final art. **Acceptance (user runtime, 2026-10-07):** the palette PASSES. The E8 memorial / archive placeholder artwork is REJECTED for production and deferred to a dedicated art pass (ART ASSET GATE v1.0); the E8 state / persistence architecture is ACCEPTED. |
 | R56 | `$244/$245` are not Magitek-safe … every QA entry clears Terra's Magitek first | **This was wrong.** Clearing Terra was not enough: after New Game, Wedge and Vicks are in the party in Magitek armor. That was the cause of V2 / V3. Since v0.9.3 the QA entries run `QaCelParty93` (R68). The formation data is unchanged and still not Magitek-safe by design. |
+| Creative sources | v0.9 / v0.9.2 state files listed the Creative Lock / Tech Gate spreadsheets as missing. | **Stale.** They are in the workspace: `docs/design_sources/` (Design Pack v1.2 CREATIVE_LOCK `.xlsx` + `.md`, Content Data v1.3 TECH_GATE `.xlsx`, `SHA1SUMS.txt`), recovered by `CREATIVE_SOURCE_RECOVERY_v1.0`. |
 | R62 | E6: 10 engine-managed BG colours | Unchanged; measured on bsnes CGRAM as well. |
 
 ## New rows

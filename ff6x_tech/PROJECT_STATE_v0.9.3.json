@@ -26,26 +26,28 @@
   "allocation_manifest": "ff6x_tech/data/allocations.json",
   "regression": "tools/run_regression_v093.sh <clean> <out> <evidence> <v0.7.1 ITEM_BANK_QA .sfc> (REGRESSION_REPORT_v0.9.3.md); visual checks on bsnes (tools/build_bsnes_core.sh) and snes9x"
  },
- "accepted_baseline": "TECH v0.9",
- "accepted_baseline_label": "TECH v0.9 - ACCEPTED / USER RUNTIME QA PASS (frozen, rebuilt byte-exact as production-v0.9 / celes-tech-v0.9 / item-tech-v0.9)",
+ "accepted_baseline": "TECH v0.9.3",
+ "accepted_baseline_label": "TECH v0.9.3 - ACCEPTED / USER RUNTIME PASS (frozen 2026-10-07). QA = v0.9.1 item alignment + v0.9.2 Celes enablers E1-E9 + v0.9.3 visual state / VRAM hotfix; production / celes-tech = v0.9.1 (unchanged). build.py asserts all three hashes; the v0.9 frozen targets still rebuild byte-exact.",
  "accepted_hashes": {
   "qa": {
-   "file": "FF6X_Rev1_TECH_v0.9_CONSUMABLE_RARE_QA.sfc",
+   "file": "FF6X_Rev1_TECH_v0.9.3_VISUAL_STATE_VRAM_HOTFIX_QA.sfc",
    "target": "item-tech",
-   "sha1": "e1136805cc792e11dbffab15e87df0f327a6a12e",
-   "crc32": "D8183069"
+   "sha1": "15af77fe9c01f54844fbcbbb0c5f1d65768d55f0",
+   "crc32": "02DA7373"
   },
   "production": {
-   "file": "FF6X_Rev1_TECH_v0.9_PRODUCTION.sfc",
+   "file": "FF6X_Rev1_TECH_v0.9.1_PRODUCTION.sfc",
    "target": "production",
-   "sha1": "99cd74dfac5b91756120992dd1560534b40c66c3",
-   "crc32": "FF753A76"
+   "sha1": "2dc73bfbbcf4657eb59eec93bd614181ecdc817c",
+   "crc32": "01AE6F84",
+   "note": "v0.9.1 item alignment; unchanged by v0.9.2 / v0.9.3"
   },
   "celes_tech": {
-   "file": "FF6X_Rev1_TECH_v0.9_CELES_TECH.sfc",
+   "file": "FF6X_Rev1_TECH_v0.9.1_CELES_TECH.sfc",
    "target": "celes-tech",
-   "sha1": "e4c0703189fbde9b2df4ca972bfc801778aa6899",
-   "crc32": "3067CF9B"
+   "sha1": "e2192311a997ee49315807508d71ca202d4a8d09",
+   "crc32": "EA66714A",
+   "note": "v0.9.1 item alignment; unchanged by v0.9.2 / v0.9.3"
   }
  },
  "accepted_milestones": [
@@ -246,22 +248,50 @@
      "D8183069"
     ]
    }
+  },
+  {
+   "version": "0.9.1 + 0.9.2 + 0.9.3",
+   "status": "ACCEPTED / USER RUNTIME PASS (v0.9.3 package)",
+   "summary": "v0.9.1 item data alignment; v0.9.2 Celes enablers E1-E9 (QA); v0.9.3 visual state / VRAM hotfix (QA)",
+   "user_runtime": {
+    "v0.9.2": "logic PASS (consumables, shops, Magitek Cell cap, Darill's Coin, save/load/migration, WoR + Falcon, Praetor 70% / 40% Overload, Grounding Field, E5, E7, E8 logic); visual V1-V4 FAIL",
+    "v0.9.3": "PASS: map $1A2 ash/steel palette, Lunaris sprite clean, both Suppressor Bits clean, E5 PASS, E7 Vale PASS, E8 event/state logic PASS, E8 save persistence PASS"
+   },
+   "classification": {
+    "E8 state / persistence architecture": "ACCEPTED",
+    "E8 placeholder art": "REJECTED FOR PRODUCTION - E8 placeholder memorial/archive artwork rejected and deferred to dedicated art pass"
+   },
+   "pinned": {
+    "item-tech (v0.9.3 QA)": [
+     "15af77fe9c01f54844fbcbbb0c5f1d65768d55f0",
+     "02DA7373"
+    ],
+    "production (v0.9.1)": [
+     "2dc73bfbbcf4657eb59eec93bd614181ecdc817c",
+     "01AE6F84"
+    ],
+    "celes-tech (v0.9.1)": [
+     "e2192311a997ee49315807508d71ca202d4a8d09",
+     "EA66714A"
+    ]
+   }
   }
  ],
  "repository": "https://github.com/oggy0409/ff6expaned",
  "current_branch": "claude/festive-mayer-i6uurp",
- "commit": "see git log of claude/festive-mayer-i6uurp (commit \"TECH v0.9.3 visual state / VRAM hotfix QA\")",
- "commit_note": "v0.9 frozen targets are asserted byte-exact by build.py",
+ "commit": "see git log of claude/festive-mayer-i6uurp (commits \"TECH v0.9.3 visual state / VRAM hotfix QA\" and \"Freeze TECH v0.9.3 ...\")",
+ "commit_note": "v0.9 frozen targets and the v0.9.3 accepted targets are asserted byte-exact by build.py",
  "open_pull_request": "oggy0409/ff6expaned#1 (claude/festive-mayer-i6uurp -> main)",
- "qa_status": "USER_RUNTIME_QA_PENDING (v0.9.3 visual hotfix); v0.9 remains the accepted baseline",
+ "qa_status": "ACCEPTED / USER RUNTIME PASS (TECH v0.9.3)",
  "status_split": {
   "static": "PASS",
   "emulator": "PASS",
-  "user_runtime": "PENDING"
+  "user_runtime": "PASS"
  },
  "known_risks": [
-  "see ff6x_tech/KNOWN_RISKS_v0.9.3.md (R1-R78)",
-  "Creative Lock / Tech Gate spreadsheets missing from the workspace",
+  "see ff6x_tech/KNOWN_RISKS_v0.9.3.md (R1-R78; R55 updated: E8 placeholder art rejected for production)",
+  "Creative Lock / Tech Gate sources are available in the workspace: ff6x_tech/docs/design_sources/ (Design Pack v1.2 CREATIVE_LOCK xlsx + md, Content Data v1.3 TECH_GATE xlsx; SHA1SUMS.txt; recovered by CREATIVE_SOURCE_RECOVERY_v1.0)",
+  "E8 memorial / archive placeholder art (v0.9.3 vanilla-tile objects) is REJECTED for production; deferred to a dedicated art pass (ART ASSET GATE v1.0). State logic / persistence accepted.",
   "v0.9 derived consumable / key-item values need creative confirmation (R33); v0.8 derived smith GP / prerequisites (R23), arc_reward_tbd sources (R22), 12-char display names (R21), balance notes (R31)",
   "Deferred custom relic ASM: 7 relics ship with BAL-18 stat fallback (R14, FALLBACK_EFFECTS_v0.8.md)",
   "Formation safety: back/pincer/side placements not validated (F2); only Magitek party state audited for VRAM (F3); monster overlap (F4); transforming bosses (F5); visible field measured in snes9x (F1)",
@@ -274,7 +304,8 @@
   "QA-only: opening-Magitek QA save tile restores walking sprite (KNOWN_QA_ISSUE_v0.3.1)"
  ],
  "deferred_work": [
-  "Celes ROM Script Pass (after acceptance of this package)",
+  "E8 memorial / archive production art (ART ASSET GATE v1.0 export -> human art pass -> builder injection)",
+  "Celes ROM Script Pass (not started; only on explicit instruction)",
   "CONTENT v1.0",
   "final Celes production quest",
   "Terra production arc",
@@ -329,17 +360,37 @@
   }
  ],
  "unfinished_feature_branches": [],
- "next_recommended_milestone": "User runtime QA of FF6X_TECH_v0.9.3_VISUAL_STATE_VRAM_HOTFIX_QA.zip (H0-H5, 5-10 min); after acceptance: Celes ROM Script Pass, then CONTENT v1.0 (do not start before acceptance).",
+ "next_recommended_milestone": "ART ASSET GATE v1.0 (export only: map $1A2 tiles / metatiles / palette, E8 regions, vanilla references, custom asset spec, art pipeline). Then a human art pass. Do not start CONTENT v1.0 or the Celes ROM Script Pass automatically.",
  "do_not_start_automatically": true,
- "handoff_document": "ff6x_tech/README_TECH_v0.9.3.md",
+ "handoff_document": "ff6x_tech/ACCEPTANCE_v0.9.3.md",
  "handoff_zip": "FF6X_TECH_v0.9.3_VISUAL_STATE_VRAM_HOTFIX_QA.zip",
- "candidate": {
-  "label": "TECH v0.9.3 VISUAL STATE / VRAM HOTFIX (QA only; on top of v0.9.1 item alignment + v0.9.2 Celes enablers)",
+ "frozen_v0_9_hashes": {
+  "qa": {
+   "file": "FF6X_Rev1_TECH_v0.9_CONSUMABLE_RARE_QA.sfc",
+   "target": "item-tech",
+   "sha1": "e1136805cc792e11dbffab15e87df0f327a6a12e",
+   "crc32": "D8183069"
+  },
+  "production": {
+   "file": "FF6X_Rev1_TECH_v0.9_PRODUCTION.sfc",
+   "target": "production",
+   "sha1": "99cd74dfac5b91756120992dd1560534b40c66c3",
+   "crc32": "FF753A76"
+  },
+  "celes_tech": {
+   "file": "FF6X_Rev1_TECH_v0.9_CELES_TECH.sfc",
+   "target": "celes-tech",
+   "sha1": "e4c0703189fbde9b2df4ca972bfc801778aa6899",
+   "crc32": "3067CF9B"
+  }
+ },
+ "accepted_package": {
+  "label": "TECH v0.9.3 (ACCEPTED) VISUAL STATE / VRAM HOTFIX (QA only; on top of v0.9.1 item alignment + v0.9.2 Celes enablers)",
   "package": "FF6X_TECH_v0.9.3_VISUAL_STATE_VRAM_HOTFIX_QA.zip",
   "status_split": {
    "static": "PASS",
    "emulator": "PASS",
-   "user_runtime": "PENDING"
+   "user_runtime": "PASS"
   },
   "hashes": {
    "qa": {

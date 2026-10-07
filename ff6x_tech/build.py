@@ -18,7 +18,7 @@ from ff6x.patchfmt import make_ips, apply_ips, make_bps, apply_bps
 from ff6x.romimage import RomImage, load_clean_rom, sha1, crc32, md5, BuildError
 
 BUILD_VERSION = "0.9.1"   # TECH v0.9.1: item data alignment (locked consumable effects, reconstruction shops, metadata)
-QA_VERSION = "0.9.3"      # TECH v0.9.3: QA build = v0.9.1 + Celes enablers E1-E9 + visual state / VRAM hotfix (QA only)
+QA_VERSION = "0.9.3"      # TECH v0.9.3 (ACCEPTED, frozen): QA build = v0.9.1 + Celes enablers E1-E9 + visual state / VRAM hotfix (QA only)
 FILE_VER = "0.9.1"
 PROD_ITEMS = "items/production_v08/equipment.json"          # frozen v0.8 / v0.9 targets
 PROD_ITEMS_V091 = "items/production_v091/equipment.json"    # TECH v0.9.1
@@ -50,7 +50,8 @@ TARGETS = {
                     "formation_safety": "report",
                     "formation_safety_reason": "v0.6.1 QA formations carried unchanged for regression ($242 slot 0 known non-blocking)",
                     "status": "TECH v0.9.3 QA BUILD (v0.9.1 item alignment + Celes enablers E1-E9 + QA hub + visual state / VRAM "
-                              "hotfix) - USER RUNTIME QA PENDING"},
+                              "hotfix) - ACCEPTED / USER RUNTIME PASS (frozen)",
+                    "expect_sha1": "15af77fe9c01f54844fbcbbb0c5f1d65768d55f0", "expect_crc32": "02DA7373"},   # v0.9.3 accepted
     # ---- TECH v0.9 frozen (USER RUNTIME PASS / ACCEPTED, must reproduce exactly) ----------------------
     "production-v0.9": {"file": "FF6X_Rev1_TECH_v0.9_PRODUCTION", "version": "0.9.0", "kind": "v07", "meta_target": "production",
                     "packages": [], "monsters": [], "formations": [], "ext_item_sources": [PROD_ITEMS],
@@ -285,7 +286,7 @@ def write_outputs(clean, rom, out, chk, notes, target, outdir):
              "ips": {"file": os.path.basename(base + ".ips"), "sha1": sha1(ips)},
              "bps": {"file": os.path.basename(base + ".bps"), "sha1": sha1(bps)},
              "input": {"sha1": sha1(clean), "crc32": crc32(clean)},
-             "static_pass": True, "qa_harness_only": bool(meta.get("qa_harness")), "runtime": {"legacy-v0.1": "VERIFIED (as TECH v0.1)", "evtest": "VERIFIED (as TECH v0.2)", "celes-tech-v0.3.0": "VERIFIED (TECH v0.3 accepted via v0.3.1 QA harness)", "celes-qa-v0.3.1": "VERIFIED (user QA of v0.3.1)", "map-tech-v0.4.0": "VERIFIED (TECH v0.4 accepted)", "celes-tech-v0.4.0": "VERIFIED via map-tech v0.4 QA", "production-v0.4.0": "engine of accepted v0.4", "monster-tech-v0.5.0": "VERIFIED (TECH v0.5 accepted)", "celes-tech-v0.5.0": "engine of accepted v0.5", "production-v0.5.0": "engine of accepted v0.5", "monster-tech-v0.6.1": "VERIFIED (TECH v0.6.1 accepted)", "production-v0.6.0": "engine of accepted v0.6.1", "celes-tech-v0.6.0": "engine of accepted v0.6.1 + accepted Annex slice", "monster-tech-v0.6.0": "NOT ACCEPTED (superseded by v0.6.1)", "production-v0.8": "VERIFIED (TECH v0.8 accepted)", "celes-tech-v0.8": "engine of accepted v0.8 + accepted Annex slice", "item-tech-v0.8": "VERIFIED (TECH v0.8 user runtime PASS)", "production-v0.9": "VERIFIED (TECH v0.9 accepted)", "celes-tech-v0.9": "engine of accepted v0.9 + accepted Annex slice", "item-tech-v0.9": "VERIFIED (TECH v0.9 user runtime PASS)"}.get(target, "PENDING USER QA")}
+             "static_pass": True, "qa_harness_only": bool(meta.get("qa_harness")), "runtime": {"legacy-v0.1": "VERIFIED (as TECH v0.1)", "evtest": "VERIFIED (as TECH v0.2)", "celes-tech-v0.3.0": "VERIFIED (TECH v0.3 accepted via v0.3.1 QA harness)", "celes-qa-v0.3.1": "VERIFIED (user QA of v0.3.1)", "map-tech-v0.4.0": "VERIFIED (TECH v0.4 accepted)", "celes-tech-v0.4.0": "VERIFIED via map-tech v0.4 QA", "production-v0.4.0": "engine of accepted v0.4", "monster-tech-v0.5.0": "VERIFIED (TECH v0.5 accepted)", "celes-tech-v0.5.0": "engine of accepted v0.5", "production-v0.5.0": "engine of accepted v0.5", "monster-tech-v0.6.1": "VERIFIED (TECH v0.6.1 accepted)", "production-v0.6.0": "engine of accepted v0.6.1", "celes-tech-v0.6.0": "engine of accepted v0.6.1 + accepted Annex slice", "monster-tech-v0.6.0": "NOT ACCEPTED (superseded by v0.6.1)", "production-v0.8": "VERIFIED (TECH v0.8 accepted)", "celes-tech-v0.8": "engine of accepted v0.8 + accepted Annex slice", "item-tech-v0.8": "VERIFIED (TECH v0.8 user runtime PASS)", "production-v0.9": "VERIFIED (TECH v0.9 accepted)", "celes-tech-v0.9": "engine of accepted v0.9 + accepted Annex slice", "item-tech-v0.9": "VERIFIED (TECH v0.9 user runtime PASS)", "item-tech": "VERIFIED (TECH v0.9.3 user runtime PASS / ACCEPTED)", "production": "engine + data of accepted v0.9.3 (v0.9.1 item alignment, unchanged since v0.9.1)", "celes-tech": "engine of accepted v0.9.3 + accepted Annex slice (unchanged since v0.9.1)"}.get(target, "PENDING USER QA")}
     diff = {"identity": ident,
             "patches": rom.records,
             "placements": [{"region": r, "label": l, "patch_id": p, "pc_start": f"{a:06X}", "pc_end": f"{b:06X}",
