@@ -1,0 +1,22 @@
+{
+ "_comment": "Locked: Lv 36, HP 47,800, MP 9,000, Speed 45, Battle Power 34, Defense 165, Magic Defense 150, Magic Power 13, weak Lightning, null Poison, no absorb, immune Doom (SNES 'Doom' = instant death -> blocked status Death), Petrify, Confuse (CELES_PRODUCTION_SPEC_v1.0 s7.2). Base record = vanilla Dadaluma ($107, boss flags); EXP / GP 0 (boss reward is an event item).",
+ "base_vanilla_monster": "0x107",
+ "fields": {
+  "level": 36,
+  "hp": 47800,
+  "mp": 9000,
+  "speed": 45,
+  "attack": 34,
+  "defense": 165,
+  "mdefense": 150,
+  "magic_power": 13,
+  "exp": 0,
+  "gold": 0,
+  "elem_weak": 4,
+  "elem_null": 8,
+  "elem_absorb": 0,
+  "status_block_1": 192,
+  "status_block_2": 32,
+  "status_block_3": 0
+ }
+}

@@ -1,0 +1,154 @@
+{
+ "map_id": "1A2",
+ "name": "VECTOR OUTER WARD (QA) - TECH v0.9.2 Celes enabler map (placeholder art)",
+ "status": "TECH v0.9.2 QA enabler map (E1 world landing / parent return, E5 party-conditional NPC, E6 Imperial Ruins palette variant $30, E7 Vale sprite palette $20, E8 persistent state presentation, Praetor console E2-E4). Vanilla Magitek-lab tiles + derived palette (D-14 placeholder). NOT production content.",
+ "size_tiles": [
+  32,
+  32
+ ],
+ "bg1": {
+  "source": "layout_bg1.txt",
+  "layout_index": "0x163",
+  "storage": "MAP_LAYOUTS (F5), literal LZSS"
+ },
+ "bg2": {
+  "layout_index": "0x12A",
+  "note": "vanilla all-transparent filler (read-only reuse, as in the accepted Annex)"
+ },
+ "bg3": {
+  "layout_index": "0x000"
+ },
+ "tile_property_set": "0x24 (vanilla 'magitek_lab_1'; read from the clean ROM at build time)",
+ "legend": {
+  ".": {
+   "tile": "02",
+   "role": "void (impassable)"
+  },
+  "f": {
+   "tile": [
+    "52",
+    "62"
+   ],
+   "pattern": "checker (x+y)%2",
+   "role": "floor"
+  },
+  "7": {
+   "tile": "A0",
+   "role": "wall top-left edge"
+  },
+  "^": {
+   "tile": [
+    "A1",
+    "A2"
+   ],
+   "pattern": "x%2",
+   "role": "wall top edge"
+  },
+  "9": {
+   "tile": "A3",
+   "role": "wall top-right edge"
+  },
+  "[": {
+   "tile": "B0",
+   "role": "wall face left"
+  },
+  "m": {
+   "tile": [
+    "56",
+    "57"
+   ],
+   "pattern": "x%2",
+   "role": "wall face (machinery)"
+  },
+  "]": {
+   "tile": "B3",
+   "role": "wall face right"
+  },
+  "{": {
+   "tile": "C0",
+   "role": "wall lower left"
+  },
+  "n": {
+   "tile": [
+    "66",
+    "67"
+   ],
+   "pattern": "x%2",
+   "role": "wall lower"
+  },
+  "}": {
+   "tile": "C3",
+   "role": "wall lower right"
+  },
+  "<": {
+   "tile": "D0",
+   "role": "left wall"
+  },
+  ">": {
+   "tile": "D3",
+   "role": "right wall"
+  },
+  "1": {
+   "tile": "E0",
+   "role": "bottom-left edge"
+  },
+  "v": {
+   "tile": [
+    "E1",
+    "E2"
+   ],
+   "pattern": "x%2",
+   "role": "bottom edge"
+  },
+  "3": {
+   "tile": "E3",
+   "role": "bottom-right edge"
+  }
+ },
+ "walkable_roles": [
+  "floor"
+ ],
+ "properties": {
+  "_comment": "map_tech_a / Annex property bytes except the layouts and the palette ($30 = PAL-01 Imperial Ruins variant, palettes/v092).",
+  "bytes": {
+   "00_title": "00",
+   "01_flags": "00",
+   "02_bg3prio_battlebg": "1B",
+   "03": "00",
+   "04_tile_prop_set": "24",
+   "05_random_battles": "00",
+   "06_window_mask": "00",
+   "07_12_gfx_sets": "B6 1B 4E E7 88 86",
+   "13_16_layouts": "computed: BG1=$15F, BG2=$12A, BG3=$000",
+   "17_sprite_overlay": "00",
+   "18_21_bg23_shift": "00 00 00 00",
+   "22_parallax": "00",
+   "23_bg12_size": "55",
+   "24_bg3_size": "57",
+   "25_palette": "30",
+   "26_pal_anim": "00",
+   "27_bg_anim": "0E",
+   "28_song": "21",
+   "29": "00",
+   "30_map_w": "1F",
+   "31_map_h": "1F",
+   "32_color_math": "00"
+  }
+ },
+ "entry": {
+  "from": "World of Ruin (map $001) short entrance (146,202) with SET_PARENT -> (16,27) UP; south exit -> parent map (the world map, next to the parked Falcon)",
+  "arrive": [
+   16,
+   27
+  ],
+  "facing": "UP",
+  "z": "lower"
+ },
+ "rooms": {
+  "north_room": "x8-23 y12-17: Vale (11,13) pal slot 7, survivor (21,14); memorial wall tiles (10-12,10); archive door tiles (19-20,10); triggers: memorial (10,12), archive (20,12), Praetor console (16,12)",
+  "corridor": "x15-16 y18-24",
+  "hall": "x12-19 y25-27",
+  "south_exit": "long entrance (15,29) length 1 -> parent map ($1FF)"
+ },
+ "init_event": "EvOuterInit"
+}

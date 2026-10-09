@@ -1,0 +1,11 @@
+{
+ "formations": 576,
+ "identical_engine_data": 576,
+ "identical_screen": 574,
+ "not_started_both": [],
+ "engine_diffs": {},
+ "screen_diffs": [
+  "03D",
+  "10F"
+ ]
+}

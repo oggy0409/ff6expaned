@@ -1,0 +1,4 @@
+# isolation monster: plain Battle only
+random BATTLE BATTLE BATTLE
+end
+end

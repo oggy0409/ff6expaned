@@ -1,0 +1,28 @@
+{
+ "_comment": "TECH v0.9.3 E8 visible map states of $1A2 (QA placeholders, D-14; vanilla Magitek-lab tiles). The map startup event EvOuterInit (events/celes_enablers_v092) writes these BG1 tiles with event cmd $73 from the persistent D-21 bits. The builder (patches/celes_enablers_v092.py map_states()) asserts that every set_tiles line of EvOuterMem* / EvOuterArc* equals this file, that the 'none' memorial state equals the compiled layout, that every state differs from the others of its region, and that every memorial x archive combination leaves the reachable floor identical to the base map (no wall made walkable, no trigger cut off). v0.9.2 changed only one row with wall-edge tiles that read as part of the wall (user runtime V4).",
+ "layer": "BG1",
+ "regions": {
+  "memorial": {"x": 9, "y": 10, "w": 4, "h": 2, "trigger": [10, 12],
+               "role": "memorial wall above the memorial trigger (wall face row 10 + lower wall row 11)"},
+  "archive": {"x": 19, "y": 10, "w": 2, "h": 2, "trigger": [20, 12],
+              "role": "archive doorway above the archive trigger (wall face row 10 + lower wall row 11)"}
+ },
+ "states": {
+  "memorial": {
+   "none": {"rows": ["57 56 57 56", "67 66 67 66"], "bits": "EXP_CELES_DONE = 0 (and Graves not done)",
+            "look": "plain machinery wall: no memorial (same tiles as the layout)"},
+   "tags": {"rows": ["91 92 91 92", "90 93 90 93"], "bits": "EXP_CELES_DONE = 1, EXP_GRAVES_DONE = 0",
+            "look": "temporary memorial: lit panel of hanging name tags / plaques (light vertical tag strips)"},
+   "stone": {"rows": ["F1 F2 F1 F2", "11 11 11 11"], "bits": "EXP_GRAVES_DONE = 1",
+             "look": "permanent memorial: four light stone pillars on a heavy riveted base, 4 x 2 tiles, replaces the tags (all impassable tiles)"}
+  },
+  "archive": {
+   "sealed": {"rows": ["12 12", "13 13"], "bits": "EXP_CELES_RECORDS_CHOSEN = 0",
+              "look": "sealed archive: closed framed grate door"},
+   "kept": {"rows": ["BB BB", "CB CB"], "bits": "EXP_CELES_RECORDS_CHOSEN = 1, EXP_CELES_RECORDS_PRESERVED = 1",
+            "look": "retained archive (Preserve): open doorway with intact record shelves (light horizontal bars)"},
+   "burned": {"rows": ["02 02", "96 97"], "bits": "EXP_CELES_RECORDS_CHOSEN = 1, EXP_CELES_RECORDS_PRESERVED = 0",
+              "look": "burned archive (Burn): black burned-out opening above rubble"}
+  }
+ }
+}

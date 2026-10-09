@@ -1,0 +1,5 @@
+{
+ "_comment": "palette index into vanilla MonsterPal units; exact Dark Wind graphics index, palette $046, stencil $1F, overlap \u2014 Phase A1 isolation",
+ "palette_index": "0x046",
+ "expect_bpp": "4bpp"
+}

@@ -1,0 +1,9 @@
+{
+ "name": "celes_annex_tech",
+ "_comment": "TECH v0.4 package descriptor (v0.4 pipeline only; the frozen v0.3 builder ignores this file). Sources are the accepted v0.3 slice files, unchanged.",
+ "maps": ["maps/celes_annex_tech"],
+ "event_org": "F10000",
+ "event_region": "EVENT_EXPANSION",
+ "event_patch": "T400_ANNEX_EVENTS",
+ "layout_patch": "T402_ANNEX_LAYOUT"
+}

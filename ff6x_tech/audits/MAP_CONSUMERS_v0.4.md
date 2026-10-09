@@ -1,0 +1,100 @@
+# TECH v0.4 — audited map-table consumers (90 operand retargets)
+
+Source: Rev 1 disassembly debug info (`devtools/map_consumer_audit.py`), every instruction asserted against the clean ROM by the builder (`data/map_relocation_v04.json`). Only the 3 operand bytes change; opcode `BF` = LDA long,X, `FF` = SBC long,X.
+
+| Table | Instr. PC | Instr. SNES | Original instruction | Operand PC | New operand | base + disp |
+|---|---|---|---|---|---|---|
+| TREASURE | 0015DD | C0:15DD | `BF F6 82 ED` | 0015DE | `02 20 F7` | ptr + 2 |
+| TREASURE | 0015E3 | C0:15E3 | `BF F4 82 ED` | 0015E4 | `00 20 F7` | ptr + 0 |
+| TREASURE | 0015F1 | C0:15F1 | `BF 34 86 ED` | 0015F2 | `02 24 F7` | data + 0 |
+| TREASURE | 0015F7 | C0:15F7 | `BF 35 86 ED` | 0015F8 | `03 24 F7` | data + 1 |
+| TREASURE | 0015FE | C0:15FE | `BF 36 86 ED` | 0015FF | `04 24 F7` | data + 2 |
+| TREASURE | 001609 | C0:1609 | `BF 36 86 ED` | 00160A | `04 24 F7` | data + 2 |
+| TREASURE | 004BDA | C0:4BDA | `BF F6 82 ED` | 004BDB | `02 20 F7` | ptr + 2 |
+| TREASURE | 004BE0 | C0:4BE0 | `BF F4 82 ED` | 004BE1 | `00 20 F7` | ptr + 0 |
+| TREASURE | 004BEC | C0:4BEC | `BF 34 86 ED` | 004BED | `02 24 F7` | data + 0 |
+| TREASURE | 004BF4 | C0:4BF4 | `BF 35 86 ED` | 004BF5 | `03 24 F7` | data + 1 |
+| TREASURE | 004C08 | C0:4C08 | `BF 38 86 ED` | 004C09 | `06 24 F7` | data + 4 |
+| TREASURE | 004C0E | C0:4C0E | `BF 36 86 ED` | 004C0F | `04 24 F7` | data + 2 |
+| LONG_ENTRANCES | 0018EA | C0:18EA | `BF 82 F4 ED` | 0018EB | `02 00 F7` | ptr + 2 |
+| LONG_ENTRANCES | 0018F0 | C0:18F0 | `BF 80 F4 ED` | 0018F1 | `00 00 F7` | ptr + 0 |
+| LONG_ENTRANCES | 001903 | C0:1903 | `BF 82 F4 ED` | 001904 | `02 00 F7` | ptr + 2 |
+| LONG_ENTRANCES | 00190B | C0:190B | `BF 81 F4 ED` | 00190C | `01 00 F7` | ptr + 1 |
+| LONG_ENTRANCES | 001916 | C0:1916 | `FF 80 F4 ED` | 001917 | `00 00 F7` | ptr + 0 |
+| LONG_ENTRANCES | 00191E | C0:191E | `BF 80 F4 ED` | 00191F | `00 00 F7` | ptr + 0 |
+| LONG_ENTRANCES | 00192F | C0:192F | `BF 80 F4 ED` | 001930 | `00 00 F7` | ptr + 0 |
+| LONG_ENTRANCES | 00193A | C0:193A | `FF 81 F4 ED` | 00193B | `01 00 F7` | ptr + 1 |
+| LONG_ENTRANCES | 001942 | C0:1942 | `BF 81 F4 ED` | 001943 | `01 00 F7` | ptr + 1 |
+| LONG_ENTRANCES | 001963 | C0:1963 | `BF 83 F4 ED` | 001964 | `03 00 F7` | ptr + 3 |
+| LONG_ENTRANCES | 00196F | C0:196F | `BF 83 F4 ED` | 001970 | `03 00 F7` | ptr + 3 |
+| LONG_ENTRANCES | 00197B | C0:197B | `BF 83 F4 ED` | 00197C | `03 00 F7` | ptr + 3 |
+| LONG_ENTRANCES | 00198A | C0:198A | `BF 85 F4 ED` | 00198B | `05 00 F7` | ptr + 5 |
+| LONG_ENTRANCES | 00199F | C0:199F | `BF 85 F4 ED` | 0019A0 | `05 00 F7` | ptr + 5 |
+| LONG_ENTRANCES | 0019A9 | C0:19A9 | `BF 84 F4 ED` | 0019AA | `04 00 F7` | ptr + 4 |
+| LONG_ENTRANCES | 0019B6 | C0:19B6 | `BF 84 F4 ED` | 0019B7 | `04 00 F7` | ptr + 4 |
+| LONG_ENTRANCES | 0019C4 | C0:19C4 | `BF 84 F4 ED` | 0019C5 | `04 00 F7` | ptr + 4 |
+| LONG_ENTRANCES | 0019E5 | C0:19E5 | `BF 83 F4 ED` | 0019E6 | `03 00 F7` | ptr + 3 |
+| LONG_ENTRANCES | 001A14 | C0:1A14 | `BF 84 F4 ED` | 001A15 | `04 00 F7` | ptr + 4 |
+| SHORT_ENTRANCES | 001A7D | C0:1A7D | `BF 02 BB DF` | 001A7E | `02 C0 F6` | ptr + 2 |
+| SHORT_ENTRANCES | 001A83 | C0:1A83 | `BF 00 BB DF` | 001A84 | `00 C0 F6` | ptr + 0 |
+| SHORT_ENTRANCES | 001A8F | C0:1A8F | `BF 00 BB DF` | 001A90 | `00 C0 F6` | ptr + 0 |
+| SHORT_ENTRANCES | 001AAA | C0:1AAA | `BF 02 BB DF` | 001AAB | `02 C0 F6` | ptr + 2 |
+| SHORT_ENTRANCES | 001AB6 | C0:1AB6 | `BF 02 BB DF` | 001AB7 | `02 C0 F6` | ptr + 2 |
+| SHORT_ENTRANCES | 001AC2 | C0:1AC2 | `BF 02 BB DF` | 001AC3 | `02 C0 F6` | ptr + 2 |
+| SHORT_ENTRANCES | 001AD1 | C0:1AD1 | `BF 04 BB DF` | 001AD2 | `04 C0 F6` | ptr + 4 |
+| SHORT_ENTRANCES | 001AE6 | C0:1AE6 | `BF 04 BB DF` | 001AE7 | `04 C0 F6` | ptr + 4 |
+| SHORT_ENTRANCES | 001AF0 | C0:1AF0 | `BF 03 BB DF` | 001AF1 | `03 C0 F6` | ptr + 3 |
+| SHORT_ENTRANCES | 001AFD | C0:1AFD | `BF 03 BB DF` | 001AFE | `03 C0 F6` | ptr + 3 |
+| SHORT_ENTRANCES | 001B0B | C0:1B0B | `BF 03 BB DF` | 001B0C | `03 C0 F6` | ptr + 3 |
+| SHORT_ENTRANCES | 001B2C | C0:1B2C | `BF 02 BB DF` | 001B2D | `02 C0 F6` | ptr + 2 |
+| SHORT_ENTRANCES | 001B5E | C0:1B5E | `BF 03 BB DF` | 001B5F | `03 C0 F6` | ptr + 3 |
+| SHORT_ENTRANCES | 2E20E9 | EE:20E9 | `BF 00 BB DF` | 2E20EA | `00 C0 F6` | ptr + 0 |
+| SHORT_ENTRANCES | 2E20EF | EE:20EF | `BF 02 BB DF` | 2E20F0 | `02 C0 F6` | ptr + 2 |
+| SHORT_ENTRANCES | 2E20FE | EE:20FE | `BF 00 BB DF` | 2E20FF | `00 C0 F6` | ptr + 0 |
+| SHORT_ENTRANCES | 2E2106 | EE:2106 | `BF 01 BB DF` | 2E2107 | `01 C0 F6` | ptr + 1 |
+| SHORT_ENTRANCES | 2E2110 | EE:2110 | `BF 02 BB DF` | 2E2111 | `02 C0 F6` | ptr + 2 |
+| SHORT_ENTRANCES | 2E213C | EE:213C | `BF 04 BB DF` | 2E213D | `04 C0 F6` | ptr + 4 |
+| MAP_PROPS | 001CBF | C0:1CBF | `BF 00 8F ED` | 001CC0 | `00 40 F7` | data + 0 |
+| SUBTILEMAP_PTRS | 002892 | C0:2892 | `BF 90 CD D9` | 002893 | `00 84 F7` | ptr + 0 |
+| SUBTILEMAP_PTRS | 00289F | C0:289F | `BF 92 CD D9` | 0028A0 | `02 84 F7` | ptr + 2 |
+| SUBTILEMAP_PTRS | 0028E6 | C0:28E6 | `BF 90 CD D9` | 0028E7 | `00 84 F7` | ptr + 0 |
+| SUBTILEMAP_PTRS | 0028F3 | C0:28F3 | `BF 92 CD D9` | 0028F4 | `02 84 F7` | ptr + 2 |
+| SUBTILEMAP_PTRS | 00293C | C0:293C | `BF 90 CD D9` | 00293D | `00 84 F7` | ptr + 0 |
+| SUBTILEMAP_PTRS | 002949 | C0:2949 | `BF 92 CD D9` | 00294A | `02 84 F7` | ptr + 2 |
+| NPC_PROPS | 0052BC | C0:52BC | `BF 12 1A C4` | 0052BD | `02 40 F6` | ptr + 2 |
+| NPC_PROPS | 0052C2 | C0:52C2 | `BF 10 1A C4` | 0052C3 | `00 40 F6` | ptr + 0 |
+| NPC_PROPS | 0052D4 | C0:52D4 | `BF 10 1A C4` | 0052D5 | `00 40 F6` | ptr + 0 |
+| NPC_PROPS | 0052DB | C0:52DB | `BF 11 1A C4` | 0052DC | `01 40 F6` | ptr + 1 |
+| NPC_PROPS | 0052E2 | C0:52E2 | `BF 12 1A C4` | 0052E3 | `02 40 F6` | ptr + 2 |
+| NPC_PROPS | 0052EB | C0:52EB | `BF 12 1A C4` | 0052EC | `02 40 F6` | ptr + 2 |
+| NPC_PROPS | 0052F8 | C0:52F8 | `BF 12 1A C4` | 0052F9 | `02 40 F6` | ptr + 2 |
+| NPC_PROPS | 005305 | C0:5305 | `BF 12 1A C4` | 005306 | `02 40 F6` | ptr + 2 |
+| NPC_PROPS | 005321 | C0:5321 | `BF 14 1A C4` | 005322 | `04 40 F6` | ptr + 4 |
+| NPC_PROPS | 00532C | C0:532C | `BF 14 1A C4` | 00532D | `04 40 F6` | ptr + 4 |
+| NPC_PROPS | 00533A | C0:533A | `BF 15 1A C4` | 00533B | `05 40 F6` | ptr + 5 |
+| NPC_PROPS | 00535A | C0:535A | `BF 15 1A C4` | 00535B | `05 40 F6` | ptr + 5 |
+| NPC_PROPS | 005369 | C0:5369 | `BF 16 1A C4` | 00536A | `06 40 F6` | ptr + 6 |
+| NPC_PROPS | 005373 | C0:5373 | `BF 17 1A C4` | 005374 | `07 40 F6` | ptr + 7 |
+| NPC_PROPS | 00537F | C0:537F | `BF 17 1A C4` | 005380 | `07 40 F6` | ptr + 7 |
+| NPC_PROPS | 00538A | C0:538A | `BF 17 1A C4` | 00538B | `07 40 F6` | ptr + 7 |
+| NPC_PROPS | 005397 | C0:5397 | `BF 18 1A C4` | 005398 | `08 40 F6` | ptr + 8 |
+| NPC_PROPS | 0053AD | C0:53AD | `BF 18 1A C4` | 0053AE | `08 40 F6` | ptr + 8 |
+| NPC_PROPS | 0053BC | C0:53BC | `BF 18 1A C4` | 0053BD | `08 40 F6` | ptr + 8 |
+| NPC_PROPS | 0053D0 | C0:53D0 | `BF 18 1A C4` | 0053D1 | `08 40 F6` | ptr + 8 |
+| NPC_PROPS | 0053E3 | C0:53E3 | `BF 18 1A C4` | 0053E4 | `08 40 F6` | ptr + 8 |
+| EVENT_TRIGGERS | 00BCAE | C0:BCAE | `BF 02 00 C4` | 00BCAF | `02 00 F6` | ptr + 2 |
+| EVENT_TRIGGERS | 00BCB4 | C0:BCB4 | `BF 00 00 C4` | 00BCB5 | `00 00 F6` | ptr + 0 |
+| EVENT_TRIGGERS | 00BCBD | C0:BCBD | `BF 00 00 C4` | 00BCBE | `00 00 F6` | ptr + 0 |
+| EVENT_TRIGGERS | 00BCD3 | C0:BCD3 | `BF 02 00 C4` | 00BCD4 | `02 00 F6` | ptr + 2 |
+| EVENT_TRIGGERS | 00BCED | C0:BCED | `BF 04 00 C4` | 00BCEE | `04 00 F6` | ptr + 4 |
+| EVENT_TRIGGERS | 2E2176 | EE:2176 | `BF 00 00 C4` | 2E2177 | `00 00 F6` | ptr + 0 |
+| EVENT_TRIGGERS | 2E217C | EE:217C | `BF 02 00 C4` | 2E217D | `02 00 F6` | ptr + 2 |
+| EVENT_TRIGGERS | 2E218B | EE:218B | `BF 00 00 C4` | 2E218C | `00 00 F6` | ptr + 0 |
+| EVENT_TRIGGERS | 2E2193 | EE:2193 | `BF 01 00 C4` | 2E2194 | `01 00 F6` | ptr + 1 |
+| EVENT_TRIGGERS | 2E219B | EE:219B | `BF 02 00 C4` | 2E219C | `02 00 F6` | ptr + 2 |
+| EVENT_TRIGGERS | 2E21A4 | EE:21A4 | `BF 03 00 C4` | 2E21A5 | `03 00 F6` | ptr + 3 |
+| EVENT_TRIGGERS | 2E21AC | EE:21AC | `BF 04 00 C4` | 2E21AD | `04 00 F6` | ptr + 4 |
+
+Immediate references left unchanged (layout data base D9:D1B0 is still used for offsets): `ADC #.loword(SubTilemap)` / `ADC #^SubTilemap` at C0:2897, C0:28A3, C0:28EB, C0:28F7, C0:2941, C0:294D.
+
+Not relocated: MapInitEvent (D1:FA00) already has 512 slots (maps $19F-$1FF = EventReturn); random-battle tables CF:5600/CF:5880 already cover 512 maps and are only read when map property byte 5 bit 7 enables random battles.

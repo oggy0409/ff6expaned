@@ -1,0 +1,45 @@
+{
+ "_comment": "TECH v0.3 placeholder text only. NOT the locked Celes script. IDs are assigned in order starting at $1001 ($1000 is the reserved out-of-range diagnostic). Max ~30 characters per line, 4 lines per box. Every line is width-checked at build time against the ROM font width table (C4:8FC0): max 220 px (engine wrap limit $C8=$E0 minus start x 4).",
+ "messages": [
+  {
+   "label": "enter_prompt",
+   "text": "TECH v0.3: Annex test map.{n}Enter the Annex?{n}{choice} Yes{n}{choice} No"
+  },
+  {
+   "label": "vale_first",
+   "text": "VALE (placeholder): TECH v0.3.{n}This text is from bank F3.{n}Annex flag STARTED is now ON.{n}The north door is unsealed."
+  },
+  {
+   "label": "vale_started",
+   "text": "VALE (placeholder):{n}Annex flag STARTED is still ON.{n}Go north through the door{n}to start the test battle."
+  },
+  {
+   "label": "vale_battle",
+   "text": "VALE (placeholder):{n}Annex flag BATTLE DONE is ON.{n}Take the test reward from{n}the chest in the north room."
+  },
+  {
+   "label": "vale_done",
+   "text": "VALE (placeholder):{n}Annex flag COMPLETE is ON.{n}TECH slice finished. Exit{n}south to return to the Falcon."
+  },
+  {
+   "label": "door_sealed",
+   "text": "The door is sealed.{n}(Talk to VALE first.)"
+  },
+  {
+   "label": "battle_start",
+   "text": "TECH v0.3: Annex defenses{n}activate! (placeholder battle)"
+  },
+  {
+   "label": "battle_done",
+   "text": "Defenses are down.{n}Annex flag BATTLE DONE is ON."
+  },
+  {
+   "label": "reward_get",
+   "text": "TECH v0.3 placeholder reward:{n}Received 1 Potion.{n}Annex flag COMPLETE is ON."
+  },
+  {
+   "label": "chest_empty",
+   "text": "The chest is empty.{n}(Reward already taken.)"
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+{
+ "npcs": [
+  {
+   "name": "TECH_B1",
+   "x": 11,
+   "y": 16,
+   "gfx": "34 (NPC)",
+   "pal": 1,
+   "direction": "RIGHT",
+   "speed": 1,
+   "react": "FACE_PLAYER",
+   "switch": "VANILLA_NPC_ALWAYS_VISIBLE",
+   "event": "EvB1"
+  }
+ ]
+}

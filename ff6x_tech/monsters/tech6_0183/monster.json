@@ -1,0 +1,10 @@
+{
+ "id": "0x183",
+ "name": "DW VULPAL",
+ "special_name": "DWSPEC",
+ "special_anim_from_vanilla_monster": "0x028",
+ "status": "QA-only TECH v0.6 graphics isolation monster: Dark Wind graphics with the Vulture palette $04A (= v0.5 TESTMOB B configuration) \u2014 Phase A2 isolation. NOT production content.",
+ "rage_policy": "excluded - engine never learns Rages for monster IDs >= $100 (C2:4A09); no Rage entry",
+ "veldt_policy": "excluded - engine skips IDs >= $100 for Veldt registration (C2:49E9); formations force no-Veldt flag",
+ "colosseum_policy": "not eligible (colosseum table monster byte and MonsterAlign are 8-bit/256 entries)"
+}

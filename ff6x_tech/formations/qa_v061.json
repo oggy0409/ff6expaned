@@ -1,0 +1,45 @@
+{
+ "_comment": "QA HARNESS ONLY (target monster-tech).",
+ "event_battle_groups": [
+  {
+   "group": "0xFE",
+   "formation_1": "0x240",
+   "formation_2": "0x240",
+   "expect": "00 00 00 00",
+   "patch_id": "Q601_QA_EVENT_BATTLE_GROUP_FE",
+   "claim": "QA_EVENT_BATTLE_GROUP_FE",
+   "consumer": "event cmd $4D (EventBattle C0:A5A7) group $FE",
+   "reason": "QA: group $FE -> formation $240 (custom assets, MP 0)"
+  },
+  {
+   "group": "0xFD",
+   "formation_1": "0x241",
+   "formation_2": "0x241",
+   "expect": "00 00 00 00",
+   "patch_id": "Q601_QA_EVENT_BATTLE_GROUP_FD",
+   "claim": "QA_EVENT_BATTLE_GROUP_FD",
+   "consumer": "event cmd $4D (EventBattle C0:A5A7) group $FD",
+   "reason": "QA: group $FD -> formation $241 (custom assets, MP 3)"
+  },
+  {
+   "group": "0xFC",
+   "formation_1": "0x242",
+   "formation_2": "0x242",
+   "expect": "00 00 00 00",
+   "patch_id": "Q601_QA_EVENT_BATTLE_GROUP_FC",
+   "claim": "QA_EVENT_BATTLE_GROUP_FC",
+   "consumer": "event cmd $4D (EventBattle C0:A5A7) group $FC",
+   "reason": "QA: group $FC -> formation $242 (vanilla Dark Wind + exact clone + Vulture-palette variant, Magitek-safe VRAM map 8)"
+  },
+  {
+   "group": "0xFB",
+   "formation_1": "0x243",
+   "formation_2": "0x243",
+   "expect": "00 00 00 00",
+   "patch_id": "Q601_QA_EVENT_BATTLE_GROUP_FB",
+   "claim": "QA_EVENT_BATTLE_GROUP_FB",
+   "consumer": "event cmd $4D (EventBattle C0:A5A7) group $FB",
+   "reason": "QA: group $FB -> formation $243 (reference: 3 vanilla Dark Winds, same layout)"
+  }
+ ]
+}

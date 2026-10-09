@@ -1,0 +1,23 @@
+{
+ "id": "0x3F1",
+ "_comment": "EXAMPLE: same battle, slot 0 moved to pos $33 (x=24, 16 px margin) -> OK.",
+ "template_vanilla_formation": "0x002",
+ "no_veldt": true,
+ "magic_points": 0,
+ "magitek_possible": true,
+ "slots": [
+  {
+   "slot": 0,
+   "monster": "0x028",
+   "pos": "0x33"
+  },
+  {
+   "slot": 2,
+   "monster": "0x028"
+  },
+  {
+   "slot": 3,
+   "monster": "0x028"
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "0x245",
+ "_comment": "QA TECH v0.9.2 MANUAL-QA scaled twin of $244 (same template / layout / front-only / hidden Bits): PraetorQA $186 + 2 Bit QA $187. For hand testing only; the locked battle is $244.",
+ "template_vanilla_formation": "0x1B6",
+ "no_veldt": true,
+ "front_only": true,
+ "magic_points": 0,
+ "magitek_possible": false,
+ "magitek_reason": "World of Ruin Celes arc: no party member can be in Magitek armor. (VRAM map 4 slot 2 overlaps the Magitek armor cells; no vanilla VRAM map fits the L Praetor + 2 Bits without that overlap - formation_safety suggested none.)",
+ "slots": [
+  {
+   "slot": 0,
+   "monster": "0x186",
+   "pos": "0x3A"
+  },
+  {
+   "slot": 1,
+   "monster": "0x187",
+   "hidden": true,
+   "pos": "0x32"
+  },
+  {
+   "slot": 2,
+   "monster": "0x187",
+   "hidden": true,
+   "pos": "0xC2"
+  }
+ ]
+}

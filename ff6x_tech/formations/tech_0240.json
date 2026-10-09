@@ -1,0 +1,16 @@
+{
+ "id": "0x240",
+ "_comment": "QA-only formation: both new monsters in the same battle. Template = vanilla formation $002 (opening 2x Guard: positions/flags).",
+ "template_vanilla_formation": "0x002",
+ "no_veldt": true,
+ "slots": [
+  {
+   "slot": 2,
+   "monster": "0x180"
+  },
+  {
+   "slot": 3,
+   "monster": "0x181"
+  }
+ ]
+}

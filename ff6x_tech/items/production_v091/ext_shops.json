@@ -1,0 +1,95 @@
+{
+ "_comment": "TECH v0.9.1 extended shops (Master Design Bible v1.0 s19, D-18). XShopProp ids $80+, 8 entries, 9-bit item ids; vanilla shops $00-$7F byte-exact. No ultimate gear; vanilla prices.",
+ "shops": [
+  {
+   "shop_id": "80",
+   "symbol": "EXT_SHOP_REBUILT_MOBLIZ",
+   "type": 5,
+   "price_mod": 0,
+   "items": [
+    "12B",
+    "F5",
+    "F0",
+    "127",
+    "8D"
+   ],
+   "note": "Rebuilt Mobliz: Iron Ration, Remedy, Fenix Down (Phoenix Down), Gaia Tonic, Gaia Gear",
+   "derived": [
+    "vendor type (items + armor)",
+    "order as listed in s19"
+   ]
+  },
+  {
+   "shop_id": "81",
+   "symbol": "EXT_SHOP_NARSHE_FORGE",
+   "type": 5,
+   "price_mod": 0,
+   "items": [
+    "0D",
+    "0E",
+    "0F",
+    "5D",
+    "5F"
+   ],
+   "note": "Reopened Narshe Forge: Flame Sabre, Blizzard, ThunderBlade (elemental blades) + Gold Shld, Diamond Shld. Tempered Edge is NOT sold (D-20: Empty Forge reward only)",
+   "derived": [
+    "shield choice (Gold / Diamond: practical mid-late shields, no Crystal / Aegis / Genji)"
+   ]
+  },
+  {
+   "shop_id": "82",
+   "symbol": "EXT_SHOP_REBUILT_DOMA",
+   "type": 5,
+   "price_mod": 0,
+   "items": [
+    "2D",
+    "2E",
+    "2F",
+    "8A",
+    "73",
+    "AB",
+    "AC",
+    "AD"
+   ],
+   "note": "Rebuilt Doma: Forged, Tempest, Murasame (Cyan katanas), Ninja Gear, Head Band (ashigaru-style existing gear) + Fire Skean, Water Edge, Bolt Edge (scrolls). No Doma Edge (D-20)",
+   "derived": [
+    "gear choice for 'Ashigaru-style existing gear' (no Masamune / Strato / Sky Render)"
+   ]
+  },
+  {
+   "shop_id": "83",
+   "symbol": "EXT_SHOP_FIGARO_FOUNDRY",
+   "type": 3,
+   "price_mod": 6,
+   "items": [
+    "AA",
+    "A3",
+    "A4",
+    "A5",
+    "A7",
+    "A8"
+   ],
+   "note": "Figaro Foundry before EXP_CELES_DONE: the canonical tools (vanilla shop $54 contents, type and price modifier 6 = half price for Edgar)",
+   "derived": []
+  },
+  {
+   "shop_id": "84",
+   "symbol": "EXT_SHOP_FIGARO_FOUNDRY_POST_CELES",
+   "type": 3,
+   "price_mod": 6,
+   "items": [
+    "AA",
+    "A3",
+    "A4",
+    "A5",
+    "A7",
+    "A8",
+    "12E"
+   ],
+   "note": "Figaro Foundry once EXP_CELES_DONE is set: the canonical tools + limited Magitek Cell (cap 3). Technical split of the logical shop $83: the Foundry clerk event opens $84 when EXP_CELES_DONE is set",
+   "derived": [
+    "technical shop id $84 (the vanilla shop command has no per-entry condition)"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,3 @@
+{"_comment": "Custom graphics resource (TECH v0.6). Source image = indexed PNG; tile data, stencil and size are derived by the builder (ff6x/enemygfx.py) and stored in ENEMYX_GFX / ENEMYX_STENCIL.",
+ "custom": {"image": "sprite.png", "bpp": 4, "stencil": "small"},
+ "overlap": 0}

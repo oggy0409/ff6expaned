@@ -1,0 +1,9 @@
+{
+ "name": "map_tech_v04",
+ "_comment": "TECH v0.4 map-foundation proof package: two new physical maps ($1A0, $1A1). Placeholder technical content only.",
+ "maps": ["maps/map_tech_a", "maps/map_tech_b"],
+ "event_org": "F11000",
+ "event_region": "EVENT_EXPANSION",
+ "event_patch": "T410_MAPTECH_EVENTS",
+ "layout_patch": "T412_MAPTECH_LAYOUTS"
+}

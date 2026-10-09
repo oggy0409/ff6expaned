@@ -1,0 +1,5 @@
+{
+ "palette_index": "0x04A",
+ "expect_bpp": "4bpp",
+ "note": "Vulture palette ($02A) - deliberately NOT Dark Wind's own palette ($046)"
+}

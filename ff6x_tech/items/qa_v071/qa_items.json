@@ -1,0 +1,69 @@
+{
+ "_comment": "TECH v0.7.1 QA-ONLY extended equipment ($13D-$13F). Never production content (production IDs $100-$126 are reserved for the 39 locked concepts; $127-$13C reserve). Each item clones a vanilla ItemProp record ('base') and overrides fields by name; offsets are the Rev 1 30-byte ItemProp layout (see ITEM_CONSUMER_AUDIT_v0.7.1.md). Low bytes $3D/$3E/$3F alias the vanilla Chocobo/DaVinci/Magical brushes, so any truncation would be immediately visible in QA.",
+ "qa": true,
+ "items": [
+  {
+   "id": "13D",
+   "code": "QA-W",
+   "name": "QA Blade13D",
+   "icon_from_base": true,
+   "base": "10",
+   "base_name": "Epee (sword)",
+   "weapon_anim_from": "10",
+   "spear": false,
+   "_equip_chars_note": "17FF = every character except Gau ($0800) and Umaro ($2000), who cannot hold a weapon in vanilla (their battle code rewrites the hand slots)",
+   "fields": {
+    "equip_chars": "17FF",
+    "equip_flags": "8000",
+    "power": 222,
+    "hit_rate": 250,
+    "strength": 7,
+    "speed": 0,
+    "stamina": 0,
+    "mag_pwr": 0,
+    "evade": 0,
+    "mblock": 0,
+    "price": 2
+   },
+   "desc": "QA weapon 13D{n}Bat.Pwr 222, Vigor 7 up"
+  },
+  {
+   "id": "13E",
+   "code": "QA-A",
+   "name": "QA Mail 13E",
+   "icon_from_base": true,
+   "base": "89",
+   "base_name": "Mithril Vest (body armor)",
+   "fields": {
+    "equip_chars": "3FFF",
+    "equip_flags": "8000",
+    "power": 199,
+    "hit_rate": 177,
+    "stamina": 5,
+    "evade": 0,
+    "mblock": 0,
+    "price": 2
+   },
+   "desc": "QA armor 13E{n}Def 199, MDef 177, Sta 5 up"
+  },
+  {
+   "id": "13F",
+   "code": "QA-R",
+   "name": "QA Charm13F",
+   "icon_from_base": true,
+   "base": "B0",
+   "base_name": "Goggles (relic)",
+   "clear_effects": true,
+   "fields": {
+    "equip_chars": "3FFF",
+    "equip_flags": "8000",
+    "speed": 7,
+    "mag_pwr": 7,
+    "evade": 30,
+    "mblock": 30,
+    "price": 2
+   },
+   "desc": "QA relic 13F{n}Spd 7, Mag 7 up, Evade 30%"
+  }
+ ]
+}

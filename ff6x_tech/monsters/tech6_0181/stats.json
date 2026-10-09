@@ -1,0 +1,19 @@
+{
+ "_comment": "Raw 32-byte record copied from the base vanilla monster, then the named fields are overwritten. Offsets: ff6x/monsters.py STAT_FIELDS.",
+ "base_vanilla_monster": "0x001",
+ "fields": {
+  "speed": 40,
+  "attack": 6,
+  "hit": 100,
+  "evade": 0,
+  "mblock": 0,
+  "defense": 40,
+  "mdefense": 40,
+  "magic_power": 3,
+  "hp": 140,
+  "mp": 120,
+  "exp": 20,
+  "gold": 45,
+  "level": 5
+ }
+}

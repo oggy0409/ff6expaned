@@ -1,0 +1,40 @@
+{
+ "short_entrances": [
+  {
+   "map": "001",
+   "src": [
+    146,
+    202
+   ],
+   "dest_map": "1A2",
+   "dest": [
+    16,
+    27
+   ],
+   "facing": "UP",
+   "flags": [
+    "SET_PARENT"
+   ],
+   "purpose": "E1: World of Ruin landing area east of Kefka's Tower -> Vector Outer Ward; SET_PARENT stores the world position"
+  }
+ ],
+ "long_entrances": [
+  {
+   "map": "1A2",
+   "src": [
+    15,
+    29
+   ],
+   "length": 1,
+   "vertical": false,
+   "dest_map": "1FF",
+   "dest": [
+    0,
+    0
+   ],
+   "facing": "DOWN",
+   "flags": [],
+   "purpose": "E1: south exit strip (x15-16) -> parent map = the world map tile next to the entrance (Falcon parked where it landed)"
+  }
+ ]
+}

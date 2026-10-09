@@ -1,0 +1,41 @@
+{
+ "_comment": "QA HARNESS ONLY cross-map records and overrides (target item-tech, TECH v0.7.1; unchanged from v0.6.1).",
+ "triggers": [
+  {
+   "map": "013",
+   "x": 34,
+   "y": 43,
+   "event": "QaAccess6",
+   "purpose": "QA access tile (same tile as v0.3.1/v0.4)"
+  }
+ ],
+ "short_entrance_overrides": [
+  {
+   "map": "0C7",
+   "src": [
+    16,
+    29
+   ],
+   "dest_map": "013",
+   "dest": [
+    35,
+    43
+   ],
+   "facing": "LEFT",
+   "flags": [],
+   "purpose": "QA: Annex exit returns next to the QA tile"
+  }
+ ],
+ "byte_overrides": [
+  {
+   "label": "EvBattleDoor_Fight",
+   "offset": 3,
+   "expect": "4D 28 3F",
+   "new": "4D 01 3F",
+   "patch_id": "Q713_QA_ANNEX_BATTLE_GROUP",
+   "owner": "T400_ANNEX_EVENTS",
+   "consumer": "event cmd $4D in EvBattleDoor_Fight",
+   "reason": "QA: Annex battle group $28 -> $01 (as v0.3.1/v0.4 harness)"
+  }
+ ]
+}

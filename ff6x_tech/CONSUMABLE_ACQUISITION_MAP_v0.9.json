@@ -1,0 +1,133 @@
+{
+ "consumables": [
+  {
+   "id": "$127",
+   "name": "Gaia Tonic",
+   "source_type": "shop",
+   "planned_source": "rebuilt shops (World of Ruin reconstruction)",
+   "future_event_symbol": "EXT_SHOP_REBUILT_GENERAL",
+   "conditions": "PREREQ_RECONSTRUCTION_SHOPS",
+   "one_time": false,
+   "gp_cost": 1500
+  },
+  {
+   "id": "$128",
+   "name": "Aether Flask",
+   "source_type": "event_chest",
+   "planned_source": "story chests / quest rewards (not sold)",
+   "future_event_symbol": "EV_CHEST_AETHER_FLASK",
+   "conditions": "PREREQ_TBD_ARC_DESIGN",
+   "one_time": true
+  },
+  {
+   "id": "$129",
+   "name": "Phoenix Ash",
+   "source_type": "boss_reward",
+   "planned_source": "arc boss rewards (not sold)",
+   "future_event_symbol": "EV_BOSS_PHOENIX_ASH",
+   "conditions": "PREREQ_TBD_ARC_DESIGN",
+   "one_time": true
+  },
+  {
+   "id": "$12A",
+   "name": "Null Dust",
+   "source_type": "shop",
+   "planned_source": "rebuilt shops (World of Ruin reconstruction)",
+   "future_event_symbol": "EXT_SHOP_REBUILT_GENERAL",
+   "conditions": "PREREQ_RECONSTRUCTION_SHOPS",
+   "one_time": false,
+   "gp_cost": 800
+  },
+  {
+   "id": "$12B",
+   "name": "Iron Ration",
+   "source_type": "shop",
+   "planned_source": "rebuilt shops (World of Ruin reconstruction)",
+   "future_event_symbol": "EXT_SHOP_REBUILT_GENERAL",
+   "conditions": "PREREQ_RECONSTRUCTION_SHOPS",
+   "one_time": false,
+   "gp_cost": 250
+  },
+  {
+   "id": "$12C",
+   "name": "Remedy+",
+   "source_type": "shop",
+   "planned_source": "rebuilt shops (late reconstruction)",
+   "future_event_symbol": "EXT_SHOP_REBUILT_LATE",
+   "conditions": "PREREQ_RECONSTRUCTION_LATE",
+   "one_time": false,
+   "gp_cost": 3000
+  },
+  {
+   "id": "$12D",
+   "name": "Beacon Flare",
+   "source_type": "quest_reward",
+   "planned_source": "Beacon quest (not sold)",
+   "future_event_symbol": "EV_REWARD_BEACON_FLARE",
+   "conditions": "PREREQ_BEACON_QUEST",
+   "one_time": true
+  },
+  {
+   "id": "$12E",
+   "name": "Magitek Cell",
+   "source_type": "quest_reward",
+   "planned_source": "Magitek research / Vector arc (not sold)",
+   "future_event_symbol": "EV_REWARD_MAGITEK_CELL",
+   "conditions": "PREREQ_VECTOR_ARC",
+   "one_time": true
+  }
+ ],
+ "extended_shops": [
+  {
+   "shop_id": "80",
+   "symbol": "EXT_SHOP_REBUILT_GENERAL",
+   "type": 3,
+   "price_mod": 0,
+   "items": [
+    "127",
+    "12B",
+    "12A",
+    "E9",
+    "EB",
+    "F0",
+    "F5",
+    "F7"
+   ],
+   "note": "rebuilt general store: Gaia Tonic, Iron Ration, Null Dust + vanilla Potion, Tincture, Fenix Down, Remedy, Tent",
+   "derived": [
+    "composition",
+    "shop id $80",
+    "placement (future World of Ruin reconstruction event)"
+   ]
+  },
+  {
+   "shop_id": "81",
+   "symbol": "EXT_SHOP_REBUILT_LATE",
+   "type": 3,
+   "price_mod": 0,
+   "items": [
+    "12C",
+    "127",
+    "12B",
+    "12A",
+    "E9",
+    "F0",
+    "F5",
+    "FD"
+   ],
+   "note": "rebuilt late store: Remedy+ (late game) + the general consumables + vanilla Potion, Fenix Down, Remedy, Warp Stone",
+   "derived": [
+    "composition",
+    "shop id $81",
+    "placement (future late reconstruction event)"
+   ]
+  }
+ ],
+ "excluded_channels": {
+  "steal": "none",
+  "drop": "none",
+  "metamorph": "none",
+  "colosseum": "never a wager / prize",
+  "throw": "never throwable"
+ }
+}

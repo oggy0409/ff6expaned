@@ -1,0 +1,12 @@
+{
+ "name": "qa_access_v09",
+ "qa": true,
+ "_comment": "QA HARNESS ONLY (target item-tech, TECH v0.9). v0.9 consumable / rare-item / stress tools + the accepted v0.8 equipment tools and the v0.7.x / v0.6.1 tests kept for regression. Opening-Magitek QA tile: field-sprite persistence after save/load is the known KNOWN_QA_ISSUE_v0.3.1.",
+ "maps": [],
+ "event_org": "FF0000",
+ "event_region": "QA_HARNESS",
+ "event_patch": "Q710_QA_EVENT",
+ "layout_patch": "Q710_QA_EVENT",
+ "dlg_patch": "Q712_QA_DLG",
+ "dlg_org": "FF1000"
+}

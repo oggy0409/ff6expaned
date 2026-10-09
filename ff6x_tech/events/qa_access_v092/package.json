@@ -1,0 +1,12 @@
+{
+ "name": "qa_access_v092",
+ "qa": true,
+ "_comment": "QA HARNESS ONLY (target item-tech, TECH v0.9.2). Root menu QaRoot92: v0.9.1 items (consumables, reconstruction shops) / v0.9.2 Celes enablers (WoR Falcon, Praetor, outer-map states, party presets) / the accepted v0.9 QA tree unchanged (label QaAccess6, so the v0.9 emulator suites still drive it). Opening-Magitek QA tile: field-sprite persistence after save/load is the known KNOWN_QA_ISSUE_v0.3.1.",
+ "maps": [],
+ "event_org": "FF0000",
+ "event_region": "QA_HARNESS",
+ "event_patch": "Q920_QA_EVENT",
+ "layout_patch": "Q920_QA_EVENT",
+ "dlg_patch": "Q922_QA_DLG",
+ "dlg_org": "FF3000"
+}

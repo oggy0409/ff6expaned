@@ -1,0 +1,261 @@
+{
+ "_comment": "QA HARNESS ONLY (target item-tech, TECH v0.9). Strings in QA_HARNESS (FF:0800+).",
+ "messages": [
+  {
+   "label": "qa8_prompt",
+   "text": "TECH v0.8 QA ACCESS{n}{choice} Equipment v0.8 (39 items){n}{choice} Older tests (v0.7 / v0.6){n}{choice} No (Save Point)"
+  },
+  {
+   "label": "qa8_older",
+   "text": "Older QA tests{n}{choice} Item bank tests (v0.7.1){n}{choice} Monster/map tests (v0.6.1){n}{choice} Cancel"
+  },
+  {
+   "label": "qa8_eq",
+   "text": "v0.8 production equipment{n}{choice} Grant all 39{n}{choice} Party presets{n}{choice} By type / Remove / Smith"
+  },
+  {
+   "label": "qa8_more",
+   "text": "v0.8 equipment tools{n}{choice} Grant by type{n}{choice} Remove all 39 (inventory){n}{choice} More..."
+  },
+  {
+   "label": "qa8_more2",
+   "text": "v0.8 equipment tools{n}{choice} Test battle (guards){n}{choice} Boss battle (Whelk){n}{choice} Smith purchase demo"
+  },
+  {
+   "label": "qa8_type",
+   "text": "Grant by type{n}{choice} Weapons (13){n}{choice} Armor/helmet/shield (13){n}{choice} Relics (13)"
+  },
+  {
+   "label": "qa8_party",
+   "text": "Party preset (Terra leads){n}{choice} Terra Locke Celes Edgar{n}{choice} Terra Sabin Cyan Shadow{n}{choice} More..."
+  },
+  {
+   "label": "qa8_party2",
+   "text": "Party preset (Terra leads){n}{choice} Terra Setzer Strago Relm{n}{choice} Terra Mog Gau Gogo{n}{choice} More..."
+  },
+  {
+   "label": "qa8_party3",
+   "text": "Party preset (Terra leads){n}{choice} Terra Umaro Celes Locke{n}{choice} Opening party (Magitek){n}{choice} Cancel"
+  },
+  {
+   "label": "qa8_party_set",
+   "text": "QA party set. Terra is out{n}of Magitek armor."
+  },
+  {
+   "label": "qa8_party_opening",
+   "text": "Opening party restored{n}(Terra, Wedge, Vicks, Magitek)."
+  },
+  {
+   "label": "qa8_given_all",
+   "text": "Got all 39 production items{n}(ids 100-126): 13 weapons,{n}13 armor, 13 relics."
+  },
+  {
+   "label": "qa8_given_w",
+   "text": "Got the 13 production weapons."
+  },
+  {
+   "label": "qa8_given_a",
+   "text": "Got the 13 production armor,{n}helmets and shields."
+  },
+  {
+   "label": "qa8_given_r",
+   "text": "Got the 13 production relics."
+  },
+  {
+   "label": "qa8_removed",
+   "text": "Removed the production items{n}from the inventory (up to 10{n}each; equipped ones stay)."
+  },
+  {
+   "label": "qa8_smith",
+   "text": "Smith demo (Narshe forge){n}{choice} Buy TemperedEdge 18000 GP{n}{choice} Get 20000 GP (QA){n}{choice} Cancel"
+  },
+  {
+   "label": "qa8_smith_bought",
+   "text": "Smith: Tempered Edge is yours.{n}18000 GP paid."
+  },
+  {
+   "label": "qa8_smith_owned",
+   "text": "Smith: you already own the{n}Tempered Edge.{n}Nothing charged."
+  },
+  {
+   "label": "qa8_smith_poor",
+   "text": "Smith: you need 18000 GP.{n}Nothing charged."
+  },
+  {
+   "label": "qa8_smith_full",
+   "text": "Smith: no room for it.{n}18000 GP refunded."
+  },
+  {
+   "label": "qa8_gp",
+   "text": "QA: got 20000 GP."
+  },
+  {
+   "label": "qa7_items",
+   "text": "v0.7.1 extended item tests{n}{choice} Get QA items 13D/13E/13F{n}{choice} Check / remove QA Blade13D{n}{choice} Shop / Colosseum / Battle"
+  },
+  {
+   "label": "qa7_given",
+   "text": "Got QA Blade13D, QA Mail 13E,{n}QA Charm13F (extended) and{n}vanilla items 3D/3E/3F."
+  },
+  {
+   "label": "qa7_has_no",
+   "text": "HAS EXT ITEM 13D: NO{n}(no QA Blade13D in the{n}inventory)"
+  },
+  {
+   "label": "qa7_has_yes",
+   "text": "HAS EXT ITEM 13D: YES{n}{choice} Remove one (TAKE EXT ITEM){n}{choice} Keep it"
+  },
+  {
+   "label": "qa7_taken",
+   "text": "TAKE EXT ITEM 13D: one{n}QA Blade13D was removed."
+  },
+  {
+   "label": "qa7_more",
+   "text": "v0.7.1 exclusion / battle tests{n}{choice} Shop 48 (brushes){n}{choice} Colosseum (full battle){n}{choice} Battle: Terra w/o Magitek"
+  },
+  {
+   "label": "qa7_colo",
+   "text": "Colosseum (QA party preset){n}{choice} Fight (wager list){n}{choice} Get wager kit{n}{choice} Cancel"
+  },
+  {
+   "label": "qa7_colo_kit",
+   "text": "Got Elixir x3, Fenix Down x3,{n}ThiefKnife, ValiantKnife{n}(vanilla wagers)."
+  },
+  {
+   "label": "qa6_battle_intro",
+   "text": "v0.6.1: TESTCUBE + TESTEYE{n}Custom graphics from bank FB.{n}Formation 240 (0 MP)."
+  },
+  {
+   "label": "qa6_battle_done",
+   "text": "TECH v0.6.1: battle returned{n}to the field correctly."
+  },
+  {
+   "label": "qa6_more",
+   "text": "TECH v0.6.1 QA: more tests{n}{choice} Dark Wind isolation{n}{choice} Magic Point test{n}{choice} Map/Annex tests"
+  },
+  {
+   "label": "qa6_iso",
+   "text": "Dark Wind test (left=vanilla):{n}{choice} Vanilla, clone, Vulture pal{n}{choice} Reference: 3x vanilla{n}{choice} Cancel"
+  },
+  {
+   "label": "qa6_mp",
+   "text": "QA: Ramuh added. Equip it first.{n}{choice} Fight 3-MP battle (241){n}{choice} Fight 0-MP battle (240){n}{choice} Not yet (go equip)"
+  },
+  {
+   "label": "qa6_other",
+   "text": "TECH v0.6.1 QA: other tests{n}{choice} Map test A (1A0){n}{choice} Celes Annex{n}{choice} Cancel"
+  },
+  {
+   "label": "qa6_prompt",
+   "text": "TECH v0.6.1 QA tests{n}{choice} Custom monster battle{n}{choice} More tests{n}{choice} Cancel"
+  },
+  {
+   "label": "qa9_prompt",
+   "text": "TECH v0.9 QA ACCESS{n}{choice} Consumables v0.9{n}{choice} Rare items v0.9{n}{choice} More..."
+  },
+  {
+   "label": "qa9_more",
+   "text": "TECH v0.9 QA ACCESS{n}{choice} Stress / save (v0.9){n}{choice} Equipment v0.8 (39 items){n}{choice} More..."
+  },
+  {
+   "label": "qa9_more2",
+   "text": "TECH v0.9 QA ACCESS{n}{choice} Older tests (v0.7 / v0.6){n}{choice} Save Point{n}{choice} Cancel"
+  },
+  {
+   "label": "qa9_cons",
+   "text": "Consumables v0.9 (ids 127-12E){n}{choice} Grant all 8 (x5 each){n}{choice} Consumable shops{n}{choice} More..."
+  },
+  {
+   "label": "qa9_cons2",
+   "text": "Consumables v0.9{n}{choice} Battle test (guards){n}{choice} Field-use setup (P1){n}{choice} More..."
+  },
+  {
+   "label": "qa9_cons3",
+   "text": "Consumables v0.9{n}{choice} Remove all 8 (x10 each){n}{choice} Party presets{n}{choice} Cancel"
+  },
+  {
+   "label": "qa9_shop",
+   "text": "Consumable shops{n}{choice} Rebuilt general store{n}{choice} Rebuilt late store{n}{choice} Get 20000 GP (QA)"
+  },
+  {
+   "label": "qa9_given",
+   "text": "Got 5 of each consumable:{n}Gaia Tonic, AetherFlask,{n}Phoenix Ash, Null Dust..."
+  },
+  {
+   "label": "qa9_removed",
+   "text": "Removed the consumables{n}from the inventory{n}(up to 10 of each)."
+  },
+  {
+   "label": "qa9_setup",
+   "text": "Field-use setup: party P1.{n}Terra: Poison/Blind/Imp,{n}Locke: wounded (KO)."
+  },
+  {
+   "label": "qa9_rare",
+   "text": "Rare items v0.9{n}{choice} Grant all 5 key items{n}{choice} Remove all 5{n}{choice} More..."
+  },
+  {
+   "label": "qa9_rare2",
+   "text": "Rare items v0.9{n}{choice} Toggle one key item{n}{choice} Check Triune Sigil{n}{choice} More..."
+  },
+  {
+   "label": "qa9_rare3",
+   "text": "Rare items v0.9 (capacity){n}{choice} Fill all 52 (3 pages){n}{choice} Clear QA fill{n}{choice} Cancel"
+  },
+  {
+   "label": "qa9_tog",
+   "text": "Toggle key item{n}{choice} Darill's Token{n}{choice} Concord Sigil{n}{choice} More..."
+  },
+  {
+   "label": "qa9_tog2",
+   "text": "Toggle key item{n}{choice} Cinder Sigil{n}{choice} Triune Sigil{n}{choice} Broken Seal"
+  },
+  {
+   "label": "qa9_rare_given",
+   "text": "Got the 5 key items.{n}Open the menu: Item, then Rare."
+  },
+  {
+   "label": "qa9_rare_removed",
+   "text": "Removed the 5 key items."
+  },
+  {
+   "label": "qa9_rare_on",
+   "text": "Key item given (it was{n}not owned)."
+  },
+  {
+   "label": "qa9_rare_off",
+   "text": "Key item removed (it was{n}owned)."
+  },
+  {
+   "label": "qa9_has_yes",
+   "text": "HAS RARE (Triune Sigil) = 1{n}(owned)."
+  },
+  {
+   "label": "qa9_has_no",
+   "text": "HAS RARE (Triune Sigil) = 0{n}(not owned)."
+  },
+  {
+   "label": "qa9_fill",
+   "text": "Rare list filled: 20 vanilla{n}+ 5 key items + 27 QA fillers{n}= 52 entries, 3 pages."
+  },
+  {
+   "label": "qa9_clear",
+   "text": "QA fillers and vanilla rare{n}items removed (the 5 key{n}items are kept)."
+  },
+  {
+   "label": "qa9_stress",
+   "text": "Stress / save (v0.9){n}{choice} Grant everything{n}{choice} Save Point{n}{choice} More..."
+  },
+  {
+   "label": "qa9_stress2",
+   "text": "Stress / save (v0.9){n}{choice} Battle (guards){n}{choice} Colosseum{n}{choice} Migration info"
+  },
+  {
+   "label": "qa9_all",
+   "text": "Got 39 equipment, 10 of each{n}consumable, the 5 key items{n}and 20000 GP."
+  },
+  {
+   "label": "qa9_migr",
+   "text": "Saves from Rev 1, v0.7.x and{n}v0.8 load in v0.9: items and{n}equipment are kept (no reset)."
+  }
+ ]
+}

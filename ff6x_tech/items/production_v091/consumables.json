@@ -1,0 +1,421 @@
+{
+ "_comment": "TECH v0.9.1 production consumables $127-$12E: locked effects of Master Design Bible v1.0 s18 (D-16 / D-17 exact values). fixed_hp / hybrid_element / shop_cap use the v0.9.1 extended-consumable engine path (asm/item_v091/v091.s); every other effect is vanilla ItemProp data.",
+ "items": [
+  {
+   "id": "127",
+   "code": "CN-01",
+   "symbol": "CN_GAIA_TONIC",
+   "locked_name": "Gaia Tonic",
+   "display_name": "Gaia Tonic",
+   "category": "consumable",
+   "desc": "Restores 1500 HP{n}and grants Regen",
+   "usable_battle": true,
+   "usable_field": true,
+   "targeting": "ONE_ALLY",
+   "effect": {
+    "restore_hp": true,
+    "power": 255,
+    "fixed_amount": 1500,
+    "sets_status": [
+     "REGEN"
+    ],
+    "undead_invert": true
+   },
+   "price": 2000,
+   "sellable": true,
+   "sold_in_shops": true,
+   "rarity": "common",
+   "anim_template": "E9",
+   "quantity": "stack 1-99 (vanilla rule)",
+   "steal": false,
+   "drop": false,
+   "metamorph": false,
+   "colosseum_wager": false,
+   "throwable": false,
+   "equippable": false,
+   "enemy_use": false,
+   "acquisition": {
+    "source_type": "shop",
+    "planned_source": "Rebuilt Mobliz shop (ext shop $80); also 'Seeds for Tomorrow' quest reward x3",
+    "future_event_symbol": "EXT_SHOP_REBUILT_MOBLIZ",
+    "conditions": "PREREQ_MOBLIZ_REBUILT",
+    "one_time": false,
+    "gp_cost": 2000,
+    "other_rewards": [
+     {
+      "source": "Seeds for Tomorrow",
+      "quantity": 3,
+      "future_event_symbol": "EV_REWARD_SEEDS_FOR_TOMORROW_GAIA_TONIC"
+     }
+    ]
+   },
+   "derived": [
+    "price 2000 (Potion 300 for 250 HP; single-target 1500 HP + Regen)",
+    "power byte 255 = nominal (the v0.9.1 fixed-heal path replaces the amount; 0 would skip the heal)",
+    "anim template Potion",
+    "Regen is set in battle; in the field menu only the HP is restored (vanilla field item code has no status-set)"
+   ],
+   "v091_changes": [
+    "D-16 / X0504-X0505: one ally, exactly 1500 HP, sets Regen",
+    "X0507: sold at Rebuilt Mobliz"
+   ]
+  },
+  {
+   "id": "128",
+   "code": "CN-02",
+   "symbol": "CN_AETHER_FLASK",
+   "locked_name": "Aether Flask",
+   "display_name": "AetherFlask",
+   "category": "consumable",
+   "desc": "Aether Flask{n}Restores 100 MP",
+   "usable_battle": true,
+   "usable_field": true,
+   "targeting": "ONE_ALLY",
+   "effect": {
+    "restore_mp": true,
+    "power": 100
+   },
+   "price": 2,
+   "sellable": false,
+   "sold_in_shops": false,
+   "rarity": "rare",
+   "anim_template": "EC",
+   "quantity": "stack 1-99 (vanilla rule)",
+   "steal": false,
+   "drop": false,
+   "metamorph": false,
+   "colosseum_wager": false,
+   "throwable": false,
+   "equippable": false,
+   "enemy_use": false,
+   "acquisition": {
+    "source_type": "event_chest",
+    "planned_source": "story chests / quest rewards (not sold)",
+    "future_event_symbol": "EV_CHEST_AETHER_FLASK",
+    "conditions": "PREREQ_TBD_ARC_DESIGN",
+    "one_time": true
+   },
+   "derived": [
+    "not sold (MP economy)",
+    "anim template Ether",
+    "display name AetherFlask (12-char field)",
+    "power 100 = exactly 100 MP (the Item command disables the damage variance; measured in battle and field)"
+   ],
+   "v091_changes": [
+    "X0516: MP 250 -> 100 (locked)"
+   ]
+  },
+  {
+   "id": "129",
+   "code": "CN-03",
+   "symbol": "CN_PHOENIX_ASH",
+   "locked_name": "Phoenix Ash",
+   "display_name": "Phoenix Ash",
+   "category": "consumable",
+   "desc": "Revives one ally{n}with half of max HP",
+   "usable_battle": true,
+   "usable_field": true,
+   "targeting": "ONE_ALLY",
+   "effect": {
+    "restore_hp": true,
+    "fraction": true,
+    "power": 8,
+    "removes_status": true,
+    "status": [
+     "DEAD"
+    ],
+    "undead_invert": true
+   },
+   "price": 2,
+   "sellable": false,
+   "sold_in_shops": false,
+   "rarity": "rare",
+   "anim_template": "F0",
+   "quantity": "stack 1-99 (vanilla rule)",
+   "steal": false,
+   "drop": false,
+   "metamorph": false,
+   "colosseum_wager": false,
+   "throwable": false,
+   "equippable": false,
+   "enemy_use": false,
+   "acquisition": {
+    "source_type": "boss_reward",
+    "planned_source": "arc boss rewards (not sold)",
+    "future_event_symbol": "EV_BOSS_PHOENIX_ASH",
+    "conditions": "PREREQ_TBD_ARC_DESIGN",
+    "one_time": true
+   },
+   "derived": [
+    "effect (revive with 8/16 = 50% HP; Fenix Down is 2/16)",
+    "not sold",
+    "anim template Fenix Down"
+   ],
+   "v091_changes": [
+    "unchanged (D-16: keep)"
+   ]
+  },
+  {
+   "id": "12A",
+   "code": "CN-04",
+   "symbol": "CN_NULL_DUST",
+   "locked_name": "Null Dust",
+   "display_name": "Null Dust",
+   "category": "consumable",
+   "desc": "Dispels one target{n}(battle only)",
+   "usable_battle": true,
+   "usable_field": false,
+   "targeting": "ONE_ENEMY",
+   "effect": {
+    "removes_status": true,
+    "status": [
+     "VANISH",
+     "IMAGE",
+     "BERSERK",
+     "REGEN",
+     "SLOW",
+     "HASTE",
+     "STOP",
+     "SHELL",
+     "SAFE",
+     "REFLECT",
+     "LIFE3",
+     "FLOAT"
+    ]
+   },
+   "price": 2,
+   "sellable": false,
+   "sold_in_shops": false,
+   "rarity": "uncommon",
+   "anim_template": "F5",
+   "quantity": "stack 1-99 (vanilla rule)",
+   "steal": false,
+   "drop": false,
+   "metamorph": false,
+   "colosseum_wager": false,
+   "throwable": false,
+   "equippable": false,
+   "enemy_use": false,
+   "acquisition": {
+    "source_type": "event_chest",
+    "planned_source": "story chests / arc rewards (not in any locked shop list)",
+    "future_event_symbol": "EV_CHEST_NULL_DUST",
+    "conditions": "PREREQ_TBD_ARC_DESIGN",
+    "one_time": true
+   },
+   "derived": [
+    "not sold (no locked shop lists it; Bible s19)",
+    "anim template Remedy",
+    "targeting: one target, enemy by default (vanilla Dispel targeting $41)"
+   ],
+   "v091_changes": [
+    "D-17 / X0540: exact vanilla Dispel removal set (spell $2C status bytes 10 14 FE 84)",
+    "X0543: removed from the shops"
+   ]
+  },
+  {
+   "id": "12B",
+   "code": "CN-05",
+   "symbol": "CN_IRON_RATION",
+   "locked_name": "Iron Ration",
+   "display_name": "Iron Ration",
+   "category": "consumable",
+   "desc": "Iron Ration{n}Restores 600 HP",
+   "usable_battle": true,
+   "usable_field": true,
+   "targeting": "ONE_ALLY",
+   "effect": {
+    "restore_hp": true,
+    "power": 255,
+    "fixed_amount": 600,
+    "undead_invert": true
+   },
+   "price": 300,
+   "sellable": true,
+   "sold_in_shops": true,
+   "rarity": "common",
+   "anim_template": "FE",
+   "quantity": "stack 1-99 (vanilla rule)",
+   "steal": false,
+   "drop": false,
+   "metamorph": false,
+   "colosseum_wager": false,
+   "throwable": false,
+   "equippable": false,
+   "enemy_use": false,
+   "acquisition": {
+    "source_type": "shop",
+    "planned_source": "Rebuilt Mobliz shop (ext shop $80)",
+    "future_event_symbol": "EXT_SHOP_REBUILT_MOBLIZ",
+    "conditions": "PREREQ_MOBLIZ_REBUILT",
+    "one_time": false,
+    "gp_cost": 300
+   },
+   "derived": [
+    "price 300 ('cheap': the Potion price, 600 HP)",
+    "power byte 255 = nominal (fixed-heal path)",
+    "anim template Dried Meat"
+   ],
+   "v091_changes": [
+    "D-16 / X0552: exactly 600 HP; the unlocked Poison cure removed",
+    "X0555: Rebuilt Mobliz"
+   ]
+  },
+  {
+   "id": "12C",
+   "code": "CN-06",
+   "symbol": "CN_REMEDY_PLUS",
+   "locked_name": "Remedy+",
+   "display_name": "Remedy+",
+   "category": "consumable",
+   "desc": "Remedy+{n}Remedy and cures Zombie",
+   "usable_battle": true,
+   "usable_field": true,
+   "targeting": "ONE_ALLY",
+   "effect": {
+    "removes_status": true,
+    "status": [
+     "BLIND",
+     "POISON",
+     "IMP",
+     "PETRIFY",
+     "SILENCE",
+     "SAP",
+     "ZOMBIE"
+    ]
+   },
+   "price": 2,
+   "sellable": false,
+   "sold_in_shops": false,
+   "rarity": "rare",
+   "anim_template": "F5",
+   "quantity": "stack 1-99 (vanilla rule)",
+   "steal": false,
+   "drop": false,
+   "metamorph": false,
+   "colosseum_wager": false,
+   "throwable": false,
+   "equippable": false,
+   "enemy_use": false,
+   "acquisition": {
+    "source_type": "event_chest",
+    "planned_source": "rare find / arc rewards (not sold)",
+    "future_event_symbol": "EV_CHEST_REMEDY_PLUS",
+    "conditions": "PREREQ_TBD_ARC_DESIGN",
+    "one_time": true
+   },
+   "derived": [
+    "anim template Remedy",
+    "not sold"
+   ],
+   "v091_changes": [
+    "X0564: vanilla Remedy set (rec bytes 65 48) + Zombie",
+    "X0567 / X0570: rare, not sold"
+   ]
+  },
+  {
+   "id": "12D",
+   "code": "CN-07",
+   "symbol": "CN_BEACON_FLARE",
+   "locked_name": "Beacon Flare",
+   "display_name": "BeaconFlare",
+   "category": "consumable",
+   "desc": "Fire damage to all foes{n}and reveals the hidden",
+   "usable_battle": true,
+   "usable_field": false,
+   "targeting": "ALL_ENEMIES",
+   "effect": {
+    "power": 255,
+    "element": [
+     "FIRE"
+    ],
+    "removes_status": true,
+    "status": [
+     "VANISH"
+    ]
+   },
+   "price": 2,
+   "sellable": false,
+   "sold_in_shops": false,
+   "rarity": "rare",
+   "anim_template": "SPELL:FIRE_2",
+   "quantity": "stack 1-99 (vanilla rule)",
+   "steal": false,
+   "drop": false,
+   "metamorph": false,
+   "colosseum_wager": false,
+   "throwable": false,
+   "equippable": false,
+   "enemy_use": false,
+   "acquisition": {
+    "source_type": "quest_reward",
+    "planned_source": "Beacon quest (not sold)",
+    "future_event_symbol": "EV_REWARD_BEACON_FLARE",
+    "conditions": "PREREQ_BEACON_QUEST",
+    "one_time": true
+   },
+   "derived": [
+    "power 255 (no level scaling; halved over several targets)",
+    "not sold",
+    "anim: vanilla Fire 2 spell animation",
+    "display name BeaconFlare (12-char field)",
+    "'invisible' = VANISH (D-17; Image is not removed)"
+   ],
+   "v091_changes": [
+    "D-17 / X0576: Fire damage to all + removes VANISH in the same item action"
+   ]
+  },
+  {
+   "id": "12E",
+   "code": "CN-08",
+   "symbol": "CN_MAGITEK_CELL",
+   "locked_name": "Magitek Cell",
+   "display_name": "MagitekCell",
+   "category": "consumable",
+   "desc": "Magitek Cell{n}Lightning + raw tech damage",
+   "usable_battle": true,
+   "usable_field": false,
+   "targeting": "ONE_ENEMY",
+   "effect": {
+    "power": 255,
+    "element": [
+     "LIGHTNING"
+    ],
+    "hybrid_element": "LIGHTNING",
+    "fixed_amount": 800
+   },
+   "price": 1500,
+   "sellable": true,
+   "sold_in_shops": true,
+   "rarity": "rare",
+   "anim_template": "SPELL:BOLT_BEAM",
+   "quantity": "stack 1-99 (vanilla rule)",
+   "steal": false,
+   "drop": false,
+   "metamorph": false,
+   "colosseum_wager": false,
+   "throwable": false,
+   "equippable": false,
+   "enemy_use": false,
+   "acquisition": {
+    "source_type": "shop",
+    "planned_source": "Figaro Foundry shop after the Celes arc (ext shop $84 = Foundry stock once EXP_CELES_DONE is set; $83 before)",
+    "future_event_symbol": "EXT_SHOP_FIGARO_FOUNDRY_POST_CELES",
+    "conditions": "EXP_CELES_DONE",
+    "one_time": false,
+    "gp_cost": 1500
+   },
+   "derived": [
+    "total damage 800 before the split (fixed, no variance): 400 Lightning + 400 non-elemental; Lightning-weak 1200, Lightning-null 400, Lightning-absorb 0 (400 - 400); ignores M.Def like every item; conservative vs Bolt 3 / Drill in the World of Ruin",
+    "price 1500 (Figaro tool shops use price modifier 6: half price when Edgar leads -> 750)",
+    "shop cap 3: owned (inventory) + bought <= 3",
+    "anim: vanilla Bolt Beam (Magitek) animation",
+    "not a spell: Item command, no MP, not reflectable / Runic-absorbable (vanilla item rules)"
+   ],
+   "shop_cap": 3,
+   "v091_changes": [
+    "D-17 / X0588-X0593: one enemy; Lightning + non-elemental halves in one item action; sold only at the Figaro Foundry after EXP_CELES_DONE; hold/buy at most 3"
+   ]
+  }
+ ]
+}

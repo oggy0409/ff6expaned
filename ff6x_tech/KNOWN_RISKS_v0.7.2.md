@@ -1,0 +1,27 @@
+# TECH v0.7.2 — known risks and limitations
+
+Carried over from v0.7.1 unchanged (the engine is byte-identical); R16-R17 are new in v0.7.2.
+
+| # | Risk / limitation | Severity | Why / mitigation |
+|---|---|---|---|
+| R1 | **Downgrade is one-way.** A v0.7.1 save loaded in an older FF6X build or in Rev 1 shows extended items as their low-byte vanilla aliases (QA Blade13D → Chocobo Brsh, QA Mail 13E → DaVinci Brsh, QA Charm13F → Magical Brsh). | Medium (QA saves only today) | Older ROMs ignore `$1CF8-$1D27`. Do not load v0.7.1 saves in older builds. |
+| R2 | A QA save loaded in the **production** ROM loses the QA items (removed, not truncated). | By design | Production defines no extended ids; `XSanitize` removes undefined ids (`SAVE_COMPATIBILITY_v0.7.1.md`, P1). |
+| R3 | `TAKE_EXT_ITEM` ($67) removes from the inventory only; an equipped extended item is not taken. `HAS_EXT_ITEM` ($68) counts inventory **and** equipment of all 16 records. | Low | Event scripts that must remove an equipped item should use `$8D` first. |
+| R4 | `GIVE_EXT_ITEM` ($66) with a full inventory (no stack of that id, no empty slot) gives nothing, silently; stacks cap at 99. | Low | Same as vanilla `$80` behaviour with a full inventory. |
+| R5 | In battle, the hand holding an extended item cannot be **replaced** from the inventory (refused like a vanilla refusal). R-hand ↔ L-hand exchange is allowed (bits follow). | Low | The battle write-back stores low bytes only; the guard prevents truncation (B3, B3b). |
+| R6 | Battle end: a vanilla item that the battle placed at an extended-backed position is re-homed (merge, else first free vanilla slot). With all 256 slots occupied it would be dropped. | Very low | Needs 256 distinct occupied slots. |
+| R7 | Dialogue text cannot print extended item names (the text item-name command takes a 1-byte id). | Low | Use literal text in dialogue for extended items. |
+| R8 | Extended **weapons/shields** must not be equippable by Gau or Umaro. | Rule | Rage (C2:0610) overwrites both hand ids; the builder refuses such definitions (selftest). |
+| R9 | Item-list text colour of an extended item is computed from its alias's properties (always grey: aliases `$00-$3F` are weapons). | None today | Extended consumables are out of scope; they would need a hook at C3:8056. |
+| R10 | **Inherited Rev 1 behaviour:** in battle, a hand-first exchange followed by leaving the Item menu with B writes the new hand to `$161F` but restores the battle list (net effect at battle end: the old hand item disappears, the new one is duplicated). | Vanilla bug, unchanged | Differential B3c: v0.7.1 and the clean Rev 1 ROM end with identical bytes; extended slots are preserved. Not fixed (vanilla behaviour must stay unchanged). |
+| R11 | Extended spear flag (Jump ×2) has no runtime QA item. | Low | Statically wired (I531/I532, `XExtFlags` bit 1); the Jump animation path is runtime-tested (F4). |
+| R12 | Battle-start timing: the extra C2 work during battle setup (UpdateEquip / hands / inventory post-pass, all with zero-bitmap fast paths) makes **26 of 576** vanilla formations reach the same battle screen **one frame later** than v0.6.0 (screens identical when sampled one frame later; engine data 576/576 identical). Data/graphics are unaffected; RNG-driven ATB order can differ from v0.6.0 for the same input timing. | Info | Measured in `REGRESSION_REPORT_v0.7.1.md` §3. Only removing all C2 hooks restores the old frame. |
+| R13 | `$1E3E` / `$1E3F` (transient scratch) are saved with whatever value they hold. | None | Always written before read; never read across a load. |
+| R14 | Extended relics: special-effect bits of the base relic are cleared for the QA charm (`clear_effects`); special relic ASM is out of scope. | Info | QA relic tests stat/evade fields only. |
+| R15 | Emulator evidence is snes9x (stable-retro) only. | Info | USER RUNTIME QA PENDING on the user's emulator/hardware. |
+| R16 | **Event `$80` (give item) timing:** the find-same-item loop reads each slot through the extended-slot mask (I210), so a give that scans the whole inventory takes up to one frame longer than in Rev 1 (measured: four new items, 9 frames instead of 5). Items, quantities and order are identical. Because the game clock keeps running, the frame count at later RNG seeds (e.g. a battle's `$BE` seed from `$021E`) can differ from Rev 1 for the same button timing, the same way as player timing does. | Info | Timing only; any frame-exact comparison with Rev 1 must align the clock (`tools/emu_colosseum.py` does). |
+| R17 | QA harness "Colosseum (full battle)" calls the vanilla receptionist branch CB:78D9. With event switch `$1EF` set (World of Ruin, Shadow-at-the-Colosseum state) that branch runs the Shadow scene, which expects the Colosseum map. | QA only | `$1EF` is 0 in every New Game; the harness is item-tech only and documented for New Game use. |
+
+Test-tool notes (no ROM change): `tools/emu_colosseum.py` (v0.7.2) aligns the game clock before each Colosseum entry (R16) and holds the opponent at 1 HP for the "win" combinations (POKE, identical in every ROM); `tools/emu_celes_suite.py talk()` now retries across the 4-frame object-update phase
+(reproduced identically on v0.6.0 and v0.7.1 from one RAM state); `tools/emu_monster_diff.py` / `emu_map_diff.py`
+accept `FF6X_XINIT=1` to apply the v0.7.1 New Game metadata init to a start state made on the reference ROM.

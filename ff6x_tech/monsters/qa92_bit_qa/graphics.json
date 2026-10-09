@@ -1,0 +1,5 @@
+{
+ "_comment": "vanilla graphics placeholder (D-14): Spit Fire $0E3 (small Magitek drone)",
+ "graphics_from_vanilla_monster": "0x0E3",
+ "overlap_from_vanilla_monster": "0x0E3"
+}

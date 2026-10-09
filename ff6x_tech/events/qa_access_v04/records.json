@@ -1,0 +1,16 @@
+{
+ "_comment": "QA HARNESS ONLY cross-map records and overrides (target map-tech).",
+ "triggers": [
+  {"map": "013", "x": 34, "y": 43, "event": "QaAccess4", "purpose": "QA access tile (same tile as v0.3.1)"}
+ ],
+ "short_entrance_overrides": [
+  {"map": "0C7", "src": [16, 29], "dest_map": "013", "dest": [35, 43], "facing": "LEFT", "flags": [],
+   "purpose": "QA: Annex exit returns next to the QA tile instead of the Falcon (as v0.3.1)"}
+ ],
+ "byte_overrides": [
+  {"label": "EvBattleDoor_Fight", "offset": 3, "expect": "4D 28 3F", "new": "4D 01 3F",
+   "patch_id": "Q403_QA_BATTLE_GROUP", "owner": "T400_ANNEX_EVENTS",
+   "consumer": "event cmd $4D in EvBattleDoor_Fight (EventBattleGroup CF:5000 index)",
+   "reason": "QA: group $28 -> $01 (vanilla opening Guard battle) so a New Game party can win (same as accepted v0.3.1 harness)"}
+ ]
+}

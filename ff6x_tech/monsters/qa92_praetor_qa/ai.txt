@@ -1,0 +1,38 @@
+# Magitek Praetor (QA enabler, TECH v0.9.2). Locked AI rules (CELES_PRODUCTION_SPEC_v1.0 s7.2):
+#  1 opening Magitek Barrier (Safe + Shell)   2 rotation Tek Laser / TekMissile / physical
+#  3 at 70% HP: launches the 2 Suppressor Bits (hidden formation slots 1-2, shown by AI)
+#  4 at 40% HP: Barrier overload - Defense 165 -> 80 (DERIVED), Haste, overload palette (placeholder)
+#  5 every 3rd qualifying Lightning hit: Grounding Field - Lightning null for 3 Praetor turns, then weak again
+# Battle var 2 = phase switches (bit0 barrier done, bit1 Bits shown, bit2 overload); vars 0 / 1 = Grounding Field
+# (lightning hit count / turns left) - asm/celes_v092. Vars 0-3 are per-battle (zeroed at battle start, never saved;
+# vars 4-23 are the SRAM-saved global battle variables and are not used). Nothing survives the battle.
+# ---- main section (every Praetor turn; every block ends with the Grounding Field tick)
+if SWITCH_CLR 2 0
+misc SET_STATUS 22          # Safe
+misc SET_STATUS 21          # Shell
+set_switch 2 0
+misc GROUNDING_TICK $04
+endif
+random $B5 $8A BATTLE       # Tek Laser / TekMissile / Battle
+misc GROUNDING_TICK $04
+end
+# ---- counter section (after every action that hit the Praetor)
+if DEAD 0 0
+entry $0C 1 $FF             # boss death: every monster (the hidden Bits too)
+endif
+if LIGHTNING_COUNT $04 3    # counts the hit (Lightning, field down); 3rd -> field up for 3 turns; never true
+endif
+if HP_PCT_LE 40 0
+if SWITCH_CLR 2 2
+misc OVERLOAD 80            # Defense := 80, overload palette
+misc SET_STATUS 19          # Haste
+set_switch 2 2
+entry $03 2 $06             # (also launches the Bits if a single hit crossed 70% and 40%)
+set_switch 2 1
+endif
+if HP_PCT_LE 70 0
+if SWITCH_CLR 2 1
+entry $03 2 $06             # show monsters 2 + 3 (the Suppressor Bits), side entry
+set_switch 2 1
+endif
+end

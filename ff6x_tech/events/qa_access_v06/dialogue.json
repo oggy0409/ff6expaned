@@ -1,0 +1,33 @@
+{
+ "_comment": "QA HARNESS ONLY. Strings in QA_HARNESS (FF:0800+).",
+ "messages": [
+  {
+   "label": "qa6_prompt",
+   "text": "TECH v0.6 QA ACCESS{n}{choice} Custom monster battle{n}{choice} More tests{n}{choice} No (Save Point)"
+  },
+  {
+   "label": "qa6_battle_intro",
+   "text": "TECH v0.6: TESTCUBE + TESTEYE{n}Custom graphics from bank FB.{n}Formation 240 (0 MP)."
+  },
+  {
+   "label": "qa6_battle_done",
+   "text": "TECH v0.6: battle returned{n}to the field correctly."
+  },
+  {
+   "label": "qa6_more",
+   "text": "TECH v0.6 QA: more tests{n}{choice} Dark Wind isolation{n}{choice} Magic Point test{n}{choice} Map/Annex tests"
+  },
+  {
+   "label": "qa6_iso",
+   "text": "Right Dark Wind = test copy:{n}{choice} Exact clone (pal 046){n}{choice} Vulture palette (04A){n}{choice} Cancel"
+  },
+  {
+   "label": "qa6_mp",
+   "text": "QA: Ramuh added. Equip it first.{n}{choice} Fight 3-MP battle (241){n}{choice} Fight 0-MP battle (240){n}{choice} Not yet (go equip)"
+  },
+  {
+   "label": "qa6_other",
+   "text": "TECH v0.6 QA: other tests{n}{choice} Map test A (1A0){n}{choice} Celes Annex{n}{choice} Cancel"
+  }
+ ]
+}

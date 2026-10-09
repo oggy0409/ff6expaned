@@ -1,0 +1,875 @@
+{
+ "tables": {
+  "TREASURE": [
+   {
+    "snes": "C015DD",
+    "bytes": "BF F6 82 ED",
+    "operand": "ED82F6",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/field/scroll.asm:20",
+    "text": "lda     f:TreasurePropPtrs+2,x"
+   },
+   {
+    "snes": "C015E3",
+    "bytes": "BF F4 82 ED",
+    "operand": "ED82F4",
+    "base": "ptr",
+    "disp": 0,
+    "src": "src/field/scroll.asm:22",
+    "text": "lda     f:TreasurePropPtrs,x"
+   },
+   {
+    "snes": "C015F1",
+    "bytes": "BF 34 86 ED",
+    "operand": "ED8634",
+    "base": "data",
+    "disp": 0,
+    "src": "src/field/scroll.asm:28",
+    "text": "lda     f:TreasureProp::PosX,x"
+   },
+   {
+    "snes": "C015F7",
+    "bytes": "BF 35 86 ED",
+    "operand": "ED8635",
+    "base": "data",
+    "disp": 1,
+    "src": "src/field/scroll.asm:30",
+    "text": "lda     f:TreasureProp::PosY,x"
+   },
+   {
+    "snes": "C015FE",
+    "bytes": "BF 36 86 ED",
+    "operand": "ED8636",
+    "base": "data",
+    "disp": 2,
+    "src": "src/field/scroll.asm:33",
+    "text": "lda     f:TreasureProp::Switch,x"
+   },
+   {
+    "snes": "C01609",
+    "bytes": "BF 36 86 ED",
+    "operand": "ED8636",
+    "base": "data",
+    "disp": 2,
+    "src": "src/field/scroll.asm:37",
+    "text": "lda     f:TreasureProp::Switch,x"
+   },
+   {
+    "snes": "C04BDA",
+    "bytes": "BF F6 82 ED",
+    "operand": "ED82F6",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/field/player.asm:757",
+    "text": "lda     f:TreasurePropPtrs+2,x   ; pointer to treasure data"
+   },
+   {
+    "snes": "C04BE0",
+    "bytes": "BF F4 82 ED",
+    "operand": "ED82F4",
+    "base": "ptr",
+    "disp": 0,
+    "src": "src/field/player.asm:759",
+    "text": "lda     f:TreasurePropPtrs,x"
+   },
+   {
+    "snes": "C04BEC",
+    "bytes": "BF 34 86 ED",
+    "operand": "ED8634",
+    "base": "data",
+    "disp": 0,
+    "src": "src/field/player.asm:764",
+    "text": "@4bec:  lda     f:TreasureProp::PosX,x   ; x position"
+   },
+   {
+    "snes": "C04BF4",
+    "bytes": "BF 35 86 ED",
+    "operand": "ED8635",
+    "base": "data",
+    "disp": 1,
+    "src": "src/field/player.asm:767",
+    "text": "lda     f:TreasureProp::PosY,x   ; y position"
+   },
+   {
+    "snes": "C04C08",
+    "bytes": "BF 38 86 ED",
+    "operand": "ED8638",
+    "base": "data",
+    "disp": 4,
+    "src": "src/field/player.asm:777",
+    "text": "lda     f:TreasureProp::Contents,x  ; treasure contents"
+   },
+   {
+    "snes": "C04C0E",
+    "bytes": "BF 36 86 ED",
+    "operand": "ED8636",
+    "base": "data",
+    "disp": 2,
+    "src": "src/field/player.asm:779",
+    "text": "lda     f:TreasureProp::Switch,x   ; treasure event bit and type"
+   }
+  ],
+  "LONG_ENTRANCES": [
+   {
+    "snes": "C018EA",
+    "bytes": "BF 82 F4 ED",
+    "operand": "EDF482",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/field/entrance.asm:56",
+    "text": "lda     f:LongEntrancePtrs+2,x"
+   },
+   {
+    "snes": "C018F0",
+    "bytes": "BF 80 F4 ED",
+    "operand": "EDF480",
+    "base": "ptr",
+    "disp": 0,
+    "src": "src/field/entrance.asm:58",
+    "text": "lda     f:LongEntrancePtrs,x"
+   },
+   {
+    "snes": "C01903",
+    "bytes": "BF 82 F4 ED",
+    "operand": "EDF482",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/field/entrance.asm:65",
+    "text": "lda     f:LongEntrance::Length,x"
+   },
+   {
+    "snes": "C0190B",
+    "bytes": "BF 81 F4 ED",
+    "operand": "EDF481",
+    "base": "ptr",
+    "disp": 1,
+    "src": "src/field/entrance.asm:71",
+    "text": "lda     f:LongEntrance::SrcY,x"
+   },
+   {
+    "snes": "C01916",
+    "bytes": "FF 80 F4 ED",
+    "operand": "EDF480",
+    "base": "ptr",
+    "disp": 0,
+    "src": "src/field/entrance.asm:76",
+    "text": "sbc     f:LongEntrance::SrcX,x"
+   },
+   {
+    "snes": "C0191E",
+    "bytes": "BF 80 F4 ED",
+    "operand": "EDF480",
+    "base": "ptr",
+    "disp": 0,
+    "src": "src/field/entrance.asm:79",
+    "text": "lda     f:LongEntrance::SrcX,x"
+   },
+   {
+    "snes": "C0192F",
+    "bytes": "BF 80 F4 ED",
+    "operand": "EDF480",
+    "base": "ptr",
+    "disp": 0,
+    "src": "src/field/entrance.asm:90",
+    "text": "lda     f:LongEntrance::SrcX,x"
+   },
+   {
+    "snes": "C0193A",
+    "bytes": "FF 81 F4 ED",
+    "operand": "EDF481",
+    "base": "ptr",
+    "disp": 1,
+    "src": "src/field/entrance.asm:95",
+    "text": "sbc     f:LongEntrance::SrcY,x"
+   },
+   {
+    "snes": "C01942",
+    "bytes": "BF 81 F4 ED",
+    "operand": "EDF481",
+    "base": "ptr",
+    "disp": 1,
+    "src": "src/field/entrance.asm:98",
+    "text": "lda     f:LongEntrance::SrcY,x"
+   },
+   {
+    "snes": "C01963",
+    "bytes": "BF 83 F4 ED",
+    "operand": "EDF483",
+    "base": "ptr",
+    "disp": 3,
+    "src": "src/field/entrance.asm:117",
+    "text": "lda     f:LongEntrance::Map,x"
+   },
+   {
+    "snes": "C0196F",
+    "bytes": "BF 83 F4 ED",
+    "operand": "EDF483",
+    "base": "ptr",
+    "disp": 3,
+    "src": "src/field/entrance.asm:121",
+    "text": ":       lda     f:LongEntrance::Map,x"
+   },
+   {
+    "snes": "C0197B",
+    "bytes": "BF 83 F4 ED",
+    "operand": "EDF483",
+    "base": "ptr",
+    "disp": 3,
+    "src": "src/field/entrance.asm:125",
+    "text": "lda     f:LongEntrance::Map,x"
+   },
+   {
+    "snes": "C0198A",
+    "bytes": "BF 85 F4 ED",
+    "operand": "EDF485",
+    "base": "ptr",
+    "disp": 5,
+    "src": "src/field/entrance.asm:132",
+    "text": "lda     f:LongEntrance::DestPos,x"
+   },
+   {
+    "snes": "C0199F",
+    "bytes": "BF 85 F4 ED",
+    "operand": "EDF485",
+    "base": "ptr",
+    "disp": 5,
+    "src": "src/field/entrance.asm:142",
+    "text": ":       lda     f:LongEntrance::DestPos,x  ; destination xy position"
+   },
+   {
+    "snes": "C019A9",
+    "bytes": "BF 84 F4 ED",
+    "operand": "EDF484",
+    "base": "ptr",
+    "disp": 4,
+    "src": "src/field/entrance.asm:145",
+    "text": "lda     f:LongEntrance::Flags,x  ; facing direction"
+   },
+   {
+    "snes": "C019B6",
+    "bytes": "BF 84 F4 ED",
+    "operand": "EDF484",
+    "base": "ptr",
+    "disp": 4,
+    "src": "src/field/entrance.asm:149",
+    "text": "lda     f:LongEntrance::Flags,x  ; show map name"
+   },
+   {
+    "snes": "C019C4",
+    "bytes": "BF 84 F4 ED",
+    "operand": "EDF484",
+    "base": "ptr",
+    "disp": 4,
+    "src": "src/field/entrance.asm:154",
+    "text": "lda     f:LongEntrance::Flags,x"
+   },
+   {
+    "snes": "C019E5",
+    "bytes": "BF 83 F4 ED",
+    "operand": "EDF483",
+    "base": "ptr",
+    "disp": 3,
+    "src": "src/field/entrance.asm:170",
+    "text": "lda     f:LongEntrance::Map,x"
+   },
+   {
+    "snes": "C01A14",
+    "bytes": "BF 84 F4 ED",
+    "operand": "EDF484",
+    "base": "ptr",
+    "disp": 4,
+    "src": "src/field/entrance.asm:191",
+    "text": "lda     f:LongEntrance::Flags,x"
+   }
+  ],
+  "SHORT_ENTRANCES": [
+   {
+    "snes": "C01A7D",
+    "bytes": "BF 02 BB DF",
+    "operand": "DFBB02",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/field/entrance.asm:277",
+    "text": "lda     f:ShortEntrancePtrs+2,x"
+   },
+   {
+    "snes": "C01A83",
+    "bytes": "BF 00 BB DF",
+    "operand": "DFBB00",
+    "base": "ptr",
+    "disp": 0,
+    "src": "src/field/entrance.asm:279",
+    "text": "lda     f:ShortEntrancePtrs,x"
+   },
+   {
+    "snes": "C01A8F",
+    "bytes": "BF 00 BB DF",
+    "operand": "DFBB00",
+    "base": "ptr",
+    "disp": 0,
+    "src": "src/field/entrance.asm:283",
+    "text": "Loop:   lda     f:ShortEntrance::SrcPos,x   ; check xy position"
+   },
+   {
+    "snes": "C01AAA",
+    "bytes": "BF 02 BB DF",
+    "operand": "DFBB02",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/field/entrance.asm:297",
+    "text": "lda     f:ShortEntrance::Map,x"
+   },
+   {
+    "snes": "C01AB6",
+    "bytes": "BF 02 BB DF",
+    "operand": "DFBB02",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/field/entrance.asm:301",
+    "text": ":       lda     f:ShortEntrance::Map,x"
+   },
+   {
+    "snes": "C01AC2",
+    "bytes": "BF 02 BB DF",
+    "operand": "DFBB02",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/field/entrance.asm:305",
+    "text": "lda     f:ShortEntrance::Map,x"
+   },
+   {
+    "snes": "C01AD1",
+    "bytes": "BF 04 BB DF",
+    "operand": "DFBB04",
+    "base": "ptr",
+    "disp": 4,
+    "src": "src/field/entrance.asm:310",
+    "text": "lda     f:ShortEntrance::DestPos,x"
+   },
+   {
+    "snes": "C01AE6",
+    "bytes": "BF 04 BB DF",
+    "operand": "DFBB04",
+    "base": "ptr",
+    "disp": 4,
+    "src": "src/field/entrance.asm:318",
+    "text": ":       lda     f:ShortEntrance::DestPos,x"
+   },
+   {
+    "snes": "C01AF0",
+    "bytes": "BF 03 BB DF",
+    "operand": "DFBB03",
+    "base": "ptr",
+    "disp": 3,
+    "src": "src/field/entrance.asm:321",
+    "text": "lda     f:ShortEntrance::Flags,x   ; facing direction"
+   },
+   {
+    "snes": "C01AFD",
+    "bytes": "BF 03 BB DF",
+    "operand": "DFBB03",
+    "base": "ptr",
+    "disp": 3,
+    "src": "src/field/entrance.asm:325",
+    "text": "lda     f:ShortEntrance::Flags,x   ; show map name"
+   },
+   {
+    "snes": "C01B0B",
+    "bytes": "BF 03 BB DF",
+    "operand": "DFBB03",
+    "base": "ptr",
+    "disp": 3,
+    "src": "src/field/entrance.asm:330",
+    "text": "lda     f:ShortEntrance::Flags,x"
+   },
+   {
+    "snes": "C01B2C",
+    "bytes": "BF 02 BB DF",
+    "operand": "DFBB02",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/field/entrance.asm:346",
+    "text": "lda     f:ShortEntrance::Map,x"
+   },
+   {
+    "snes": "C01B5E",
+    "bytes": "BF 03 BB DF",
+    "operand": "DFBB03",
+    "base": "ptr",
+    "disp": 3,
+    "src": "src/field/entrance.asm:364",
+    "text": "lda     f:ShortEntrance::Flags,x"
+   },
+   {
+    "snes": "EE20E9",
+    "bytes": "BF 00 BB DF",
+    "operand": "DFBB00",
+    "base": "ptr",
+    "disp": 0,
+    "src": "src/world/move.asm:1254",
+    "text": "lda     f:ShortEntrancePtrs,x"
+   },
+   {
+    "snes": "EE20EF",
+    "bytes": "BF 02 BB DF",
+    "operand": "DFBB02",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/world/move.asm:1256",
+    "text": "lda     f:ShortEntrancePtrs+2,x"
+   },
+   {
+    "snes": "EE20FE",
+    "bytes": "BF 00 BB DF",
+    "operand": "DFBB00",
+    "base": "ptr",
+    "disp": 0,
+    "src": "src/world/move.asm:1263",
+    "text": "@20fe:  lda     f:ShortEntrancePtrs,x"
+   },
+   {
+    "snes": "EE2106",
+    "bytes": "BF 01 BB DF",
+    "operand": "DFBB01",
+    "base": "ptr",
+    "disp": 1,
+    "src": "src/world/move.asm:1266",
+    "text": "lda     f:ShortEntrancePtrs+1,x"
+   },
+   {
+    "snes": "EE2110",
+    "bytes": "BF 02 BB DF",
+    "operand": "DFBB02",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/world/move.asm:1270",
+    "text": "lda     f:ShortEntrancePtrs+2,x"
+   },
+   {
+    "snes": "EE213C",
+    "bytes": "BF 04 BB DF",
+    "operand": "DFBB04",
+    "base": "ptr",
+    "disp": 4,
+    "src": "src/world/move.asm:1285",
+    "text": "@213c:  lda     f:ShortEntrancePtrs+4,x"
+   }
+  ],
+  "MAP_PROPS": [
+   {
+    "snes": "C01CBF",
+    "bytes": "BF 00 8F ED",
+    "operand": "ED8F00",
+    "base": "data",
+    "disp": 0,
+    "src": "src/field/map.asm:154",
+    "text": "@1cbf:  lda     f:MapProp,x   ; map properties"
+   }
+  ],
+  "SUBTILEMAP_PTRS": [
+   {
+    "snes": "C02892",
+    "bytes": "BF 90 CD D9",
+    "operand": "D9CD90",
+    "base": "ptr",
+    "disp": 0,
+    "src": "src/field/map.asm:1764",
+    "text": "lda     f:SubTilemapPtrs,x"
+   },
+   {
+    "snes": "C0289F",
+    "bytes": "BF 92 CD D9",
+    "operand": "D9CD92",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/field/map.asm:1769",
+    "text": "lda     f:SubTilemapPtrs+2,x"
+   },
+   {
+    "snes": "C028E6",
+    "bytes": "BF 90 CD D9",
+    "operand": "D9CD90",
+    "base": "ptr",
+    "disp": 0,
+    "src": "src/field/map.asm:1800",
+    "text": "lda     f:SubTilemapPtrs,x"
+   },
+   {
+    "snes": "C028F3",
+    "bytes": "BF 92 CD D9",
+    "operand": "D9CD92",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/field/map.asm:1805",
+    "text": "lda     f:SubTilemapPtrs+2,x"
+   },
+   {
+    "snes": "C0293C",
+    "bytes": "BF 90 CD D9",
+    "operand": "D9CD90",
+    "base": "ptr",
+    "disp": 0,
+    "src": "src/field/map.asm:1836",
+    "text": "lda     f:SubTilemapPtrs,x"
+   },
+   {
+    "snes": "C02949",
+    "bytes": "BF 92 CD D9",
+    "operand": "D9CD92",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/field/map.asm:1841",
+    "text": "lda     f:SubTilemapPtrs+2,x"
+   }
+  ],
+  "NPC_PROPS": [
+   {
+    "snes": "C052BC",
+    "bytes": "BF 12 1A C4",
+    "operand": "C41A12",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/field/obj.asm:255",
+    "text": "lda     f:NPCPropPtrs+2,x       ; pointer to next map's npc data"
+   },
+   {
+    "snes": "C052C2",
+    "bytes": "BF 10 1A C4",
+    "operand": "C41A10",
+    "base": "ptr",
+    "disp": 0,
+    "src": "src/field/obj.asm:257",
+    "text": "lda     f:NPCPropPtrs,x         ; pointer to this map's npc data"
+   },
+   {
+    "snes": "C052D4",
+    "bytes": "BF 10 1A C4",
+    "operand": "C41A10",
+    "base": "ptr",
+    "disp": 0,
+    "src": "src/field/obj.asm:263",
+    "text": "Loop:   lda     f:NPCProp::EventPtr,x"
+   },
+   {
+    "snes": "C052DB",
+    "bytes": "BF 11 1A C4",
+    "operand": "C41A11",
+    "base": "ptr",
+    "disp": 1,
+    "src": "src/field/obj.asm:265",
+    "text": "lda     f:NPCProp::EventPtr+1,x"
+   },
+   {
+    "snes": "C052E2",
+    "bytes": "BF 12 1A C4",
+    "operand": "C41A12",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/field/obj.asm:267",
+    "text": "lda     f:NPCProp::EventPtr+2,x"
+   },
+   {
+    "snes": "C052EB",
+    "bytes": "BF 12 1A C4",
+    "operand": "C41A12",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/field/obj.asm:270",
+    "text": "lda     f:NPCProp::Pal,x         ; copy color palette"
+   },
+   {
+    "snes": "C052F8",
+    "bytes": "BF 12 1A C4",
+    "operand": "C41A12",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/field/obj.asm:275",
+    "text": "lda     f:NPCProp::Scroll,x         ; scroll with bg2"
+   },
+   {
+    "snes": "C05305",
+    "bytes": "BF 12 1A C4",
+    "operand": "C41A12",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/field/obj.asm:280",
+    "text": "lda     f:NPCProp::Switch,x"
+   },
+   {
+    "snes": "C05321",
+    "bytes": "BF 14 1A C4",
+    "operand": "C41A14",
+    "base": "ptr",
+    "disp": 4,
+    "src": "src/field/obj.asm:292",
+    "text": "lda     f:NPCProp::SpecialNPC,x ; or special npc graphics"
+   },
+   {
+    "snes": "C0532C",
+    "bytes": "BF 14 1A C4",
+    "operand": "C41A14",
+    "base": "ptr",
+    "disp": 4,
+    "src": "src/field/obj.asm:296",
+    "text": "lda     f:NPCProp::PosX,x"
+   },
+   {
+    "snes": "C0533A",
+    "bytes": "BF 15 1A C4",
+    "operand": "C41A15",
+    "base": "ptr",
+    "disp": 5,
+    "src": "src/field/obj.asm:300",
+    "text": "lda     f:NPCProp::PosY,x"
+   },
+   {
+    "snes": "C0535A",
+    "bytes": "BF 15 1A C4",
+    "operand": "C41A15",
+    "base": "ptr",
+    "disp": 5,
+    "src": "src/field/obj.asm:310",
+    "text": "lda     f:NPCProp::Speed,x"
+   },
+   {
+    "snes": "C05369",
+    "bytes": "BF 16 1A C4",
+    "operand": "C41A16",
+    "base": "ptr",
+    "disp": 6,
+    "src": "src/field/obj.asm:314",
+    "text": "lda     f:NPCProp::Gfx,x         ; graphics index (also actor index)"
+   },
+   {
+    "snes": "C05373",
+    "bytes": "BF 17 1A C4",
+    "operand": "C41A17",
+    "base": "ptr",
+    "disp": 7,
+    "src": "src/field/obj.asm:317",
+    "text": "lda     f:NPCProp::Movement,x"
+   },
+   {
+    "snes": "C0537F",
+    "bytes": "BF 17 1A C4",
+    "operand": "C41A17",
+    "base": "ptr",
+    "disp": 7,
+    "src": "src/field/obj.asm:321",
+    "text": "lda     f:NPCProp::SpritePriority,x"
+   },
+   {
+    "snes": "C0538A",
+    "bytes": "BF 17 1A C4",
+    "operand": "C41A17",
+    "base": "ptr",
+    "disp": 7,
+    "src": "src/field/obj.asm:325",
+    "text": "lda     f:NPCProp::Vehicle,x         ; vehicle index (or animation speed)"
+   },
+   {
+    "snes": "C05397",
+    "bytes": "BF 18 1A C4",
+    "operand": "C41A18",
+    "base": "ptr",
+    "disp": 8,
+    "src": "src/field/obj.asm:330",
+    "text": "lda     f:NPCProp::Dir,x"
+   },
+   {
+    "snes": "C053AD",
+    "bytes": "BF 18 1A C4",
+    "operand": "C41A18",
+    "base": "ptr",
+    "disp": 8,
+    "src": "src/field/obj.asm:339",
+    "text": "lda     f:NPCProp::React,x         ; turn when activated (or 32x32 sprite)"
+   },
+   {
+    "snes": "C053BC",
+    "bytes": "BF 18 1A C4",
+    "operand": "C41A18",
+    "base": "ptr",
+    "disp": 8,
+    "src": "src/field/obj.asm:344",
+    "text": "lda     f:NPCProp::LayerPriority,x         ; layer priority"
+   },
+   {
+    "snes": "C053D0",
+    "bytes": "BF 18 1A C4",
+    "operand": "C41A18",
+    "base": "ptr",
+    "disp": 8,
+    "src": "src/field/obj.asm:352",
+    "text": "lda     f:NPCProp::AnimFrame,x"
+   },
+   {
+    "snes": "C053E3",
+    "bytes": "BF 18 1A C4",
+    "operand": "C41A18",
+    "base": "ptr",
+    "disp": 8,
+    "src": "src/field/obj.asm:358",
+    "text": "lda     f:NPCProp::AnimType,x"
+   }
+  ],
+  "EVENT_TRIGGERS": [
+   {
+    "snes": "C0BCAE",
+    "bytes": "BF 02 00 C4",
+    "operand": "C40002",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/field/event.asm:5663",
+    "text": "lda     f:EventTriggerPtrs+2,x"
+   },
+   {
+    "snes": "C0BCB4",
+    "bytes": "BF 00 00 C4",
+    "operand": "C40000",
+    "base": "ptr",
+    "disp": 0,
+    "src": "src/field/event.asm:5665",
+    "text": "lda     f:EventTriggerPtrs,x"
+   },
+   {
+    "snes": "C0BCBD",
+    "bytes": "BF 00 00 C4",
+    "operand": "C40000",
+    "base": "ptr",
+    "disp": 0,
+    "src": "src/field/event.asm:5669",
+    "text": "Loop:   lda     f:EventTrigger::Pos,x"
+   },
+   {
+    "snes": "C0BCD3",
+    "bytes": "BF 02 00 C4",
+    "operand": "C40002",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/field/event.asm:5682",
+    "text": "lda     f:EventTrigger::EventPtr,x"
+   },
+   {
+    "snes": "C0BCED",
+    "bytes": "BF 04 00 C4",
+    "operand": "C40004",
+    "base": "ptr",
+    "disp": 4,
+    "src": "src/field/event.asm:5692",
+    "text": "lda     f:EventTrigger::EventPtr+2,x"
+   },
+   {
+    "snes": "EE2176",
+    "bytes": "BF 00 00 C4",
+    "operand": "C40000",
+    "base": "ptr",
+    "disp": 0,
+    "src": "src/world/move.asm:1317",
+    "text": "lda     f:EventTriggerPtrs,x    ; pointer to event triggers"
+   },
+   {
+    "snes": "EE217C",
+    "bytes": "BF 02 00 C4",
+    "operand": "C40002",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/world/move.asm:1319",
+    "text": "lda     f:EventTriggerPtrs+2,x  ; pointer to next map's event triggers"
+   },
+   {
+    "snes": "EE218B",
+    "bytes": "BF 00 00 C4",
+    "operand": "C40000",
+    "base": "ptr",
+    "disp": 0,
+    "src": "src/world/move.asm:1326",
+    "text": "@218b:  lda     f:EventTrigger::PosX,x    ; trigger x position"
+   },
+   {
+    "snes": "EE2193",
+    "bytes": "BF 01 00 C4",
+    "operand": "C40001",
+    "base": "ptr",
+    "disp": 1,
+    "src": "src/world/move.asm:1329",
+    "text": "lda     f:EventTrigger::PosY,x  ; trigger y position"
+   },
+   {
+    "snes": "EE219B",
+    "bytes": "BF 02 00 C4",
+    "operand": "C40002",
+    "base": "ptr",
+    "disp": 2,
+    "src": "src/world/move.asm:1332",
+    "text": "lda     f:EventTrigger::EventPtr,x  ; set event pointer"
+   },
+   {
+    "snes": "EE21A4",
+    "bytes": "BF 03 00 C4",
+    "operand": "C40003",
+    "base": "ptr",
+    "disp": 3,
+    "src": "src/world/move.asm:1336",
+    "text": "lda     f:EventTrigger::EventPtr+1,x"
+   },
+   {
+    "snes": "EE21AC",
+    "bytes": "BF 04 00 C4",
+    "operand": "C40004",
+    "base": "ptr",
+    "disp": 4,
+    "src": "src/world/move.asm:1339",
+    "text": "lda     f:EventTrigger::EventPtr+2,x"
+   }
+  ]
+ },
+ "immediate_refs_not_retargeted": [
+  {
+   "snes": "C02897",
+   "bytes": "69 B0 D1",
+   "src": "src/field/map.asm:1766",
+   "text": "adc     #.loword(SubTilemap)"
+  },
+  {
+   "snes": "C028A3",
+   "bytes": "69 D9",
+   "src": "src/field/map.asm:1770",
+   "text": "adc     #^SubTilemap"
+  },
+  {
+   "snes": "C028EB",
+   "bytes": "69 B0 D1",
+   "src": "src/field/map.asm:1802",
+   "text": "adc     #.loword(SubTilemap)"
+  },
+  {
+   "snes": "C028F7",
+   "bytes": "69 D9",
+   "src": "src/field/map.asm:1806",
+   "text": "adc     #^SubTilemap"
+  },
+  {
+   "snes": "C02941",
+   "bytes": "69 B0 D1",
+   "src": "src/field/map.asm:1838",
+   "text": "adc     #.loword(SubTilemap)"
+  },
+  {
+   "snes": "C0294D",
+   "bytes": "69 D9",
+   "src": "src/field/map.asm:1842",
+   "text": "adc     #^SubTilemap"
+  }
+ ],
+ "counts": {
+  "TREASURE": 12,
+  "LONG_ENTRANCES": 19,
+  "SHORT_ENTRANCES": 19,
+  "MAP_PROPS": 1,
+  "SUBTILEMAP_PTRS": 6,
+  "NPC_PROPS": 21,
+  "EVENT_TRIGGERS": 12
+ }
+}

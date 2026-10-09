@@ -1,0 +1,26 @@
+# TECH v0.5 QA HARNESS ONLY. Trigger: map $013 (Narshe opening streets) tile (34,43).
+@QaAccess5
+if_switch VANILLA_TILE_EVENT_LATCH=1 -> QaRet5
+dlg qa5_prompt
+choice QaMon5, QaOther5, QaNo5
+@QaMon5
+dlg qa5_battle_intro
+battle $FE bg $3F
+call VanillaPostBattleCheck
+fade_in
+dlg qa5_battle_done
+party_step RIGHT 1
+return
+@QaOther5
+dlg qa5_other
+choice QaMapA5, QaAnnex5, QaRet5
+@QaMapA5
+load_map $1A0 16 27 UP
+return
+@QaAnnex5
+call EvAnnexEnter_Yes
+return
+@QaNo5
+call VanillaSavePoint
+@QaRet5
+return

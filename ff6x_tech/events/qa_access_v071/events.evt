@@ -1,0 +1,176 @@
+# TECH v0.7.2 QA HARNESS ONLY (target item-tech; v0.7.1 item tests + v0.7.2 Colosseum hotfix). Trigger: map $013 (Narshe opening streets) tile (34,43).
+# Top level: v0.7.1 item-bank tests; the accepted v0.6.1 tests are kept unchanged one level down.
+@QaAccess6
+if_switch VANILLA_TILE_EVENT_LATCH=1 -> QaRet6
+dlg qa7_prompt
+choice QaItem7, QaOld6, QaNo6
+@QaOld6
+dlg qa6_prompt
+choice QaMon6, QaMore6, QaCancel6
+# ---- TECH v0.7.1 extended item tests -------------------------------------------------------
+@QaItem7
+dlg qa7_items
+choice QaGive7, QaHas7, QaMore7
+# A: grant the three QA items (extended event API) + the vanilla items with the same low byte
+@QaGive7
+give_ext_item $13D
+give_ext_item $13E
+give_ext_item $13F
+give_item $3D
+give_item $3E
+give_item $3F
+dlg qa7_given
+party_step RIGHT 1
+return
+# K: HAS_EXT_ITEM / TAKE_EXT_ITEM
+@QaHas7
+has_ext_item $13D -> QA_V071_HAS_EXT_ITEM
+if_switch QA_V071_HAS_EXT_ITEM=1 -> QaHasY7
+dlg qa7_has_no
+party_step RIGHT 1
+return
+@QaHasY7
+dlg qa7_has_yes
+choice QaTake7, QaCancel6
+@QaTake7
+take_ext_item $13D
+dlg qa7_taken
+party_step RIGHT 1
+return
+# M / F: shop, colosseum, battle
+@QaMore7
+dlg qa7_more
+choice QaShop7, QaColo7, QaBtl7
+@QaShop7
+shop $48
+party_step RIGHT 1
+return
+# TECH v0.7.2 hotfix: run the vanilla Colosseum sequence CB:78D9 exactly as the receptionist does (fade out,
+# menu $9A, then - only for a valid wager - colosseum battle $AF, then fade in). v0.7.1 called $9A alone: $9A sets
+# map-startup flags $C0 (no fade-in) and reloads the map, and without $AF / fade-in the screen stayed black.
+# QaColo7 sub-menu: fight, or get a vanilla wager kit (New Game has no items): Elixir / Fenix Down face Cactrot
+# (prizes Rename Card / Magicite, winnable by the opening party), ThiefKnife / ValiantKnife face stronger opponents.
+@QaColo7
+dlg qa7_colo
+choice QaColoFight7, QaColoKit7, QaCancel6
+# TECH v0.7.3: normalized QA party for the Colosseum. The opening party is not a valid Colosseum state (vanilla
+# Rev 1 shows the same artifacts): the Colosseum battle looks the fighter up by actor id = record number, which
+# fails for the temporary records 14/15 (Wedge actor $20, Vicks actor $21 -> invisible fighter), and Terra's
+# Magitek status (status 1 bit $08) turns on battle Magitek mode (extra armor sprite). Like the vanilla recruit
+# script (Locke joins at CC:A621): Terra leaves Magitek, Wedge/Vicks leave the party, Locke/Celes/Edgar join;
+# everything is restored after the Colosseum.
+@QaColoFight7
+status_clear $00 $FFF7
+char_party $0E 0
+char_party $0F 0
+char_prop $01 $01
+char_name $01 $01
+create_obj $01
+obj_gfx $01 $01
+char_party $01 1
+char_prop $06 $06
+char_name $06 $06
+create_obj $06
+obj_gfx $06 $06
+char_party $06 1
+char_prop $04 $04
+char_name $04 $04
+create_obj $04
+obj_gfx $04 $04
+char_party $04 1
+call VanillaColosseum
+char_party $01 0
+delete_obj $01
+char_party $06 0
+delete_obj $06
+char_party $04 0
+delete_obj $04
+char_party $0E 1
+char_party $0F 1
+status_set $00 $0008
+party_step RIGHT 1
+return
+@QaColoKit7
+give_item $EE
+give_item $EE
+give_item $EE
+give_item $F0
+give_item $F0
+give_item $F0
+give_item $04
+give_item $09
+dlg qa7_colo_kit
+party_step RIGHT 1
+return
+# F/G: Terra fights without Magitek (status 1 bit $08 cleared for the test battle, restored after it)
+@QaBtl7
+status_clear $00 $FFF7
+battle $01 bg $3F
+call VanillaPostBattleCheck
+status_set $00 $0008
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+@QaMon6
+dlg qa6_battle_intro
+battle $FE bg $3F
+@QaAfter6
+call VanillaPostBattleCheck
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+@QaMore6
+dlg qa6_more
+choice QaIso6, QaMp6, QaOther6
+@QaIso6
+dlg qa6_iso
+choice QaIsoA6, QaIsoB6, QaCancel6
+@QaIsoA6
+battle $FC bg $3F
+call VanillaPostBattleCheck
+fade_in
+party_step RIGHT 1
+return
+@QaIsoB6
+battle $FB bg $3F
+call VanillaPostBattleCheck
+fade_in
+party_step RIGHT 1
+return
+@QaMp6
+give_esper $36
+dlg qa6_mp
+choice QaMpY6, QaMpZ6, QaCancel6
+@QaMpY6
+battle $FD bg $3F
+call VanillaPostBattleCheck
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+@QaMpZ6
+battle $FE bg $3F
+call VanillaPostBattleCheck
+fade_in
+dlg qa6_battle_done
+party_step RIGHT 1
+return
+@QaOther6
+dlg qa6_other
+choice QaMapA6, QaAnnex6, QaCancel6
+@QaMapA6
+load_map $1A0 16 27 UP
+return
+@QaAnnex6
+call EvAnnexEnter_Yes
+return
+@QaNo6
+call VanillaSavePoint
+@QaRet6
+return
+# cancel paths step off the trigger tile so the prompt does not re-open while standing on it
+@QaCancel6
+party_step RIGHT 1
+return

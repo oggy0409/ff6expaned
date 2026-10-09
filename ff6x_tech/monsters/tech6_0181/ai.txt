@@ -1,0 +1,5 @@
+# TESTEYE B: Battle, Battle or Slow ($19)
+random BATTLE BATTLE $19
+end
+# counter section: none
+end

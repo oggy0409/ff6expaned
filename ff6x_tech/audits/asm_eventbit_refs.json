@@ -1,0 +1,294 @@
+{
+ "0x1e80": [
+  "src/field/obj.asm:4773: lda     $1e80,y",
+  "src/field/obj.asm:4775: sta     $1e80,y",
+  "src/field/obj.asm:4821: lda     $1e80,y",
+  "src/field/obj.asm:4823: sta     $1e80,y",
+  "src/field/event.asm:3725: lda     $1e80,y",
+  "src/field/event.asm:4425: lda     $1e80,y",
+  "src/field/event.asm:4427: sta     $1e80,y",
+  "src/field/event.asm:4470: lda     $1e80,y",
+  "src/field/event.asm:4472: sta     $1e80,y",
+  "src/field/event.asm:5321: lda     $1e80,y",
+  "src/field/event.asm:5429: :       stz     $1e80,x",
+  "src/field/debug.asm:735: lda     $1e80,x",
+  "src/field/debug.asm:797: lda     $1e80,x",
+  "src/field/debug.asm:835: lda     $1e80,x",
+  "src/world/init.asm:1949: lda     f:$001e80,x",
+  "src/world/event.asm:142: lda     $1e80,x",
+  "src/world/event.asm:146: @714a:  lda     $1e80,x",
+  "src/world/event.asm:208: lda     $1e80,x",
+  "src/world/event.asm:212: @71c4:  lda     $1e80,x",
+  "src/world/event.asm:384: lda     $1e80,x",
+  "src/world/event.asm:386: sta     $1e80,x",
+  "src/world/event.asm:411: lda     $1e80,x",
+  "src/world/event.asm:413: sta     $1e80,x",
+  "src/world/event.asm:1603: lda     $1e80,x",
+  "src/world/event.asm:1607: @7c49:  lda     $1e80,x",
+  "src/world/event.asm:1669: lda     $1e80,x",
+  "src/world/event.asm:1673: @7cc3:  lda     $1e80,x",
+  "src/world/event.asm:1799: lda     $1e80,x",
+  "src/world/event.asm:1801: sta     $1e80,x",
+  "src/world/event.asm:1826: lda     $1e80,x",
+  "src/world/event.asm:1828: sta     $1e80,x"
+ ],
+ "0x1e81": [
+  "src/field/debug.asm:738: lda     $1e81,x",
+  "src/field/debug.asm:800: lda     $1e81,x",
+  "src/field/debug.asm:838: lda     $1e81,x"
+ ],
+ "0x1e82": [
+  "src/field/debug.asm:756: lda     $1e82,x",
+  "src/field/debug.asm:818: lda     $1e82,x",
+  "src/field/debug.asm:856: lda     $1e82,x"
+ ],
+ "0x1e83": [
+  "src/field/debug.asm:759: lda     $1e83,x",
+  "src/field/debug.asm:821: lda     $1e83,x",
+  "src/field/debug.asm:859: lda     $1e83,x"
+ ],
+ "0x1e93": [
+  "src/world/fix_minimap.asm:10: lda     $1e93"
+ ],
+ "0x1ea0": [
+  "src/btlgfx/sprite.asm:3181: lda     $1ea0",
+  "src/field/obj.asm:4789: lda     $1ea0,y",
+  "src/field/obj.asm:4791: sta     $1ea0,y",
+  "src/field/obj.asm:4837: lda     $1ea0,y",
+  "src/field/obj.asm:4839: sta     $1ea0,y",
+  "src/field/event.asm:4440: lda     $1ea0,y",
+  "src/field/event.asm:4442: sta     $1ea0,y",
+  "src/field/event.asm:4485: lda     $1ea0,y",
+  "src/field/event.asm:4487: sta     $1ea0,y",
+  "src/field/event.asm:5332: lda     $1ea0,y",
+  "src/menu/menu_gfx.asm:719: lda     $1ea0"
+ ],
+ "0x1eb4": [
+  "src/field/event.asm:4136: @b3af:  sta     $1eb4",
+  "src/field/event.asm:4146: sta     $1eb4",
+  "src/field/event.asm:4153: lda     $1eb4",
+  "src/field/event.asm:4155: sta     $1eb4",
+  "src/field/event.asm:4189: sta     $1eb4",
+  "src/field/event.asm:4197: lda     $1eb4",
+  "src/field/event.asm:4199: sta     $1eb4",
+  "src/field/event.asm:4234: sta     $1eb4",
+  "src/field/event.asm:4241: lda     $1eb4",
+  "src/field/event.asm:4243: sta     $1eb4",
+  "src/field/event.asm:4299: sta     $1eb4",
+  "src/field/event.asm:4316: stx     $1eb4",
+  "src/field/event.asm:4326: stx     $1eb4",
+  "src/field/event.asm:4411: @b588:  sta     $1eb4"
+ ],
+ "0x1eb5": [
+  "src/field/event.asm:4127: sta     $1eb5",
+  "src/field/event.asm:4147: sta     $1eb5",
+  "src/field/event.asm:4169: lda     $1eb5",
+  "src/field/event.asm:4171: sta     $1eb5",
+  "src/field/event.asm:4190: sta     $1eb5",
+  "src/field/event.asm:4214: lda     $1eb5",
+  "src/field/event.asm:4216: sta     $1eb5",
+  "src/field/event.asm:4235: sta     $1eb5",
+  "src/field/event.asm:4257: lda     $1eb5",
+  "src/field/event.asm:4259: sta     $1eb5",
+  "src/field/event.asm:4412: stz     $1eb5"
+ ],
+ "0x1eb6": [
+  "src/field/init.asm:405: lda     $1eb6",
+  "src/field/init.asm:407: sta     $1eb6",
+  "src/field/init.asm:414: lda     $1eb6",
+  "src/field/init.asm:416: sta     $1eb6",
+  "src/field/player.asm:525: lda     $1eb6",
+  "src/field/player.asm:527: sta     $1eb6",
+  "src/field/event.asm:5299: lda     $1eb6",
+  "src/field/event.asm:5302: sta     $1eb6",
+  "src/field/event.asm:5305: lda     $1eb6",
+  "src/field/event.asm:5307: sta     $1eb6",
+  "src/field/event.asm:5309: :       lda     $1eb6",
+  "src/field/event.asm:5311: sta     $1eb6",
+  "src/world/move.asm:416: lda     $1eb6",
+  "src/world/move.asm:418: sta     $1eb6",
+  "src/world/move.asm:422: lda     $1eb6",
+  "src/world/move.asm:424: sta     $1eb6",
+  "src/world/sprite.asm:771: @452f:  lda     $1eb6",
+  "src/world/sprite.asm:1211: @4a3b:  lda     $1eb6"
+ ],
+ "0x1eb7": [
+  "src/field/init.asm:248: lda     $1eb7",
+  "src/field/init.asm:250: sta     $1eb7",
+  "src/field/player.asm:528: lda     $1eb7",
+  "src/field/player.asm:530: sta     $1eb7",
+  "src/field/event.asm:3086: @ad7f:  lda     $1eb7",
+  "src/field/event.asm:3088: sta     $1eb7",
+  "src/field/event.asm:3100: lda     $1eb7",
+  "src/field/event.asm:3102: sta     $1eb7",
+  "src/field/menu.asm:227: lda     $1eb7",
+  "src/world/init.asm:137: lda     $1eb7",
+  "src/world/init.asm:139: sta     $1eb7",
+  "src/world/init.asm:173: lda     $1eb7",
+  "src/world/init.asm:184: lda     $1eb7",
+  "src/world/init.asm:415: lda     $1eb7",
+  "src/world/init.asm:426: lda     $1eb7",
+  "src/world/init.asm:733: lda     $1eb7",
+  "src/world/init.asm:744: lda     $1eb7",
+  "src/world/init.asm:1108: lda     $1eb7",
+  "src/world/init.asm:1874: lda     $1eb7",
+  "src/world/init.asm:1876: sta     $1eb7",
+  "src/world/move.asm:1180: lda     $1eb7",
+  "src/world/move.asm:1192: lda     $1eb7",
+  "src/world/sprite.asm:971: @46d5:  lda     $1eb7"
+ ],
+ "0x1eb8": [
+  "src/field/obj.asm:50: @5104:  lda     f:$001eb8",
+  "src/field/player.asm:1077: lda     $1eb8",
+  "src/field/menu.asm:205: lda     $1eb8"
+ ],
+ "0x1eb9": [
+  "src/field/obj.asm:3171: lda     $1eb9",
+  "src/field/obj.asm:4407: @76de:  lda     $1eb9",
+  "src/field/init.asm:466: lda     $1eb9",
+  "src/field/init.asm:468: sta     $1eb9",
+  "src/field/init.asm:495: lda     $1eb9",
+  "src/field/player.asm:343: lda     $1eb9",
+  "src/field/battle.asm:331: lda     $1eb9",
+  "src/field/text.asm:102: lda     $1eb9",
+  "src/field/reset.asm:473: lda     $1eb9",
+  "src/world/init.asm:170: lda     $1eb9",
+  "src/world/init.asm:412: lda     $1eb9",
+  "src/world/init.asm:730: lda     $1eb9",
+  "src/world/init.asm:1102: lda     $1eb9",
+  "src/world/move.asm:871: lda     $1eb9"
+ ],
+ "0x1eba": [
+  "src/menu/item.asm:1115: ldx     $1eba"
+ ],
+ "0x1ebc": [
+  "src/menu/item.asm:1117: lda     $1ebc"
+ ],
+ "0x1ebd": [
+  "src/field/event.asm:3591: lda     $1ebd",
+  "src/field/event.asm:3594: sta     $1ebd",
+  "src/menu/item.asm:1119: lda     $1ebd",
+  "src/menu/colosseum.asm:274: lda     $1ebd"
+ ],
+ "0x1ebe": [
+  "src/field/init.asm:410: stz     $1ebe"
+ ],
+ "0x1ebf": [
+  "src/field/init.asm:411: stz     $1ebf"
+ ],
+ "0x1ec0": [
+  "src/field/obj.asm:4805: lda     $1ec0,y",
+  "src/field/obj.asm:4807: sta     $1ec0,y",
+  "src/field/obj.asm:4853: lda     $1ec0,y",
+  "src/field/obj.asm:4855: sta     $1ec0,y",
+  "src/field/event.asm:4455: lda     $1ec0,y",
+  "src/field/event.asm:4457: sta     $1ec0,y",
+  "src/field/event.asm:4500: lda     $1ec0,y",
+  "src/field/event.asm:4502: sta     $1ec0,y"
+ ],
+ "0x1ed7": [
+  "src/field/event.asm:1683: lda     $1ed7",
+  "src/field/event.asm:1685: sta     $1ed7",
+  "src/field/event.asm:1688: lda     $1ed7",
+  "src/field/event.asm:1690: sta     $1ed7",
+  "src/field/event.asm:1699: lda     $1ed7",
+  "src/field/event.asm:1815: lda     $1ed7",
+  "src/field/battle.asm:207: lda     $1ed7",
+  "src/field/battle.asm:426: lda     $1ed7"
+ ],
+ "0x1ed8": [
+  "src/field/player.asm:642: lda     $1ed8",
+  "src/field/player.asm:644: sta     $1ed8",
+  "src/field/player.asm:645: lda     $1ed8",
+  "src/field/player.asm:647: sta     $1ed8",
+  "src/field/player.asm:648: lda     $1ed8",
+  "src/field/player.asm:650: sta     $1ed8",
+  "src/field/player.asm:651: lda     $1ed8",
+  "src/field/player.asm:653: sta     $1ed8",
+  "src/field/window.asm:338: lda     f:$001ed8",
+  "src/field/hdma.asm:207: @39a8:  lda     $1ed8"
+ ],
+ "0x1ed9": [
+  "src/field/player.asm:659: lda     $1ed9",
+  "src/field/player.asm:661: sta     $1ed9",
+  "src/field/player.asm:662: lda     $1ed9",
+  "src/field/player.asm:664: sta     $1ed9",
+  "src/field/player.asm:665: lda     $1ed9",
+  "src/field/player.asm:667: sta     $1ed9",
+  "src/field/player.asm:668: lda     $1ed9",
+  "src/field/player.asm:670: sta     $1ed9",
+  "src/field/player.asm:676: lda     $1ed9",
+  "src/field/player.asm:678: sta     $1ed9",
+  "src/field/player.asm:679: lda     $1ed9",
+  "src/field/player.asm:681: sta     $1ed9",
+  "src/field/player.asm:682: lda     $1ed9",
+  "src/field/player.asm:684: sta     $1ed9",
+  "src/field/player.asm:685: lda     $1ed9",
+  "src/field/player.asm:687: sta     $1ed9"
+ ],
+ "0x1edc": [
+  "src/field/event.asm:4315: @b513:  ldx     $1edc",
+  "src/menu/shop.asm:1475: lda     $1edc",
+  "src/menu/shop.asm:1521: lda     $1edc",
+  "src/menu/shop.asm:1584: lda     $1edc",
+  "src/menu/shop.asm:1643: lda     $1edc",
+  "src/menu/shop.asm:1687: lda     $1edc",
+  "src/menu/shop.asm:1749: lda     $1edc",
+  "src/menu/shop.asm:1978: lda     $1edc",
+  "src/menu/item.asm:1489: lda     $1edc",
+  "src/menu/status.asm:138: lda     $1edc"
+ ],
+ "0x1ede": [
+  "src/field/event.asm:893: ldx     $1ede",
+  "src/field/event.asm:4325: @b51e:  ldx     $1ede",
+  "src/battle/battle_end.asm:90: bit     $1ede",
+  "src/battle/battle_end.asm:123: @48a6:  trb     $1ede"
+ ],
+ "0x1edf": [
+  "src/field/event.asm:5094: lda     $1edf",
+  "src/field/event.asm:5097: sta     $1edf",
+  "src/field/event.asm:5127: lda     $1edf",
+  "src/field/event.asm:5130: sta     $1edf",
+  "src/field/event.asm:5149: lda     $1edf",
+  "src/field/event.asm:5152: sta     $1edf",
+  "src/battle/init_2.asm:483: lda     $1edf",
+  "src/battle/ai_cmd.asm:656: @1d0d:  lda     $1edf",
+  "src/battle/ai_cmd.asm:991: tsb     $1edf",
+  "src/battle/battle_end.asm:159: trb     $1edf"
+ ],
+ "0x1ee0": [
+  "src/field/obj.asm:179: sta     $1ee0,x",
+  "src/field/event.asm:4515: lda     $1ee0,y",
+  "src/field/event.asm:4517: sta     $1ee0,y",
+  "src/field/event.asm:4575: lda     $1ee0,y",
+  "src/field/event.asm:4577: sta     $1ee0,y",
+  "src/field/event.asm:5343: lda     $1ee0,y"
+ ],
+ "0x1f00": [
+  "src/field/event.asm:4530: lda     $1f00,y",
+  "src/field/event.asm:4532: sta     $1f00,y",
+  "src/field/event.asm:4590: lda     $1f00,y",
+  "src/field/event.asm:4592: sta     $1f00,y",
+  "src/field/event.asm:5354: lda     $1f00,y",
+  "src/field/entrance.asm:386: fixed_block $1f00",
+  "src/world/cutscene.asm:1530: and     #$1f00"
+ ],
+ "0x1f1a": [
+  "src/btlgfx/sine_tbl.asm:16: .word   $18f9,$1c0b,$1f1a,$2223,$2528,$2826,$2b1f,$2e11",
+  "src/btlgfx/sine_tbl.asm:29: .word   $30fb,$2e11,$2b1f,$2826,$2528,$2223,$1f1a,$1c0b"
+ ],
+ "0x1f20": [
+  "src/field/event.asm:4545: lda     $1f20,y",
+  "src/field/event.asm:4547: sta     $1f20,y",
+  "src/field/event.asm:4605: lda     $1f20,y",
+  "src/field/event.asm:4607: sta     $1f20,y",
+  "src/field/event.asm:5365: lda     $1f20,y"
+ ],
+ "0x1f40": [
+  "src/field/event.asm:4560: lda     $1f40,y",
+  "src/field/event.asm:4562: sta     $1f40,y",
+  "src/field/event.asm:4620: lda     $1f40,y",
+  "src/field/event.asm:4622: sta     $1f40,y",
+  "src/field/event.asm:5376: lda     $1f40,y"
+ ]
+}

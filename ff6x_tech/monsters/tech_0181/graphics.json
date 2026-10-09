@@ -1,0 +1,6 @@
+{
+ "_comment": "Graphics resource: reuse of a vanilla monster sprite (placeholder). Stored in graphics slot = id + $20 (slots $180-$19F are esper/Imp graphics).",
+ "graphics_from_vanilla_monster": "0x028",
+ "graphics_name": "Dark Wind ($028)",
+ "overlap_from_vanilla_monster": "0x028"
+}

@@ -1,0 +1,1253 @@
+{
+ "_comment": "PROPOSAL ONLY - no item architecture implemented; see ITEM_ARCHITECTURE_DECISION_v0.7.md",
+ "concepts": [
+  {
+   "code": "EQ-W01",
+   "concept": "Tempered Edge",
+   "kind": "weapon",
+   "slot": "sword",
+   "users": "Terra/Celes/Edgar/Locke",
+   "locked_stats": "Atk 188; Vigor +2; Eva +10",
+   "locked_source": "Narshe forge quest",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "15",
+    "vanilla_item": "Falchion",
+    "displaced_vanilla_refs": {
+     "shop": 1,
+     "colosseum_prize": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "100",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "100",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no (default); optional reforge-style delivery only with creative approval",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-W02",
+   "concept": "Imperial Saber",
+   "kind": "weapon",
+   "slot": "sword",
+   "users": "Celes",
+   "locked_stats": "Atk 205; Magic +3; M.Eva +20",
+   "locked_source": "Vector Annex chest",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "19",
+    "vanilla_item": "Scimitar",
+    "displaced_vanilla_refs": {
+     "drop_rare": 1,
+     "drop_common": 1,
+     "colosseum_prize": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "101",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "101",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-W03",
+   "concept": "Leo's Blade",
+   "kind": "weapon",
+   "slot": "sword",
+   "users": "Terra/Celes/Edgar/Locke",
+   "locked_stats": "Atk 218; Vigor +3; Stamina +3; Holy",
+   "locked_source": "Celes arc rare branch",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "11",
+    "vanilla_item": "Break Blade",
+    "displaced_vanilla_refs": {
+     "chest": 1,
+     "steal_rare": 1,
+     "colosseum_prize": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "102",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "102",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data (Holy = element bit $20)",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-W04",
+   "concept": "Raider Knife",
+   "kind": "weapon",
+   "slot": "knife",
+   "users": "Locke",
+   "locked_stats": "Atk 198; Speed +5; steal-on-hit",
+   "locked_source": "Reconstruction chain",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "05",
+    "vanilla_item": "Assassin",
+    "displaced_vanilla_refs": {
+     "chest": 1,
+     "metamorph": 1,
+     "colosseum_prize": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "103",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "103",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no (default); optional reforge-style delivery only with creative approval",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data (weapon special THIEFKNIFE, attacker effect $01)",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-W05",
+   "concept": "Sandpiercer",
+   "kind": "weapon",
+   "slot": "spear",
+   "users": "Edgar/Mog",
+   "locked_stats": "Atk 210; Wind; Speed +2",
+   "locked_source": "Figaro Foundry",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "20",
+    "vanilla_item": "Partisan",
+    "displaced_vanilla_refs": {
+     "shop": 1,
+     "steal_rare": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "104",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "104",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data; Jump x2 needs the spear ID range check C2:1512 (A: kept by staying in $1D-$24; B/C: extend check)",
+   "risk": "medium"
+  },
+  {
+   "code": "EQ-W06",
+   "concept": "Duncan Claw",
+   "kind": "weapon",
+   "slot": "claw",
+   "users": "Sabin",
+   "locked_stats": "Atk 214; Vigor +5; Stamina +3",
+   "locked_source": "Master's Echo",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "55",
+    "vanilla_item": "Kaiser",
+    "displaced_vanilla_refs": {
+     "shop": 2
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "105",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "105",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-W07",
+   "concept": "Moonless",
+   "kind": "weapon",
+   "slot": "ninja blade",
+   "users": "Shadow",
+   "locked_stats": "Atk 216; Speed +7; Eva +30",
+   "locked_source": "Bandit's Hollow",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "26",
+    "vanilla_item": "Kodachi",
+    "displaced_vanilla_refs": {
+     "shop": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "106",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "106",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data; Throw-able only if the Throw list handles the ID (A: yes; C: no unless added)",
+   "risk": "medium"
+  },
+  {
+   "code": "EQ-W08",
+   "concept": "Doma Edge",
+   "kind": "weapon",
+   "slot": "katana",
+   "users": "Cyan",
+   "locked_stats": "Atk 222; Vigor +5; Stamina +4",
+   "locked_source": "Doma rebuilt smith",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "2E",
+    "vanilla_item": "Tempest",
+    "displaced_vanilla_refs": {
+     "chest": 1,
+     "steal_rare": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "107",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "107",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no (default); optional reforge-style delivery only with creative approval",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data (Bushido flag)",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-W09",
+   "concept": "Darill's Dirk",
+   "kind": "weapon",
+   "slot": "knife",
+   "users": "Setzer/Locke",
+   "locked_stats": "Atk 202; Speed +4; Eva +20",
+   "locked_source": "Sky Graveyard",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "08",
+    "vanilla_item": "Graedus",
+    "displaced_vanilla_refs": {
+     "drop_rare": 1,
+     "drop_common": 1,
+     "colosseum_prize": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "108",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "108",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-W10",
+   "concept": "Magister Rod",
+   "kind": "weapon",
+   "slot": "rod",
+   "users": "Strago/Relm",
+   "locked_stats": "Atk 190; Magic +7; M.Eva +20",
+   "locked_source": "Forgotten Age",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "39",
+    "vanilla_item": "Pearl Rod",
+    "displaced_vanilla_refs": {
+     "shop": 1,
+     "chest": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "109",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "109",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-W11",
+   "concept": "Concord Brush",
+   "kind": "weapon",
+   "slot": "brush",
+   "users": "Relm",
+   "locked_stats": "Atk 184; Magic +7; Speed +3",
+   "locked_source": "Sanctuary of Concord",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "3F",
+    "vanilla_item": "Magical Brsh",
+    "displaced_vanilla_refs": {
+     "chest": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "10A",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "10A",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-W12",
+   "concept": "Gale Lance",
+   "kind": "weapon",
+   "slot": "spear",
+   "users": "Mog/Edgar",
+   "locked_stats": "Atk 218; Wind; Speed +4",
+   "locked_source": "Beacon quest",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "1F",
+    "vanilla_item": "Stout Spear",
+    "displaced_vanilla_refs": {
+     "shop": 2,
+     "drop_rare": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "10B",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "10B",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data; Jump x2 spear range as EQ-W05",
+   "risk": "medium"
+  },
+  {
+   "code": "EQ-W13",
+   "concept": "Echo Dagger",
+   "kind": "weapon",
+   "slot": "knife",
+   "users": "Gogo",
+   "locked_stats": "Atk 200; Vigor/Magic/Speed +3",
+   "locked_source": "Cradle of Silence",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "07",
+    "vanilla_item": "SwordBreaker",
+    "displaced_vanilla_refs": {
+     "shop": 1,
+     "steal_rare": 2,
+     "colosseum_prize": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "10C",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "10C",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-A01",
+   "concept": "Royal Gear",
+   "kind": "armor",
+   "slot": "body",
+   "users": "Edgar/Sabin",
+   "locked_stats": "Def 84; MDef 60; Vig +4; Spd +2; Sta +3; Fire null",
+   "locked_source": "Brass Colossus (Figaro arc)",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "95",
+    "vanilla_item": "DiamondArmor",
+    "displaced_vanilla_refs": {
+     "shop": 2
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "10D",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "10D",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-A02",
+   "concept": "Imperial Mantle",
+   "kind": "armor",
+   "slot": "body",
+   "users": "Celes/Terra",
+   "locked_stats": "Def 78; MDef 72; Mag +4; M.Eva +20",
+   "locked_source": "not specified in Armor sheet (placed by arc design)",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "91",
+    "vanilla_item": "Light Robe",
+    "displaced_vanilla_refs": {
+     "shop": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "10E",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "10E",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-A03",
+   "concept": "Magister Robe",
+   "kind": "armor",
+   "slot": "body",
+   "users": "Terra/Celes/Relm/Strago/Gogo",
+   "locked_stats": "Def 70; MDef 82; Mag +6; MP-oriented",
+   "locked_source": "Archive Guardian (First Magi)",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "97",
+    "vanilla_item": "Tao Robe",
+    "displaced_vanilla_refs": {
+     "shop": 1,
+     "colosseum_prize": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "10F",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "10F",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data (MP +12.5/25% relic bits)",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-A04",
+   "concept": "Ashen Mail",
+   "kind": "armor",
+   "slot": "body",
+   "users": "Edgar/Cyan/Setzer",
+   "locked_stats": "Def 88; MDef 52; Fire absorb; Ice weak",
+   "locked_source": "not specified in Armor sheet (placed by arc design)",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "8C",
+    "vanilla_item": "Mithril Mail",
+    "displaced_vanilla_refs": {
+     "shop": 2,
+     "steal_rare": 1,
+     "metamorph": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "110",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "110",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-A05",
+   "concept": "Concord Vest",
+   "kind": "armor",
+   "slot": "body",
+   "users": "Locke/Shadow/Gau/Mog/Gogo",
+   "locked_stats": "Def 76; MDef 62; Spd +4; Eva +20",
+   "locked_source": "not specified in Armor sheet (placed by arc design)",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "96",
+    "vanilla_item": "Dark Gear",
+    "displaced_vanilla_refs": {
+     "shop": 2
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "111",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "111",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-A06",
+   "concept": "Doma Plate",
+   "kind": "armor",
+   "slot": "body",
+   "users": "Cyan/Edgar/Celes/Terra",
+   "locked_stats": "Def 92; MDef 58; Sta +5",
+   "locked_source": "not specified in Armor sheet (placed by arc design)",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "98",
+    "vanilla_item": "Crystal Mail",
+    "displaced_vanilla_refs": {
+     "shop": 1,
+     "chest": 1,
+     "metamorph": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "112",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "112",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-A07",
+   "concept": "Falcon Jacket",
+   "kind": "armor",
+   "slot": "body",
+   "users": "Setzer/Locke/Shadow",
+   "locked_stats": "Def 74; MDef 60; Spd +5; Wind resist",
+   "locked_source": "not specified in Armor sheet (placed by arc design)",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "8E",
+    "vanilla_item": "Mirage Vest",
+    "displaced_vanilla_refs": {
+     "colosseum_prize": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "113",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "113",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-A08",
+   "concept": "Child's Ribbon",
+   "kind": "armor",
+   "slot": "helmet",
+   "users": "Terra/Relm/Celes",
+   "locked_stats": "Def 34; MDef 38; Mag +3; Sta +3; status resist subset",
+   "locked_source": "not specified in Armor sheet (placed by arc design)",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "70",
+    "vanilla_item": "Coronet",
+    "displaced_vanilla_refs": {
+     "chest": 1,
+     "colosseum_prize": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "114",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "114",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data (status immunity words)",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-A09",
+   "concept": "Doma Kabuto",
+   "kind": "armor",
+   "slot": "helmet",
+   "users": "Cyan",
+   "locked_stats": "Def 42; MDef 32; Vig +4; Sta +4",
+   "locked_source": "not specified in Armor sheet (placed by arc design)",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "7C",
+    "vanilla_item": "Diamond Helm",
+    "displaced_vanilla_refs": {
+     "shop": 3,
+     "steal_rare": 1,
+     "colosseum_prize": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "115",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "115",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-A10",
+   "concept": "Engineer Goggles",
+   "kind": "armor",
+   "slot": "helmet",
+   "users": "Edgar/Setzer",
+   "locked_stats": "Def 36; MDef 30; Blind immunity; Spd +2",
+   "locked_source": "not specified in Armor sheet (placed by arc design)",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "79",
+    "vanilla_item": "Mystery Veil",
+    "displaced_vanilla_refs": {
+     "shop": 2
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "116",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "116",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-A11",
+   "concept": "Magi Circlet",
+   "kind": "armor",
+   "slot": "helmet",
+   "users": "magic users",
+   "locked_stats": "Def 36; MDef 44; Mag +5; M.Eva +10",
+   "locked_source": "not specified in Armor sheet (placed by arc design)",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "75",
+    "vanilla_item": "Tiara",
+    "displaced_vanilla_refs": {
+     "shop": 2
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "117",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "117",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-A12",
+   "concept": "Concord Shield",
+   "kind": "armor",
+   "slot": "shield",
+   "users": "broad",
+   "locked_stats": "Def 54; MDef 48; Eva +20; M.Eva +20; Holy resist",
+   "locked_source": "not specified in Armor sheet (placed by arc design)",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "63",
+    "vanilla_item": "Crystal Shld",
+    "displaced_vanilla_refs": {
+     "shop": 1,
+     "metamorph": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "118",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "118",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-A13",
+   "concept": "Ashguard",
+   "kind": "armor",
+   "slot": "shield",
+   "users": "heavy users",
+   "locked_stats": "Def 58; MDef 42; Fire absorb; Ice weak",
+   "locked_source": "not specified in Armor sheet (placed by arc design)",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "5F",
+    "vanilla_item": "Diamond Shld",
+    "displaced_vanilla_refs": {
+     "shop": 3
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "119",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "119",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-R01",
+   "concept": "Runic Crest",
+   "kind": "relic",
+   "slot": "relic",
+   "users": "Celes",
+   "locked_stats": "Mag +5; M.Eva +20; enhanced Runic (ASM, optional)",
+   "locked_source": "Celes arc (Magitek Praetor)",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "B9",
+    "vanilla_item": "Guard Ring",
+    "displaced_vanilla_refs": {
+     "shop": 2
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "11A",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "11A",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data + optional ASM (BAL-18 stat fallback)",
+   "risk": "medium"
+  },
+  {
+   "code": "EQ-R02",
+   "concept": "Maduin's Locket",
+   "kind": "relic",
+   "slot": "relic",
+   "users": "Terra",
+   "locked_stats": "Mag +6; Sta +3; longer Trance (ASM, optional)",
+   "locked_source": "Terra arc (Magi-Eater)",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "C2",
+    "vanilla_item": "Cursed Ring",
+    "displaced_vanilla_refs": {
+     "metamorph": 2,
+     "colosseum_prize": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "11B",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "11B",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data + optional ASM (fallback MP +25%)",
+   "risk": "medium"
+  },
+  {
+   "code": "EQ-R03",
+   "concept": "Doma Crest",
+   "kind": "relic",
+   "slot": "relic",
+   "users": "Cyan",
+   "locked_stats": "Vig +5; Sta +5; Spd +2; faster Bushido (ASM, optional)",
+   "locked_source": "Cyan arc (Miasma Regent)",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "D4",
+    "vanilla_item": "Beads",
+    "displaced_vanilla_refs": {
+     "shop": 1,
+     "chest": 2
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "11C",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "11C",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data + optional ASM",
+   "risk": "medium"
+  },
+  {
+   "code": "EQ-R04",
+   "concept": "Keepsake Ring",
+   "kind": "relic",
+   "slot": "relic",
+   "users": "Shadow/Relm",
+   "locked_stats": "blocks Doom/Zombie/instant death; Mag +3; Spd +3",
+   "locked_source": "Shadow/Relm arc (Guiltshade)",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "E1",
+    "vanilla_item": "Back Guard",
+    "displaced_vanilla_refs": {
+     "shop": 1,
+     "chest": 2,
+     "steal_rare": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "11D",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "11D",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data (status immunity; Memento-Ring-like)",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-R05",
+   "concept": "Darill's Coin",
+   "kind": "relic",
+   "slot": "relic",
+   "users": "Setzer",
+   "locked_stats": "Spd +5; M.Eva +20; improved Slots (ASM, optional)",
+   "locked_source": "Setzer arc (Sky Reaver)",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "D6",
+    "vanilla_item": "Coin Toss",
+    "displaced_vanilla_refs": {
+     "chest": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "11E",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "11E",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data + optional ASM",
+   "risk": "medium"
+  },
+  {
+   "code": "EQ-R06",
+   "concept": "Memorial Band",
+   "kind": "relic",
+   "slot": "relic",
+   "users": "all",
+   "locked_stats": "Sta +4; prevents Berserk/Confuse",
+   "locked_source": "Vector memorial",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "BE",
+    "vanilla_item": "True Knight",
+    "displaced_vanilla_refs": {
+     "shop": 4,
+     "chest": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "11F",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "11F",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-R07",
+   "concept": "Gale Pin",
+   "kind": "relic",
+   "slot": "relic",
+   "users": "all",
+   "locked_stats": "Spd +3; Wind resistance",
+   "locked_source": "Coast beacon",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "B7",
+    "vanilla_item": "Barrier Ring",
+    "displaced_vanilla_refs": {
+     "shop": 4,
+     "chest": 1,
+     "drop_rare": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "120",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "120",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-R08",
+   "concept": "Beastheart",
+   "kind": "relic",
+   "slot": "relic",
+   "users": "Gau",
+   "locked_stats": "Vig +4; Sta +4; Rage enhancement (ASM, optional)",
+   "locked_source": "Gau side content",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "B6",
+    "vanilla_item": "Fairy Ring",
+    "displaced_vanilla_refs": {
+     "shop": 4,
+     "chest": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "121",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "121",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data + optional ASM",
+   "risk": "medium"
+  },
+  {
+   "code": "EQ-R09",
+   "concept": "Painter's Lens",
+   "kind": "relic",
+   "slot": "relic",
+   "users": "Relm",
+   "locked_stats": "Mag +5; Sketch accuracy increase",
+   "locked_source": "Relm extension",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "C7",
+    "vanilla_item": "Sneak Ring",
+    "displaced_vanilla_refs": {
+     "shop": 1,
+     "chest": 1,
+     "steal_rare": 2
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "122",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "122",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data (RELIC_EFFECT3 INC_SKETCH_RATE, Beret's bit)",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-R10",
+   "concept": "Elder's Seal",
+   "kind": "relic",
+   "slot": "relic",
+   "users": "Strago",
+   "locked_stats": "Mag +5; MP +12.5%; Silence immunity",
+   "locked_source": "Ancient lore",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "B1",
+    "vanilla_item": "Star Pendant",
+    "displaced_vanilla_refs": {
+     "shop": 3,
+     "chest": 1,
+     "steal_rare": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "123",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "123",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data (MP_PLUS_12)",
+   "risk": "low-medium"
+  },
+  {
+   "code": "EQ-R11",
+   "concept": "Engineer's Badge",
+   "kind": "relic",
+   "slot": "relic",
+   "users": "Edgar",
+   "locked_stats": "Vig +3; Spd +3; Tools +10% (ASM, optional)",
+   "locked_source": "Figaro",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "E3",
+    "vanilla_item": "Sniper Sight",
+    "displaced_vanilla_refs": {
+     "shop": 5,
+     "chest": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "124",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "124",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data + optional ASM",
+   "risk": "medium"
+  },
+  {
+   "code": "EQ-R12",
+   "concept": "Master's Cord",
+   "kind": "relic",
+   "slot": "relic",
+   "users": "Sabin",
+   "locked_stats": "Vig +5; Sta +5; Blitz +10% (ASM, optional)",
+   "locked_source": "Duncan",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "D5",
+    "vanilla_item": "Black Belt",
+    "displaced_vanilla_refs": {
+     "shop": 4,
+     "drop_common": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "125",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "125",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data + optional ASM",
+   "risk": "medium"
+  },
+  {
+   "code": "EQ-R13",
+   "concept": "Legacy of the Magi",
+   "kind": "relic",
+   "slot": "relic",
+   "users": "Terra/Celes/Relm/Strago/Gogo",
+   "locked_stats": "Mag +7; M.Eva +30; MP +25%",
+   "locked_source": "Vael Unbound (superboss)",
+   "remains_true_equipment": true,
+   "option_A": {
+    "reuses_vanilla_id": "E2",
+    "vanilla_item": "Gale Hairpin",
+    "displaced_vanilla_refs": {
+     "shop": 1,
+     "chest": 1
+    },
+    "note": "first candidate = same type/family, no hard-coded ID logic, fewest sources; final pick needs review"
+   },
+   "option_B": {
+    "id": "126",
+    "note": "new 9-bit ID; every source type possible"
+   },
+   "option_C": {
+    "id": "126",
+    "reuses_vanilla_id": null,
+    "delivery": "event give (chest / boss reward / quest step) at the locked source; not sold, not stealable/droppable/metamorph, not a Colosseum wager or prize"
+   },
+   "upgrade_or_evolution": "no",
+   "quest_or_key_reward": "equipment reward at locked source (not a key item)",
+   "effect_implementation": "data (MP_PLUS_25)",
+   "risk": "low-medium"
+  }
+ ]
+}

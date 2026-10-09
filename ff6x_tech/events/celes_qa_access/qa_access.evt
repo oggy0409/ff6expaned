@@ -1,0 +1,23 @@
+# TECH v0.3.1 QA HARNESS ONLY - NOT A PRODUCTION BASELINE.
+# Assembled by ff6x/eventasm.py into QA_HARNESS (bank FF), target celes-qa only.
+# Trigger: map $013 (Narshe, opening streets) tile (34,43).
+#
+#  - VANILLA_TILE_EVENT_LATCH ($1B5) is a vanilla READ-ONLY reference: SavePoint sets it,
+#    the field engine clears it when the player moves. Checking it first stops the prompt
+#    from re-opening every frame while the player stands on the tile after "No".
+#  - "No" calls the unmodified vanilla SavePoint routine (CC:9AEB): blue flash, latch,
+#    "save allowed" ($1BF) -> the normal main-menu Save works on this tile.
+#  - "Yes" calls the unmodified v0.3 entry branch EvAnnexEnter_Yes (F1:000A):
+#    same flags, same map $0C7, same arrival (16,27) as the Falcon entry.
+
+@QaAccess
+if_switch VANILLA_TILE_EVENT_LATCH=1 -> QaRet
+dlg qa_prompt
+choice QaYes, QaNo
+@QaYes
+call EvAnnexEnter_Yes
+return
+@QaNo
+call VanillaSavePoint
+@QaRet
+return

@@ -1,0 +1,38 @@
+{
+ "short_entrances": [
+  {
+   "map": "1A1",
+   "src": [
+    13,
+    19
+   ],
+   "dest_map": "1A0",
+   "dest": [
+    16,
+    12
+   ],
+   "facing": "DOWN",
+   "flags": [],
+   "purpose": "door -> map A below its north door"
+  }
+ ],
+ "long_entrances": [
+  {
+   "map": "1A1",
+   "src": [
+    19,
+    18
+   ],
+   "length": 0,
+   "vertical": false,
+   "dest_map": "1A0",
+   "dest": [
+    13,
+    26
+   ],
+   "facing": "DOWN",
+   "flags": [],
+   "purpose": "stairs nook -> map A hall (long entrance on a new map)"
+  }
+ ]
+}

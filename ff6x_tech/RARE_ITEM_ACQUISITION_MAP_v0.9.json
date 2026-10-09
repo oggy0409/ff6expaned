@@ -1,0 +1,61 @@
+{
+ "key_items": [
+  {
+   "rare_id": 20,
+   "name": "Darill's Token",
+   "planned_source": "Setzer arc: Darill's tomb / Falcon",
+   "future_event_symbol": "EV_RARE_DARILLS_TOKEN",
+   "prerequisite_flags": [
+    "PREREQ_SETZER_ARC"
+   ],
+   "one_time": true,
+   "consumed": "no"
+  },
+  {
+   "rare_id": 21,
+   "name": "Concord Sigil",
+   "planned_source": "Sanctuary of Concord",
+   "future_event_symbol": "EV_RARE_CONCORD_SIGIL",
+   "prerequisite_flags": [
+    "PREREQ_SANCTUARY_OF_CONCORD"
+   ],
+   "one_time": true,
+   "consumed": "no"
+  },
+  {
+   "rare_id": 22,
+   "name": "Cinder Sigil",
+   "planned_source": "arc design (source not recovered)",
+   "future_event_symbol": "EV_RARE_CINDER_SIGIL",
+   "prerequisite_flags": [
+    "PREREQ_TBD_ARC_DESIGN"
+   ],
+   "one_time": true,
+   "consumed": "no"
+  },
+  {
+   "rare_id": 23,
+   "name": "Triune Sigil",
+   "planned_source": "joins the Concord and Cinder sigils",
+   "future_event_symbol": "EV_RARE_TRIUNE_SIGIL",
+   "prerequisite_flags": [
+    "HAS_RARE KEY_CONCORD_SIGIL",
+    "HAS_RARE KEY_CINDER_SIGIL"
+   ],
+   "one_time": true,
+   "consumed": "no (the two sigils are kept: consumption not locked)"
+  },
+  {
+   "rare_id": 24,
+   "name": "Broken Seal",
+   "planned_source": "late story (World of Ruin)",
+   "future_event_symbol": "EV_RARE_BROKEN_SEAL",
+   "prerequisite_flags": [
+    "PREREQ_TBD_ARC_DESIGN"
+   ],
+   "one_time": true,
+   "consumed": "no"
+  }
+ ],
+ "bindings": "every key item has exactly one future event symbol EV_RARE_*; no orphan (validated)"
+}

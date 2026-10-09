@@ -1,0 +1,111 @@
+# TECH v0.9.2 Celes enablers - map $1A2 (Vector Outer Ward QA). Assembled into EVENT_EXPANSION at F1:4000.
+# QA placeholder text only (the Celes ROM Script Pass writes the real scenes later).
+
+# ---- map startup event (runs at every load of $1A2): presentation of the persistent state ------------------------
+@EvOuterInit
+load_pal 15 $20                     # E7: Vale variant palette (MapSpritePal $20, relocated table) -> sprite slot 7 (row 15)
+call EvOuterMem
+call EvOuterArc
+return
+# E8 memorial wall (9-12, 10-11): none -> temporary tag memorial (arc done, both branches) -> stone memorial (Graves)
+# TECH v0.9.3: 4 x 2 tiles per state from maps/celes_outer_v092/states.json (builder-checked: equal to that file,
+# reachable floor unchanged in every state combination)
+@EvOuterMem
+if_switch EXP_GRAVES_DONE=1 -> EvOuterStone
+if_switch EXP_CELES_DONE=1 -> EvOuterTags
+set_tiles BG1 9 10 4 2 57 56 57 56 67 66 67 66
+return
+@EvOuterTags
+set_tiles BG1 9 10 4 2 91 92 91 92 90 93 90 93
+return
+@EvOuterStone
+set_tiles BG1 9 10 4 2 F1 F2 F1 F2 11 11 11 11
+return
+# E8 archive doorway (19-20, 10-11): sealed (no choice) / retained (Preserve) / burned (Burn)
+@EvOuterArc
+if_switch EXP_CELES_RECORDS_CHOSEN=0 -> EvOuterArcSealed
+if_switch EXP_CELES_RECORDS_PRESERVED=1 -> EvOuterArcKept
+set_tiles BG1 19 10 2 2 02 02 96 97
+return
+@EvOuterArcKept
+set_tiles BG1 19 10 2 2 BB BB CB CB
+return
+@EvOuterArcSealed
+set_tiles BG1 19 10 2 2 12 12 13 13
+return
+
+# ---- E8: the state read back by the player -------------------------------------------------------------------------
+@EvMemorialRead
+if_switch EXP_GRAVES_DONE=1 -> EvMemStoneMsg
+if_switch EXP_CELES_DONE=1 -> EvMemTagsMsg
+dlg cel92_mem_none
+party_step DOWN 1
+return
+@EvMemTagsMsg
+dlg cel92_mem_tags
+party_step DOWN 1
+return
+@EvMemStoneMsg
+dlg cel92_mem_stone
+party_step DOWN 1
+return
+@EvArchiveRead
+if_switch EXP_CELES_RECORDS_CHOSEN=0 -> EvArcSealedMsg
+if_switch EXP_CELES_RECORDS_PRESERVED=1 -> EvArcKeptMsg
+dlg cel92_arc_burned
+party_step DOWN 1
+return
+@EvArcKeptMsg
+dlg cel92_arc_kept
+party_step DOWN 1
+return
+@EvArcSealedMsg
+dlg cel92_arc_sealed
+party_step DOWN 1
+return
+
+# ---- E5: party-conditional reaction with the D-11 speaker fallback (Locke -> Edgar -> Sabin -> line dropped) -------
+@EvSurvivor
+dlg cel92_surv_base
+party_case
+if_switch CASE_CHAR_LOCKE=1 -> EvSurvLocke
+if_switch CASE_CHAR_EDGAR=1 -> EvSurvEdgar
+if_switch CASE_CHAR_SABIN=1 -> EvSurvSabin
+dlg cel92_surv_dropped
+return
+@EvSurvLocke
+dlg cel92_surv_locke
+return
+@EvSurvEdgar
+dlg cel92_surv_edgar
+return
+@EvSurvSabin
+dlg cel92_surv_sabin
+return
+
+# ---- E7: Vale -------------------------------------------------------------------------------------------------------
+@EvValeOuter
+dlg cel92_vale
+return
+
+# ---- E2-E4 / E9: Praetor console (QA boss battle, event battle group $FA -> formation $244, front attack only) ------
+@EvPraetorDoor
+dlg cel92_praetor_q
+choice EvPraetorFight, EvPraetorFightQa, EvPraetorNo
+@EvPraetorFight
+battle $FA bg $3F
+call VanillaPostBattleCheck
+fade_in
+dlg cel92_praetor_done
+party_step DOWN 1
+return
+@EvPraetorFightQa
+battle $F9 bg $3F
+call VanillaPostBattleCheck
+fade_in
+dlg cel92_praetor_done
+party_step DOWN 1
+return
+@EvPraetorNo
+party_step DOWN 1
+return

@@ -1,0 +1,544 @@
+{
+ "_comment": "reward bindings (source-controlled); story events bind to future_event_symbol later. Validated by patches/equipment_v08.py: one binding per item, unique reward ids and symbols, one-time only, GP cost only for smith purchases.",
+ "bindings": [
+  {
+   "item_id": "$100",
+   "name": "Tempered Edge",
+   "reward_id": "RW_100",
+   "source_type": "smith_purchase",
+   "planned_source": "Narshe forge quest",
+   "future_event_symbol": "EV_SMITH_NARSHE_TEMPERED_EDGE",
+   "conditions": [
+    "PREREQ_NARSHE_FORGE_QUEST"
+   ],
+   "one_time": true,
+   "gp_cost": 18000,
+   "smith": {
+    "model": "event-driven purchase (D4); not in any vanilla shop inventory",
+    "already_owned": "HAS_EXT_ITEM (inventory + equipment) -> 'already owned' message, no charge, no give",
+    "insufficient_gp": "event $85 take_gp sets vanilla switch $1BE -> 'not enough GP' message, nothing given",
+    "inventory_full": "GIVE then HAS check -> if not received, GP refunded with event $84 and 'no room' message",
+    "reforge": "none (D6): independent item, nothing consumed"
+   }
+  },
+  {
+   "item_id": "$101",
+   "name": "Imperial Saber",
+   "reward_id": "RW_101",
+   "source_type": "event_chest",
+   "planned_source": "Vector Annex chest",
+   "future_event_symbol": "EV_CHEST_VECTOR_ANNEX_IMPERIAL_SABER",
+   "conditions": [
+    "PREREQ_VECTOR_ANNEX"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$102",
+   "name": "Leo's Blade",
+   "reward_id": "RW_102",
+   "source_type": "quest_reward",
+   "planned_source": "Celes arc rare branch",
+   "future_event_symbol": "EV_REWARD_CELES_ARC_LEOS_BLADE",
+   "conditions": [
+    "PREREQ_CELES_ARC_RARE_BRANCH"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$103",
+   "name": "Raider Knife",
+   "reward_id": "RW_103",
+   "source_type": "quest_reward",
+   "planned_source": "Reconstruction chain",
+   "future_event_symbol": "EV_REWARD_RECONSTRUCTION_RAIDER_KNIFE",
+   "conditions": [
+    "PREREQ_RECONSTRUCTION_CHAIN"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$104",
+   "name": "Sandpiercer",
+   "reward_id": "RW_104",
+   "source_type": "smith_purchase",
+   "planned_source": "Figaro Foundry",
+   "future_event_symbol": "EV_SMITH_FIGARO_SANDPIERCER",
+   "conditions": [
+    "PREREQ_FIGARO_FOUNDRY"
+   ],
+   "one_time": true,
+   "gp_cost": 20000,
+   "smith": {
+    "model": "event-driven purchase (D4); not in any vanilla shop inventory",
+    "already_owned": "HAS_EXT_ITEM (inventory + equipment) -> 'already owned' message, no charge, no give",
+    "insufficient_gp": "event $85 take_gp sets vanilla switch $1BE -> 'not enough GP' message, nothing given",
+    "inventory_full": "GIVE then HAS check -> if not received, GP refunded with event $84 and 'no room' message",
+    "reforge": "none (D6): independent item, nothing consumed"
+   }
+  },
+  {
+   "item_id": "$105",
+   "name": "Duncan Claw",
+   "reward_id": "RW_105",
+   "source_type": "quest_reward",
+   "planned_source": "Master's Echo",
+   "future_event_symbol": "EV_REWARD_MASTERS_ECHO_DUNCAN_CLAW",
+   "conditions": [
+    "PREREQ_MASTERS_ECHO"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$106",
+   "name": "Moonless",
+   "reward_id": "RW_106",
+   "source_type": "event_chest",
+   "planned_source": "Bandit's Hollow",
+   "future_event_symbol": "EV_CHEST_BANDITS_HOLLOW_MOONLESS",
+   "conditions": [
+    "PREREQ_BANDITS_HOLLOW"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$107",
+   "name": "Doma Edge",
+   "reward_id": "RW_107",
+   "source_type": "smith_purchase",
+   "planned_source": "Doma rebuilt smith",
+   "future_event_symbol": "EV_SMITH_DOMA_DOMA_EDGE",
+   "conditions": [
+    "PREREQ_DOMA_SMITH_REBUILT"
+   ],
+   "one_time": true,
+   "gp_cost": 24000,
+   "smith": {
+    "model": "event-driven purchase (D4); not in any vanilla shop inventory",
+    "already_owned": "HAS_EXT_ITEM (inventory + equipment) -> 'already owned' message, no charge, no give",
+    "insufficient_gp": "event $85 take_gp sets vanilla switch $1BE -> 'not enough GP' message, nothing given",
+    "inventory_full": "GIVE then HAS check -> if not received, GP refunded with event $84 and 'no room' message",
+    "reforge": "none (D6): independent item, nothing consumed"
+   }
+  },
+  {
+   "item_id": "$108",
+   "name": "Darill's Dirk",
+   "reward_id": "RW_108",
+   "source_type": "event_chest",
+   "planned_source": "Sky Graveyard",
+   "future_event_symbol": "EV_CHEST_SKY_GRAVEYARD_DARILLS_DIRK",
+   "conditions": [
+    "PREREQ_SKY_GRAVEYARD"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$109",
+   "name": "Magister Rod",
+   "reward_id": "RW_109",
+   "source_type": "event_chest",
+   "planned_source": "Forgotten Age",
+   "future_event_symbol": "EV_CHEST_FORGOTTEN_AGE_MAGISTER_ROD",
+   "conditions": [
+    "PREREQ_FORGOTTEN_AGE"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$10A",
+   "name": "Concord Brush",
+   "reward_id": "RW_10A",
+   "source_type": "event_chest",
+   "planned_source": "Sanctuary of Concord",
+   "future_event_symbol": "EV_CHEST_SANCTUARY_CONCORD_BRUSH",
+   "conditions": [
+    "PREREQ_SANCTUARY_OF_CONCORD"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$10B",
+   "name": "Gale Lance",
+   "reward_id": "RW_10B",
+   "source_type": "quest_reward",
+   "planned_source": "Beacon quest",
+   "future_event_symbol": "EV_REWARD_BEACON_GALE_LANCE",
+   "conditions": [
+    "PREREQ_BEACON_QUEST"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$10C",
+   "name": "Echo Dagger",
+   "reward_id": "RW_10C",
+   "source_type": "event_chest",
+   "planned_source": "Cradle of Silence",
+   "future_event_symbol": "EV_CHEST_CRADLE_OF_SILENCE_ECHO_DAGGER",
+   "conditions": [
+    "PREREQ_CRADLE_OF_SILENCE"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$10D",
+   "name": "Royal Gear",
+   "reward_id": "RW_10D",
+   "source_type": "boss_reward",
+   "planned_source": "Brass Colossus (Figaro arc)",
+   "future_event_symbol": "EV_BOSS_BRASS_COLOSSUS_ROYAL_GEAR",
+   "conditions": [
+    "PREREQ_FIGARO_ARC"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$10E",
+   "name": "Imperial Mantle",
+   "reward_id": "RW_10E",
+   "source_type": "arc_reward_tbd",
+   "planned_source": "arc design (Armor sheet: not specified)",
+   "future_event_symbol": "EV_ARC_REWARD_IMPERIAL_MANTLE",
+   "conditions": [
+    "PREREQ_TBD_ARC_DESIGN"
+   ],
+   "one_time": true,
+   "gp_cost": null,
+   "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+  },
+  {
+   "item_id": "$10F",
+   "name": "Magister Robe",
+   "reward_id": "RW_10F",
+   "source_type": "boss_reward",
+   "planned_source": "Archive Guardian (First Magi)",
+   "future_event_symbol": "EV_BOSS_ARCHIVE_GUARDIAN_MAGISTER_ROBE",
+   "conditions": [
+    "PREREQ_FIRST_MAGI_ARC"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$110",
+   "name": "Ashen Mail",
+   "reward_id": "RW_110",
+   "source_type": "arc_reward_tbd",
+   "planned_source": "arc design (Armor sheet: not specified)",
+   "future_event_symbol": "EV_ARC_REWARD_ASHEN_MAIL",
+   "conditions": [
+    "PREREQ_TBD_ARC_DESIGN"
+   ],
+   "one_time": true,
+   "gp_cost": null,
+   "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+  },
+  {
+   "item_id": "$111",
+   "name": "Concord Vest",
+   "reward_id": "RW_111",
+   "source_type": "arc_reward_tbd",
+   "planned_source": "arc design (Armor sheet: not specified)",
+   "future_event_symbol": "EV_ARC_REWARD_CONCORD_VEST",
+   "conditions": [
+    "PREREQ_TBD_ARC_DESIGN"
+   ],
+   "one_time": true,
+   "gp_cost": null,
+   "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+  },
+  {
+   "item_id": "$112",
+   "name": "Doma Plate",
+   "reward_id": "RW_112",
+   "source_type": "arc_reward_tbd",
+   "planned_source": "arc design (Armor sheet: not specified)",
+   "future_event_symbol": "EV_ARC_REWARD_DOMA_PLATE",
+   "conditions": [
+    "PREREQ_TBD_ARC_DESIGN"
+   ],
+   "one_time": true,
+   "gp_cost": null,
+   "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+  },
+  {
+   "item_id": "$113",
+   "name": "Falcon Jacket",
+   "reward_id": "RW_113",
+   "source_type": "arc_reward_tbd",
+   "planned_source": "arc design (Armor sheet: not specified)",
+   "future_event_symbol": "EV_ARC_REWARD_FALCON_JACKET",
+   "conditions": [
+    "PREREQ_TBD_ARC_DESIGN"
+   ],
+   "one_time": true,
+   "gp_cost": null,
+   "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+  },
+  {
+   "item_id": "$114",
+   "name": "Child's Ribbon",
+   "reward_id": "RW_114",
+   "source_type": "arc_reward_tbd",
+   "planned_source": "arc design (Armor sheet: not specified)",
+   "future_event_symbol": "EV_ARC_REWARD_CHILDS_RIBBON",
+   "conditions": [
+    "PREREQ_TBD_ARC_DESIGN"
+   ],
+   "one_time": true,
+   "gp_cost": null,
+   "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+  },
+  {
+   "item_id": "$115",
+   "name": "Doma Kabuto",
+   "reward_id": "RW_115",
+   "source_type": "arc_reward_tbd",
+   "planned_source": "arc design (Armor sheet: not specified)",
+   "future_event_symbol": "EV_ARC_REWARD_DOMA_KABUTO",
+   "conditions": [
+    "PREREQ_TBD_ARC_DESIGN"
+   ],
+   "one_time": true,
+   "gp_cost": null,
+   "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+  },
+  {
+   "item_id": "$116",
+   "name": "Engineer Goggles",
+   "reward_id": "RW_116",
+   "source_type": "arc_reward_tbd",
+   "planned_source": "arc design (Armor sheet: not specified)",
+   "future_event_symbol": "EV_ARC_REWARD_ENGINEER_GOGGLES",
+   "conditions": [
+    "PREREQ_TBD_ARC_DESIGN"
+   ],
+   "one_time": true,
+   "gp_cost": null,
+   "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+  },
+  {
+   "item_id": "$117",
+   "name": "Magi Circlet",
+   "reward_id": "RW_117",
+   "source_type": "arc_reward_tbd",
+   "planned_source": "arc design (Armor sheet: not specified)",
+   "future_event_symbol": "EV_ARC_REWARD_MAGI_CIRCLET",
+   "conditions": [
+    "PREREQ_TBD_ARC_DESIGN"
+   ],
+   "one_time": true,
+   "gp_cost": null,
+   "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+  },
+  {
+   "item_id": "$118",
+   "name": "Concord Shield",
+   "reward_id": "RW_118",
+   "source_type": "arc_reward_tbd",
+   "planned_source": "arc design (Armor sheet: not specified)",
+   "future_event_symbol": "EV_ARC_REWARD_CONCORD_SHIELD",
+   "conditions": [
+    "PREREQ_TBD_ARC_DESIGN"
+   ],
+   "one_time": true,
+   "gp_cost": null,
+   "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+  },
+  {
+   "item_id": "$119",
+   "name": "Ashguard",
+   "reward_id": "RW_119",
+   "source_type": "arc_reward_tbd",
+   "planned_source": "arc design (Armor sheet: not specified)",
+   "future_event_symbol": "EV_ARC_REWARD_ASHGUARD",
+   "conditions": [
+    "PREREQ_TBD_ARC_DESIGN"
+   ],
+   "one_time": true,
+   "gp_cost": null,
+   "note": "locked Armor sheet leaves the source to arc design; binding symbol reserved, story event not implemented yet"
+  },
+  {
+   "item_id": "$11A",
+   "name": "Runic Crest",
+   "reward_id": "RW_11A",
+   "source_type": "boss_reward",
+   "planned_source": "Celes arc (Magitek Praetor)",
+   "future_event_symbol": "EV_BOSS_MAGITEK_PRAETOR_RUNIC_CREST",
+   "conditions": [
+    "PREREQ_CELES_ARC"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$11B",
+   "name": "Maduin's Locket",
+   "reward_id": "RW_11B",
+   "source_type": "boss_reward",
+   "planned_source": "Terra arc (Magi-Eater)",
+   "future_event_symbol": "EV_BOSS_MAGI_EATER_MADUINS_LOCKET",
+   "conditions": [
+    "PREREQ_TERRA_ARC"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$11C",
+   "name": "Doma Crest",
+   "reward_id": "RW_11C",
+   "source_type": "boss_reward",
+   "planned_source": "Cyan arc (Miasma Regent)",
+   "future_event_symbol": "EV_BOSS_MIASMA_REGENT_DOMA_CREST",
+   "conditions": [
+    "PREREQ_CYAN_ARC"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$11D",
+   "name": "Keepsake Ring",
+   "reward_id": "RW_11D",
+   "source_type": "boss_reward",
+   "planned_source": "Shadow/Relm arc (Guiltshade)",
+   "future_event_symbol": "EV_BOSS_GUILTSHADE_KEEPSAKE_RING",
+   "conditions": [
+    "PREREQ_SHADOW_RELM_ARC"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$11E",
+   "name": "Darill's Coin",
+   "reward_id": "RW_11E",
+   "source_type": "boss_reward",
+   "planned_source": "Setzer arc (Sky Reaver)",
+   "future_event_symbol": "EV_BOSS_SKY_REAVER_DARILLS_COIN",
+   "conditions": [
+    "PREREQ_SETZER_ARC"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$11F",
+   "name": "Memorial Band",
+   "reward_id": "RW_11F",
+   "source_type": "quest_reward",
+   "planned_source": "Vector memorial",
+   "future_event_symbol": "EV_REWARD_VECTOR_MEMORIAL_BAND",
+   "conditions": [
+    "PREREQ_VECTOR_MEMORIAL"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$120",
+   "name": "Gale Pin",
+   "reward_id": "RW_120",
+   "source_type": "quest_reward",
+   "planned_source": "Coast beacon",
+   "future_event_symbol": "EV_REWARD_COAST_BEACON_GALE_PIN",
+   "conditions": [
+    "PREREQ_COAST_BEACON"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$121",
+   "name": "Beastheart",
+   "reward_id": "RW_121",
+   "source_type": "quest_reward",
+   "planned_source": "Gau side content",
+   "future_event_symbol": "EV_REWARD_GAU_SIDE_BEASTHEART",
+   "conditions": [
+    "PREREQ_GAU_SIDE_CONTENT"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$122",
+   "name": "Painter's Lens",
+   "reward_id": "RW_122",
+   "source_type": "quest_reward",
+   "planned_source": "Relm extension",
+   "future_event_symbol": "EV_REWARD_RELM_EXTENSION_PAINTERS_LENS",
+   "conditions": [
+    "PREREQ_RELM_EXTENSION"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$123",
+   "name": "Elder's Seal",
+   "reward_id": "RW_123",
+   "source_type": "quest_reward",
+   "planned_source": "Ancient lore",
+   "future_event_symbol": "EV_REWARD_ANCIENT_LORE_ELDERS_SEAL",
+   "conditions": [
+    "PREREQ_ANCIENT_LORE"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$124",
+   "name": "Engineer's Badge",
+   "reward_id": "RW_124",
+   "source_type": "quest_reward",
+   "planned_source": "Figaro",
+   "future_event_symbol": "EV_REWARD_FIGARO_ENGINEERS_BADGE",
+   "conditions": [
+    "PREREQ_FIGARO_ENGINEERS"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$125",
+   "name": "Master's Cord",
+   "reward_id": "RW_125",
+   "source_type": "quest_reward",
+   "planned_source": "Duncan",
+   "future_event_symbol": "EV_REWARD_DUNCAN_MASTERS_CORD",
+   "conditions": [
+    "PREREQ_DUNCAN"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  },
+  {
+   "item_id": "$126",
+   "name": "Legacy of the Magi",
+   "reward_id": "RW_126",
+   "source_type": "boss_reward",
+   "planned_source": "Vael Unbound (superboss)",
+   "future_event_symbol": "EV_BOSS_VAEL_UNBOUND_LEGACY_OF_THE_MAGI",
+   "conditions": [
+    "PREREQ_VAEL_UNBOUND"
+   ],
+   "one_time": true,
+   "gp_cost": null
+  }
+ ]
+}

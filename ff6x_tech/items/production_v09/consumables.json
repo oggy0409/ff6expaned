@@ -1,0 +1,381 @@
+{
+ "_comment": "TECH v0.9 production consumables $127-$12E. Locked: names + 'some sold in rebuilt shops'. Everything else DERIVED (see 'derived'); effects are ItemProp data run by the vanilla item code.",
+ "items": [
+  {
+   "id": "127",
+   "code": "CN-01",
+   "symbol": "CN_GAIA_TONIC",
+   "locked_name": "Gaia Tonic",
+   "display_name": "Gaia Tonic",
+   "category": "consumable",
+   "desc": "Restores HP to the party{n}(menu: one member)",
+   "usable_battle": true,
+   "usable_field": true,
+   "targeting": "ALL_ALLIES",
+   "effect": {
+    "restore_hp": true,
+    "power": 240,
+    "undead_invert": true
+   },
+   "price": 1500,
+   "sellable": true,
+   "sold_in_shops": true,
+   "rarity": "common",
+   "anim_template": "E9",
+   "quantity": "stack 1-99 (vanilla rule)",
+   "steal": false,
+   "drop": false,
+   "metamorph": false,
+   "colosseum_wager": false,
+   "throwable": false,
+   "equippable": false,
+   "enemy_use": false,
+   "acquisition": {
+    "source_type": "shop",
+    "planned_source": "rebuilt shops (World of Ruin reconstruction)",
+    "future_event_symbol": "EXT_SHOP_REBUILT_GENERAL",
+    "conditions": "PREREQ_RECONSTRUCTION_SHOPS",
+    "one_time": false,
+    "gp_cost": 1500
+   },
+   "derived": [
+    "effect (party HP restore: power 240 = 120 HP per member - the vanilla engine halves an item's power when it hits several targets; between Tonic 50 and Potion 250 per target)",
+    "targeting",
+    "price 1500",
+    "anim template Potion",
+    "menu use = one member (the vanilla field menu has no party-wide item use)"
+   ]
+  },
+  {
+   "id": "128",
+   "code": "CN-02",
+   "symbol": "CN_AETHER_FLASK",
+   "locked_name": "Aether Flask",
+   "display_name": "AetherFlask",
+   "category": "consumable",
+   "desc": "Aether Flask{n}Restores a lot of MP",
+   "usable_battle": true,
+   "usable_field": true,
+   "targeting": "ONE_ALLY",
+   "effect": {
+    "restore_mp": true,
+    "power": 250
+   },
+   "price": 2,
+   "sellable": false,
+   "sold_in_shops": false,
+   "rarity": "rare",
+   "anim_template": "EC",
+   "quantity": "stack 1-99 (vanilla rule)",
+   "steal": false,
+   "drop": false,
+   "metamorph": false,
+   "colosseum_wager": false,
+   "throwable": false,
+   "equippable": false,
+   "enemy_use": false,
+   "acquisition": {
+    "source_type": "event_chest",
+    "planned_source": "story chests / quest rewards (not sold)",
+    "future_event_symbol": "EV_CHEST_AETHER_FLASK",
+    "conditions": "PREREQ_TBD_ARC_DESIGN",
+    "one_time": true
+   },
+   "derived": [
+    "effect (MP restore power 250, between Ether 150 and X-Ether full)",
+    "not sold (MP economy)",
+    "anim template Ether",
+    "display name AetherFlask (12-char field)"
+   ]
+  },
+  {
+   "id": "129",
+   "code": "CN-03",
+   "symbol": "CN_PHOENIX_ASH",
+   "locked_name": "Phoenix Ash",
+   "display_name": "Phoenix Ash",
+   "category": "consumable",
+   "desc": "Revives one ally{n}with half of max HP",
+   "usable_battle": true,
+   "usable_field": true,
+   "targeting": "ONE_ALLY",
+   "effect": {
+    "restore_hp": true,
+    "fraction": true,
+    "power": 8,
+    "removes_status": true,
+    "status": [
+     "DEAD"
+    ],
+    "undead_invert": true
+   },
+   "price": 2,
+   "sellable": false,
+   "sold_in_shops": false,
+   "rarity": "rare",
+   "anim_template": "F0",
+   "quantity": "stack 1-99 (vanilla rule)",
+   "steal": false,
+   "drop": false,
+   "metamorph": false,
+   "colosseum_wager": false,
+   "throwable": false,
+   "equippable": false,
+   "enemy_use": false,
+   "acquisition": {
+    "source_type": "boss_reward",
+    "planned_source": "arc boss rewards (not sold)",
+    "future_event_symbol": "EV_BOSS_PHOENIX_ASH",
+    "conditions": "PREREQ_TBD_ARC_DESIGN",
+    "one_time": true
+   },
+   "derived": [
+    "effect (revive with 8/16 = 50% HP; Fenix Down is 2/16)",
+    "not sold",
+    "anim template Fenix Down"
+   ]
+  },
+  {
+   "id": "12A",
+   "code": "CN-04",
+   "symbol": "CN_NULL_DUST",
+   "locked_name": "Null Dust",
+   "display_name": "Null Dust",
+   "category": "consumable",
+   "desc": "Strips Haste/Safe/Shell/{n}Regen/Reflect/Float",
+   "usable_battle": true,
+   "usable_field": false,
+   "targeting": "ONE_ENEMY",
+   "effect": {
+    "removes_status": true,
+    "status": [
+     "REGEN",
+     "HASTE",
+     "SHELL",
+     "SAFE",
+     "REFLECT",
+     "FLOAT"
+    ]
+   },
+   "price": 800,
+   "sellable": true,
+   "sold_in_shops": true,
+   "rarity": "uncommon",
+   "anim_template": "F5",
+   "quantity": "stack 1-99 (vanilla rule)",
+   "steal": false,
+   "drop": false,
+   "metamorph": false,
+   "colosseum_wager": false,
+   "throwable": false,
+   "equippable": false,
+   "enemy_use": false,
+   "acquisition": {
+    "source_type": "shop",
+    "planned_source": "rebuilt shops (World of Ruin reconstruction)",
+    "future_event_symbol": "EXT_SHOP_REBUILT_GENERAL",
+    "conditions": "PREREQ_RECONSTRUCTION_SHOPS",
+    "one_time": false,
+    "gp_cost": 800
+   },
+   "derived": [
+    "function (Dispel-like removal of the six beneficial statuses; read from the name 'Null')",
+    "battle only",
+    "targeting (one target, enemy by default)",
+    "price 800",
+    "anim template Remedy"
+   ]
+  },
+  {
+   "id": "12B",
+   "code": "CN-05",
+   "symbol": "CN_IRON_RATION",
+   "locked_name": "Iron Ration",
+   "display_name": "Iron Ration",
+   "category": "consumable",
+   "desc": "Restores HP and{n}cures Poison",
+   "usable_battle": true,
+   "usable_field": true,
+   "targeting": "ONE_ALLY",
+   "effect": {
+    "restore_hp": true,
+    "power": 200,
+    "removes_status": true,
+    "status": [
+     "POISON"
+    ],
+    "undead_invert": true
+   },
+   "price": 250,
+   "sellable": true,
+   "sold_in_shops": true,
+   "rarity": "common",
+   "anim_template": "FE",
+   "quantity": "stack 1-99 (vanilla rule)",
+   "steal": false,
+   "drop": false,
+   "metamorph": false,
+   "colosseum_wager": false,
+   "throwable": false,
+   "equippable": false,
+   "enemy_use": false,
+   "acquisition": {
+    "source_type": "shop",
+    "planned_source": "rebuilt shops (World of Ruin reconstruction)",
+    "future_event_symbol": "EXT_SHOP_REBUILT_GENERAL",
+    "conditions": "PREREQ_RECONSTRUCTION_SHOPS",
+    "one_time": false,
+    "gp_cost": 250
+   },
+   "derived": [
+    "effect (HP power 200 + Poison cure; Dried Meat is 150 HP)",
+    "price 250",
+    "anim template Dried Meat"
+   ]
+  },
+  {
+   "id": "12C",
+   "code": "CN-06",
+   "symbol": "CN_REMEDY_PLUS",
+   "locked_name": "Remedy+",
+   "display_name": "Remedy+",
+   "category": "consumable",
+   "desc": "Cures all bad status{n}incl. Zombie/Muddle/Stop",
+   "usable_battle": true,
+   "usable_field": true,
+   "targeting": "ONE_ALLY",
+   "effect": {
+    "removes_status": true,
+    "status": [
+     "BLIND",
+     "ZOMBIE",
+     "POISON",
+     "IMP",
+     "PETRIFY",
+     "CONDEMNED",
+     "SILENCE",
+     "BERSERK",
+     "CONFUSE",
+     "SAP",
+     "SLEEP",
+     "SLOW",
+     "STOP"
+    ]
+   },
+   "price": 3000,
+   "sellable": true,
+   "sold_in_shops": true,
+   "rarity": "uncommon",
+   "anim_template": "F5",
+   "quantity": "stack 1-99 (vanilla rule)",
+   "steal": false,
+   "drop": false,
+   "metamorph": false,
+   "colosseum_wager": false,
+   "throwable": false,
+   "equippable": false,
+   "enemy_use": false,
+   "acquisition": {
+    "source_type": "shop",
+    "planned_source": "rebuilt shops (late reconstruction)",
+    "future_event_symbol": "EXT_SHOP_REBUILT_LATE",
+    "conditions": "PREREQ_RECONSTRUCTION_LATE",
+    "one_time": false,
+    "gp_cost": 3000
+   },
+   "derived": [
+    "effect (Remedy set + Zombie, Condemned, Berserk, Muddle, Sleep, Slow, Stop)",
+    "price 3000 (Remedy 1000)",
+    "anim template Remedy"
+   ]
+  },
+  {
+   "id": "12D",
+   "code": "CN-07",
+   "symbol": "CN_BEACON_FLARE",
+   "locked_name": "Beacon Flare",
+   "display_name": "BeaconFlare",
+   "category": "consumable",
+   "desc": "Beacon Flare{n}Fire damage to all foes",
+   "usable_battle": true,
+   "usable_field": false,
+   "targeting": "ALL_ENEMIES",
+   "effect": {
+    "power": 255,
+    "element": [
+     "FIRE"
+    ]
+   },
+   "price": 2,
+   "sellable": false,
+   "sold_in_shops": false,
+   "rarity": "rare",
+   "anim_template": "SPELL:FIRE_2",
+   "quantity": "stack 1-99 (vanilla rule)",
+   "steal": false,
+   "drop": false,
+   "metamorph": false,
+   "colosseum_wager": false,
+   "throwable": false,
+   "equippable": false,
+   "enemy_use": false,
+   "acquisition": {
+    "source_type": "quest_reward",
+    "planned_source": "Beacon quest (not sold)",
+    "future_event_symbol": "EV_REWARD_BEACON_FLARE",
+    "conditions": "PREREQ_BEACON_QUEST",
+    "one_time": true
+   },
+   "derived": [
+    "function (fire damage to all enemies; read from 'Flare')",
+    "power 255 (items have no level scaling and the power is halved over several targets: ~127 per enemy with 2+ enemies, ~255 on one, x2 vs Fire-weak)",
+    "not sold",
+    "anim: vanilla Fire 2 spell animation",
+    "display name BeaconFlare (12-char field)"
+   ]
+  },
+  {
+   "id": "12E",
+   "code": "CN-08",
+   "symbol": "CN_MAGITEK_CELL",
+   "locked_name": "Magitek Cell",
+   "display_name": "MagitekCell",
+   "category": "consumable",
+   "desc": "Magitek Cell{n}Restores the party's MP",
+   "usable_battle": true,
+   "usable_field": false,
+   "targeting": "ALL_ALLIES",
+   "effect": {
+    "restore_mp": true,
+    "power": 120
+   },
+   "price": 2,
+   "sellable": false,
+   "sold_in_shops": false,
+   "rarity": "rare",
+   "anim_template": "ED",
+   "quantity": "stack 1-99 (vanilla rule)",
+   "steal": false,
+   "drop": false,
+   "metamorph": false,
+   "colosseum_wager": false,
+   "throwable": false,
+   "equippable": false,
+   "enemy_use": false,
+   "acquisition": {
+    "source_type": "quest_reward",
+    "planned_source": "Magitek research / Vector arc (not sold)",
+    "future_event_symbol": "EV_REWARD_MAGITEK_CELL",
+    "conditions": "PREREQ_VECTOR_ARC",
+    "one_time": true
+   },
+   "derived": [
+    "function (party MP restore: power 120 = 60 MP per member after the multi-target halving; read from 'Cell' = energy)",
+    "battle only",
+    "not sold",
+    "anim template X-Ether",
+    "display name MagitekCell (12-char field)"
+   ]
+  }
+ ]
+}

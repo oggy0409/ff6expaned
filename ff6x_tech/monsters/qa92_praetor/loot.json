@@ -1,0 +1,7 @@
+{
+ "steal_rare": "FF",
+ "steal_common": "FF",
+ "drop_rare": "FF",
+ "drop_common": "FF",
+ "_comment": "no drops (BAL-17; the boss reward Runic Crest is an event item)"
+}

@@ -1,0 +1,7 @@
+{
+  "short_entrances": [
+    {"map": "0C7", "src": [16, 29], "dest_map": "00C", "dest": [15, 47], "facing": "DOWN", "flags": ["Z_UPPER"],
+     "purpose": "Annex exit back to the Falcon interior, one tile off the entry trigger"}
+  ],
+  "long_entrances": []
+}

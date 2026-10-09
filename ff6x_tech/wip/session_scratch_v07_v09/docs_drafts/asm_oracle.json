@@ -1,0 +1,23 @@
+{
+ "all_match": true,
+ "cases": [
+  {
+   "case": "all-opcodes-8bit",
+   "bytes": 549,
+   "match": true,
+   "first_diff": null
+  },
+  {
+   "case": "all-opcodes-16bit",
+   "bytes": 561,
+   "match": true,
+   "first_diff": null
+  },
+  {
+   "case": "labels-data-mx",
+   "bytes": 51,
+   "match": true,
+   "first_diff": null
+  }
+ ]
+}

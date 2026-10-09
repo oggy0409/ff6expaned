@@ -1,0 +1,6 @@
+{
+ "_comment": "TECH v0.3.1 QA HARNESS ONLY. Appended after the v0.3 messages (next free ID $100B). Strings live in QA_HARNESS (bank FF); only the pointer slot for $100B is written in DIALOGUE_PTRS.",
+ "messages": [
+  {"label": "qa_prompt", "text": "TECH v0.3 QA ACCESS{n}Enter Celes Annex test?{n}{choice} Yes{n}{choice} No"}
+ ]
+}

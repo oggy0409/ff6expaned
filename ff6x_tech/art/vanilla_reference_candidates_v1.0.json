@@ -1,0 +1,293 @@
+{
+ "_comment": "ART ASSET GATE v1.0 - hand-picked vanilla reference rectangles (metatile units, BG1 coordinates of the source map). Exported by tools/art_gate_v10.py; every id / palette / tile number in the output is read from the clean Rev 1 ROM. These are references for a human art pass - nothing here is chosen for implementation.",
+ "candidates": [
+  {
+   "id": "T1",
+   "category": "temporary_memorial",
+   "map": "12A",
+   "rect": [
+    68,
+    4,
+    11,
+    6
+   ],
+   "label": "Darill's Tomb - small red-framed plates with a carved face on stone pedestals (tomb markers / switches), wall alcoves with blue flames"
+  },
+  {
+   "id": "T2",
+   "category": "temporary_memorial",
+   "map": "196",
+   "rect": [
+    50,
+    2,
+    10,
+    6
+   ],
+   "label": "Ancient Castle - crossed-sword wall plaques (trophy / commemorative plates)"
+  },
+  {
+   "id": "T3",
+   "category": "temporary_memorial",
+   "map": "07B",
+   "rect": [
+    46,
+    1,
+    10,
+    6
+   ],
+   "label": "Doma Castle interior - wall emblems / crossed swords"
+  },
+  {
+   "id": "T4",
+   "category": "temporary_memorial",
+   "map": "131",
+   "rect": [
+    24,
+    6,
+    6,
+    4
+   ],
+   "label": "Tzen - hanging wooden signboards (name-tag style plates)"
+  },
+  {
+   "id": "T5",
+   "category": "temporary_memorial",
+   "map": "112",
+   "rect": [
+    7,
+    3,
+    8,
+    6
+   ],
+   "label": "Magitek Research Facility - esper room wall consoles / panels (same gfx sets as $1A2)"
+  },
+  {
+   "id": "T6",
+   "category": "temporary_memorial",
+   "map": "0FD",
+   "rect": [
+    20,
+    7,
+    6,
+    5
+   ],
+   "label": "Vector - hanging Imperial banner (cloth banner / name-banner option)"
+  },
+  {
+   "id": "P1",
+   "category": "permanent_memorial",
+   "map": "12A",
+   "rect": [
+    9,
+    34,
+    9,
+    6
+   ],
+   "label": "Darill's Tomb - single grave on a dais with headstone"
+  },
+  {
+   "id": "P2",
+   "category": "permanent_memorial",
+   "map": "12A",
+   "rect": [
+    74,
+    32,
+    9,
+    9
+   ],
+   "label": "Darill's Tomb - rows of headstones on red grave slabs"
+  },
+  {
+   "id": "P3",
+   "category": "permanent_memorial",
+   "map": "11C",
+   "rect": [
+    11,
+    0,
+    5,
+    3
+   ],
+   "label": "Maranda (WoR) - stone obelisk / memorial pillar"
+  },
+  {
+   "id": "P4",
+   "category": "permanent_memorial",
+   "map": "11C",
+   "rect": [
+    5,
+    6,
+    5,
+    4
+   ],
+   "label": "Maranda (WoR) - stone obelisk beside a ruined house"
+  },
+  {
+   "id": "P5",
+   "category": "permanent_memorial",
+   "map": "09E",
+   "rect": [
+    23,
+    26,
+    6,
+    5
+   ],
+   "label": "Mobliz (WoR) - outdoor headstones"
+  },
+  {
+   "id": "P6",
+   "category": "permanent_memorial",
+   "map": "196",
+   "rect": [
+    27,
+    39,
+    8,
+    5
+   ],
+   "label": "Ancient Castle - gold knight statues, wall plaques, bookshelf"
+  },
+  {
+   "id": "A1",
+   "category": "archive_preserve",
+   "map": "039",
+   "rect": [
+    97,
+    8,
+    13,
+    9
+   ],
+   "label": "Figaro Castle - library bookshelves"
+  },
+  {
+   "id": "A2",
+   "category": "archive_preserve",
+   "map": "196",
+   "rect": [
+    27,
+    40,
+    4,
+    5
+   ],
+   "label": "Ancient Castle - single tall bookshelf"
+  },
+  {
+   "id": "A3",
+   "category": "archive_preserve",
+   "map": "0A0",
+   "rect": [
+    57,
+    8,
+    14,
+    6
+   ],
+   "label": "Thamasa house interior - wall cabinets and bookshelf"
+  },
+  {
+   "id": "A4",
+   "category": "archive_preserve",
+   "map": "018",
+   "rect": [
+    74,
+    4,
+    9,
+    10
+   ],
+   "label": "Narshe house interior - shelves / drawers"
+  },
+  {
+   "id": "A5",
+   "category": "archive_preserve",
+   "map": "106",
+   "rect": [
+    1,
+    22,
+    5,
+    7
+   ],
+   "label": "Magitek Factory - stacked crates (same gfx sets as $1A2)"
+  },
+  {
+   "id": "A6",
+   "category": "archive_preserve",
+   "map": "10B",
+   "rect": [
+    2,
+    1,
+    12,
+    6
+   ],
+   "label": "Magitek Research Facility - plain wall panels and pipe racks (context: same tileset as $1A2)"
+  },
+  {
+   "id": "B1",
+   "category": "archive_burn",
+   "map": "11C",
+   "rect": [
+    7,
+    7,
+    6,
+    6
+   ],
+   "label": "Maranda (WoR) - house with collapsed roof hole and soot"
+  },
+  {
+   "id": "B2",
+   "category": "archive_burn",
+   "map": "09E",
+   "rect": [
+    10,
+    5,
+    7,
+    7
+   ],
+   "label": "Mobliz (WoR) - burned / soot-damaged house"
+  },
+  {
+   "id": "B3",
+   "category": "archive_burn",
+   "map": "15F",
+   "rect": [
+    0,
+    1,
+    9,
+    6
+   ],
+   "label": "Thamasa burning house - flame walls"
+  },
+  {
+   "id": "B4",
+   "category": "archive_burn",
+   "map": "12A",
+   "rect": [
+    102,
+    4,
+    8,
+    11
+   ],
+   "label": "Darill's Tomb - collapsed masonry / rubble"
+  },
+  {
+   "id": "B5",
+   "category": "archive_burn",
+   "map": "143",
+   "rect": [
+    8,
+    8,
+    7,
+    6
+   ],
+   "label": "Albrook (WoR) - damaged roof / soot holes"
+  },
+  {
+   "id": "B6",
+   "category": "archive_burn",
+   "map": "100",
+   "rect": [
+    4,
+    4,
+    10,
+    7
+   ],
+   "label": "Kefka's Tower - rubble heaps with wrecked Imperial machinery"
+  }
+ ]
+}

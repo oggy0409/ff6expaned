@@ -1,0 +1,66 @@
+# Celes Annex TECH v0.3 - event source (assembled by ff6x/eventasm.py into EVENT_EXPANSION, bank F1)
+# Bit names come from data/allocations.json -> event_bits. Dialogue labels from dialogue.json.
+# Object numbers: $10 = Vale (NPC index 0), $11 = chest (NPC index 1).
+
+# --- Falcon interior trigger (map $00C, tile 13,46): optional entry prompt -----------------
+@EvAnnexEnter
+dlg enter_prompt
+choice EvAnnexEnter_Yes, EvAnnexEnter_No
+@EvAnnexEnter_Yes
+set_switch NPC_ANNEX_VALE_VISIBLE
+if_switch CELES_ANNEX_TECH_COMPLETE=1 -> EvAnnexEnter_Load
+set_switch NPC_ANNEX_CHEST_VISIBLE
+@EvAnnexEnter_Load
+load_map $0C7 16 27 UP
+return
+@EvAnnexEnter_No
+return
+
+# --- Vale placeholder NPC (via bridge CC:E5EE) ----------------------------------------------
+@EvVale
+if_switch CELES_ANNEX_TECH_STARTED=1 -> EvVale_After
+dlg vale_first
+set_switch CELES_ANNEX_TECH_STARTED
+return
+@EvVale_After
+if_switch CELES_ANNEX_TECH_COMPLETE=1 -> EvVale_Done
+if_switch CELES_ANNEX_TECH_BATTLE_DONE=1 -> EvVale_Battle
+dlg vale_started
+return
+@EvVale_Battle
+dlg vale_battle
+return
+@EvVale_Done
+dlg vale_done
+return
+
+# --- Battle-room doorway trigger (map $0C7, tile 16,10) ---------------------------------------
+@EvBattleDoor
+if_switch CELES_ANNEX_TECH_BATTLE_DONE=1 -> EvBattleDoor_Ret
+if_switch CELES_ANNEX_TECH_STARTED=1 -> EvBattleDoor_Fight
+dlg door_sealed
+party_step DOWN 1
+return
+@EvBattleDoor_Fight
+dlg battle_start
+battle 40
+call VanillaPostBattleCheck
+fade_in
+set_switch CELES_ANNEX_TECH_BATTLE_DONE
+dlg battle_done
+party_step UP 1
+@EvBattleDoor_Ret
+return
+
+# --- Reward chest object (via bridge CC:E5F3) -------------------------------------------------
+@EvChest
+if_switch CELES_ANNEX_TECH_COMPLETE=1 -> EvChest_Empty
+give_item $E9
+set_switch CELES_ANNEX_TECH_COMPLETE
+clr_switch NPC_ANNEX_CHEST_VISIBLE
+hide_obj $11
+dlg reward_get
+return
+@EvChest_Empty
+dlg chest_empty
+return

@@ -1,0 +1,12 @@
+{
+ "_comment": "TECH v0.4 placeholder text only. Width-checked at build time (220 px, 4 lines).",
+ "messages": [
+  {"label": "a1_first", "text": "TECH A1: map 1A0 (new ID).{n}NPC data: relocated table F6.{n}My event: vector table F7.{n}Visit the room to the north."},
+  {"label": "a1_after", "text": "TECH A1: flag VISITED B is ON.{n}The new NPC (A2) appeared.{n}NPC switch on a new map OK."},
+  {"label": "a3_info", "text": "TECH A3: second routed NPC.{n}Layout 160 is read from the{n}relocated pointer table F7."},
+  {"label": "a2_info", "text": "TECH A2: I am visible only{n}after VISITED B was set{n}in map 1A1."},
+  {"label": "a_trigger", "text": "TECH v0.4: event trigger on{n}map 1A0 (relocated table)."},
+  {"label": "b1_first", "text": "TECH B1: map 1A1 (new ID).{n}Composed vanilla room art.{n}Flag VISITED B is now ON."},
+  {"label": "b1_again", "text": "TECH B1: VISITED B is still ON.{n}Door: short entrance.{n}Stairs: long entrance."}
+ ]
+}

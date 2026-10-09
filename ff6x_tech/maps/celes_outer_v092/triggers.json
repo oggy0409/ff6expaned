@@ -1,0 +1,25 @@
+{
+ "triggers": [
+  {
+   "map": "1A2",
+   "x": 10,
+   "y": 12,
+   "event": "EvMemorialRead",
+   "purpose": "memorial wall: reports the persistent state (E8)"
+  },
+  {
+   "map": "1A2",
+   "x": 20,
+   "y": 12,
+   "event": "EvArchiveRead",
+   "purpose": "archive door: reports the persistent state (E8)"
+  },
+  {
+   "map": "1A2",
+   "x": 16,
+   "y": 12,
+   "event": "EvPraetorDoor",
+   "purpose": "Praetor console: QA boss battle (E2-E4, E9)"
+  }
+ ]
+}

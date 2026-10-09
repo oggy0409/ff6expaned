@@ -1,0 +1,141 @@
+{
+ "_comment": "TECH v0.9.1 FF6X key items (rare ids 20-24): v0.9 data with the recovered locked sources (Creative Source Recovery v1.0, rows X0599-X0636). Only the Triune Sigil description changes text.",
+ "rare_items": [
+  {
+   "rare_id": 20,
+   "code": "KI-01",
+   "symbol": "KEY_DARILLS_TOKEN",
+   "locked_name": "Darill's Token",
+   "display_name": "Darill'sToken",
+   "desc": "A token of Darill, kept{n}aboard the Falcon.",
+   "story_arc": "ARC-6 Setzer",
+   "acquisition": {
+    "planned_source": "WOB-C scene (Blackjack, before the Floating Continent); if missed: found in the Falcon cabin",
+    "future_event_symbol": "EV_RARE_DARILLS_TOKEN",
+    "prerequisite_flags": [
+     "PREREQ_WOB_C_SCENE"
+    ],
+    "one_time": true
+   },
+   "consumed": "no",
+   "ending_dependency": "none",
+   "combat_stats": null,
+   "derived": [
+    "story arc + source from the name",
+    "display name Darill'sToken (13-char rare-name field)",
+    "description"
+   ],
+   "function": "unlocks the Last Race (Setzer arc); optional (CAN-022)",
+   "v091_changes": [
+    "X0600 / X0602: source and function"
+   ]
+  },
+  {
+   "rare_id": 21,
+   "code": "KI-02",
+   "symbol": "KEY_CONCORD_SIGIL",
+   "locked_name": "Concord Sigil",
+   "display_name": "Concord Sigil",
+   "desc": "Sigil of the Sanctuary{n}of Concord.",
+   "story_arc": "ARC-7A Forgotten Age (Sanctuary of Concord)",
+   "acquisition": {
+    "planned_source": "Sanctuary of Concord",
+    "future_event_symbol": "EV_RARE_CONCORD_SIGIL",
+    "prerequisite_flags": [
+     "PREREQ_SANCTUARY_OF_CONCORD"
+    ],
+    "one_time": true
+   },
+   "consumed": "no",
+   "ending_dependency": "First Magi gate (one of three sigils; all three + the endgame trigger open it, D-25)",
+   "combat_stats": null,
+   "derived": [
+    "source from the name (Sanctuary of Concord is a locked equipment source)",
+    "description"
+   ],
+   "v091_changes": [
+    "X0610: one of three sigils, not a Triune prerequisite"
+   ]
+  },
+  {
+   "rare_id": 22,
+   "code": "KI-03",
+   "symbol": "KEY_CINDER_SIGIL",
+   "locked_name": "Cinder Sigil",
+   "display_name": "Cinder Sigil",
+   "desc": "A sigil warm as{n}smoldering cinders.",
+   "story_arc": "ARC-7B Forgotten Age (Field of Cinders)",
+   "acquisition": {
+    "planned_source": "Empyreal Chimera boss, Field of Cinders",
+    "future_event_symbol": "EV_RARE_CINDER_SIGIL",
+    "prerequisite_flags": [
+     "PREREQ_FIELD_OF_CINDERS"
+    ],
+    "one_time": true
+   },
+   "consumed": "no",
+   "ending_dependency": "First Magi gate (one of three sigils; all three + the endgame trigger open it, D-25)",
+   "combat_stats": null,
+   "derived": [
+    "story arc / source unknown (TBD)",
+    "description"
+   ],
+   "v091_changes": [
+    "X0616-X0618: recovered source / arc; one of three sigils"
+   ]
+  },
+  {
+   "rare_id": 23,
+   "code": "KI-04",
+   "symbol": "KEY_TRIUNE_SIGIL",
+   "locked_name": "Triune Sigil",
+   "display_name": "Triune Sigil",
+   "desc": "Sigil of the Shrine{n}of the Silent Three.",
+   "story_arc": "ARC-7C Forgotten Age (Shrine of the Silent Three)",
+   "acquisition": {
+    "planned_source": "Triune Sentinel boss, Shrine of the Silent Three",
+    "future_event_symbol": "EV_RARE_TRIUNE_SIGIL",
+    "prerequisite_flags": [
+     "PREREQ_SHRINE_OF_SILENT_THREE"
+    ],
+    "one_time": true
+   },
+   "consumed": "no",
+   "ending_dependency": "First Magi gate (one of three sigils; all three + the endgame trigger open it, D-25)",
+   "combat_stats": null,
+   "derived": [
+    "description (text not locked; the locked fact is that the Triune Sigil is its own sigil)"
+   ],
+   "v091_changes": [
+    "X0624-X0628: own sigil from the Triune Sentinel; no Concord + Cinder prerequisite; description"
+   ]
+  },
+  {
+   "rare_id": 24,
+   "code": "KI-05",
+   "symbol": "KEY_BROKEN_SEAL",
+   "locked_name": "Broken Seal",
+   "display_name": "Broken Seal",
+   "desc": "A broken seal. Its power{n}is spent.",
+   "story_arc": "ARC-8 First Magi (Hope: Broken Seal)",
+   "acquisition": {
+    "planned_source": "optional trophy from the Vael fight (Scene V07)",
+    "future_event_symbol": "EV_RARE_BROKEN_SEAL",
+    "prerequisite_flags": [
+     "PREREQ_VAEL_DEFEATED"
+    ],
+    "one_time": true
+   },
+   "consumed": "no",
+   "ending_dependency": "ending / reconstruction dependency",
+   "combat_stats": null,
+   "derived": [
+    "story placement",
+    "description"
+   ],
+   "v091_changes": [
+    "X0632-X0633: source / arc"
+   ]
+  }
+ ]
+}

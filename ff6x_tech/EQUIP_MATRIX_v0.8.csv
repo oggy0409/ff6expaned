@@ -1,0 +1,40 @@
+id,name,category,Terra,Locke,Cyan,Shadow,Edgar,Sabin,Celes,Strago,Relm,Setzer,Mog,Gau,Gogo,Umaro
+$100,Tempered Edge,weapon,1,1,0,0,1,0,1,0,0,0,0,0,0,0
+$101,Imperial Saber,weapon,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+$102,Leo's Blade,weapon,1,1,0,0,1,0,1,0,0,0,0,0,0,0
+$103,Raider Knife,weapon,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+$104,Sandpiercer,weapon,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+$105,Duncan Claw,weapon,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+$106,Moonless,weapon,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+$107,Doma Edge,weapon,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+$108,Darill's Dirk,weapon,0,1,0,0,0,0,0,0,0,1,0,0,0,0
+$109,Magister Rod,weapon,0,0,0,0,0,0,0,1,1,0,0,0,0,0
+$10A,Concord Brush,weapon,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+$10B,Gale Lance,weapon,0,0,0,0,1,0,0,0,0,0,1,0,0,0
+$10C,Echo Dagger,weapon,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+$10D,Royal Gear,armor,0,0,0,0,1,1,0,0,0,0,0,0,0,0
+$10E,Imperial Mantle,armor,1,0,0,0,0,0,1,0,0,0,0,0,0,0
+$10F,Magister Robe,armor,1,0,0,0,0,0,1,1,1,0,0,0,1,0
+$110,Ashen Mail,armor,0,0,1,0,1,0,0,0,0,1,0,0,0,0
+$111,Concord Vest,armor,0,1,0,1,0,0,0,0,0,0,1,1,1,0
+$112,Doma Plate,armor,1,0,1,0,1,0,1,0,0,0,0,0,0,0
+$113,Falcon Jacket,armor,0,1,0,1,0,0,0,0,0,1,0,0,0,0
+$114,Child's Ribbon,helmet,1,0,0,0,0,0,1,0,1,0,0,0,0,0
+$115,Doma Kabuto,helmet,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+$116,Engineer Goggles,helmet,0,0,0,0,1,0,0,0,0,1,0,0,0,0
+$117,Magi Circlet,helmet,1,0,0,0,0,0,1,1,1,0,0,0,1,0
+$118,Concord Shield,shield,1,1,1,1,1,1,1,1,1,1,1,0,1,0
+$119,Ashguard,shield,1,0,1,0,1,0,1,0,0,1,0,0,0,0
+$11A,Runic Crest,relic,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+$11B,Maduin's Locket,relic,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+$11C,Doma Crest,relic,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+$11D,Keepsake Ring,relic,0,0,0,1,0,0,0,0,1,0,0,0,0,0
+$11E,Darill's Coin,relic,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+$11F,Memorial Band,relic,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+$120,Gale Pin,relic,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+$121,Beastheart,relic,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+$122,Painter's Lens,relic,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+$123,Elder's Seal,relic,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+$124,Engineer's Badge,relic,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+$125,Master's Cord,relic,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+$126,Legacy of the Magi,relic,1,0,0,0,0,0,1,1,1,0,0,0,1,0
